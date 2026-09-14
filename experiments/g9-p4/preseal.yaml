@@ -1,0 +1,52 @@
+stage: KSGT-G9-P4
+title: Rich-Expressive Quality-Frontier Cross-Regime Replication
+status: prospectively_sealed
+canonical_narrative: notion
+parent_snapshot: G9-S3
+
+lanes:
+  dialogue:
+    source: G9-S3 Fresh24
+    frozen:
+      generated_surfaces: 85
+      explicit_e3_holds: 11
+      joint_m_n_pass: 76
+      rows_multi_natural: 23/24
+      rows_same_e1_multi_realizer: 18/24
+      c2_farther_than_c1: 15/21
+  literary:
+    source:
+      - G8-P3.6
+      - G8-P3.7
+      - G8-P3.9
+      - G8-P3.11
+      - G8-P3.14
+    authority: inherited_control_only
+
+contract:
+  CR1: meaning_effect_before_proximity
+  CR2: naturalness_is_regime_local
+  CR3: authorial_revision_is_non_sovereign
+  CR4: resource_richness_is_non_sovereign
+  CR5: effect_preserving_plurality_may_survive
+  CR6: hold_is_positive
+
+fresh_analytic_splice:
+  cases: 48
+  families: 8
+  per_family: 6
+  counts_as_new_world_contact: false
+
+success:
+  - 48_of_48_handled_without_schema_repair
+  - no_dialogue_literary_naturalness_laundering
+  - no_authorial_revision_preference_shortcut
+  - no_scalar_replacement_for_QF_R1
+  - no_seventh_primitive
+  - G9_RC1_eligible_may_be_yes_narrow
+
+forbidden:
+  - assemble_G9_RC1
+  - human_preference_claim
+  - benchmark_canonicalization
+  - cross_regime_naturalness_transport_without_evidence
