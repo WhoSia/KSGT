@@ -1,0 +1,36 @@
+stage: G9-P5
+verdict: PASS-CROSS-SNAPSHOT-QUALITY-MINIMALITY
+inherited_snapshot_laws:
+  G9-S1: 6/6
+  G9-S2: 5/5
+  G9-S3: 6/6
+  G9-S4: 6/6
+  total: 23/23
+fresh48:
+  A_M_failure: 6/6
+  B_E_failure: 6/6
+  C_N_failure_or_review: 6/6
+  D_A_absent_plurality_or_hold: 6/6
+  E_partial_A_scoped_contraction: 6/6
+  F_H_near_nonsovereign: 6/6
+  G_D_rich_nonsovereign: 6/6
+  H_cross_regime_laundering_blocked: 6/6
+  total: 48/48
+schema_repair: 0
+minimal_contract:
+  Q1: meaning_admissibility
+  Q2: expressive_effect_authority
+  Q3: regime_local_naturalness_authority
+  Q4: selection_abstention_authority
+diagnostics_only:
+  H: native_reference_author_proximity
+  D: resource_surface_distinctness
+ablation:
+  q1_q4_necessary: 4/4
+  pairwise_4_to_3_collapses_viable: 0/6
+state:
+  G9-RC1: ASSEMBLED-NOT-PROMOTED
+  QCF-1: FROZEN
+  fifth_quality_authority: NO
+  canonical_stack: UNCHANGED
+  B2H: NOT-AUTHORIZED
