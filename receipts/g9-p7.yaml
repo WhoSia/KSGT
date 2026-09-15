@@ -1,0 +1,63 @@
+stage: KSGT-G9-P7
+status: PASS-END-TO-END-WORLD-CONTACT
+canonical_quality_law: Q-C1_UNCHANGED
+fresh24:
+  rows: 24
+  candidate_slots: 96
+  q1: {pass: 87, review: 4, na: 5}
+  q2: {pass: 63, hold: 9, na: 24}
+  q3: {pass: 88, review: 2, fail: 1, na: 5}
+  rows_multi_q1_q3_pass: 23/24
+  rows_with_q1_q2_q3_pass_E1: 23/24
+q4:
+  A0:
+    rows: 8
+    unsupported_contraction: 0
+    plural_frontiers: 7
+    upstream_empty: 1
+  A1:
+    rows: 8
+    authorized_contraction: 1
+    residual_plurality: 8/8
+    unsupported_contraction: 0
+  A2:
+    rows: 8
+    legitimate_one_best: 8/8
+    selection_laundering: 0
+failure_localization:
+  L1_Q1_GENERATION: 1
+  L2_Q2_EFFECT: 0
+  L3_Q3_NATURALNESS: 0
+  L4_Q4_AUTHORITY: 15
+  L5_EMPTY_AFTER_AUTHORIZED_CONTRACTION: 0
+  resolved_task_local_one_best: 8
+hidden_support:
+  exact_normalized_match: 0
+  mean_nearest_nced:
+    C0: 0.2445
+    C1: 0.4766
+    C2: 0.5666
+    C3: 0.4635
+  A2_H_nearest_is_effect_neutral_C0: 8/8
+  A2_selected_effectful_winner: 8/8
+  A2_mean_nced_C0: 0.2395
+  A2_mean_nced_selected: 0.4441
+diagnostics:
+  schema_repair: 0
+  post_reveal_repair: 0
+  unsupported_contraction: 0
+  selection_laundering: 0
+  fifth_quality_authority: 0
+ceilings:
+  universal_best_korean: false
+  universal_aesthetic_scalar: false
+  population_preference_claim: false
+  benchmark_canonical: false
+  cross_regime_naturalness_transport: false
+notion:
+  preseal: 3dcef561-cf92-81b2-8c87-e5ba9f6f10e8
+  candidate_seal: 3dcef561-cf92-81ad-8f3d-e199ec162835
+  selection_seal: 3dcef561-cf92-8193-a56c-e2008954a946
+  execution: 3dcef561-cf92-81d7-b891-da4a54814eb2
+  result: 3dcef561-cf92-81ff-b14c-e7dc40c26c46
+next: KSGT-G9-P8
