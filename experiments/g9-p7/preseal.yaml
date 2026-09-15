@@ -1,0 +1,38 @@
+stage: KSGT-G9-P7
+title: Q-C1 Return-to-Origin End-to-End Rich-Korean World Contact
+status: prospectively_sealed_in_notion
+canonical_narrative: notion
+notion_preseal: 3dcef561-cf92-81b2-8c87-e5ba9f6f10e8
+notion_candidate_seal: 3dcef561-cf92-81ad-8f3d-e199ec162835
+notion_selection_seal: 3dcef561-cf92-8193-a56c-e2008954a946
+github_mirror_note: post_execution_mirror_of_prospectively_frozen_notion_state
+source:
+  corpus: SmileStyle
+  drive_id: 1rL1NX_keO6BLm_KXSegT974sZNsWilYy
+  nonblank_rows: 3470
+  visible_before_seal: formal_only
+selection:
+  key: KSGT-G9-P7-RETURN24-v1
+  rows: [2584,562,1572,1047,2848,1600,2502,2981,699,2801,1758,2576,3398,1028,667,2886,75,1697,1170,3056,2557,1684,728,2323]
+candidate_packet:
+  slots: 96
+  sha256: 6541e5bbd7b2ee11ca0f6a5f45b295913ce8339d61fc7ea5b2cc06a71a83c562
+q_c1:
+  Q1: meaning_admissibility
+  Q2: expressive_effect_authority
+  Q3: dialogue_regime_naturalness
+  Q4: selection_authority_bounded_frontier
+  H: diagnostic_only
+  D: diagnostic_only
+selection_lanes:
+  A0_positions: 1-8
+  A1_positions: 9-16
+  A2_positions: 17-24
+failure_loci: [L1_Q1_GENERATION,L2_Q2_EFFECT,L3_Q3_NATURALNESS,L4_Q4_AUTHORITY,L5_EMPTY_AFTER_AUTHORIZED_CONTRACTION]
+forbidden:
+  - hidden_surface_exposure_before_generation_adjudication_selection_seals
+  - post_reveal_candidate_or_status_repair
+  - H_or_D_rescue_of_Q1_Q2_Q3
+  - cross_regime_naturalness_transport
+  - universal_best_korean_claim
+  - benchmark_canonicalization
