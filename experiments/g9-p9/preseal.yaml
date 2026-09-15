@@ -1,0 +1,21 @@
+court: KSGT Generation IX G9-P9
+status: PRESEALED
+source_receipt: G9-P8
+quality_contract: Q-C1
+quality_contract_state: FROZEN
+objects:
+  admissible_fiber: Q1_PASS + Q2_E1_OR_HIGHER + Q3_TARGET_REGIME_PASS
+  surface_transport: selected source surface carried unchanged to target regime
+  target_recompilation: preserve semantic/effect target, regenerate/re-adjudicate target Q3 and target Q4
+frozen_hypotheses:
+  - alternative_set_geometry_is_regime_indexed
+  - surface_winner_transport_may_differ_from_target_recompilation
+  - selection_and_regime_shift_may_be_noncommutative
+  - universal_cross_regime_ranking_not_pre_authorized
+forbidden:
+  - reconstruct_unobserved_C0_C1_C2_transition_cells
+  - global_naturalness_scalar
+  - winner_inheritance
+  - reference_proximity_laundering
+  - new_quality_primitive_without_failure_of_Q_C1_plus_nonranking_transition_metadata
+human_recruitment: false
