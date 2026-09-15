@@ -1,0 +1,37 @@
+stage: KSGT-G9-P10
+status: PRESEALED
+quality_contract: Q-C1
+transition_contract: RTD-1
+regimes:
+  - dialogue
+  - literary_prose
+  - institutional_informative
+fresh_targets: 12
+candidate_slots: 108
+third_regime:
+  name: institutional_informative
+  anchors:
+    - NIKL_written_newspaper
+    - KLUE_policy_wikinews
+  anchor_role: naturalness_calibration_not_preference
+operators:
+  canonical: invariant_target_recompilation
+  diagnostic: surface_carry
+invariants:
+  - Q1_semantic_pragmatic_target
+  - Q2_expressive_effect_target
+recompute_at_destination:
+  - Q3_regime_local_naturalness
+  - Q4_selection_authority
+holonomy: NOT_PREAUTHORIZED
+success_conditions:
+  no_posthoc_schema_repair: true
+  clean_path_composition_test: true
+  empty_fiber_allowed: true
+forbidden:
+  - surface_carry_residue_implies_holonomy
+  - cycle_consistency_as_novelty
+  - sequential_order_effect_as_novelty
+  - global_naturalness_scalar
+  - cross_regime_winner_inheritance
+human_recruitment: false
