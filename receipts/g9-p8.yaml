@@ -1,0 +1,49 @@
+court: KSGT Generation IX G9-P8
+verdict: PASS-CROSS-REGIME-REPLICATION
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+matched_contexts: 24
+regimes:
+  dialogue:
+    candidates: 72
+    q1_pass: 70
+    q1_hold: 2
+    q3_pass_among_q1: 65
+    q3_hold_among_q1: 5
+    effect_preserving_admissible: 44
+    A2_one_best: 8
+  literary_prose:
+    candidates: 72
+    q1_pass: 69
+    q1_hold: 3
+    q3_pass_among_q1: 61
+    q3_hold_among_q1: 8
+    effect_preserving_admissible: 38
+    A2_one_best: 8
+overall:
+  candidates: 144
+  q1_pass: 139
+  q1_hold: 5
+  q3_pass_among_q1: 126
+  q3_hold_among_q1: 13
+  joint_q1_q3_admissible: 122
+  joint_q1_q2_effect_q3_admissible: 82
+  contexts_admissible_both_regimes: 24
+  contexts_effect_preserving_both_regimes: 22
+  regime_asymmetric_survivor_geometry: 6
+  differing_within_regime_top_candidate: 9
+selection_authority:
+  A0_unauthorized_contraction: 0
+  A1_removed_by_explicit_constraints: 7
+  A1_unsupported_contraction: 0
+  A2_dialogue_one_best: 8
+  A2_literary_one_best: 8
+  A2_winner_family_differs: 5
+claims:
+  effect_transport_not_realizer_transport: true
+  naturalness_is_regime_local: true
+  cross_regime_winner_transport_authorized: false
+  universal_best: NON_IDENTIFIED
+  new_quality_primitive: false
+  human_recruitment: false
+next: KSGT Generation IX G9-P9 — Cross-Regime Alternative-Set Geometry, Realizer-Family Transport Matrix, Regime-Shift Counterfactual Recompilation & Minimal Cross-Regime Authority Extension Audit
