@@ -1,0 +1,56 @@
+stage: KSGT-G9-P12
+status: PRESEALED
+source_stage: G9-P11
+quality_contract: Q-C1
+transition_contract: RTD-1
+frozen_support_counts:
+  P: 8/12
+  N: 2/12
+  X: 11/12
+  witnessed_cells: 21
+  search_null_cells: 15
+support_evidence_states:
+  - WITNESSED
+  - SEARCH_NULL
+  - STRUCTURALLY_EXCLUDED
+law: WITNESS_ABSENCE_NE_SUPPORT_ABSENCE_NE_STRUCTURAL_EXCLUSION
+saturation_probe:
+  target_cells: 15
+  channels:
+    G: free_target_recompilation
+    S: situation_explicit_recompilation
+    F: realizer_family_diversification
+  attempts_per_channel_per_cell: 4
+  max_fresh_slots: 180
+  order: [G,S,F]
+  no_prior_failed_surface_copy: true
+  terminal_null_label: SEARCH_NULL_SAT3
+structural_exclusion:
+  contract: SEPO-1
+  search_failure_sufficient: false
+  requirements:
+    - frozen_target_invariants
+    - frozen_regime_constitutive_conditions
+    - necessity_bridge
+    - contradiction_with_regime
+    - anti_laundering_check
+regime_identification:
+  contract: RID-1
+  surface_only_sufficient: false
+  metadata:
+    - communicative_purpose
+    - participant_audience_configuration
+    - production_setting_channel
+    - discourse_organization
+    - attribution_quotation_policy
+    - corpus_provenance
+forbidden:
+  - quotation_laundering
+  - direct_dialogue_insertion_as_same_regime
+  - target_weakening
+  - reference_proximity_laundering
+  - repeated_failure_implies_empty
+  - corpus_absence_implies_structural_exclusion
+new_quality_authority: false
+human_recruitment: false
+schema_repair: 0
