@@ -1,0 +1,74 @@
+court: KSGT Generation IX G9-P12
+verdict: PASS-WITH-EPISTEMIC-CONSTITUTION
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+source_stage: G9-P11
+p11_frozen_geometry:
+  P: 8/12
+  N: 2/12
+  X: 11/12
+  witnessed_cells: 21
+  search_null_cells: 15
+saturation_probe:
+  channels: [G,S,F]
+  max_fresh_slots: 180
+  adjudicated_slots: 173
+  recovered_cells: 1
+  recovery:
+    cell: P_x_hesitation
+    channel: S
+    status: WITNESSED
+  channel_yield:
+    G: 0
+    S: 1
+    F: 0
+post_probe_geometry:
+  P: 9/12
+  N: 2/12
+  X: 11/12
+  witnessed_cells: 22/36
+  search_null_sat3: 14/36
+  target_union: 11/12
+  support_3_of_3: 2
+  support_2_of_3: 7
+  support_1_of_3: 2
+  support_0_of_3: 1
+support_evidence_topology:
+  states:
+    - WITNESSED
+    - SEARCH_NULL
+    - STRUCTURALLY_EXCLUDED
+  law: WITNESS_ABSENCE_NE_SUPPORT_ABSENCE_NE_STRUCTURAL_EXCLUSION
+structural_exclusion:
+  contract: SEPO-1
+  structurally_excluded_cells: 0
+  search_saturation_sufficient: false
+  literal_empty_fiber_established: false
+regime_identification:
+  contract: RID-1
+  surface_only_sufficient: false
+  result: PARTIALLY_IDENTIFIABLE_WITH_METADATA
+  corpus_anchor:
+    N: DIRECT_NEWSPAPER
+    P: ADJACENT_PARLIAMENTARY_OFFICIAL
+    X: INDIRECT_WRITTEN_ARGUMENTATIVE_EXPOSITORY
+novelty_boundary:
+  generic_saturation: PRIOR_ART
+  situational_register_variation: PRIOR_ART
+  sequential_multistyle_interference: PRIOR_ART
+  closed_loop_attribute_rechecking: PRIOR_ART
+  style_content_clean_separability: REJECTED_AS_AXIOM
+  residual: typed_support_evidence_plus_authority_bounded_regime_local_reearning
+operational_rules:
+  SEPO-1: PROVISIONAL_CANONICAL_OPERATIONAL
+  RID-1: PROVISIONAL_CANONICAL_OPERATIONAL
+claims:
+  bounded_discovery_saturation: ESTABLISHED
+  universal_search_exhaustion: NOT_CLAIMED
+  true_empty_fiber: NOT_ESTABLISHED
+  new_quality_authority: false
+  human_recruitment: false
+next: KSGT Generation IX G9-P13 — Cross-Corpus Regime Identification Replication, Search-Budget Calibration, Structural-Exclusion Challenge Set, Support-Topology Generalization & External Korean Boundary Contact Audit
