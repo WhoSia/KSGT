@@ -1,0 +1,38 @@
+stage: KSGT-G9-P11
+status: PRESEALED
+source_stage: G9-P10
+quality_contract: Q-C1
+transition_contract: RTD-1
+fresh_targets: 12
+frozen_subregimes:
+  P: policy_administrative
+  N: straight_news
+  X: reference_expository
+support_states:
+  - WITNESSED
+  - SEARCH_NULL
+  - STRUCTURALLY_EXCLUDED
+empty_fiber_rule: STRUCTURALLY_EXCLUDED_ONLY
+invariants:
+  - Q1_semantic_pragmatic_target
+  - Q2_expressive_effect_target
+recompute:
+  - Q3_subregime_local_naturalness
+  - Q4_selection_authority
+falsification:
+  coarse_I_artifact_if_any_P10_null_recovers_without_Q1_Q2_change: true
+  all_subregime_search_failures_prove_empty: false
+forbidden_recovery:
+  - quotation_as_same_regime
+  - direct_dialogue_insertion_as_same_regime
+  - target_weakening
+  - reference_proximity_laundering
+  - global_fluency_laundering
+  - inherited_winner
+novelty_doctrine:
+  defeated_claim_prior_art_is_mandatory_citation: true
+  doi_recording_required: true
+  self_acquire_before_user_request: true
+  abstract_only_load_bearing: false
+human_recruitment: false
+schema_repair: 0
