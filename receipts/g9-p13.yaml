@@ -1,0 +1,104 @@
+court: KSGT Generation IX G9-P13
+formal_name: Cross-Corpus Regime Identification Replication, Search-Budget Calibration, Structural-Exclusion Challenge Set, Support-Topology Generalization & External Korean Boundary Contact Audit
+verdict: PASS-WITH-REOPENING
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+source_stage: G9-P12
+p12_frozen_geometry:
+  P: 9/12
+  N: 2/12
+  X: 11/12
+  witnessed_cells: 22/36
+  search_null_sat3: 14/36
+  structurally_excluded: 0
+cross_corpus_RID:
+  contract: RID-1
+  result: CROSS_CORPUS_REPLICATED
+  P:
+    anchor: DIRECT_POLICY_ADMINISTRATIVE_PROCEDURAL
+    provenance_families: [Government24, central_government_guidance]
+  N:
+    anchor: DIRECT_NEWSPAPER_REPORTER_VOICE
+    provenance_families: [NIKL_newspaper_corpus, published_Korean_news]
+  X:
+    anchor: DIRECT_REFERENCE_EXPOSITORY
+    provenance_families: [AKS_encyclopedia, Korean_written_informative_resources]
+  string_only_sufficient: false
+  regime_ontology: VERSIONED_MEASUREMENT_CONSTRUCTS
+search_budget_calibration:
+  B4_external_corpus_contact:
+    max_opportunities: 28
+    recovered_cells: 1
+    recovery:
+      cell: N_x_hesitation
+      carrier: HOST
+      source_kind: published_Korean_straight_news
+      status: WITNESSED
+  B5_metadata_conditioned_recompilation:
+    remaining_cells: 13
+    candidate_slots: 39
+    recovered_cells: 0
+  B6_host_embedded_boundary_adversary:
+    remaining_cells: 13
+    candidate_slots: 26
+    recovered_cells: 0
+post_p13_geometry:
+  P: 9/12
+  N: 3/12
+  X: 11/12
+  witnessed_cells: 23/36
+  search_null_b6: 13/36
+  structurally_excluded: 0
+  target_union: 11/12
+  support_3_of_3: 3
+  support_2_of_3: 6
+  support_1_of_3: 2
+  support_0_of_3: 1
+support_topology:
+  law_1: SEARCH_SATURATION_IS_CHANNEL_RELATIVE
+  law_2: EMBEDDED_EFFECT_WITNESS_NE_HOST_REGIME_WITNESS
+  law_3: REGIME_DEFINITION_NE_EXCLUSION_PROOF
+  voice_carrier_coordinate: [HOST, EMBEDDED, MIXED]
+  voice_carrier_is_new_authority: false
+structural_exclusion:
+  contract: SEPO-1
+  result: STRENGTHENED_NONCIRCULAR
+  structurally_excluded_cells: 0
+  new_requirement: NONCIRCULAR_NECESSITY_BRIDGE
+  literal_empty_fiber_established: false
+prior_art:
+  White_2012:
+    title: Exploring the axiological workings of reporter voice news stories—Attribution and attitudinal positioning
+    doi: 10.1016/j.dcm.2012.10.004
+    status: MANDATORY_PRIOR_ART
+    fulltext_read: true
+    takes_claims: [host_vs_attributed_source_distinction, reporter_voice_attribution, implicit_attitudinal_positioning]
+  Biber_Conrad_2019:
+    doi: 10.1017/9781108686136
+    status: MANDATORY_REGISTER_COMPARATOR
+    fulltext_read: true
+  Ostheimer_et_al_2023:
+    doi: 10.18653/v1/2023.findings-acl.687
+    status: MANDATORY_EVALUATION_COMPARATOR
+    fulltext_read: true
+    canonical_drive: true
+novelty_boundary:
+  retired:
+    - situational_register_identification
+    - host_quoted_source_distinction
+    - reporter_voice_stance
+    - generic_search_saturation
+    - generic_TST_evaluation_standardization
+  residual: authority_bounded_licensed_alternatives_plus_channel_and_carrier_typed_support_evidence_plus_independent_membership_and_selection_authority
+claims:
+  channel_relative_saturation: ESTABLISHED_BY_LATE_WITNESS
+  cross_corpus_RID: REPLICATED
+  structural_exclusion: NOT_EARNED
+  host_embedded_firewall: PROMOTED_AS_PROVENANCE_RULE_NOT_NOVELTY
+  new_quality_authority: false
+  human_recruitment: false
+  schema_repair: 0
+next: KSGT Generation IX G9-P14 — Host/Embedded Regime Semantics, Attribution–Quotation Scope, Effect-Carrier Localization, Nested Support Fibers & Authority-Preserving Embedded-Voice Transport Audit
