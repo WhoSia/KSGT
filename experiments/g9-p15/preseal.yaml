@@ -1,0 +1,62 @@
+stage: KSGT-G9-P15
+status: PRESEALED
+source_stage: G9-P14
+quality_contract: Q-C1
+transition_contract: RTD-1
+focus:
+  - effect_carrier_counterfactual_intervention
+  - attribution_frame_swap
+  - host_embedded_credit_invariance
+  - mixed_voice_identifiability
+  - nested_fiber_minimality
+frozen_targets:
+  - hesitation
+  - restrained_reproach
+  - affectionate_teasing
+  - incredulity
+  - dry_irony
+  - self_correction
+  - softened_warning
+  - resigned_humor
+interventions:
+  A0: neutral_attribution
+  A1: endorsement_tilted_attribution
+  A2: distancing_skeptical_attribution
+  A3: bare_or_zero_attribution
+carrier_manipulations:
+  C_H: host_only_effect
+  C_E: embedded_only_effect
+  C_M: mixed_distributed_effect
+primary_tests:
+  T1:
+    name: attribution_frame_swap
+    hold_embedded_proposition_constant: true
+    vary_attribution_frame_only: true
+  T2:
+    name: carrier_swap
+    hold_host_frame_constant: true
+    move_effect_between_host_and_embedded: true
+  T3:
+    name: mixed_voice_identifiability
+    ablate_host_cues_and_embedded_cues_separately: true
+  T4:
+    name: nested_fiber_minimality
+    compare_models:
+      - flat_document_support
+      - two_fiber_host_embedded
+      - three_state_host_embedded_mixed
+      - four_state_plus_unresolved
+decision_rules:
+  support_credit_must_track_effect_owner: true
+  attribution_frame_can_change_host_stance_without_reassigning_embedded_ownership: true
+  mixed_state_retained_only_if_no_two_fiber_assignment_preserves_intervention_behavior: true
+  unresolved_state_retained_only_if forced_assignment_changes_authority_decision: true
+forbidden:
+  - surface_marker_sovereignty
+  - quotation_laundering
+  - attribution_verb_as_automatic_host_effect
+  - embedded_content_as_automatic_host_support
+  - post_outcome_state_splitting
+  - fifth_quality_authority
+human_recruitment: false
+schema_repair: 0
