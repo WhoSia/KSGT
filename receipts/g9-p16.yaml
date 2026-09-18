@@ -1,0 +1,62 @@
+court: KSGT Generation IX G9-P16
+verdict: PASS-WITH-SUBGRAPH-CONSTITUTION
+source_stage: G9-P15
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+packet:
+  targets: 8
+  graph_topologies: 4
+  cells: 32
+topology_results:
+  G0_parallel:
+    decomposable: 8/8
+  G1_contrast:
+    relation_dependent: 6/8
+    decomposable: 2/8
+  G2_reinforcement:
+    relation_dependent: 2/8
+    decomposable_or_redundant: 6/8
+  G3_correction_reversal:
+    relation_dependent: 7/8
+    decomposable: 1/8
+cross_quote_interference:
+  edge_dependent_cells: 15/32
+  strings_preserved_but_support_changed: 15/32
+higher_order_carriers:
+  R_E1_E2: ESTABLISHED
+  R_H_E1_E2:
+    required_cells: 2
+carrier_set_transport:
+  node_deletion_preserving_active_subgraph: 11/11
+  carrier_critical_edge_deletion_inherited_transport_authorized: 0/15
+  neutral_paraphrase_replacement:
+    support_contraction: 9/16
+    unchanged: 7/16
+  symmetric_quote_swap:
+    invariant: 10/10
+  correction_reversal_swap:
+    requires_recomputation: 6/6
+minimality:
+  M0_flat_document: FAIL
+  M1_nodes_only: FAIL_15_OF_32
+  M2_attribution_star: FAIL_15_OF_32
+  M3_typed_directed_attribution_graph: PASS_32_OF_32
+  M4_global_linear_order: NOT_EARNED
+  carrier_representation: SET_OF_ADMISSIBLE_SUPPORT_BEARING_CONNECTED_SUBGRAPHS
+laws:
+  - CARRIER_SET_TRANSPORT_IS_SUBGRAPH_PRESERVING_NOT_STRING_PRESERVING
+  - ATTRIBUTION_STAR_NE_SUFFICIENT_SUPPORT_GRAPH
+  - RELATIONAL_EFFECT_AUTHORITY_LIVES_ON_MINIMAL_SUPPORT_BEARING_SUBGRAPH
+  - QUOTE_COUNT_NE_SUPPORT_MASS
+prior_art_boundary:
+  multi_quote_graph_structure: PRIOR_ART
+  attribution_discourse_relation: PRIOR_ART
+  internal_quote_coherence_edges: PRIOR_ART
+residual_novelty: authority_transport_over_minimal_support_bearing_subgraphs
+new_quality_authority: false
+human_recruitment: false
+schema_repair: 0
+next: KSGT Generation IX G9-P17 — Attribution-Graph Quotienting, Support-Bearing Subgraph Equivalence, Graph-Edit Authority Distance, Minimal Counterexample Basis & Cross-Regime Graph Transport Audit
