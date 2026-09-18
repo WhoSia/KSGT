@@ -1,0 +1,74 @@
+stage: KSGT-G9-P16
+status: PRESEALED
+source_stage: G9-P15
+quality_contract: Q-C1
+transition_contract: RTD-1
+focus:
+  - relational_effect_carrier_composition
+  - multi_embedded_attribution_graphs
+  - carrier_set_transport
+  - cross_quote_interference
+  - minimal_attribution_graph_sufficiency
+frozen_targets:
+  - hesitation
+  - restrained_reproach
+  - affectionate_teasing
+  - incredulity
+  - dry_irony
+  - self_correction
+  - softened_warning
+  - resigned_humor
+graph_topologies:
+  G0_parallel:
+    nodes: [H,E1,E2]
+    edges: [ATTR_H_E1,ATTR_H_E2]
+  G1_contrast:
+    nodes: [H,E1,E2]
+    edges: [ATTR_H_E1,ATTR_H_E2,CONTRAST_E1_E2]
+  G2_reinforcement:
+    nodes: [H,E1,E2]
+    edges: [ATTR_H_E1,ATTR_H_E2,REINFORCE_E1_E2]
+  G3_correction_reversal:
+    nodes: [H,E1,E2]
+    edges: [ATTR_H_E1,ATTR_H_E2,CORRECT_E2_E1]
+packet_cells: 32
+interventions:
+  - delete_E1
+  - delete_E2
+  - delete_inter_embedded_edge
+  - swap_E1_E2_order
+  - replace_one_quote_with_effect_neutral_paraphrase
+carrier_candidates:
+  - H
+  - E1
+  - E2
+  - R_H_E1
+  - R_H_E2
+  - R_E1_E2
+  - R_H_E1_E2
+carrier_set_transport:
+  preserve_if:
+    - target_invariants_preserved
+    - surviving_nodes_receipted
+    - surviving_edges_receipted
+    - local_Q3_readjudicated
+  never_inherit_Q4: true
+minimality_models:
+  M0_flat_document: document_level_only
+  M1_nodes_only: [H,E1,E2]
+  M2_attribution_star: nodes_plus_host_attribution_edges
+  M3_typed_attribution_graph: M2_plus_inter_embedded_typed_edges
+  M4_ordered_typed_graph: M3_plus_linear_order
+promotion_rules:
+  inter_embedded_edge_required_if deletion_changes_effect_support_without_node_change: true
+  order_required_only_if order_swap_changes_support_with_graph_edges_fixed: true
+  higher_order_relational_carrier_required_only_if pairwise_model_cannot_preserve_intervention_decisions: true
+forbidden:
+  - graph_complexity_by_default
+  - edge_type_inference_from_surface_only
+  - quote_count_as_support_mass
+  - selection_authority_inheritance
+  - post_outcome_topology_split
+  - fifth_quality_authority
+human_recruitment: false
+schema_repair: 0
