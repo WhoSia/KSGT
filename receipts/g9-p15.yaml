@@ -1,0 +1,51 @@
+court: KSGT Generation IX G9-P15
+verdict: PASS-WITH-CARRIER-MINIMALITY
+source_stage: G9-P14
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+attribution_frame_swap:
+  targets: 8
+  frames: 4
+  cells: 32
+  embedded_credit_preserved: 32/32
+  host_target_cocredit: 7/32
+  embedded_only: 25/32
+  credit_laundering: 0
+carrier_swap:
+  host_only_host_credit: 8/8
+  embedded_only_embedded_credit: 8/8
+mixed_voice_ablation:
+  irreducibly_relational: 4/8
+  decomposable_dual_carriage: 2/8
+  epistemically_nonidentifiable: 2/8
+minimality:
+  flat_document_support: FAIL
+  binary_H_E: FAIL_ON_RELATIONAL_CASES
+  hard_H_E_M: FAIL_ON_NONIDENTIFIABLE_CASES
+  minimal_model:
+    carrier_loci: [HOST, EMBEDDED, RELATIONAL_HxE]
+    epistemic_uncertainty: SET_VALUED_OVER_CARRIER_ASSIGNMENTS
+  unresolved_as_carrier: RETIRED
+laws:
+  - EMBEDDED_CREDIT_FRAME_INVARIANT_WHEN_EMBEDDED_UNIT_FIXED
+  - HOST_CREDIT_FRAME_SENSITIVE_BUT_LOCALLY_EARNED
+  - MIXED_FORM_NE_INTERACTION_CARRIER
+  - CARRIER_ONTOLOGY_NE_CARRIER_IDENTIFIABILITY
+  - JUSTIFIED_CARRIER_UNCERTAINTY_IS_SET_VALUED_NOT_NEW_VOICE
+prior_art_boundary:
+  attribution_relation: PRIOR_ART
+  reporter_source_distinction: PRIOR_ART
+  dual_voice_free_indirect_discourse: PRIOR_ART
+  korean_news_quotation_attribution: PRIOR_ART
+residual_novelty: counterfactual_carrier_local_support_credit_plus_relational_locus_plus_set_valued_carrier_uncertainty
+structural_exclusion:
+  SEPO-1: UNCHANGED
+regime_identification:
+  RID-1: RETAINED
+new_quality_authority: false
+human_recruitment: false
+schema_repair: 0
+next: KSGT Generation IX G9-P16 — Relational Effect-Carrier Composition, Multi-Embedded Attribution Graphs, Carrier-Set Transport, Cross-Quote Interference & Minimal Attribution-Graph Sufficiency Audit
