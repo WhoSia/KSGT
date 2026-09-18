@@ -1,0 +1,57 @@
+court: KSGT Generation IX G9-P14
+verdict: PASS-WITH-NESTED-FIBER-CONSTITUTION
+source_stage: G9-P13
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+carrier_model:
+  states: [HOST, EMBEDDED, DISTRIBUTED, UNRESOLVED]
+  owner_realizer_split: PROMOTED
+packet:
+  targets: 8
+  forms: 4
+  cells: 32
+  host_only:
+    host_owned_host_realized: 8/8
+  direct_quote:
+    embedded_owned_embedded_realized: 8/8
+  indirect_report:
+    embedded_owned_host_realized: 8/8
+    effect_preserved: 5/8
+  free_indirect_or_mixed:
+    distributed: 6/8
+    unresolved: 2/8
+nested_support_stress:
+  target_host_regime: N
+  embedded_targets: 8
+  document_naturalness: 8/8
+  embedded_effect_available: 8/8
+  inherited_host_support: 3/8
+  flat_count_false_host_support: 5
+laws:
+  - EFFECT_OWNER_NE_SURFACE_REALIZER
+  - CONTAINER_ADMISSIBILITY_NE_HOST_EFFECT_SUPPORT_NE_EMBEDDED_EFFECT_SUPPORT
+  - EMBEDDED_SUPPORT_DOES_NOT_UPGRADE_HOST_SUPPORT
+  - ATTRIBUTION_SCOPE_REQUIRED_BEFORE_SUPPORT_CREDIT
+transport:
+  direct_quote_D_to_N_document_lawful: 8/8
+  indirect_report_effect_preserved: 5/8
+  free_indirect_mixed_effect_preserved: 6/8
+  q4_inheritance: FORBIDDEN
+prior_art_boundary:
+  host_source_distinction: PRIOR_ART
+  attribution_semantics: PRIOR_ART
+  mixed_quotation: PRIOR_ART
+  dual_context_free_indirect_discourse: PRIOR_ART
+  reportative_stance_marking: PRIOR_ART
+residual_novelty: authority_typed_carrier_localized_nested_support_and_transport_receipts
+structural_exclusion:
+  state: UNCHANGED
+  structurally_excluded: 0
+regime_identification:
+  RID-1: RETAINED
+new_quality_authority: false
+human_recruitment: false
+next: KSGT Generation IX G9-P15 — Effect-Carrier Counterfactual Intervention, Attribution-Frame Swap, Host/Embedded Credit Invariance, Mixed-Voice Identifiability & Nested-Fiber Minimality Audit
