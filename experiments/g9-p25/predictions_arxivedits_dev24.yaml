@@ -1,0 +1,127 @@
+stage: KSGT-G9-P25
+lane: arXivEdits_dev_hidden_future_24
+status: PREDICTIONS_SEALED_BEFORE_TARGET_REVEAL
+prediction_schema:
+  scope: [NONE,LOCAL,NEIGHBOR,SENTENCE_WIDE]
+  intent: [NO_EDIT,GRAMMAR_TYPO,STYLE_PROFESSIONAL,READABILITY_SIMPLIFY,ACCURACY_SPECIFICITY,CONTENT,FORMAT]
+predictions:
+  - id: 0
+    scope: LOCAL
+    intent: STYLE_PROFESSIONAL
+    cone: "whose calculation is a convex problem ... by using convex optimisation techniques"
+    leave_intact: "opening definition and MAP target"
+  - id: 16
+    scope: LOCAL
+    intent: STYLE_PROFESSIONAL
+    cone: "Casimir forces ... have been calculated in [CITATION]"
+    leave_intact: "physical setup"
+  - id: 32
+    scope: NONE
+    intent: NO_EDIT
+    cone: ""
+    leave_intact: "entire sentence"
+  - id: 48
+    scope: LOCAL
+    intent: GRAMMAR_TYPO
+    cone: "four times larger than the spacing of type I; unlimited amount of data"
+    leave_intact: "experiment design statement"
+  - id: 65
+    scope: LOCAL
+    intent: STYLE_PROFESSIONAL
+    cone: "generates a significant simplification to a system highly complex to model"
+    leave_intact: "qualification about spontaneous coordination"
+  - id: 81
+    scope: LOCAL
+    intent: GRAMMAR_TYPO
+    cone: "Not that"
+    leave_intact: "rest of sentence"
+  - id: 97
+    scope: LOCAL
+    intent: GRAMMAR_TYPO
+    cone: "allows to write"
+    leave_intact: "sub-majorization claim and pseudoinverse content"
+  - id: 113
+    scope: NONE
+    intent: NO_EDIT
+    cone: ""
+    leave_intact: "entire sentence"
+  - id: 130
+    scope: LOCAL
+    intent: FORMAT
+    cone: "Bogoliubov-vacuum"
+    leave_intact: "physical claim"
+  - id: 146
+    scope: LOCAL
+    intent: GRAMMAR_TYPO
+    cone: "It should be noticed , that"
+    leave_intact: "contrast with cited approach"
+  - id: 162
+    scope: LOCAL
+    intent: GRAMMAR_TYPO
+    cone: "technic"
+    leave_intact: "distortion-function claim"
+  - id: 198
+    scope: NONE
+    intent: NO_EDIT
+    cone: ""
+    leave_intact: "entire sentence"
+  - id: 173
+    scope: NEIGHBOR
+    intent: READABILITY_SIMPLIFY
+    cone: "warming values ... carbon cycle uncertainty ... climate model uncertainties ... probability clause"
+    leave_intact: "scenario identity and quantitative values"
+  - id: 174
+    scope: LOCAL
+    intent: STYLE_PROFESSIONAL
+    cone: "new transceiver architecture ... new RS transmission scheme ... and many more"
+    leave_intact: "listed technical mechanisms"
+  - id: 177
+    scope: SENTENCE_WIDE
+    intent: GRAMMAR_TYPO
+    cone: "in which we use observed SSTs , the mean number ... and each basin hurricane ..."
+    leave_intact: "three modeled assumptions"
+  - id: 179
+    scope: NONE
+    intent: NO_EDIT
+    cone: ""
+    leave_intact: "entire sentence"
+  - id: 180
+    scope: LOCAL
+    intent: GRAMMAR_TYPO
+    cone: "like it is done; Weyl symbol of operator"
+    leave_intact: "reconstruction claim and equation"
+  - id: 183
+    scope: LOCAL
+    intent: GRAMMAR_TYPO
+    cone: "In the practice; represented is a basis expansion"
+    leave_intact: "truncation claim"
+  - id: 185
+    scope: NONE
+    intent: NO_EDIT
+    cone: ""
+    leave_intact: "entire mathematical definition"
+  - id: 188
+    scope: LOCAL
+    intent: FORMAT
+    cone: "perturbation theory , [CITATION] , which"
+    leave_intact: "self-consistency and resummation claim"
+  - id: 189
+    scope: LOCAL
+    intent: STYLE_PROFESSIONAL
+    cone: "illustrates our analytical model that"
+    leave_intact: "BL-throughput quasi-concavity claim"
+  - id: 191
+    scope: NEIGHBOR
+    intent: GRAMMAR_TYPO
+    cone: "Lorenz invariant; introduce Wigner function; calculated with it , coincide"
+    leave_intact: "Weyl-rule/Wigner-function contrast"
+  - id: 195
+    scope: NONE
+    intent: NO_EDIT
+    cone: ""
+    leave_intact: "entire formula-introduction sentence"
+  - id: 199
+    scope: NEIGHBOR
+    intent: GRAMMAR_TYPO
+    cone: "matrices synchronizes; an uniformly sampled random automata; automata ... has"
+    leave_intact: "citations and asymptotic reset-threshold claims"
