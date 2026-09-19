@@ -1,0 +1,65 @@
+court: KSGT Generation IX G9-P25
+verdict: PASS-WITH-IDENTIFIABILITY-CORRECTION
+source_stage: G9-P24
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+human_recruitment: HOLD_DATA_FIRST
+world_contact:
+  arXivEdits_dev24:
+    prospective_target_hidden: true
+    n: 24
+    edited_only_selection_bias: ESTABLISHED
+    approximate_any_cone_overlap: 14/24
+    stop_rule_validity: NOT_IDENTIFIED
+  arXivEdits_mixed16:
+    changed: 8
+    unchanged: 8
+    target_hidden_before_prediction: true
+    edit_noedit_accuracy: 10/16
+    changed_recall: 6/8
+    unchanged_specificity: 4/8
+    edit_precision: 6/10
+    edit_f1: 0.667
+behavioral_verdict:
+  source_text_alone_future_edit_sufficiency: REJECTED
+  trigger_conditioned_revision_target: PROMOTED
+  human_revision_normative_authority: false
+RIGC_1:
+  retained: true
+  corrected_input_constitution: revision_trigger_or_request_plus_text_state
+  arbitrary_future_human_edit_oracle: rejected
+trigger_provenance:
+  authority_role: NONE
+  descriptive_classes:
+    - text_internal
+    - text_external
+    - mixed
+public_data_lanes:
+  arXivEdits: ACTIVE_USED
+  Wikipedia_Edit_Intention: AVAILABLE
+  One_Document_Many_Revisions: AVAILABLE
+  Re3_Sci: AVAILABLE
+  Re3Align:
+    status: AVAILABLE_EXTERNAL_ARCHIVE
+    approximate_paper_records: 3400
+    approximate_sentence_edits: 440000
+    approximate_review_response_edit_triplets: 15000
+acquisition_debt:
+  direct_intake_recheck: true
+  remaining: 2
+  missing:
+    - Bednarek_2016_DOI_10.1016_j.dcm.2015.11.004
+    - Bonchi_Gadducci_Konig_2009_DOI_10.1016_j.ic.2008.10.005
+laws:
+  - SOURCE_TEXT_ALONE_NE_FUTURE_HUMAN_EDIT_SUFFICIENCY
+  - REVISION_OPPORTUNITY_NE_REVISION_OBLIGATION
+  - HUMAN_REVISION_TRACE_NE_NORMATIVE_EDIT_AUTHORITY
+  - EDIT_OCCURRENCE_REQUIRES_TRIGGER_CONTEXT_CONDITIONING_FOR_BEHAVIORAL_PREDICTION
+  - LEAVE_INTACT_AGREEMENT_REQUIRES_OBSERVED_REVISION_OPPORTUNITY_NOT_EDITED_ONLY_CORPORA
+  - BEHAVIORAL_EXTERNAL_VALIDITY_NE_HUMAN_PREFERENCE_VALIDITY
+new_quality_authority: false
+schema_repair: 0
+next: KSGT Generation IX G9-P26 — Revision-Trigger Conditioning, Review/Feedback→Edit Dependency Forecasting, Re³Align Behavioral Replay, Text-Internal vs Text-External Edit Separability & RIGC Context-Sufficiency Audit
