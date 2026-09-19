@@ -1,0 +1,73 @@
+court: KSGT Generation IX G9-P21
+verdict: PASS-WITH-TARGET-ANCHORED-MIGRATION
+source_stage: G9-P20
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+migration_packet:
+  source_sequences: 12
+  modes: 4
+  total_migrations: 48
+modes:
+  M0_metadata_only:
+    MFSC_match: 12/12
+    naive_id_copy_mismatch: 0/12
+  M1_horizon_expansion:
+    MFSC_match: 12/12
+    successor_set_expands: 9/12
+    reconstitution_needed: 7/12
+    naive_id_copy_mismatch: 5/12
+  M2_evidence_contraction:
+    MFSC_match: 12/12
+    retire_or_revalidate_needed: 10/12
+    authority_quotient_contracts: 6/12
+    naive_id_copy_mismatch: 8/12
+  M3_expand_plus_contract:
+    MFSC_match: 12/12
+    nontrivial: 11/12
+    retire_and_reconstitute_both: 8/12
+    naive_path_sensitive: 5/12
+    naive_id_copy_mismatch: 10/12
+overall:
+  MFSC_1: 48/48
+  naive_id_copy_mismatch: 23/48
+translation_classes:
+  T0_TRANSPORT: OBSERVED
+  T1_REVALIDATE: OBSERVED
+  T2_SPLIT:
+    migrations: 4/48
+  T3_MERGE:
+    migrations: 3/48
+  T4_RETIRE:
+    migrations: 18/48
+  T5_RECONSTITUTE:
+    migrations: 15/48
+minimality:
+  six_class_partition: REQUIRED_ON_PACKET
+method_imports:
+  Doyle_1979_truth_maintenance: IMPORTED
+  Muram_Javed_2023_ATTEST: IMPORTED
+  Leo_et_al_2024_RO_Crate: IMPORTED
+mandatory_prior_art:
+  PROV_IDEA_2025:
+    doi: 10.1145/3697008
+    status: MANDATORY_PRIOR_ART
+  Kelly_McDermid_2001:
+    doi: 10.1016/S0951-8320(00)00079-X
+    status: CONCEPTUAL_COMPARATOR
+migration_protocol:
+  target_anchored: true
+  receipt_id_copy_forbidden: true
+  target_from_scratch_equivalence_required: true
+  migration_manifest_archival_after_seal: true
+laws:
+  - RECEIPT_IDENTITY_NE_CROSS_VERSION_TRANSLATABILITY
+  - REACHABILITY_EXPANSION_NE_EVIDENCE_CONTRACTION
+  - MIGRATION_IS_TARGET_ANCHORED_NOT_PATH_AUTHORIZED
+  - MIGRATION_PROVENANCE_NE_MIGRATED_AUTHORITY
+new_quality_authority: false
+human_recruitment: false
+schema_repair: 0
+next: KSGT Generation IX G9-P22 — Multi-Hop Version Migration, Receipt-Translation Composition, Skipped-Version Equivalence, Migration-Debt Accumulation & Canonical Upgrade-Path Independence Audit
