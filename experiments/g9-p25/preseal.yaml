@@ -1,0 +1,59 @@
+stage: KSGT-G9-P25
+status: PRESEALED
+source_stage: G9-P24
+quality_contract: Q-C1
+transition_contract: RTD-1
+focus:
+  - existing_human_revision_trace_world_contact
+  - hidden_future_edit_prediction
+  - leave_intact_agreement
+  - dependency_cone_forecasting
+  - RIGC_behavioral_external_validity
+human_recruitment: false
+data_first_hold: true
+world_contact_lanes:
+  A_arXivEdits:
+    source: Jiang_Xu_Stevens_2022
+    split: dev
+    prospective_packet_n: 24
+    source_only_before_prediction: true
+    human_future_revision_hidden_until_RIGC_seal: true
+  B_Wikipedia_Edit_Intention:
+    source: Yang_Halfaker_Kraut_Hovy_2017
+    use: external_intent_taxonomy_and_future_revision_lane
+  C_Re3_Sci:
+    source: Ruan_Kuznetsov_Gurevych_2024
+    use: review_revision_dependency_externalization
+primary_predictions:
+  - predicted_edit_cone
+  - predicted_leave_intact_region
+  - predicted_revision_intent
+  - predicted_scope_local_vs_neighbor_vs_document
+outcomes:
+  edit_localization:
+    - token_or_span_hit
+    - overreach
+    - missed_human_edit
+  leave_intact:
+    - untouched_region_agreement
+  intent:
+    - coarse_intent_match
+  scope:
+    - local_scope_accuracy
+rivals:
+  GLOBAL_ALL: predict_document_or_sentence_wide_edit
+  RANDOM_EQUAL_BUDGET: equal_size_random_cone
+  ERROR_ONLY: grammar_or_surface_error_only
+  RIGC_1: intent_and_dependency_bounded_cone
+authority_boundary:
+  human_revision_is_behavioral_world_contact_not_normative_truth: true
+  human_edit_absence_does_not_prove_edit_wrong: true
+  human_edit_presence_does_not_create_Q4: true
+preseal_rules:
+  packet_ids_frozen_before_target_reveal: true
+  no_post_outcome_threshold_change: true
+  no_human_preference_claim: true
+  no_Q5: true
+acquisition_debt_recheck:
+  intake_folder_directly_listed: true
+  currently_missing_expected: 2
