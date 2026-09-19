@@ -1,0 +1,68 @@
+court: KSGT Generation IX G9-P17
+verdict: PASS-WITH-AUTHORITY-QUOTIENT
+source_stage: G9-P16
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+structural_edit_audit:
+  total_pairs: 133
+  E0_noncarrier_rename:
+    equivalent: 32/32
+  E1_delete_inactive_node:
+    equivalent: 32/32
+  E2_noncritical_equivalent_edge:
+    equivalent: 32/32
+  E3_delete_carrier_critical_edge:
+    nonequivalent: 15/15
+  E4_reverse_directional_relation:
+    nonequivalent: 6/7
+    equivalent: 1/7
+  E5_relation_type_substitution:
+    nonequivalent: 12/15
+    equivalent: 3/15
+  structurally_different_but_authority_equivalent: 100
+  single_edit_authority_separating: 33
+authority_distance:
+  definition: MIN_AUTHORITY_RELEVANT_EDITS_TO_CHANGE_DOWNSTREAM_DECISION
+  raw_graph_edit_distance_equivalent: false
+  benign_nonzero_edit_dA0: 100
+cross_regime:
+  families: 12
+  target_instances: 36
+  regimes: [D,L,N]
+  support_subgraph_topology_preserved: 31/36
+  local_Q3_preserved: 27/36
+  full_authority_quotient_preserved: 24/36
+  zero_structural_edit_but_authority_change: 12/36
+  same_support_family_but_authority_change: 7/36
+quotient_models:
+  exact_graph_identity: TOO_FINE
+  typed_graph_isomorphism: TOO_FINE
+  support_subgraph_family_equivalence: TOO_COARSE_CROSS_REGIME
+  authority_labeled_support_subgraph_quotient: PASS
+counterexample_basis:
+  size: 5
+  witnesses:
+    - inactive_node_deletion
+    - carrier_critical_edge_deletion
+    - directional_edge_reversal
+    - relation_type_substitution
+    - zero_structural_edit_regime_recompilation
+laws:
+  - STRUCTURAL_GRAPH_EDIT_DISTANCE_NE_AUTHORITY_DISTANCE
+  - SAME_GRAPH_NE_SAME_AUTHORITY_STATE
+  - SUPPORT_SUBGRAPH_EQUIVALENCE_ALONE_NE_CROSS_REGIME_AUTHORITY_EQUIVALENCE
+  - QUOTIENT_ONLY_WHAT_DOWNSTREAM_AUTHORITY_CANNOT_DISTINGUISH
+prior_art_boundary:
+  graph_quotienting: PRIOR_ART
+  bisimulation: PRIOR_ART
+  graph_minimization: PRIOR_ART
+  discourse_graphs: PRIOR_ART
+  graph_edit_distance: PRIOR_ART
+residual_novelty: authority_labeled_support_subgraph_quotient_and_authority_distance
+new_quality_authority: false
+human_recruitment: false
+schema_repair: 0
+next: KSGT Generation IX G9-P18 — Authority-Quotient Transition System, Counterfactual Edit Algebra, Quotient-State Reachability, Regime-Recompilation Noncommutativity & Minimal Dynamic Carrier-State Audit
