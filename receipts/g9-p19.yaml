@@ -1,0 +1,69 @@
+court: KSGT Generation IX G9-P19
+verdict: PASS-WITH-AUTHORITY-GC
+source_stage: G9-P18
+quality_contract: Q-C1
+quality_contract_state: CANONICAL_UNCHANGED
+transition_contract:
+  name: RTD-1
+  state: RETAINED
+method_imports:
+  Acar_2006_DDG_change_propagation: IMPORTED_AND_MODIFIED
+  Acar_Blume_Donham_2013_from_scratch_consistency: IMPORTED_AS_AFSC_1
+  Adapton_2014_demand_driven_dirtying: IMPORTED
+  Nominal_Adapton_2015_names: IMPORTED_FOR_IDENTITY_ONLY
+  Green_et_al_2007_how_provenance: IMPORTED_FOR_POSITIVE_DERIVATION
+  Gray_Cheriton_1989_leases: RECONNAISSANCE_CONTROL_PATTERN
+receipt_lifecycle:
+  states: [LIVE,DIRTY,DEAD]
+  revocation_is_event_not_state: true
+  lease_expiry_is_event_not_state: true
+  time_elapsed_alone_expires_authority: false
+p18_frontier_reanalysis:
+  convergent_path_pairs: 9
+  live_receipt_differences: 6
+  dead_receipt_differences: 3
+  dead_gc_downstream_change: 0
+  forced_live_gc_failures: 6/6
+RGC_1:
+  roots: reachable_future_authority_queries
+  mark: receipts_in_minimal_positive_provenance_supports
+  dirty: marked_receipts_with_changed_dependencies
+  sweep: unmarked_receipts_only
+  correctness_court: AFSC_1
+AFSC_1:
+  compare_incremental_result_to_full_recomputation: true
+  observables:
+    - legal_successor_set
+    - Q3_state
+    - membership_authority
+    - selection_authority_state
+    - transport_authorization
+provenance:
+  positive_derivation_formula: true
+  revocation_by_subtraction: forbidden
+  validity_layer_separate: true
+dynamic_state:
+  form: S_t=([G_t]_A,F_t_star)
+  F_t_star: live_or_dirty_receipts_plus_positive_derivation_dependencies
+  decision_markov_on_frozen_system: ESTABLISHED
+reopening:
+  correctly_gc_receipt_reopens_inside_same_complete_transition_closure: false
+  reopening_requires_system_version_change_or_fresh_evidence_scope: true
+  name_match_restores_authority: false
+  fresh_revalidation_and_receipt_issue_required: true
+laws:
+  - AGE_NE_EXPIRY_NE_REVOCATION_NE_GC
+  - NAME_IDENTITY_NE_AUTHORITY_CONTINUITY
+  - FROM_SCRATCH_CONSISTENCY_IS_CORRECTNESS_COURT_FOR_RECEIPT_REUSE
+  - CORRECTLY_COLLECTED_RECEIPT_CANNOT_REOPEN_WITHOUT_SYSTEM_VERSION_CHANGE
+prior_art_boundary:
+  incremental_computation: PRIOR_ART
+  demand_driven_recomputation: PRIOR_ART
+  nominal_matching: PRIOR_ART
+  provenance_semirings: PRIOR_ART
+  leases: PRIOR_ART
+residual_novelty: minimal_authority_provenance_persistence_plus_receipt_GC_semantics
+new_quality_authority: false
+human_recruitment: false
+schema_repair: 0
+next: KSGT Generation IX G9-P20 — Dynamic Authority-State Return-to-World-Contact, Natural Korean Context-Revision Sequences, Receipt-GC Replay, Reopening under Regime Shift & From-Scratch Equivalence Stress
