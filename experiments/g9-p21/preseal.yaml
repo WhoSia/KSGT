@@ -1,0 +1,69 @@
+stage: KSGT-G9-P21
+status: PRESEALED
+source_stage: G9-P20
+quality_contract: Q-C1
+transition_contract: RTD-1
+focus:
+  - versioned_authority_state_migration
+  - cross_version_receipt_translation
+  - reachability_horizon_expansion
+  - evidence_scope_contraction
+  - migration_from_scratch_equivalence
+method_imports:
+  truth_maintenance:
+    donor: Doyle_1979
+    import: justification_dependency_and_nonmonotonic_status_update
+  assurance_case_update:
+    donor: Muram_Javed_2023_ATTEST
+    import: affected_argument_localization_and_evidence_update
+  workflow_provenance:
+    donor: Leo_et_al_2024_RO_Crate
+    import: separate_prospective_plan_from_retrospective_execution_provenance
+migration_packet:
+  source_sequences: 12
+  migration_modes:
+    M0: version_metadata_only_no_scope_change
+    M1: reachability_horizon_expansion
+    M2: evidence_scope_contraction
+    M3: expansion_plus_contraction
+  total_migrations: 48
+receipt_translation_classes:
+  T0_TRANSPORT:
+    condition: justification_and_validity_preserved_under_target_version
+  T1_REVALIDATE:
+    condition: identity_preserved_but_any_authority_dependency_or_Q3_scope_changed
+  T2_SPLIT:
+    condition: one_source_receipt_maps_to_multiple_target_authority_claims_with_distinct_support
+  T3_MERGE:
+    condition: multiple_source_receipts_collapse_to_one_target_claim_without_losing_provenance
+  T4_RETIRE:
+    condition: target_version_has_no_authority_role_for_receipt
+  T5_RECONSTITUTE:
+    condition: target_authority_needed_but_no_valid_translation_path_exists
+migration_correctness:
+  MFSC_1: migrated_state_must_equal_target_version_from_scratch_recomputation
+  compare:
+    - support_carrier_set
+    - Q3_state
+    - membership_authority
+    - selection_authority_state
+    - transport_authorization
+    - legal_successor_set
+asymmetry_hypothesis:
+  expansion: may_create_new_queries_and_require_reconstitution_but_does_not_by_itself_invalidate_old_support
+  contraction: may_invalidate_existing_receipts_and_cannot_be_handled_by_monotone_addition
+version_state:
+  source: V_s
+  target: V_t
+  migration_map: mu_s_to_t
+  translated_frontier: F_t_candidate
+forbidden:
+  - receipt_id_copy_as_translation
+  - same_name_authority_inheritance
+  - silent_Q3_transport
+  - lost_provenance_under_merge
+  - post_outcome_translation_class_addition
+  - Q4_inheritance
+  - fifth_quality_authority
+human_recruitment: false
+schema_repair: 0
