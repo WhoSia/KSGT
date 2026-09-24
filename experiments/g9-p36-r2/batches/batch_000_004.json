@@ -1,0 +1,15 @@
+{
+  "range": "000-004",
+  "papers": 5,
+  "files": 8,
+  "units": 438,
+  "obligations": 418,
+  "unresolved": 126,
+  "groups": {
+    "W0": 0,
+    "W1": 0,
+    "W2": 0
+  },
+  "certifiable": 0,
+  "candidates": []
+}
