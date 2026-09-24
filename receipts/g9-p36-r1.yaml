@@ -6,22 +6,29 @@ safe_transport: ABSTAIN
 split_reconstruction:
   exact_326_128_128: PASS
   calibration_after_exposure_exclusion: 121
+  positive_link_calibration_papers: 118
   first_20_matches_P36_pilot: 20/20
   drive_paper_folders: 121/121
+  response_subtrees: 121/121
 full_replay:
   papers: 121
   response_files: 172
   grounded_chunks: 681
   sentences: 4883
   obligations: 4697
+  resolved: 3015
   unresolved: 1682
   unresolved_rate: 0.35810091547796463
   coreference_closed: 1119
+  coreference_quote_root: 87
+  coreference_immediate_previous_unique: 1032
 natural_redundancy:
   mechanical_witnesses: 6
   W0: 5
   W1: 0
   W2: 1
+  mechanical_obligation_fraction: 0.0012774111134766872
+  mechanical_paper_fraction: 0.049586776859504134
   proof_surviving_deletions: 0
   proof_surviving_papers: 0
   frontier_reopened: false
@@ -54,5 +61,7 @@ legacy_P33_R2_strict30:
   outcome_reverse_engineering: FORBIDDEN
 github:
   preseal: 8c29a839de8369ccde349c5fd8b0d130b888f5d9
-notion_sync: PENDING
+  scientific_closure: 09908d33b085498f71fefedc3ed82fbbdb9285d2
+notion:
+  receipt: 3e5ef561-cf92-81fe-99db-e5f86c00ddfe
 next: KSGT Generation IX G9-P36-R2 — Local Structural Grounding, Table/Code/Example Attachment, Antecedent-Identity Closure, Context-Complete Proof Objects & Natural Redundancy Reopening Stress
