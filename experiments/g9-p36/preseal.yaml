@@ -1,0 +1,37 @@
+phase: KSGT Generation IX G9-P36
+title: Discourse-Grounded Obligation-Graph Induction, Coreference/Scope Closure, Natural Redundancy Witness Mining, Parser-Calibrated Abstention & Full-Calibration Semantic Replay
+state: PRESEALED_AFTER_PARSER_PILOT_BEFORE_EXTENDED_REPLAY
+parent: G9-P35
+human_recruitment: HOLD
+safe_transport: ABSTAIN
+compiler:
+  name: C3
+  runtime_prototype_sha256: 7cc0b2809afe3d489b2ca6cefdeb68715d84b70fb57cad7e824973fb016a5a62
+  policy: high_precision_abstention_first
+  language_policy: UNRESTRICTED
+  current_reference_language: Python
+  language_reason: rapid deterministic JSON/text replay and calibration diagnostics; no project-wide Python requirement
+authority:
+  representation: discourse_grounded_obligation_graph
+  witness_order: [W0, W1, W2, W3]
+  W4_external_judge: supplementary_only
+  no_w0_w3: ABSTAIN
+coreference:
+  same_string_cross_issue_equivalence: FORBIDDEN
+  quote_root_resolution: allowed_for_issue_concern_point
+  immediate_previous_proposition_resolution: allowed_for_results_statistics_and_single_pronoun_only_when_unique
+  unresolved_pronoun: ABSTAIN
+scope:
+  protect: [polarity, modality, quantifier, comparator_direction, condition_binding, future_vs_completed_authority]
+value_binding:
+  protect: [entity, metric, comparator, numeric_value, unit, condition]
+  document_pointer_numbers_are_not_measurement_values: true
+natural_redundancy:
+  proof_required: true
+  similarity_score_alone: forbidden
+regression:
+  tests: 22
+  passed: 22
+known_holds:
+  - full_121_paper_semantic_replay_not_yet_executed
+  - peerj_transport_inherited_hold

@@ -1,0 +1,27 @@
+suite: G9-P36-C3
+expected_total: 22
+semantic_loss_attacks:
+  directed_relation_deletion: ABSTAIN
+  value_binding_deletion: ABSTAIN
+  role_binding_deletion: ABSTAIN
+  polarity_scope_deletion: ABSTAIN
+  modality_deletion: ABSTAIN
+  authority_commitment_deletion: ABSTAIN
+  condition_context_deletion: ABSTAIN
+  direction_flip: ABSTAIN
+  value_swap: ABSTAIN
+  polarity_flip: ABSTAIN
+  modality_strength_change: ABSTAIN
+  role_reversal: ABSTAIN
+  future_vs_completed: ABSTAIN
+  condition_relocation: ABSTAIN
+positive_and_boundary_controls:
+  exact_same_grounded_proposition: CERTIFY
+  same_quote_cross_chunk_structural_restatement: CERTIFY
+  different_quote_cross_chunk_same_surface: ABSTAIN
+  fig_figure_normalization: CERTIFY
+  percent_symbol_normalization: CERTIFY
+  pronoun_without_antecedent: ABSTAIN
+  condition_swap: ABSTAIN
+  different_commitment_object: ABSTAIN
+result: 22/22
