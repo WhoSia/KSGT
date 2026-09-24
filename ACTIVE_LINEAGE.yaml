@@ -6,21 +6,15 @@ active_research_line:
   - G9-P35
   - G9-P36
 current_phase: G9-P36
+current_verdict: PASS_WITH_NEGATIVE_FRONTIER
+current_compiler:
+  name: C3-R1
+  sha256: 6c04df9cd0820e5c9262b59d49b16fa55680d825575b49e1d30a0b319b8438f1
 raw_data_policy:
   re3align_raw: DRIVE_ONLY_DO_NOT_COMMIT
   literature_pdfs: TEN_PAPERS_COMMONS_DO_NOT_COMMIT
 language_policy:
   status: UNRESTRICTED
-  allowed_examples:
-    - Python
-    - R
-    - Rust
-    - C++
-    - Go
-    - Java
-    - Ruby
-    - Julia
-    - Haskell
-    - OCaml
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
+next_phase: G9-P36-R1

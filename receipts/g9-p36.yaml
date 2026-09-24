@@ -1,0 +1,53 @@
+phase: KSGT Generation IX G9-P36
+title: Discourse-Grounded Obligation-Graph Induction, Coreference/Scope Closure, Natural Redundancy Witness Mining, Parser-Calibrated Abstention & Full-Calibration Semantic Replay
+verdict: PASS_WITH_NEGATIVE_FRONTIER
+human_recruitment: HOLD
+safe_transport: ABSTAIN
+compiler:
+  name: C3-R1
+  sha256: 6c04df9cd0820e5c9262b59d49b16fa55680d825575b49e1d30a0b319b8438f1
+  regression: 22/22
+mnmc:
+  type_inventory: MNMC-5_RETAINED
+  sixth_dimension_separation_witness: NONE
+  authority_object: discourse_grounded_obligation_graph
+parser_calibration_pilot:
+  selection: first_20_unexposed_positive_papers_in_frozen_P33_R2_calibration_hash_order
+  papers: 20
+  response_files: 31
+  grounded_chunks: 152
+  sentences: 1233
+  sentences_with_obligation: 619
+  coverage_diagnostic: 0.5020275750
+  obligations: 645
+  unresolved_obligations: 375
+  unresolved_rate: 0.5813953488
+  resolved_coreference:
+    quote_root: 6
+    immediate_previous_proposition: 10
+natural_redundancy:
+  W0_duplicate_classes: 0
+  W1_same_quote_cross_chunk_classes: 0
+  verdict: NO_AUDITABLE_NATURAL_COMPRESSION_WITNESS_IN_PILOT
+full_calibration_graph_replay:
+  state: HOLD_NOT_EXECUTED
+  inherited_P33_R2_121_paper_results: UNCHANGED
+  reason:
+    - exact_predecessor_candidate_row_artifact_not_durably_materialized
+    - same_basename_drive_staging_prevents_efficient_bulk_JSON_replay_in_current_runtime
+frontier:
+  safe_compression_reopened: false
+  law:
+    - PARSER_COVERAGE_NE_SEMANTIC_AUTHORITY
+    - LEXICAL_OVER_ABSTENTION_NE_PROPOSITIONAL_REDUNDANCY
+    - DISCOURSE_GROUNDED_PROOF_OBLIGATIONS_REMOVE_FALSE_REDUNDANCY_BEFORE_CREATING_SAFE_COMPRESSION
+    - ABSTENTION_IS_REQUIRED_UNDER_REFERENT_SCOPE_VALUE_UNDERIDENTIFICATION
+    - MNMC5_FIELDS_REMAIN_BUT_BINDINGS_CARRY_DISCOURSE_IDENTITY
+github:
+  active_lineage_backfill: 5f3b159f10fe214dbb08b1a49aa062be4117b4c7
+  p36_preseal: 94a894ef42ecec06241211ce9e1e4c21c48a9a0c
+  p36_repair_pilot: 8b2ba667e2f236dfcec56a13510b1c7ef008bfa2
+notion:
+  p35_receipt: 3e5ef561-cf92-81e6-86c7-e968d9d3c8b1
+  p36_receipt: 3e5ef561-cf92-81d8-9162-e5f0bcd2dfa5
+next: KSGT Generation IX G9-P36-R1 — Full-Calibration Candidate Reconstruction, Obligation-Graph Replay at 121-Paper Scale, Referential/Value Resolution Closure, Proof-Carrying Natural Redundancy Search & Safe-Compression Frontier Re-adjudication

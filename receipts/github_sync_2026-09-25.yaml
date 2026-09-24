@@ -1,0 +1,32 @@
+date: 2026-09-25
+repository: WhoSia/KSGT
+branch: main
+previous_head_before_sync: 395e8e142332aa77c5c5f3819cc2dfe690f8b4e2
+reason: restore active GitHub lineage after Notion/Drive research outpaced repository synchronization
+scope:
+  active_only: true
+  backfilled:
+    - G9-P33-R2
+    - G9-P34
+    - G9-P35
+    - G9-P36
+  intentionally_not_backfilled:
+    - superseded_intermediate_G9-P26_through_G9-P32
+commits:
+  - sha: 5f3b159f10fe214dbb08b1a49aa062be4117b4c7
+    role: active_lineage_backfill_P33_R2_to_P35
+  - sha: 94a894ef42ecec06241211ce9e1e4c21c48a9a0c
+    role: P36_preseal
+  - sha: 8b2ba667e2f236dfcec56a13510b1c7ef008bfa2
+    role: P36_C3_R1_repair_and_pilot
+excluded_bytes:
+  - Re3Align_raw_corpus
+  - Literature_Commons_PDFs
+  - other_large_source_bytes
+policy:
+  raw_data: Drive_only
+  papers: 10_PAPERS_only
+  github: code_configs_manifests_tests_receipts_only
+development_language:
+  unrestricted: true
+  choose_by_problem_fit: true
