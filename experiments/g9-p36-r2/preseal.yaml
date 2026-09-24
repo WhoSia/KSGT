@@ -1,0 +1,42 @@
+phase: KSGT Generation IX G9-P36-R2
+title: Local Structural Grounding, Table/Code/Example Attachment, Antecedent-Identity Closure, Context-Complete Proof Objects & Natural Redundancy Reopening Stress
+state: PRESEALED_BEFORE_R2_FULL121_REPLAY
+parent: G9-P36-R1
+parent_science_commit: 09908d33b085498f71fefedc3ed82fbbdb9285d2
+parent_sync_commit: 9530d4b812809e22bc0c1da1d0e4b4d730ddce01
+source:
+  corpus: Re3Align_EMNLP24
+  csv_sha256: 599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28
+  split_rule: SHA256(UTF8("emnlp24" + paper_id + "P33R1_SPLIT_V1"))
+  calibration_original: 128
+  exclusion_policy: frozen_31_official_cache_papers_plus_doc0
+  calibration_eligible: 121
+  calibration_manifest_sha256: c4eb433c17d1c43cd1fdcafe2336e45f55cbe439fa55ec09c25f52a7e0a02a60
+compiler:
+  name: C3-R2-STRUCTURAL-v1
+  purpose: refine_G_without_adding_MNMC_dimension
+  inherited_mnmc: [A,R,F,V,G]
+  new_G_fields: [response_chunk_id,block_type,structural_role,attachment_key,antecedent_key,local_scope_key]
+  unresolved: ABSTAIN
+  structural_container_deletion: ABSTAIN
+candidate_generation:
+  broad_surface_or_graph_match_within_review_root: true
+  deletion_requires_context_complete_equivalence: true
+  no_cross_review_deletion: true
+  no_cross_attachment_deletion: true
+  deictic_requires_same_antecedent_key: true
+  manuscript_insertion_separate_from_assertion: true
+proof_policy:
+  certifiable_roles: [ASSERTION,REVISION_COMMITMENT]
+  W0_exact_surface: allowed_only_after_full_context_match
+  W1_alias_surface: allowed_only_after_full_context_match
+  W2_graph_equivalence: candidate_only_not_self_authorizing
+regression_controls:
+  inherited_R1_failures: 6
+  expected: all_six_must_remain_noncertifiable
+positive_controls:
+  - exact_duplicate_assertion_same_attachment_same_antecedent
+  - punctuation_alias_duplicate_assertion_same_attachment_same_antecedent
+  - exact_duplicate_revision_commitment_same_target
+human_recruitment: HOLD
+safe_transport: ABSTAIN
