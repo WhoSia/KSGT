@@ -1,0 +1,38 @@
+lane: P36_CALIBRATION_PILOT20
+selection:
+  source: frozen_P33_R2_EMNLP24_calibration_split
+  exposure_overlay: applied
+  papers: 20
+  rule: first_20_unexposed_positive_calibration_papers_in_frozen_hash_order
+materialized:
+  response_files: 31
+  grounded_chunks: 152
+  sentences: 1233
+compiler: C3-R1
+compiler_sha256: 6c04df9cd0820e5c9262b59d49b16fa55680d825575b49e1d30a0b319b8438f1
+output:
+  sentences_with_obligation: 619
+  sentence_coverage: 0.5020275750
+  obligations: 645
+  unresolved_obligations: 375
+  unresolved_rate: 0.5813953488
+  unresolved_reason_occurrences:
+    unresolved_value_entity: 223
+    deictic_reference: 189
+    unresolved_action_object: 4
+  resolved_coreference_occurrences:
+    quote_root: 6
+    immediate_previous_proposition: 10
+natural_redundancy:
+  W0_duplicate_classes: 0
+  W1_same_quote_cross_chunk_classes: 0
+  raw_exact_repeat_classes_seen_before_semantic_adjudication: 6
+  raw_repeat_character:
+    - bibliographic_citation
+    - gratitude_boilerplate
+    - deictic_commitment
+  verdict: NO_AUDITABLE_NATURAL_COMPRESSION_WITNESS_IN_PILOT
+interpretation:
+  coverage_is_not_semantic_recall: true
+  zero_witness_rate_is_descriptive_not_formal_population_bound: true
+  no_frontier_reopening: true

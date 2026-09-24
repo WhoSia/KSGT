@@ -1,52 +1,54 @@
-compiler: C3
-runtime_prototype_sha256: 7cc0b2809afe3d489b2ca6cefdeb68715d84b70fb57cad7e824973fb016a5a62
+compiler: C3-R1
+runtime_prototype_sha256: 6c04df9cd0820e5c9262b59d49b16fa55680d825575b49e1d30a0b319b8438f1
 mnmc_type_inventory: [A, R, F, V, G]
+mnmc_status: RETAINED_NO_MNMC6_SEPARATION_WITNESS
 graph:
-  nodes:
-    - proposition
-    - argument
-    - value
-    - authority
-    - discourse_context
+  representation: discourse_grounded_obligation_graph
   protected_edges:
-    - ARG0_ARG1_order
+    - ordered_semantic_roles
     - predicate_relation_direction
     - polarity_modality_scope
     - value_unit_comparator_binding
     - condition_binding
     - coreference
     - quoted_review_grounding
-    - authority_state
+    - authority_state_and_action_object
 normalization:
   allowed:
     - Fig_to_Figure
-    - percent_to_percent_symbol
+    - percent_word_to_symbol
     - conservative_model_hyphen_space_alias
     - canonical_pointer_kind
   forbidden_as_authority:
     - cosine_similarity_only
     - unordered_anchor_set_equality
     - same_surface_string_across_different_review_roots
-coreference_closure:
+coreference:
   issue_concern_point: quoted_review_root
   result_statistics: immediate_prior_resolved_proposition_set_only
-  singular_pronoun: immediate_prior_single_resolved_obligation_only
+  pronoun: immediate_prior_single_resolved_obligation_only
   otherwise: unresolved
+scope:
+  protected:
+    - polarity
+    - modality
+    - comparator_direction
+    - condition_identity
+    - future_vs_completed_authority
+value_binding:
+  tuple: entity_metric_comparator_value_unit_condition
+  document_pointer_numbers_are_not_measurement_values: true
 commitment:
+  author_only_tuple: forbidden
   preserve_action_verb: true
   preserve_action_object: true
-  author_only_commitment_tuple: forbidden
-pointer_typing:
-  figure_table_section_appendix_ids: grounding_not_measurement
-proof_object_fields:
-  - source_doc
-  - review
-  - chunk
-  - quote_fingerprint
-  - protected_obligation_graph
-  - witness_type
-  - coreference_links
-  - scope_force
-  - value_bindings
-  - unresolved_reasons
-  - decision
+pointer_grounding:
+  bare_heading_is_not_proposition: true
+  pointer_context_must_include_local_propositional_content: true
+witnesses:
+  W0: same_source_grounded_identity
+  W1: same_review_root_deterministic_restatement
+  W2: protected_subgraph_structural_equivalence
+  W3: prospectively_fixed_rule_closure
+  W4: supplementary_only
+terminal_rule: NO_W0_TO_W3_WITNESS_MEANS_ABSTAIN

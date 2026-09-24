@@ -1,37 +1,44 @@
 phase: KSGT Generation IX G9-P36
 title: Discourse-Grounded Obligation-Graph Induction, Coreference/Scope Closure, Natural Redundancy Witness Mining, Parser-Calibrated Abstention & Full-Calibration Semantic Replay
-state: PRESEALED_AFTER_PARSER_PILOT_BEFORE_EXTENDED_REPLAY
+state: REPAIRED_PRESEAL_AFTER_20_PAPER_CALIBRATION_PILOT
 parent: G9-P35
 human_recruitment: HOLD
 safe_transport: ABSTAIN
 compiler:
-  name: C3
-  runtime_prototype_sha256: 7cc0b2809afe3d489b2ca6cefdeb68715d84b70fb57cad7e824973fb016a5a62
+  name: C3-R1
+  runtime_prototype_sha256: 6c04df9cd0820e5c9262b59d49b16fa55680d825575b49e1d30a0b319b8438f1
+  predecessor_C3_sha256: 7cc0b2809afe3d489b2ca6cefdeb68715d84b70fb57cad7e824973fb016a5a62
   policy: high_precision_abstention_first
   language_policy: UNRESTRICTED
   current_reference_language: Python
-  language_reason: rapid deterministic JSON/text replay and calibration diagnostics; no project-wide Python requirement
-authority:
-  representation: discourse_grounded_obligation_graph
-  witness_order: [W0, W1, W2, W3]
-  W4_external_judge: supplementary_only
-  no_w0_w3: ABSTAIN
-coreference:
-  same_string_cross_issue_equivalence: FORBIDDEN
-  quote_root_resolution: allowed_for_issue_concern_point
-  immediate_previous_proposition_resolution: allowed_for_results_statistics_and_single_pronoun_only_when_unique
-  unresolved_pronoun: ABSTAIN
-scope:
-  protect: [polarity, modality, quantifier, comparator_direction, condition_binding, future_vs_completed_authority]
-value_binding:
-  protect: [entity, metric, comparator, numeric_value, unit, condition]
-  document_pointer_numbers_are_not_measurement_values: true
-natural_redundancy:
-  proof_required: true
-  similarity_score_alone: forbidden
+  language_reason: deterministic JSON/text replay and calibration diagnostics; no project-wide Python requirement
+repair_history:
+  - condition_binding_promoted_after_condition_relocation_attack
+  - document_pointer_ids_typed_as_grounding_not_quantitative_values
+  - model_entity_regex_narrowed_after_percent_alias_failure
+  - commitment_action_verb_and_object_preserved_after_natural_false_duplicate
+  - pronouns_promoted_to_unresolved_unless_strict_local_coreference
+  - bare_table_figure_section_pointer_headings_not_treated_as_propositions
 regression:
-  tests: 22
+  structural_and_boundary_tests: 22
   passed: 22
-known_holds:
-  - full_121_paper_semantic_replay_not_yet_executed
-  - peerj_transport_inherited_hold
+pilot:
+  papers: 20
+  response_files: 31
+  grounded_chunks: 152
+  sentences: 1233
+  sentences_with_obligation: 619
+  sentence_coverage: 0.5020275750
+  obligations: 645
+  unresolved_obligations: 375
+  unresolved_rate: 0.5813953488
+  resolved_coreference:
+    quote_root: 6
+    immediate_previous_proposition: 10
+  natural_W0_duplicate_classes: 0
+  natural_W1_same_quote_cross_chunk_classes: 0
+full_calibration:
+  old_P33_R2_121_paper_results: INHERITED_UNCHANGED
+  graph_replay_121_papers: HOLD_NOT_EXECUTED
+  reason: prior strict candidate-row artifact was not durably materialized; connector stages same-basename response files one-at-a-time
+peerj_transport: INHERITED_HOLD
