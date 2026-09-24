@@ -1,0 +1,32 @@
+phase: KSGT Generation IX G9-P36-R1
+title: Full-Calibration Candidate Reconstruction, Obligation-Graph Replay at 121-Paper Scale, Referential/Value Resolution Closure, Proof-Carrying Natural Redundancy Search & Safe-Compression Frontier Re-adjudication
+state: PRESEALED_BEFORE_NEW_101_PAPER_CONTENT_REPLAY
+parent: G9-P36
+source_split:
+  rule: SHA256(source || canonical_paper_id || P33R1_SPLIT_V1)
+  csv_papers: 582
+  learn_select: 326
+  calibrate: 128
+  local_test: 128
+  calibration_after_exposure_exclusion: 121
+  positive_link_calibration_papers: 118
+  first_20_validation: EXACT_MATCH_WITH_G9_P36_PILOT
+manifest:
+  paper_folders: 121/121
+  response_subtrees: 121/121
+  missing: 0
+compiler:
+  name: C3-R1-FULL121-v1
+  language: JavaScript/V8
+  reason: connector-native raw-byte decode and parse with no basename-staging ambiguity
+  authority_witnesses: [W0,W1,W2]
+  W3: DISABLED_FOR_NEW_NATURAL_DATA
+  unresolved: ABSTAIN
+  same_surface_cross_review_root: FORBIDDEN
+candidate_policy:
+  graph_candidate: prospectively_constructed_on_all_121_calibration_papers
+  legacy_P33_R2_30_rows: validation_target_only_until_exact_reconstruction
+  similarity_only: FORBIDDEN
+  deletion_requires_all_protected_obligations_witnessed: true
+human_recruitment: HOLD
+safe_transport: ABSTAIN
