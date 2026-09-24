@@ -1,0 +1,61 @@
+phase: KSGT Generation IX G9-P36-R1
+artifact: PROOF_CARRYING_NATURAL_REDUNDANCY_ADJUDICATION
+candidate_count: 6
+terminal_policy: DELETE_ONLY_IF_LOCAL_DISCOURSE_ROLE_AND_ALL_PROTECTED_OBLIGATIONS_ARE_WITNESSED
+candidates:
+  - paper: emnlp24_doc387
+    review: v1_review1
+    mechanical_witness: W0
+    surface: "We added this discussion to the paper."
+    verdict: ABSTAIN_DELETE
+    reason: DEICTIC_ANTECEDENT_COLLAPSE
+    evidence: same surface occurs after different immediately preceding discussions; "this discussion" does not preserve antecedent identity
+    required_G_refinement: antecedent_target_identity
+  - paper: emnlp24_doc739
+    review: v1_review0
+    mechanical_witness: W0
+    surface: "Baseline (zero-shot CoT) [1] | Let’s think step by step."
+    verdict: ABSTAIN_DELETE
+    reason: TABLE_SCOPE_COLLAPSE
+    evidence: repeated row belongs to Mistral-7B, Llama3-8B, and Gemma2-9B tables with different accuracies
+    required_G_refinement: table_identity_and_row_value_attachment
+  - paper: emnlp24_doc1035
+    review: v1_review1
+    mechanical_witness: W0
+    surface: "FILTER regex(?y, http://rdf.freebase.com/ns/)"
+    verdict: ABSTAIN_DELETE
+    reason: CODE_BLOCK_SCOPE_COLLAPSE
+    evidence: identical filter line is required separately inside forward and reverse SPARQL query blocks
+    required_G_refinement: code_block_and_program_role_identity
+  - paper: emnlp24_doc199
+    review: v1_review1
+    mechanical_witness: W0
+    surface: "Question: The question the teacher asked was profound, it made all the students stop and what?"
+    verdict: ABSTAIN_DELETE
+    reason: EXAMPLE_BLOCK_BINDING_COLLAPSE
+    evidence: repeated question is bound to different answer-choice sets and confidence demonstrations
+    required_G_refinement: example_block_and_argument_binding
+  - paper: emnlp24_doc103
+    review: v1_review0
+    mechanical_witness: W0
+    surface: "Then the seconds per epoch and the GPU memory are as follows:"
+    verdict: ABSTAIN_DELETE
+    reason: TABLE_ATTACHMENT_COLLAPSE
+    evidence: identical introduction attaches once to GPT2-120M results and once to TinyLLaMA results
+    required_G_refinement: section_and_table_attachment
+  - paper: emnlp24_doc1043
+    review: v1_review0
+    mechanical_witness: W2
+    surface_pair: "factual response sentence vs same sentence inside proposed-manuscript quotation"
+    verdict: ABSTAIN_DELETE
+    reason: DISCOURSE_ROLE_COLLAPSE
+    evidence: one occurrence asserts what was done; the other specifies text promised for manuscript insertion
+    required_G_refinement: assertion_vs_quotation_vs_revision_commitment_role
+summary:
+  mechanical_witnesses: 6
+  proof_surviving_witnesses: 0
+  new_law: REVIEW_ROOT_GROUNDING_IS_INSUFFICIENT_FOR_DELETION_AUTHORITY
+  ontology:
+    MNMC_5: RETAINED
+    MNMC_6: NOT_JUSTIFIED
+    refinement: G_must_include_local_structural_and_antecedent_identity

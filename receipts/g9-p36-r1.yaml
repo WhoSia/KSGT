@@ -1,0 +1,58 @@
+phase: KSGT Generation IX G9-P36-R1
+title: Full-Calibration Candidate Reconstruction, Obligation-Graph Replay at 121-Paper Scale, Referential/Value Resolution Closure, Proof-Carrying Natural Redundancy Search & Safe-Compression Frontier Re-adjudication
+verdict: PASS_WITH_FULL_CALIBRATION_NEGATIVE_CLOSURE
+human_recruitment: HOLD
+safe_transport: ABSTAIN
+split_reconstruction:
+  exact_326_128_128: PASS
+  calibration_after_exposure_exclusion: 121
+  first_20_matches_P36_pilot: 20/20
+  drive_paper_folders: 121/121
+full_replay:
+  papers: 121
+  response_files: 172
+  grounded_chunks: 681
+  sentences: 4883
+  obligations: 4697
+  unresolved: 1682
+  unresolved_rate: 0.35810091547796463
+  coreference_closed: 1119
+natural_redundancy:
+  mechanical_witnesses: 6
+  W0: 5
+  W1: 0
+  W2: 1
+  proof_surviving_deletions: 0
+  proof_surviving_papers: 0
+  frontier_reopened: false
+failure_localization:
+  - DEICTIC_ANTECEDENT_COLLAPSE
+  - TABLE_SCOPE_COLLAPSE
+  - CODE_BLOCK_SCOPE_COLLAPSE
+  - EXAMPLE_BLOCK_BINDING_COLLAPSE
+  - TABLE_ATTACHMENT_COLLAPSE
+  - DISCOURSE_ROLE_COLLAPSE
+constitution:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  G_refinement_required:
+    - local_structural_block_identity
+    - table_and_code_attachment
+    - example_identity
+    - quotation_and_revision_role
+    - antecedent_target_identity
+laws:
+  - MECHANICAL_GRAPH_EQUALITY_NE_DELETION_AUTHORITY
+  - REVIEW_ROOT_GROUNDING_NE_LOCAL_DISCOURSE_IDENTITY
+  - SAME_SURFACE_AND_SAME_REVIEW_ROOT_CAN_STILL_BIND_DIFFERENT_OBLIGATIONS
+  - PROOF_CARRYING_REDUNDANCY_REQUIRES_STRUCTURAL_ATTACHMENT_PRESERVATION
+  - ZERO_SAFE_WITNESSES_DOES_NOT_ESTABLISH_POPULATION_ABSENCE_OF_REDUNDANCY
+  - ABSTAIN_PRESERVES_AUTHORITY_WHEN_LOCAL_ATTACHMENT_IS_UNRESOLVED
+legacy_P33_R2_strict30:
+  count_inherited: 30_rows_26_papers
+  exact_row_crosswalk: HOLD_ARTIFACT_NOT_DURABLY_MATERIALIZED
+  outcome_reverse_engineering: FORBIDDEN
+github:
+  preseal: 8c29a839de8369ccde349c5fd8b0d130b888f5d9
+notion_sync: PENDING
+next: KSGT Generation IX G9-P36-R2 — Local Structural Grounding, Table/Code/Example Attachment, Antecedent-Identity Closure, Context-Complete Proof Objects & Natural Redundancy Reopening Stress

@@ -1,0 +1,53 @@
+phase: KSGT Generation IX G9-P36-R1
+lane: FULL_121_OBLIGATION_GRAPH_REPLAY
+source:
+  corpus: Re3Align_EMNLP24
+  split_rule: SHA256(source + canonical_paper_id + P33R1_SPLIT_V1)
+  total_csv_papers: 582
+  calibration_original: 128
+  exposure_excluded: 7
+  calibration_replay_papers: 121
+  positive_link_calibration_papers: 118
+  paper_folders_verified: 121
+  response_subtrees_verified: 121
+compiler:
+  name: C3-R1-FULL121-v1
+  git_preseal_commit: 8c29a839de8369ccde349c5fd8b0d130b888f5d9
+  runtime: JavaScript/V8
+  w3_enabled: false
+  unresolved_policy: ABSTAIN
+replay:
+  papers: 121
+  response_files: 172
+  grounded_chunks: 681
+  author_reply_sentences: 4883
+  obligations: 4697
+  resolved_obligations: 3015
+  unresolved_obligations: 1682
+  unresolved_rate: 0.35810091547796463
+  coreference_closed: 1119
+  coreference:
+    quote_root: 87
+    immediate_previous_unique: 1032
+  unresolved_reason_occurrences:
+    UNRESOLVED_VALUE_ENTITY: 1009
+    UNRESOLVED_REFERENCE: 782
+    UNRESOLVED_ACTION_OBJECT: 1
+mechanical_candidates:
+  witness_groups: 6
+  W0: 5
+  W1: 0
+  W2: 1
+  candidate_deletions: 6
+  candidate_papers: 6
+  obligation_fraction: 0.0012774111134766872
+  paper_fraction: 0.049586776859504134
+proof_adjudication:
+  surviving_deletions: 0
+  surviving_papers: 0
+  safe_compression_frontier_reopened: false
+notes:
+  - coverage and unresolved counts are compiler diagnostics, not semantic recall estimates
+  - mechanical graph equality is only candidate generation and carries no deletion authority without local-context proof
+  - inherited P33-R2 behavioral and lexical-S calibration remains unchanged
+  - legacy strict-30 row-level artifact was not durably materialized and is not reverse-engineered from outcomes
