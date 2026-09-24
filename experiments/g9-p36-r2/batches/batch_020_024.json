@@ -1,0 +1,96 @@
+{
+  "range": "020-024",
+  "papers": 5,
+  "files": 8,
+  "units": 354,
+  "obligations": 327,
+  "unresolved": 107,
+  "groups": {
+    "W0": 4,
+    "W1": 0,
+    "W2": 1
+  },
+  "certifiable": 0,
+  "candidates": [
+    {
+      "paper": "emnlp24_doc192",
+      "file": "v1_review0_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "2023.",
+      "roles": [
+        "ASSERTION"
+      ],
+      "attachments": [
+        "below we identified the sentences that require support and provide references",
+        "line 480 the vast majority of existing within-prompt aes models do not take the essay prompt and the scoring rubrics as input j xie k cai l kong j zhou and w qu 2022"
+      ],
+      "occurrences": 3
+    },
+    {
+      "paper": "emnlp24_doc192",
+      "file": "v1_review0_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "2022.",
+      "roles": [
+        "ASSERTION"
+      ],
+      "attachments": [
+        "line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o",
+        "line 555 llms are very good at understanding inputs as complex as essays anthropic 2024 the claude 3 model family opus sonnet haiku"
+      ],
+      "occurrences": 3
+    },
+    {
+      "paper": "emnlp24_doc192",
+      "file": "v1_review0_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "2024.",
+      "roles": [
+        "ASSERTION"
+      ],
+      "attachments": [
+        "line 545 content-based traits are difficult to score accurately h do y kim and g lee 2023 prompt- and trait relation-aware cross-prompt essay trait scoring findings of",
+        "line 601 for many other nlp tasks assembling a large unannotated corpus composed of news articles or tweets is relatively easy v kulkarni k leung and a haghighi 2022 c"
+      ],
+      "occurrences": 2
+    },
+    {
+      "paper": "emnlp24_doc192",
+      "file": "v1_review0_response.itg.json",
+      "type": "W2",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "naacl 2022.]",
+      "roles": [
+        "ASSERTION"
+      ],
+      "attachments": [
+        "line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o",
+        "line 555 llms are very good at understanding inputs as complex as essays anthropic 2024 the claude 3 model family opus sonnet haiku"
+      ],
+      "occurrences": 2
+    },
+    {
+      "paper": "emnlp24_doc199",
+      "file": "v1_review1_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "question: the question the teacher asked was profound, it made all the students stop and what?",
+      "roles": [
+        "EXAMPLE"
+      ],
+      "attachments": [
+        "a2 thank you for the insightful question in our experiments we observe that there are indeed cases where certain unreasonable answers are generated below is one example fro",
+        "however we acknowledge that there may be other cases where all the answers are unreasonable we try one example by changing all candidate answers into unreasonable answers as sho"
+      ],
+      "occurrences": 2
+    }
+  ]
+}
