@@ -1,0 +1,30 @@
+phase: KSGT Generation IX G9-P35
+compiler_prototypes:
+  C0:
+    sha256: 96c38c9f37e37bba9acca906b76e8b760c7541321e0175150bbf412c8f414833
+    state: REJECTED_FALSE_EQUIVALENCE
+    failure: collapsed_distinct_discourse_grounded_obligations
+  C1:
+    sha256: 87a7029ffae836cb54460be07648a8fe2639436229001b7a124c63cbbbaf760d
+    state: AUTHORITATIVE_PROTOTYPE
+    counterexample_closure:
+      deletion_suite: 7/7
+      mutation_suite: 7/7
+representation:
+  type: discourse_grounded_obligation_graph
+  symbol: G=(N,E,lambda,gamma)
+  protected_edges:
+    - ordered_semantic_roles
+    - predicate_relation_direction
+    - polarity_modality_scope
+    - value_unit_comparator_binding
+    - coreference
+    - discourse_grounding
+    - authority_provenance_context
+witness_types:
+  W0: source_identity
+  W1: deterministic_normalization
+  W2: protected_subgraph_structural_equivalence
+  W3: prospectively_fixed_rule_certified_closure
+  W4: supplementary_external_semantic_adjudication_only
+terminal_rule: NO_W0_TO_W3_WITNESS_MEANS_ABSTAIN

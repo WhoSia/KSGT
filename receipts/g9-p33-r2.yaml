@@ -1,0 +1,49 @@
+phase: KSGT Generation IX G9-P33-R2
+title: Chunk-Addressable Re3Align Materialization, Paper-Level Source-Stratified Replay, Frozen B/S/R/T Certificate Execution, EMNLP24-to-PeerJ and PeerJ-to-EMNLP Bidirectional Transport & Risk-Bound Closure
+state: PARTIAL_CLOSURE
+verdict:
+  raw_integrity: PASS
+  emnlp24: FULL
+  peerj_collection: HOLD
+  semantic_key: FAIL_BROAD_LEXICAL
+  safe_transport: ABSTAIN
+human_recruitment: HOLD
+source:
+  re3align_drive_raw: EXTERNAL_DRIVE_ONLY
+  raw_data_committed_to_github: false
+emnlp24:
+  papers: 582
+  rows: 2108
+  linked_address_occurrences: 16762
+  unresolved_raw_joins: 0
+  split:
+    learn_select: 326
+    calibrate: 128
+    local_test: 128
+    sha256: f4389fd519837889564b05cc3b49f48cdee390ec0bc63f91c86fa293427c7bf4
+  eligibility_overlay_sha256: 6a09b05cf7c6a6051bbcafb701d6a4159c8841b303402d8e55021cf577108574
+  frozen_rule:
+    family: CM
+    cosine: 0.99
+    min_k: 1
+    marginal_cosine: 0.01
+    sha256: 5212543d9a481e87d052505572b7a9f472095a0a78e27742f8aa4bc2d8c586b4
+  implementation_seal_sha256: 29dfc1588549f962cb17353a6bac64701a21ac1ce7113a4a6595edacd1f6a78a
+  calibration:
+    papers: 121
+    ready_positive_rows: 439
+    strict_candidates:
+      papers: 26
+      rows: 30
+    conditional_upper_risk_95: 0.108830
+    mean_retained_substantive_fraction: 0.988119
+    actually_compressed_rows: 3
+semantic_counterexample:
+  type: directed_relation_loss
+  consequence: lexical_anchor_contract_not_general_semantic_authority
+laws:
+  - CASE_COUNT_NE_INDEPENDENT_PAPER_COUNT
+  - ZERO_ERROR_NE_FORMAL_RISK_AUTHORITY
+  - BEHAVIORAL_PASS_NE_SEMANTIC_PASS
+  - SAFE_TRANSPORT_REQUIRES_B_AND_S_AND_R_AND_T
+notion_receipt: 3e4ef561-cf92-81c8-9e14-f8fa51041799

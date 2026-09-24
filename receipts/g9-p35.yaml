@@ -1,0 +1,32 @@
+phase: KSGT Generation IX G9-P35
+title: Proposition-Level Semantic Obligation Compiler, Role/Scope/Value Binding Extraction, Equivalence-Witness Proof Objects, Counterexample-Closed MNMC Replay & Safe-Compression Frontier Reopening
+verdict: PASS_WITH_COMPILER_CONSTITUTION
+human_recruitment: HOLD
+C0: REJECTED_FALSE_EQUIVALENCE
+C1:
+  sha256: 87a7029ffae836cb54460be07648a8fe2639436229001b7a124c63cbbbaf760d
+  counterexample_closed: 14/14
+natural_diagnostic:
+  doc565_review0:
+    reply_sentences: 42
+    compiler_hit_sentences: 6
+    obligations: 11
+  doc565_review1:
+    reply_sentences: 52
+    compiler_hit_sentences: 4
+    obligations: 4
+  doc940_review0:
+    reply_sentences: 33
+    compiler_hit_sentences: 2
+    obligations: 2
+natural_equivalence_witness: NOT_ESTABLISHED
+safe_compression_frontier: NOT_REOPENED
+safe_transport: ABSTAIN
+laws:
+  - PROPOSITION_IDENTITY_IS_DISCOURSE_GROUNDED
+  - SAME_WORDS_NE_SAME_REFERENT
+  - SAME_MNMC_FIELDS_NE_SAME_MNMC_BINDINGS
+  - EQUIVALENCE_REQUIRES_A_PROOF_OBJECT
+  - FALSE_REDUNDANCY_IS_MORE_DANGEROUS_THAN_ABSTENTION
+  - HIGH_PRECISION_UNDERCOVERAGE_MUST_ABSTAIN_NOT_IMPUTE
+notion_writeback_state: PREVIOUSLY_BLOCKED_TRANSIENT
