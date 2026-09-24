@@ -1,0 +1,32 @@
+{
+  "range": "005-009",
+  "papers": 5,
+  "files": 8,
+  "units": 290,
+  "obligations": 278,
+  "unresolved": 117,
+  "groups": {
+    "W0": 1,
+    "W1": 0,
+    "W2": 0
+  },
+  "certifiable": 0,
+  "candidates": [
+    {
+      "paper": "emnlp24_doc85",
+      "file": "v1_review0_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "2023.",
+      "roles": [
+        "MANUSCRIPT_INSERTION"
+      ],
+      "attachments": [
+        "2 gandhi kanishk jan-philipp fränken tobias gerstenberg and noah goodman understanding social reasoning in language models with language models nips 2024",
+        "4 natalie shapira guy zwirn and yoav goldberg 2023b how well do large language models perform on faux pas tests in findings of the association for computational linguistics"
+      ],
+      "occurrences": 2
+    }
+  ]
+}
