@@ -1,0 +1,64 @@
+{
+  "range": "010-014",
+  "papers": 5,
+  "files": 6,
+  "units": 138,
+  "obligations": 136,
+  "unresolved": 51,
+  "groups": {
+    "W0": 3,
+    "W1": 0,
+    "W2": 0
+  },
+  "certifiable": 0,
+  "candidates": [
+    {
+      "paper": "emnlp24_doc103",
+      "file": "v1_review0_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "then the seconds per epoch and the gpu memory are as follows:",
+      "roles": [
+        "ASSERTION"
+      ],
+      "attachments": [
+        "thanks for raising this key question as you suggested we report the actual computational time for each epoch and the gpu memory during training for our method and vanilla kd in t",
+        "for gpt2-120m we set batch size=2 gradient accumulation=4 and num gpus=4 then the seconds per epoch and the gpu memory are as follows"
+      ],
+      "occurrences": 2
+    },
+    {
+      "paper": "emnlp24_doc103",
+      "file": "v1_review0_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "| methods | seconds / epoch | gpu memory (mb) |",
+      "roles": [
+        "TABLE"
+      ],
+      "attachments": [
+        "for gpt2-120m we set batch size=2 gradient accumulation=4 and num gpus=4 then the seconds per epoch and the gpu memory are as follows",
+        "for tinyllama we set batch size=2 gradient accumulation=4 num gpus=4 gradient checkpointing=true then the seconds per epoch and the gpu memory are as follows"
+      ],
+      "occurrences": 2
+    },
+    {
+      "paper": "emnlp24_doc141",
+      "file": "v1_review0_response.itg.json",
+      "type": "W0",
+      "certifiable": false,
+      "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+      "surface": "| model | bleu-1 | bleu-2 | bleu-3 | bleu-4 | meteor | rougel |",
+      "roles": [
+        "TABLE"
+      ],
+      "attachments": [
+        "a2 we use the latest version of chatgpt gpt-4o-2024-05-13 as the baseline and the results on the hu and ou5 datasets are shown in tables 1 and 2 although the latest version",
+        "table 1 performance on hu dataset"
+      ],
+      "occurrences": 2
+    }
+  ]
+}
