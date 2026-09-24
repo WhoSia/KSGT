@@ -1,0 +1,15 @@
+{
+  "range": "015-019",
+  "papers": 5,
+  "files": 7,
+  "units": 203,
+  "obligations": 191,
+  "unresolved": 61,
+  "groups": {
+    "W0": 0,
+    "W1": 0,
+    "W2": 0
+  },
+  "certifiable": 0,
+  "candidates": []
+}
