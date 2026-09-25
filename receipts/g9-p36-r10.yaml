@@ -60,3 +60,26 @@ waiting:
 resume_same_phase_when:
   - NIKL official annotation bytes arrive
 user_action: NONE_UNTIL_NIKL_DELIVERY
+
+prearrival_engineering:
+  state: PREARRIVAL_ENGINEERING_READY
+  readiness_commit: 2bc5842169090c9785e51dae61fb8a0a77836d04
+  canonical_semantic_core: RUST_KSGT_ARG_v1
+  legacy_js: REGRESSION_ONLY
+  python_ingestion:
+    - nikl_schema_r10.py
+    - nikl_adapter_r10.py
+    - run_gold_r10.py
+    - run_gold_bundle_r10.py
+    - finalize_gold_r10.py
+  accepted_schema_families:
+    - NIKL_ZA_LEGACY_2020_2024
+    - NIKL_ZA_ELLIPSIS_2025
+    - NIKL_ZA_TRANSITIONAL_RESTORED
+  final_rehearsal_run: 36190297866
+  final_rehearsal_artifact: 10886594950
+  final_rehearsal_sha256: 836314950a81e108b02b90d7e7b4c2acf3685ea936ddad4199b4eadfa3b066f4
+  rust_controls: PASS_11_OF_11
+  nested_multi_source_bundle: PASS
+  synthetic_finalizer: PASS_CLOSED
+  expected_new_coding_on_arrival: NONE_UNLESS_SCHEMA_UNRECOGNIZED
