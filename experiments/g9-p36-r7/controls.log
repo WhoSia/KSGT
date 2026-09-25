@@ -1,0 +1,64 @@
+{
+  "law": {
+    "version": "C3-R7-REM-v1",
+    "nullVersion": "C3-R7-ADJACENCY-NULL-v1",
+    "nullReplicates": 127,
+    "nullSeed": "KSGT-G9-P36-R7-20260925",
+    "alpha": 0.05,
+    "globalAllPairs": false
+  },
+  "positive": {
+    "items": 8,
+    "relation_postings": 24,
+    "shared_pair_keys": 4,
+    "exploratory_edge_recurrence_pairs": 4,
+    "connected_chain_pairs_any_paper": 4,
+    "primary_cross_paper_connected_chain_pairs": 4,
+    "global_all_pairs": false
+  },
+  "lexical_negative": {
+    "items": 8,
+    "relation_postings": 19,
+    "shared_pair_keys": 10,
+    "exploratory_edge_recurrence_pairs": 4,
+    "connected_chain_pairs_any_paper": 0,
+    "primary_cross_paper_connected_chain_pairs": 0,
+    "global_all_pairs": false
+  },
+  "core_negative": {
+    "items": 12,
+    "relation_postings": 34,
+    "shared_pair_keys": 1,
+    "exploratory_edge_recurrence_pairs": 0,
+    "connected_chain_pairs_any_paper": 0,
+    "primary_cross_paper_connected_chain_pairs": 0,
+    "global_all_pairs": false
+  },
+  "bruteforce": {
+    "positive": {
+      "exploratory_edge_recurrence_pairs": 4,
+      "connected_chain_pairs_any_paper": 4,
+      "primary_cross_paper_connected_chain_pairs": 4
+    },
+    "lexical": {
+      "exploratory_edge_recurrence_pairs": 4,
+      "connected_chain_pairs_any_paper": 0,
+      "primary_cross_paper_connected_chain_pairs": 0
+    },
+    "core": {
+      "exploratory_edge_recurrence_pairs": 0,
+      "connected_chain_pairs_any_paper": 0,
+      "primary_cross_paper_connected_chain_pairs": 0
+    }
+  },
+  "validation": {
+    "positive_chain": true,
+    "lexical_collision_rejected": true,
+    "protected_core_rejected": true,
+    "metamorphic_exact_surface_excluded": false,
+    "indexed_bruteforce_positive": true,
+    "indexed_bruteforce_lexical": true,
+    "indexed_bruteforce_core": true,
+    "pass": false
+  }
+}
