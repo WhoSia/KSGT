@@ -122,7 +122,7 @@ for idx,row in df.iterrows():
 control_pairs=[
 ("particle","내일 노트북을 반품해 주세요","내일 노트북 반품해 줘","particle"),
 ("order","내일 삼성 노트북을 반품해 줘","삼성 노트북을 내일 반품해 줘","order"),
-("deletion","저기 내일 노트북 반품해 줘","내일 노트북 반품해 줘","deletion")
+("deletion","내일 삼성 노트북 반품해 줘","내일 노트북 반품해 줘","deletion")
 ]
 ctrl={}
 for cid,a,b,kind in control_pairs:
