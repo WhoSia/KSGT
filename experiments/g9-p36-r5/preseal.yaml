@@ -1,0 +1,75 @@
+phase: KSGT Generation IX G9-P36-R5
+status: PRESEALED_BEFORE_FRESH118_OUTCOME_ACCESS
+inherits:
+  representation: C3-R4-BCOG-v1_FROZEN
+  proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_UNCHANGED
+  calibration: G9-P36-R4_121_PAPERS_ONLY
+scientific_question: >
+  Does an exact-invariant, representation-native, grounding-conditioned index recover
+  proof-carrying natural fusion neighborhoods that the R3 lexical geometry missed,
+  prospectively on 118 eligibility-sealed EMNLP24 local-test papers?
+holdout:
+  manifest: fresh118_manifest.txt
+  papers: 118
+  eligibility_source_sha256: 6a09b05cf7c6a6051bbcafb701d6a4159c8841b303402d8e55021cf577108574
+  preseal_access: FORBIDDEN
+neighborhood_law:
+  name: C3-R5-RNSN-v1
+  representation_complete_required: true
+  exact_bucket_invariants:
+    - review_root
+    - response_chunk_id
+    - structural_role
+    - block_type_PROSE
+    - attachment_key
+    - antecedent_key
+    - local_scope_key
+    - predicate_class
+    - predicate_lemma
+    - canonical_ARG0
+    - authority
+    - polarity
+    - modality
+    - ordered_quantifiers
+    - canonical_condition
+  predicate_family_equivalence: FORBIDDEN_EXACT_LEMMA_ONLY
+  partial_ARG1_overlap:
+    tokens: at_least_2
+    token_jaccard: at_least_0.25
+    typed_bigram_or_value_overlap: at_least_1_unless_exact_subset
+  cases:
+    SUBSUMPTION: one_ARG1_typed_atom_set_is_strict_subset
+    CONJUNCTIVE_FUSION: compatible_nonconflicting_ARG1_typed_overlap_with_unique_atoms_on_both_sides
+  abstain_on:
+    - incomplete_representation
+    - invariant_mismatch
+    - value_conflict
+    - zero_or_below_threshold_ARG1_overlap
+    - exact_or_punctuation_alias_R2_territory
+scalability:
+  algorithm: exact_signature_hash_bucket_plus_inverted_ARG1_atom_index
+  forbidden: global_all_pairs
+  expected_complexity: O_N_plus_postings_plus_emitted_pairs
+  deterministic_pair_key: sha256_sorted_source_ids
+realization:
+  authority: SECONDARY_NOT_SEMANTIC
+  order: graph_IR_then_surface_then_recompile_then_exact_graph_roundtrip
+  authorized_lane: REVISION_ACTION_shared_exact_predicate_and_will_only
+  korean_policy:
+    representation: LANGUAGE_NEUTRAL
+    downstream_realizer: role_geometry_preserving
+    preserve: [ARG0, ARG1, authority, force, scope, value, grounding]
+    particles_and_word_order: realization_choices_without_semantic_authority
+frontier_rule: >
+  Reopen only when all selection controls, metamorphic controls, inherited R3 controls,
+  source/manifest checks and graph-roundtrip gates pass and at least one fresh natural
+  holdout pair receives CERTIFY without post-exposure rule change.
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_ADMITTED_BY_DESIGN
+  parser_or_similarity_as_oracle: FORBIDDEN
+  safe_transport: ABSTAIN
+  human_recruitment: HOLD
+waiting:
+  - P33-R2_legacy_strict30_exact_row_crosswalk
+  - PeerJ_external_transport
