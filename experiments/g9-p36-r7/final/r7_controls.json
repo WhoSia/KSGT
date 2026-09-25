@@ -55,10 +55,10 @@
     "positive_chain": true,
     "lexical_collision_rejected": true,
     "protected_core_rejected": true,
-    "metamorphic_exact_surface_excluded": false,
+    "metamorphic_exact_surface_excluded": true,
     "indexed_bruteforce_positive": true,
     "indexed_bruteforce_lexical": true,
     "indexed_bruteforce_core": true,
-    "pass": false
+    "pass": true
   }
 }

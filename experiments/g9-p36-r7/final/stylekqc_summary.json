@@ -1,0 +1,85 @@
+{
+  "phase": "G9-P36-R7",
+  "corpus": "StyleKQC",
+  "dataset": "wicho/stylekqc-style",
+  "repo_sha": "268275e998ab7685de6d30daf47f49918e53ed53",
+  "file_receipts": [
+    {
+      "split": "test",
+      "filename": "0000.parquet",
+      "bytes": 160060,
+      "sha256": "f22dbc74d265e8b4daac75eae8a2a8a828ae93ca8048b49482b9106ac9b5eece"
+    },
+    {
+      "split": "train",
+      "filename": "0000.parquet",
+      "bytes": 753375,
+      "sha256": "59d57f068ce574eb1834d39a025935372d036e4926034e30e07d6f7b3411c346"
+    },
+    {
+      "split": "validation",
+      "filename": "0000.parquet",
+      "bytes": 43000,
+      "sha256": "ddc30e2e7b7bb038866ed7860d261a6e05a27c215dd5e713402084f044405244"
+    }
+  ],
+  "rows": 15000,
+  "split_counts": {
+    "test": 2400,
+    "train": 12000,
+    "validation": 600
+  },
+  "authority": "HUMAN_FORMAL_INFORMAL_REWRITE_PAIRS_CORE_CONTENT_AND_INTENT_BY_DATASET_CONSTRUCTION",
+  "surface_transport": {
+    "particle_realization_change_pairs": 5755,
+    "particle_realization_change_rate": 0.38366666666666666,
+    "order_inversion_proxy_pairs": 103,
+    "order_inversion_proxy_rate": 0.006866666666666667,
+    "surface_deletion_compatible_proxy_pairs": 11099,
+    "surface_deletion_compatible_proxy_rate": 0.7399333333333333,
+    "particle_drop_or_add_stem_events": 5446,
+    "particle_swap_stem_events": 2010,
+    "true_ellipsis_authority": "HOLD_NO_ZERO_ARGUMENT_ANNOTATION"
+  },
+  "sparse_retrieval": {
+    "algorithm": "ACT_PLUS_PARTICLE_STRIPPED_STEM_AND_BIGRAM_INVERTED_POSTINGS",
+    "global_all_pairs": false,
+    "query_posting_lookups": 167639,
+    "paired_target_retrieved": 14247,
+    "paired_target_recall": 0.9498,
+    "top1_exact_pair": 9665,
+    "top1_rate": 0.6443333333333333,
+    "candidate_size_mean": 12.9474,
+    "candidate_size_median": 6.0,
+    "candidate_size_p95": 45
+  },
+  "controls": {
+    "particle": {
+      "particle": true,
+      "order": false,
+      "deletion_proxy": true,
+      "pass": true
+    },
+    "order": {
+      "particle": false,
+      "order": true,
+      "deletion_proxy": false,
+      "pass": true
+    },
+    "deletion": {
+      "particle": false,
+      "order": false,
+      "deletion_proxy": false,
+      "pass": false
+    }
+  },
+  "validation": {
+    "rows_positive": true,
+    "paired_columns": true,
+    "particle_control": true,
+    "order_control": true,
+    "deletion_proxy_control": false,
+    "sparse_not_all_pairs": true,
+    "pass": false
+  }
+}
