@@ -12,47 +12,55 @@ active_research_line:
   - G9-P36-R5
   - G9-P36-R6
   - G9-P36-R7
-current_phase: G9-P36-R7
-current_verdict: PASS_RELATION_MOTIF_PRIMARY_EMPTY_MICRO_REUSE_NOT_PROMOTED
+  - G9-P36-R8
+current_phase: G9-P36-R8
+current_verdict: PASS_FRESH_TRANSFER_SIGNAL_INSUFFICIENT_FOR_MICRO_REUSE_PROMOTION
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
-  relation_motif: C3-R7-REM-v1
-  lexical_null: C3-R7-ADJACENCY-NULL-v1
+  relation_motif: C3-R8-PFE-v1
+  lexical_null: C3-R8-FAMILY-ADJACENCY-NULL-v1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
-  preseal_commit: 860a5de8b50c52292aaa01f6973e0dc896d02425
-current_science_commit: df592824fe2f39a0d89b00b166b9dca22e56d129
-public_replay_commit: 08a88175d01f93ee76b636567b43a78d4636221b
-public_replay_run: 36134758751
-notion_receipt: 3e6ef561-cf92-8186-968a-dd417e4626cc
-harvest_receipt: 3e6ef561-cf92-8149-83ca-dc4069b1503e
-r7_english_result:
-  source: EMNLP24_LOCAL_TEST_118
-  exploratory_relation_pairs: 10
-  connected_chain_pairs: 2
-  primary_cross_paper_pairs: 0
-  micro_reuse_authority: NOT_PROMOTED
-  semantic_equivalence_authority: NOT_GRANTED
-  fusion_authority: NOT_GRANTED
-  rust_crosscheck: PASS_10_2_0
-r7_korean_result:
-  corpus: StyleKQC
-  rows: 15000
-  particle_change_pairs: 5755
-  order_inversion_proxy_pairs: 103
-  surface_shortening_proxy_pairs: 11099
-  ellipsis_status: HOLD_ANNOTATION_INSUFFICIENT
-  paired_target_recall: 0.9498
-  top1_exact_pair_rate: 0.6443333333333333
-  median_candidate_size: 6
-interpretation_boundary:
-  primary_empty_is_not_null_victory: true
-  cross_document_relation_support: EMPTY_UNDER_C3_R7_REM_V1
-  language_neutral_role_event_geometry: RETAINED
-  korean_surface_realization_transport: SUPPORTED_AT_PARTICLE_AND_ORDER_PROXY_LEVEL
-  true_ellipsis_authority: NOT_ESTABLISHED
+  preseal_commit: f8a29c9294d6085156d36a720c0a0d5ba1e32b0b
+current_science_commit: e743d1522099d99246f123a7c13d2ea370b3a113
+canonical_result_commit: 27aef00a73be78449ee3ef8cd21a5ad705b3cc65
+witness_lineage_diagnostic_commit: 73c9223e11fdad36f3d7b0c52eb714d990cfa6f4
+public_replay_run: 36136391353
+public_replay_head: ea8cfd3fb75dc75f7b7232ad0dcf7ea6dfc1b4fb
+public_replay_artifact:
+  id: 10865426711
+  sha256: 99df208c19cb163686e203a8064e1063baf67b7049ecb5c611d1afe688d8fbb8
+notion_receipt: 3e6ef561-cf92-81e2-93a1-ff3f91b2f9fd
+harvest_receipt: 3e6ef561-cf92-819d-a8eb-ca9659d62c5f
+r8_fresh_transfer:
+  corpus: RMR-75K
+  selected_papers: 595
+  deduped_rows: 8235
+  exact_primary_pairs: 1
+  family_primary_pairs: 1
+  distinct_primary_papers: 2
+  distinct_primary_families: 1
+  family_minus_exact_primary: 0
+  null_plus_one_p: 0.0390625
+  promotion_gate: FAIL_DIVERSITY
+r8_witness_boundary:
+  cross_paper: true
+  cross_lineage: false
+  same_author_team: true
+  interpretation: SOLE_PRIMARY_WITNESS_IS_LINEAGE_COUPLED
+r8_korean_zero_argument:
+  source: NIKL Zero Anaphora Corpus 2020
+  catalog_recovered: true
+  corpus_bytes_acquired: false
+  gold_annotation_execution: false
+  authority: SOURCE_RECOVERED_BYTES_HOLD
+github_actions_policy:
+  r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
+  contents_permission: READ
+  canonical_repo_writes: CONNECTED_GITHUB_AUTHOR_IDENTITY
+  existing_bot_commits: PRESERVE_HISTORY_NO_REWRITE
 raw_data_policy:
-  re3align_raw: DRIVE_OR_PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
+  rmr_raw: PUBLIC_DATASET_OR_ACTION_ARTIFACT_ONLY_DO_NOT_COMMIT
   literature_pdfs: COMMONS_DO_NOT_COMMIT
 language_policy:
   status: UNRESTRICTED
@@ -61,5 +69,5 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_phase: G9-P36-R8
-next_phase_title: Cross-Document Relation-Motif Generalization, Predicate-Family Equivalence Preseal, Fresh-Corpus Transfer, Korean Zero-Argument Annotation Recovery & Micro-Reuse Authority Reopening Court
+next_phase: G9-P36-R9
+next_phase_title: Research-Lineage-Independent Relation-Motif Replication, Author/Method Ancestry Decontamination, Predicate-Family Necessity Ablation, NIKL Zero-Anaphora Gold Ingestion & Cross-Language Reuse-Authority Reopening Court
