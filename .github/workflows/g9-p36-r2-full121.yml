@@ -1,11 +1,13 @@
 name: G9-P36-R2 full121 structural replay
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
       - '.github/workflows/g9-p36-r2-full121.yml'
       - 'experiments/g9-p36-r2/run_full121_public.mjs'
+      - 'experiments/g9-p36-r2/action_trigger.txt'
 
 permissions:
   contents: write
