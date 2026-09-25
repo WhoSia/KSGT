@@ -1,0 +1,117 @@
+phase: KSGT Generation IX G9-P36-R3
+title: Cross-Sentence Obligation Subsumption, Distributed Semantic Redundancy, Entailment-Bidirectional Fusion, Context-Preserving Compression Proofs & Non-Local Frontier Reopening Court
+verdict: PASS_WITH_PROOF_SYSTEM_CALIBRATED_NATURAL_FRONTIER_NOT_REOPENED
+date: 2026-09-25
+
+lineage:
+  inherited_phase: G9-P36-R2
+  preseal_commit: 082a6cc85f1cdd2589b9e0edb9c234f4ea6e15ed
+  trigger_commit: 3ea2beab41d320d46354c24322997ad665f67a11
+  workflow_run: 36104487758
+  workflow_conclusion: success
+  materialization_commit: 3c2ec27db391ba371a6c863d2ba36c830ba408cf
+
+compiler:
+  name: C3-R3-FUSION-PROOF-v1
+  ingestion: frozen_G9-P36-R2_adapter_and_C3-R2-STRUCTURAL-v1
+  candidate_extractor: Node.js
+  proof_kernel: Rust
+  natural_language_realization_authority: OUTSIDE_CERTIFICATE
+
+source:
+  archive: Re3Align_v1.0_public_archive
+  archive_sha256: d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+  emnlp24_csv_sha256: 599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28
+  papers: 121
+  response_files: 173
+  obligations: 5579
+  unresolved_obligations: 1877
+
+candidate_replay:
+  eligible_pair_windows: 8071
+  proof_objects: 8071
+  operations:
+    S1_SUBSUMPTION: 1
+    F1_CONJUNCTIVE_FUSION: 8070
+  representation_sufficient_candidates: 126
+  certifiable_natural: 0
+  frontier_reopened: false
+
+failure_localization:
+  REPRESENTATION_SUFFICIENCY_VETO: 7945
+  GROUNDING_MISMATCH: 108
+  FORCE_VALUE_ACTION_MISMATCH: 14
+  NO_POSITIVE_COMPRESSION_GAIN: 4
+
+controls:
+  positive:
+    passed: 3
+    total: 3
+    cases:
+      - semantic_subsumption_same_grounding
+      - conjunctive_fusion_same_subject_same_force
+      - revision_commitment_parallel_object_fusion
+  adversarial_negative:
+    passed: 9
+    total: 9
+    families:
+      - value_binding_swap
+      - polarity_scope_swap
+      - modal_force_mismatch
+      - condition_mismatch
+      - cross_attachment
+      - cross_antecedent
+      - one_way_addition_trap
+      - fluent_but_missing_atom
+      - representation_gap
+  inherited_R2_validation: PASS
+  inherited_R2_certifiable: 0
+
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  proof_kernel: CALIBRATED_FOR_FROZEN_TYPED_IR
+  current_R2_projection_for_nonlocal_fusion: INSUFFICIENT
+  natural_language_fusion: NOT_AUTHORIZED
+  safe_transport: ABSTAIN
+  human_recruitment: HOLD
+
+laws:
+  - CANDIDATE_ABUNDANCE_DOES_NOT_IMPLY_CERTIFIABLE_FUSION
+  - PROOF_KERNEL_ADEQUACY_DOES_NOT_IMPLY_SOURCE_REPRESENTATION_SUFFICIENCY
+  - FUSION_AUTHORITY_IS_UPPER_BOUNDED_BY_REPRESENTATION_AND_GROUNDING_AUTHORITY
+  - BIDIRECTIONAL_SET_PRESERVATION_IS_NOT_A_LICENSE_TO_IGNORE_BINDING_STRUCTURE
+  - A_FLUENT_REALIZATION_IS_NOT_A_PROOF_OBJECT
+
+interpretation: >
+  R3 reopened search recall from 46 recurrence candidates in R2 to 8,071 local non-identical
+  cross-sentence pair windows, but the stronger proof-carrying court certified no natural
+  fusion. 7,945 candidates failed before semantic fusion adjudication because the inherited
+  R2 projection does not retain enough lexical/relational content to prove that all source
+  obligations are represented. Of the 126 representation-sufficient candidates, 108 failed
+  grounding compatibility, 14 failed force/value/action compatibility, and the final 4 had
+  no strictly positive compression gain. The result is therefore a representation ceiling,
+  not evidence that distributed semantic redundancy never occurs.
+
+literature_alignment:
+  - Ben-David_et_al_2020_Semantically_Driven_Sentence_Fusion
+  - Geva_et_al_2019_Analyzing_Sentence_Fusion_in_Abstractive_Summarization
+  - Li_et_al_2018_Entailment_Aware_Abstractive_Sentence_Summarization
+  - Yuan_et_al_2021_Event_Graph_based_Sentence_Fusion
+  - G8-P1.3-R2ay_Bidirectional_Semantic_Preservation_Gate
+  - G9-P34_MNMC-5
+
+next_phase:
+  id: G9-P36-R4
+  title: Binding-Complete Obligation Graph Recovery, Predicate-Argument-Value-Scope Reattachment, Representation-Sufficiency Witnesses, Cross-Sentence Proof-Carrying Fusion Reconstitution & Natural Frontier Reopening Court
+  target: >
+    Replace the lossy R2 A/R token projection with a prospectively frozen binding-complete
+    obligation graph that can carry ordered predicate-argument roles, relation direction,
+    value/unit/comparator bindings, force/scope, authority, antecedent and attachment grounding;
+    then rerun the R3 proof kernel without relaxing any certification gate.
+
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+
+user_action: NONE
