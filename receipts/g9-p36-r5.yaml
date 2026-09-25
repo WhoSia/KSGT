@@ -1,0 +1,84 @@
+phase: KSGT Generation IX G9-P36-R5
+title: Representation-Native Semantic Neighborhood Search, Grounding-Conditioned Partial-Graph Overlap, Fresh-118 Prospective EMNLP Holdout Discovery, Proof-Carrying Controlled Realization, Selection-Shift Falsification & Natural Fusion Frontier Reopening Court
+verdict: PASS_SELECTION_SHIFT_ESTABLISHED_NATURAL_FRONTIER_NOT_REOPENED
+date: 2026-09-25
+lineage:
+  inherited_phase: G9-P36-R4
+  inherited_science_commit: 8c59e34e805779df205c41dda6e86ddde47dd85b
+  inherited_active_head: 9fb86f6f0796639f2d58f54f74e1262351823326
+  preseal_commit: 399dcfbbd8c3038dcaf308ce4e9c1240c8f3904a
+  implementation_commit: 4dcb2a814ddf1c2d2c4e37b3d44dce8a979065b6
+  successful_prospective_run: 36124946807
+  first_materialization_commit: 02c58f590690ce66df739ff6e9c91199031f3c20
+  diagnostic_run: 36125203918
+  diagnostic_materialization_commit: f3bda338c4bdd4e294e48d35b79e05afc5bd311e
+source:
+  archive_sha256: d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+  eligibility_manifest_sha256: 6a09b05cf7c6a6051bbcafb701d6a4159c8841b303402d8e55021cf577108574
+  papers: 118
+  response_files: 165
+  obligations: 4849
+  representation_complete_obligations: 1301
+selector:
+  id: C3-R5-RNSN-v1
+  predicate_equivalence: EXACT_LEMMA_ONLY
+  algorithm: exact_signature_hash_bucket_plus_inverted_ARG1_atom_index
+  global_all_pairs: false
+  signature_atom_postings: 9961
+  representation_native_neighbors: 0
+selection_shift:
+  legacy_geometry_pairs: 7191
+  r5_geometry_pairs: 0
+  intersection: 0
+  jaccard: 0
+  interpretation: >
+    The legacy lexical geometry and the exact representation-native law select disjoint
+    neighborhoods on the fresh reserve. Candidate abundance under the legacy geometry
+    does not survive exact binding and grounding invariants.
+controls:
+  selector_positive: PASS
+  selector_adversarial_negative: PASS
+  metamorphic: PASS
+  controlled_graph_roundtrip: PASS
+  indexed_search: PASS
+  inherited_R3_proof_controls: 12_of_12_PASS
+natural_court:
+  proof_objects: 0
+  certifiable_natural: 0
+  frontier_reopened: false
+  ceiling: NEIGHBORHOOD_SPARSITY
+posthoc_diagnostic_not_selector_authority:
+  drop_antecedent_pairs: 0
+  drop_attachment_and_antecedent_pairs: 0
+  drop_local_scope_attachment_antecedent_shared_pair_keys: 1
+  drop_local_scope_attachment_antecedent_emitted_pairs: 0
+  interpretation: >
+    Antecedent or attachment alone does not explain the zero. Removing all three local
+    grounding discriminators exposes one shared posting key, but the typed overlap law
+    still emits no neighbor. This is diagnostic only and cannot amend R5 after exposure.
+laws:
+  - EXACT_BINDING_AND_GROUNDING_CAN_COLLAPSE_LEXICALLY_ABUNDANT_CANDIDATE_SETS_TO_EMPTY
+  - SELECTION_SHIFT_IS_A_SCIENTIFIC_OUTCOME_NOT_AN_IMPLEMENTATION_FAILURE
+  - PREDICATE_FAMILY_LEXICALIZATION_IS_NOT_AUTHORIZED_BY_R5
+  - FLUENCY_CANNOT_CREATE_SEMANTIC_AUTHORITY
+  - SUBQUADRATIC_INDEXABILITY_DOES_NOT_REQUIRE_SIMILARITY_AUTHORITY
+korean_boundary:
+  representation: LANGUAGE_NEUTRAL
+  realization: DOWNSTREAM_ONLY
+  preserved_geometry: [ARG0, ARG1, predicate, authority, force, scope, value, grounding]
+  particles_word_order_and_ellipsis: MAY_REALIZE_ONLY_AFTER_GRAPH_AUTHORITY
+  fluency_as_semantic_authority: FORBIDDEN
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  safe_transport: ABSTAIN
+  human_recruitment: HOLD
+  natural_frontier: NOT_REOPENED
+external_state:
+  github: COMPLETE
+  notion_canonical_receipt: HOLD_CONNECTOR_UNAVAILABLE
+  notion_harvest: HOLD_CONNECTOR_UNAVAILABLE
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+user_action: NOT_REQUIRED_FOR_GITHUB_CLOSURE
