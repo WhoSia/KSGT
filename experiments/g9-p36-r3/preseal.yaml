@@ -1,0 +1,86 @@
+phase: KSGT Generation IX G9-P36-R3
+title: Cross-Sentence Obligation Subsumption, Distributed Semantic Redundancy, Entailment-Bidirectional Fusion, Context-Preserving Compression Proofs & Non-Local Frontier Reopening Court
+status: PRESEALED_BEFORE_NATURAL_REPLAY
+inherits:
+  - G9-P36-R2:C3-R2-STRUCTURAL-v1
+  - G9-P34:MNMC-5
+  - G8-P1.3-R2ay:BIDIRECTIONAL_SEMANTIC_GATE
+source:
+  archive_sha256: d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+  csv_sha256: 599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28
+  calibration_papers: 121
+scientific_question: >
+  Can two distinct natural author-response obligations be compressed by semantic
+  subsumption or conjunctive fusion while preserving every protected A/R/F/V/G
+  obligation and its local grounding, rather than merely matching surfaces?
+operations:
+  S1_SUBSUMPTION:
+    definition: keep one source sentence only if it entails the other and carries a superset of protected obligations
+  F1_CONJUNCTIVE_FUSION:
+    definition: construct one fused proof object from two partially overlapping obligations only if source-pair=>fusion and fusion=>each-source both hold in the typed symbolic court
+candidate_admission:
+  same_review_root: required
+  roles: [ASSERTION, REVISION_COMMITMENT]
+  unresolved_obligations: forbidden
+  structural_roles: [TABLE, CODE, EXAMPLE, MANUSCRIPT_INSERTION]
+  structural_role_policy: abstain
+  pair_distance_within_response_chunk: 6
+  minimum_shared_content_atoms: 2
+  exact_or_alias_duplicates: excluded_as_R2_territory
+proof_gate:
+  P0_DATA: source identity and parser lineage exact
+  P1_GROUNDING: review root, authority role and compatible attachment/antecedent grounding preserved
+  P2_FORWARD: source pair entails fusion; no unsupported A/R/F/V/G atom introduced
+  P3_BACKWARD: fusion entails each source obligation; no protected atom lost
+  P4_FORCE: polarity/modal/comparator/condition bindings identical or compositionally compatible
+  P5_VALUE: value/entity/unit/comparator bindings preserved exactly
+  P6_ACTION: revision-commitment verb/object/authority preserved exactly when present
+  P7_GAIN: fused representation strictly shorter than concatenated source representation
+  decision: CERTIFY iff P0&P1&P2&P3&P4&P5&P6&P7; otherwise ABSTAIN
+anti_shortcuts:
+  similarity_only: forbidden
+  one_way_entailment: forbidden
+  unordered_anchor_set_equivalence: forbidden
+  cross_review_fusion: forbidden
+  model_score_as_proof: forbidden
+  generated_fluent_text_as_evidence: forbidden
+proof_object:
+  required_fields:
+    - source_ids
+    - source_texts
+    - source_obligation_atoms
+    - shared_atoms
+    - left_unique_atoms
+    - right_unique_atoms
+    - fused_obligation_atoms
+    - grounding_witness
+    - forward_entailment_witness
+    - backward_entailment_witness
+    - no_addition_witness
+    - no_loss_witness
+    - compression_gain
+    - verdict
+controls:
+  positive:
+    - semantic_subsumption_same_grounding
+    - conjunctive_fusion_same_subject_same_force
+    - revision_commitment_parallel_object_fusion
+  adversarial_negative:
+    - value_binding_swap
+    - polarity_scope_swap
+    - modal_force_mismatch
+    - condition_mismatch
+    - cross_attachment_same_surface
+    - cross_antecedent_same_surface
+    - one_way_addition_trap
+    - fluent_but_missing_atom
+frontier_rule: >
+  Natural frontier reopens only if at least one public-archive witness is CERTIFY
+  under the frozen gate and all positive/negative/R2-regression controls pass.
+  Synthetic witnesses alone cannot reopen the natural frontier.
+mnmc_policy:
+  MNMC_5: retained
+  MNMC_6: not_admitted_by_design
+human_recruitment: HOLD
+safe_transport: ABSTAIN
+language_policy: unrestricted_polyglot
