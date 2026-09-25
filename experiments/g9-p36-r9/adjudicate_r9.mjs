@@ -7,7 +7,7 @@ const ex=sum.exact_arm,fa=sum.family_arm,nul=sum.family_null;
 const validation={
  controls:c.validation?.pass===true,
  fresh_bucket:prep.r8_overlap_papers===0&&prep.selected_papers>0,
- author_resolution:sum.author_metadata.resolved>0,
+ author_metadata_source_recorded:sum.author_metadata.selected_papers>0,
  sparse_exact:ex.global_all_pairs===false,
  sparse_family:fa.global_all_pairs===false,
  rust:x.exact_independent===ex.lineage_independent_primary_pairs&&x.family_independent===fa.lineage_independent_primary_pairs&&x.family_distinct_papers===fa.distinct_independent_papers&&x.family_distinct_families===fa.distinct_independent_families,
@@ -26,6 +26,7 @@ let verdict;
 if(!validation.pass)verdict='FAIL_R9_VALIDATION';
 else if(gate.pass&&familyIncrement>=1&&ko.gold_execution_ready===true)verdict='PASS_CROSS_LANGUAGE_REUSE_AUTHORITY_REOPENED';
 else if(gate.pass&&familyIncrement>=1)verdict='PASS_ENGLISH_LINEAGE_INDEPENDENT_MICRO_REUSE_PROMOTED_KOREAN_GOLD_HOLD';
+else if(sum.author_metadata.resolved===0)verdict='HOLD_AUTHOR_METADATA_SOURCE_UNAVAILABLE_LINEAGE_AUTHORITY_NOT_ADJUDICATED';
 else if(fa.lineage_independent_primary_pairs>0)verdict='PASS_LINEAGE_INDEPENDENT_SIGNAL_INSUFFICIENT_FOR_PROMOTION';
 else verdict='PASS_LINEAGE_DECONTAMINATION_REMOVES_PRIMARY_SIGNAL';
 const result={phase:'KSGT Generation IX G9-P36-R9',verdict,fresh_replication:{selected_papers:prep.selected_papers,deduped_rows:prep.deduped_rows,exact:ex,family:fa,family_null:nul},predicate_family_necessity:{family_minus_exact_independent:familyIncrement,authority:familyIncrement>=1?'INCREMENTAL_SIGNAL_OBSERVED_NOT_SEMANTIC_EQUIVALENCE':'NO_INCREMENTAL_SIGNAL'},promotion_gate:gate,korean_zero_argument:ko,cross_language_reuse_authority:(gate.pass&&familyIncrement>=1&&ko.gold_execution_ready===true)?'REOPENED':'HOLD',validation,authority:{MNMC_5:'RETAINED',MNMC_6:'NOT_JUSTIFIED',semantic_equivalence:'NOT_GRANTED',fusion:'NOT_GRANTED',human_recruitment:'HOLD',safe_transport:'ABSTAIN'},waiting:['P33-R2 legacy strict-30 exact row crosswalk','PeerJ external transport']};
