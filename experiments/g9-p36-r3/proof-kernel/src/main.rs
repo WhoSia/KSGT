@@ -1,7 +1,12 @@
 use std::{env,fs,collections::HashSet};
 
 fn get_str<'a>(v:&'a serde_json::Value,k:&str)->&'a str{v.get(k).and_then(|x|x.as_str()).unwrap_or("")}
-fn arr(v:&serde_json::Value,k:&str)->Vec<String>{v.get(k).and_then(|x|x.as_array()).unwrap_or(&vec![]).iter().filter_map(|x|x.as_str().map(|s|s.to_string())).collect()}
+fn arr(v:&serde_json::Value,k:&str)->Vec<String>{
+ match v.get(k).and_then(|x|x.as_array()){
+  Some(xs)=>xs.iter().filter_map(|x|x.as_str().map(|s|s.to_string())).collect(),
+  None=>Vec::new()
+ }
+}
 fn set(xs:&[String])->HashSet<String>{xs.iter().cloned().collect()}
 fn main(){
  let a:Vec<String>=env::args().collect(); if a.len()!=3{panic!("usage: proof_kernel <candidates.jsonl> <proofs.jsonl>");}
