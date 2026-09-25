@@ -22,7 +22,39 @@
       "shared_pair_keys": 0,
       "emitted_pairs": 0,
       "global_all_pairs": false
-    }
+    },
+    "diagnostic_margins": [
+      {
+        "name": "drop_antecedent",
+        "dropped_invariants": [
+          "antecedent_key"
+        ],
+        "emitted_pairs": 0,
+        "shared_pair_keys": 0,
+        "authority": "POSTHOC_DIAGNOSTIC_ONLY_NOT_R5_SELECTION"
+      },
+      {
+        "name": "drop_attachment_antecedent",
+        "dropped_invariants": [
+          "attachment_key",
+          "antecedent_key"
+        ],
+        "emitted_pairs": 0,
+        "shared_pair_keys": 0,
+        "authority": "POSTHOC_DIAGNOSTIC_ONLY_NOT_R5_SELECTION"
+      },
+      {
+        "name": "drop_local_attachment_antecedent",
+        "dropped_invariants": [
+          "local_scope_key",
+          "attachment_key",
+          "antecedent_key"
+        ],
+        "emitted_pairs": 0,
+        "shared_pair_keys": 1,
+        "authority": "POSTHOC_DIAGNOSTIC_ONLY_NOT_R5_SELECTION"
+      }
+    ]
   },
   "proof_objects": 0,
   "reason_counts": {},
