@@ -7,19 +7,22 @@ active_research_line:
   - G9-P36
   - G9-P36-R1
   - G9-P36-R2
-current_phase: G9-P36-R2
-current_verdict: PASS_WITH_FULL_CALIBRATION_STRUCTURAL_NEGATIVE_CLOSURE
+  - G9-P36-R3
+current_phase: G9-P36-R3
+current_verdict: PASS_WITH_PROOF_SYSTEM_CALIBRATED_NATURAL_FRONTIER_NOT_REOPENED
 current_compiler:
-  name: C3-R2-STRUCTURAL-v1
-  preseal_commit_prefix: 730bfc51
-current_science_commit: 9a3b8f9b6c2e571e0ba8f75551553cafc8e61703
-public_replay_commit: 75631287ea4ab4fa93a100ddc569dcc0a88f7346
-notion_receipt: 3e6ef561-cf92-8178-9314-f8ad646a3e9f
+  name: C3-R3-FUSION-PROOF-v1
+  preseal_commit: 082a6cc85f1cdd2589b9e0edb9c234f4ea6e15ed
+current_science_commit: 2ea75a74216f5f5551d9929e5807411ff942b828
+public_replay_commit: 3c2ec27db391ba371a6c863d2ba36c830ba408cf
+workflow_run: 36104487758
+notion_receipt: 3e6ef561-cf92-81f1-aa60-fac8bbdce973
 raw_data_policy:
   re3align_raw: DRIVE_OR_PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
-  literature_pdfs: TEN_PAPERS_COMMONS_DO_NOT_COMMIT
+  literature_pdfs: COMMONS_DO_NOT_COMMIT
 language_policy:
   status: UNRESTRICTED
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
-next_phase: G9-P36-R3
+next_phase: G9-P36-R4
+next_phase_title: Binding-Complete Obligation Graph Recovery, Predicate-Argument-Value-Scope Reattachment, Representation-Sufficiency Witnesses, Cross-Sentence Proof-Carrying Fusion Reconstitution & Natural Frontier Reopening Court
