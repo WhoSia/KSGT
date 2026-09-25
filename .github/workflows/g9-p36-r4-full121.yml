@@ -114,7 +114,9 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add experiments/g9-p36-r4/final experiments/g9-p36-r4/source_integrity.yaml experiments/g9-p36-r4/*.log || true
+          git add experiments/g9-p36-r4/final || true
+          test ! -f experiments/g9-p36-r4/source_integrity.yaml || git add experiments/g9-p36-r4/source_integrity.yaml
+          for f in experiments/g9-p36-r4/*.log; do test ! -f "$f" || git add "$f"; done
           git commit -m 'G9-P36-R4: materialize binding-complete full-121 court' || exit 0
           git pull --rebase origin main
           git push origin HEAD:main
