@@ -1,0 +1,26 @@
+phase: KSGT Generation IX G9-P36-R2
+repair: RESPONSE_CHUNK_SOURCE_SCHEMA_NORMALIZATION
+state: PRESEALED_BEFORE_REMAINING_096_PAPER_REPLAY
+trigger:
+  observation: some canonical Re3Align ITG files lack response_chunk_nodes_by_quote
+  first_detected_replay_index: 25
+  first_detected_paper: emnlp24_doc868
+scope:
+  scientific_rules_changed: false
+  compiler_C3_R2_changed: false
+  split_changed: false
+  source_content_changed: false
+adapter:
+  name: R2-RESPONSE-CHUNK-ADAPTER-v1
+  existing_chunk_nodes: PRESERVE_EXACTLY
+  absent_chunk_nodes:
+    quote_rule: maximal_consecutive_markdown_quote_lines
+    reply_rule: subsequent_nonquote_text_until_next_quote_block
+    no_quote_rule: whole_author_response_under_synthetic_whole_review_root
+    pre_quote_preamble: ignore_if_quote_blocks_exist
+  uncertainty: ABSTAIN
+audit:
+  recompute_first_25_after_adapter_preseal: true
+  purpose: detect whether prior batches silently omitted schema-missing files
+human_recruitment: HOLD
+safe_transport: ABSTAIN
