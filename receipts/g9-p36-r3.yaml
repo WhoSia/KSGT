@@ -115,3 +115,7 @@ waiting:
   - PeerJ external transport
 
 user_action: NONE
+
+notion:
+  canonical_receipt: 3e6ef561-cf92-81f1-aa60-fac8bbdce973
+  harvest_fragment: 3e6ef561-cf92-8171-9415-ca9970a57fc3
