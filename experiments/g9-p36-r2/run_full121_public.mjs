@@ -9,14 +9,26 @@ const {replayDocument,CONTRACT}=await import(pathToFileURL(path.resolve(compiler
 const manifest=fs.readFileSync('experiments/g9-p36-r2/calibration121_manifest.txt','utf8').trim().split(/\r?\n/).filter(Boolean);
 if(manifest.length!==121) throw new Error(`manifest length ${manifest.length} != 121`);
 
+const wanted=new Set(manifest),paperDirs=new Map();
+function discover(dir,depth=0){
+  if(depth>5||paperDirs.size===wanted.size)return;
+  for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
+    if(!ent.isDirectory())continue;
+    const p=path.join(dir,ent.name);
+    if(wanted.has(ent.name)){paperDirs.set(ent.name,p);continue;}
+    if(depth<5)discover(p,depth+1);
+  }
+}
+discover(dataRoot);
+
 const agg={papers:0,response_files:0,units:0,obligations:0,unresolved_obligations:0,existing_chunk_files:0,reconstructed_chunk_files:0,W0:0,W1:0,W2:0,certifiable:0};
 const paperMetrics=[];
 const candidates=[];
 const missing=[];
 for(let index=0;index<manifest.length;index++){
-  const paper=manifest[index];
-  const responseDir=path.join(dataRoot,paper,'response');
-  if(!fs.existsSync(responseDir)){missing.push({index,paper,reason:'MISSING_RESPONSE_DIR'});continue;}
+  const paper=manifest[index],paperDir=paperDirs.get(paper);
+  const responseDir=paperDir?path.join(paperDir,'response'):'';
+  if(!paperDir||!fs.existsSync(responseDir)){missing.push({index,paper,reason:'MISSING_RESPONSE_DIR'});continue;}
   const files=fs.readdirSync(responseDir).filter(f=>f.endsWith('.json')).sort();
   if(!files.length){missing.push({index,paper,reason:'NO_RESPONSE_JSON'});continue;}
   const pm={index,paper,response_files:0,units:0,obligations:0,unresolved:0,W0:0,W1:0,W2:0,certifiable:0,existing:0,reconstructed:0};
@@ -51,7 +63,7 @@ const positiveControls=positiveCases.map(([name,reply,type])=>{const r=replayDoc
 const regressionPapers=['emnlp24_doc387','emnlp24_doc739','emnlp24_doc1035','emnlp24_doc199','emnlp24_doc103','emnlp24_doc1043'];
 const regressionControls=regressionPapers.map(p=>{const gs=candidates.filter(x=>x.paper===p);return {paper:p,candidates:gs.length,certifiable:gs.filter(x=>x.certifiable).length,pass:gs.every(x=>!x.certifiable)};});
 const reasonCounts={};for(const c of candidates) reasonCounts[c.reason]=(reasonCounts[c.reason]||0)+1;
-const result={phase:'KSGT Generation IX G9-P36-R2',compiler:CONTRACT.version,source:'Re3Align_v1.0 public archive / EMNLP24',manifest_papers:manifest.length,aggregate:agg,missing,reason_counts:reasonCounts,positive_controls:positiveControls,regression_controls:regressionControls,frontier_reopened:agg.certifiable>0,certifiable_witnesses:candidates.filter(x=>x.certifiable).map(x=>({index:x.index,paper:x.paper,file:x.file,review_id:x.review_id,type:x.type,reason:x.reason,items:x.items})) ,paper_metrics:paperMetrics};
+const result={phase:'KSGT Generation IX G9-P36-R2',compiler:CONTRACT.version,source:'Re3Align_v1.0 public archive / EMNLP24',manifest_papers:manifest.length,discovered_paper_dirs:paperDirs.size,aggregate:agg,missing,reason_counts:reasonCounts,positive_controls:positiveControls,regression_controls:regressionControls,frontier_reopened:agg.certifiable>0,certifiable_witnesses:candidates.filter(x=>x.certifiable).map(x=>({index:x.index,paper:x.paper,file:x.file,review_id:x.review_id,type:x.type,reason:x.reason,items:x.items})),paper_metrics:paperMetrics};
 if(missing.length) throw new Error(`missing papers: ${JSON.stringify(missing)}`);
 if(!positiveControls.every(x=>x.pass)) throw new Error(`positive control failure: ${JSON.stringify(positiveControls)}`);
 if(!regressionControls.every(x=>x.pass)) throw new Error(`R1 regression failure: ${JSON.stringify(regressionControls)}`);
@@ -59,4 +71,4 @@ fs.mkdirSync(outDir,{recursive:true});
 fs.writeFileSync(path.join(outDir,'full121_structural_replay.json'),JSON.stringify(result,null,2)+'\n');
 fs.writeFileSync(path.join(outDir,'candidate_witnesses.json'),JSON.stringify(candidates,null,2)+'\n');
 fs.writeFileSync(path.join(outDir,'positive_controls.json'),JSON.stringify({positiveControls,regressionControls},null,2)+'\n');
-console.log(JSON.stringify({aggregate:agg,reasonCounts,frontier_reopened:result.frontier_reopened,positiveControls,regressionControls},null,2));
+console.log(JSON.stringify({discovered_paper_dirs:paperDirs.size,aggregate:agg,reasonCounts,frontier_reopened:result.frontier_reopened,positiveControls,regressionControls},null,2));
