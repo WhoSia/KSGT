@@ -196,7 +196,7 @@ function graphAtoms(frame,F,V){
 }
 function custody(text,frame,F,V){
   const tokens=contentTokens(text);
-  const represented=new Set([...phraseContent(frame.arg0==="AUTHOR"?"author":frame.arg0),...phraseContent(frame.arg1),frame.predicate]);
+  const represented=new Set([...phraseContent(frame.arg0==="AUTHOR"?"author":frame.arg0),...phraseContent(frame.arg1),...phraseContent(frame.surfacePredicate||frame.predicate),frame.predicate]);
   for(const b of V.bindings){represented.add(b.entity);represented.add(normalize(b.value));if(b.unit)represented.add(b.unit);}
   for(const p of V.pointers)for(const t of contentTokens(p))represented.add(t.norm);
   const missing=tokens.map(t=>t.norm).filter(t=>!represented.has(t)&&!REV[t]&&!GENERIC[t]&&!Object.values(CAUSAL).includes(t));
@@ -236,6 +236,7 @@ export function compatibleCore(a,b){
   const A=a.frame,B=b.frame;
   const same=A.class===B.class&&A.predicate===B.predicate&&A.arg0_canon===B.arg0_canon&&
     a.force.polarity===b.force.polarity&&a.force.modal===b.force.modal&&
+    JSON.stringify(a.force.quantifiers||[])===JSON.stringify(b.force.quantifiers||[])&&
     canonPhrase(a.force.condition)===canonPhrase(b.force.condition)&&A.authority===B.authority;
   if(!same)return {pass:false,reason:"CORE_BINDING_MISMATCH"};
   const av=new Map(a.values.bindings.map(x=>[x.entity+"|"+x.targetRole,x.value+"|"+x.unit]));
