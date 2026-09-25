@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 export const VERSION='KSGT-ARG-v1';
 const H=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
 export function graph(x){return {version:VERSION,event:x.event,roles:[...x.roles].sort((a,b)=>a.role.localeCompare(b.role)),scope:x.scope||{},discourse:x.discourse||{},realization:x.realization||{}}}
-export function semanticSignature(g){return H({event:g.event,roles:g.roles.map(r=>({role:r.role,referent:r.referent??null,recovery:r.recovery,frame_status:r.frame_status||'UNKNOWN'})),scope:g.scope});}
+export function semanticSignature(g){return H({event:g.event,roles:g.roles.map(r=>({role:r.role,referent:r.referent??null,frame_status:r.frame_status||'UNKNOWN'})),scope:g.scope});}
 export function validate(g){
  const errs=[];
  if(!g.event?.predicate)errs.push('MISSING_PREDICATE');
