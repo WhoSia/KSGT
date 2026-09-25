@@ -1,0 +1,160 @@
+phase: KSGT Generation IX G9-P36-R4
+title: Binding-Complete Obligation Graph Recovery, Predicate-Argument-Value-Scope Reattachment, Representation-Sufficiency Witnesses, Cross-Sentence Proof-Carrying Fusion Reconstitution & Natural Frontier Reopening Court
+status: PRESEALED_BEFORE_R4_NATURAL_REPLAY
+inherits:
+  - G9-P36-R3:C3-R3-FUSION-PROOF-v1
+  - G9-P36-R2:C3-R2-STRUCTURAL-v1
+  - G9-P34:MNMC-5
+  - G8-P1.3-R2ay:BIDIRECTIONAL_SEMANTIC_GATE
+source:
+  archive_sha256: d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+  csv_sha256: 599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28
+  calibration_papers: 121
+frozen_r3:
+  candidate_window_rule: same_as_R3
+  pair_distance_within_response_chunk: 6
+  exact_or_alias_duplicates: excluded_as_R2_territory
+  minimum_shared_content_atoms: 2
+  proof_kernel_gate_relaxation: FORBIDDEN
+scientific_question: >
+  Can the dominant R3 representation ceiling be discharged by replacing the lossy flat
+  A/R token projection with a conservative binding-complete obligation graph whose
+  representation-sufficiency certificate proves token custody, predicate-argument
+  attachment, value/unit/comparator binding, force/scope closure, authority and local
+  grounding before any fusion claim is admitted?
+representation:
+  name: C3-R4-BCOG-v1
+  principle: LOSSLESS_CUSTODY_PLUS_CONSERVATIVE_BINDING
+  layers:
+    L0_SURFACE_CUSTODY:
+      required:
+        - exact_source_text
+        - normalized_token_sequence
+        - token_offsets
+        - all_substantive_tokens_accounted_for
+      authority: custody_only_not_semantic_proof
+    L1_PREDICATE_ARGUMENT_GRAPH:
+      required:
+        - predicate_instances
+        - ordered_role_edges
+        - predicate_direction
+        - argument_spans
+      unresolved_policy: ABSTAIN
+    L2_VALUE_FORCE_SCOPE:
+      required_when_present:
+        - entity_value_binding
+        - value_unit_binding
+        - comparator_direction
+        - polarity_to_predicate
+        - modality_to_predicate
+        - quantifier_to_argument_or_predicate
+        - condition_or_temporal_scope
+      unresolved_policy: ABSTAIN
+    L3_GROUNDING_AUTHORITY:
+      required:
+        - review_root
+        - response_chunk_id
+        - structural_role
+        - attachment_key
+        - antecedent_key
+        - local_scope_key
+        - author_or_commitment_authority
+      unresolved_policy: ABSTAIN
+representation_sufficiency:
+  certificate: >
+    PASS only if L0 custody is complete and every protected MNMC-5-bearing lexical
+    item participates in an explicit typed node/edge binding at L1/L2/L3, with no
+    ambiguous competing head for a protected value, comparator, negation, modal,
+    commitment object, condition or antecedent.
+  cannot_be_satisfied_by:
+    - unordered_token_coverage
+    - same_anchor_multiset
+    - similarity
+    - one_way_entailment
+    - generated_fluency
+    - untyped_residual_bucket
+parser_strategy:
+  primary: deterministic_surface_anchored_clause_binder
+  rationale: >
+    Avoid laundering a third-party parser's aggregate benchmark accuracy into row-level
+    semantic authority. External formalisms (PropBank/SRL, AMR, event graphs) are donors
+    for representation design, not independent truth oracles.
+  competition:
+    - PROPBANK_SRL_ROLE_GEOMETRY
+    - AMR_PREDICATE_ARGUMENT_GRAPH
+    - EVENT_GRAPH_FUSION
+    - KSGT_BCOG
+  promotion_rule: KSGT_BCOG_must_survive_counterexamples_not_win_by_metric_average
+binding_grammar:
+  predicate_classes:
+    - REVISION_ACTION
+    - REPORT_EVIDENCE
+    - COPULAR_ATTRIBUTE
+    - COMPARISON
+    - CAUSAL_RELATION
+    - EXISTENCE_POSSESSION
+    - GENERIC_LEXICAL_RELATION
+  protected_scope_lexicons:
+    polarity: [no, not, never, without, neither, nor, cannot]
+    modality: [may, might, could, should, would, must, can, will, intend, plan, expect, aim]
+    conditions: [if, when, unless, under, given, provided, conditional]
+    quantifiers: [all, every, each, any, some, many, few, several, none, only, at_least, at_most]
+  value_policy: bind_each_numeric_or_symbolic_value_to_nearest_unambiguous_predicate_or_argument_within_clause_else_ABSTAIN
+  comparison_policy: ordered_left_relation_right_required_else_ABSTAIN
+  commitment_policy: author_plus_action_plus_object_required_else_ABSTAIN
+proof_reconstitution:
+  source_obligation_atoms: canonical_BCOG_edges_not_flat_tokens
+  fused_obligation_atoms: exact_union_or_proven_subsumption_of_BCOG_edges
+  R3_kernel_semantics:
+    P0_DATA: unchanged
+    P1_GROUNDING: unchanged
+    P2_FORWARD: no unsupported BCOG edge
+    P3_BACKWARD: every source BCOG edge recoverable
+    P4_FORCE: unchanged_but_edge_bound
+    P5_VALUE: unchanged_but_edge_bound
+    P6_ACTION: unchanged_but_edge_bound
+    P7_GAIN: strictly_positive_surface_realization_lower_bound_required
+controls:
+  representation_positive:
+    - simple_transitive_predicate_argument
+    - revision_commitment_object
+    - directed_comparison
+    - entity_value_unit_binding
+    - negated_relation
+    - modal_relation
+    - conditioned_relation
+    - quantified_argument
+  adversarial_negative:
+    - argument_role_swap
+    - relation_direction_swap
+    - value_binding_swap
+    - unit_binding_swap
+    - comparator_direction_swap
+    - negation_scope_swap
+    - modal_scope_swap
+    - quantifier_scope_swap
+    - condition_attachment_swap
+    - antecedent_swap
+    - attachment_swap
+    - authority_commitment_swap
+    - same_anchor_different_graph
+    - fluent_missing_edge
+    - unbound_residual_content
+  metamorphic:
+    - punctuation_only_invariance
+    - whitespace_invariance
+    - surface_alias_with_same_binding
+    - argument_order_change_must_not_be_invariant_when_role_changes
+frontier_rule: >
+  Natural frontier reopens only if all representation controls pass, all inherited R3
+  controls/regressions pass, and at least one public-archive pair is CERTIFY under
+  C3-R4-BCOG-v1 without relaxing the frozen R3 proof gates.
+authority:
+  AMR_or_SRL_output_as_truth: FORBIDDEN
+  external_model_score_as_row_certificate: FORBIDDEN
+  MNMC_5: RETAINED
+  MNMC_6: NOT_ADMITTED_BY_DESIGN
+  natural_language_realization: OUTSIDE_CERTIFICATE_AUTHORITY
+human_recruitment: HOLD
+safe_transport: ABSTAIN
+language_policy: unrestricted_polyglot
