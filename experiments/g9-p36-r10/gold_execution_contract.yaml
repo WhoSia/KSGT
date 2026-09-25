@@ -1,0 +1,64 @@
+phase: KSGT Generation IX G9-P36-R10
+contract: KSGT-R10-NIKL-GOLD-v1
+status: SEALED_BEFORE_OFFICIAL_ANNOTATION_BYTES
+accepted_schema_families:
+  - NIKL_ZA_LEGACY_2020_2024
+  - NIKL_ZA_ELLIPSIS_2025
+  - NIKL_ZA_TRANSITIONAL_RESTORED
+schema_policy:
+  unknown_schema: HOLD_SCHEMA_UNRECOGNIZED
+  mixed_recognized_versions: ALLOW_WITH_PER_RECORD_VERSION_TAG
+  json_parse_failure: FAIL_SOURCE_INTEGRITY
+  infer_semantic_role_from_subject_object: FORBIDDEN
+mapping:
+  nikl_subject_object_complement_adjunct: SYNTACTIC_SLOT_ONLY
+  semantic_role:
+    default: null
+    populate_only_from_explicit_linked_SRL_gold: true
+  explicit_antecedent:
+    recovery: ZERO_ANAPHORIC
+    witness_required: true
+  no_antecedent_location:
+    recovery: ZERO_GENERIC_OR_EXOPHORIC
+    witness_required: false
+  particle:
+    semantic_role_authority: FORBIDDEN
+gold_acceptance:
+  official_source_required: true
+  raw_sha256_required: true
+  archive_inventory_required: true
+  schema_census_required: true
+  za_records_gt_0: true
+  recognized_za_coverage: 1.0
+  rust_arg_validation_rate: 1.0
+  row_scoring_before_all_checks: FORBIDDEN
+metrics_frozen:
+  - total_documents
+  - total_sentences
+  - total_ZA_predicates
+  - total_ellipsis_slots
+  - syntactic_slot_distribution
+  - recovery_type_distribution
+  - antecedent_sentence_distance_distribution
+  - same_sentence_antecedent_rate
+  - preceding_vs_following_antecedent_rate
+  - generic_exophoric_rate
+  - 2020_vs_2025_schema_family_counts
+  - rust_validation_failures_by_reason
+  - explicit_SRL_link_rate_if_available
+return_to_origin:
+  candidate_unit: ROLE_EVENT_RECOVERABILITY_GRAPH
+  semantic_identity_excludes:
+    - surface_particle
+    - linear_order
+    - overt_vs_zero_realization
+    - antecedent_surface_form
+  semantic_identity_includes:
+    - predicate_identity
+    - syntactic_slot
+    - explicit_semantic_role_if_gold_linked
+    - referent_identity_when_gold_linked
+    - scope_when_present
+authority:
+  corpus_arrival_does_not_automatically_promote_cross_language_reuse: true
+  gold_ingestion_first_then_scientific_adjudication: true
