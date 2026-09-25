@@ -1,20 +1,24 @@
 {
-  "discovered_paper_dirs": 0,
+  "discovered_paper_dirs": 121,
   "aggregate": {
-    "papers": 0,
-    "response_files": 0,
-    "units": 0,
-    "obligations": 0,
-    "unresolved_obligations": 0,
-    "existing_chunk_files": 0,
-    "reconstructed_chunk_files": 0,
-    "W0": 0,
-    "W1": 0,
-    "W2": 0,
+    "papers": 121,
+    "response_files": 173,
+    "units": 5803,
+    "obligations": 5579,
+    "unresolved_obligations": 1877,
+    "existing_chunk_files": 162,
+    "reconstructed_chunk_files": 11,
+    "W0": 36,
+    "W1": 3,
+    "W2": 7,
     "certifiable": 0
   },
-  "missing": 121,
-  "reasonCounts": {},
+  "missing": 0,
+  "reasonCounts": {
+    "STRUCTURAL_CONTEXT_MISMATCH": 39,
+    "UNRESOLVED_CONTEXT": 4,
+    "ROLE_NOT_CERTIFIABLE": 3
+  },
   "frontier_reopened": false,
   "positiveControls": [
     {
@@ -60,45 +64,45 @@
   "regressionControls": [
     {
       "paper": "emnlp24_doc387",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc739",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc1035",
-      "candidates": 0,
+      "candidates": 3,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc199",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc103",
-      "candidates": 0,
+      "candidates": 2,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc1043",
-      "candidates": 0,
+      "candidates": 2,
       "certifiable": 0,
       "pass": true
     }
   ],
   "validation": {
-    "missing_pass": false,
+    "missing_pass": true,
     "positive_controls_pass": true,
     "r1_regression_pass": true,
-    "pass": false
+    "pass": true
   }
 }

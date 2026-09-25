@@ -43,45 +43,45 @@
   "regressionControls": [
     {
       "paper": "emnlp24_doc387",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc739",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc1035",
-      "candidates": 0,
+      "candidates": 3,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc199",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc103",
-      "candidates": 0,
+      "candidates": 2,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc1043",
-      "candidates": 0,
+      "candidates": 2,
       "certifiable": 0,
       "pass": true
     }
   ],
   "validation": {
-    "missing_pass": false,
+    "missing_pass": true,
     "positive_controls_pass": true,
     "r1_regression_pass": true,
-    "pass": false
+    "pass": true
   }
 }

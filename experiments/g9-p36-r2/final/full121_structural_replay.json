@@ -3,628 +3,26 @@
   "compiler": "C3-R2-STRUCTURAL-v1",
   "source": "Re3Align_v1.0 public archive / EMNLP24",
   "manifest_papers": 121,
-  "discovered_paper_dirs": 0,
+  "discovered_paper_dirs": 121,
   "aggregate": {
-    "papers": 0,
-    "response_files": 0,
-    "units": 0,
-    "obligations": 0,
-    "unresolved_obligations": 0,
-    "existing_chunk_files": 0,
-    "reconstructed_chunk_files": 0,
-    "W0": 0,
-    "W1": 0,
-    "W2": 0,
+    "papers": 121,
+    "response_files": 173,
+    "units": 5803,
+    "obligations": 5579,
+    "unresolved_obligations": 1877,
+    "existing_chunk_files": 162,
+    "reconstructed_chunk_files": 11,
+    "W0": 36,
+    "W1": 3,
+    "W2": 7,
     "certifiable": 0
   },
-  "missing": [
-    {
-      "index": 0,
-      "paper": "emnlp24_doc848",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 1,
-      "paper": "emnlp24_doc689",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 2,
-      "paper": "emnlp24_doc349",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 3,
-      "paper": "emnlp24_doc317",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 4,
-      "paper": "emnlp24_doc467",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 5,
-      "paper": "emnlp24_doc330",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 6,
-      "paper": "emnlp24_doc153",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 7,
-      "paper": "emnlp24_doc159",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 8,
-      "paper": "emnlp24_doc476",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 9,
-      "paper": "emnlp24_doc46",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 10,
-      "paper": "emnlp24_doc858",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 11,
-      "paper": "emnlp24_doc962",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 12,
-      "paper": "emnlp24_doc409",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 13,
-      "paper": "emnlp24_doc867",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 14,
-      "paper": "emnlp24_doc984",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 15,
-      "paper": "emnlp24_doc860",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 16,
-      "paper": "emnlp24_doc15",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 17,
-      "paper": "emnlp24_doc180",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 18,
-      "paper": "emnlp24_doc742",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 19,
-      "paper": "emnlp24_doc393",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 20,
-      "paper": "emnlp24_doc326",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 21,
-      "paper": "emnlp24_doc141",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 22,
-      "paper": "emnlp24_doc303",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 23,
-      "paper": "emnlp24_doc301",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 24,
-      "paper": "emnlp24_doc450",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 25,
-      "paper": "emnlp24_doc868",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 26,
-      "paper": "emnlp24_doc343",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 27,
-      "paper": "emnlp24_doc941",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 28,
-      "paper": "emnlp24_doc902",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 29,
-      "paper": "emnlp24_doc543",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 30,
-      "paper": "emnlp24_doc875",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 31,
-      "paper": "emnlp24_doc86",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 32,
-      "paper": "emnlp24_doc387",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 33,
-      "paper": "emnlp24_doc717",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 34,
-      "paper": "emnlp24_doc51",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 35,
-      "paper": "emnlp24_doc91",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 36,
-      "paper": "emnlp24_doc353",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 37,
-      "paper": "emnlp24_doc802",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 38,
-      "paper": "emnlp24_doc763",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 39,
-      "paper": "emnlp24_doc538",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 40,
-      "paper": "emnlp24_doc752",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 41,
-      "paper": "emnlp24_doc739",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 42,
-      "paper": "emnlp24_doc685",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 43,
-      "paper": "emnlp24_doc580",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 44,
-      "paper": "emnlp24_doc139",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 45,
-      "paper": "emnlp24_doc656",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 46,
-      "paper": "emnlp24_doc87",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 47,
-      "paper": "emnlp24_doc236",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 48,
-      "paper": "emnlp24_doc400",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 49,
-      "paper": "emnlp24_doc885",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 50,
-      "paper": "emnlp24_doc1013",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 51,
-      "paper": "emnlp24_doc13",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 52,
-      "paper": "emnlp24_doc489",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 53,
-      "paper": "emnlp24_doc573",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 54,
-      "paper": "emnlp24_doc259",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 55,
-      "paper": "emnlp24_doc971",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 56,
-      "paper": "emnlp24_doc221",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 57,
-      "paper": "emnlp24_doc33",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 58,
-      "paper": "emnlp24_doc249",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 59,
-      "paper": "emnlp24_doc220",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 60,
-      "paper": "emnlp24_doc820",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 61,
-      "paper": "emnlp24_doc223",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 62,
-      "paper": "emnlp24_doc193",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 63,
-      "paper": "emnlp24_doc791",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 64,
-      "paper": "emnlp24_doc333",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 65,
-      "paper": "emnlp24_doc928",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 66,
-      "paper": "emnlp24_doc770",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 67,
-      "paper": "emnlp24_doc687",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 68,
-      "paper": "emnlp24_doc350",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 69,
-      "paper": "emnlp24_doc843",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 70,
-      "paper": "emnlp24_doc230",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 71,
-      "paper": "emnlp24_doc954",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 72,
-      "paper": "emnlp24_doc99",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 73,
-      "paper": "emnlp24_doc862",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 74,
-      "paper": "emnlp24_doc989",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 75,
-      "paper": "emnlp24_doc897",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 76,
-      "paper": "emnlp24_doc173",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 77,
-      "paper": "emnlp24_doc924",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 78,
-      "paper": "emnlp24_doc490",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 79,
-      "paper": "emnlp24_doc219",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 80,
-      "paper": "emnlp24_doc545",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 81,
-      "paper": "emnlp24_doc940",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 82,
-      "paper": "emnlp24_doc1021",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 83,
-      "paper": "emnlp24_doc523",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 84,
-      "paper": "emnlp24_doc671",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 85,
-      "paper": "emnlp24_doc1035",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 86,
-      "paper": "emnlp24_doc635",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 87,
-      "paper": "emnlp24_doc565",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 88,
-      "paper": "emnlp24_doc185",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 89,
-      "paper": "emnlp24_doc263",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 90,
-      "paper": "emnlp24_doc785",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 91,
-      "paper": "emnlp24_doc741",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 92,
-      "paper": "emnlp24_doc731",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 93,
-      "paper": "emnlp24_doc931",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 94,
-      "paper": "emnlp24_doc238",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 95,
-      "paper": "emnlp24_doc463",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 96,
-      "paper": "emnlp24_doc1040",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 97,
-      "paper": "emnlp24_doc443",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 98,
-      "paper": "emnlp24_doc947",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 99,
-      "paper": "emnlp24_doc600",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 100,
-      "paper": "emnlp24_doc456",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 101,
-      "paper": "emnlp24_doc199",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 102,
-      "paper": "emnlp24_doc1009",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 103,
-      "paper": "emnlp24_doc892",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 104,
-      "paper": "emnlp24_doc192",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 105,
-      "paper": "emnlp24_doc103",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 106,
-      "paper": "emnlp24_doc61",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 107,
-      "paper": "emnlp24_doc883",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 108,
-      "paper": "emnlp24_doc966",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 109,
-      "paper": "emnlp24_doc834",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 110,
-      "paper": "emnlp24_doc304",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 111,
-      "paper": "emnlp24_doc146",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 112,
-      "paper": "emnlp24_doc493",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 113,
-      "paper": "emnlp24_doc311",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 114,
-      "paper": "emnlp24_doc28",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 115,
-      "paper": "emnlp24_doc935",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 116,
-      "paper": "emnlp24_doc925",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 117,
-      "paper": "emnlp24_doc85",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 118,
-      "paper": "emnlp24_doc952",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 119,
-      "paper": "emnlp24_doc1043",
-      "reason": "MISSING_RESPONSE_DIR"
-    },
-    {
-      "index": 120,
-      "paper": "emnlp24_doc1042",
-      "reason": "MISSING_RESPONSE_DIR"
-    }
-  ],
-  "reason_counts": {},
+  "missing": [],
+  "reason_counts": {
+    "STRUCTURAL_CONTEXT_MISMATCH": 39,
+    "UNRESOLVED_CONTEXT": 4,
+    "ROLE_NOT_CERTIFIABLE": 3
+  },
   "positive_controls": [
     {
       "name": "exact_duplicate_assertion_same_attachment_same_antecedent",
@@ -669,48 +67,1743 @@
   "regression_controls": [
     {
       "paper": "emnlp24_doc387",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc739",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc1035",
-      "candidates": 0,
+      "candidates": 3,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc199",
-      "candidates": 0,
+      "candidates": 1,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc103",
-      "candidates": 0,
+      "candidates": 2,
       "certifiable": 0,
       "pass": true
     },
     {
       "paper": "emnlp24_doc1043",
-      "candidates": 0,
+      "candidates": 2,
       "certifiable": 0,
       "pass": true
     }
   ],
   "validation": {
-    "missing_pass": false,
+    "missing_pass": true,
     "positive_controls_pass": true,
     "r1_regression_pass": true,
-    "pass": false
+    "pass": true
   },
   "frontier_reopened": false,
   "certifiable_witnesses": [],
-  "paper_metrics": []
+  "paper_metrics": [
+    {
+      "index": 0,
+      "paper": "emnlp24_doc848",
+      "response_files": 1,
+      "units": 149,
+      "obligations": 146,
+      "unresolved": 59,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 1,
+      "paper": "emnlp24_doc689",
+      "response_files": 1,
+      "units": 31,
+      "obligations": 26,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 2,
+      "paper": "emnlp24_doc349",
+      "response_files": 2,
+      "units": 39,
+      "obligations": 39,
+      "unresolved": 12,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 3,
+      "paper": "emnlp24_doc317",
+      "response_files": 2,
+      "units": 21,
+      "obligations": 21,
+      "unresolved": 11,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 4,
+      "paper": "emnlp24_doc467",
+      "response_files": 1,
+      "units": 8,
+      "obligations": 8,
+      "unresolved": 1,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 5,
+      "paper": "emnlp24_doc330",
+      "response_files": 1,
+      "units": 75,
+      "obligations": 74,
+      "unresolved": 28,
+      "W0": 3,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 6,
+      "paper": "emnlp24_doc153",
+      "response_files": 2,
+      "units": 56,
+      "obligations": 55,
+      "unresolved": 11,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 7,
+      "paper": "emnlp24_doc159",
+      "response_files": 2,
+      "units": 99,
+      "obligations": 96,
+      "unresolved": 40,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 8,
+      "paper": "emnlp24_doc476",
+      "response_files": 2,
+      "units": 69,
+      "obligations": 68,
+      "unresolved": 32,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 9,
+      "paper": "emnlp24_doc46",
+      "response_files": 2,
+      "units": 188,
+      "obligations": 173,
+      "unresolved": 36,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 10,
+      "paper": "emnlp24_doc858",
+      "response_files": 1,
+      "units": 42,
+      "obligations": 42,
+      "unresolved": 12,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 11,
+      "paper": "emnlp24_doc962",
+      "response_files": 2,
+      "units": 82,
+      "obligations": 82,
+      "unresolved": 20,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 12,
+      "paper": "emnlp24_doc409",
+      "response_files": 1,
+      "units": 33,
+      "obligations": 33,
+      "unresolved": 14,
+      "W0": 0,
+      "W1": 0,
+      "W2": 1,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 13,
+      "paper": "emnlp24_doc867",
+      "response_files": 2,
+      "units": 73,
+      "obligations": 71,
+      "unresolved": 8,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 14,
+      "paper": "emnlp24_doc984",
+      "response_files": 2,
+      "units": 58,
+      "obligations": 52,
+      "unresolved": 23,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 15,
+      "paper": "emnlp24_doc860",
+      "response_files": 3,
+      "units": 68,
+      "obligations": 68,
+      "unresolved": 27,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 3,
+      "reconstructed": 0
+    },
+    {
+      "index": 16,
+      "paper": "emnlp24_doc15",
+      "response_files": 1,
+      "units": 42,
+      "obligations": 42,
+      "unresolved": 13,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 17,
+      "paper": "emnlp24_doc180",
+      "response_files": 1,
+      "units": 20,
+      "obligations": 20,
+      "unresolved": 2,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 18,
+      "paper": "emnlp24_doc742",
+      "response_files": 1,
+      "units": 17,
+      "obligations": 17,
+      "unresolved": 12,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 19,
+      "paper": "emnlp24_doc393",
+      "response_files": 1,
+      "units": 34,
+      "obligations": 30,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 20,
+      "paper": "emnlp24_doc326",
+      "response_files": 2,
+      "units": 88,
+      "obligations": 76,
+      "unresolved": 11,
+      "W0": 5,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 21,
+      "paper": "emnlp24_doc141",
+      "response_files": 2,
+      "units": 51,
+      "obligations": 50,
+      "unresolved": 21,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 22,
+      "paper": "emnlp24_doc303",
+      "response_files": 1,
+      "units": 60,
+      "obligations": 60,
+      "unresolved": 9,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 23,
+      "paper": "emnlp24_doc301",
+      "response_files": 1,
+      "units": 16,
+      "obligations": 16,
+      "unresolved": 6,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 24,
+      "paper": "emnlp24_doc450",
+      "response_files": 2,
+      "units": 46,
+      "obligations": 39,
+      "unresolved": 9,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 25,
+      "paper": "emnlp24_doc868",
+      "response_files": 2,
+      "units": 25,
+      "obligations": 25,
+      "unresolved": 1,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 26,
+      "paper": "emnlp24_doc343",
+      "response_files": 1,
+      "units": 14,
+      "obligations": 13,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 27,
+      "paper": "emnlp24_doc941",
+      "response_files": 1,
+      "units": 13,
+      "obligations": 13,
+      "unresolved": 8,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 28,
+      "paper": "emnlp24_doc902",
+      "response_files": 1,
+      "units": 63,
+      "obligations": 62,
+      "unresolved": 28,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 29,
+      "paper": "emnlp24_doc543",
+      "response_files": 2,
+      "units": 130,
+      "obligations": 128,
+      "unresolved": 47,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 30,
+      "paper": "emnlp24_doc875",
+      "response_files": 1,
+      "units": 23,
+      "obligations": 23,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 31,
+      "paper": "emnlp24_doc86",
+      "response_files": 2,
+      "units": 32,
+      "obligations": 27,
+      "unresolved": 2,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 32,
+      "paper": "emnlp24_doc387",
+      "response_files": 3,
+      "units": 110,
+      "obligations": 105,
+      "unresolved": 34,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 3,
+      "reconstructed": 0
+    },
+    {
+      "index": 33,
+      "paper": "emnlp24_doc717",
+      "response_files": 1,
+      "units": 74,
+      "obligations": 73,
+      "unresolved": 36,
+      "W0": 2,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 34,
+      "paper": "emnlp24_doc51",
+      "response_files": 1,
+      "units": 46,
+      "obligations": 44,
+      "unresolved": 10,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 35,
+      "paper": "emnlp24_doc91",
+      "response_files": 1,
+      "units": 32,
+      "obligations": 31,
+      "unresolved": 9,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 36,
+      "paper": "emnlp24_doc353",
+      "response_files": 2,
+      "units": 36,
+      "obligations": 36,
+      "unresolved": 8,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 37,
+      "paper": "emnlp24_doc802",
+      "response_files": 2,
+      "units": 18,
+      "obligations": 18,
+      "unresolved": 3,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 38,
+      "paper": "emnlp24_doc763",
+      "response_files": 2,
+      "units": 24,
+      "obligations": 24,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 39,
+      "paper": "emnlp24_doc538",
+      "response_files": 2,
+      "units": 29,
+      "obligations": 27,
+      "unresolved": 11,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 40,
+      "paper": "emnlp24_doc752",
+      "response_files": 2,
+      "units": 97,
+      "obligations": 94,
+      "unresolved": 23,
+      "W0": 0,
+      "W1": 0,
+      "W2": 1,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 41,
+      "paper": "emnlp24_doc739",
+      "response_files": 1,
+      "units": 52,
+      "obligations": 46,
+      "unresolved": 17,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 42,
+      "paper": "emnlp24_doc685",
+      "response_files": 1,
+      "units": 53,
+      "obligations": 53,
+      "unresolved": 19,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 43,
+      "paper": "emnlp24_doc580",
+      "response_files": 1,
+      "units": 30,
+      "obligations": 30,
+      "unresolved": 7,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 44,
+      "paper": "emnlp24_doc139",
+      "response_files": 1,
+      "units": 24,
+      "obligations": 24,
+      "unresolved": 6,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 45,
+      "paper": "emnlp24_doc656",
+      "response_files": 1,
+      "units": 49,
+      "obligations": 49,
+      "unresolved": 15,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 46,
+      "paper": "emnlp24_doc87",
+      "response_files": 1,
+      "units": 20,
+      "obligations": 20,
+      "unresolved": 10,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 47,
+      "paper": "emnlp24_doc236",
+      "response_files": 1,
+      "units": 10,
+      "obligations": 10,
+      "unresolved": 0,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 48,
+      "paper": "emnlp24_doc400",
+      "response_files": 1,
+      "units": 36,
+      "obligations": 36,
+      "unresolved": 9,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 49,
+      "paper": "emnlp24_doc885",
+      "response_files": 2,
+      "units": 46,
+      "obligations": 46,
+      "unresolved": 18,
+      "W0": 1,
+      "W1": 1,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 50,
+      "paper": "emnlp24_doc1013",
+      "response_files": 1,
+      "units": 25,
+      "obligations": 25,
+      "unresolved": 9,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 51,
+      "paper": "emnlp24_doc13",
+      "response_files": 2,
+      "units": 122,
+      "obligations": 118,
+      "unresolved": 47,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 52,
+      "paper": "emnlp24_doc489",
+      "response_files": 1,
+      "units": 15,
+      "obligations": 15,
+      "unresolved": 7,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 53,
+      "paper": "emnlp24_doc573",
+      "response_files": 1,
+      "units": 25,
+      "obligations": 25,
+      "unresolved": 9,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 54,
+      "paper": "emnlp24_doc259",
+      "response_files": 1,
+      "units": 19,
+      "obligations": 19,
+      "unresolved": 14,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 55,
+      "paper": "emnlp24_doc971",
+      "response_files": 2,
+      "units": 145,
+      "obligations": 135,
+      "unresolved": 45,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 56,
+      "paper": "emnlp24_doc221",
+      "response_files": 3,
+      "units": 76,
+      "obligations": 76,
+      "unresolved": 26,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 1
+    },
+    {
+      "index": 57,
+      "paper": "emnlp24_doc33",
+      "response_files": 1,
+      "units": 34,
+      "obligations": 34,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 58,
+      "paper": "emnlp24_doc249",
+      "response_files": 2,
+      "units": 62,
+      "obligations": 61,
+      "unresolved": 26,
+      "W0": 1,
+      "W1": 0,
+      "W2": 1,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 59,
+      "paper": "emnlp24_doc220",
+      "response_files": 1,
+      "units": 7,
+      "obligations": 7,
+      "unresolved": 7,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 60,
+      "paper": "emnlp24_doc820",
+      "response_files": 1,
+      "units": 32,
+      "obligations": 31,
+      "unresolved": 15,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 61,
+      "paper": "emnlp24_doc223",
+      "response_files": 2,
+      "units": 76,
+      "obligations": 73,
+      "unresolved": 33,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 62,
+      "paper": "emnlp24_doc193",
+      "response_files": 1,
+      "units": 29,
+      "obligations": 29,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 63,
+      "paper": "emnlp24_doc791",
+      "response_files": 1,
+      "units": 15,
+      "obligations": 15,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 64,
+      "paper": "emnlp24_doc333",
+      "response_files": 1,
+      "units": 13,
+      "obligations": 13,
+      "unresolved": 6,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 65,
+      "paper": "emnlp24_doc928",
+      "response_files": 1,
+      "units": 9,
+      "obligations": 9,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 66,
+      "paper": "emnlp24_doc770",
+      "response_files": 1,
+      "units": 29,
+      "obligations": 27,
+      "unresolved": 12,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 67,
+      "paper": "emnlp24_doc687",
+      "response_files": 1,
+      "units": 23,
+      "obligations": 22,
+      "unresolved": 8,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 68,
+      "paper": "emnlp24_doc350",
+      "response_files": 2,
+      "units": 72,
+      "obligations": 72,
+      "unresolved": 26,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 69,
+      "paper": "emnlp24_doc843",
+      "response_files": 1,
+      "units": 16,
+      "obligations": 16,
+      "unresolved": 6,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 70,
+      "paper": "emnlp24_doc230",
+      "response_files": 1,
+      "units": 51,
+      "obligations": 51,
+      "unresolved": 15,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 71,
+      "paper": "emnlp24_doc954",
+      "response_files": 2,
+      "units": 109,
+      "obligations": 107,
+      "unresolved": 40,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 72,
+      "paper": "emnlp24_doc99",
+      "response_files": 1,
+      "units": 7,
+      "obligations": 7,
+      "unresolved": 3,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 73,
+      "paper": "emnlp24_doc862",
+      "response_files": 2,
+      "units": 54,
+      "obligations": 50,
+      "unresolved": 7,
+      "W0": 0,
+      "W1": 0,
+      "W2": 1,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 74,
+      "paper": "emnlp24_doc989",
+      "response_files": 2,
+      "units": 34,
+      "obligations": 34,
+      "unresolved": 12,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 75,
+      "paper": "emnlp24_doc897",
+      "response_files": 1,
+      "units": 18,
+      "obligations": 18,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 76,
+      "paper": "emnlp24_doc173",
+      "response_files": 1,
+      "units": 12,
+      "obligations": 12,
+      "unresolved": 3,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 77,
+      "paper": "emnlp24_doc924",
+      "response_files": 1,
+      "units": 22,
+      "obligations": 19,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 78,
+      "paper": "emnlp24_doc490",
+      "response_files": 2,
+      "units": 70,
+      "obligations": 69,
+      "unresolved": 37,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 79,
+      "paper": "emnlp24_doc219",
+      "response_files": 2,
+      "units": 81,
+      "obligations": 81,
+      "unresolved": 26,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 80,
+      "paper": "emnlp24_doc545",
+      "response_files": 1,
+      "units": 10,
+      "obligations": 10,
+      "unresolved": 8,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 81,
+      "paper": "emnlp24_doc940",
+      "response_files": 1,
+      "units": 36,
+      "obligations": 36,
+      "unresolved": 8,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 82,
+      "paper": "emnlp24_doc1021",
+      "response_files": 2,
+      "units": 72,
+      "obligations": 65,
+      "unresolved": 13,
+      "W0": 0,
+      "W1": 0,
+      "W2": 2,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 1
+    },
+    {
+      "index": 83,
+      "paper": "emnlp24_doc523",
+      "response_files": 1,
+      "units": 34,
+      "obligations": 31,
+      "unresolved": 10,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 84,
+      "paper": "emnlp24_doc671",
+      "response_files": 2,
+      "units": 18,
+      "obligations": 18,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 85,
+      "paper": "emnlp24_doc1035",
+      "response_files": 2,
+      "units": 52,
+      "obligations": 42,
+      "unresolved": 11,
+      "W0": 3,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 86,
+      "paper": "emnlp24_doc635",
+      "response_files": 2,
+      "units": 66,
+      "obligations": 66,
+      "unresolved": 24,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 87,
+      "paper": "emnlp24_doc565",
+      "response_files": 2,
+      "units": 158,
+      "obligations": 157,
+      "unresolved": 66,
+      "W0": 2,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 88,
+      "paper": "emnlp24_doc185",
+      "response_files": 2,
+      "units": 35,
+      "obligations": 34,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 89,
+      "paper": "emnlp24_doc263",
+      "response_files": 1,
+      "units": 34,
+      "obligations": 31,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 90,
+      "paper": "emnlp24_doc785",
+      "response_files": 1,
+      "units": 59,
+      "obligations": 57,
+      "unresolved": 14,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 91,
+      "paper": "emnlp24_doc741",
+      "response_files": 1,
+      "units": 6,
+      "obligations": 6,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 92,
+      "paper": "emnlp24_doc731",
+      "response_files": 1,
+      "units": 12,
+      "obligations": 12,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 93,
+      "paper": "emnlp24_doc931",
+      "response_files": 1,
+      "units": 46,
+      "obligations": 46,
+      "unresolved": 7,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 94,
+      "paper": "emnlp24_doc238",
+      "response_files": 1,
+      "units": 42,
+      "obligations": 41,
+      "unresolved": 22,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 95,
+      "paper": "emnlp24_doc463",
+      "response_files": 1,
+      "units": 42,
+      "obligations": 33,
+      "unresolved": 20,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 96,
+      "paper": "emnlp24_doc1040",
+      "response_files": 1,
+      "units": 15,
+      "obligations": 14,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 97,
+      "paper": "emnlp24_doc443",
+      "response_files": 1,
+      "units": 63,
+      "obligations": 63,
+      "unresolved": 23,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 98,
+      "paper": "emnlp24_doc947",
+      "response_files": 1,
+      "units": 46,
+      "obligations": 46,
+      "unresolved": 14,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 99,
+      "paper": "emnlp24_doc600",
+      "response_files": 2,
+      "units": 41,
+      "obligations": 41,
+      "unresolved": 15,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 100,
+      "paper": "emnlp24_doc456",
+      "response_files": 1,
+      "units": 24,
+      "obligations": 24,
+      "unresolved": 9,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 101,
+      "paper": "emnlp24_doc199",
+      "response_files": 2,
+      "units": 132,
+      "obligations": 131,
+      "unresolved": 49,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 102,
+      "paper": "emnlp24_doc1009",
+      "response_files": 1,
+      "units": 8,
+      "obligations": 8,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 103,
+      "paper": "emnlp24_doc892",
+      "response_files": 1,
+      "units": 15,
+      "obligations": 15,
+      "unresolved": 3,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 104,
+      "paper": "emnlp24_doc192",
+      "response_files": 1,
+      "units": 77,
+      "obligations": 52,
+      "unresolved": 23,
+      "W0": 3,
+      "W1": 0,
+      "W2": 1,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 105,
+      "paper": "emnlp24_doc103",
+      "response_files": 1,
+      "units": 24,
+      "obligations": 24,
+      "unresolved": 12,
+      "W0": 2,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 106,
+      "paper": "emnlp24_doc61",
+      "response_files": 2,
+      "units": 100,
+      "obligations": 97,
+      "unresolved": 53,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 107,
+      "paper": "emnlp24_doc883",
+      "response_files": 1,
+      "units": 14,
+      "obligations": 14,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 108,
+      "paper": "emnlp24_doc966",
+      "response_files": 1,
+      "units": 4,
+      "obligations": 4,
+      "unresolved": 3,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 109,
+      "paper": "emnlp24_doc834",
+      "response_files": 2,
+      "units": 124,
+      "obligations": 124,
+      "unresolved": 58,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 110,
+      "paper": "emnlp24_doc304",
+      "response_files": 2,
+      "units": 41,
+      "obligations": 39,
+      "unresolved": 7,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 111,
+      "paper": "emnlp24_doc146",
+      "response_files": 1,
+      "units": 16,
+      "obligations": 8,
+      "unresolved": 5,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 112,
+      "paper": "emnlp24_doc493",
+      "response_files": 1,
+      "units": 81,
+      "obligations": 75,
+      "unresolved": 32,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 113,
+      "paper": "emnlp24_doc311",
+      "response_files": 1,
+      "units": 63,
+      "obligations": 55,
+      "unresolved": 11,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 114,
+      "paper": "emnlp24_doc28",
+      "response_files": 2,
+      "units": 52,
+      "obligations": 51,
+      "unresolved": 26,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 115,
+      "paper": "emnlp24_doc935",
+      "response_files": 2,
+      "units": 69,
+      "obligations": 67,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 116,
+      "paper": "emnlp24_doc925",
+      "response_files": 1,
+      "units": 20,
+      "obligations": 20,
+      "unresolved": 4,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 117,
+      "paper": "emnlp24_doc85",
+      "response_files": 2,
+      "units": 113,
+      "obligations": 108,
+      "unresolved": 44,
+      "W0": 1,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    },
+    {
+      "index": 118,
+      "paper": "emnlp24_doc952",
+      "response_files": 1,
+      "units": 10,
+      "obligations": 10,
+      "unresolved": 6,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 119,
+      "paper": "emnlp24_doc1043",
+      "response_files": 1,
+      "units": 44,
+      "obligations": 43,
+      "unresolved": 6,
+      "W0": 0,
+      "W1": 2,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 1,
+      "reconstructed": 0
+    },
+    {
+      "index": 120,
+      "paper": "emnlp24_doc1042",
+      "response_files": 2,
+      "units": 32,
+      "obligations": 30,
+      "unresolved": 7,
+      "W0": 0,
+      "W1": 0,
+      "W2": 0,
+      "certifiable": 0,
+      "existing": 2,
+      "reconstructed": 0
+    }
+  ]
 }

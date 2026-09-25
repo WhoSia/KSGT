@@ -1,1 +1,2210 @@
-[]
+[
+  {
+    "index": 5,
+    "paper": "emnlp24_doc330",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "|              | **I2B2**   | **CoNLL**  | **WNUT**   | **GUM**    | **Avg.** |",
+        "norm": "| | **i2b2** | **conll** | **wnut** | **gum** | **avg.** |",
+        "alias": "| | i2b2 | conll | wnut | gum | avg |",
+        "G": {
+          "review_root": "v1_review0::--- **w1**: the experiments are primarily conducted on the few-nerd dataset. it would be beneficial to see how the method performs on other datasets, especially those from different domains.",
+          "response_chunk_id": "emnlp24_doc330_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "1-shot",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::1-shot::7"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"i2b2\",\"conll\",\"wnut\",\"gum\",\"avg\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "|              | **I2B2**   | **CoNLL**  | **WNUT**   | **GUM**    | **Avg.** |",
+        "norm": "| | **i2b2** | **conll** | **wnut** | **gum** | **avg.** |",
+        "alias": "| | i2b2 | conll | wnut | gum | avg |",
+        "G": {
+          "review_root": "v1_review0::--- **w1**: the experiments are primarily conducted on the few-nerd dataset. it would be beneficial to see how the method performs on other datasets, especially those from different domains.",
+          "response_chunk_id": "emnlp24_doc330_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "--- 5-shot",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::--- 5-shot::9"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"i2b2\",\"conll\",\"wnut\",\"gum\",\"avg\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "paper": "emnlp24_doc330",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| ***Full Test Set***      |            |            |            |            |          |",
+        "norm": "| ***full test set*** | | | | | |",
+        "alias": "| full test set | | | | | |",
+        "G": {
+          "review_root": "v1_review0::--- **w1**: the experiments are primarily conducted on the few-nerd dataset. it would be beneficial to see how the method performs on other datasets, especially those from different domains.",
+          "response_chunk_id": "emnlp24_doc330_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "1-shot",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::1-shot::7"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"full\",\"test\",\"set\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "| ***Full Test Set***     |            |            |            |            |          |",
+        "norm": "| ***full test set*** | | | | | |",
+        "alias": "| full test set | | | | | |",
+        "G": {
+          "review_root": "v1_review0::--- **w1**: the experiments are primarily conducted on the few-nerd dataset. it would be beneficial to see how the method performs on other datasets, especially those from different domains.",
+          "response_chunk_id": "emnlp24_doc330_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "--- 5-shot",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::--- 5-shot::9"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"full\",\"test\",\"set\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "paper": "emnlp24_doc330",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| ***Sampled Set***       |            |            |            |            |          |",
+        "norm": "| ***sampled set*** | | | | | |",
+        "alias": "| sampled set | | | | | |",
+        "G": {
+          "review_root": "v1_review0::--- **w1**: the experiments are primarily conducted on the few-nerd dataset. it would be beneficial to see how the method performs on other datasets, especially those from different domains.",
+          "response_chunk_id": "emnlp24_doc330_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "1-shot",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::1-shot::7"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"sampled\",\"set\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "| ***Sampled Set***       |            |            |            |            |          |",
+        "norm": "| ***sampled set*** | | | | | |",
+        "alias": "| sampled set | | | | | |",
+        "G": {
+          "review_root": "v1_review0::--- **w1**: the experiments are primarily conducted on the few-nerd dataset. it would be beneficial to see how the method performs on other datasets, especially those from different domains.",
+          "response_chunk_id": "emnlp24_doc330_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "--- 5-shot",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::--- 5-shot::9"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"sampled\",\"set\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "paper": "emnlp24_doc476",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::**1. there are constrains conflict in zc and ze in loss.",
+          "response_chunk_id": "emnlp24_doc476_v1_review0_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "4 gao lei prafulla kumar choubey and ruihong huang modeling document-level causal structures for event causal relation identification in proceedings of the 2019 conference",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::4 gao lei prafulla kumar choubey and ruihong huang modeling document-level causal structures for event causal relation identification in proceedings of the 2019 conference::7"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::**1. there are constrains conflict in zc and ze in loss.",
+          "response_chunk_id": "emnlp24_doc476_v1_review0_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "5 romanou angelika syrielle montariol debjit paul léo laugier karl aberer and antoine bosselut crab assessing the strength of causal relationships between real-world eve",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::5 romanou angelika syrielle montariol debjit paul léo laugier karl aberer and antoine bosselut crab assessing the strength of causal relationships between real-world eve::8"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::**1. there are constrains conflict in zc and ze in loss.",
+          "response_chunk_id": "emnlp24_doc476_v1_review0_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "7 feng tao lizhen qu niket tandon zhuang li xiaoxi kang and gholamreza haffari from pre-training corpora to large language models what factors influence llm performance",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::7 feng tao lizhen qu niket tandon zhuang li xiaoxi kang and gholamreza haffari from pre-training corpora to large language models what factors influence llm performance::10"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 12,
+    "paper": "emnlp24_doc409",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W2",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "**A4:** Thank you for this comment.",
+        "norm": "**a4:** thank you for this comment.",
+        "alias": "a4 thank you for this comment",
+        "G": {
+          "review_root": "v1_review0::**q4:** the method might introduce computational overhead that could be a concern for deployment in resource-constrained environments.",
+          "response_chunk_id": "emnlp24_doc409_v1_review0_response_2_RQ-3",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::::0"
+        },
+        "unresolved": [
+          "UNRESOLVED_ANTECEDENT"
+        ],
+        "semanticSignature": "{\"A\":[\"thank\",\"comment\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "**A5:** Thank you for this comment.",
+        "norm": "**a5:** thank you for this comment.",
+        "alias": "a5 thank you for this comment",
+        "G": {
+          "review_root": "v1_review0::**q4:** the method might introduce computational overhead that could be a concern for deployment in resource-constrained environments.",
+          "response_chunk_id": "emnlp24_doc409_v1_review0_response_2_RQ-3",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "q5 more detailed supplementary materials and parameter settings",
+          "antecedent_key": "{\"A\":[\"more\",\"detailed\",\"supplementary\",\"materials\",\"parameter\",\"settings\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"parameter\"]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::q5 more detailed supplementary materials and parameter settings::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"thank\",\"comment\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 14,
+    "paper": "emnlp24_doc984",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "(2024).",
+        "norm": "(2024).",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review1::3. comparison with prior work:",
+          "response_chunk_id": "emnlp24_doc984_v1_review1_response_2_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "reference",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::reference::4"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "(2024).",
+        "norm": "(2024).",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review1::3. comparison with prior work:",
+          "response_chunk_id": "emnlp24_doc984_v1_review1_response_2_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "2 li b fei h liao l zhao y teng c chua t s & li f 2023 october revisiting disentanglement and fusion on modality and context in conversational multimod",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::2 li b fei h liao l zhao y teng c chua t s & li f 2023 october revisiting disentanglement and fusion on modality and context in conversational multimod::6"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "paper": "emnlp24_doc326",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "We randomly selected 1000 user messages from our platform’s collected data.",
+        "norm": "we randomly selected 1000 user messages from our platform's collected data.",
+        "alias": "we randomly selected 1000 user messages from our platform s collected data",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways::4"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"randomly\",\"selected\",\"user\",\"messages\",\"platform\",\"collected\",\"data\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"1000\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "We randomly selected 1000 user messages from our platform’s collected data.",
+        "norm": "we randomly selected 1000 user messages from our platform's collected data.",
+        "alias": "we randomly selected 1000 user messages from our platform s collected data",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "we present the system s performance in the section practical application across different user demographics and contexts in real-life settings",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::we present the system s performance in the section practical application across different user demographics and contexts in real-life settings::7"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"randomly\",\"selected\",\"user\",\"messages\",\"platform\",\"collected\",\"data\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"1000\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "paper": "emnlp24_doc326",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "Our system achieved a 95.2% accuracy in detecting suicidal ideation, as confirmed by expert annotations, demonstrating its high accuracy and practicality.",
+        "norm": "our system achieved a 95.2% accuracy in detecting suicidal ideation, as confirmed by expert annotations, demonstrating its high accuracy and practicality.",
+        "alias": "our system achieved a 95 2% accuracy in detecting suicidal ideation as confirmed by expert annotations demonstrating its high accuracy and practicality",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"system\",\"achieved\",\"accuracy\",\"detecting\",\"suicidal\",\"ideation\",\"confirmed\",\"expert\"],\"R\":[\"annotations\",\"demonstrating\",\"its\",\"high\",\"accuracy\",\"practicality\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"95.2\"],\"entities\":[\"accuracy\",\"accuracy\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "Our system achieved a 95.2% accuracy in detecting suicidal ideation, as confirmed by expert annotations, demonstrating its high accuracy and practicality.",
+        "norm": "our system achieved a 95.2% accuracy in detecting suicidal ideation, as confirmed by expert annotations, demonstrating its high accuracy and practicality.",
+        "alias": "our system achieved a 95 2% accuracy in detecting suicidal ideation as confirmed by expert annotations demonstrating its high accuracy and practicality",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "we present the system s performance in the section practical application across different user demographics and contexts in real-life settings",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::we present the system s performance in the section practical application across different user demographics and contexts in real-life settings::7"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"system\",\"achieved\",\"accuracy\",\"detecting\",\"suicidal\",\"ideation\",\"confirmed\",\"expert\"],\"R\":[\"annotations\",\"demonstrating\",\"its\",\"high\",\"accuracy\",\"practicality\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"95.2\"],\"entities\":[\"accuracy\",\"accuracy\"]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "paper": "emnlp24_doc326",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "Furthermore, we chose 20 user messages with varying risk levels to test our risk assessment framework, achieving a 90.0% adoption rate for framework-recommended responses.",
+        "norm": "furthermore, we chose 20 user messages with varying risk levels to test our risk assessment framework, achieving a 90.0% adoption rate for framework-recommended responses.",
+        "alias": "furthermore we chose 20 user messages with varying risk levels to test our risk assessment framework achieving a 90 0% adoption rate for framework-recommended responses",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"furthermore\",\"chose\",\"user\",\"messages\",\"varying\",\"risk\",\"levels\",\"test\"],\"R\":[\"risk\",\"assessment\",\"framework\",\"achieving\",\"adoption\",\"rate\",\"framework-recommended\",\"responses\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"20\",\"90.0\"],\"entities\":[\"rate\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "Furthermore, we chose 20 user messages with varying risk levels to test our risk assessment framework, achieving a 90.0% adoption rate for framework-recommended responses.",
+        "norm": "furthermore, we chose 20 user messages with varying risk levels to test our risk assessment framework, achieving a 90.0% adoption rate for framework-recommended responses.",
+        "alias": "furthermore we chose 20 user messages with varying risk levels to test our risk assessment framework achieving a 90 0% adoption rate for framework-recommended responses",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "we present the system s performance in the section practical application across different user demographics and contexts in real-life settings",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::we present the system s performance in the section practical application across different user demographics and contexts in real-life settings::7"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"furthermore\",\"chose\",\"user\",\"messages\",\"varying\",\"risk\",\"levels\",\"test\"],\"R\":[\"risk\",\"assessment\",\"framework\",\"achieving\",\"adoption\",\"rate\",\"framework-recommended\",\"responses\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"20\",\"90.0\"],\"entities\":[\"rate\"]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "paper": "emnlp24_doc326",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "For more examples, please refer to Figures 13 and 15 in our paper.",
+        "norm": "for more examples, please refer to figures 13 and 15 in our paper.",
+        "alias": "for more examples please refer to figures 13 and 15 in our paper",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways::4"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"more\",\"examples\",\"please\",\"refer\",\"figures\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"13\",\"15\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "For more examples, please refer to Figures 13 and 15 in our paper.",
+        "norm": "for more examples, please refer to figures 13 and 15 in our paper.",
+        "alias": "for more examples please refer to figures 13 and 15 in our paper",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "we present the system s performance in the section practical application across different user demographics and contexts in real-life settings",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::we present the system s performance in the section practical application across different user demographics and contexts in real-life settings::7"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"more\",\"examples\",\"please\",\"refer\",\"figures\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"13\",\"15\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "paper": "emnlp24_doc326",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "These findings validate the system’s effectiveness and practical application in real-world settings.",
+        "norm": "these findings validate the system's effectiveness and practical application in real-world settings.",
+        "alias": "these findings validate the system s effectiveness and practical application in real-world settings",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways",
+          "antecedent_key": "{\"A\":[\"furthermore\",\"chose\",\"user\",\"messages\",\"varying\",\"risk\",\"levels\",\"test\"],\"R\":[\"risk\",\"assessment\",\"framework\",\"achieving\",\"adoption\",\"rate\",\"framework-recommended\",\"responses\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"20\",\"90.0\"],\"entities\":[\"rate\"]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::table 1 demonstrates that our dataset is more diverse than existing datasets in the following ways::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"findings\",\"validate\",\"system\",\"effectiveness\",\"practical\",\"application\",\"real-world\",\"settings\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "These findings validate the system’s effectiveness and practical application in real-world settings.",
+        "norm": "these findings validate the system's effectiveness and practical application in real-world settings.",
+        "alias": "these findings validate the system s effectiveness and practical application in real-world settings",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc326_v1_review1_v1_response2_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "we present the system s performance in the section practical application across different user demographics and contexts in real-life settings",
+          "antecedent_key": "{\"A\":[\"furthermore\",\"chose\",\"user\",\"messages\",\"varying\",\"risk\",\"levels\",\"test\"],\"R\":[\"risk\",\"assessment\",\"framework\",\"achieving\",\"adoption\",\"rate\",\"framework-recommended\",\"responses\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"20\",\"90.0\"],\"entities\":[\"rate\"]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::we present the system s performance in the section practical application across different user demographics and contexts in real-life settings::7"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"findings\",\"validate\",\"system\",\"effectiveness\",\"practical\",\"application\",\"real-world\",\"settings\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 21,
+    "paper": "emnlp24_doc141",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| Model                    |  BLEU-1   | BLEU-2   | BLEU-3  | BLEU-4   | METEOR    | ROUGEL   |",
+        "norm": "| model | bleu-1 | bleu-2 | bleu-3 | bleu-4 | meteor | rougel |",
+        "alias": "| model | bleu-1 | bleu-2 | bleu-3 | bleu-4 | meteor | rougel |",
+        "G": {
+          "review_root": "v1_review0::> **q2**: the oldest version is used for the baseline that can be unfair.",
+          "response_chunk_id": "emnlp24_doc141_v1_review0_response_2_RQ-1",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "a2 we use the latest version of chatgpt gpt-4o-2024-05-13 as the baseline and the results on the hu and ou5 datasets are shown in tables 1 and 2 although the latest version",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::a2 we use the latest version of chatgpt gpt-4o-2024-05-13 as the baseline and the results on the hu and ou5 datasets are shown in tables 1 and 2 although the latest version::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"model\",\"bleu-\",\"bleu-\",\"bleu-\",\"bleu-\",\"meteor\",\"rougel\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"1\",\"2\",\"3\",\"4\"],\"entities\":[\"model\",\"bleu-1\",\"bleu-2\",\"bleu-3\",\"bleu-4\",\"meteor\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "| Model                    |  BLEU-1   | BLEU-2   | BLEU-3  | BLEU-4   | METEOR    | ROUGEL  |",
+        "norm": "| model | bleu-1 | bleu-2 | bleu-3 | bleu-4 | meteor | rougel |",
+        "alias": "| model | bleu-1 | bleu-2 | bleu-3 | bleu-4 | meteor | rougel |",
+        "G": {
+          "review_root": "v1_review0::> **q2**: the oldest version is used for the baseline that can be unfair.",
+          "response_chunk_id": "emnlp24_doc141_v1_review0_response_2_RQ-1",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "table 1 performance on hu dataset",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::table 1 performance on hu dataset::3"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"model\",\"bleu-\",\"bleu-\",\"bleu-\",\"bleu-\",\"meteor\",\"rougel\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"1\",\"2\",\"3\",\"4\"],\"entities\":[\"model\",\"bleu-1\",\"bleu-2\",\"bleu-3\",\"bleu-4\",\"meteor\"]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 28,
+    "paper": "emnlp24_doc902",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "\"Octavius: Mitigating task interference in mllms via moe.\" arXiv preprint arXiv:2311.02684 (2023).",
+        "norm": "\"octavius: mitigating task interference in mllms via moe.\" arxiv preprint arxiv:2311.02684 (2023).",
+        "alias": "octavius mitigating task interference in mllms via moe arxiv preprint arxiv 2311 02684 2023",
+        "G": {
+          "review_root": "v1_review0::**q3:** it is somewhat confusing that section 3.1 mentions moe-tuning using vqa-rad, slake, and pathvqa. is this approach unfair for the zero-shot evaluation on these datasets?",
+          "response_chunk_id": "emnlp24_doc902_v1_review0_response_4_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "2 li chunyuan et al llava-med training a large language-and-vision assistant for biomedicine in one day advances in neural information processing systems 36 2024",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::2 li chunyuan et al llava-med training a large language-and-vision assistant for biomedicine in one day advances in neural information processing systems 36 2024::6"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"octavius\",\"mitigating\",\"task\",\"interference\",\"mllms\",\"via\",\"moe\",\"arxiv\"],\"R\":[\"preprint\",\"arxiv\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2311.02684\",\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "\"Octavius: Mitigating task interference in mllms via moe.\" arXiv preprint arXiv:2311.02684 (2023).",
+        "norm": "\"octavius: mitigating task interference in mllms via moe.\" arxiv preprint arxiv:2311.02684 (2023).",
+        "alias": "octavius mitigating task interference in mllms via moe arxiv preprint arxiv 2311 02684 2023",
+        "G": {
+          "review_root": "v1_review0::**q3:** it is somewhat confusing that section 3.1 mentions moe-tuning using vqa-rad, slake, and pathvqa. is this approach unfair for the zero-shot evaluation on these datasets?",
+          "response_chunk_id": "emnlp24_doc902_v1_review0_response_4_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "6 yu yue et al large language model as attributed training data generator a tale of diversity and bias advances in neural information processing systems 36 2024",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::6 yu yue et al large language model as attributed training data generator a tale of diversity and bias advances in neural information processing systems 36 2024::10"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"octavius\",\"mitigating\",\"task\",\"interference\",\"mllms\",\"via\",\"moe\",\"arxiv\"],\"R\":[\"preprint\",\"arxiv\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2311.02684\",\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 32,
+    "paper": "emnlp24_doc387",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "We added this discussion to the paper.",
+        "norm": "we added this discussion to the paper.",
+        "alias": "we added this discussion to the paper",
+        "G": {
+          "review_root": "v1_review1::> how do you create the vocabulary or dictionary? is it dependent on the token frequency in the pretraining corpus?",
+          "response_chunk_id": "emnlp24_doc387_v1_review1_response_4_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "REVISION_COMMITMENT",
+          "attachment_key": "we sampled the top-500k occurring words of the fineweb dataset note that this dictionary can dynamically be assembled and exchanged depending on the current task the model is prom",
+          "antecedent_key": "{\"A\":[\"encoding\",\"scheme\",\"therefore\",\"training\",\"objective\",\"won\",\"affected\",\"applied\"],\"R\":[\"decoding\",\"dictionary\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::we sampled the top-500k occurring words of the fineweb dataset note that this dictionary can dynamically be assembled and exchanged depending on the current task the model is prom::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"added\",\"discussion\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "We added this discussion to the paper.",
+        "norm": "we added this discussion to the paper.",
+        "alias": "we added this discussion to the paper",
+        "G": {
+          "review_root": "v1_review1::> how do you create the vocabulary or dictionary? is it dependent on the token frequency in the pretraining corpus?",
+          "response_chunk_id": "emnlp24_doc387_v1_review1_response_4_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "REVISION_COMMITMENT",
+          "attachment_key": "thank you for pointing out these valuable references which indeed should be and are now cited note that in contrast to hashformers and canine we keep our multi-class represent",
+          "antecedent_key": "{\"A\":[\"further\",\"already\",\"pointed\",\"out\",\"apply\",\"show\",\"its\",\"applicability\"],\"R\":[\"generative\",\"decoders\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::thank you for pointing out these valuable references which indeed should be and are now cited note that in contrast to hashformers and canine we keep our multi-class represent::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"added\",\"discussion\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 33,
+    "paper": "emnlp24_doc717",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "|           | Precision    | Recall       | F1           |",
+        "norm": "| | precision | recall | f1 |",
+        "alias": "| | precision | recall | f1 |",
+        "G": {
+          "review_root": "v1_review0::> although the paper mentions the performance of the model in 1-shot and 5-shot scenarios, there is a lack of validation for the model's generalization ability on a wider range of datasets. have you tested the model's generalization ability on different fields or datasets?",
+          "response_chunk_id": "emnlp24_doc717_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "below are our scores in the 1-shot scenario for the test set of fs-nyt29",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::below are our scores in the 1-shot scenario for the test set of fs-nyt29::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"precision\",\"recall\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"f1\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "|           | Precision    | Recall       | F1           |",
+        "norm": "| | precision | recall | f1 |",
+        "alias": "| | precision | recall | f1 |",
+        "G": {
+          "review_root": "v1_review0::> although the paper mentions the performance of the model in 1-shot and 5-shot scenarios, there is a lack of validation for the model's generalization ability on a wider range of datasets. have you tested the model's generalization ability on different fields or datasets?",
+          "response_chunk_id": "emnlp24_doc717_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "below are our scores in the 5-shot scenario for the test set of fs-nyt29",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::below are our scores in the 5-shot scenario for the test set of fs-nyt29::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"precision\",\"recall\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"f1\"]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 33,
+    "paper": "emnlp24_doc717",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "UNRESOLVED_CONTEXT",
+    "items": [
+      {
+        "text": "2024.",
+        "norm": "2024.",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::> providing code or detailed pseudocode for the rule generation process could enhance the reproducibility of the study and assist other researchers in applying the method to their work.",
+          "response_chunk_id": "emnlp24_doc717_v1_review0_response_4_RQ-4",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "yes we plan to release the code for this work see footnote 1 on page 4",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::yes we plan to release the code for this work see footnote 1 on page 4::1"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2024.",
+        "norm": "2024.",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::> providing code or detailed pseudocode for the rule generation process could enhance the reproducibility of the study and assist other researchers in applying the method to their work.",
+          "response_chunk_id": "emnlp24_doc717_v1_review0_response_4_RQ-4",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "yes we plan to release the code for this work see footnote 1 on page 4",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::yes we plan to release the code for this work see footnote 1 on page 4::1"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 40,
+    "paper": "emnlp24_doc752",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W2",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| **Reasoning chain A**       | Reasoning process:                                                                                                                                                                                                               |",
+        "norm": "| **reasoning chain a** | reasoning process: |",
+        "alias": "| reasoning chain a | reasoning process |",
+        "G": {
+          "review_root": "v1_review1::>for the pass@k evaluation, the authors mentioned that \"at least one of the k sampled reasoning chains matches the human-annotated proof\" (lines 420-421). is this always the case? additionally, how did the authors \"match\" the reasoning chains? was a metric similar to the exact match used? please provide a clear explanation of the details and process of this matching.",
+          "response_chunk_id": "emnlp24_doc752_v1_review1_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "| conclusion | simon hackney is a member of the northern premier league",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::| conclusion | simon hackney is a member of the northern premier league::3"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"reasoning\",\"chain\",\"reasoning\",\"process\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "| **Reasoning chain B**       | Reasoning process:                                                                                                                                                                                                               |",
+        "norm": "| **reasoning chain b** | reasoning process: |",
+        "alias": "| reasoning chain b | reasoning process |",
+        "G": {
+          "review_root": "v1_review1::>for the pass@k evaluation, the authors mentioned that \"at least one of the k sampled reasoning chains matches the human-annotated proof\" (lines 420-421). is this always the case? additionally, how did the authors \"match\" the reasoning chains? was a metric similar to the exact match used? please provide a clear explanation of the details and process of this matching.",
+          "response_chunk_id": "emnlp24_doc752_v1_review1_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "| | 4 therefore simon hackney is a member of the northern premier league from 1 2 and 3",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::| | 4 therefore simon hackney is a member of the northern premier league from 1 2 and 3::5"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"reasoning\",\"chain\",\"reasoning\",\"process\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 41,
+    "paper": "emnlp24_doc739",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| Method                       | Prompt                       | Accuracy (%) |",
+        "norm": "| method | prompt | accuracy (%) |",
+        "alias": "| method | prompt | accuracy % |",
+        "G": {
+          "review_root": "v1_review0::> w4: conducting experiments solely on chatgpt is insufficient to demonstrate the effectiveness of the method.",
+          "response_chunk_id": "emnlp24_doc739_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "mistral-7b results",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::mistral-7b results::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"method\",\"prompt\",\"accuracy\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"method\",\"accuracy\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "| Method                       | Prompt                                                       | Accuracy (%) |",
+        "norm": "| method | prompt | accuracy (%) |",
+        "alias": "| method | prompt | accuracy % |",
+        "G": {
+          "review_root": "v1_review0::> w4: conducting experiments solely on chatgpt is insufficient to demonstrate the effectiveness of the method.",
+          "response_chunk_id": "emnlp24_doc739_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "llama3-8b results",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::llama3-8b results::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"method\",\"prompt\",\"accuracy\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"method\",\"accuracy\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "| Method                       | Prompt                                                       | Accuracy (%) |",
+        "norm": "| method | prompt | accuracy (%) |",
+        "alias": "| method | prompt | accuracy % |",
+        "G": {
+          "review_root": "v1_review0::> w4: conducting experiments solely on chatgpt is insufficient to demonstrate the effectiveness of the method.",
+          "response_chunk_id": "emnlp24_doc739_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "gemma2-9b results",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::gemma2-9b results::6"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"method\",\"prompt\",\"accuracy\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"method\",\"accuracy\"]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 45,
+    "paper": "emnlp24_doc656",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| Model                       | Cli-KG | C-Bio | C-Med | Med-Gen | Pro-Med | Ana | MedMCQA | MedQA | PubmedQA | AVG |",
+        "norm": "| model | cli-kg | c-bio | c-med | med-gen | pro-med | ana | medmcqa | medqa | pubmedqa | avg |",
+        "alias": "| model | cli-kg | c-bio | c-med | med-gen | pro-med | ana | medmcqa | medqa | pubmedqa | avg |",
+        "G": {
+          "review_root": "v1_review0::> **q3**: the authors could consider comparing bimedix with some multilingual medical models.",
+          "response_chunk_id": "emnlp24_doc656_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "arabic evaluation",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::arabic evaluation::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"model\",\"cli-kg\",\"c-bio\",\"c-med\",\"med-gen\",\"pro-med\",\"ana\",\"medmcqa\"],\"R\":[\"medqa\",\"pubmedqa\",\"avg\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"model\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "| Model                     | Cli-KG | C-Bio | C-Med | Med-Gen | Pro-Med | Ana | MedMCQA | MedQA | PubmedQA | AVG |",
+        "norm": "| model | cli-kg | c-bio | c-med | med-gen | pro-med | ana | medmcqa | medqa | pubmedqa | avg |",
+        "alias": "| model | cli-kg | c-bio | c-med | med-gen | pro-med | ana | medmcqa | medqa | pubmedqa | avg |",
+        "G": {
+          "review_root": "v1_review0::> **q3**: the authors could consider comparing bimedix with some multilingual medical models.",
+          "response_chunk_id": "emnlp24_doc656_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "english evaluation",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::english evaluation::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"model\",\"cli-kg\",\"c-bio\",\"c-med\",\"med-gen\",\"pro-med\",\"ana\",\"medmcqa\"],\"R\":[\"medqa\",\"pubmedqa\",\"avg\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"model\"]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 49,
+    "paper": "emnlp24_doc885",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review1::> the llm noisy dataset is surprisingly noisy. from the paper, it is unfortunately unclear what \"task description\" and \"class descriptions\" they used. i would imagine that using some reasonable descriptions (such as those one would give to a human annotator) should results in an error rate below their \"45.6%\" (although admittedly i did not test this, so i might be wrong here).",
+          "response_chunk_id": "emnlp24_doc885_v1_review1_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "MANUSCRIPT_INSERTION",
+          "attachment_key": "various prior works have found that it is non-trivial to generate ner annotations with llms we used the fabricator framework in our experiments which found similar error rates se",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::various prior works have found that it is non-trivial to generate ner annotations with llms we used the fabricator framework in our experiments which found similar error rates se::1"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review1::> the llm noisy dataset is surprisingly noisy. from the paper, it is unfortunately unclear what \"task description\" and \"class descriptions\" they used. i would imagine that using some reasonable descriptions (such as those one would give to a human annotator) should results in an error rate below their \"45.6%\" (although admittedly i did not test this, so i might be wrong here).",
+          "response_chunk_id": "emnlp24_doc885_v1_review1_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "MANUSCRIPT_INSERTION",
+          "attachment_key": "1 fabricator an open source toolkit for generating labeled training data with teacher llms 2023 jonas golde patrick haller felix hamborg julian risch alan akbik https //a",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::1 fabricator an open source toolkit for generating labeled training data with teacher llms 2023 jonas golde patrick haller felix hamborg julian risch alan akbik https //a::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 49,
+    "paper": "emnlp24_doc885",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W1",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "(2023).",
+        "norm": "(2023).",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review1::> the llm noisy dataset is surprisingly noisy. from the paper, it is unfortunately unclear what \"task description\" and \"class descriptions\" they used. i would imagine that using some reasonable descriptions (such as those one would give to a human annotator) should results in an error rate below their \"45.6%\" (although admittedly i did not test this, so i might be wrong here).",
+          "response_chunk_id": "emnlp24_doc885_v1_review1_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "REVISION_COMMITMENT",
+          "attachment_key": "",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::::0"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review1::> the llm noisy dataset is surprisingly noisy. from the paper, it is unfortunately unclear what \"task description\" and \"class descriptions\" they used. i would imagine that using some reasonable descriptions (such as those one would give to a human annotator) should results in an error rate below their \"45.6%\" (although admittedly i did not test this, so i might be wrong here).",
+          "response_chunk_id": "emnlp24_doc885_v1_review1_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "MANUSCRIPT_INSERTION",
+          "attachment_key": "various prior works have found that it is non-trivial to generate ner annotations with llms we used the fabricator framework in our experiments which found similar error rates se",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::various prior works have found that it is non-trivial to generate ner annotations with llms we used the fabricator framework in our experiments which found similar error rates se::1"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review1::> the llm noisy dataset is surprisingly noisy. from the paper, it is unfortunately unclear what \"task description\" and \"class descriptions\" they used. i would imagine that using some reasonable descriptions (such as those one would give to a human annotator) should results in an error rate below their \"45.6%\" (although admittedly i did not test this, so i might be wrong here).",
+          "response_chunk_id": "emnlp24_doc885_v1_review1_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "MANUSCRIPT_INSERTION",
+          "attachment_key": "1 fabricator an open source toolkit for generating labeled training data with teacher llms 2023 jonas golde patrick haller felix hamborg julian risch alan akbik https //a",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::1 fabricator an open source toolkit for generating labeled training data with teacher llms 2023 jonas golde patrick haller felix hamborg julian risch alan akbik https //a::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 58,
+    "paper": "emnlp24_doc249",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "UNRESOLVED_CONTEXT",
+    "items": [
+      {
+        "text": "| yes | yes | 0.677 |",
+        "norm": "| yes | yes | 0.677 |",
+        "alias": "| yes | yes | 0 677 |",
+        "G": {
+          "review_root": "v1_review0::*q3: table 3 misses yago-qa.",
+          "response_chunk_id": "emnlp24_doc249_v1_review0_response_2_RQ-2",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"yes\",\"yes\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"0.677\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "| yes | yes | 0.677 |",
+        "norm": "| yes | yes | 0.677 |",
+        "alias": "| yes | yes | 0 677 |",
+        "G": {
+          "review_root": "v1_review0::*q3: table 3 misses yago-qa.",
+          "response_chunk_id": "emnlp24_doc249_v1_review0_response_2_RQ-2",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"yes\",\"yes\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"0.677\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 58,
+    "paper": "emnlp24_doc249",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W2",
+    "certifiable": false,
+    "reason": "UNRESOLVED_CONTEXT",
+    "items": [
+      {
+        "text": "|yes | yes | 0.677 |",
+        "norm": "|yes | yes | 0.677 |",
+        "alias": "|yes | yes | 0 677 |",
+        "G": {
+          "review_root": "v1_review0::*q3: table 3 misses yago-qa.",
+          "response_chunk_id": "emnlp24_doc249_v1_review0_response_2_RQ-2",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"yes\",\"yes\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"0.677\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "| yes | yes | 0.677 |",
+        "norm": "| yes | yes | 0.677 |",
+        "alias": "| yes | yes | 0 677 |",
+        "G": {
+          "review_root": "v1_review0::*q3: table 3 misses yago-qa.",
+          "response_chunk_id": "emnlp24_doc249_v1_review0_response_2_RQ-2",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"yes\",\"yes\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"0.677\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "| yes | yes | 0.677 |",
+        "norm": "| yes | yes | 0.677 |",
+        "alias": "| yes | yes | 0 677 |",
+        "G": {
+          "review_root": "v1_review0::*q3: table 3 misses yago-qa.",
+          "response_chunk_id": "emnlp24_doc249_v1_review0_response_2_RQ-2",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::a3 thanks for the concern here though we have conducted ablation experiments on all three datasets lc-quad 1 0 and qald-9 are two representative datasets as the questions among::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"yes\",\"yes\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"0.677\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 67,
+    "paper": "emnlp24_doc687",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "(2024).",
+        "norm": "(2024).",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::**w4: although the proposed scenarios are logical, i would like to understand better how our method would perform if not applied in medical scenarios. why did we specifically choose the medical scenario to evaluate this framework? although it has shown good performance, the medical-related background features do not seem to be well explained.",
+          "response_chunk_id": "emnlp24_doc687_v1_review0_response_2_RQ-3",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "1 https //huggingface co/01-ai/yi-vl-34b https //huggingface co/01-ai/yi-vl-34b",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::1 https //huggingface co/01-ai/yi-vl-34b https //huggingface co/01-ai/yi-vl-34b::3"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "(2024).",
+        "norm": "(2024).",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::**w4: although the proposed scenarios are logical, i would like to understand better how our method would perform if not applied in medical scenarios. why did we specifically choose the medical scenario to evaluate this framework? although it has shown good performance, the medical-related background features do not seem to be well explained.",
+          "response_chunk_id": "emnlp24_doc687_v1_review0_response_2_RQ-3",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "3 wang s zheng l & bo p 2023 a self-training framework for automated medical report generation in emnlp",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::3 wang s zheng l & bo p 2023 a self-training framework for automated medical report generation in emnlp::5"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 71,
+    "paper": "emnlp24_doc954",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| Dataset  | Alpaca-12k | ShareGPT-12k | UltraChat-12k | Evol-Inst-12k | Rand-Inst-12k | KNN-INST-12K |",
+        "norm": "| dataset | alpaca-12k | sharegpt-12k | ultrachat-12k | evol-inst-12k | rand-inst-12k | knn-inst-12k |",
+        "alias": "| dataset | alpaca-12k | sharegpt-12k | ultrachat-12k | evol-inst-12k | rand-inst-12k | knn-inst-12k |",
+        "G": {
+          "review_root": "v1_review0::> evaluation is limited to llm-as-a-judge benchmarks...",
+          "response_chunk_id": "emnlp24_doc954_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "results on `qwen2-1 5b`",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::results on `qwen2-1 5b`::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"dataset\",\"alpaca-12k\",\"sharegpt-12k\",\"ultrachat-12k\",\"evol-inst-12k\",\"rand-inst-12k\",\"knn-inst-12k\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"dataset\"]},\"ACTION\":null}"
+      },
+      {
+        "text": "| Dataset  | Alpaca-12k | ShareGPT-12k | UltraChat-12k | Evol-Inst-12k | Rand-Inst-12k | KNN-INST-12K |",
+        "norm": "| dataset | alpaca-12k | sharegpt-12k | ultrachat-12k | evol-inst-12k | rand-inst-12k | knn-inst-12k |",
+        "alias": "| dataset | alpaca-12k | sharegpt-12k | ultrachat-12k | evol-inst-12k | rand-inst-12k | knn-inst-12k |",
+        "G": {
+          "review_root": "v1_review0::> evaluation is limited to llm-as-a-judge benchmarks...",
+          "response_chunk_id": "emnlp24_doc954_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "results on `qwen1 5-14b`",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::results on `qwen1 5-14b`::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"dataset\",\"alpaca-12k\",\"sharegpt-12k\",\"ultrachat-12k\",\"evol-inst-12k\",\"rand-inst-12k\",\"knn-inst-12k\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[\"dataset\"]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 73,
+    "paper": "emnlp24_doc862",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W2",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "Best regards,\nThe Authors",
+        "norm": "best regards, the authors",
+        "alias": "best regards the authors",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc862_v1_review1_v1_response5_ADAPTER_WHOLE-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "thank you very much for your time and consideration i look forward to your response",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::thank you very much for your time and consideration i look forward to your response::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"best\",\"regards\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "Best regards,",
+        "norm": "best regards,",
+        "alias": "best regards",
+        "G": {
+          "review_root": "v1_review1::__whole_review__",
+          "response_chunk_id": "emnlp24_doc862_v1_review1_v1_response7_ADAPTER_WHOLE-2",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "thank you very much for your understanding and assistance i look forward to your prompt response",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::thank you very much for your understanding and assistance i look forward to your prompt response::5"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"best\",\"regards\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 82,
+    "paper": "emnlp24_doc1021",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W2",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "**A4**: Thanks for pointing this out.",
+        "norm": "**a4**: thanks for pointing this out.",
+        "alias": "a4 thanks for pointing this out",
+        "G": {
+          "review_root": "v1_review0::__whole_review__",
+          "response_chunk_id": "emnlp24_doc1021_v1_review0_v1_response1_ADAPTER_WHOLE-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "q4 the efficacy of negation",
+          "antecedent_key": "{\"A\":[\"efficacy\",\"negation\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::q4 the efficacy of negation::9"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"thanks\",\"pointing\",\"out\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "**A2**: Thanks for pointing this out.",
+        "norm": "**a2**: thanks for pointing this out.",
+        "alias": "a2 thanks for pointing this out",
+        "G": {
+          "review_root": "v1_review0::__whole_review__",
+          "response_chunk_id": "emnlp24_doc1021_v1_review0_v1_response2_ADAPTER_WHOLE-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "q2 comparison of related works associated with subjective tasks and debate-based reasoning",
+          "antecedent_key": "{\"A\":[\"comparison\",\"related\",\"works\",\"associated\",\"subjective\",\"tasks\",\"debate-based\",\"reasoning\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::q2 comparison of related works associated with subjective tasks and debate-based reasoning::8"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"thanks\",\"pointing\",\"out\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 82,
+    "paper": "emnlp24_doc1021",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W2",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "We will supplement this discussion in the revision.",
+        "norm": "we will supplement this discussion in the revision.",
+        "alias": "we will supplement this discussion in the revision",
+        "G": {
+          "review_root": "v1_review0::__whole_review__",
+          "response_chunk_id": "emnlp24_doc1021_v1_review0_v1_response1_ADAPTER_WHOLE-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "previous works that give multiple rounds of answers by simply rethinking without additional guidance may produce repetitive content and still leave out some aspects unconside",
+          "antecedent_key": "{\"A\":[\"performance\",\"drop\",\"compared\",\"neon\",\"demonstrates\",\"efficacy\",\"negation\",\"beyond\"],\"R\":[\"multiple\",\"rounds\",\"responses\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::previous works that give multiple rounds of answers by simply rethinking without additional guidance may produce repetitive content and still leave out some aspects unconside::11"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"supplement\",\"discussion\",\"revision\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"will\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "We will supplement the discussion in the revision.",
+        "norm": "we will supplement the discussion in the revision.",
+        "alias": "we will supplement the discussion in the revision",
+        "G": {
+          "review_root": "v1_review0::__whole_review__",
+          "response_chunk_id": "emnlp24_doc1021_v1_review0_v1_response2_ADAPTER_WHOLE-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "ford 4 |73 47|- multi-agent debate 5 |-| 92 23 neon ours |75 22|93 09",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::ford 4 |73 47|- multi-agent debate 5 |-| 92 23 neon ours |75 22|93 09::14"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"supplement\",\"discussion\",\"revision\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"will\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 85,
+    "paper": "emnlp24_doc1035",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "ROLE_NOT_CERTIFIABLE",
+    "items": [
+      {
+        "text": "SELECT distinct ?y as ?r1 WHERE {",
+        "norm": "select distinct ?y as ?r1 where {",
+        "alias": "select distinct y as r1 where",
+        "G": {
+          "review_root": "v1_review1::5. **how was the expansion done.** sorry for any confusion caused.",
+          "response_chunk_id": "emnlp24_doc1035_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "CODE",
+          "attachment_key": "the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from",
+          "antecedent_key": null,
+          "local_scope_key": "CODE::the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"select\",\"distinct\",\"where\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "SELECT distinct ?y as ?r1 WHERE {",
+        "norm": "select distinct ?y as ?r1 where {",
+        "alias": "select distinct y as r1 where",
+        "G": {
+          "review_root": "v1_review1::5. **how was the expansion done.** sorry for any confusion caused.",
+          "response_chunk_id": "emnlp24_doc1035_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "CODE",
+          "attachment_key": "the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from",
+          "antecedent_key": null,
+          "local_scope_key": "CODE::the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"select\",\"distinct\",\"where\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 85,
+    "paper": "emnlp24_doc1035",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "ROLE_NOT_CERTIFIABLE",
+    "items": [
+      {
+        "text": "'?x1 :' +relation+ ' :' + entity + '. '",
+        "norm": "'?x1 :' +relation+ ' :' + entity + '. '",
+        "alias": "x1 +relation+ + entity +",
+        "G": {
+          "review_root": "v1_review1::5. **how was the expansion done.** sorry for any confusion caused.",
+          "response_chunk_id": "emnlp24_doc1035_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "CODE",
+          "attachment_key": "the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from",
+          "antecedent_key": null,
+          "local_scope_key": "CODE::the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"+relation+\",\"entity\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "'?x1 :' +relation+ ' :' + entity + '. '",
+        "norm": "'?x1 :' +relation+ ' :' + entity + '. '",
+        "alias": "x1 +relation+ + entity +",
+        "G": {
+          "review_root": "v1_review1::5. **how was the expansion done.** sorry for any confusion caused.",
+          "response_chunk_id": "emnlp24_doc1035_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "CODE",
+          "attachment_key": "the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from",
+          "antecedent_key": null,
+          "local_scope_key": "CODE::the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"+relation+\",\"entity\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 85,
+    "paper": "emnlp24_doc1035",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "ROLE_NOT_CERTIFIABLE",
+    "items": [
+      {
+        "text": "FILTER regex(?y, \"http://rdf.freebase.com/ns/\")",
+        "norm": "filter regex(?y, \"http://rdf.freebase.com/ns/\")",
+        "alias": "filter regex y http //rdf freebase com/ns/",
+        "G": {
+          "review_root": "v1_review1::5. **how was the expansion done.** sorry for any confusion caused.",
+          "response_chunk_id": "emnlp24_doc1035_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "CODE",
+          "attachment_key": "the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from",
+          "antecedent_key": null,
+          "local_scope_key": "CODE::the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"filter\",\"regex\",\"http\",\"rdf\",\"freebase\",\"com\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "FILTER regex(?y, \"http://rdf.freebase.com/ns/\")",
+        "norm": "filter regex(?y, \"http://rdf.freebase.com/ns/\")",
+        "alias": "filter regex y http //rdf freebase com/ns/",
+        "G": {
+          "review_root": "v1_review1::5. **how was the expansion done.** sorry for any confusion caused.",
+          "response_chunk_id": "emnlp24_doc1035_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "CODE",
+          "attachment_key": "the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from",
+          "antecedent_key": null,
+          "local_scope_key": "CODE::the term expansion here actually refers to leveraging the top-k 1-hop paths obtained previously to directly use relevant sparql queries to reach all possible 2-hop relations from::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"filter\",\"regex\",\"http\",\"rdf\",\"freebase\",\"com\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 87,
+    "paper": "emnlp24_doc565",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "|                      | NQ-Swap   | Memo-Trap | NQ     | HotpotQA |",
+        "norm": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "alias": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "G": {
+          "review_root": "v1_review0::> w1&c3: lacks comparison with decoding baselines in some experiments. add a comparison with decoding baselines in table 3.",
+          "response_chunk_id": "emnlp24_doc565_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "qwen1 5 7b-chat",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::qwen1 5 7b-chat::5"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"nq-swap\",\"memo-trap\",\"hotpotqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "|                      | NQ-Swap | Memo-Trap | NQ     | HotpotQA |",
+        "norm": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "alias": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "G": {
+          "review_root": "v1_review0::> w1&c3: lacks comparison with decoding baselines in some experiments. add a comparison with decoding baselines in table 3.",
+          "response_chunk_id": "emnlp24_doc565_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "qwen1 5 14b",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::qwen1 5 14b::8"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"nq-swap\",\"memo-trap\",\"hotpotqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "|                      | NQ-Swap | Memo-Trap | NQ     | HotpotQA |",
+        "norm": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "alias": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "G": {
+          "review_root": "v1_review0::> w1&c3: lacks comparison with decoding baselines in some experiments. add a comparison with decoding baselines in table 3.",
+          "response_chunk_id": "emnlp24_doc565_v1_review0_response_4_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "llama 70b-instruct",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::llama 70b-instruct::11"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"nq-swap\",\"memo-trap\",\"hotpotqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 87,
+    "paper": "emnlp24_doc565",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "|                      | NQ-Swap   | Memo-Trap | NQ     | HotpotQA |",
+        "norm": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "alias": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "G": {
+          "review_root": "v1_review1::> w5: should the baseline include the one-shot/many-shot icl?",
+          "response_chunk_id": "emnlp24_doc565_v1_review1_response_6_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "qwen1 5 7b-chat",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::qwen1 5 7b-chat::5"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"nq-swap\",\"memo-trap\",\"hotpotqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "|                      | NQ-Swap | Memo-Trap | NQ     | HotpotQA |",
+        "norm": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "alias": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "G": {
+          "review_root": "v1_review1::> w5: should the baseline include the one-shot/many-shot icl?",
+          "response_chunk_id": "emnlp24_doc565_v1_review1_response_6_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "qwen1 5 14b",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::qwen1 5 14b::8"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"nq-swap\",\"memo-trap\",\"hotpotqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "|                      | NQ-Swap   | Memo-Trap | NQ     | HotpotQA |",
+        "norm": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "alias": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "G": {
+          "review_root": "v1_review1::> w5: should the baseline include the one-shot/many-shot icl?",
+          "response_chunk_id": "emnlp24_doc565_v1_review1_response_6_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "llama 8b-instruct",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::llama 8b-instruct::11"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"nq-swap\",\"memo-trap\",\"hotpotqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "|                      | NQ-Swap | Memo-Trap | NQ     | HotpotQA |",
+        "norm": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "alias": "| | nq-swap | memo-trap | nq | hotpotqa |",
+        "G": {
+          "review_root": "v1_review1::> w5: should the baseline include the one-shot/many-shot icl?",
+          "response_chunk_id": "emnlp24_doc565_v1_review1_response_6_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "llama 70b-instruct",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::llama 70b-instruct::14"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"nq-swap\",\"memo-trap\",\"hotpotqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 99,
+    "paper": "emnlp24_doc600",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "Thank you for pointing this out.",
+        "norm": "thank you for pointing this out.",
+        "alias": "thank you for pointing this out",
+        "G": {
+          "review_root": "v1_review0::**ablation study about the multi-task training**",
+          "response_chunk_id": "emnlp24_doc600_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::::0"
+        },
+        "unresolved": [
+          "UNRESOLVED_ANTECEDENT"
+        ],
+        "semanticSignature": "{\"A\":[\"thank\",\"pointing\",\"out\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "Thank you for pointing this out.",
+        "norm": "thank you for pointing this out.",
+        "alias": "thank you for pointing this out",
+        "G": {
+          "review_root": "v1_review0::**ablation study about the multi-task training**",
+          "response_chunk_id": "emnlp24_doc600_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "imprecise use of in-context learning",
+          "antecedent_key": "{\"A\":[\"imprecise\",\"use\",\"in-context\",\"learning\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::imprecise use of in-context learning::8"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"thank\",\"pointing\",\"out\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 101,
+    "paper": "emnlp24_doc199",
+    "file": "v1_review1_response.itg.json",
+    "review_id": "v1_review1",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "Question: The question the teacher asked was profound, it made all the students stop and what?",
+        "norm": "question: the question the teacher asked was profound, it made all the students stop and what?",
+        "alias": "question the question the teacher asked was profound it made all the students stop and what",
+        "G": {
+          "review_root": "v1_review1::#### **q2: there may be entirely unreasonable answers within the answer space. in this case,are the methods proposed still valid? and why?**",
+          "response_chunk_id": "emnlp24_doc199_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "EXAMPLE",
+          "attachment_key": "a2 thank you for the insightful question in our experiments we observe that there are indeed cases where certain unreasonable answers are generated below is one example fro",
+          "antecedent_key": "{\"A\":[\"below\",\"one\",\"example\",\"commonsenseqa\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "CODE::a2 thank you for the insightful question in our experiments we observe that there are indeed cases where certain unreasonable answers are generated below is one example fro::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"question\",\"question\",\"teacher\",\"asked\",\"profound\",\"made\",\"all\",\"students\"],\"R\":[\"stop\",\"what\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "Question: The question the teacher asked was profound, it made all the students stop and what?",
+        "norm": "question: the question the teacher asked was profound, it made all the students stop and what?",
+        "alias": "question the question the teacher asked was profound it made all the students stop and what",
+        "G": {
+          "review_root": "v1_review1::#### **q2: there may be entirely unreasonable answers within the answer space. in this case,are the methods proposed still valid? and why?**",
+          "response_chunk_id": "emnlp24_doc199_v1_review1_response_2_RQ-1",
+          "block_type": "CODE",
+          "structural_role": "EXAMPLE",
+          "attachment_key": "however we acknowledge that there may be other cases where all the answers are unreasonable we try one example by changing all candidate answers into unreasonable answers as sho",
+          "antecedent_key": "{\"A\":[\"thank\",\"again\",\"bringing\",\"attention\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "CODE::however we acknowledge that there may be other cases where all the answers are unreasonable we try one example by changing all candidate answers into unreasonable answers as sho::5"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"question\",\"question\",\"teacher\",\"asked\",\"profound\",\"made\",\"all\",\"students\"],\"R\":[\"stop\",\"what\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 104,
+    "paper": "emnlp24_doc192",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "below we identified the sentences that require support and provide references",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::below we identified the sentences that require support and provide references::3"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 480 the vast majority of existing within-prompt aes models do not take the essay prompt and the scoring rubrics as input j xie k cai l kong j zhou and w qu 2022",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 480 the vast majority of existing within-prompt aes models do not take the essay prompt and the scoring rubrics as input j xie k cai l kong j zhou and w qu 2022::5"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 480 the vast majority of existing within-prompt aes models do not take the essay prompt and the scoring rubrics as input j xie k cai l kong j zhou and w qu 2022",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 480 the vast majority of existing within-prompt aes models do not take the essay prompt and the scoring rubrics as input j xie k cai l kong j zhou and w qu 2022::5"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 104,
+    "paper": "emnlp24_doc192",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "2022.",
+        "norm": "2022.",
+        "alias": "2022",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o::4"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2022\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2022.",
+        "norm": "2022.",
+        "alias": "2022",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o::4"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2022\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2022.",
+        "norm": "2022.",
+        "alias": "2022",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 555 llms are very good at understanding inputs as complex as essays anthropic 2024 the claude 3 model family opus sonnet haiku",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 555 llms are very good at understanding inputs as complex as essays anthropic 2024 the claude 3 model family opus sonnet haiku::7"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2022\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 104,
+    "paper": "emnlp24_doc192",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "2024.",
+        "norm": "2024.",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 545 content-based traits are difficult to score accurately h do y kim and g lee 2023 prompt- and trait relation-aware cross-prompt essay trait scoring findings of",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 545 content-based traits are difficult to score accurately h do y kim and g lee 2023 prompt- and trait relation-aware cross-prompt essay trait scoring findings of::6"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2024.",
+        "norm": "2024.",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 601 for many other nlp tasks assembling a large unannotated corpus composed of news articles or tweets is relatively easy v kulkarni k leung and a haghighi 2022 c",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 601 for many other nlp tasks assembling a large unannotated corpus composed of news articles or tweets is relatively easy v kulkarni k leung and a haghighi 2022 c::8"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 104,
+    "paper": "emnlp24_doc192",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W2",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "NAACL 2022.]",
+        "norm": "naacl 2022.]",
+        "alias": "naacl 2022",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 404 essay length is often a confounding variable for holistic scoring j fiacco d adamson and c rose 2023 towards extracting and understanding the implicit rubrics o::4"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"naacl\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2022\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "NAACL 2022; D.",
+        "norm": "naacl 2022; d.",
+        "alias": "naacl 2022 d",
+        "G": {
+          "review_root": "v1_review0::> the descriptions of existing papers are too brief,",
+          "response_chunk_id": "emnlp24_doc192_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "line 555 llms are very good at understanding inputs as complex as essays anthropic 2024 the claude 3 model family opus sonnet haiku",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::line 555 llms are very good at understanding inputs as complex as essays anthropic 2024 the claude 3 model family opus sonnet haiku::7"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"naacl\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2022\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 105,
+    "paper": "emnlp24_doc103",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "Then the seconds per epoch and the GPU memory are as follows:",
+        "norm": "then the seconds per epoch and the gpu memory are as follows:",
+        "alias": "then the seconds per epoch and the gpu memory are as follows",
+        "G": {
+          "review_root": "v1_review0::computational efficiency: it seems that this method demands higher computational expense compared to existing kd methods. i recommend the authors report the computational cost (e.g., training time, computational memory) compared to existing methods.",
+          "response_chunk_id": "emnlp24_doc103_v1_review0_response_2_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "thanks for raising this key question as you suggested we report the actual computational time for each epoch and the gpu memory during training for our method and vanilla kd in t",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::thanks for raising this key question as you suggested we report the actual computational time for each epoch and the gpu memory during training for our method and vanilla kd in t::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"seconds\",\"per\",\"epoch\",\"gpu\",\"memory\",\"follows\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "Then the seconds per epoch and the GPU memory are as follows:",
+        "norm": "then the seconds per epoch and the gpu memory are as follows:",
+        "alias": "then the seconds per epoch and the gpu memory are as follows",
+        "G": {
+          "review_root": "v1_review0::computational efficiency: it seems that this method demands higher computational expense compared to existing kd methods. i recommend the authors report the computational cost (e.g., training time, computational memory) compared to existing methods.",
+          "response_chunk_id": "emnlp24_doc103_v1_review0_response_2_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "for gpt2-120m we set batch size=2 gradient accumulation=4 and num gpus=4 then the seconds per epoch and the gpu memory are as follows",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::for gpt2-120m we set batch size=2 gradient accumulation=4 and num gpus=4 then the seconds per epoch and the gpu memory are as follows::3"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"seconds\",\"per\",\"epoch\",\"gpu\",\"memory\",\"follows\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 105,
+    "paper": "emnlp24_doc103",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "| Methods                 | Seconds / Epoch | GPU memory (MB) |",
+        "norm": "| methods | seconds / epoch | gpu memory (mb) |",
+        "alias": "| methods | seconds / epoch | gpu memory mb |",
+        "G": {
+          "review_root": "v1_review0::computational efficiency: it seems that this method demands higher computational expense compared to existing kd methods. i recommend the authors report the computational cost (e.g., training time, computational memory) compared to existing methods.",
+          "response_chunk_id": "emnlp24_doc103_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "for gpt2-120m we set batch size=2 gradient accumulation=4 and num gpus=4 then the seconds per epoch and the gpu memory are as follows",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::for gpt2-120m we set batch size=2 gradient accumulation=4 and num gpus=4 then the seconds per epoch and the gpu memory are as follows::2"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"methods\",\"seconds\",\"epoch\",\"gpu\",\"memory\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "| Methods                 | Seconds / Epoch | GPU memory (MB) |",
+        "norm": "| methods | seconds / epoch | gpu memory (mb) |",
+        "alias": "| methods | seconds / epoch | gpu memory mb |",
+        "G": {
+          "review_root": "v1_review0::computational efficiency: it seems that this method demands higher computational expense compared to existing kd methods. i recommend the authors report the computational cost (e.g., training time, computational memory) compared to existing methods.",
+          "response_chunk_id": "emnlp24_doc103_v1_review0_response_2_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "for tinyllama we set batch size=2 gradient accumulation=4 num gpus=4 gradient checkpointing=true then the seconds per epoch and the gpu memory are as follows",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::for tinyllama we set batch size=2 gradient accumulation=4 num gpus=4 gradient checkpointing=true then the seconds per epoch and the gpu memory are as follows::4"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"methods\",\"seconds\",\"epoch\",\"gpu\",\"memory\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 109,
+    "paper": "emnlp24_doc834",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "UNRESOLVED_CONTEXT",
+    "items": [
+      {
+        "text": "|             | $\\delta$   | 1     | 3     | 5     | 7     |",
+        "norm": "| | $\\delta$ | 1 | 3 | 5 | 7 |",
+        "alias": "| | $\\delta$ | 1 | 3 | 5 | 7 |",
+        "G": {
+          "review_root": "v1_review0::> the authors mentioned that they used default parameter settings for baselines (lines 427-430), but this seems unfair. the task and domain are different from those in which the baseline models conducted their experiments, so the authors should have searched for appropriate parameters for the baselines as well.",
+          "response_chunk_id": "emnlp24_doc834_v1_review0_response_8_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "thank you for your suggestion we searched the appropriate parameters for the two baselines via varying the parameter $\\delta$ in wang et al which is a hyperparameter for its wa",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::thank you for your suggestion we searched the appropriate parameters for the two baselines via varying the parameter $\\delta$ in wang et al which is a hyperparameter for its wa::1"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"delta\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"1\",\"3\",\"5\",\"7\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "|            | $\\delta$   | 1     | 3     | 5     | 7     |",
+        "norm": "| | $\\delta$ | 1 | 3 | 5 | 7 |",
+        "alias": "| | $\\delta$ | 1 | 3 | 5 | 7 |",
+        "G": {
+          "review_root": "v1_review0::> the authors mentioned that they used default parameter settings for baselines (lines 427-430), but this seems unfair. the task and domain are different from those in which the baseline models conducted their experiments, so the authors should have searched for appropriate parameters for the baselines as well.",
+          "response_chunk_id": "emnlp24_doc834_v1_review0_response_8_RQ-0",
+          "block_type": "TABLE",
+          "structural_role": "TABLE",
+          "attachment_key": "thank you for your suggestion we searched the appropriate parameters for the two baselines via varying the parameter $\\delta$ in wang et al which is a hyperparameter for its wa",
+          "antecedent_key": null,
+          "local_scope_key": "TABLE::thank you for your suggestion we searched the appropriate parameters for the two baselines via varying the parameter $\\delta$ in wang et al which is a hyperparameter for its wa::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[\"delta\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"1\",\"3\",\"5\",\"7\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 112,
+    "paper": "emnlp24_doc493",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "(2024).",
+        "norm": "(2024).",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::the analysis mainly applies for models whose weights are accessible and thus excludes some of the frontier models.",
+          "response_chunk_id": "emnlp24_doc493_v1_review0_response_2_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "1 zou a phan l chen s campbell j guo p ren r & hendrycks d 2023 representation engineering a top-down approach to ai transparency arxiv preprint arx",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::1 zou a phan l chen s campbell j guo p ren r & hendrycks d 2023 representation engineering a top-down approach to ai transparency arxiv preprint arx::2"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "(2024).",
+        "norm": "(2024).",
+        "alias": "2024",
+        "G": {
+          "review_root": "v1_review0::the analysis mainly applies for models whose weights are accessible and thus excludes some of the frontier models.",
+          "response_chunk_id": "emnlp24_doc493_v1_review0_response_2_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "2 zheng c yin f zhou h meng f zhou j chang k w & peng n 2024 prompt-driven llm safeguarding via directed representation optimization arxiv preprint",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::2 zheng c yin f zhou h meng f zhou j chang k w & peng n 2024 prompt-driven llm safeguarding via directed representation optimization arxiv preprint::3"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2024\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 117,
+    "paper": "emnlp24_doc85",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W0",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::>the phrase \"negotiation surrounding covered multi-dimensional mental states\" is confusing: what does \"covered\" mean here? and the chain-of-thought method, mentioned casually at the end, is quite likely only to be familiar to very few potential readers. >the zero-shot chain-of-thought method is named, but neither defined in the paper nor explained via a citation.",
+          "response_chunk_id": "emnlp24_doc85_v1_review0_response_6_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "MANUSCRIPT_INSERTION",
+          "attachment_key": "2 gandhi kanishk jan-philipp fränken tobias gerstenberg and noah goodman understanding social reasoning in language models with language models nips 2024",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::2 gandhi kanishk jan-philipp fränken tobias gerstenberg and noah goodman understanding social reasoning in language models with language models nips 2024::4"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "2023.",
+        "norm": "2023.",
+        "alias": "2023",
+        "G": {
+          "review_root": "v1_review0::>the phrase \"negotiation surrounding covered multi-dimensional mental states\" is confusing: what does \"covered\" mean here? and the chain-of-thought method, mentioned casually at the end, is quite likely only to be familiar to very few potential readers. >the zero-shot chain-of-thought method is named, but neither defined in the paper nor explained via a citation.",
+          "response_chunk_id": "emnlp24_doc85_v1_review0_response_6_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "MANUSCRIPT_INSERTION",
+          "attachment_key": "4 natalie shapira guy zwirn and yoav goldberg 2023b how well do large language models perform on faux pas tests in findings of the association for computational linguistics",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::4 natalie shapira guy zwirn and yoav goldberg 2023b how well do large language models perform on faux pas tests in findings of the association for computational linguistics::6"
+        },
+        "unresolved": [
+          "UNRESOLVED_VALUE_ENTITY"
+        ],
+        "semanticSignature": "{\"A\":[],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[\"2023\"],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 119,
+    "paper": "emnlp24_doc1043",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W1",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "Many media outlets annotated with “low” and “very low” factuality levels are also labeled for political bias as “Questionable Source,” “Conspiracy-Pseudoscience,” or “Satire.” These sources were excluded from the political bias annotation count, resulting in a lower total.",
+        "norm": "many media outlets annotated with \"low\" and \"very low\" factuality levels are also labeled for political bias as \"questionable source,\" \"conspiracy-pseudoscience,\" or \"satire.\" these sources were excluded from the political bias annotation count, resulting in a lower total.",
+        "alias": "many media outlets annotated with low and very low factuality levels are also labeled for political bias as questionable source conspiracy-pseudoscience or satire these sources were excluded from the political bias annotation count resulting in a lower total",
+        "G": {
+          "review_root": "v1_review0::**comment:** table 1, why did the total count on media level differ?",
+          "response_chunk_id": "emnlp24_doc1043_v1_review0_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "",
+          "antecedent_key": "{\"A\":[\"response\",\"thank\",\"suggestion\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::::0"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"many\",\"media\",\"outlets\",\"annotated\",\"low\",\"very\",\"low\",\"factuality\"],\"R\":[\"levels\",\"also\",\"labeled\",\"political\",\"bias\",\"questionable\",\"source\",\"conspiracy-pseudoscience\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "Many media outlets annotated with “low” and “very low” factuality levels are also labeled for political bias as “Questionable Source,” “Conspiracy-Pseudoscience,” or “Satire.” These sources were excluded from the political bias annotation count, resulting in a lower total.”",
+        "norm": "many media outlets annotated with \"low\" and \"very low\" factuality levels are also labeled for political bias as \"questionable source,\" \"conspiracy-pseudoscience,\" or \"satire.\" these sources were excluded from the political bias annotation count, resulting in a lower total.\"",
+        "alias": "many media outlets annotated with low and very low factuality levels are also labeled for political bias as questionable source conspiracy-pseudoscience or satire these sources were excluded from the political bias annotation count resulting in a lower total",
+        "G": {
+          "review_root": "v1_review0::**comment:** table 1, why did the total count on media level differ?",
+          "response_chunk_id": "emnlp24_doc1043_v1_review0_response_4_RQ-0",
+          "block_type": "PROSE",
+          "structural_role": "REVISION_COMMITMENT",
+          "attachment_key": "response thank you for your suggestion the difference in media counts between factuality 2 6k and political bias 2k annotations is due to the exclusion of certain sources",
+          "antecedent_key": "{\"A\":[\"many\",\"media\",\"outlets\",\"annotated\",\"low\",\"very\",\"low\",\"factuality\"],\"R\":[\"levels\",\"also\",\"labeled\",\"political\",\"bias\",\"questionable\",\"source\",\"conspiracy-pseudoscience\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::response thank you for your suggestion the difference in media counts between factuality 2 6k and political bias 2k annotations is due to the exclusion of certain sources::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"many\",\"media\",\"outlets\",\"annotated\",\"low\",\"very\",\"low\",\"factuality\"],\"R\":[\"levels\",\"also\",\"labeled\",\"political\",\"bias\",\"questionable\",\"source\",\"conspiracy-pseudoscience\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  },
+  {
+    "index": 119,
+    "paper": "emnlp24_doc1043",
+    "file": "v1_review0_response.itg.json",
+    "review_id": "v1_review0",
+    "type": "W1",
+    "certifiable": false,
+    "reason": "STRUCTURAL_CONTEXT_MISMATCH",
+    "items": [
+      {
+        "text": "We manually verified each media and, after that obtained articles in the corresponding languages from these media sources.",
+        "norm": "we manually verified each media and, after that obtained articles in the corresponding languages from these media sources.",
+        "alias": "we manually verified each media and after that obtained articles in the corresponding languages from these media sources",
+        "G": {
+          "review_root": "v1_review0::**comment:** on cross-lingual, did you select the aligned articles (same contents but translated into different languages)? simply selecting media that used different language and selecting articles from the front page of the html cast doubt on the connections of topics. if you are working on a cross-lingual comparative study, it is important to control the content topics.",
+          "response_chunk_id": "emnlp24_doc1043_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "ASSERTION",
+          "attachment_key": "",
+          "antecedent_key": "{\"A\":[\"began\",\"data\",\"collection\",\"sourcing\",\"media\",\"media\",\"bias\",\"fact\"],\"R\":[\"check\",\"which\",\"includes\",\"annotations\",\"indicating\",\"country\",\"origin\",\"news\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::::0"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"manually\",\"verified\",\"each\",\"media\",\"after\",\"obtained\",\"articles\",\"corresponding\"],\"R\":[\"languages\",\"media\",\"sources\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      },
+      {
+        "text": "We manually verified each media and, after that obtained articles in the corresponding languages from these media sources.”",
+        "norm": "we manually verified each media and, after that obtained articles in the corresponding languages from these media sources.\"",
+        "alias": "we manually verified each media and after that obtained articles in the corresponding languages from these media sources",
+        "G": {
+          "review_root": "v1_review0::**comment:** on cross-lingual, did you select the aligned articles (same contents but translated into different languages)? simply selecting media that used different language and selecting articles from the front page of the html cast doubt on the connections of topics. if you are working on a cross-lingual comparative study, it is important to control the content topics.",
+          "response_chunk_id": "emnlp24_doc1043_v1_review0_response_2_RQ-1",
+          "block_type": "PROSE",
+          "structural_role": "REVISION_COMMITMENT",
+          "attachment_key": "response thank you for your suggestion we began our data collection by sourcing media from media bias/fact check which includes annotations indicating the country of origin",
+          "antecedent_key": "{\"A\":[\"here\",\"what\",\"add\",\"manuscript\",\"began\",\"data\",\"collection\",\"sourcing\"],\"R\":[\"media\",\"media\",\"bias\",\"fact\",\"check\",\"which\",\"includes\",\"annotations\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"will\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":{\"verb\":\"add\",\"object\":[\"manuscript\",\"began\",\"data\",\"collection\",\"sourcing\",\"media\",\"media\",\"bias\",\"fact\",\"check\"]}}",
+          "local_scope_key": "PROSE::response thank you for your suggestion we began our data collection by sourcing media from media bias/fact check which includes annotations indicating the country of origin::1"
+        },
+        "unresolved": [],
+        "semanticSignature": "{\"A\":[\"manually\",\"verified\",\"each\",\"media\",\"after\",\"obtained\",\"articles\",\"corresponding\"],\"R\":[\"languages\",\"media\",\"sources\"],\"F\":{\"polarity\":\"POS\",\"modal\":\"assert\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}"
+      }
+    ]
+  }
+]
