@@ -11,45 +11,46 @@ active_research_line:
   - G9-P36-R4
   - G9-P36-R5
   - G9-P36-R6
-current_phase: G9-P36-R6
-current_verdict: PASS_MACRO_SPARSE_MICRO_REDUNDANT_FUSION_AUTHORITY_NOT_REOPENED
+  - G9-P36-R7
+current_phase: G9-P36-R7
+current_verdict: PASS_RELATION_MOTIF_PRIMARY_EMPTY_MICRO_REUSE_NOT_PROMOTED
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
-  inherited_neighborhood_reference: C3-R5-RNSN-v1_IMMUTABLE
+  relation_motif: C3-R7-REM-v1
+  lexical_null: C3-R7-ADJACENCY-NULL-v1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
-  preseal_commit: 6832563abf11ad3f6c5f2a97d8bdc6c9e3f6a5d5
-current_science_commit: d7ebd87fead4f2e7f2cb4b189d1cf0c7b7152d0c
-public_replay_commit: 85c0c4ed074299b6ab07745ddb55cf7f8a944435
-public_replay_run: 36126933256
-boundary_diagnostic_commit: 58976e3bb176f7fe4fe3fc10b0e48d683e66230c
-notion_receipt: 3e6ef561-cf92-8180-91b0-d6b62b437a27
-harvest_receipt: 3e6ef561-cf92-816f-bba4-f3cb8d2c2b24
-r5_notion_recovery:
-  canonical_receipt: 3e6ef561-cf92-8158-846d-f7b7d24f2c02
-  harvest: 3e6ef561-cf92-81c6-986a-eff74b6c8aa5
-source_state:
-  source: EMNLP24_LOCAL_TEST
-  papers: 118
-  r5_status: OPENED_ONCE_AFTER_R5_PRESEAL_AND_ADJUDICATED
-  r6_epistemic_status: NEW_PROSPECTIVE_QUESTION_ON_PREVIOUSLY_OPENED_SOURCE_NOT_FRESH_SOURCE_WORLD_CONTACT
-  whole_obligation_neighbors: 0
-  r6_factor_reuse_pairs: 114
-  r6_same_grounding_reuse_pairs: 0
-  r6_microfusion_candidates: 0
-factor_semanticity_boundary:
-  typed_atom_recurrence_established: true
-  semantic_equivalence_authority: NOT_ESTABLISHED
-  token_only_shared_pairs: 84
-  pairs_with_shared_ARG1_bigram: 30
-  complementary_pairs_with_shared_bigram: 10
-  posthoc_threshold_change: FORBIDDEN
-korean_boundary:
-  semantic_quotient: LANGUAGE_NEUTRAL
-  realization: DOWNSTREAM_ONLY
-  particle_scrambling_recoverable_ellipsis: PRESERVE_ROLE_EVENT_GEOMETRY
-  natural_korean_semantic_authority: NOT_YET_ESTABLISHED_BY_R6
-  fluency_as_semantic_authority: FORBIDDEN
+  preseal_commit: 860a5de8b50c52292aaa01f6973e0dc896d02425
+current_science_commit: df592824fe2f39a0d89b00b166b9dca22e56d129
+public_replay_commit: 08a88175d01f93ee76b636567b43a78d4636221b
+public_replay_run: 36134758751
+notion_receipt: 3e6ef561-cf92-8186-968a-dd417e4626cc
+harvest_receipt: 3e6ef561-cf92-8149-83ca-dc4069b1503e
+r7_english_result:
+  source: EMNLP24_LOCAL_TEST_118
+  exploratory_relation_pairs: 10
+  connected_chain_pairs: 2
+  primary_cross_paper_pairs: 0
+  micro_reuse_authority: NOT_PROMOTED
+  semantic_equivalence_authority: NOT_GRANTED
+  fusion_authority: NOT_GRANTED
+  rust_crosscheck: PASS_10_2_0
+r7_korean_result:
+  corpus: StyleKQC
+  rows: 15000
+  particle_change_pairs: 5755
+  order_inversion_proxy_pairs: 103
+  surface_shortening_proxy_pairs: 11099
+  ellipsis_status: HOLD_ANNOTATION_INSUFFICIENT
+  paired_target_recall: 0.9498
+  top1_exact_pair_rate: 0.6443333333333333
+  median_candidate_size: 6
+interpretation_boundary:
+  primary_empty_is_not_null_victory: true
+  cross_document_relation_support: EMPTY_UNDER_C3_R7_REM_V1
+  language_neutral_role_event_geometry: RETAINED
+  korean_surface_realization_transport: SUPPORTED_AT_PARTICLE_AND_ORDER_PROXY_LEVEL
+  true_ellipsis_authority: NOT_ESTABLISHED
 raw_data_policy:
   re3align_raw: DRIVE_OR_PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
   literature_pdfs: COMMONS_DO_NOT_COMMIT
@@ -60,5 +61,5 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_phase: G9-P36-R7
-next_phase_title: Relation-Bearing Semantic Factor Promotion, Lexical-Collision Null Court, Role–Event Motif Canonicalization, Native-Korean Particle/Scrambling/Ellipsis Transport, Cross-Corpus Sparse Retrieval & Micro-Reuse Authority Court
+next_phase: G9-P36-R8
+next_phase_title: Cross-Document Relation-Motif Generalization, Predicate-Family Equivalence Preseal, Fresh-Corpus Transfer, Korean Zero-Argument Annotation Recovery & Micro-Reuse Authority Reopening Court
