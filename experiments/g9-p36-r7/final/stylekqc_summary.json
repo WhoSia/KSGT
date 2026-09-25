@@ -69,8 +69,8 @@
     "deletion": {
       "particle": false,
       "order": false,
-      "deletion_proxy": false,
-      "pass": false
+      "deletion_proxy": true,
+      "pass": true
     }
   },
   "validation": {
@@ -78,8 +78,8 @@
     "paired_columns": true,
     "particle_control": true,
     "order_control": true,
-    "deletion_proxy_control": false,
+    "deletion_proxy_control": true,
     "sparse_not_all_pairs": true,
-    "pass": false
+    "pass": true
   }
 }

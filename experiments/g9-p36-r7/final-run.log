@@ -1,0 +1,36 @@
+{
+  "verdict": "PASS_LEXICAL_COLLISION_NULL_REJECTS_MICRO_REUSE_PROMOTION",
+  "primary": 0,
+  "null": {
+    "replicates": 127,
+    "seed": "KSGT-G9-P36-R7-20260925",
+    "observed": 0,
+    "null_mean": 0,
+    "null_min": 0,
+    "null_median": 0,
+    "null_p95": 0,
+    "null_max": 0,
+    "ge_observed": 127,
+    "plus_one_p": 1,
+    "alpha": 0.05,
+    "pass": false
+  },
+  "korean": {
+    "rows": 15000,
+    "particle": 5755,
+    "order": 103,
+    "deletion_proxy": 11099,
+    "retrieval_recall": 0.9498,
+    "top1": 0.6443333333333333
+  },
+  "validation": {
+    "presealed_controls": true,
+    "re3align_118": true,
+    "sparse_english": true,
+    "rust_crosscheck": true,
+    "stylekqc_validation": true,
+    "sparse_korean": true,
+    "inherited_r3_controls": true,
+    "pass": true
+  }
+}
