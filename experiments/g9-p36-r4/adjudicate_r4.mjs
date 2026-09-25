@@ -24,7 +24,11 @@ const f1Roundtrip=f1certs.every(x=>!!candidateById.get(x.id)?.bcog?.witness?.pas
 const validation={
  source_papers_121:extraction.papers_discovered===121,
  frozen_r3_window_exact:extraction.eligible_pair_windows===8071&&extraction.candidates===8071,
- r4_representation_controls:r4controls.validation?.pass===true,
+ r4_representation_controls:r4controls.validation?.pass===true&&
+   r4controls.positive?.length===8&&r4controls.positive.every(x=>x.pass)&&
+   r4controls.negative?.length===15&&r4controls.negative.every(x=>x.pass)&&
+   r4controls.metamorphic?.length===4&&r4controls.metamorphic.every(x=>x.pass)&&
+   r4controls.controlled_fusion?.pass===true,
  inherited_r3_controls:r3audit.length===12&&r3audit.every(x=>x.pass),
  inherited_r3_closure:r3.validation?.pass===true&&r3.frontier_reopened===false,
  f1_certificates_have_roundtrip_witness:f1Roundtrip
