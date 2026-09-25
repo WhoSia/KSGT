@@ -1,0 +1,21 @@
+{
+  "phase": "G9-P36-R5",
+  "papers_expected": 118,
+  "papers_discovered": 118,
+  "response_files": 165,
+  "obligations": 4849,
+  "representation_complete_obligations": 1301,
+  "legacy_geometry_pairs": 7191,
+  "r5_neighborhood_pairs": 0,
+  "pair_intersection": 0,
+  "r5_only": 0,
+  "legacy_only": 7191,
+  "selection_jaccard": 0,
+  "index_stats": {
+    "items": 4849,
+    "signature_atom_postings": 9961,
+    "shared_pair_keys": 0,
+    "emitted_pairs": 0,
+    "global_all_pairs": false
+  }
+}

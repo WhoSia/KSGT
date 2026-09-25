@@ -1,0 +1,17 @@
+{
+  "validation": {
+    "positive": true,
+    "negative": true,
+    "metamorphic": true,
+    "roundtrip": true,
+    "indexed": true,
+    "pass": true
+  },
+  "index": {
+    "items": 3,
+    "signature_atom_postings": 9,
+    "shared_pair_keys": 1,
+    "emitted_pairs": 1,
+    "global_all_pairs": false
+  }
+}
