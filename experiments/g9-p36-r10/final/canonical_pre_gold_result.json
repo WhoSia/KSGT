@@ -1,0 +1,53 @@
+{
+  "phase": "KSGT Generation IX G9-P36-R10",
+  "verdict": "PASS_RELATION_MOTIF_LANE_RETIRED_ARG_CONSTITUTION_SEALED_EXTERNAL_GOLD_WAIT",
+  "status": "ACTIVE_EXTERNAL_GOLD_HOLD",
+  "preseal_commit": "5743577910b8d2ed3d72f72c070be6419f47b6be",
+  "run": 36188933352,
+  "head": "3c3ea524ec0ff06fe0411e5ce672f04b9507e13c",
+  "artifact": {
+    "id": 10887348897,
+    "sha256": "e7dd6efc1d0b9e363280804e626d091b3cde0702b2c3da29127df4813003875f",
+    "size_bytes": 10247
+  },
+  "english_two_bucket": {
+    "papers_total": 1213,
+    "r8": {
+      "papers": 595,
+      "primary": 1,
+      "family_increment": 0
+    },
+    "r9": {
+      "papers": 618,
+      "primary": 0,
+      "family_increment": 0
+    },
+    "buckets_with_primary": 1,
+    "authority_lane": "RETIRED",
+    "diagnostic_probe": "RETAINED",
+    "threshold_retuning": "FORBIDDEN"
+  },
+  "korean_arg": {
+    "version": "KSGT-ARG-v1",
+    "controls_pass": "10_OF_10",
+    "semantic_reuse_candidate": "ROLE_EVENT_RECOVERABILITY_GRAPH",
+    "invariants": [
+      "PARTICLE_IS_EVIDENCE_NOT_ROLE_IDENTITY",
+      "WORD_ORDER_IS_REALIZATION_NOT_ROLE_IDENTITY",
+      "NULLNESS_IS_REALIZATION_NOT_ARGUMENT_ABSENCE",
+      "RECOVERABILITY_IS_DISTINCT_FROM_OMISSION_PREFERENCE",
+      "TOPIC_FOCUS_IS_DISTINCT_FROM_ARGUMENT_IDENTITY",
+      "DEPENDENCY_RELATION_IS_DISTINCT_FROM_LINEAR_ORDER"
+    ]
+  },
+  "nikl": {
+    "state": "WAITING_FOR_OFFICIAL_BYTES",
+    "scoring_authorized": false
+  },
+  "authority": {
+    "MNMC_5": "RETAINED",
+    "MNMC_6": "NOT_JUSTIFIED",
+    "micro_reuse": "NOT_PROMOTED",
+    "cross_language_reuse": "HOLD"
+  }
+}
