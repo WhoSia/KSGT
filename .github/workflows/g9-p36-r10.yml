@@ -1,0 +1,26 @@
+name: G9-P36-R10 pre-gold return-to-origin court
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['experiments/g9-p36-r10/action_trigger.txt']
+permissions: {contents: read}
+jobs:
+  court:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify preseal
+        run: grep -q 'ACTIVE_WITH_EXTERNAL_GOLD_WAIT' experiments/g9-p36-r10/preseal.yaml
+      - name: Two-bucket synthesis
+        run: node experiments/g9-p36-r10/synthesize_r10.mjs
+      - name: ARG syntactic constitution controls
+        run: node experiments/g9-p36-r10/generate_arg_controls.mjs
+      - name: Gold intake guard
+        run: python experiments/g9-p36-r10/nikl_intake_r10.py "" experiments/g9-p36-r10/final/nikl_intake_status.json
+      - name: Adjudicate pre-gold R10
+        run: node experiments/g9-p36-r10/adjudicate_r10.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p36-r10-pre-gold-return-to-origin
+          path: experiments/g9-p36-r10/
