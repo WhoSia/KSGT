@@ -167,3 +167,10 @@ waiting:
   - PeerJ external transport
 
 user_action: NONE
+
+notion:
+  canonical_receipt: 3e6ef561-cf92-81f4-94d1-c36ec765a941
+  harvest_fragment: 3e6ef561-cf92-819b-b26c-f94d8a5e14c5
+holdout_governance:
+  emnlp_local_test_unexposed_118: OUTCOME_UNOPENED_FOR_R5
+  use_before_R5_preseal: FORBIDDEN
