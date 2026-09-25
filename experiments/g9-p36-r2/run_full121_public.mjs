@@ -11,12 +11,12 @@ if(manifest.length!==121) throw new Error(`manifest length ${manifest.length} !=
 
 const wanted=new Set(manifest),paperDirs=new Map();
 function discover(dir,depth=0){
-  if(depth>5||paperDirs.size===wanted.size)return;
+  if(depth>8||paperDirs.size===wanted.size)return;
   for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
     if(!ent.isDirectory())continue;
     const p=path.join(dir,ent.name);
     if(wanted.has(ent.name)){paperDirs.set(ent.name,p);continue;}
-    if(depth<5)discover(p,depth+1);
+    if(depth<8)discover(p,depth+1);
   }
 }
 discover(dataRoot);
@@ -63,12 +63,12 @@ const positiveControls=positiveCases.map(([name,reply,type])=>{const r=replayDoc
 const regressionPapers=['emnlp24_doc387','emnlp24_doc739','emnlp24_doc1035','emnlp24_doc199','emnlp24_doc103','emnlp24_doc1043'];
 const regressionControls=regressionPapers.map(p=>{const gs=candidates.filter(x=>x.paper===p);return {paper:p,candidates:gs.length,certifiable:gs.filter(x=>x.certifiable).length,pass:gs.every(x=>!x.certifiable)};});
 const reasonCounts={};for(const c of candidates) reasonCounts[c.reason]=(reasonCounts[c.reason]||0)+1;
-const result={phase:'KSGT Generation IX G9-P36-R2',compiler:CONTRACT.version,source:'Re3Align_v1.0 public archive / EMNLP24',manifest_papers:manifest.length,discovered_paper_dirs:paperDirs.size,aggregate:agg,missing,reason_counts:reasonCounts,positive_controls:positiveControls,regression_controls:regressionControls,frontier_reopened:agg.certifiable>0,certifiable_witnesses:candidates.filter(x=>x.certifiable).map(x=>({index:x.index,paper:x.paper,file:x.file,review_id:x.review_id,type:x.type,reason:x.reason,items:x.items})),paper_metrics:paperMetrics};
-if(missing.length) throw new Error(`missing papers: ${JSON.stringify(missing)}`);
-if(!positiveControls.every(x=>x.pass)) throw new Error(`positive control failure: ${JSON.stringify(positiveControls)}`);
-if(!regressionControls.every(x=>x.pass)) throw new Error(`R1 regression failure: ${JSON.stringify(regressionControls)}`);
+const validation={missing_pass:missing.length===0,positive_controls_pass:positiveControls.every(x=>x.pass),r1_regression_pass:regressionControls.every(x=>x.pass)};
+validation.pass=validation.missing_pass&&validation.positive_controls_pass&&validation.r1_regression_pass;
+const result={phase:'KSGT Generation IX G9-P36-R2',compiler:CONTRACT.version,source:'Re3Align_v1.0 public archive / EMNLP24',manifest_papers:manifest.length,discovered_paper_dirs:paperDirs.size,aggregate:agg,missing,reason_counts:reasonCounts,positive_controls:positiveControls,regression_controls:regressionControls,validation,frontier_reopened:agg.certifiable>0,certifiable_witnesses:candidates.filter(x=>x.certifiable).map(x=>({index:x.index,paper:x.paper,file:x.file,review_id:x.review_id,type:x.type,reason:x.reason,items:x.items})),paper_metrics:paperMetrics};
 fs.mkdirSync(outDir,{recursive:true});
 fs.writeFileSync(path.join(outDir,'full121_structural_replay.json'),JSON.stringify(result,null,2)+'\n');
 fs.writeFileSync(path.join(outDir,'candidate_witnesses.json'),JSON.stringify(candidates,null,2)+'\n');
-fs.writeFileSync(path.join(outDir,'positive_controls.json'),JSON.stringify({positiveControls,regressionControls},null,2)+'\n');
-console.log(JSON.stringify({discovered_paper_dirs:paperDirs.size,aggregate:agg,reasonCounts,frontier_reopened:result.frontier_reopened,positiveControls,regressionControls},null,2));
+fs.writeFileSync(path.join(outDir,'positive_controls.json'),JSON.stringify({positiveControls,regressionControls,validation},null,2)+'\n');
+console.log(JSON.stringify({discovered_paper_dirs:paperDirs.size,aggregate:agg,missing:missing.length,reasonCounts,frontier_reopened:result.frontier_reopened,positiveControls,regressionControls,validation},null,2));
+if(!validation.pass) process.exitCode=2;
