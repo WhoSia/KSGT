@@ -1,5 +1,5 @@
 {
-  "verdict": "PASS_LEXICAL_COLLISION_NULL_REJECTS_MICRO_REUSE_PROMOTION",
+  "verdict": "PASS_RELATION_MOTIF_PRIMARY_EMPTY_MICRO_REUSE_NOT_PROMOTED",
   "primary": 0,
   "null": {
     "replicates": 127,
