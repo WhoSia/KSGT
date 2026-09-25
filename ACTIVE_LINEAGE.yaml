@@ -16,7 +16,7 @@ active_research_line:
   - G9-P36-R9
   - G9-P36-R10
 current_phase: G9-P36-R10
-current_status: ACTIVE_EXTERNAL_GOLD_HOLD
+current_status: ACTIVE_EXTERNAL_GOLD_HOLD_PREARRIVAL_ENGINEERING_READY
 current_verdict: PASS_RELATION_MOTIF_LANE_RETIRED_ARG_CONSTITUTION_SEALED_EXTERNAL_GOLD_WAIT
 current_compiler:
   representation: C3-R4-BCOG-v1
@@ -26,6 +26,7 @@ current_compiler:
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 5743577910b8d2ed3d72f72c070be6419f47b6be
 current_science_commit: c3172ec38195cbf688c01d08ecc7da9362232df4
+current_engineering_commit: fea15f3db1a28e225dab7d388d46411ffe71b40e
 canonical_pre_gold_result_commit: cff1ae1e78976ae3a40bee33a00ce91db09596e5
 public_replay_run: 36188933352
 public_replay_head: 3c3ea524ec0ff06fe0411e5ce672f04b9507e13c
@@ -54,6 +55,13 @@ r10_korean_arg:
   topic_focus_is_not_argument_identity: true
   dependency_is_not_linear_order: true
 r10_gold_intake:
+  engineering_state: PREARRIVAL_ENGINEERING_READY
+  canonical_semantic_core: RUST_KSGT_ARG_v1
+  legacy_js: REGRESSION_ONLY
+  final_rehearsal_run: 36190297866
+  final_rehearsal_artifact: 10886594950
+  final_rehearsal_sha256: 836314950a81e108b02b90d7e7b4c2acf3685ea936ddad4199b4eadfa3b066f4
+  expected_new_coding_on_arrival: NONE_UNLESS_SCHEMA_UNRECOGNIZED
   source_2020: REQUESTED_WAITING
   source_2025: REQUESTED_WAITING
   state: WAITING_FOR_OFFICIAL_BYTES
