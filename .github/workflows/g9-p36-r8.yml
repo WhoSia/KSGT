@@ -1,0 +1,58 @@
+name: G9-P36-R8 fresh cross-document relation court
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['experiments/g9-p36-r8/action_trigger.txt']
+permissions: {contents: read}
+jobs:
+  court:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - name: Verify prospective constitution and controls
+        run: |
+          set -euo pipefail
+          grep -q 'PROSPECTIVE_CHARTER_SEALED_BEFORE_R8_FRESH_HOLDOUT_ROW_ACCESS' experiments/g9-p36-r8/preseal.yaml
+          mkdir -p experiments/g9-p36-r8/final /tmp/r8
+          node experiments/g9-p36-r8/generate_r8_controls.mjs experiments/g9-p36-r8/final/r8_controls.json | tee experiments/g9-p36-r8/controls.log
+      - name: Build inherited R3 proof controls
+        run: |
+          set -euo pipefail
+          cargo build --release --manifest-path experiments/g9-p36-r3/proof-kernel/Cargo.toml
+          cp experiments/g9-p36-r3/proof-kernel/target/release/g9_p36_r3_proof_kernel /tmp/proof-kernel
+          node experiments/g9-p36-r3/generate_controls.mjs /tmp/r8/r3-controls.jsonl
+          /tmp/proof-kernel /tmp/r8/r3-controls.jsonl experiments/g9-p36-r8/final/r3_control_proofs.jsonl
+      - name: Materialize prospective RMR-75K paper holdout
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pandas pyarrow
+          python experiments/g9-p36-r8/prepare_rmr_r8.py experiments/g9-p36-r8/final | tee experiments/g9-p36-r8/rmr-prepare.log
+      - name: Execute exact and predicate-family relation courts
+        run: |
+          set -euo pipefail
+          node experiments/g9-p36-r8/analyze_rmr_r8.mjs experiments/g9-p36-r8/final/rmr_holdout.jsonl experiments/g9-p36-r8/final | tee experiments/g9-p36-r8/rmr-analysis.log
+          rustc -O experiments/g9-p36-r8/crosscheck_r8.rs -o /tmp/r8-crosscheck
+          /tmp/r8-crosscheck experiments/g9-p36-r8/final/motif_items.tsv | tee experiments/g9-p36-r8/final/rust_crosscheck.tsv
+          JS_E=$(jq -r '.exact_arm.primary_cross_paper_pairs' experiments/g9-p36-r8/final/rmr_analysis_summary.json)
+          JS_F=$(jq -r '.family_arm.primary_cross_paper_pairs' experiments/g9-p36-r8/final/rmr_analysis_summary.json)
+          JS_P=$(jq -r '.family_arm.distinct_primary_papers' experiments/g9-p36-r8/final/rmr_analysis_summary.json)
+          JS_K=$(jq -r '.family_arm.distinct_primary_families' experiments/g9-p36-r8/final/rmr_analysis_summary.json)
+          test "$JS_E" = "$(awk -F '\t' '$1=="exact_primary"{print $2}' experiments/g9-p36-r8/final/rust_crosscheck.tsv)"
+          test "$JS_F" = "$(awk -F '\t' '$1=="family_primary"{print $2}' experiments/g9-p36-r8/final/rust_crosscheck.tsv)"
+          test "$JS_P" = "$(awk -F '\t' '$1=="family_distinct_papers"{print $2}' experiments/g9-p36-r8/final/rust_crosscheck.tsv)"
+          test "$JS_K" = "$(awk -F '\t' '$1=="family_distinct_families"{print $2}' experiments/g9-p36-r8/final/rust_crosscheck.tsv)"
+      - name: Recover official Korean zero-anaphora source
+        run: |
+          set -euo pipefail
+          python experiments/g9-p36-r8/recover_korean_zero_r8.py experiments/g9-p36-r8/final/korean_zero_source.json | tee experiments/g9-p36-r8/korean-zero.log
+      - name: Adjudicate R8
+        run: |
+          set -euo pipefail
+          node experiments/g9-p36-r8/adjudicate_r8.mjs experiments/g9-p36-r8/final | tee experiments/g9-p36-r8/final-run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p36-r8-fresh-relation-court
+          path: experiments/g9-p36-r8/
