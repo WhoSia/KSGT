@@ -18,7 +18,7 @@ const positive=positiveTexts.map(([id,a,b])=>{const A=C(a),B=C(b),qA=quotient(A)
 
 const negativeDefs=[
  ['predicate','We will add a detailed analysis discussion.','We will revise a detailed analysis appendix.',G,G],
- ['arg0','We will add a detailed analysis discussion.','The authors will add a detailed analysis appendix.',G,G],
+ ['arg0','Model A is a detailed analysis discussion.','Model B is a detailed analysis appendix.',{...G,structural_role:'ASSERTION'},{...G,structural_role:'ASSERTION'}],
  ['authority','We will add a detailed analysis discussion.','The results show a detailed analysis appendix.',G,{...G,structural_role:'ASSERTION'}],
  ['modal','We will add a detailed analysis discussion.','We may add a detailed analysis appendix.',G,G],
  ['ground_chunk','We will add a detailed analysis discussion.','We will add a detailed analysis appendix.',G,{...G,response_chunk_id:'other'}],
