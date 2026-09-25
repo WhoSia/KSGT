@@ -1,0 +1,61 @@
+name: G9-P36-R5 fresh-118 prospective court
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['experiments/g9-p36-r5/action_trigger.txt']
+permissions: {contents: write}
+jobs:
+  court:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - name: Verify presealed R5 controls before holdout access
+        run: |
+          set -euo pipefail
+          test "$(wc -l < experiments/g9-p36-r5/fresh118_manifest.txt)" -eq 118
+          mkdir -p experiments/g9-p36-r5/final /tmp/r5
+          node experiments/g9-p36-r5/generate_r5_controls.mjs experiments/g9-p36-r5/final/r5_controls.json | tee experiments/g9-p36-r5/controls.log
+      - name: Build unchanged inherited R3 proof kernel and controls
+        run: |
+          set -euo pipefail
+          cargo build --release --manifest-path experiments/g9-p36-r3/proof-kernel/Cargo.toml
+          cp experiments/g9-p36-r3/proof-kernel/target/release/g9_p36_r3_proof_kernel /tmp/proof-kernel
+          node experiments/g9-p36-r3/generate_controls.mjs /tmp/r5/r3-controls.jsonl
+          /tmp/proof-kernel /tmp/r5/r3-controls.jsonl experiments/g9-p36-r5/final/r3_control_proofs.jsonl
+      - name: Resolve, download, and verify frozen public source
+        run: |
+          set -euo pipefail
+          BASE='https://tudatalib.ulb.tu-darmstadt.de/server/api'; ITEM='8d57be09-68f3-4d47-aed4-2e555cbcc503'
+          curl -fsSL -H 'Accept: application/hal+json' "$BASE/core/items/$ITEM/bundles?size=100" -o /tmp/b.json
+          BUNDLE=$(jq -r '._embedded.bundles[]|select(.name=="ORIGINAL")|.uuid' /tmp/b.json|head -1)
+          curl -fsSL -H 'Accept: application/hal+json' "$BASE/core/bundles/$BUNDLE/bitstreams?size=100" -o /tmp/s.json
+          CONTENT=$(jq -r '._embedded.bitstreams[]|select(.name=="Re3Align_v1.0.zip")|._links.content.href' /tmp/s.json|head -1)
+          curl -fL --retry 4 --retry-delay 5 "$CONTENT" -o /tmp/Re3Align.zip
+          test "$(sha256sum /tmp/Re3Align.zip|awk '{print $1}')" = d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+          mkdir /tmp/re3; unzip -q /tmp/Re3Align.zip -d /tmp/re3
+      - name: Open only sealed fresh-118 and execute R5
+        run: |
+          set -euo pipefail
+          cp experiments/g9-p36-r2/adapter_response_chunk_v1.js /tmp/adapter.mjs
+          cp experiments/g9-p36-r2/compiler_c3r2_structural.js /tmp/r2compiler.mjs
+          node experiments/g9-p36-r5/extract_r5_holdout.mjs /tmp/re3 /tmp/adapter.mjs /tmp/r2compiler.mjs experiments/g9-p36-r5/final | tee experiments/g9-p36-r5/extraction.log
+          /tmp/proof-kernel experiments/g9-p36-r5/final/candidates.jsonl experiments/g9-p36-r5/final/proof_objects.jsonl 2>&1 | tee experiments/g9-p36-r5/proof-kernel.log
+          node experiments/g9-p36-r5/adjudicate_r5.mjs experiments/g9-p36-r5/final | tee experiments/g9-p36-r5/final-run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p36-r5-fresh118-court
+          path: experiments/g9-p36-r5/
+      - name: Commit derived R5 replay artifacts
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add experiments/g9-p36-r5/final experiments/g9-p36-r5/*.log || true
+          git commit -m 'G9-P36-R5: materialize fresh-118 prospective court' || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
