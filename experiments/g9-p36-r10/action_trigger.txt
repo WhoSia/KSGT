@@ -1,3 +1,4 @@
 G9-P36-R10 pre-gold court trigger
 preseal=5743577910b8d2ed3d72f72c070be6419f47b6be
 prearrival_engineering=rust-python-e2e-d3700958
+prearrival_final_rehearsal=nested-bundle-finalizer-2caf2e26
