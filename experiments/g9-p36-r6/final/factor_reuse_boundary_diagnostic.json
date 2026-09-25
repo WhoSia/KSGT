@@ -1,0 +1,25 @@
+{
+  "phase": "G9-P36-R6",
+  "status": "POSTHOC_READ_ONLY_DIAGNOSTIC_NOT_SELECTOR_OR_QUOTIENT_AUTHORITY",
+  "source": "experiments/g9-p36-r6/final/factor_reuse_witnesses.jsonl",
+  "pairs": 114,
+  "decomposition": {
+    "exact_factor_sets": 19,
+    "subset_factor_sets": 7,
+    "complementary_factor_sets": 88,
+    "shared_factor_count_1": 71,
+    "shared_factor_count_2_to_3": 24,
+    "shared_factor_count_4_plus": 19,
+    "pairs_with_shared_ARG1_bigram": 30,
+    "pairs_with_shared_DOC_POINTER": 1,
+    "token_only_shared_pairs": 84,
+    "complementary_pairs_with_shared_bigram": 10,
+    "complementary_pairs_with_at_least_2_shared_factors": 22
+  },
+  "interpretation": [
+    "R6 establishes typed atom-level micro redundancy under C3-R6-OFQ-v1, not 114 instances of semantic-equivalence authority.",
+    "Single lexical-factor collisions remain descriptive reuse evidence only.",
+    "No posthoc threshold or selector change is authorized.",
+    "A successor may prospectively promote semantically typed factor objects only with independent composition/role witnesses."
+  ]
+}
