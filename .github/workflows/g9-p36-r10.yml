@@ -1,4 +1,4 @@
-name: G9-P36-R10 pre-gold return-to-origin court
+name: G9-P36-R10 pre-arrival engineering court
 on:
   workflow_dispatch:
   push:
@@ -8,19 +8,55 @@ permissions: {contents: read}
 jobs:
   court:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Verify preseal
-        run: grep -q 'ACTIVE_WITH_EXTERNAL_GOLD_WAIT' experiments/g9-p36-r10/preseal.yaml
+      - name: Verify preseal and gold contract
+        run: |
+          set -euo pipefail
+          grep -q 'ACTIVE_WITH_EXTERNAL_GOLD_WAIT' experiments/g9-p36-r10/preseal.yaml
+          grep -q 'SEALED_BEFORE_OFFICIAL_ANNOTATION_BYTES' experiments/g9-p36-r10/gold_execution_contract.yaml
+          mkdir -p experiments/g9-p36-r10/final
       - name: Two-bucket synthesis
         run: node experiments/g9-p36-r10/synthesize_r10.mjs
-      - name: ARG syntactic constitution controls
+      - name: Build canonical Rust ARG core
+        run: cargo build --release --manifest-path experiments/g9-p36-r10/arg-core-rs/Cargo.toml
+      - name: Rust semantic-core adversarial battery
+        run: |
+          set -euo pipefail
+          python experiments/g9-p36-r10/generate_rust_arg_controls_r10.py /tmp/r10-controls.jsonl
+          experiments/g9-p36-r10/arg-core-rs/target/release/ksgt_arg_r10 batch /tmp/r10-controls.jsonl /tmp/r10-control-receipts.jsonl
+          python - <<'PY'
+          import json
+          xs=[json.loads(x) for x in open('/tmp/r10-control-receipts.jsonl') if x.strip()]
+          assert len(xs)==11
+          assert all(x['match_expected'] for x in xs)
+          json.dump({'pass':True,'controls':len(xs)},open('experiments/g9-p36-r10/final/rust_arg_controls.json','w'),indent=2)
+          PY
+      - name: Legacy JS constitution regression
         run: node experiments/g9-p36-r10/generate_arg_controls.mjs
-      - name: Gold intake guard
+      - name: Multi-schema adapter fixture battery
+        run: |
+          set -euo pipefail
+          PYTHONPATH=experiments/g9-p36-r10 python experiments/g9-p36-r10/test_nikl_pipeline_r10.py experiments/g9-p36-r10/final/nikl_fixture_tests.json
+      - name: End-to-end official-gold rehearsal
+        run: |
+          set -euo pipefail
+          python experiments/g9-p36-r10/generate_gold_fixture_archive_r10.py /tmp/nikl-r10-fixture.zip
+          python experiments/g9-p36-r10/run_gold_r10.py /tmp/nikl-r10-fixture.zip --out /tmp/r10-gold-work
+          cp /tmp/r10-gold-work/gold_aggregate_receipt.json experiments/g9-p36-r10/final/gold_pipeline_rehearsal.json
+          python - <<'PY'
+          import json
+          x=json.load(open('experiments/g9-p36-r10/final/gold_pipeline_rehearsal.json'))
+          assert x['state']=='READY_FOR_SCIENTIFIC_ADJUDICATION'
+          assert x['rust_validation']['rate']==1
+          assert x['ellipsis_slots']==4
+          PY
+      - name: External-gold wait guard
         run: python experiments/g9-p36-r10/nikl_intake_r10.py "" experiments/g9-p36-r10/final/nikl_intake_status.json
-      - name: Adjudicate pre-gold R10
+      - name: Adjudicate pre-arrival R10
         run: node experiments/g9-p36-r10/adjudicate_r10.mjs
       - uses: actions/upload-artifact@v4
         with:
-          name: g9-p36-r10-pre-gold-return-to-origin
+          name: g9-p36-r10-prearrival-engineering
           path: experiments/g9-p36-r10/
