@@ -13,10 +13,11 @@ current_verdict: PASS_WITH_PROOF_SYSTEM_CALIBRATED_NATURAL_FRONTIER_NOT_REOPENED
 current_compiler:
   name: C3-R3-FUSION-PROOF-v1
   preseal_commit: 082a6cc85f1cdd2589b9e0edb9c234f4ea6e15ed
-current_science_commit: 2ea75a74216f5f5551d9929e5807411ff942b828
+current_science_commit: 57cd463dd0a523007cc60c007b154365735b0023
 public_replay_commit: 3c2ec27db391ba371a6c863d2ba36c830ba408cf
 workflow_run: 36104487758
 notion_receipt: 3e6ef561-cf92-81f1-aa60-fac8bbdce973
+harvest_receipt: 3e6ef561-cf92-8171-9415-ca9970a57fc3
 raw_data_policy:
   re3align_raw: DRIVE_OR_PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
   literature_pdfs: COMMONS_DO_NOT_COMMIT
