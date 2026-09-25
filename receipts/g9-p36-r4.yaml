@@ -1,0 +1,169 @@
+phase: KSGT Generation IX G9-P36-R4
+title: Binding-Complete Obligation Graph Recovery, Predicate-Argument-Value-Scope Reattachment, Representation-Sufficiency Witnesses, Cross-Sentence Proof-Carrying Fusion Reconstitution & Natural Frontier Reopening Court
+verdict: PASS_BINDING_GRAPH_RECOVERED_NATURAL_FRONTIER_NOT_REOPENED
+date: 2026-09-25
+
+lineage:
+  inherited_phase: G9-P36-R3
+  inherited_receipt_commit: 57cd463dd0a523007cc60c007b154365735b0023
+  preseal_commit: 8fc73ed31ef6c1a1efb07d91d049c4d1a5470b59
+  first_debug_trigger_commit: 9023f45e4c2cbbd0eec0f268af163f71a96a1612
+  first_debug_run: 36121224168
+  first_debug_run_status: PRE_NATURAL_IMPLEMENTATION_DEBUG_NOT_SCIENTIFIC_OUTCOME
+  repaired_trigger_commit: 518255c329ff8d435a33f58ee93cd67afe291592
+  successful_full_replay_run: 36121529672
+  successful_full_replay_conclusion: success
+  materialization_commit: 8217378a40480807d57e99ab3624c16c3ca55498
+  boundary_diagnostic_run: 36121731479
+  boundary_diagnostic_commit: 4e06c1e161e7b8612ff6c67f206b57e4a11f9584
+
+compiler:
+  representation: C3-R4-BCOG-v1
+  proof_kernel: INHERITED_UNCHANGED_C3-R3_RUST_KERNEL
+  principle: LOSSLESS_CUSTODY_PLUS_CONSERVATIVE_BINDING
+  external_AMR_SRL_as_truth: REJECTED
+  natural_language_realization_authority: OUTSIDE_CERTIFICATE
+
+source:
+  archive: Re3Align_v1.0_public_archive
+  archive_sha256: d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+  emnlp24_csv_sha256: 599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28
+  calibration_papers: 121
+  response_files: 173
+  obligations: 5579
+  unresolved_obligations: 1877
+  frozen_candidate_windows: 8071
+
+representation_recovery:
+  R3_representation_complete_pairs: 126
+  R4_representation_complete_pairs: 1205
+  pair_gain_factor: 9.5634920635
+  unique_candidate_obligations: 3238
+  representation_complete_unique_obligations: 1193
+  representation_complete_unique_rate: 0.36843730698
+  unresolved_reason_counts:
+    NO_BINDABLE_PREDICATE: 1804
+    NEGATION_SCOPE_AMBIGUOUS: 162
+    SURFACE_CUSTODY_GAP: 51
+    NESTED_RELATION_UNRESOLVED: 30
+
+natural_replay:
+  proof_objects: 8071
+  operations:
+    F1_CONJUNCTIVE_FUSION: 4237
+    S1_SUBSUMPTION: 3834
+  failure_localization:
+    REPRESENTATION_SUFFICIENCY_VETO: 6866
+    GROUNDING_MISMATCH: 1025
+    FORCE_VALUE_ACTION_MISMATCH: 180
+  certifiable_natural: 0
+  frontier_reopened: false
+  controlled_roundtrip_witnesses_natural: 0
+
+boundary_localization:
+  representation_complete_pairs: 1205
+  representation_complete_and_grounding_compatible: 180
+  compatible_core_any_grounding: 3
+  compatible_core_and_grounding_compatible: 0
+  set_intersection_law: "|C_rep ∩ C_ground ∩ C_core| = 0"
+  post_grounding_mismatch_dimensions_overlapping:
+    arg0: 179
+    predicate: 137
+    class: 114
+    modal: 56
+    quantifier: 40
+    authority: 31
+    polarity: 10
+    condition: 3
+    value_conflict: 0
+  interpretation: >
+    The stronger BCOG representation expanded representation authority by nearly an order of
+    magnitude, but the inherited R3 flat-token candidate geometry selected no pair that was
+    simultaneously representation-complete, grounding-compatible and core-binding-compatible.
+    The remaining boundary is therefore candidate-geometry / grounding compatibility rather
+    than the previous flat representation ceiling alone.
+
+controls:
+  R4_representation_positive: 8_of_8_PASS
+  R4_adversarial_negative: 15_of_15_PASS
+  R4_metamorphic: 4_of_4_PASS
+  R4_controlled_fusion_roundtrip: PASS
+  inherited_R3_proof_controls: 12_of_12_PASS
+  always_abstain_explanation: REJECTED
+
+debug_history:
+  first_run:
+    run: 36121224168
+    natural_archive_reached: false
+    failures:
+      - NEGATED_COMPARISON_BINDING
+      - CONDITION_SURFACE_CUSTODY
+      - TERMINAL_PUNCTUATION_INVARIANCE
+      - CONTROLLED_FUSION_ROUNDTRIP
+    disposition: >
+      Engineering failures detected by the presealed representation court before natural
+      replay. They are retained as provenance but are not a scientific outcome.
+  repair_policy: >
+    Only binder implementation and the missing presealed control census were repaired.
+    The scientific question, source split, candidate window and inherited R3 proof gates
+    were not relaxed after observing natural outcomes.
+
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  representation_authority: EXPANDED_RELATIVE_TO_R3
+  grounding_authority: BINDING
+  candidate_geometry_authority: INSUFFICIENT_FOR_BCOG_NATIVE_FUSION_DISCOVERY
+  natural_language_fusion: NOT_AUTHORIZED
+  safe_transport: ABSTAIN
+  human_recruitment: HOLD
+
+laws:
+  - REPRESENTATION_COMPLETENESS_GAIN_DOES_NOT_IMPLY_FUSION_AUTHORITY
+  - SEMANTIC_CORE_COMPATIBILITY_WITHOUT_GROUNDING_IS_NOT_FUSION_EQUIVALENCE
+  - LEGACY_CANDIDATE_GEOMETRY_NEED_NOT_ALIGN_WITH_A_STRONGER_REPRESENTATION
+  - C_REP_INTERSECT_C_GROUND_INTERSECT_C_CORE_CAN_BE_EMPTY_EVEN_WHEN_EACH_MARGIN_IS_NONEMPTY
+  - SURFACE_ROLE_GEOMETRY_MUST_PRECEDE_REALIZATION
+  - STRONGER_REPRESENTATION_CAN_MOVE_THE_BOTTLENECK_WITHOUT_REOPENING_THE_FRONTIER
+
+interpretation: >
+  R4 discharged much of the R3 representation ceiling: representation-complete natural
+  pairs rose from 126 to 1,205, and 1,193 of 3,238 unique candidate obligations obtained
+  complete BCOG certificates. Yet after requiring inherited structural grounding, only
+  180 pairs remained, and none shared the same protected semantic core. Conversely the
+  three same-core pairs all crossed grounding boundaries. Thus natural fusion is not
+  certified under the frozen R3 candidate geometry. The result does not show that natural
+  distributed redundancy is absent; it falsifies the adequacy of the legacy candidate
+  geometry for discovering it in the stronger BCOG space.
+
+fresh_holdout_reserve:
+  inherited_split_source: G9-P33-R2
+  total_emnlp24_papers: 582
+  original_split:
+    learn_select: 326
+    calibrate: 128
+    local_test: 128
+  conservative_prior_exposure_overlay:
+    exposed_local_test: 10
+  unexposed_local_test_papers: 118
+  positive_link_unexposed_local_test_papers: 115
+  policy: >
+    Do not tune BCOG-native candidate selection on these outcomes. Freeze the candidate
+    geometry and controlled-realizer rules on prior evidence, then open this reserve as
+    a fresh prospective world-contact lane.
+
+next_phase:
+  id: G9-P36-R5
+  title: Representation-Native Semantic Neighborhood Search, Grounding-Conditioned Partial-Graph Overlap, Fresh-118 Prospective EMNLP Holdout Discovery, Proof-Carrying Controlled Realization, Selection-Shift Falsification & Natural Fusion Frontier Reopening Court
+  target: >
+    Replace the legacy flat-token candidate geometry with a prospectively frozen BCOG-native
+    neighborhood relation using representation-complete obligations and compatible grounding,
+    predicate, ARG0, force, scope and authority structure. Freeze search and realization rules
+    before exposing the 118 conservatively unexposed EMNLP local-test papers, then execute the
+    inherited proof-carrying court without retuning on holdout outcomes.
+
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+
+user_action: NONE
