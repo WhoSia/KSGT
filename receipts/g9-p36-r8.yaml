@@ -1,0 +1,91 @@
+phase: KSGT Generation IX G9-P36-R8
+title: Cross-Document Relation-Motif Generalization, Predicate-Family Equivalence Preseal, Fresh-Corpus Transfer, Korean Zero-Argument Annotation Recovery & Micro-Reuse Authority Reopening Court
+verdict: PASS_FRESH_TRANSFER_SIGNAL_INSUFFICIENT_FOR_MICRO_REUSE_PROMOTION
+date: 2026-09-25
+lineage:
+  inherited_phase: G9-P36-R7
+  inherited_science_commit: df592824fe2f39a0d89b00b166b9dca22e56d129
+  inherited_active_head: 9d93fbe857b5e69c78783653483ecde9bdb1ed04
+  preseal_commit: f8a29c9294d6085156d36a720c0a0d5ba1e32b0b
+  execution_head: ea8cfd3fb75dc75f7b7232ad0dcf7ea6dfc1b4fb
+  execution_run: 36136391353
+  artifact_id: 10865426711
+  artifact_sha256: 99df208c19cb163686e203a8064e1063baf67b7049ecb5c611d1afe688d8fbb8
+  canonical_result_commit: 27aef00a73be78449ee3ef8cd21a5ad705b3cc65
+  witness_lineage_diagnostic_commit: 73c9223e11fdad36f3d7b0c52eb714d990cfa6f4
+fresh_holdout:
+  corpus: shwu22/RMR-75K
+  total_rows: 75542
+  total_papers: 4824
+  selected_papers: 595
+  selected_rows_before_dedupe: 9183
+  deduped_rows: 8235
+  analyzed_segments: 62779
+  representation_complete_segments: 22260
+  rule: sha256(KSGT-G9-P36-R8-HOLDOUT|paper_id).first_byte_lt_32
+relation_court:
+  exact:
+    exploratory_pairs: 125
+    chain_pairs: 15
+    primary_cross_paper_pairs: 1
+  family:
+    exploratory_pairs: 144
+    chain_pairs: 16
+    primary_cross_paper_pairs: 1
+    distinct_primary_papers: 2
+    distinct_primary_families: 1
+  family_minus_exact_primary: 0
+  rust_crosscheck: PASS
+  null:
+    replicates: 127
+    observed: 1
+    null_mean: 0.031496062992125984
+    null_p95: 0
+    null_max: 1
+    plus_one_p: 0.0390625
+    pass: true
+  promotion_gate:
+    min_primary_pairs_5: FAIL
+    min_distinct_papers_5: FAIL
+    min_distinct_families_3: FAIL
+    null: PASS
+    validation: PASS
+    pass: false
+witness_boundary:
+  left_paper: ISrxxvXJQO
+  left_title: On the Hidden Waves of Image
+  right_paper: o87xfYKQC1
+  right_title: Image as First-Order Norm+Linear Autoregression: Unveiling Mathematical Invariance
+  same_author_team: true
+  same_research_lineage: true
+  interpretation: CROSS_PAPER_NOT_CROSS_LINEAGE
+predicate_family_authority: NO_INCREMENTAL_CROSS_DOCUMENT_SIGNAL
+micro_reuse_authority: NOT_PROMOTED
+semantic_equivalence_authority: NOT_GRANTED
+fusion_authority: NOT_GRANTED
+korean_zero_argument:
+  source: NIKL Zero Anaphora Corpus 2020
+  catalog_recovered: true
+  corpus_bytes_acquired: false
+  gold_annotation_execution: false
+  authority: SOURCE_RECOVERED_BYTES_HOLD
+github_actions_policy:
+  r8_auto_commit: DISABLED
+  permissions: CONTENTS_READ
+  derived_outputs: ARTIFACT_ONLY
+  canonical_commits: CONNECTED_GITHUB_AUTHOR_IDENTITY
+notion:
+  canonical_receipt: 3e6ef561-cf92-81e2-93a1-ff3f91b2f9fd
+  harvest: 3e6ef561-cf92-819d-a8eb-ca9659d62c5f
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  human_recruitment: HOLD
+  safe_transport: ABSTAIN
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+next_phase:
+  id: G9-P36-R9
+  title: Research-Lineage-Independent Relation-Motif Replication, Author/Method Ancestry Decontamination, Predicate-Family Necessity Ablation, NIKL Zero-Anaphora Gold Ingestion & Cross-Language Reuse-Authority Reopening Court
+user_action: NONE
