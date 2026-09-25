@@ -59,6 +59,9 @@ const GENERIC={
   increase:"increase",increases:"increase",increased:"increase"
 };
 const CMP=[
+ ["is not higher than","higher_than"],["are not higher than","higher_than"],["is not lower than","lower_than"],["are not lower than","lower_than"],
+ ["is not greater than","greater_than"],["is not less than","less_than"],["is not better than","better_than"],["is not worse than","worse_than"],
+ ["is not equal to","equal_to"],["is not the same as","same_as"],
  ["outperforms","outperform"],["outperform","outperform"],["underperforms","underperform"],["underperform","underperform"],
  ["is higher than","higher_than"],["are higher than","higher_than"],["is lower than","lower_than"],["are lower than","lower_than"],
  ["is greater than","greater_than"],["is less than","less_than"],["is better than","better_than"],["is worse than","worse_than"],
@@ -79,7 +82,7 @@ function canonPhrase(s){
 }
 function wordTokens(s){
   const out=[]; const r=/[\p{L}\p{N}_+%.-]+/gu; let m;
-  while((m=r.exec(s))){out.push({raw:m[0],norm:normalize(m[0]),start:m.index,end:m.index+m[0].length});}
+  while((m=r.exec(s))){const norm=normalize(m[0]).replace(/^[.\-]+|[.\-]+$/g,"");if(norm)out.push({raw:m[0],norm,start:m.index,end:m.index+m[0].length});}
   return out;
 }
 function contentTokens(s){
@@ -198,6 +201,7 @@ function custody(text,frame,F,V){
   const tokens=contentTokens(text);
   const represented=new Set([...phraseContent(frame.arg0==="AUTHOR"?"author":frame.arg0),...phraseContent(frame.arg1),...phraseContent(frame.surfacePredicate||frame.predicate),frame.predicate]);
   for(const b of V.bindings){represented.add(b.entity);represented.add(normalize(b.value));if(b.unit)represented.add(b.unit);}
+  if(F.condition&&F.condition!=="NONE")for(const t of phraseContent(F.condition))represented.add(t);
   for(const p of V.pointers)for(const t of contentTokens(p))represented.add(t.norm);
   const missing=tokens.map(t=>t.norm).filter(t=>!represented.has(t)&&!REV[t]&&!GENERIC[t]&&!Object.values(CAUSAL).includes(t));
   return {pass:missing.length===0,missing:[...new Set(missing)],token_count:tokens.length};
