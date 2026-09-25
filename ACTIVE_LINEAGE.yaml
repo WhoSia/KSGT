@@ -8,16 +8,26 @@ active_research_line:
   - G9-P36-R1
   - G9-P36-R2
   - G9-P36-R3
-current_phase: G9-P36-R3
-current_verdict: PASS_WITH_PROOF_SYSTEM_CALIBRATED_NATURAL_FRONTIER_NOT_REOPENED
+  - G9-P36-R4
+current_phase: G9-P36-R4
+current_verdict: PASS_BINDING_GRAPH_RECOVERED_NATURAL_FRONTIER_NOT_REOPENED
 current_compiler:
-  name: C3-R3-FUSION-PROOF-v1
-  preseal_commit: 082a6cc85f1cdd2589b9e0edb9c234f4ea6e15ed
-current_science_commit: 57cd463dd0a523007cc60c007b154365735b0023
-public_replay_commit: 3c2ec27db391ba371a6c863d2ba36c830ba408cf
-workflow_run: 36104487758
-notion_receipt: 3e6ef561-cf92-81f1-aa60-fac8bbdce973
-harvest_receipt: 3e6ef561-cf92-8171-9415-ca9970a57fc3
+  representation: C3-R4-BCOG-v1
+  proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
+  preseal_commit: 8fc73ed31ef6c1a1efb07d91d049c4d1a5470b59
+current_science_commit: 8c59e34e805779df205c41dda6e86ddde47dd85b
+public_replay_commit: 8217378a40480807d57e99ab3624c16c3ca55498
+public_replay_run: 36121529672
+boundary_diagnostic_commit: 4e06c1e161e7b8612ff6c67f206b57e4a11f9584
+boundary_diagnostic_run: 36121731479
+notion_receipt: 3e6ef561-cf92-81f4-94d1-c36ec765a941
+harvest_receipt: 3e6ef561-cf92-819b-b26c-f94d8a5e14c5
+fresh_holdout:
+  source: EMNLP24_LOCAL_TEST
+  conservatively_unexposed_papers: 118
+  positive_link_papers: 115
+  state: OUTCOME_UNOPENED_FOR_R5
+  pre_R5_preseal_access: FORBIDDEN
 raw_data_policy:
   re3align_raw: DRIVE_OR_PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
   literature_pdfs: COMMONS_DO_NOT_COMMIT
@@ -25,5 +35,5 @@ language_policy:
   status: UNRESTRICTED
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
-next_phase: G9-P36-R4
-next_phase_title: Binding-Complete Obligation Graph Recovery, Predicate-Argument-Value-Scope Reattachment, Representation-Sufficiency Witnesses, Cross-Sentence Proof-Carrying Fusion Reconstitution & Natural Frontier Reopening Court
+next_phase: G9-P36-R5
+next_phase_title: Representation-Native Semantic Neighborhood Search, Grounding-Conditioned Partial-Graph Overlap, Fresh-118 Prospective EMNLP Holdout Discovery, Proof-Carrying Controlled Realization, Selection-Shift Falsification & Natural Fusion Frontier Reopening Court
