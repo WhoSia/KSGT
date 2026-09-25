@@ -1,0 +1,70 @@
+name: G9-P36-R2 full121 structural replay
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/g9-p36-r2-full121.yml'
+      - 'experiments/g9-p36-r2/run_full121_public.mjs'
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve Re3Align v1.0 public bitstream
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://tudatalib.ulb.tu-darmstadt.de/server/api'
+          ITEM='8d57be09-68f3-4d47-aed4-2e555cbcc503'
+          curl -fsSL -H 'Accept: application/hal+json' "$BASE/core/items/$ITEM/bundles?size=100" -o /tmp/bundles.json
+          BUNDLE=$(jq -r '._embedded.bundles[] | select(.name=="ORIGINAL") | .uuid' /tmp/bundles.json | head -1)
+          test -n "$BUNDLE" && test "$BUNDLE" != null
+          curl -fsSL -H 'Accept: application/hal+json' "$BASE/core/bundles/$BUNDLE/bitstreams?size=100" -o /tmp/bitstreams.json
+          CONTENT=$(jq -r '._embedded.bitstreams[] | select(.name=="Re3Align_v1.0.zip") | ._links.content.href' /tmp/bitstreams.json | head -1)
+          test -n "$CONTENT" && test "$CONTENT" != null
+          echo "content=$CONTENT" >> "$GITHUB_OUTPUT"
+
+      - name: Download and verify frozen source
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 --retry-delay 5 '${{ steps.source.outputs.content }}' -o /tmp/Re3Align_v1.0.zip
+          sha256sum /tmp/Re3Align_v1.0.zip | tee /tmp/archive.sha256
+          mkdir -p /tmp/re3
+          unzip -q /tmp/Re3Align_v1.0.zip -d /tmp/re3
+          CSV=$(find /tmp/re3 -type f -name triplets_emnlp24.csv -print -quit)
+          test -n "$CSV"
+          CSV_SHA=$(sha256sum "$CSV" | awk '{print $1}')
+          test "$CSV_SHA" = '599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28'
+          ROOT=$(dirname "$CSV")
+          echo "DATA_ROOT=$ROOT" >> "$GITHUB_ENV"
+          printf 'archive_sha256: %s\ncsv_sha256: %s\nsource_item: %s\n' "$(cut -d' ' -f1 /tmp/archive.sha256)" "$CSV_SHA" '8d57be09-68f3-4d47-aed4-2e555cbcc503' > experiments/g9-p36-r2/source_integrity.yaml
+
+      - name: Run frozen C3-R2 structural replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp experiments/g9-p36-r2/adapter_response_chunk_v1.js /tmp/adapter.mjs
+          cp experiments/g9-p36-r2/compiler_c3r2_structural.js /tmp/compiler.mjs
+          node experiments/g9-p36-r2/run_full121_public.mjs "$DATA_ROOT" /tmp/adapter.mjs /tmp/compiler.mjs experiments/g9-p36-r2/final
+
+      - name: Commit derived closure artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/g9-p36-r2/source_integrity.yaml experiments/g9-p36-r2/final/
+          git commit -m 'G9-P36-R2: materialize full-121 structural replay' || exit 0
+          git push origin HEAD:main
