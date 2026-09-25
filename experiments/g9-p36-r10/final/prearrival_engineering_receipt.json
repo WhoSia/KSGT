@@ -1,0 +1,56 @@
+{
+  "phase": "KSGT Generation IX G9-P36-R10",
+  "status": "PREARRIVAL_ENGINEERING_READY",
+  "scientific_status": "ACTIVE_EXTERNAL_GOLD_HOLD",
+  "canonical_semantic_core": {
+    "implementation": "Rust",
+    "crate": "experiments/g9-p36-r10/arg-core-rs",
+    "authority": "CANONICAL_KSGT_ARG_v1_CORE",
+    "legacy_js": "REGRESSION_ONLY"
+  },
+  "ingestion": {
+    "implementation": "Python",
+    "one_command_runner": "experiments/g9-p36-r10/run_gold_r10.py",
+    "bundle_runner": "experiments/g9-p36-r10/run_gold_bundle_r10.py",
+    "finalizer": "experiments/g9-p36-r10/finalize_gold_r10.py",
+    "accepted_schema_families": [
+      "NIKL_ZA_LEGACY_2020_2024",
+      "NIKL_ZA_ELLIPSIS_2025",
+      "NIKL_ZA_TRANSITIONAL_RESTORED"
+    ],
+    "robustness": [
+      "nested_zip_or_tar",
+      "directory_tree_hash",
+      "utf8_bom_and_cp949_fallback",
+      "multi_source_bundle",
+      "unknown_schema_fail_closed",
+      "no_semantic_role_inference_from_subject_object"
+    ]
+  },
+  "sealed_gold_contract": "experiments/g9-p36-r10/gold_execution_contract.yaml",
+  "rehearsal": {
+    "workflow_run": 36190297866,
+    "head": "157ba0a6fa68562a29fd77928c6bc3169d406da7",
+    "artifact_id": 10886594950,
+    "artifact_sha256": "836314950a81e108b02b90d7e7b4c2acf3685ea936ddad4199b4eadfa3b066f4",
+    "rust_adversarial_controls": "PASS_11_OF_11",
+    "schema_fixtures": "PASS_LEGACY_2020_2024__ELLIPSIS_2025__TRANSITIONAL",
+    "single_archive_end_to_end": "PASS",
+    "nested_multi_source_bundle": "PASS",
+    "synthetic_finalizer_status": "CLOSED",
+    "synthetic_finalizer_verdict": "PASS_RELATION_MOTIF_RETIRED_NATIVE_KOREAN_ZERO_ARGUMENT_GOLD_BOUND_ARG_RETURN_TO_ORIGIN_COMPLETE",
+    "scientific_authority": "REHEARSAL_ONLY_NOT_NIKL_OUTCOME"
+  },
+  "arrival_path": [
+    "raw_hash_and_archive_inventory",
+    "schema_census",
+    "adapter_binding",
+    "Rust_KSGT_ARG_validation",
+    "aggregate_gold_receipt",
+    "bundle_receipt_if_multiple_sources",
+    "sealed_finalizer",
+    "canonical_R10_closure"
+  ],
+  "expected_new_coding_on_arrival": "NONE_UNLESS_OFFICIAL_SCHEMA_IS_UNRECOGNIZED",
+  "raw_data_policy": "ROW_LEVEL_DERIVATIVES_LOCAL_ONLY_AGGREGATE_RECEIPTS_COMMITTABLE"
+}
