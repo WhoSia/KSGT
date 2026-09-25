@@ -9,25 +9,29 @@ active_research_line:
   - G9-P36-R2
   - G9-P36-R3
   - G9-P36-R4
-current_phase: G9-P36-R4
-current_verdict: PASS_BINDING_GRAPH_RECOVERED_NATURAL_FRONTIER_NOT_REOPENED
+  - G9-P36-R5
+current_phase: G9-P36-R5
+current_verdict: PASS_SELECTION_SHIFT_ESTABLISHED_NATURAL_FRONTIER_NOT_REOPENED
 current_compiler:
   representation: C3-R4-BCOG-v1
+  neighborhood: C3-R5-RNSN-v1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
-  preseal_commit: 8fc73ed31ef6c1a1efb07d91d049c4d1a5470b59
-current_science_commit: 8c59e34e805779df205c41dda6e86ddde47dd85b
-public_replay_commit: 8217378a40480807d57e99ab3624c16c3ca55498
-public_replay_run: 36121529672
-boundary_diagnostic_commit: 4e06c1e161e7b8612ff6c67f206b57e4a11f9584
-boundary_diagnostic_run: 36121731479
-notion_receipt: 3e6ef561-cf92-81f4-94d1-c36ec765a941
-harvest_receipt: 3e6ef561-cf92-819b-b26c-f94d8a5e14c5
+  preseal_commit: 399dcfbbd8c3038dcaf308ce4e9c1240c8f3904a
+current_science_commit: 507650c109e95472e4e0461255f20c8b54f3f946
+public_replay_commit: 02c58f590690ce66df739ff6e9c91199031f3c20
+public_replay_run: 36124946807
+boundary_diagnostic_commit: f3bda338c4bdd4e294e48d35b79e05afc5bd311e
+boundary_diagnostic_run: 36125203918
+notion_receipt: HOLD_CONNECTOR_UNAVAILABLE
+harvest_receipt: HOLD_CONNECTOR_UNAVAILABLE
 fresh_holdout:
   source: EMNLP24_LOCAL_TEST
   conservatively_unexposed_papers: 118
   positive_link_papers: 115
-  state: OUTCOME_UNOPENED_FOR_R5
-  pre_R5_preseal_access: FORBIDDEN
+  state: OPENED_ONCE_AFTER_R5_PRESEAL_AND_ADJUDICATED
+  pre_R5_preseal_access: VERIFIED_FORBIDDEN
+  representation_native_neighbors: 0
+  legacy_geometry_pairs: 7191
 raw_data_policy:
   re3align_raw: DRIVE_OR_PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
   literature_pdfs: COMMONS_DO_NOT_COMMIT
@@ -35,5 +39,5 @@ language_policy:
   status: UNRESTRICTED
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
-next_phase: G9-P36-R5
-next_phase_title: Representation-Native Semantic Neighborhood Search, Grounding-Conditioned Partial-Graph Overlap, Fresh-118 Prospective EMNLP Holdout Discovery, Proof-Carrying Controlled Realization, Selection-Shift Falsification & Natural Fusion Frontier Reopening Court
+next_phase: HOLD_PENDING_NEW_PRESEAL
+next_phase_title: Exact-grounding sparsity decomposition and Korean role-geometry realizer calibration require a new prospective charter
