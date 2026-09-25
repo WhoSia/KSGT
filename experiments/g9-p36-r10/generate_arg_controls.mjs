@@ -1,0 +1,17 @@
+import fs from 'node:fs';import {graph,validate,equivalent} from './arg_r10.mjs';
+const E=(roles,extra={})=>graph({event:{predicate:'보다',sense:'SEE'},roles,scope:extra.scope||{},discourse:extra.discourse||{},realization:extra.realization||{}});
+const subj={role:'EXPERIENCER',referent:'A',recovery:'EXPLICIT',particle:'이/가',role_source:'FRAME_PLUS_CONTEXT'};
+const obj={role:'THEME',referent:'B',recovery:'EXPLICIT',particle:'을/를',role_source:'FRAME_PLUS_CONTEXT'};
+const tests=[];
+tests.push(['scrambling_same_roles',equivalent(E([subj,obj],{realization:{order:['A','B']}}),E([subj,obj],{realization:{order:['B','A']}})).pass,true]);
+tests.push(['topic_particle_same_role',equivalent(E([{...subj,particle:'은/는'},obj]),E([subj,obj])).pass,true]);
+tests.push(['recoverable_zero_subject',equivalent(E([subj,obj]),E([{...subj,recovery:'ZERO_ANAPHORIC',witness:'antecedent:A',particle:null},obj])).pass,false]);
+tests.push(['zero_without_witness',validate(E([{...subj,recovery:'ZERO_ANAPHORIC',witness:null},obj])).pass,false]);
+tests.push(['particle_only_role_rejected',validate(E([{...subj,role_source:'PARTICLE_ONLY'},obj])).pass,false]);
+tests.push(['role_change_rejected',equivalent(E([subj,obj]),E([{...subj,role:'AGENT'},obj])).pass,false]);
+tests.push(['causative_added_causer_changes_graph',equivalent(E([subj,obj]),graph({event:{predicate:'보이다',sense:'CAUSE_SEE'},roles:[{role:'CAUSER',referent:'C',recovery:'EXPLICIT'},subj,obj]})).pass,false]);
+tests.push(['scope_change_rejected',equivalent(E([subj,obj],{scope:{quantifier:'ALL>NEG'}}),E([subj,obj],{scope:{quantifier:'NEG>ALL'}})).pass,false]);
+tests.push(['honorific_only_not_role_change',equivalent(E([subj,obj],{realization:{honorific:false}}),E([subj,obj],{realization:{honorific:true}})).pass,true]);
+tests.push(['double_subject_naive_count_not_used',validate(graph({event:{predicate:'좋다'},roles:[{role:'EXPERIENCER',referent:'A',recovery:'EXPLICIT'},{role:'STIMULUS',referent:'B',recovery:'EXPLICIT'}],realization:{surface_np_count:3}})).pass,true]);
+const validation={pass:tests.every(([,got,exp])=>got===exp),tests:tests.map(([id,got,expected])=>({id,got,expected,pass:got===expected}))};
+fs.mkdirSync('experiments/g9-p36-r10/final',{recursive:true});fs.writeFileSync('experiments/g9-p36-r10/final/arg_controls.json',JSON.stringify(validation,null,2)+'\n');console.log(JSON.stringify(validation,null,2));if(!validation.pass)process.exitCode=2;
