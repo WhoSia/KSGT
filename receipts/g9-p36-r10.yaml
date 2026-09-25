@@ -1,0 +1,62 @@
+phase: KSGT Generation IX G9-P36-R10
+title: Two-Bucket Support-Geometry Synthesis, Relation-Motif Retirement-or-Reconstitution Decision, Native-Korean Zero-Argument Gold Intake, Argument-Recoverability Graph Induction & Language-Neutral Semantic-Reuse Return-to-Origin Court
+verdict: PASS_RELATION_MOTIF_LANE_RETIRED_ARG_CONSTITUTION_SEALED_EXTERNAL_GOLD_WAIT
+status: ACTIVE_EXTERNAL_GOLD_HOLD
+date: 2026-09-26
+lineage:
+  inherited_phase: G9-P36-R9
+  inherited_science_commit: 487deb3d76fd26ae165938b6b2475443e96165d2
+  inherited_active_head: 5d9ff1adb9085a009e0b2f459a8808a8350c5d23
+  preseal_commit: 5743577910b8d2ed3d72f72c070be6419f47b6be
+  run: 36188933352
+  run_head: 3c3ea524ec0ff06fe0411e5ce672f04b9507e13c
+  artifact_id: 10887348897
+  artifact_sha256: e7dd6efc1d0b9e363280804e626d091b3cde0702b2c3da29127df4813003875f
+  canonical_pre_gold_result: cff1ae1e78976ae3a40bee33a00ce91db09596e5
+two_bucket:
+  total_papers: 1213
+  r8_primary: 1
+  r9_primary: 0
+  buckets_with_primary: 1
+  family_primary_increment_total: 0
+  authority_bearing_relation_motif_lane: RETIRED
+  diagnostic_probe: RETAINED
+  threshold_retuning: FORBIDDEN
+korean_arg:
+  version: KSGT-ARG-v1
+  controls: PASS_10_OF_10
+  semantic_reuse_candidate: ROLE_EVENT_RECOVERABILITY_GRAPH
+  laws:
+    - PARTICLE_IS_EVIDENCE_NOT_ROLE_IDENTITY
+    - WORD_ORDER_IS_REALIZATION_NOT_ROLE_IDENTITY
+    - NULLNESS_IS_REALIZATION_NOT_ARGUMENT_ABSENCE
+    - RECOVERABILITY_IS_DISTINCT_FROM_OMISSION_PREFERENCE
+    - TOPIC_FOCUS_IS_DISTINCT_FROM_ARGUMENT_IDENTITY
+    - DEPENDENCY_RELATION_IS_DISTINCT_FROM_LINEAR_ORDER
+    - CAUSATIVE_MAY_ADD_CAUSER_AND_IS_NOT_MERE_SURFACE_VARIATION
+    - SCRAMBLING_EQUIVALENCE_REQUIRES_ROLE_AND_SCOPE_PRESERVATION
+gold_intake:
+  source_2020: REQUESTED_WAITING
+  source_2025: REQUESTED_WAITING
+  state: WAITING_FOR_OFFICIAL_BYTES
+  scoring_authorized: false
+  raw_hash_inventory_schema_before_scoring: REQUIRED
+notion:
+  canonical_pre_gold_receipt: 3e6ef561-cf92-813b-b7aa-e4c400931aca
+  harvest: 3e6ef561-cf92-8147-9278-dc46c7142d0e
+authority:
+  relation_motif_authority_lane: RETIRED
+  relation_motif_diagnostic_probe: RETAINED
+  predicate_family_authority: NOT_PROMOTED
+  micro_reuse: NOT_PROMOTED
+  cross_language_reuse: HOLD
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+waiting:
+  - NIKL Zero Anaphora Corpus 2020 annotation bytes
+  - NIKL Zero Anaphora Corpus 2025 annotation bytes
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+resume_same_phase_when:
+  - NIKL official annotation bytes arrive
+user_action: NONE_UNTIL_NIKL_DELIVERY
