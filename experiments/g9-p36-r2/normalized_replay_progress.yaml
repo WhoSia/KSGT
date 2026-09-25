@@ -1,0 +1,37 @@
+phase: KSGT Generation IX G9-P36-R2
+artifact: NORMALIZED_FULL121_REPLAY_PROGRESS
+state: CHECKPOINT_055_OF_121
+adapter_preseal: f2eba9342fb427fdfaa99199e859a6cbbaaf8614
+compiler: C3-R2-STRUCTURAL-v1
+processed:
+  paper_indices: 0-54
+  papers: 55
+  response_files: 81
+  units: 2757
+  obligations: 2663
+  unresolved_obligations: 845
+adapter:
+  existing_chunk_files: 74
+  reconstructed_chunk_files: 7
+candidates:
+  W0: 18
+  W1: 1
+  W2: 2
+  certifiable: 0
+batch_metrics:
+  - {range: "000-004", files: 7, units: 248, obligations: 240, unresolved: 88, W0: 0, W1: 0, W2: 0}
+  - {range: "005-009", files: 9, units: 487, obligations: 466, unresolved: 147, W0: 4, W1: 0, W2: 0}
+  - {range: "010-014", files: 8, units: 288, obligations: 280, unresolved: 77, W0: 1, W1: 0, W2: 1}
+  - {range: "015-019", files: 7, units: 181, obligations: 177, unresolved: 58, W0: 0, W1: 0, W2: 0}
+  - {range: "020-024", files: 8, units: 261, obligations: 241, unresolved: 56, W0: 6, W1: 0, W2: 0}
+  - {range: "025-029", files: 7, units: 245, obligations: 241, unresolved: 88, W0: 1, W1: 0, W2: 0}
+  - {range: "030-034", files: 8, units: 285, obligations: 272, unresolved: 86, W0: 3, W1: 0, W2: 0}
+  - {range: "035-039", files: 9, units: 139, obligations: 136, unresolved: 35, W0: 0, W1: 0, W2: 0}
+  - {range: "040-044", files: 6, units: 256, obligations: 247, unresolved: 72, W0: 1, W1: 0, W2: 1}
+  - {range: "045-049", files: 6, units: 161, obligations: 161, unresolved: 52, W0: 2, W1: 1, W2: 0}
+  - {range: "050-054", files: 6, units: 206, obligations: 202, unresolved: 86, W0: 0, W1: 0, W2: 0}
+authority:
+  prior_pre_adapter_batches_000_024: SUPERSEDED
+  deletion_frontier: NOT_REOPENED_THROUGH_INDEX_54
+human_recruitment: HOLD
+safe_transport: ABSTAIN
