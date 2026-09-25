@@ -1,0 +1,1 @@
+Trigger full-121 proof-carrying fusion replay after frozen R3 preseal.
