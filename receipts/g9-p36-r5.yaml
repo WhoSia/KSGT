@@ -76,9 +76,9 @@ authority:
   natural_frontier: NOT_REOPENED
 external_state:
   github: COMPLETE
-  notion_canonical_receipt: HOLD_CONNECTOR_UNAVAILABLE
-  notion_harvest: HOLD_CONNECTOR_UNAVAILABLE
+  notion_canonical_receipt: 3e6ef561-cf92-8158-846d-f7b7d24f2c02
+  notion_harvest: 3e6ef561-cf92-81c6-986a-eff74b6c8aa5
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-user_action: NOT_REQUIRED_FOR_GITHUB_CLOSURE
+user_action: NONE
