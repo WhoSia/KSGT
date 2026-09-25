@@ -1,0 +1,135 @@
+phase: KSGT Generation IX G9-P36-R7
+title: Relation-Bearing Semantic Factor Promotion, Lexical-Collision Null Court, Role–Event Motif Canonicalization, Native-Korean Particle/Scrambling/Ellipsis Transport, Cross-Corpus Sparse Retrieval & Micro-Reuse Authority Court
+date: 2026-09-25
+status: PROSPECTIVE_CHARTER_SEALED_BEFORE_R7_NATURAL_SCORING
+inherits:
+  phase: G9-P36-R6
+  verdict: PASS_MACRO_SPARSE_MICRO_REDUNDANT_FUSION_AUTHORITY_NOT_REOPENED
+  r6_science_commit: d7ebd87fead4f2e7f2cb4b189d1cf0c7b7152d0c
+  r6_active_head: b98eef7c58ef6b9b011d40779b4b6a6ae5b84c02
+  r6_factor_reuse_pairs: 114
+  r6_same_grounding_reuse_pairs: 0
+  r6_microfusion_candidates: 0
+  r6_semantic_equivalence_authority: NOT_ESTABLISHED
+source_constitution:
+  re3align:
+    corpus: EMNLP24_LOCAL_TEST_118
+    epistemic_status: PREVIOUSLY_OPENED_R5_R6_SOURCE_NEW_PRESEALED_R7_QUESTION
+    fresh_source_claim: FORBIDDEN
+    raw_policy: PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
+  korean:
+    primary_corpus: StyleKQC
+    source: wicho/stylekqc-style
+    license: CC_BY_SA_4_0_AS_REPORTED_BY_HUGGING_FACE
+    authority: HUMAN_FORMAL_INFORMAL_REWRITE_PAIRS_WITH_CORE_CONTENT_AND_INTENT_PRESERVATION_BY_CORPUS_CONSTRUCTION
+    freshness_claim: FORBIDDEN_PUBLIC_CORPUS_PREVIOUSLY_PARTLY_INSPECTED
+representation:
+  base: C3-R4-BCOG-v1
+  inherited_quotient: C3-R6-OFQ-v1
+  r7_motif: C3-R7-REM-v1
+role_event_motif:
+  event_shell:
+    - frame_class
+    - predicate
+    - ARG0
+    - authority
+    - polarity
+    - modal
+    - quantifier_scope
+    - condition_scope
+    - value_bindings
+  role_edge: ARG1
+  relation_edge: ORDERED_ARG1_BIGRAM
+  grounding: RETAINED_AS_PROVENANCE_NOT_PART_OF_REUSE_KEY
+  exact_surface: RETAINED_AS_CUSTODY_NOT_PART_OF_REUSE_KEY
+promotion_court:
+  exclude:
+    - exact_normalized_surface_duplicates
+    - token_only_overlap
+    - same_factor_set_without_contextual_difference
+    - protected_core_mismatch
+  exploratory_edge_recurrence:
+    requires:
+      - same_event_shell
+      - at_least_one_shared_ordered_ARG1_bigram
+      - nonidentical_normalized_surface
+      - complementary_larger_context
+    authority: DISCOVERY_ONLY
+  primary_chain_recurrence:
+    requires:
+      - same_event_shell
+      - at_least_two_shared_ordered_ARG1_bigrams
+      - at_least_one_connected_chain_a_to_b_and_b_to_c
+      - nonidentical_normalized_surface
+      - complementary_larger_context
+      - different_paper
+    authority_if_null_passes: MICRO_REUSE_AUTHORITY
+  micro_reuse_authority_does_not_imply:
+    - semantic_equivalence
+    - paraphrase_equivalence
+    - fusion_authority
+    - deletion_authority
+lexical_collision_null:
+  id: C3-R7-ADJACENCY-NULL-v1
+  replicates: 127
+  seed: KSGT-G9-P36-R7-20260925
+  permutation_unit: q_core_bucket
+  preservation:
+    - left_token_marginals
+    - right_token_marginals
+    - item_edge_counts
+    - event_shell
+  destroyed_relation: observed_ARG1_adjacency
+  primary_statistic: cross_paper_nonidentical_complementary_connected_chain_pair_count
+  p_value: plus_one_permutation_p
+  alpha: 0.05
+  promotion_rule: OBSERVED_GT_NULL_P95_AND_P_LE_0_05_AND_OBSERVED_GT_0
+controls:
+  synthetic_positive_chain_minimum: 4
+  lexical_collision_negatives_minimum: 8
+  protected_core_negatives_minimum: 6
+  metamorphic_minimum: 4
+  independent_count_crosscheck: REQUIRED
+  inherited_R3_proof_controls: 12_OF_12_REQUIRED_FOR_ANY_FUSION_STATEMENT
+korean_transport:
+  corpus_authority: PAIRED_HUMAN_REWRITE_RELATION
+  semantic_authority_source: DATASET_CONSTRUCTION_NOT_HEURISTIC_PARSER
+  particle_court:
+    observable: SAME_LEXICAL_STEM_WITH_PARTICLE_REALIZATION_CHANGE
+    authority: NATURAL_SURFACE_TRANSPORT_WITNESS
+  scrambling_court:
+    observable: ORDER_INVERSION_AMONG_SHARED_CONTENT_STEMS
+    minimum_shared_unique_stems: 3
+    authority: WORD_ORDER_TRANSPORT_PROXY
+  ellipsis_court:
+    observable: SURFACE_DELETION_COMPATIBLE_PROXY_ONLY
+    authority: HOLD_TRUE_ELLIPSIS_WITHOUT_ZERO_ARGUMENT_ANNOTATION
+  protected:
+    - core_content_pair_identity
+    - directive_intent_act
+  forbidden:
+    - fluency_as_semantic_authority
+    - heuristic_particle_or_order_features_as_meaning_gold
+cross_corpus_sparse_retrieval:
+  principle: SAME_AUDITABLE_TYPED_POSTING_ARCHITECTURE_DIFFERENT_LANGUAGE_SPECIFIC_OBSERVABLES
+  re3align: event_shell_plus_relation_motif_postings
+  stylekqc: act_plus_particle_stripped_content_anchor_postings
+  global_all_pairs: FORBIDDEN
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  human_recruitment: HOLD
+literature_donors:
+  - title: A Linguistically-Informed Annotation Strategy for Korean Semantic Role Labeling
+    source: ACL_2024_LREC_MAIN_65
+  - title: Annotating Particle Realization and Ellipsis in Korean
+    source: ACL_W12_3625
+  - title: Korean Quantification in Abstract Meaning Representation
+    doi: 10.63317/59emmmbd28tn
+  - title: An Improved Approach for Semantic Graph Composition with CCG
+    doi: 10.18653/v1/W19-0405
+  - title: StyleKQC A Style-Variant Paraphrase Corpus for Korean Questions and Commands
+    source: ACL_2022_LREC_1_771
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
