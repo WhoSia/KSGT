@@ -1,0 +1,28 @@
+name: G9-P36-R4 boundary localization
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/g9-p36-r4/boundary_trigger.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Localize post-representation boundary
+        run: node experiments/g9-p36-r4/boundary_diagnostic.mjs | tee experiments/g9-p36-r4/boundary-diagnostic.log
+      - name: Commit diagnostic
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/g9-p36-r4/final/boundary_diagnostic.json experiments/g9-p36-r4/boundary-diagnostic.log
+          git commit -m 'G9-P36-R4: localize post-representation compatibility boundary'
+          git pull --rebase origin main
+          git push origin HEAD:main
