@@ -14,56 +14,58 @@ active_research_line:
   - G9-P36-R7
   - G9-P36-R8
   - G9-P36-R9
-current_phase: G9-P36-R9
-current_verdict: PASS_FRESH_REPLICATION_PRIMARY_EMPTY_CROSS_LANGUAGE_AUTHORITY_CLOSED
+  - G9-P36-R10
+current_phase: G9-P36-R10
+current_status: ACTIVE_EXTERNAL_GOLD_HOLD
+current_verdict: PASS_RELATION_MOTIF_LANE_RETIRED_ARG_CONSTITUTION_SEALED_EXTERNAL_GOLD_WAIT
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
-  relation_motif: C3-R9-LD-v1
-  lexical_null: C3-R9-LINEAGE-AWARE-ADJACENCY-NULL-v1
+  retired_relation_motif_probe: C3-R9-LD-v1_DIAGNOSTIC_ONLY
+  argument_recoverability_graph: KSGT-ARG-v1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
-  preseal_commit: 0f3ec73f5812e776f8c8e315a90ed35e4a554fcb
-current_science_commit: 487deb3d76fd26ae165938b6b2475443e96165d2
-canonical_result_commit: bce8a2ca13aea38073ee51d4144f049bfd7c3b4b
-public_replay_run: 36141327598
-public_replay_head: 4a282c21cfebdea3d782a53fdcd34b2d8b80fccc
+  preseal_commit: 5743577910b8d2ed3d72f72c070be6419f47b6be
+current_science_commit: c3172ec38195cbf688c01d08ecc7da9362232df4
+canonical_pre_gold_result_commit: cff1ae1e78976ae3a40bee33a00ce91db09596e5
+public_replay_run: 36188933352
+public_replay_head: 3c3ea524ec0ff06fe0411e5ce672f04b9507e13c
 public_replay_artifact:
-  id: 10867220375
-  sha256: 2552f145846f2ac4bb2fc9f639180e26ccd253dc142ec1cb3d8778a5516429d3
-notion_receipt: 3e6ef561-cf92-810e-b22c-c2f687228caf
-harvest_receipt: 3e6ef561-cf92-8168-995c-da6e9311f1c4
-r9_fresh_replication:
-  corpus: RMR-75K
-  selected_papers: 618
-  r8_overlap_papers: 0
-  deduped_rows: 8409
-  analyzed_segments: 65492
-  representation_complete_segments: 22914
-  exact_exploratory_pairs: 134
-  exact_chain_pairs: 10
-  exact_base_primary_pairs: 0
-  family_exploratory_pairs: 161
-  family_chain_pairs: 10
-  family_base_primary_pairs: 0
-  family_minus_exact_primary: 0
-r9_lineage_boundary:
-  openreview_author_metadata_resolved: 0
-  openreview_access_state: HTTP_403_SOURCE_HOLD
-  effect_on_primary_empty_result: NONE
-  independent_authority_for_nonzero_pairs: NOT_ADJUDICATED
-r9_korean_zero_argument:
-  source: NIKL Zero Anaphora Corpus 2020
-  catalog_recovered: true
-  annotation_bytes_acquired: false
-  gold_execution_ready: false
-  authority: USER_ACQUISITION_REQUIRED
-r9_authority:
-  micro_reuse: NOT_PROMOTED
-  semantic_equivalence: NOT_GRANTED
-  fusion: NOT_GRANTED
-  cross_language_reuse: HOLD
+  id: 10887348897
+  sha256: e7dd6efc1d0b9e363280804e626d091b3cde0702b2c3da29127df4813003875f
+notion_receipt: 3e6ef561-cf92-813b-b7aa-e4c400931aca
+harvest_receipt: 3e6ef561-cf92-8147-9278-dc46c7142d0e
+r10_two_bucket_synthesis:
+  total_papers: 1213
+  r8_primary_pairs: 1
+  r9_primary_pairs: 0
+  buckets_with_primary: 1
+  predicate_family_primary_increment_total: 0
+  relation_motif_authority_lane: RETIRED
+  relation_motif_diagnostic_probe: RETAINED
+  threshold_retuning: FORBIDDEN
+r10_korean_arg:
+  version: KSGT-ARG-v1
+  controls: PASS_10_OF_10
+  semantic_reuse_candidate: ROLE_EVENT_RECOVERABILITY_GRAPH
+  zero_surface_is_not_argument_absence: true
+  particle_is_not_role_identity: true
+  word_order_is_not_role_identity: true
+  recoverability_is_not_omission_preference: true
+  topic_focus_is_not_argument_identity: true
+  dependency_is_not_linear_order: true
+r10_gold_intake:
+  source_2020: REQUESTED_WAITING
+  source_2025: REQUESTED_WAITING
+  state: WAITING_FOR_OFFICIAL_BYTES
+  scoring_authorized: false
+  resume_same_phase_on_arrival: true
+authority:
   MNMC_5: RETAINED
   MNMC_6: NOT_JUSTIFIED
+  relation_motif_authority_lane: RETIRED
+  predicate_family_authority: NOT_PROMOTED
+  micro_reuse: NOT_PROMOTED
+  cross_language_reuse: HOLD
 github_actions_policy:
   r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
   contents_permission: READ
@@ -78,8 +80,8 @@ language_policy:
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
 waiting:
+  - NIKL Zero Anaphora Corpus 2020 annotation bytes
+  - NIKL Zero Anaphora Corpus 2025 annotation bytes
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-  - NIKL Zero Anaphora Corpus 2020 annotation bytes
-next_phase: G9-P36-R10
-next_phase_title: Two-Bucket Support-Geometry Synthesis, Relation-Motif Retirement-or-Reconstitution Decision, Native-Korean Zero-Argument Gold Intake, Argument-Recoverability Graph Induction & Language-Neutral Semantic-Reuse Return-to-Origin Court
+next_action: RESUME_G9_P36_R10_WHEN_NIKL_OFFICIAL_BYTES_ARRIVE
