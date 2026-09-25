@@ -1,13 +1,13 @@
 {
   "validation": {
     "positive": true,
-    "adversarial_negative": false,
+    "adversarial_negative": true,
     "metamorphic": true,
     "composition_order": true,
     "controlled_roundtrip": true,
     "indexed_search": true,
     "korean_boundary": true,
-    "pass": false
+    "pass": true
   },
   "indexed_equivalence": {
     "pass": true,

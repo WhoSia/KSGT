@@ -1,0 +1,100 @@
+{
+  "phase": "KSGT Generation IX G9-P36-R6",
+  "verdict": "PASS_MACRO_SPARSE_MICRO_REDUNDANT_FUSION_AUTHORITY_NOT_REOPENED",
+  "whole_obligation_law": "MACRO_SPARSE_MICRO_REDUNDANT",
+  "representation": "C3-R6-OFQ-v1_over_C3-R4-BCOG-v1",
+  "inherited_r5_selector": "C3-R5-RNSN-v1_IMMUTABLE_NEGATIVE_REFERENCE",
+  "proof_kernel": "C3-R3-FUSION-PROOF-v1_RUST_UNCHANGED",
+  "source_epistemic_status": "NEW_PROSPECTIVE_QUESTION_ON_PREVIOUSLY_OPENED_R5_SOURCE_NOT_FRESH_SOURCE_WORLD_CONTACT",
+  "extraction": {
+    "phase": "G9-P36-R6",
+    "source_status": "PREVIOUSLY_OPENED_BY_R5_NOT_FRESH_SOURCE_WORLD_CONTACT",
+    "papers_expected": 118,
+    "papers_discovered": 118,
+    "response_files": 165,
+    "obligations": 4849,
+    "representation_complete_obligations": 1301,
+    "quotient_complete_obligations": 1295,
+    "inherited_r5_whole_obligation_neighbors": 0,
+    "factor_reuse": {
+      "items": 4849,
+      "raw_factor_postings": 15778,
+      "qualified_factor_postings": 15778,
+      "raw_factor_pair_collisions": 52921,
+      "core_qualified_reuse_pairs": 114,
+      "same_grounding_reuse_pairs": 0,
+      "cross_grounding_reuse_pairs": 114,
+      "global_all_pairs": false,
+      "same_paper_pairs": 29,
+      "cross_paper_pairs": 85,
+      "factor_family_posting_counts": {
+        "ARG1_BIGRAM": 5480,
+        "ARG1_TOKEN": 10144,
+        "DOC_POINTER": 154
+      }
+    },
+    "microfusion": {
+      "items": 4849,
+      "qualified_grounded_postings": 15778,
+      "shared_pair_keys": 0,
+      "microfusion_candidate_pairs": 0,
+      "global_all_pairs": false,
+      "controlled_roundtrip_pass_pairs": 0,
+      "controlled_roundtrip_fail_pairs": 0
+    }
+  },
+  "natural_factor_reuse_pairs": 114,
+  "natural_microfusion_candidates": 0,
+  "controlled_roundtrip_natural": 0,
+  "proof_objects": 0,
+  "certified_natural_microfusion": 0,
+  "proof_reason_counts": {},
+  "frontier_reopened": false,
+  "validation": {
+    "source_118": true,
+    "presealed_controls": true,
+    "sparse_factor_index": true,
+    "inherited_r3_controls": true,
+    "proof_count": true,
+    "roundtrip_required": true,
+    "pass": true
+  },
+  "laws": [
+    "FACTOR_REUSE_DOES_NOT_IMPLY_FUSION_AUTHORITY",
+    "WHOLE_OBLIGATION_SPARSITY_DOES_NOT_ENTAIL_SUBGRAPH_SPARSITY",
+    "CROSS_GROUNDING_REDUNDANCY_IS_REUSE_EVIDENCE_NOT_FUSION_AUTHORITY",
+    "PROTECTED_CORE_AND_GROUNDING_REMAIN_CONJUNCTIVE_FOR_MICROFUSION",
+    "FLUENCY_CANNOT_CREATE_SEMANTIC_AUTHORITY"
+  ],
+  "korean_boundary": {
+    "semantic_quotient": "LANGUAGE_NEUTRAL",
+    "particle_word_order_ellipsis": "DOWNSTREAM_REALIZATION_ONLY",
+    "protected_geometry": [
+      "predicate",
+      "ARG0",
+      "ARG1",
+      "force",
+      "scope",
+      "authority",
+      "value",
+      "grounding"
+    ],
+    "synthetic_realization_controls": 5,
+    "natural_korean_semantic_authority": "NOT_ESTABLISHED_BY_R6_ENGLISH_CORPUS"
+  },
+  "scalability": {
+    "global_all_pairs": false,
+    "method": "typed_hash_postings_plus_sparse_content_index",
+    "independent_count_crosscheck": "REQUIRED_BY_WORKFLOW"
+  },
+  "authority": {
+    "MNMC_5": "RETAINED",
+    "MNMC_6": "NOT_JUSTIFIED",
+    "safe_transport": "ABSTAIN",
+    "human_recruitment": "HOLD"
+  },
+  "waiting": [
+    "P33-R2 legacy strict-30 exact row crosswalk",
+    "PeerJ external transport"
+  ]
+}

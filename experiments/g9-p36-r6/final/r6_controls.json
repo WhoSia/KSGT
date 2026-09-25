@@ -145,23 +145,10 @@
     },
     {
       "id": "arg0",
-      "pass": false,
+      "pass": true,
       "result": {
-        "pass": true,
-        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
-        "shared": [
-          "ARG1_BIGRAM|detailed>analysis",
-          "ARG1_TOKEN|analysis",
-          "ARG1_TOKEN|detailed"
-        ],
-        "left_unique": [
-          "ARG1_BIGRAM|analysis>discussion",
-          "ARG1_TOKEN|discussion"
-        ],
-        "right_unique": [
-          "ARG1_BIGRAM|analysis>appendix",
-          "ARG1_TOKEN|appendix"
-        ]
+        "pass": false,
+        "reason": "PROTECTED_CORE_MISMATCH"
       }
     },
     {
@@ -408,12 +395,12 @@
   ],
   "validation": {
     "positive": true,
-    "adversarial_negative": false,
+    "adversarial_negative": true,
     "metamorphic": true,
     "composition_order": true,
     "controlled_roundtrip": true,
     "indexed_search": true,
     "korean_boundary": true,
-    "pass": false
+    "pass": true
   }
 }
