@@ -23,8 +23,9 @@ const primary=eng.relation_motif.primary_cross_paper_connected_chain_pairs||0;
 const nullPass=eng.lexical_collision_null?.pass===true;
 let verdict;
 if(!validation.pass)verdict='FAIL_R7_VALIDATION';
-else if(primary>0&&nullPass)verdict='PASS_RELATION_MOTIF_MICRO_REUSE_AUTHORITY_PROMOTED_FUSION_AUTHORITY_CLOSED';
-else verdict='PASS_LEXICAL_COLLISION_NULL_REJECTS_MICRO_REUSE_PROMOTION';
+else if(primary===0)verdict='PASS_RELATION_MOTIF_PRIMARY_EMPTY_MICRO_REUSE_NOT_PROMOTED';
+else if(nullPass)verdict='PASS_RELATION_MOTIF_MICRO_REUSE_AUTHORITY_PROMOTED_FUSION_AUTHORITY_CLOSED';
+else verdict='PASS_LEXICAL_COLLISION_NULL_DEFEATS_MICRO_REUSE_PROMOTION';
 const result={
  phase:'KSGT Generation IX G9-P36-R7',
  verdict,
