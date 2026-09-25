@@ -1,0 +1,2642 @@
+{
+  "positive": [
+    {
+      "id": "simple_transitive",
+      "text": "We show the improvement.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We show the improvement.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REPORT_EVIDENCE",
+          "predicate": "show",
+          "surfacePredicate": "show",
+          "arg0": "We",
+          "arg1": "the improvement.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "the improvement"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:show:ARG0",
+          "EDGE:show:ARG1",
+          "FORCE:MODAL:ASSERT@show",
+          "FORCE:POLARITY:POS@show",
+          "PRED:REPORT_EVIDENCE:show",
+          "ROLE:ARG1:TOK:improvement"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "revision_commitment",
+      "text": "We will add an ablation discussion.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "directed_comparison",
+      "text": "Model A is higher than Model B.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is higher than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "entity_value_unit",
+      "text": "Model A has latency 12 ms.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A has latency 12 ms.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "has",
+          "arg0": "Model A",
+          "arg1": "latency 12 ms.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "model a",
+          "arg1_canon": "latency 12 ms"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [
+            {
+              "entity": "latency",
+              "value": "12",
+              "unit": "ms",
+              "targetRole": "ARG1"
+            }
+          ],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:have:ARG0",
+          "EDGE:have:ARG1",
+          "FORCE:MODAL:ASSERT@have",
+          "FORCE:POLARITY:POS@have",
+          "PRED:EXISTENCE_POSSESSION:have",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:12>ms",
+          "ROLE:ARG1:BIGRAM:latency>12",
+          "ROLE:ARG1:TOK:12",
+          "ROLE:ARG1:TOK:latency",
+          "ROLE:ARG1:TOK:ms",
+          "VALUE:latency=12:ms@ARG1:have"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "negated_relation",
+      "text": "Model A is not better than Model B.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is not better than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "better_than",
+          "surfacePredicate": "is not better than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "better_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "NEG",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:better_than:ARG0",
+          "EDGE:better_than:ARG1",
+          "FORCE:MODAL:ASSERT@better_than",
+          "FORCE:POLARITY:NEG@better_than",
+          "PRED:COMPARISON:better_than",
+          "RELATION:DIRECTION:better_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "modal_relation",
+      "text": "We may report additional results.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We may report additional results.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "report",
+          "surfacePredicate": "report",
+          "arg0": "AUTHOR",
+          "arg1": "additional results.",
+          "modal": "may",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "additional results"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "may",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "ACTION:report@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:report:ARG0",
+          "EDGE:report:ARG1",
+          "FORCE:MODAL:may@report",
+          "FORCE:POLARITY:POS@report",
+          "PRED:REVISION_ACTION:report",
+          "ROLE:ARG1:TOK:additional"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "conditioned_relation",
+      "text": "Under setting S, Model A is higher than Model B.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Under setting S, Model A is higher than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "under setting s",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "under setting s"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 6
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model",
+          "SCOPE:CONDITION:under setting s@higher_than"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "quantified_argument",
+      "text": "All models are stable.",
+      "pass": true,
+      "result": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "All models are stable.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "All models",
+          "arg1": "stable.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "all models",
+          "arg1_canon": "stable"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [
+            "all"
+          ],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:are:ARG0",
+          "EDGE:are:ARG1",
+          "FORCE:MODAL:ASSERT@are",
+          "FORCE:POLARITY:POS@are",
+          "PRED:COPULAR_ATTRIBUTE:are",
+          "ROLE:ARG0:TOK:models",
+          "ROLE:ARG1:TOK:stable",
+          "SCOPE:QUANT:all@ARG0:are"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    }
+  ],
+  "negative": [
+    {
+      "id": "argument_role_swap",
+      "a": "Model A is higher than Model B.",
+      "b": "Model B is higher than Model A.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is higher than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model B is higher than Model A.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model B",
+          "arg1": "Model A.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model b",
+          "arg1_canon": "model a"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:BIGRAM:model>b",
+          "ROLE:ARG0:TOK:b",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "relation_direction_swap",
+      "a": "Model A is higher than Model B.",
+      "b": "Model A is lower than Model B.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is higher than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is lower than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "lower_than",
+          "surfacePredicate": "is lower than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "lower_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:lower_than:ARG0",
+          "EDGE:lower_than:ARG1",
+          "FORCE:MODAL:ASSERT@lower_than",
+          "FORCE:POLARITY:POS@lower_than",
+          "PRED:COMPARISON:lower_than",
+          "RELATION:DIRECTION:lower_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "value_binding_swap",
+      "a": "Model A has latency 12 ms.",
+      "b": "Model A has latency 20 ms.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "VALUE_BINDING_CONFLICT"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A has latency 12 ms.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "has",
+          "arg0": "Model A",
+          "arg1": "latency 12 ms.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "model a",
+          "arg1_canon": "latency 12 ms"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [
+            {
+              "entity": "latency",
+              "value": "12",
+              "unit": "ms",
+              "targetRole": "ARG1"
+            }
+          ],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:have:ARG0",
+          "EDGE:have:ARG1",
+          "FORCE:MODAL:ASSERT@have",
+          "FORCE:POLARITY:POS@have",
+          "PRED:EXISTENCE_POSSESSION:have",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:12>ms",
+          "ROLE:ARG1:BIGRAM:latency>12",
+          "ROLE:ARG1:TOK:12",
+          "ROLE:ARG1:TOK:latency",
+          "ROLE:ARG1:TOK:ms",
+          "VALUE:latency=12:ms@ARG1:have"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A has latency 20 ms.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "has",
+          "arg0": "Model A",
+          "arg1": "latency 20 ms.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "model a",
+          "arg1_canon": "latency 20 ms"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [
+            {
+              "entity": "latency",
+              "value": "20",
+              "unit": "ms",
+              "targetRole": "ARG1"
+            }
+          ],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:have:ARG0",
+          "EDGE:have:ARG1",
+          "FORCE:MODAL:ASSERT@have",
+          "FORCE:POLARITY:POS@have",
+          "PRED:EXISTENCE_POSSESSION:have",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:20>ms",
+          "ROLE:ARG1:BIGRAM:latency>20",
+          "ROLE:ARG1:TOK:20",
+          "ROLE:ARG1:TOK:latency",
+          "ROLE:ARG1:TOK:ms",
+          "VALUE:latency=20:ms@ARG1:have"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "unit_binding_swap",
+      "a": "Model A has latency 12 ms.",
+      "b": "Model A has latency 12 s.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "VALUE_BINDING_CONFLICT"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A has latency 12 ms.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "has",
+          "arg0": "Model A",
+          "arg1": "latency 12 ms.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "model a",
+          "arg1_canon": "latency 12 ms"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [
+            {
+              "entity": "latency",
+              "value": "12",
+              "unit": "ms",
+              "targetRole": "ARG1"
+            }
+          ],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:have:ARG0",
+          "EDGE:have:ARG1",
+          "FORCE:MODAL:ASSERT@have",
+          "FORCE:POLARITY:POS@have",
+          "PRED:EXISTENCE_POSSESSION:have",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:12>ms",
+          "ROLE:ARG1:BIGRAM:latency>12",
+          "ROLE:ARG1:TOK:12",
+          "ROLE:ARG1:TOK:latency",
+          "ROLE:ARG1:TOK:ms",
+          "VALUE:latency=12:ms@ARG1:have"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A has latency 12 s.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "has",
+          "arg0": "Model A",
+          "arg1": "latency 12 s.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "model a",
+          "arg1_canon": "latency 12 s"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [
+            {
+              "entity": "latency",
+              "value": "12",
+              "unit": "s",
+              "targetRole": "ARG1"
+            }
+          ],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:have:ARG0",
+          "EDGE:have:ARG1",
+          "FORCE:MODAL:ASSERT@have",
+          "FORCE:POLARITY:POS@have",
+          "PRED:EXISTENCE_POSSESSION:have",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:12>s",
+          "ROLE:ARG1:BIGRAM:latency>12",
+          "ROLE:ARG1:TOK:12",
+          "ROLE:ARG1:TOK:latency",
+          "ROLE:ARG1:TOK:s",
+          "VALUE:latency=12:s@ARG1:have"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "comparator_direction_swap",
+      "a": "Model A is better than Model B.",
+      "b": "Model A is worse than Model B.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is better than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "better_than",
+          "surfacePredicate": "is better than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "better_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:better_than:ARG0",
+          "EDGE:better_than:ARG1",
+          "FORCE:MODAL:ASSERT@better_than",
+          "FORCE:POLARITY:POS@better_than",
+          "PRED:COMPARISON:better_than",
+          "RELATION:DIRECTION:better_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is worse than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "worse_than",
+          "surfacePredicate": "is worse than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "worse_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:worse_than:ARG0",
+          "EDGE:worse_than:ARG1",
+          "FORCE:MODAL:ASSERT@worse_than",
+          "FORCE:POLARITY:POS@worse_than",
+          "PRED:COMPARISON:worse_than",
+          "RELATION:DIRECTION:worse_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "negation_scope_swap",
+      "a": "Model A is not better than Model B.",
+      "b": "Model A is better than Model B.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is not better than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "better_than",
+          "surfacePredicate": "is not better than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "better_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "NEG",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:better_than:ARG0",
+          "EDGE:better_than:ARG1",
+          "FORCE:MODAL:ASSERT@better_than",
+          "FORCE:POLARITY:NEG@better_than",
+          "PRED:COMPARISON:better_than",
+          "RELATION:DIRECTION:better_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is better than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "better_than",
+          "surfacePredicate": "is better than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "better_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:better_than:ARG0",
+          "EDGE:better_than:ARG1",
+          "FORCE:MODAL:ASSERT@better_than",
+          "FORCE:POLARITY:POS@better_than",
+          "PRED:COMPARISON:better_than",
+          "RELATION:DIRECTION:better_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "modal_scope_swap",
+      "a": "We may report additional results.",
+      "b": "We will report additional results.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We may report additional results.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "report",
+          "surfacePredicate": "report",
+          "arg0": "AUTHOR",
+          "arg1": "additional results.",
+          "modal": "may",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "additional results"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "may",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "ACTION:report@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:report:ARG0",
+          "EDGE:report:ARG1",
+          "FORCE:MODAL:may@report",
+          "FORCE:POLARITY:POS@report",
+          "PRED:REVISION_ACTION:report",
+          "ROLE:ARG1:TOK:additional"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will report additional results.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "report",
+          "surfacePredicate": "report",
+          "arg0": "AUTHOR",
+          "arg1": "additional results.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "additional results"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "ACTION:report@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:report:ARG0",
+          "EDGE:report:ARG1",
+          "FORCE:MODAL:will@report",
+          "FORCE:POLARITY:POS@report",
+          "PRED:REVISION_ACTION:report",
+          "ROLE:ARG1:TOK:additional"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "quantifier_scope_swap",
+      "a": "All models are stable.",
+      "b": "Some models are stable.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "All models are stable.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "All models",
+          "arg1": "stable.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "all models",
+          "arg1_canon": "stable"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [
+            "all"
+          ],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:are:ARG0",
+          "EDGE:are:ARG1",
+          "FORCE:MODAL:ASSERT@are",
+          "FORCE:POLARITY:POS@are",
+          "PRED:COPULAR_ATTRIBUTE:are",
+          "ROLE:ARG0:TOK:models",
+          "ROLE:ARG1:TOK:stable",
+          "SCOPE:QUANT:all@ARG0:are"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Some models are stable.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "Some models",
+          "arg1": "stable.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "some models",
+          "arg1_canon": "stable"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [
+            "some"
+          ],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:are:ARG0",
+          "EDGE:are:ARG1",
+          "FORCE:MODAL:ASSERT@are",
+          "FORCE:POLARITY:POS@are",
+          "PRED:COPULAR_ATTRIBUTE:are",
+          "ROLE:ARG0:TOK:models",
+          "ROLE:ARG1:TOK:stable",
+          "SCOPE:QUANT:some@ARG0:are"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "condition_attachment_swap",
+      "a": "Under setting S, Model A is higher than Model B.",
+      "b": "Under setting T, Model A is higher than Model B.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Under setting S, Model A is higher than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "under setting s",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "under setting s"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 6
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model",
+          "SCOPE:CONDITION:under setting s@higher_than"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Under setting T, Model A is higher than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "under setting t",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "under setting t"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 6
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model",
+          "SCOPE:CONDITION:under setting t@higher_than"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "authority_commitment_swap",
+      "a": "We will add an ablation discussion.",
+      "b": "The results show an ablation discussion.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "The results show an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REPORT_EVIDENCE",
+          "predicate": "show",
+          "surfacePredicate": "show",
+          "arg0": "The results",
+          "arg1": "an ablation discussion.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "the results",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:show:ARG0",
+          "EDGE:show:ARG1",
+          "FORCE:MODAL:ASSERT@show",
+          "FORCE:POLARITY:POS@show",
+          "PRED:REPORT_EVIDENCE:show",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "same_anchor_different_graph",
+      "a": "Model A is higher than Model B.",
+      "b": "Model B is higher than Model A.",
+      "pass": true,
+      "core": {
+        "pass": false,
+        "reason": "CORE_BINDING_MISMATCH"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model A is higher than Model B.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model A",
+          "arg1": "Model B.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model a",
+          "arg1_canon": "model b"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:BIGRAM:model>b",
+          "ROLE:ARG1:TOK:b",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Model B is higher than Model A.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "COMPARISON",
+          "predicate": "higher_than",
+          "surfacePredicate": "is higher than",
+          "arg0": "Model B",
+          "arg1": "Model A.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "direction": "higher_than",
+          "arg0_canon": "model b",
+          "arg1_canon": "model a"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 4
+        },
+        "atoms": [
+          "AUTH:AUTHOR_ASSERTION",
+          "EDGE:higher_than:ARG0",
+          "EDGE:higher_than:ARG1",
+          "FORCE:MODAL:ASSERT@higher_than",
+          "FORCE:POLARITY:POS@higher_than",
+          "PRED:COMPARISON:higher_than",
+          "RELATION:DIRECTION:higher_than",
+          "ROLE:ARG0:BIGRAM:model>b",
+          "ROLE:ARG0:TOK:b",
+          "ROLE:ARG0:TOK:model",
+          "ROLE:ARG1:TOK:model"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "fluent_missing_edge",
+      "a": "We will add an ablation discussion.",
+      "b": "We will add a discussion.",
+      "pass": true,
+      "core": {
+        "pass": true,
+        "reason": "COMPATIBLE_CORE"
+      },
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add a discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "a discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "a discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 2
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "antecedent_swap",
+      "pass": true,
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": "ANT-A",
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": "ANT-B",
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "attachment_swap",
+      "pass": true,
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "ATT-A",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "right": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 3
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "ATT-B",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "id": "unbound_residual_content",
+      "pass": true,
+      "left": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "Regarding additional ablation details.",
+        "complete": false,
+        "unresolved": [
+          "NO_BINDABLE_PREDICATE"
+        ],
+        "atoms": []
+      }
+    }
+  ],
+  "controlled_fusion": {
+    "pass": true,
+    "result": {
+      "pass": true,
+      "reason": "ROUNDTRIP_GRAPH_EQUAL",
+      "text": "We will add an ablation discussion and a robustness discussion.",
+      "compiled": {
+        "version": "C3-R4-BCOG-v1",
+        "text": "We will add an ablation discussion and a robustness discussion.",
+        "complete": true,
+        "unresolved": [],
+        "frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "an ablation discussion and a robustness discussion.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "an ablation discussion and a robustness discussion"
+        },
+        "force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "values": {
+          "bindings": [],
+          "pointers": [],
+          "unresolved": []
+        },
+        "custody": {
+          "pass": true,
+          "missing": [],
+          "token_count": 5
+        },
+        "atoms": [
+          "ACTION:add@AUTHOR",
+          "AUTH:AUTHOR_COMMITMENT",
+          "EDGE:add:ARG0",
+          "EDGE:add:ARG1",
+          "FORCE:MODAL:will@add",
+          "FORCE:POLARITY:POS@add",
+          "PRED:REVISION_ACTION:add",
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:BIGRAM:robustness>discussion",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:discussion",
+          "ROLE:ARG1:TOK:robustness"
+        ],
+        "grounding": {
+          "review_root": "review::x",
+          "response_chunk_id": "chunk",
+          "structural_role": "REVISION_COMMITMENT",
+          "block_type": "PROSE",
+          "attachment_key": "same",
+          "antecedent_key": null,
+          "local_scope_key": "p"
+        },
+        "representation_certificate": {
+          "surface_custody": true,
+          "predicate_argument_bound": true,
+          "value_binding_complete": true,
+          "force_scope_closed": true,
+          "grounding_present": true,
+          "pass": true
+        }
+      },
+      "union_atoms": [
+        "ACTION:add@AUTHOR",
+        "AUTH:AUTHOR_COMMITMENT",
+        "EDGE:add:ARG0",
+        "EDGE:add:ARG1",
+        "FORCE:MODAL:will@add",
+        "FORCE:POLARITY:POS@add",
+        "PRED:REVISION_ACTION:add",
+        "ROLE:ARG1:BIGRAM:ablation>discussion",
+        "ROLE:ARG1:BIGRAM:robustness>discussion",
+        "ROLE:ARG1:TOK:ablation",
+        "ROLE:ARG1:TOK:discussion",
+        "ROLE:ARG1:TOK:robustness"
+      ],
+      "gain_chars": 9
+    }
+  },
+  "metamorphic": [
+    {
+      "id": "punctuation_invariance",
+      "pass": true
+    },
+    {
+      "id": "whitespace_invariance",
+      "pass": true
+    },
+    {
+      "id": "surface_alias_binding",
+      "pass": true
+    },
+    {
+      "id": "role_change_not_invariant",
+      "pass": true
+    }
+  ],
+  "validation": {
+    "positive": true,
+    "negative": true,
+    "fusion": true,
+    "metamorphic": true,
+    "pass": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "phase": "G9-P36-R4",
+  "compiler": "C3-R4-BCOG-v1",
+  "papers_discovered": 121,
+  "response_files": 173,
+  "obligations": 5579,
+  "unresolved_obligations": 1877,
+  "eligible_pair_windows": 8071,
+  "candidates": 8071,
+  "representation_complete_pairs": 1205,
+  "controlled_roundtrip_witnesses": 0
+}

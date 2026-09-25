@@ -1,0 +1,21 @@
+{
+  "verdict": "PASS_BINDING_GRAPH_RECOVERED_NATURAL_FRONTIER_NOT_REOPENED",
+  "validation": {
+    "source_papers_121": true,
+    "frozen_r3_window_exact": true,
+    "r4_representation_controls": true,
+    "inherited_r3_controls": true,
+    "inherited_r3_closure": true,
+    "f1_certificates_have_roundtrip_witness": true,
+    "pass": true
+  },
+  "frontier_reopened": false,
+  "certifiable_natural": 0,
+  "representation_complete_pairs": 1205,
+  "controlled_roundtrip_witnesses": 0,
+  "reason_counts": {
+    "REPRESENTATION_SUFFICIENCY_VETO": 6866,
+    "GROUNDING_MISMATCH": 1025,
+    "FORCE_VALUE_ACTION_MISMATCH": 180
+  }
+}
