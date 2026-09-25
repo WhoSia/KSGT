@@ -48,7 +48,7 @@ const validation={
  positive_chain:pos.stats.primary_cross_paper_connected_chain_pairs===4,
  lexical_collision_rejected:lex.stats.primary_cross_paper_connected_chain_pairs===0,
  protected_core_rejected:cn.stats.exploratory_edge_recurrence_pairs===0,
- metamorphic_exact_surface_excluded:!lex.witnesses.some(x=>x.left.id==='l4a'||x.right.id==='l4b'),
+ metamorphic_exact_surface_excluded:!lex.witnesses.some(x=>{const s=new Set([x.left.id,x.right.id]);return s.has('l4a')&&s.has('l4b');}),
  indexed_bruteforce_positive:JSON.stringify({e:pos.stats.exploratory_edge_recurrence_pairs,c:pos.stats.connected_chain_pairs_any_paper,p:pos.stats.primary_cross_paper_connected_chain_pairs})===JSON.stringify({e:brutePos.exploratory_edge_recurrence_pairs,c:brutePos.connected_chain_pairs_any_paper,p:brutePos.primary_cross_paper_connected_chain_pairs}),
  indexed_bruteforce_lexical:JSON.stringify({e:lex.stats.exploratory_edge_recurrence_pairs,c:lex.stats.connected_chain_pairs_any_paper,p:lex.stats.primary_cross_paper_connected_chain_pairs})===JSON.stringify({e:bruteLex.exploratory_edge_recurrence_pairs,c:bruteLex.connected_chain_pairs_any_paper,p:bruteLex.primary_cross_paper_connected_chain_pairs}),
  indexed_bruteforce_core:JSON.stringify({e:cn.stats.exploratory_edge_recurrence_pairs,c:cn.stats.connected_chain_pairs_any_paper,p:cn.stats.primary_cross_paper_connected_chain_pairs})===JSON.stringify({e:bruteCore.exploratory_edge_recurrence_pairs,c:bruteCore.connected_chain_pairs_any_paper,p:bruteCore.primary_cross_paper_connected_chain_pairs})
