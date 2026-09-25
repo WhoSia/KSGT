@@ -3,6 +3,8 @@ import path from 'node:path';
 const [outDir]=process.argv.slice(2);if(!outDir)throw new Error('usage: node adjudicate_r4.mjs <outdir>');
 const readJsonl=p=>fs.existsSync(p)?fs.readFileSync(p,'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse):[];
 const natural=readJsonl(path.join(outDir,'proof_objects.jsonl'));
+const candidates=readJsonl(path.join(outDir,'candidates.jsonl'));
+const candidateById=new Map(candidates.map(x=>[x.id,x]));
 const r3controls=readJsonl(path.join(outDir,'r3_control_proofs.jsonl'));
 const r4controls=JSON.parse(fs.readFileSync(path.join(outDir,'r4_representation_controls.json'),'utf8'));
 const extraction=JSON.parse(fs.readFileSync(path.join(outDir,'extraction_summary.json'),'utf8'));
@@ -18,10 +20,7 @@ const r3audit=r3controls.map(x=>({id:x.id,expected:expected.get(x.id),observed:x
 const reasons={},ops={};for(const p of natural){reasons[p.reason]=(reasons[p.reason]||0)+1;ops[p.operation]=(ops[p.operation]||0)+1;}
 const certs=natural.filter(x=>x.verdict==='CERTIFY');
 const f1certs=certs.filter(x=>x.operation==='F1_CONJUNCTIVE_FUSION');
-const f1Roundtrip=f1certs.every(x=>{
- const row=readJsonl(path.join(outDir,'candidates.jsonl')).find(r=>r.id===x.id);
- return !!row?.bcog?.witness?.pass;
-});
+const f1Roundtrip=f1certs.every(x=>!!candidateById.get(x.id)?.bcog?.witness?.pass);
 const validation={
  source_papers_121:extraction.papers_discovered===121,
  frozen_r3_window_exact:extraction.eligible_pair_windows===8071&&extraction.candidates===8071,
