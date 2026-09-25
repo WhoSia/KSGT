@@ -1,0 +1,90 @@
+// AUTO-BUNDLED FROM FROZEN R2 ADAPTER + COMPILER. NO SCIENTIFIC LOGIC CHANGED.\n// KSGT G9-P36-R2 source-schema adapter v1.
+// This adapter is scientific-input normalization only. It does not inspect
+// candidate outcomes or alter C3-R2 semantic/deletion rules.
+
+export const ADAPTER_CONTRACT=Object.freeze({
+  version:"R2-RESPONSE-CHUNK-ADAPTER-v1",
+  existing_chunks:"PRESERVE_EXACTLY",
+  absent_chunks:"RECONSTRUCT_FROM_AUTHOR_RESPONSE_MARKDOWN",
+  quote_rule:"maximal consecutive lines beginning with >",
+  reply_rule:"text after quote block until next quote block",
+  no_quote_rule:"single WHOLE_RESPONSE chunk with synthetic review root",
+  pre_quote_preamble:"ignored unless no quote blocks",
+  unresolved:"ABSTAIN"
+});
+
+function stripQuote(line){ return line.replace(/^\s*>\s?/,""); }
+
+export function ensureResponseChunks(doc){
+  if(Array.isArray(doc.response_chunk_nodes_by_quote) && doc.response_chunk_nodes_by_quote.length){
+    return {...doc,_r2_adapter:{mode:"EXISTING",version:ADAPTER_CONTRACT.version}};
+  }
+  const chunks=[];
+  let seq=0;
+  const ars=Array.isArray(doc.author_response)?doc.author_response:[];
+  for(let ai=0; ai<ars.length; ai++){
+    const ar=ars[ai]||{}, text=String(ar.comment||"").replace(/\r/g,"");
+    if(!text.trim()) continue;
+    const lines=text.split("\n");
+    const qblocks=[];
+    for(let i=0;i<lines.length;){
+      if(!/^\s*>/.test(lines[i])){ i++; continue; }
+      const qs=[],start=i;
+      while(i<lines.length && /^\s*>/.test(lines[i])){ qs.push(stripQuote(lines[i])); i++; }
+      const replyStart=i, rs=[];
+      while(i<lines.length && !/^\s*>/.test(lines[i])){ rs.push(lines[i]); i++; }
+      const quoted=qs.join("\n").trim(), reply=rs.join("\n").trim();
+      if(quoted && reply) qblocks.push({quoted_review:quoted,author_reply:reply,start,replyStart});
+    }
+    if(qblocks.length){
+      for(let qi=0;qi<qblocks.length;qi++){
+        const b=qblocks[qi], raw=ar._raw_response_id||("author_response_"+ai);
+        chunks.push({
+          ix:`${doc.doc_name}_${doc.review_id}_${raw}_ADAPTER_RQ-${seq++}`,
+          content:b.quoted_review+"\n\n"+b.author_reply,
+          ntype:"response_chunk",
+          src_ix:raw,
+          start:null,end:null,label:{},
+          quoted_review:b.quoted_review,
+          author_reply:b.author_reply
+        });
+      }
+    } else {
+      const raw=ar._raw_response_id||("author_response_"+ai);
+      chunks.push({
+        ix:`${doc.doc_name}_${doc.review_id}_${raw}_ADAPTER_WHOLE-${seq++}`,
+        content:text,
+        ntype:"response_chunk",
+        src_ix:raw,
+        start:null,end:null,label:{},
+        quoted_review:"__WHOLE_REVIEW__",
+        author_reply:text
+      });
+    }
+  }
+  return {...doc,response_chunk_nodes_by_quote:chunks,
+    _r2_adapter:{mode:"RECONSTRUCTED",version:ADAPTER_CONTRACT.version,chunks:chunks.length}};
+}
+\n\n// KSGT G9-P36-R2 C3-R2-STRUCTURAL-v1
+export const CONTRACT=Object.freeze({version:"C3-R2-STRUCTURAL-v1",mnmc:["A","R","F","V","G"],unresolved:"ABSTAIN",certifiableRoles:["ASSERTION","REVISION_COMMITMENT"],structuralDeletion:"ABSTAIN",sameReviewRequired:true,contextCompleteRequired:true});
+const STOP=new Set(("a an the and or but if then than to of in on at for from with without by as is are was were be been being do does did have has had can could may might must should would will this that these those it they we our you your reviewer authors paper work study result results").split(/\s+/));
+const MODAL=/\b(may|might|could|should|would|must|can|will|intend|plan|expect|aim)\b/i,NEG=/\b(no|not|never|without|neither|nor|cannot|can't|doesn't|didn't|isn't|aren't|wasn't|weren't)\b/i,COMP=/\b(at least|at most|less than|more than|higher than|lower than|greater than|smaller than|increase|decrease|outperform|underperform|better|worse|equal|same as)\b/i,CONDITION=/\b(if|when|unless|under|given|conditional on|provided that|for .* setting|in .* setting)\b/i;
+const DEICTIC=/\b(this|that|these|those|it|they|them|their|the results?|these results?|the statistics?|this issue|this concern|this point|the above|the following|this discussion)\b/i;
+const POINTER=/\b(fig(?:ure)?\.?\s*\d+|table\s*\d+|section\s*\d+(?:\.\d+)*|appendix\s*[A-Z0-9]+)\b/ig;
+const VALUE=/(?:[<>]=?\s*)?\b\d+(?:\.\d+)?(?:e[-+]?\d+)?\s*(?:%|percent|ms|s|sec(?:ond)?s?|min(?:ute)?s?|hours?|MB|GB|KB|tokens?|words?|parameters?|samples?|points?|×|x)?\b/ig;
+const ENTITY=/\b(?:GPT-?\d(?:\.\d+)?|LLaMA(?:-?\d+[Bb])?|Mistral(?:-?\d+[Bb])?|Gemma\d?(?:-?\d+[Bb])?|Qwen(?:\s*\d+(?:\.\d+)?[Bb](?:-Chat|-Instruct)?)?|BERTScore|BERT|RoBERTa|GRU|LSTM|FAISS|BLEU(?:-\d)?|METEOR|ROUGE(?:-[12L])?|F1|accuracy|latency|cost|parameters?|samples?|annotators?|dataset|model|method|baseline|metric|score|rate|time)\b/ig;
+const INSERT_MARK=/\b(here is what we will add|lines? added|add(?:ed|ing)? .* manuscript|include .* revised version|will add .* paper|wish to add|camera-ready version)\b/i;
+const COMMIT=/\b(we (?:will|plan to|intend to|promise to|would like to)\s+(?:add|revise|update|include|conduct|perform|release|clarify|explain|report|compare|discuss|provide|correct|expand|change|remove|recreate|cite)|we added|we revised|we updated|we included|we corrected)\b/i;
+export function normalize(s){return (s||"").normalize("NFKC").toLowerCase().replace(/\bfig\.?(?=\s*\d)/g,"figure").replace(/\bpercent\b/g,"%").replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/\s+/g," ").trim();}
+function canonAlias(s){return normalize(s).replace(/[\s\"'“”‘’.,;:!?()[\]{}*_]+/g," ").trim();}
+function splitSentences(s){let x=(s||"").replace(/\b(Fig)\./g,"$1§").replace(/\b(e\.g|i\.e)\./gi,m=>m.replace(/\./g,"§"));return x.split(/(?<=[.!?])\s+|\n{2,}/).map(z=>z.replace(/§/g,".").trim()).filter(z=>z.length>3);}
+function skeleton(s){return normalize(s).replace(POINTER," ").replace(VALUE," ").match(/[\p{L}\p{N}_+-]+/gu)?.filter(t=>!STOP.has(t)&&t.length>2).slice(0,24)||[];}
+function scope(s){const z=normalize(s);return {polarity:NEG.test(z)?"NEG":"POS",modal:(z.match(MODAL)||["ASSERT"])[0].toLowerCase(),comparator:(z.match(COMP)||["NONE"])[0].toLowerCase(),condition:(z.match(CONDITION)||["NONE"])[0].toLowerCase()};}
+function vals(s){POINTER.lastIndex=0;VALUE.lastIndex=0;ENTITY.lastIndex=0;const pointers=[...(s.match(POINTER)||[])].map(normalize);const values=[...(s.match(VALUE)||[])].map(normalize).filter(v=>!pointers.some(p=>p.includes(v)));const entities=[...(s.match(ENTITY)||[])].map(normalize);return {pointers,values,entities};}
+function action(s){const m=normalize(s).match(/\b(?:we|authors?)\s+(?:will|plan to|intend to|have|has|had|are|were|promise to|would like to)?\s*(add|revise|update|include|conduct|perform|release|clarify|explain|report|compare|discuss|provide|correct|expand|change|remove|recreate|open-source|cite)\b\s*(.{0,100})/);return m?{verb:m[1],object:skeleton(m[2]).slice(0,10)}:null;}
+function blockKey(type,lead,idx){return type+"::"+canonAlias((lead||"").slice(0,180))+"::"+idx;}
+export function structuralize(text){const lines=(text||"").replace(/\r/g,"").split("\n"),blocks=[];let prose=[],lead="",fence=null,table=[],idx=0,insertMode=false;const isFence=s=>/^\s*\x60\x60\x60/.test(s);const flushProse=()=>{if(!prose.length)return;const raw=prose.join("\n").trim();if(raw){blocks.push({type:"PROSE",raw,lead,idx:idx++,insertMode});if(INSERT_MARK.test(raw))insertMode=true;lead=raw.slice(0,220);}prose=[];};const flushTable=()=>{if(!table.length)return;blocks.push({type:"TABLE",raw:table.join("\n"),lead,idx:idx++,insertMode});table=[];};for(const ln of lines){if(fence){if(isFence(ln)){fence.raw+="\n"+ln;blocks.push({type:"CODE",raw:fence.raw,lead:fence.lead,idx:idx++,insertMode:fence.insertMode});fence=null;}else fence.raw+="\n"+ln;continue;}if(isFence(ln)){flushProse();flushTable();fence={raw:ln,lead,insertMode};continue;}if(/^\s*\|.*\|\s*$/.test(ln)){flushProse();table.push(ln);continue;}else flushTable();if(/^\s*#{1,6}\s+/.test(ln)){flushProse();lead=ln.replace(/^\s*#{1,6}\s+/,"").trim();blocks.push({type:"HEADING",raw:ln,lead,idx:idx++,insertMode});continue;}if(!ln.trim()){flushProse();continue;}prose.push(ln);}flushProse();flushTable();if(fence)blocks.push({type:"CODE",raw:fence.raw,lead:fence.lead,idx:idx++,insertMode:fence.insertMode});return blocks;}
+function blockRole(b){const n=normalize(b.raw),l=normalize(b.lead||"");if(b.type==="TABLE")return "TABLE";if(b.type==="CODE"){if(/\bquestion:|answer choices:|guess \d+:|output:/.test(n))return "EXAMPLE";return "CODE";}if(b.insertMode||INSERT_MARK.test(l)||/^\s*[“"]/.test(b.raw.trim()))return "MANUSCRIPT_INSERTION";if(COMMIT.test(n))return "REVISION_COMMITMENT";return "ASSERTION";}
+function units(b){if(b.type==="HEADING")return [];if(b.type==="TABLE")return b.raw.split("\n").map(x=>x.trim()).filter(x=>/^\|/.test(x)&&!/^\|?\s*:?-{2,}/.test(x.replace(/\s/g,"")));if(b.type==="CODE")return b.raw.split("\n").map(x=>x.trim()).filter(x=>x&&!/^\x60\x60\x60/.test(x));return splitSentences(b.raw);}
+export function compileUnit(text,ctx){const n=normalize(text),sk=skeleton(text),sv=scope(text),vv=vals(text),act=action(text),unresolved=[];let antecedent=null;if(DEICTIC.test(n)){if(ctx.prevResolvedSignature)antecedent=ctx.prevResolvedSignature;else unresolved.push("UNRESOLVED_ANTECEDENT");}if(vv.values.length&&vv.entities.length===0&&!antecedent)unresolved.push("UNRESOLVED_VALUE_ENTITY");if(act&&act.object.length===0)unresolved.push("UNRESOLVED_ACTION_OBJECT");const substantive=sk.length>=2||vv.values.length>0||!!act;if(!substantive)return {substantive:false};const graph={A:sk.slice(0,8),R:sk.slice(8,16),F:sv,V:{values:vv.values,entities:vv.entities},ACTION:act},semanticSignature=JSON.stringify(graph),G={review_root:ctx.reviewRoot,response_chunk_id:ctx.chunkId,block_type:ctx.blockType,structural_role:ctx.role,attachment_key:ctx.attachmentKey,antecedent_key:antecedent,local_scope_key:ctx.localScopeKey};return {substantive:true,norm:n,alias:canonAlias(text),graph,semanticSignature,G,unresolved,text};}
+export function replayDocument(doc){const obligations=[];let totalUnits=0;for(const node of Object.values(doc.response_chunk_nodes_by_quote||{})){const reviewRoot=doc.review_id+"::"+normalize(node.quoted_review||""),blocks=structuralize(node.author_reply||"");let prevResolvedSignature=null;for(const b of blocks){const role=blockRole(b),attachmentKey=canonAlias((b.lead||"").slice(0,180)),localScopeKey=blockKey(b.type,b.lead,b.idx);for(const u of units(b)){totalUnits++;const c=compileUnit(u,{reviewRoot,chunkId:node.ix||"",blockType:b.type,role,attachmentKey,localScopeKey,prevResolvedSignature});if(c.substantive){obligations.push(c);if(!c.unresolved.length&&role!=="TABLE"&&role!=="CODE"&&role!=="EXAMPLE")prevResolvedSignature=c.semanticSignature;}}}}const groups=[],byNorm=new Map(),byAlias=new Map(),byGraph=new Map(),seen=new Set();for(const o of obligations){const root=o.G.review_root;for(const pair of [[byNorm,root+"::"+o.norm],[byAlias,root+"::"+o.alias],[byGraph,root+"::"+o.semanticSignature]]){const m=pair[0],k=pair[1];if(!m.has(k))m.set(k,[]);m.get(k).push(o);}}const push=(type,v)=>{const ids=v.map(x=>x.G.response_chunk_id+"|"+x.G.local_scope_key+"|"+x.norm).sort().join("||"),k=type+"::"+ids;if(!seen.has(k)){seen.add(k);groups.push({type,items:v});}};for(const v of byNorm.values())if(v.length>1)push("W0",v);for(const v of byAlias.values())if(v.length>1&&new Set(v.map(x=>x.norm)).size>1)push("W1",v);for(const v of byGraph.values())if(v.length>1&&new Set(v.map(x=>x.alias)).size>1)push("W2",v);const adjudicated=groups.map(g=>{const contexts=g.items.map(x=>JSON.stringify({role:x.G.structural_role,attach:x.G.attachment_key,ant:x.G.antecedent_key,block:x.G.block_type,chunk:x.G.response_chunk_id})),sameContext=new Set(contexts).size===1,noUnresolved=g.items.every(x=>!x.unresolved.length),roleOK=g.items.every(x=>CONTRACT.certifiableRoles.includes(x.G.structural_role)),surfaceOK=g.type==="W0"||g.type==="W1",structural=g.items.some(x=>["TABLE","CODE","EXAMPLE"].includes(x.G.structural_role)||["TABLE","CODE"].includes(x.G.block_type)),certifiable=sameContext&&noUnresolved&&roleOK&&surfaceOK&&!structural;return {...g,certifiable,reason:certifiable?"CONTEXT_COMPLETE_DUPLICATE":(!sameContext?"STRUCTURAL_CONTEXT_MISMATCH":!noUnresolved?"UNRESOLVED_CONTEXT":!roleOK?"ROLE_NOT_CERTIFIABLE":!surfaceOK?"GRAPH_ONLY_NOT_SELF_AUTHORIZING":structural?"STRUCTURAL_CONTAINER_ABSTAIN":"ABSTAIN")};});return {totalUnits,obligations,groups:adjudicated};}
