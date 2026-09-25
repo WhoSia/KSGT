@@ -1,0 +1,419 @@
+{
+  "law": {
+    "version": "C3-R6-OFQ-v1",
+    "base": "C3-R4-BCOG-v1",
+    "reuseAuthority": "DESCRIPTIVE_REDUNDANCY_ONLY",
+    "microfusionCrossGrounding": false,
+    "globalAllPairs": false
+  },
+  "positive": [
+    {
+      "id": "p1",
+      "pass": true,
+      "coupling": {
+        "pass": true,
+        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
+        "shared": [
+          "ARG1_BIGRAM|detailed>analysis",
+          "ARG1_TOKEN|analysis",
+          "ARG1_TOKEN|detailed"
+        ],
+        "left_unique": [
+          "ARG1_BIGRAM|analysis>discussion",
+          "ARG1_TOKEN|discussion"
+        ],
+        "right_unique": [
+          "ARG1_BIGRAM|analysis>appendix",
+          "ARG1_TOKEN|appendix"
+        ]
+      }
+    },
+    {
+      "id": "p2",
+      "pass": true,
+      "coupling": {
+        "pass": true,
+        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
+        "shared": [
+          "ARG1_BIGRAM|detailed>robustness",
+          "ARG1_TOKEN|detailed",
+          "ARG1_TOKEN|robustness"
+        ],
+        "left_unique": [
+          "ARG1_BIGRAM|robustness>analysis",
+          "ARG1_TOKEN|analysis"
+        ],
+        "right_unique": [
+          "ARG1_BIGRAM|robustness>appendix",
+          "ARG1_TOKEN|appendix"
+        ]
+      }
+    },
+    {
+      "id": "p3",
+      "pass": true,
+      "coupling": {
+        "pass": true,
+        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
+        "shared": [
+          "ARG1_BIGRAM|comprehensive>error",
+          "ARG1_TOKEN|comprehensive",
+          "ARG1_TOKEN|error"
+        ],
+        "left_unique": [
+          "ARG1_BIGRAM|error>analysis",
+          "ARG1_TOKEN|analysis"
+        ],
+        "right_unique": [
+          "ARG1_BIGRAM|error>appendix",
+          "ARG1_TOKEN|appendix"
+        ]
+      }
+    },
+    {
+      "id": "p4",
+      "pass": true,
+      "coupling": {
+        "pass": true,
+        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
+        "shared": [
+          "ARG1_BIGRAM|detailed>ablation",
+          "ARG1_TOKEN|ablation",
+          "ARG1_TOKEN|detailed"
+        ],
+        "left_unique": [
+          "ARG1_BIGRAM|ablation>analysis",
+          "ARG1_TOKEN|analysis"
+        ],
+        "right_unique": [
+          "ARG1_BIGRAM|ablation>appendix",
+          "ARG1_TOKEN|appendix"
+        ]
+      }
+    },
+    {
+      "id": "p5",
+      "pass": true,
+      "coupling": {
+        "pass": true,
+        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
+        "shared": [
+          "ARG1_BIGRAM|detailed>qualitative",
+          "ARG1_TOKEN|detailed",
+          "ARG1_TOKEN|qualitative"
+        ],
+        "left_unique": [
+          "ARG1_BIGRAM|qualitative>analysis",
+          "ARG1_TOKEN|analysis"
+        ],
+        "right_unique": [
+          "ARG1_BIGRAM|qualitative>appendix",
+          "ARG1_TOKEN|appendix"
+        ]
+      }
+    },
+    {
+      "id": "p6",
+      "pass": true,
+      "coupling": {
+        "pass": true,
+        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
+        "shared": [
+          "ARG1_BIGRAM|detailed>limitation",
+          "ARG1_TOKEN|detailed",
+          "ARG1_TOKEN|limitation"
+        ],
+        "left_unique": [
+          "ARG1_BIGRAM|limitation>analysis",
+          "ARG1_TOKEN|analysis"
+        ],
+        "right_unique": [
+          "ARG1_BIGRAM|limitation>appendix",
+          "ARG1_TOKEN|appendix"
+        ]
+      }
+    }
+  ],
+  "negative": [
+    {
+      "id": "predicate",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "PROTECTED_CORE_MISMATCH"
+      }
+    },
+    {
+      "id": "arg0",
+      "pass": false,
+      "result": {
+        "pass": true,
+        "reason": "FACTOR_INDEPENDENCE_NOT_YET_REFUTED",
+        "shared": [
+          "ARG1_BIGRAM|detailed>analysis",
+          "ARG1_TOKEN|analysis",
+          "ARG1_TOKEN|detailed"
+        ],
+        "left_unique": [
+          "ARG1_BIGRAM|analysis>discussion",
+          "ARG1_TOKEN|discussion"
+        ],
+        "right_unique": [
+          "ARG1_BIGRAM|analysis>appendix",
+          "ARG1_TOKEN|appendix"
+        ]
+      }
+    },
+    {
+      "id": "authority",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "PROTECTED_CORE_MISMATCH"
+      }
+    },
+    {
+      "id": "modal",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "PROTECTED_CORE_MISMATCH"
+      }
+    },
+    {
+      "id": "ground_chunk",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "GROUNDING_MISMATCH"
+      }
+    },
+    {
+      "id": "attachment",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "GROUNDING_MISMATCH"
+      }
+    },
+    {
+      "id": "antecedent",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "GROUNDING_MISMATCH"
+      }
+    },
+    {
+      "id": "local_scope",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "GROUNDING_MISMATCH"
+      }
+    },
+    {
+      "id": "condition",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "PROTECTED_CORE_MISMATCH"
+      }
+    },
+    {
+      "id": "polarity",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "INCOMPLETE_QUOTIENT_SUPPORT"
+      }
+    },
+    {
+      "id": "value",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "PROTECTED_CORE_MISMATCH"
+      }
+    },
+    {
+      "id": "different_core_same_payload",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "PROTECTED_CORE_MISMATCH"
+      }
+    },
+    {
+      "id": "no_shared_factor",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "NO_SHARED_CONTENT_FACTOR"
+      }
+    }
+  ],
+  "metamorphic": [
+    {
+      "id": "punctuation",
+      "pass": true
+    },
+    {
+      "id": "whitespace",
+      "pass": true
+    },
+    {
+      "id": "quote_surface",
+      "pass": true
+    },
+    {
+      "id": "unicode_nfkc",
+      "pass": true
+    }
+  ],
+  "composition_order": {
+    "pass": true,
+    "union": [
+      "ARG1_BIGRAM|analysis>appendix",
+      "ARG1_BIGRAM|analysis>discussion",
+      "ARG1_BIGRAM|detailed>analysis",
+      "ARG1_TOKEN|analysis",
+      "ARG1_TOKEN|appendix",
+      "ARG1_TOKEN|detailed",
+      "ARG1_TOKEN|discussion"
+    ]
+  },
+  "controlled_roundtrip": {
+    "pass": true,
+    "reason": "ROUNDTRIP_GRAPH_EQUAL",
+    "text": "We will add a detailed analysis discussion and a detailed analysis appendix.",
+    "compiled": {
+      "version": "C3-R4-BCOG-v1",
+      "text": "We will add a detailed analysis discussion and a detailed analysis appendix.",
+      "complete": true,
+      "unresolved": [],
+      "frame": {
+        "class": "REVISION_ACTION",
+        "predicate": "add",
+        "surfacePredicate": "add",
+        "arg0": "AUTHOR",
+        "arg1": "a detailed analysis discussion and a detailed analysis appendix.",
+        "modal": "will",
+        "condition": "NONE",
+        "authority": "AUTHOR_COMMITMENT",
+        "arg0_canon": "author",
+        "arg1_canon": "a detailed analysis discussion and a detailed analysis appendix"
+      },
+      "force": {
+        "polarity": "POS",
+        "modal": "will",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "values": {
+        "bindings": [],
+        "pointers": [],
+        "unresolved": []
+      },
+      "custody": {
+        "pass": true,
+        "missing": [],
+        "token_count": 7
+      },
+      "atoms": [
+        "ACTION:add@AUTHOR",
+        "AUTH:AUTHOR_COMMITMENT",
+        "EDGE:add:ARG0",
+        "EDGE:add:ARG1",
+        "FORCE:MODAL:will@add",
+        "FORCE:POLARITY:POS@add",
+        "PRED:REVISION_ACTION:add",
+        "ROLE:ARG1:BIGRAM:analysis>appendix",
+        "ROLE:ARG1:BIGRAM:analysis>discussion",
+        "ROLE:ARG1:BIGRAM:detailed>analysis",
+        "ROLE:ARG1:TOK:analysis",
+        "ROLE:ARG1:TOK:appendix",
+        "ROLE:ARG1:TOK:detailed",
+        "ROLE:ARG1:TOK:discussion"
+      ],
+      "grounding": {
+        "review_root": "review::r6",
+        "response_chunk_id": "chunk::r6",
+        "structural_role": "REVISION_COMMITMENT",
+        "block_type": "PROSE",
+        "attachment_key": "att",
+        "antecedent_key": "ant",
+        "local_scope_key": "scope"
+      },
+      "representation_certificate": {
+        "surface_custody": true,
+        "predicate_argument_bound": true,
+        "value_binding_complete": true,
+        "force_scope_closed": true,
+        "grounding_present": true,
+        "pass": true
+      }
+    },
+    "union_atoms": [
+      "ACTION:add@AUTHOR",
+      "AUTH:AUTHOR_COMMITMENT",
+      "EDGE:add:ARG0",
+      "EDGE:add:ARG1",
+      "FORCE:MODAL:will@add",
+      "FORCE:POLARITY:POS@add",
+      "PRED:REVISION_ACTION:add",
+      "ROLE:ARG1:BIGRAM:analysis>appendix",
+      "ROLE:ARG1:BIGRAM:analysis>discussion",
+      "ROLE:ARG1:BIGRAM:detailed>analysis",
+      "ROLE:ARG1:TOK:analysis",
+      "ROLE:ARG1:TOK:appendix",
+      "ROLE:ARG1:TOK:detailed",
+      "ROLE:ARG1:TOK:discussion"
+    ],
+    "gain_chars": 9
+  },
+  "indexed_equivalence": {
+    "pass": true,
+    "indexed_reuse": 1,
+    "brute_reuse": 1,
+    "indexed_micro": 1,
+    "brute_micro": 1
+  },
+  "korean_court": [
+    {
+      "id": "particle_topic",
+      "pass": true,
+      "authority": "SYNTHETIC_REALIZATION_INDEPENDENCE_CONTROL_ONLY"
+    },
+    {
+      "id": "scrambling",
+      "pass": true,
+      "authority": "SYNTHETIC_REALIZATION_INDEPENDENCE_CONTROL_ONLY"
+    },
+    {
+      "id": "recoverable_subject_ellipsis",
+      "pass": true,
+      "authority": "SYNTHETIC_REALIZATION_INDEPENDENCE_CONTROL_ONLY"
+    },
+    {
+      "id": "role_change_negative",
+      "pass": true,
+      "authority": "SYNTHETIC_REALIZATION_INDEPENDENCE_CONTROL_ONLY"
+    },
+    {
+      "id": "polarity_negative",
+      "pass": true,
+      "authority": "SYNTHETIC_REALIZATION_INDEPENDENCE_CONTROL_ONLY"
+    }
+  ],
+  "validation": {
+    "positive": true,
+    "adversarial_negative": false,
+    "metamorphic": true,
+    "composition_order": true,
+    "controlled_roundtrip": true,
+    "indexed_search": true,
+    "korean_boundary": true,
+    "pass": false
+  }
+}
