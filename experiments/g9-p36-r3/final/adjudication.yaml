@@ -1,0 +1,17 @@
+phase: KSGT Generation IX G9-P36-R3
+verdict: PASS_WITH_PROOF_SYSTEM_CALIBRATED_NATURAL_FRONTIER_NOT_REOPENED
+papers: 121
+response_files: 173
+obligations: 5579
+candidate_pairs: 8071
+proof_objects: 8071
+certifiable_natural: 0
+representation_sufficiency_veto: 7945
+positive_controls: 3/3_PASS
+adversarial_negative_controls: 9/9_PASS
+r2_regression_validation: PASS
+frontier_reopened: false
+MNMC_5: RETAINED
+MNMC_6: NOT_JUSTIFIED
+natural_language_realization_authority: OUTSIDE_CERTIFICATE
+safe_transport: ABSTAIN
