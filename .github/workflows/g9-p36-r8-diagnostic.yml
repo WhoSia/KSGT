@@ -1,0 +1,23 @@
+name: G9-P36-R8 primary witness diagnostic
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['experiments/g9-p36-r8/diagnostic_trigger.txt']
+permissions: {contents: read}
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Re-materialize frozen RMR holdout
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/r8diag
+          python -m pip install --quiet pandas pyarrow
+          python experiments/g9-p36-r8/prepare_rmr_r8.py /tmp/r8diag
+      - name: Print frozen primary witnesses
+        run: |
+          set -euo pipefail
+          node experiments/g9-p36-r8/diagnose_r8_primary.mjs /tmp/r8diag/rmr_holdout.jsonl
