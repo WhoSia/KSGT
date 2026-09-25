@@ -28,6 +28,20 @@ const negativePairs=[
 ];
 const positiveResults=positives.map(([id,text,g])=>{const r=compileBCOG(text,g);return {id,text,pass:r.representation_certificate?.pass===true,result:r};});
 const negativeResults=negativePairs.map(([id,a,b])=>{const A=compileBCOG(a,G),B=compileBCOG(b,G),c=compatibleCore(A,B);return {id,a,b,pass:!c.pass||JSON.stringify(A.atoms)!==JSON.stringify(B.atoms),core:c,left:A,right:B};});
+{
+ const A=compileBCOG('We will add an ablation discussion.',{...G,antecedent_key:'ANT-A'});
+ const B=compileBCOG('We will add an ablation discussion.',{...G,antecedent_key:'ANT-B'});
+ negativeResults.push({id:'antecedent_swap',pass:A.representation_certificate?.pass===true&&B.representation_certificate?.pass===true&&A.grounding.antecedent_key!==B.grounding.antecedent_key,left:A,right:B});
+}
+{
+ const A=compileBCOG('We will add an ablation discussion.',{...G,attachment_key:'ATT-A'});
+ const B=compileBCOG('We will add an ablation discussion.',{...G,attachment_key:'ATT-B'});
+ negativeResults.push({id:'attachment_swap',pass:A.representation_certificate?.pass===true&&B.representation_certificate?.pass===true&&A.grounding.attachment_key!==B.grounding.attachment_key,left:A,right:B});
+}
+{
+ const A=compileBCOG('Regarding additional ablation details.',G);
+ negativeResults.push({id:'unbound_residual_content',pass:A.representation_certificate?.pass!==true&&(A.unresolved||[]).includes('NO_BINDABLE_PREDICATE'),left:A});
+}
 const fusionA=compileBCOG('We will add an ablation discussion.',G),fusionB=compileBCOG('We will add a robustness discussion.',G),fusion=controlledFusionWitness(fusionA,fusionB);
 const meta=[
  {id:'punctuation_invariance',pass:JSON.stringify(compileBCOG('We will add an ablation discussion!',G).atoms)===JSON.stringify(fusionA.atoms)},
@@ -35,7 +49,12 @@ const meta=[
  {id:'surface_alias_binding',pass:compileBCOG('We will add an ablation discussion.',G).frame?.predicate==='add'},
  {id:'role_change_not_invariant',pass:JSON.stringify(compileBCOG('Model A is higher than Model B.',G).atoms)!==JSON.stringify(compileBCOG('Model B is higher than Model A.',G).atoms)}
 ];
-const result={positive:positiveResults,negative:negativeResults,controlled_fusion:{pass:fusion.pass,result:fusion},metamorphic:meta,validation:{positive:positiveResults.every(x=>x.pass),negative:negativeResults.every(x=>x.pass),fusion:fusion.pass,metamorphic:meta.every(x=>x.pass)}};
+const result={positive:positiveResults,negative:negativeResults,controlled_fusion:{pass:fusion.pass,result:fusion},metamorphic:meta,validation:{
+ positive:positiveResults.length===8&&positiveResults.every(x=>x.pass),
+ negative:negativeResults.length===15&&negativeResults.every(x=>x.pass),
+ fusion:fusion.pass,
+ metamorphic:meta.length===4&&meta.every(x=>x.pass)
+}};
 result.validation.pass=Object.values(result.validation).every(Boolean);
 fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({validation:result.validation,positive:positiveResults.map(x=>[x.id,x.pass]),negative:negativeResults.map(x=>[x.id,x.pass]),fusion:fusion.pass,metamorphic:meta},null,2));
 if(!result.validation.pass)process.exitCode=2;
