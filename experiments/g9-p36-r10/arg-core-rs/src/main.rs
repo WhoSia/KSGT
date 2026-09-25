@@ -33,7 +33,8 @@ struct Request {
     id:String,
     op:String,
     left:Graph,
-    #[serde(default)] right:Option<Graph>
+    #[serde(default)] right:Option<Graph>,
+    #[serde(default)] expected_pass:Option<bool>
 }
 
 fn canonical_json(v:&Value)->Value{
@@ -117,7 +118,12 @@ fn main(){
             },
             _=>panic!("bad op")
         };
-        if !out["pass"].as_bool().unwrap_or(false){ fail=true; }
+        let actual=out["pass"].as_bool().unwrap_or(false);
+        let matched=q.expected_pass.map(|x|x==actual).unwrap_or(actual);
+        let mut out=out;
+        out["expected_pass"]=q.expected_pass.map(Value::Bool).unwrap_or(Value::Null);
+        out["match_expected"]=Value::Bool(matched);
+        if !matched { fail=true; }
         writeln!(w,"{}",serde_json::to_string(&out).unwrap()).unwrap();
     }
     if fail {std::process::exit(3);}
