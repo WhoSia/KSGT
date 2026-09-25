@@ -10,28 +10,46 @@ active_research_line:
   - G9-P36-R3
   - G9-P36-R4
   - G9-P36-R5
-current_phase: G9-P36-R5
-current_verdict: PASS_SELECTION_SHIFT_ESTABLISHED_NATURAL_FRONTIER_NOT_REOPENED
+  - G9-P36-R6
+current_phase: G9-P36-R6
+current_verdict: PASS_MACRO_SPARSE_MICRO_REDUNDANT_FUSION_AUTHORITY_NOT_REOPENED
 current_compiler:
   representation: C3-R4-BCOG-v1
-  neighborhood: C3-R5-RNSN-v1
+  quotient: C3-R6-OFQ-v1
+  inherited_neighborhood_reference: C3-R5-RNSN-v1_IMMUTABLE
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
-  preseal_commit: 399dcfbbd8c3038dcaf308ce4e9c1240c8f3904a
-current_science_commit: 507650c109e95472e4e0461255f20c8b54f3f946
-public_replay_commit: 02c58f590690ce66df739ff6e9c91199031f3c20
-public_replay_run: 36124946807
-boundary_diagnostic_commit: f3bda338c4bdd4e294e48d35b79e05afc5bd311e
-boundary_diagnostic_run: 36125203918
-notion_receipt: HOLD_CONNECTOR_UNAVAILABLE
-harvest_receipt: HOLD_CONNECTOR_UNAVAILABLE
-fresh_holdout:
+  preseal_commit: 6832563abf11ad3f6c5f2a97d8bdc6c9e3f6a5d5
+current_science_commit: d7ebd87fead4f2e7f2cb4b189d1cf0c7b7152d0c
+public_replay_commit: 85c0c4ed074299b6ab07745ddb55cf7f8a944435
+public_replay_run: 36126933256
+boundary_diagnostic_commit: 58976e3bb176f7fe4fe3fc10b0e48d683e66230c
+notion_receipt: 3e6ef561-cf92-8180-91b0-d6b62b437a27
+harvest_receipt: 3e6ef561-cf92-816f-bba4-f3cb8d2c2b24
+r5_notion_recovery:
+  canonical_receipt: 3e6ef561-cf92-8158-846d-f7b7d24f2c02
+  harvest: 3e6ef561-cf92-81c6-986a-eff74b6c8aa5
+source_state:
   source: EMNLP24_LOCAL_TEST
-  conservatively_unexposed_papers: 118
-  positive_link_papers: 115
-  state: OPENED_ONCE_AFTER_R5_PRESEAL_AND_ADJUDICATED
-  pre_R5_preseal_access: VERIFIED_FORBIDDEN
-  representation_native_neighbors: 0
-  legacy_geometry_pairs: 7191
+  papers: 118
+  r5_status: OPENED_ONCE_AFTER_R5_PRESEAL_AND_ADJUDICATED
+  r6_epistemic_status: NEW_PROSPECTIVE_QUESTION_ON_PREVIOUSLY_OPENED_SOURCE_NOT_FRESH_SOURCE_WORLD_CONTACT
+  whole_obligation_neighbors: 0
+  r6_factor_reuse_pairs: 114
+  r6_same_grounding_reuse_pairs: 0
+  r6_microfusion_candidates: 0
+factor_semanticity_boundary:
+  typed_atom_recurrence_established: true
+  semantic_equivalence_authority: NOT_ESTABLISHED
+  token_only_shared_pairs: 84
+  pairs_with_shared_ARG1_bigram: 30
+  complementary_pairs_with_shared_bigram: 10
+  posthoc_threshold_change: FORBIDDEN
+korean_boundary:
+  semantic_quotient: LANGUAGE_NEUTRAL
+  realization: DOWNSTREAM_ONLY
+  particle_scrambling_recoverable_ellipsis: PRESERVE_ROLE_EVENT_GEOMETRY
+  natural_korean_semantic_authority: NOT_YET_ESTABLISHED_BY_R6
+  fluency_as_semantic_authority: FORBIDDEN
 raw_data_policy:
   re3align_raw: DRIVE_OR_PUBLIC_ARCHIVE_ONLY_DO_NOT_COMMIT
   literature_pdfs: COMMONS_DO_NOT_COMMIT
@@ -39,5 +57,8 @@ language_policy:
   status: UNRESTRICTED
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
-next_phase: HOLD_PENDING_NEW_PRESEAL
-next_phase_title: Exact-grounding sparsity decomposition and Korean role-geometry realizer calibration require a new prospective charter
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+next_phase: G9-P36-R7
+next_phase_title: Relation-Bearing Semantic Factor Promotion, Lexical-Collision Null Court, Role–Event Motif Canonicalization, Native-Korean Particle/Scrambling/Ellipsis Transport, Cross-Corpus Sparse Retrieval & Micro-Reuse Authority Court
