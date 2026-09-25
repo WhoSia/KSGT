@@ -5,7 +5,7 @@ const obj={role:'THEME',referent:'B',recovery:'EXPLICIT',particle:'을/를',role
 const tests=[];
 tests.push(['scrambling_same_roles',equivalent(E([subj,obj],{realization:{order:['A','B']}}),E([subj,obj],{realization:{order:['B','A']}})).pass,true]);
 tests.push(['topic_particle_same_role',equivalent(E([{...subj,particle:'은/는'},obj]),E([subj,obj])).pass,true]);
-tests.push(['recoverable_zero_subject',equivalent(E([subj,obj]),E([{...subj,recovery:'ZERO_ANAPHORIC',witness:'antecedent:A',particle:null},obj])).pass,false]);
+tests.push(['recoverable_zero_subject',equivalent(E([subj,obj]),E([{...subj,recovery:'ZERO_ANAPHORIC',witness:'antecedent:A',particle:null},obj])).pass,true]);
 tests.push(['zero_without_witness',validate(E([{...subj,recovery:'ZERO_ANAPHORIC',witness:null},obj])).pass,false]);
 tests.push(['particle_only_role_rejected',validate(E([{...subj,role_source:'PARTICLE_ONLY'},obj])).pass,false]);
 tests.push(['role_change_rejected',equivalent(E([subj,obj]),E([{...subj,role:'AGENT'},obj])).pass,false]);
