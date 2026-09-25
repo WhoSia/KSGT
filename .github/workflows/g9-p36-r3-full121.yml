@@ -1,0 +1,99 @@
+name: G9-P36-R3 full121 proof-carrying fusion replay
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/g9-p36-r3/action_trigger.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Resolve Re3Align v1.0 public bitstream
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://tudatalib.ulb.tu-darmstadt.de/server/api'
+          ITEM='8d57be09-68f3-4d47-aed4-2e555cbcc503'
+          curl -fsSL -H 'Accept: application/hal+json' "$BASE/core/items/$ITEM/bundles?size=100" -o /tmp/bundles.json
+          BUNDLE=$(jq -r '._embedded.bundles[] | select(.name=="ORIGINAL") | .uuid' /tmp/bundles.json | head -1)
+          test -n "$BUNDLE" && test "$BUNDLE" != null
+          curl -fsSL -H 'Accept: application/hal+json' "$BASE/core/bundles/$BUNDLE/bitstreams?size=100" -o /tmp/bitstreams.json
+          CONTENT=$(jq -r '._embedded.bitstreams[] | select(.name=="Re3Align_v1.0.zip") | ._links.content.href' /tmp/bitstreams.json | head -1)
+          test -n "$CONTENT" && test "$CONTENT" != null
+          echo "content=$CONTENT" >> "$GITHUB_OUTPUT"
+      - name: Download and verify frozen source
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 --retry-delay 5 '${{ steps.source.outputs.content }}' -o /tmp/Re3Align_v1.0.zip
+          ARCHIVE_SHA=$(sha256sum /tmp/Re3Align_v1.0.zip | awk '{print $1}')
+          test "$ARCHIVE_SHA" = 'd400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b'
+          mkdir -p /tmp/re3
+          unzip -q /tmp/Re3Align_v1.0.zip -d /tmp/re3
+          CSV=$(find /tmp/re3 -type f -name triplets_emnlp24.csv -print -quit)
+          test -n "$CSV"
+          CSV_SHA=$(sha256sum "$CSV" | awk '{print $1}')
+          test "$CSV_SHA" = '599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28'
+          echo "DATA_ROOT=/tmp/re3" >> "$GITHUB_ENV"
+      - name: Build independent Rust proof kernel
+        shell: bash
+        run: |
+          set -euo pipefail
+          cargo build --release --manifest-path experiments/g9-p36-r3/proof-kernel/Cargo.toml
+          cp experiments/g9-p36-r3/proof-kernel/target/release/g9_p36_r3_proof_kernel /tmp/proof-kernel
+      - name: Extract natural candidates from frozen R2 parser
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/g9-p36-r3/final /tmp/r3
+          cp experiments/g9-p36-r2/adapter_response_chunk_v1.js /tmp/adapter.mjs
+          cp experiments/g9-p36-r2/compiler_c3r2_structural.js /tmp/compiler.mjs
+          node experiments/g9-p36-r3/extract_fusion_candidates.mjs "$DATA_ROOT" /tmp/adapter.mjs /tmp/compiler.mjs experiments/g9-p36-r3/final
+      - name: Run proof kernel on natural candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          /tmp/proof-kernel experiments/g9-p36-r3/final/candidates.jsonl experiments/g9-p36-r3/final/proof_objects.jsonl 2>&1 | tee experiments/g9-p36-r3/proof-kernel.log
+      - name: Run positive and adversarial controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          node experiments/g9-p36-r3/generate_controls.mjs /tmp/r3/controls.jsonl
+          /tmp/proof-kernel /tmp/r3/controls.jsonl experiments/g9-p36-r3/final/control_proofs.jsonl 2>&1 | tee experiments/g9-p36-r3/control-kernel.log
+      - name: Adjudicate frozen court
+        shell: bash
+        run: |
+          set -euo pipefail
+          node experiments/g9-p36-r3/adjudicate.mjs experiments/g9-p36-r3/final 2>&1 | tee experiments/g9-p36-r3/final-run.log
+      - name: Upload court artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: g9-p36-r3-proof-court
+          path: |
+            experiments/g9-p36-r3/final/
+            experiments/g9-p36-r3/proof-kernel.log
+            experiments/g9-p36-r3/control-kernel.log
+            experiments/g9-p36-r3/final-run.log
+      - name: Commit derived court artifacts
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/g9-p36-r3/final experiments/g9-p36-r3/proof-kernel.log experiments/g9-p36-r3/control-kernel.log experiments/g9-p36-r3/final-run.log || true
+          git commit -m 'G9-P36-R3: materialize full-121 proof-carrying fusion court' || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
