@@ -11,6 +11,13 @@ def sha256_file(p):
         for b in iter(lambda:f.read(1<<20),b""):h.update(b)
     return h.hexdigest()
 
+def sha256_tree(root):
+    h=hashlib.sha256();root=Path(root)
+    for p in sorted(x for x in root.rglob("*") if x.is_file()):
+        rel=str(p.relative_to(root)).replace(os.sep,"/")
+        h.update(rel.encode("utf-8"));h.update(b"\0");h.update(sha256_file(p).encode());h.update(b"\n")
+    return h.hexdigest()
+
 def safe_extract(src,dst):
     src=os.path.abspath(src); dst=os.path.abspath(dst)
     if zipfile.is_zipfile(src):
@@ -36,14 +43,36 @@ def materialize(src,tmp):
         d=Path(tmp)/"single";d.mkdir();(d/p.name).write_bytes(p.read_bytes());return d,"single"
     d=Path(tmp)/"archive";d.mkdir();kind=safe_extract(src,d);return d,kind
 
+def expand_nested(root,max_depth=3):
+    root=Path(root)
+    for depth in range(max_depth):
+        found=False
+        for p in list(root.rglob("*")):
+            if not p.is_file():continue
+            try:is_arc=zipfile.is_zipfile(p) or tarfile.is_tarfile(p)
+            except Exception:is_arc=False
+            if not is_arc:continue
+            marker=p.with_name(p.name+".extracted")
+            if marker.exists():continue
+            marker.mkdir()
+            safe_extract(str(p),str(marker));found=True
+        if not found:break
+
 def json_files(root):
+    expand_nested(root)
     return sorted([p for p in Path(root).rglob("*") if p.is_file() and p.suffix.lower() in {".json",".jsonl"}])
 
+def _read_text(p):
+    b=Path(p).read_bytes()
+    for enc in ("utf-8-sig","utf-8","cp949"):
+        try:return b.decode(enc)
+        except UnicodeDecodeError:pass
+    raise UnicodeDecodeError("unknown",b,0,1,"unsupported encoding")
+
 def load_docs(p):
-    if p.suffix.lower()==".jsonl":
-        with open(p,encoding="utf-8-sig") as f:
-            return [json.loads(x) for x in f if x.strip()]
-    with open(p,encoding="utf-8-sig") as f:return [json.load(f)]
+    text=_read_text(p)
+    if p.suffix.lower()==".jsonl":return [json.loads(x) for x in text.splitlines() if x.strip()]
+    return [json.loads(text)]
 
 def sentences(x):
     if isinstance(x,dict):
@@ -102,7 +131,7 @@ def census(src,out_dir):
         recognized=za_n-bad
         coverage=(recognized/za_n) if za_n else 0
         state="READY" if za_n>0 and coverage==1 and not parse_fail else ("HOLD_SCHEMA_UNRECOGNIZED" if za_n else "HOLD_NO_ZA")
-        receipt={"contract":"KSGT-R10-NIKL-GOLD-v1","source":os.path.basename(src),"source_sha256":sha256_file(src) if os.path.isfile(src) else None,
+        receipt={"contract":"KSGT-R10-NIKL-GOLD-v1","source":os.path.basename(src),"source_sha256":sha256_file(src) if os.path.isfile(src) else sha256_tree(src),
         "container":container,"json_files":len(files),"inventory":inventory,"parsed_roots":docs,"sentence_objects":sents,
         "za_predicates":za_n,"ellipsis_slots":ell_n,"schema_family_counts":dict(family),"syntactic_slot_counts":dict(slots),
         "recognized_coverage":coverage,"parse_failures":parse_fail,"top_level_keys":dict(top),"state":state}
