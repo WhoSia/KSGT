@@ -1,0 +1,104 @@
+{
+  "discovered_paper_dirs": 0,
+  "aggregate": {
+    "papers": 0,
+    "response_files": 0,
+    "units": 0,
+    "obligations": 0,
+    "unresolved_obligations": 0,
+    "existing_chunk_files": 0,
+    "reconstructed_chunk_files": 0,
+    "W0": 0,
+    "W1": 0,
+    "W2": 0,
+    "certifiable": 0
+  },
+  "missing": 121,
+  "reasonCounts": {},
+  "frontier_reopened": false,
+  "positiveControls": [
+    {
+      "name": "exact_duplicate_assertion_same_attachment_same_antecedent",
+      "expected_type": "W0",
+      "pass": true,
+      "groups": [
+        {
+          "type": "W0",
+          "certifiable": true,
+          "reason": "CONTEXT_COMPLETE_DUPLICATE",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "punctuation_alias_duplicate_assertion_same_attachment_same_antecedent",
+      "expected_type": "W1",
+      "pass": true,
+      "groups": [
+        {
+          "type": "W1",
+          "certifiable": true,
+          "reason": "CONTEXT_COMPLETE_DUPLICATE",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "exact_duplicate_revision_commitment_same_target",
+      "expected_type": "W0",
+      "pass": true,
+      "groups": [
+        {
+          "type": "W0",
+          "certifiable": true,
+          "reason": "CONTEXT_COMPLETE_DUPLICATE",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "regressionControls": [
+    {
+      "paper": "emnlp24_doc387",
+      "candidates": 0,
+      "certifiable": 0,
+      "pass": true
+    },
+    {
+      "paper": "emnlp24_doc739",
+      "candidates": 0,
+      "certifiable": 0,
+      "pass": true
+    },
+    {
+      "paper": "emnlp24_doc1035",
+      "candidates": 0,
+      "certifiable": 0,
+      "pass": true
+    },
+    {
+      "paper": "emnlp24_doc199",
+      "candidates": 0,
+      "certifiable": 0,
+      "pass": true
+    },
+    {
+      "paper": "emnlp24_doc103",
+      "candidates": 0,
+      "certifiable": 0,
+      "pass": true
+    },
+    {
+      "paper": "emnlp24_doc1043",
+      "candidates": 0,
+      "certifiable": 0,
+      "pass": true
+    }
+  ],
+  "validation": {
+    "missing_pass": false,
+    "positive_controls_pass": true,
+    "r1_regression_pass": true,
+    "pass": false
+  }
+}
