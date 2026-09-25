@@ -1,0 +1,43 @@
+name: G9-P36-R9 lineage-independent fresh replication
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['experiments/g9-p36-r9/action_trigger.txt']
+permissions: {contents: read}
+jobs:
+  court:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify constitution and controls
+        run: |
+          set -euo pipefail
+          grep -q 'PROSPECTIVE_CHARTER_SEALED_BEFORE_R9_FRESH_BUCKET_ROW_ACCESS' experiments/g9-p36-r9/preseal.yaml
+          mkdir -p experiments/g9-p36-r9/final
+          node experiments/g9-p36-r9/generate_r9_controls.mjs experiments/g9-p36-r9/final/r9_controls.json
+      - name: Materialize disjoint RMR bucket
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pandas pyarrow
+          python experiments/g9-p36-r9/prepare_rmr_r9.py experiments/g9-p36-r9/final
+          python experiments/g9-p36-r9/enrich_openreview_r9.py experiments/g9-p36-r9/final/rmr_holdout.jsonl experiments/g9-p36-r9/final/openreview_authors.json
+      - name: Run lineage-aware exact and family courts
+        run: |
+          set -euo pipefail
+          node experiments/g9-p36-r9/analyze_rmr_r9.mjs experiments/g9-p36-r9/final/rmr_holdout.jsonl experiments/g9-p36-r9/final/openreview_authors.json experiments/g9-p36-r9/final
+          rustc -O experiments/g9-p36-r9/crosscheck_r9.rs -o /tmp/r9-cross
+          /tmp/r9-cross experiments/g9-p36-r9/final/motif_items.tsv | tee experiments/g9-p36-r9/final/rust_crosscheck.tsv
+      - name: NIKL zero-anaphora gold ingestion court
+        run: |
+          set -euo pipefail
+          python experiments/g9-p36-r9/recover_nikl_r9.py experiments/g9-p36-r9/final/nikl_zero_status.json
+      - name: Adjudicate
+        run: |
+          set -euo pipefail
+          node experiments/g9-p36-r9/adjudicate_r9.mjs experiments/g9-p36-r9/final
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p36-r9-lineage-independent-court
+          path: experiments/g9-p36-r9/
