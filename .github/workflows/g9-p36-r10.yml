@@ -52,6 +52,23 @@ jobs:
           assert x['rust_validation']['rate']==1
           assert x['ellipsis_slots']==4
           PY
+      - name: Two-source nested-archive final-closure rehearsal
+        run: |
+          set -euo pipefail
+          python experiments/g9-p36-r10/generate_gold_fixture_set_r10.py /tmp/r10-fixtures
+          python experiments/g9-p36-r10/run_gold_bundle_r10.py /tmp/r10-fixtures/nikl2020.zip /tmp/r10-fixtures/nikl2025_nested.zip --out /tmp/r10-bundle
+          python experiments/g9-p36-r10/finalize_gold_r10.py /tmp/r10-bundle/gold_bundle_receipt.json /tmp/r10-bundle/final_r10.json
+          cp /tmp/r10-bundle/gold_bundle_receipt.json experiments/g9-p36-r10/final/gold_bundle_rehearsal.json
+          cp /tmp/r10-bundle/final_r10.json experiments/g9-p36-r10/final/final_closure_rehearsal.json
+          python - <<'PY'
+          import json
+          b=json.load(open('experiments/g9-p36-r10/final/gold_bundle_rehearsal.json'))
+          f=json.load(open('experiments/g9-p36-r10/final/final_closure_rehearsal.json'))
+          assert b['state']=='READY_FOR_FINAL_R10_ADJUDICATION'
+          assert b['sources']==2 and b['rust_validation']['rate']==1
+          assert f['status']=='CLOSED'
+          assert f['validation']['pass'] is True
+          PY
       - name: External-gold wait guard
         run: python experiments/g9-p36-r10/nikl_intake_r10.py "" experiments/g9-p36-r10/final/nikl_intake_status.json
       - name: Adjudicate pre-arrival R10
