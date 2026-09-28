@@ -54,3 +54,7 @@ notion:
 
 user_action: REQUEST_OR_DOWNLOAD_MINIMUM_REQUIRED_SOURCE_SET
 resume_same_phase: true
+
+closure:
+  github_receipt_commit: 2f5df4ec5e61cf37b6eb254bd97def07ecd73731
+  active_lineage_commit: f2a8b9bc47b2f9c737a62f025a708eea29413c09
