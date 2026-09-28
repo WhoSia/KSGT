@@ -16,18 +16,35 @@ active_research_line:
   - G9-P36-R9
   - G9-P36-R10
   - G9-P36-R10-R1
-current_phase: G9-P36-R10-R1
-current_status: CLOSED_OFFICIAL_NIKL_ONTOLOGY_RECONSTITUTED
-current_verdict: PASS_OFFICIAL_BYTES_VALIDATED_CROSS_FORMAT_IDENTITY_PROVEN_ONTOLOGY_RECONSTITUTED_REAL_SCHEMA_ADAPTER_SEALED
+  - G9-P36-R10-R2
+current_phase: G9-P36-R10-R2
+current_status: CLOSED_NATIVE_GOLD_WORLD_CONTACT_V1_1_REPAIR_SEALED
+current_verdict: PASS_NATIVE_GOLD_BINDING_KSGT_ARG_V1_TOKEN_EQUIVALENCE_REJECTED_V1_1_REPAIR_SEALED_SEMANTIC_ROLE_HOLD
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
   retired_relation_motif_probe: C3-R9-LD-v1_DIAGNOSTIC_ONLY
-  argument_recoverability_graph: KSGT-ARG-v1
+  argument_recoverability_graph: KSGT-ARG-v1.1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 5743577910b8d2ed3d72f72c070be6419f47b6be
 current_science_commit: c3172ec38195cbf688c01d08ecc7da9362232df4
-current_engineering_commit: 42d583231097492da9e2e3aa813018d4e60a0b12
+current_engineering_commit: 1ea54dbc1d6575d3d774d29884fce8ba7789368f
+current_r10_r2:
+  official_gold_records: 556164
+  observable_roundtrip_rate: 1.0
+  ontology_transport_structural_rate: 0.6597698588276488
+  ontology_transport_fully_lossless_rate: 0.14319364644840923
+  multi_span_rate: 0.185816
+  v1_collision_record_rate: 0.17354593249473177
+  v1_cross_document_collision_groups: 9339
+  v1_token_equivalence: REJECTED
+  repaired_graph: KSGT-ARG-v1.1
+  v1_1_unique_token_anchors: 556164
+  v1_1_duplicate_token_anchors: 0
+  v1_1_validation_rate: 1.0
+  semantic_role_authority: HOLD_EXTERNAL_SRL_REQUIRED
+  notion_receipt: 3e9ef561-cf92-8163-bd89-cfc6f80581c3
+  harvest_receipt: 3e9ef561-cf92-810d-8b83-f16b923831de
 current_r10_r1:
   official_byte_intake: CLOSED
   raw_drive_folder: /Google Drive/KSGT/01_SOURCE_ACCRUAL_RAW/G9-P36-R10-R1_NIKL_ZA_CANONICAL_RAW
@@ -62,7 +79,7 @@ r10_two_bucket_synthesis:
 r10_korean_arg:
   version: KSGT-ARG-v1
   controls: PASS_10_OF_10
-  semantic_reuse_candidate: ROLE_EVENT_RECOVERABILITY_GRAPH
+  semantic_reuse_candidate: TOKEN_ANCHORED_ROLE_EVENT_RECOVERABILITY_GRAPH
   zero_surface_is_not_argument_absence: true
   particle_is_not_role_identity: true
   word_order_is_not_role_identity: true
@@ -88,6 +105,10 @@ authority:
   relation_motif_authority_lane: RETIRED
   predicate_family_authority: NOT_PROMOTED
   micro_reuse: NOT_PROMOTED
+  NIKL_ZA_observable_binding: PROMOTED
+  KSGT_ARG_v1_token_equivalence: REJECTED
+  KSGT_ARG_v1_1_token_equivalence: SEALED
+  semantic_role: HOLD_EXTERNAL_SRL_REQUIRED
   cross_language_reuse: HOLD
 github_actions_policy:
   r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
@@ -105,4 +126,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_POST_R1_GOLD_GRAPH_SCIENTIFIC_ADJUDICATION
+next_action: BEGIN_G9_P36_R10_R3_CROSS_LAYER_SEMANTIC_ROLE_AUTHORITY
