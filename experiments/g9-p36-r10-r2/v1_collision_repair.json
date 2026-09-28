@@ -1,0 +1,23 @@
+{
+  "phase":"G9-P36-R10-R2",
+  "v1":{
+    "collision_groups":20341,
+    "collision_records":96520,
+    "cross_document_groups":9339,
+    "edge_group_records":{
+      "NORMAL":22582,
+      "LEGACY_MINUS1":69702,
+      "EMPTY_ANTECEDENT_ARRAY+LEGACY_MINUS1":608,
+      "SPECIAL_HASH":3366,
+      "MULTI":262
+    }
+  },
+  "repair":{
+    "rule":"Equivalence requires identical event_instance_id + slot_instance_id lineage and identical semantic type signature.",
+    "new_token_anchor_collision_groups":0,
+    "new_token_anchor_max_group":1,
+    "event_slot_type_alone_insufficient_duplicate_groups":919,
+    "event_slot_type_alone_max_group":4
+  },
+  "promoted_law":"SEMANTIC_TYPE_SIMILARITY_DOES_NOT_AUTHORIZE_TOKEN_EQUIVALENCE"
+}
