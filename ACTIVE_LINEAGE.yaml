@@ -17,17 +17,19 @@ active_research_line:
   - G9-P36-R10
   - G9-P36-R10-R1
   - G9-P36-R10-R2
-current_phase: G9-P36-R10-R2
-current_status: CLOSED_NATIVE_GOLD_WORLD_CONTACT_V1_1_REPAIR_SEALED
-current_verdict: PASS_NATIVE_GOLD_BINDING_KSGT_ARG_V1_TOKEN_EQUIVALENCE_REJECTED_V1_1_REPAIR_SEALED_SEMANTIC_ROLE_HOLD
+  - G9-P36-R10-R3
+current_phase: G9-P36-R10-R3
+current_status: ACTIVE_SOURCE_ACQUISITION_HOLD
+current_verdict: SOURCE_SET_RESOLVED_CROSS_LAYER_AUTHORITY_CONSTITUTION_SEALED_ROW_LEVEL_WORLD_CONTACT_PENDING
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
   retired_relation_motif_probe: C3-R9-LD-v1_DIAGNOSTIC_ONLY
   argument_recoverability_graph: KSGT-ARG-v1.1
+  cross_layer_authority_graph: KSGT-XARG-v0.1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 91e93bfc8599bc557138579910868238a2cf6c4f
+current_science_commit: 2f5df4ec5e61cf37b6eb254bd97def07ecd73731
 current_engineering_commit: 79e1263560e330b0fc61d9c3a064481cd08aa433
 current_r10_r2:
   official_gold_records: 556164
@@ -126,4 +128,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_G9_P36_R10_R3_CROSS_LAYER_SEMANTIC_ROLE_AUTHORITY
+next_action: RESUME_G9_P36_R10_R3_AFTER_MINIMUM_SOURCE_SET_ACQUISITION
