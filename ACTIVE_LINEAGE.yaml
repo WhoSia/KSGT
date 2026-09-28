@@ -26,9 +26,9 @@ current_compiler:
   retired_relation_motif_probe: C3-R9-LD-v1_DIAGNOSTIC_ONLY
   argument_recoverability_graph: KSGT-ARG-v1.1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
-  preseal_commit: 5743577910b8d2ed3d72f72c070be6419f47b6be
-current_science_commit: c3172ec38195cbf688c01d08ecc7da9362232df4
-current_engineering_commit: 1ea54dbc1d6575d3d774d29884fce8ba7789368f
+  preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
+current_science_commit: 91e93bfc8599bc557138579910868238a2cf6c4f
+current_engineering_commit: 79e1263560e330b0fc61d9c3a064481cd08aa433
 current_r10_r2:
   official_gold_records: 556164
   observable_roundtrip_rate: 1.0
@@ -60,13 +60,13 @@ current_r10_r1:
   notion_receipt: 3e9ef561-cf92-8137-a3b8-dec6138666f7
   harvest_receipt: 3e9ef561-cf92-81ee-8323-d9548f0b2245
 canonical_pre_gold_result_commit: cff1ae1e78976ae3a40bee33a00ce91db09596e5
-public_replay_run: 36188933352
-public_replay_head: 3c3ea524ec0ff06fe0411e5ce672f04b9507e13c
+public_replay_run: 36384528790
+public_replay_head: 8fe713efa26024b0b8fe10c0f6594b517b99d7bb
 public_replay_artifact:
-  id: 10887348897
-  sha256: e7dd6efc1d0b9e363280804e626d091b3cde0702b2c3da29127df4813003875f
-notion_receipt: 3e6ef561-cf92-813b-b7aa-e4c400931aca
-harvest_receipt: 3e6ef561-cf92-8147-9278-dc46c7142d0e
+  id: 10954190991
+  sha256: 705ad40bc13a5a7e0eecaa1cac817f743b3dd15b6bd31602e1e60119af951991
+notion_receipt: 3e9ef561-cf92-8163-bd89-cfc6f80581c3
+harvest_receipt: 3e9ef561-cf92-810d-8b83-f16b923831de
 r10_two_bucket_synthesis:
   total_papers: 1213
   r8_primary_pairs: 1
@@ -77,8 +77,8 @@ r10_two_bucket_synthesis:
   relation_motif_diagnostic_probe: RETAINED
   threshold_retuning: FORBIDDEN
 r10_korean_arg:
-  version: KSGT-ARG-v1
-  controls: PASS_10_OF_10
+  version: KSGT-ARG-v1.1
+  controls: PASS_V1_1_TOKEN_IDENTITY_REPAIR
   semantic_reuse_candidate: TOKEN_ANCHORED_ROLE_EVENT_RECOVERABILITY_GRAPH
   zero_surface_is_not_argument_absence: true
   particle_is_not_role_identity: true
@@ -88,7 +88,7 @@ r10_korean_arg:
   dependency_is_not_linear_order: true
 r10_gold_intake:
   engineering_state: OFFICIAL_BYTES_INGESTED_R1_CLOSED
-  canonical_semantic_core: RUST_KSGT_ARG_v1
+  canonical_semantic_core: RUST_KSGT_ARG_v1_1
   legacy_js: REGRESSION_ONLY
   final_rehearsal_run: 36190297866
   final_rehearsal_artifact: 10886594950
