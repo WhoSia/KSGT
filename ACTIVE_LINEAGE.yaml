@@ -15,9 +15,10 @@ active_research_line:
   - G9-P36-R8
   - G9-P36-R9
   - G9-P36-R10
-current_phase: G9-P36-R10
-current_status: ACTIVE_EXTERNAL_GOLD_HOLD_PREARRIVAL_ENGINEERING_READY
-current_verdict: PASS_RELATION_MOTIF_LANE_RETIRED_ARG_CONSTITUTION_SEALED_EXTERNAL_GOLD_WAIT
+  - G9-P36-R10-R1
+current_phase: G9-P36-R10-R1
+current_status: CLOSED_OFFICIAL_NIKL_ONTOLOGY_RECONSTITUTED
+current_verdict: PASS_OFFICIAL_BYTES_VALIDATED_CROSS_FORMAT_IDENTITY_PROVEN_ONTOLOGY_RECONSTITUTED_REAL_SCHEMA_ADAPTER_SEALED
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -26,7 +27,19 @@ current_compiler:
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 5743577910b8d2ed3d72f72c070be6419f47b6be
 current_science_commit: c3172ec38195cbf688c01d08ecc7da9362232df4
-current_engineering_commit: fea15f3db1a28e225dab7d388d46411ffe71b40e
+current_engineering_commit: 42d583231097492da9e2e3aa813018d4e60a0b12
+current_r10_r1:
+  official_byte_intake: CLOSED
+  raw_drive_folder: /Google Drive/KSGT/01_SOURCE_ACCRUAL_RAW/G9-P36-R10-R1_NIKL_ZA_CANONICAL_RAW
+  analysis_drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R1_NIKL_ZA_ONTOLOGY_AUDIT
+  adapter: experiments/g9-p36-r10-r1/nikl_real_adapter_r1.py
+  adapted_records: 556164
+  independent_validation_failures: 0
+  regression_run: 36382301004
+  regression_artifact: 10952632794
+  regression_artifact_sha256: 6f4b1ee20b2c5d29b49ad654ed81eb2df7df2f89800ef9dda1a713674132a4cf
+  json_csv_identity: EXACT_NX_AND_SX
+  ontology_transition: RECONSTITUTED
 canonical_pre_gold_result_commit: cff1ae1e78976ae3a40bee33a00ce91db09596e5
 public_replay_run: 36188933352
 public_replay_head: 3c3ea524ec0ff06fe0411e5ce672f04b9507e13c
@@ -55,17 +68,17 @@ r10_korean_arg:
   topic_focus_is_not_argument_identity: true
   dependency_is_not_linear_order: true
 r10_gold_intake:
-  engineering_state: PREARRIVAL_ENGINEERING_READY
+  engineering_state: OFFICIAL_BYTES_INGESTED_R1_CLOSED
   canonical_semantic_core: RUST_KSGT_ARG_v1
   legacy_js: REGRESSION_ONLY
   final_rehearsal_run: 36190297866
   final_rehearsal_artifact: 10886594950
   final_rehearsal_sha256: 836314950a81e108b02b90d7e7b4c2acf3685ea936ddad4199b4eadfa3b066f4
   expected_new_coding_on_arrival: NONE_UNLESS_SCHEMA_UNRECOGNIZED
-  source_2020: REQUESTED_WAITING
-  source_2025: REQUESTED_WAITING
-  state: WAITING_FOR_OFFICIAL_BYTES
-  scoring_authorized: false
+  source_2020: OFFICIAL_BYTES_ACQUIRED_VALIDATED
+  source_2025: OFFICIAL_BYTES_ACQUIRED_VALIDATED
+  state: R1_ONTOLOGY_RECONSTITUTION_CLOSED
+  scoring_authorized: true
   resume_same_phase_on_arrival: true
 authority:
   MNMC_5: RETAINED
@@ -88,8 +101,6 @@ language_policy:
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
 waiting:
-  - NIKL Zero Anaphora Corpus 2020 annotation bytes
-  - NIKL Zero Anaphora Corpus 2025 annotation bytes
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: RESUME_G9_P36_R10_WHEN_NIKL_OFFICIAL_BYTES_ARRIVE
+next_action: BEGIN_POST_R1_GOLD_GRAPH_SCIENTIFIC_ADJUDICATION
