@@ -40,6 +40,8 @@ current_r10_r1:
   regression_artifact_sha256: 6f4b1ee20b2c5d29b49ad654ed81eb2df7df2f89800ef9dda1a713674132a4cf
   json_csv_identity: EXACT_NX_AND_SX
   ontology_transition: RECONSTITUTED
+  notion_receipt: 3e9ef561-cf92-8137-a3b8-dec6138666f7
+  harvest_receipt: 3e9ef561-cf92-81ee-8323-d9548f0b2245
 canonical_pre_gold_result_commit: cff1ae1e78976ae3a40bee33a00ce91db09596e5
 public_replay_run: 36188933352
 public_replay_head: 3c3ea524ec0ff06fe0411e5ce672f04b9507e13c
