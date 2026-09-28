@@ -80,3 +80,7 @@ waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
 user_action: NONE
+
+notion:
+  canonical_receipt: 3e9ef561-cf92-8137-a3b8-dec6138666f7
+  harvest: 3e9ef561-cf92-81ee-8323-d9548f0b2245
