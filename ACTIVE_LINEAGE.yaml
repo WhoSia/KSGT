@@ -18,9 +18,10 @@ active_research_line:
   - G9-P36-R10-R1
   - G9-P36-R10-R2
   - G9-P36-R10-R3
-current_phase: G9-P36-R10-R3
-current_status: ACTIVE_SOURCE_ACQUISITION_HOLD
-current_verdict: SOURCE_SET_RESOLVED_CROSS_LAYER_AUTHORITY_CONSTITUTION_SEALED_ROW_LEVEL_WORLD_CONTACT_PENDING
+  - G9-P36-R10-R4
+current_phase: G9-P36-R10-R4
+current_status: CLOSED_R4_WITH_R3_SOURCE_ACQUISITION_HOLD
+current_verdict: PASS_RECOVERABILITY_REALIZATION_AUTHORITY_SEPARATED_KSGT_REALIZE_V0_1_SEALED
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -29,8 +30,18 @@ current_compiler:
   cross_layer_authority_graph: KSGT-XARG-v0.1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 2f5df4ec5e61cf37b6eb254bd97def07ecd73731
+current_science_commit: 20bf8f2be5be53c2e5b9659abedd0105d57c4ce8
 current_engineering_commit: 79e1263560e330b0fc61d9c3a064481cd08aa433
+current_r10_r4:
+  theory: KSGT-REALIZE-v0.1
+  recoverability_realization_separation: PROMOTED
+  online_offline_recoverability_separation: PROMOTED
+  null_vs_overt_preference: HOLD
+  style_utility_of_nullness: HOLD
+  population_omission_probability: HOLD
+  r3_parallel_waiting_state: ACTIVE_SOURCE_ACQUISITION_HOLD
+  notion_receipt: 3e9ef561-cf92-818c-8315-e4a65650a956
+  harvest_receipt: 3e9ef561-cf92-81d6-93ac-d200adf772bf
 current_r10_r2:
   official_gold_records: 556164
   observable_roundtrip_rate: 1.0
@@ -128,4 +139,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: RESUME_G9_P36_R10_R3_AFTER_MINIMUM_SOURCE_SET_ACQUISITION
+next_action: RESUME_G9_P36_R10_R3_WHEN_REQUESTED_SOURCE_BYTES_ARRIVE
