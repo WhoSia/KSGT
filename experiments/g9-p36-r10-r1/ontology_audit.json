@@ -1,0 +1,24 @@
+{
+  "phase":"G9-P36-R10-R1",
+  "verdict":"PASS_OFFICIAL_BYTES_VALIDATED_CROSS_FORMAT_IDENTITY_PROVEN_ONTOLOGY_RECONSTITUTED",
+  "aggregate_2020":{"documents":7688,"sentences":371571,"sentences_with_za":231253,"za_predicates":434741,"slots":493333,"subject":409738,"object":83595,"normal_antecedent":400416,"minus1":92917},
+  "aggregate_2025":{"documents":1102,"sentences":30346,"sentences_with_za":22716,"za_predicates":50247,"slots":62831,"antecedent_spans":81840,"multi_span_ellipsis":11675,"multi_span_rate":0.185816,"subject":43696,"object":7977,"adjunct":11105,"complement":50,"blank_type":3,"hash_spans":6618,"empty_antecedent_arrays":5},
+  "json_csv_identity":[
+    {"lane":"NX","rows":320224,"sha256":"c37f1dda226433aa3d1c47e0b464c898d9c13ce903b467c6b0b28baac6557878","exact":true},
+    {"lane":"SX","rows":313427,"sha256":"ca9fd608f6be6ece4194ac0dc84dc236c60a77d327fe5a3b67eb2bfc93396750","exact":true}
+  ],
+  "ontology_transition":{
+    "2020_location":"document.ZA[]",
+    "2025_location":"document.sentence[].ZA[]",
+    "2020_slots":["subject","object"],
+    "2025_slots":["subject","object","adjunct","complement"],
+    "2020_external_marker":"-1",
+    "2025_special_marker":"#",
+    "2020_recovery_surface":"antecedent.form/type",
+    "2025_recovery_surface":"ellipsis[].restored.form/type",
+    "2020_antecedent_cardinality":"one row per antecedent",
+    "2025_antecedent_cardinality":"0..N antecedent spans per ellipsis"
+  },
+  "real_adapter":{"records":556164,"subject":453434,"object":91572,"adjunct":11105,"complement":50,"unknown":3,"zero_anaphoric":456623,"zero_generic_or_exophoric":92917,"zero_deictic":6619,"unsaturated_unknown":5,"independent_validation_failures":0},
+  "anomaly_policy":"PRESERVE_AS_ANNOTATION_EDGE_STATE_DO_NOT_AUTOFIX"
+}
