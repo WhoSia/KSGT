@@ -1,0 +1,95 @@
+phase: KSGT Generation IX G9-P36-R10-R7
+title: Native-Original Overt↔Null Counterfactual Surface Materialization, Meaning-Preservation/Reference-Safety Adjudication, Author-Specific Explicitness Calibration, Blind Native Preference Collection Readiness & KSGT-REALIZE-v0.3 Preference-Authority Court
+status: CLOSED
+verdict: PASS_COUNTERFACTUAL_SURFACE_ASYMMETRY_PROVEN_KSGT_CFPAIR_V0_1_SEALED_FIRST_BLIND_PACKET_NOT_HUMAN_READY
+date: 2026-09-29
+
+lineage:
+  inherited_R6: PASS_COMPARABLE_CHOICE_SET_STRUCTURED_VARIATION_KSGT_REALIZE_V0_3_SEALED_TRUE_COUNTERFACTUAL_PREFERENCE_HOLD
+  preseal_commit: 37d777f8584fd2b18e6b7b973bbbab264f544b63
+  directional_amendment_commit: feedb3826bfa537fb039034a05263b52cf42739e
+  theory_commit: 5fc1f3396112d9302c1478119dc21a07ab9bb35f
+  packet_audit_commit: 60d9f383791401d11bf14604054c241260612004
+
+packet:
+  selected_total: 240
+  OVERT_TO_NULL:
+    selected: 160
+    pass_internal: 96
+    hold: 64
+    pass_rate: 0.60
+  NULL_TO_OVERT:
+    selected: 80
+    pass_internal: 0
+    hold: 80
+    unheld_rate: 0.0
+
+pass_by_source_slot:
+  N_OBJECT: {pass: 21, total: 28, rate: 0.75}
+  N_SUBJECT: {pass: 8, total: 43, rate: 0.18604651162790697}
+  S_OBJECT: {pass: 39, total: 44, rate: 0.8863636363636364}
+  S_SUBJECT: {pass: 28, total: 45, rate: 0.6222222222222222}
+
+pass_by_author_explicitness_bin:
+  HIGH: {pass: 37, total: 63, rate: 0.5873015873015873}
+  MID: {pass: 36, total: 58, rate: 0.6206896551724138}
+  LOW: {pass: 23, total: 39, rate: 0.5897435897435898}
+
+failure_flags:
+  FOCUS_OR_CONTRAST_PARTICLE_JX: 50
+  PUNCTUATION_IN_ARGUMENT_SUBTREE: 13
+  COORDINATION_PARTICLE_JC: 5
+  QUANTIFICATION_OR_NUMBER_MODIFIER: 1
+  HONORIFIC_NP_MATERIAL: 1
+  NONUNIQUE_KOREAN_INSERTION_POSITION: 79
+  ZA_SLOT_MATCH_COUNT_2: 1
+  duplicate_counterfactual_surface_excess: 1
+
+readiness:
+  minimum_total_pass_120: FAIL
+  each_source_slot_cell_min_15: FAIL
+  overt_to_null_pass_rate_min_0_50: PASS
+  null_to_overt_unheld_rate_min_0_20: FAIL
+  duplicate_audit: FAIL
+  HUMAN_COLLECTION_READY: false
+
+theory:
+  version: KSGT-CFPAIR-v0.1
+  deletion: PARTIAL_FUNCTION
+  insertion: SET_VALUED_RELATION
+  protected_equivalence_required:
+    - semantic_content
+    - referent_identity
+    - scope
+    - honorific_person
+    - information_structure
+  law:
+    - RESTORED_FORM_DOES_NOT_IDENTIFY_INSERTION_POSITION
+    - EXACT_SPAN_DELETION_DOES_NOT_GUARANTEE_MEANING_PRESERVATION
+    - ARGUMENT_NP_MAY_CARRY_INFORMATION_STRUCTURE_CARGO
+    - HUMAN_JUDGMENT_MUST_NOT_DEBUG_SURFACE_MATERIALIZATION
+
+drive:
+  folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R7_COUNTERFACTUAL_PACKET
+  selected_packet: selected_packet.jsonl
+  blind_packet: blind_packet_NOT_FOR_COLLECTION.jsonl
+  summary: packet_summary_NOT_READY.json
+
+notion:
+  canonical_receipt: 3eaef561-cf92-81d6-b49b-e05f8242c4e4
+  harvest: 3eaef561-cf92-818e-9e63-fe26d00349cd
+
+authority:
+  KSGT_CFPAIR_v0_1: SEALED
+  overt_to_null_exact_span_authority: PARTIAL
+  null_to_overt_position_authority: NOT_IDENTIFIED
+  information_structure_cargo_gate: REQUIRED
+  first_blind_packet: NOT_HUMAN_READY
+  true_preference_authority: HOLD
+  human_recruitment: HOLD
+
+next_phase:
+  id: G9-P36-R10-R8
+  title: Information-Structure-Preserving Counterfactual Realizer, Topic/Contrast-Cargo Separation, Position-Lattice Surface Synthesis, Bidirectional Meaning-Equivalence Certification, Duplicate-Free Blind Packet Reconstitution & Native Preference Pilot Gate
+
+user_action: NONE
