@@ -30,9 +30,10 @@ active_research_line:
   - G9-P40
   - G9-P41
   - G9-P42
-current_phase: G9-P42
-current_status: CLOSED_PASS_WITH_DIRECT_WORLD_CONTACT_HOLD
-current_verdict: PASS_PPG_OPERATOR_CENTERED_AI_STYLE_MARKER_MECHANISM_SEPARATED_RAW_LITERARY_TAIL_HOLD
+  - G9-P43
+current_phase: G9-P43
+current_status: OPEN_CHECKPOINT_1_DOSHI_HAUSER_RAW_SCREEN
+current_verdict: INTERIM_SIMPLE_LOCAL_LENGTH_TAIL_COMPRESSION_NOT_DETECTED
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -44,7 +45,7 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 914bbf4c861425cf1064b2da5f30d8d5ee442595
+current_science_commit: 8fe38882b5ff21872ffdb3592fd78e2ea34453e6
 current_engineering_commit: c6e675b0b214f9e529f8eead7aec84872b91c063
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
@@ -282,4 +283,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_G9_P43_RAW_NATIVE_TRACE_PEAK_SURVIVAL_EXECUTION
+next_action: CONTINUE_G9_P43_DATASET_2_BEGUS_OSF_RAW_ANALYSIS
