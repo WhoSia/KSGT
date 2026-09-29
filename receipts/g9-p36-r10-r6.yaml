@@ -1,0 +1,104 @@
+phase: KSGT Generation IX G9-P36-R10-R6
+title: Comparable Overt↔Null Choice-Set Materialization, Antecedent-Available Overt Controls, Information-Structure Proxy Falsification, Native-Original Counterfactual Pair Construction, Preference-Authority Calibration & KSGT-REALIZE-v0.2 World-Choice Court
+status: CLOSED
+verdict: PASS_COMPARABLE_CHOICE_SET_STRUCTURED_VARIATION_KSGT_REALIZE_V0_3_SEALED_TRUE_COUNTERFACTUAL_PREFERENCE_HOLD
+date: 2026-09-29
+
+lineage:
+  inherited_R5: PASS_SURFACE_RISK_SET_GEOMETRY_REPLICATED_KSGT_REALIZE_V0_2_SEALED_COUNTERFACTUAL_OMISSION_UTILITY_NOT_IDENTIFIED
+  preseal_commit: 964affef19915c80e6c40adc04349b822849abb4
+  theory_commit: ec17e413e4f47a573fd5ecea64921f7c1b6ce517
+  empirical_receipt_commit: 1db1e6f71212a2815ee6630cf04af6fe05107b57
+  preference_protocol_commit: a0d566fe08f4c50edb375af49c5411f107c8d6e9
+
+choice_set:
+  exclusive_opportunities: 106125
+  overt: 58290
+  null: 47835
+  overt_accessibility_controls:
+    P2_prior_proper_name_repeat: 9557
+    P1_prior_exact_head_repeat_only: 10992
+    P0_no_prior_proxy: 37741
+  null_prior_text_available: 29665
+  strict_mixed_strata: 1649
+  pairable_native_original_pairs: 3280
+  actor_specific_strict_mixed_strata: 618
+  actor_predicate_slot_mixed: 2023
+
+proxy_falsification:
+  accessibility_proxy_AUC: 0.8065377818842243
+  accessibility_plus_predicate_AUC: 0.8597532786460512
+  actor_proxy_AUC: 0.7820032204683872
+  predicate_plus_actor_AUC: 0.8502327827123297
+  interpretation: INFORMATIVE_NOT_DETERMINISTIC
+
+document_overdispersion:
+  N_SUBJECT:
+    pearson_dispersion: 2.393171146076571
+    beta_binomial_rho: 0.033221083825798095
+    delta_AIC_binomial_minus_beta_binomial: 586.174085880657
+  N_OBJECT:
+    pearson_dispersion: 1.6500786186559666
+    beta_binomial_rho: 0.028863780825942997
+    delta_AIC_binomial_minus_beta_binomial: 188.34639616822005
+  S_SUBJECT:
+    pearson_dispersion: 6.714553801677202
+    beta_binomial_rho: 0.01728129466382365
+    delta_AIC_binomial_minus_beta_binomial: 289.69711077342197
+  S_OBJECT:
+    pearson_dispersion: 4.316495328481774
+    beta_binomial_rho: 0.022448920373890225
+    delta_AIC_binomial_minus_beta_binomial: 136.63645086597262
+
+actor_proxy_variation:
+  residual_variance_observed: 0.017074054858625985
+  residual_variance_permutation_mean: 0.012301365699994286
+  plus_one_p: 0.01
+  authority: STRUCTURED_HETEROGENEITY_NOT_PERSONALITY_CAUSALITY
+
+local_state:
+  N_SUBJECT_delta_same_action: -0.012269296788850026
+  N_OBJECT_delta_same_action: 0.005660765145383828
+  S_SUBJECT_delta_same_action: 0.006682847722488505
+  S_OBJECT_delta_same_action: 0.028637419032015
+  law: NO_UNIVERSAL_BURSTINESS_SIGN
+
+theory:
+  version: KSGT-REALIZE-v0.3
+  primitive: OPPORTUNITY_CONDITIONED_ACTION
+  poisson: NOT_PRIMITIVE
+  homogeneous_binomial: TOO_SMOOTH
+  document_heterogeneity: BETA_BINOMIAL_OR_LOGISTIC_RANDOM_EFFECT_DONOR
+  local_history: SOURCE_SLOT_CONDITIONED_STATE_PROCESS
+  default_random_temperature: FORBIDDEN
+  overexplicitness: CANDIDATE_STATE_NOT_ERROR_LABEL
+  preference_model: DISTRIBUTION_OVER_AUTHORIZED_FUNCTIONALS
+  true_counterfactual_preference: NOT_IDENTIFIED
+
+pair_pool:
+  drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R6_WORLD_CHOICE_VARIATION
+  aggregate_file: r6_aggregate.json
+  pair_index_file: native_original_matched_pair_index.jsonl
+  row_level_derivatives_on_github: false
+
+notion:
+  canonical_receipt: 3eaef561-cf92-8173-aa0f-fc017590ab36
+  harvest: 3eaef561-cf92-813b-a131-e6119f71d195
+
+authority:
+  comparable_observational_choice_set: PROMOTED
+  antecedent_available_overt_controls: PROMOTED_AS_PROXY
+  structured_variation: PROMOTED
+  document_overdispersion: PROMOTED
+  source_slot_local_state: PROMOTED
+  KSGT_REALIZE_v0_3: SEALED
+  true_counterfactual_preference: HOLD
+  information_structure_causal_effect: HOLD
+  universal_personality_coefficient: REJECTED
+  universal_poisson_or_burstiness_law: REJECTED
+
+next_phase:
+  id: G9-P36-R10-R7
+  title: Native-Original Overt↔Null Counterfactual Surface Materialization, Meaning-Preservation/Reference-Safety Adjudication, Author-Specific Explicitness Calibration, Blind Native Preference Collection Readiness & KSGT-REALIZE-v0.3 Preference-Authority Court
+
+user_action: NONE
