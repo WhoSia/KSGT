@@ -1,0 +1,93 @@
+phase: KSGT Generation IX G9-P36-R10-R8
+title: Information-Structure-Preserving Counterfactual Realizer, Topic/Contrast-Cargo Separation, Position-Lattice Surface Synthesis, Bidirectional Meaning-Equivalence Certification, Duplicate-Free Blind Packet Reconstitution & Native Preference Pilot Gate
+date: 2026-09-29
+status: PROSPECTIVE_RECONSTITUTION_SEALED_BEFORE_R8_FULL_POOL_SURFACE_OPENING
+
+inherits:
+  R7:
+    pool: 3280
+    first_packet: 240
+    internal_pass: 96
+    human_ready: false
+    theory: KSGT-CFPAIR-v0.1
+
+reconstitution:
+  source_pool: FULL_R6_MATCHED_POOL
+  reuse_R7_240_as_development_only: true
+  R8_packet_must_be_disjoint_from_R7_240: true
+  deterministic_hash_selection: true
+
+overt_to_null:
+  admissible_only_if:
+    - exact_argument_subtree
+    - no_JX_or_JC_in_argument_subtree
+    - no_quantifier_or_numeric_modifier
+    - no_honorific_NP_material
+    - no_internal_punctuation
+    - generation_time_accessibility_P1_or_P2
+  information_structure_cargo:
+    status: PRESERVE_BY_EXCLUSION_NOT_REWRITE
+    rationale: >
+      current corpus lacks independent pre-choice information-structure gold;
+      JX-bearing material is therefore not mechanically neutralized.
+  target_quota: 120
+
+null_to_overt:
+  restored_form_authority: OFFICIAL_ZA_GOLD
+  exclude:
+    - DEICTIC_SPECIAL
+    - FUTURE_ONLY_RECOVERY
+    - unresolved_reference
+  position_lattice:
+    donor_source: NATIVE_OVERT_EXAMPLES_FROM_SAME_PREDICATE_SENSE_AND_SLOT
+    relative_position_classes:
+      - BEFORE_PREDICATE
+      - BEFORE_SUBJECT_OR_TOPIC
+      - AFTER_SUBJECT_BEFORE_PREDICATE
+      - CLAUSE_INITIAL
+      - OTHER
+    unique_position_authority_requires:
+      minimum_native_donors: 3
+      dominant_class_share: 0.85
+      second_class_share_max: 0.10
+    otherwise: POSITION_LATTICE_HOLD
+  target_quota: 80
+
+bidirectional_certification:
+  version: KSGT-CFPAIR-v0.2
+  tests:
+    - edit_locality
+    - inverse_surface_roundtrip
+    - predicate_identity_preserved
+    - clause_operator_preserved
+    - reference_source_preserved
+    - information_structure_cargo_not_deleted
+    - duplicate_free
+  internal_certification_is_not_human_preference_gold: true
+
+blind_packet_gate:
+  target_total: 160
+  minimum_total_pass: 120
+  each_source_slot_min: 20
+  both_directions_required: true
+  null_to_overt_min: 30
+  duplicate_count: 0
+  near_duplicate_cluster_max: 1
+  no_R7_development_overlap: true
+
+human_pilot:
+  open_only_if_blind_packet_gate_passes: true
+  pilot_size_if_opened: 24
+  human_recruitment_before_gate: FORBIDDEN
+
+lineage_decision:
+  compare:
+    - G9-P36-R10-R11
+    - G9-P37
+  choose_R11_only_if:
+    - R8_opens_human_pilot_but_preference_authority_requires_one_final_R10_closure_stage
+    - remaining_question_is_still_same_R10_world_choice_explanandum
+  choose_P37_if:
+    - R8_closes_surface_authority_or_hits_structural_ceiling
+    - remaining_work_is_new_generation_problem_beyond_R10
+  no_automatic_lineage_extension: true
