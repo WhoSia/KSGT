@@ -36,7 +36,7 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: b8b4f95711caecdd4254522ec0fcaa60e9c0fdd1
+current_science_commit: 9f08c66404eace8d66dd35e92f7622f05a7683da
 current_engineering_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
