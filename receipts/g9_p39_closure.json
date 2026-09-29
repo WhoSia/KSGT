@@ -1,0 +1,40 @@
+{
+  "schema": "ksgt.g9.p39.closure.v1",
+  "phase": "G9-P39",
+  "title": "Exact-State Evidence Acquisition, OOS Cell Prioritization, Register-Paired Counterpart Mining, Predicate-Sense-Preserving Corpus Expansion, Surface-Authority Reconstitution & Zero-Extrapolation Coverage Growth Court",
+  "parent_commit": "fcc8bc3ab1aef18bc517ef32fe54a946d7ae2232",
+  "theory": "KSGT-EVIDENCE-ACQUISITION-v0.1",
+  "evidence": {
+    "r8_exact_supported": 40,
+    "r8_oos": 120,
+    "unique_oos_targets": 109,
+    "topology": {
+      "exact_predicate_state_holes": 28,
+      "sense_holes": 16,
+      "register_lexeme_voids": 76
+    },
+    "shadow_replays": 64,
+    "recovery_rate": {
+      "distance1": 0.2888601036,
+      "distance2": 0.05224867725,
+      "distance3": 0.008356545961,
+      "same_lemma_other_sense": 0.04106280193,
+      "no_target_lemma": 0.01386882404
+    },
+    "new_exact_authority_promotions": 0
+  },
+  "promoted_laws": [
+    "OOS_DISTANCE_NOT_GENERATION_AUTHORITY",
+    "OOS_TOPOLOGY_ALLOWS_ACQUISITION_PRIORITY",
+    "REPLAY_CALIBRATION_BEFORE_TARGETED_MINING",
+    "PREDICATE_SENSE_MUST_SURVIVE_CORPUS_EXPANSION",
+    "NEW_WITNESS_NOT_NEW_SURFACE_AUTHORITY",
+    "ACQUISITION_SOURCE_NEUTRALITY",
+    "AUTHORITY_TYPE_NONINTERCHANGEABILITY",
+    "ZERO_EXTRAPOLATION_GROWTH"
+  ],
+  "notion": "3eaef561-cf92-8198-a76f-f309e67b7099",
+  "harvest": "3eaef561-cf92-816e-a2ca-dbf56d01cfc2",
+  "verdict": "CLOSED_PASS_WITH_ZERO_PROMOTION",
+  "next": "G9-P40"
+}
