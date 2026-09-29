@@ -1,0 +1,120 @@
+{
+  "schema": "ksgt.g9.p41.native-trace-and-wildness-radar.v1",
+  "phase": "G9-P41",
+  "native_trace_classes": [
+    {
+      "class": "provenance_strong_spontaneous_speech",
+      "examples": [
+        "NIKL Dialogue audio/transcription 2020-2025",
+        "Seoul Corpus of Spontaneous Speech",
+        "KsponSpeech"
+      ],
+      "authority": [
+        "spontaneous realization",
+        "repair",
+        "rhythm",
+        "ellipsis"
+      ],
+      "risks": [
+        "elicitation",
+        "recording observer effect",
+        "demographic/frame selection"
+      ]
+    },
+    {
+      "class": "public_longform_speech",
+      "examples": [
+        "interviews",
+        "podcasts",
+        "oral histories",
+        "lectures/Q&A"
+      ],
+      "authority": [
+        "ecological discourse",
+        "hesitation",
+        "stance shift"
+      ],
+      "risks": [
+        "performance",
+        "editing",
+        "transcription",
+        "speaker self-selection"
+      ]
+    },
+    {
+      "class": "online_public_writing",
+      "examples": [
+        "NIKL Online Posts 2025",
+        "blogs/SNS",
+        "Wikipedia revision history"
+      ],
+      "authority": [
+        "ecological breadth",
+        "revision traces"
+      ],
+      "risks": [
+        "native identity uncertainty",
+        "platform selection",
+        "AI contamination",
+        "post-2022 temporal drift"
+      ]
+    },
+    {
+      "class": "curated_literary_professional",
+      "examples": [
+        "literary criticism",
+        "essays",
+        "fiction",
+        "journalism",
+        "edited interviews"
+      ],
+      "authority": [
+        "deliberate stylistic choice",
+        "revision-surviving form"
+      ],
+      "risks": [
+        "elite/editorial selection",
+        "genre narrowness",
+        "copyright constraints"
+      ]
+    }
+  ],
+  "laws": [
+    "NATURALISTIC_NOT_UNBIASED",
+    "SOURCE_RELIABILITY_IS_QUESTION_RELATIVE",
+    "PROVENANCE_BEFORE_POOLING",
+    "MULTI_FRAME_INTERSECTION_BEFORE_POPULATION_CLAIM",
+    "AI_CONTAMINATION_IS_TIME_VARYING_MEASUREMENT_DRIFT",
+    "SPEECH_IS_DONOR_NOT_LITERARY_GOLD",
+    "RECRUITMENT_IS_RESERVE_NOT_DEFAULT"
+  ],
+  "wildness_pretheory": {
+    "object": "licensed_local_risk",
+    "dimensions": [
+      "local expectation break",
+      "asymmetric payoff",
+      "selective roughness",
+      "non-substitutable specificity",
+      "long-range pressure",
+      "voice persistence under revision",
+      "ensemble non-convergence"
+    ],
+    "firewalls": [
+      "AI_STYLE_NOT_LIST_OF_TICS",
+      "ROUGHNESS_NOT_SHARPNESS",
+      "HIGH_PERPLEXITY_NOT_QUALITY"
+    ],
+    "hypotheses": [
+      "human strong prose may differ more in local-tail geometry than document-average stylometry",
+      "human revision may preserve high-consequence local peaks that uniform polish suppresses",
+      "cross-language surface markers may differ while tail compression and collective convergence transport more robustly"
+    ]
+  },
+  "prior_lineage": [
+    "G9-P22 prior-art homogenization boundary",
+    "G9-P23 revision-signature convergence",
+    "G9-P41 local-risk/tail-geometry"
+  ],
+  "notion": "3eaef561-cf92-8162-9c51-c3e295380fe2",
+  "harvest": "3eaef561-cf92-8196-a196-c61ca4863e08"
+}
