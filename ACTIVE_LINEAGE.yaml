@@ -21,9 +21,10 @@ active_research_line:
   - G9-P36-R10-R4
   - G9-P36-R10-R5
   - G9-P36-R10-R6
-current_phase: G9-P36-R10-R6
-current_status: CLOSED_R6_STRUCTURED_VARIATION_WORLD_CHOICE
-current_verdict: PASS_COMPARABLE_CHOICE_SET_STRUCTURED_VARIATION_KSGT_REALIZE_V0_3_SEALED_TRUE_COUNTERFACTUAL_PREFERENCE_HOLD
+  - G9-P36-R10-R7
+current_phase: G9-P36-R10-R7
+current_status: CLOSED_R7_COUNTERFACTUAL_PACKET_NOT_HUMAN_READY
+current_verdict: PASS_COUNTERFACTUAL_SURFACE_ASYMMETRY_PROVEN_KSGT_CFPAIR_V0_1_SEALED_FIRST_BLIND_PACKET_NOT_HUMAN_READY
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -32,9 +33,10 @@ current_compiler:
   cross_layer_authority_graph: KSGT-XARG-v0.1
   realization_decision: KSGT-REALIZE-v0.2
   realization_variation: KSGT-REALIZE-v0.3
+  counterfactual_pair_authority: KSGT-CFPAIR-v0.1
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 3271e1b0a1ae998702f88c257f55e1579838df4b
+current_science_commit: b8b4f95711caecdd4254522ec0fcaa60e9c0fdd1
 current_engineering_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
@@ -54,6 +56,24 @@ current_r10_r3:
   analysis_drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R3_CROSS_LAYER_WORLD_CONTACT
   notion_receipt: 3e9ef561-cf92-816d-9783-ea2fb8bf551d
   harvest_receipt: 3e9ef561-cf92-81eb-9c6d-e54b33c9ded4
+current_r10_r7:
+  selected_packet: 240
+  overt_to_null_selected: 160
+  overt_to_null_pass_internal: 96
+  null_to_overt_selected: 80
+  null_to_overt_pass_internal: 0
+  JX_information_structure_holds: 50
+  nonunique_insertion_position_holds: 79
+  duplicate_surface_excess: 1
+  human_collection_ready: false
+  theory: KSGT-CFPAIR-v0.1
+  deletion_geometry: PARTIAL_FUNCTION
+  insertion_geometry: SET_VALUED_RELATION
+  information_structure_cargo_gate: REQUIRED
+  true_preference_authority: HOLD
+  human_recruitment: HOLD
+  notion_receipt: 3eaef561-cf92-81d6-b49b-e05f8242c4e4
+  harvest_receipt: 3eaef561-cf92-818e-9e63-fe26d00349cd
 current_r10_r6:
   comparable_choice_set: PROMOTED
   exclusive_opportunities: 106125
@@ -211,4 +231,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_G9_P36_R10_R7_COUNTERFACTUAL_SURFACE_MATERIALIZATION
+next_action: BEGIN_G9_P36_R10_R8_INFORMATION_STRUCTURE_PRESERVING_COUNTERFACTUAL_REALIZER
