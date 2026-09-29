@@ -125,3 +125,11 @@ stopping_rule:
   if_packet_readiness_passes: HUMAN_COLLECTION_READY
   if_null_to_overt_position_authority_fails_broadly: FIRST_HUMAN_PACKET_MAY_BE_OVERT_TO_NULL_HEAVY
   no_pressure_to_balance_direction_at_cost_of_SURFACE_AUTHORITY: true
+
+selection_amendment_before_selected_surface_opening:
+  directional_quota:
+    OVERT_TO_NULL: 160
+    NULL_TO_OVERT: 80
+  rationale: >
+    Overt deletion has exact native span authority; null insertion has gold restored-form authority but generally non-unique Korean surface position.
+  no_rebalancing_after_gate_results: true
