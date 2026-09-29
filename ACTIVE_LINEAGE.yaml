@@ -34,7 +34,7 @@ current_compiler:
   realization_variation: KSGT-REALIZE-v0.3
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: db5821e623a98bfe9856b698fab65d7fe2e77122
+current_science_commit: 3271e1b0a1ae998702f88c257f55e1579838df4b
 current_engineering_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
