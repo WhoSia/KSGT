@@ -20,9 +20,10 @@ active_research_line:
   - G9-P36-R10-R3
   - G9-P36-R10-R4
   - G9-P36-R10-R5
-current_phase: G9-P36-R10-R5
-current_status: CLOSED_R5_ROBUST_REALIZATION_THEORY
-current_verdict: PASS_SURFACE_RISK_SET_GEOMETRY_REPLICATED_KSGT_REALIZE_V0_2_SEALED_COUNTERFACTUAL_OMISSION_UTILITY_NOT_IDENTIFIED
+  - G9-P36-R10-R6
+current_phase: G9-P36-R10-R6
+current_status: CLOSED_R6_STRUCTURED_VARIATION_WORLD_CHOICE
+current_verdict: PASS_COMPARABLE_CHOICE_SET_STRUCTURED_VARIATION_KSGT_REALIZE_V0_3_SEALED_TRUE_COUNTERFACTUAL_PREFERENCE_HOLD
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -30,9 +31,10 @@ current_compiler:
   argument_recoverability_graph: KSGT-ARG-v1.1
   cross_layer_authority_graph: KSGT-XARG-v0.1
   realization_decision: KSGT-REALIZE-v0.2
+  realization_variation: KSGT-REALIZE-v0.3
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 0e4198867f0b0e0e05f53d42b8fb7de5e85e3c37
+current_science_commit: db5821e623a98bfe9856b698fab65d7fe2e77122
 current_engineering_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
@@ -52,6 +54,29 @@ current_r10_r3:
   analysis_drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R3_CROSS_LAYER_WORLD_CONTACT
   notion_receipt: 3e9ef561-cf92-816d-9783-ea2fb8bf551d
   harvest_receipt: 3e9ef561-cf92-81eb-9c6d-e54b33c9ded4
+current_r10_r6:
+  comparable_choice_set: PROMOTED
+  exclusive_opportunities: 106125
+  strict_mixed_strata: 1649
+  native_original_pairable_pairs: 3280
+  high_accessibility_overt_controls_P2: 9557
+  actor_specific_strict_mixed_strata: 618
+  document_overdispersion:
+    N_SUBJECT: 2.393171146076571
+    N_OBJECT: 1.6500786186559666
+    S_SUBJECT: 6.714553801677202
+    S_OBJECT: 4.316495328481774
+  local_state_sign:
+    N_SUBJECT: NEGATIVE
+    N_OBJECT: POSITIVE
+    S_SUBJECT: POSITIVE
+    S_OBJECT: POSITIVE
+  theory: KSGT-REALIZE-v0.3
+  global_temperature_noise: FORBIDDEN
+  universal_poisson_or_burstiness_law: REJECTED
+  true_counterfactual_preference: HOLD
+  notion_receipt: 3eaef561-cf92-8173-aa0f-fc017590ab36
+  harvest_receipt: 3eaef561-cf92-813b-a131-e6119f71d195
 current_r10_r5:
   prospective_2024_predicate_tokens: 481404
   prospective_2024_subject_omitted_share: 0.5576153163455508
@@ -168,6 +193,8 @@ authority:
   realization_risk_set_geometry: PROMOTED
   KSGT_REALIZE_v0_2: SEALED
   counterfactual_realization_preference: HOLD
+  structured_variation: PROMOTED
+  KSGT_REALIZE_v0_3: SEALED
 github_actions_policy:
   r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
   contents_permission: READ
@@ -184,4 +211,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_G9_P36_R10_R6_COMPARABLE_OVERT_NULL_CHOICE_SET_COURT
+next_action: BEGIN_G9_P36_R10_R7_COUNTERFACTUAL_SURFACE_MATERIALIZATION
