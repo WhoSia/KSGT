@@ -76,3 +76,7 @@ next_phase:
   title: Blind Native Overt↔Null Preference Pilot, Hierarchical Judge/Author Explicitness Calibration, Counterfactual Preference-Authority Acquisition, Human–Model Choice-Frontier Adjudication & G9-P36 Closure Court
 
 user_action: SUPERVISED_NATIVE_PILOT_AFTER_PROTOCOL_FREEZE
+
+closure:
+  initial_receipt_commit: 265b33bd6af2992365c08cd701ec2742a488a2a6
+  active_lineage_commit: 614baff9e25b3e26e55a7e5c93294e48c751c196
