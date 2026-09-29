@@ -22,9 +22,10 @@ active_research_line:
   - G9-P36-R10-R5
   - G9-P36-R10-R6
   - G9-P36-R10-R7
-current_phase: G9-P36-R10-R7
-current_status: CLOSED_R7_COUNTERFACTUAL_PACKET_NOT_HUMAN_READY
-current_verdict: PASS_COUNTERFACTUAL_SURFACE_ASYMMETRY_PROVEN_KSGT_CFPAIR_V0_1_SEALED_FIRST_BLIND_PACKET_NOT_HUMAN_READY
+  - G9-P36-R10-R8
+current_phase: G9-P36-R10-R8
+current_status: CLOSED_R8_NATIVE_PREFERENCE_PILOT_READY
+current_verdict: PASS_INFORMATION_STRUCTURE_CARGO_SEPARATED_POSITION_LATTICE_CERTIFIED_DUPLICATE_FREE_PACKET_RECONSTITUTED_NATIVE_PREFERENCE_PILOT_READY
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -33,10 +34,10 @@ current_compiler:
   cross_layer_authority_graph: KSGT-XARG-v0.1
   realization_decision: KSGT-REALIZE-v0.2
   realization_variation: KSGT-REALIZE-v0.3
-  counterfactual_pair_authority: KSGT-CFPAIR-v0.1
+  counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 9f08c66404eace8d66dd35e92f7622f05a7683da
+current_science_commit: 265b33bd6af2992365c08cd701ec2742a488a2a6
 current_engineering_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
@@ -56,6 +57,25 @@ current_r10_r3:
   analysis_drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R3_CROSS_LAYER_WORLD_CONTACT
   notion_receipt: 3e9ef561-cf92-816d-9783-ea2fb8bf551d
   harvest_receipt: 3e9ef561-cf92-81eb-9c6d-e54b33c9ded4
+current_r10_r8:
+  safe_overt_to_null_candidates: 1556
+  unique_position_null_to_overt_candidates: 160
+  restored_form_safe_null_to_overt_candidates: 145
+  blind_packet_total: 160
+  blind_packet_overt_to_null: 120
+  blind_packet_null_to_overt: 40
+  inverse_roundtrip_pass: 160
+  exact_duplicate_surfaces: 0
+  near_duplicate_clusters: 0
+  R7_overlap: 0
+  pilot_total: 24
+  pilot_each_source_slot: 6
+  theory: KSGT-CFPAIR-v0.2
+  human_collection_ready_internal: true
+  true_preference_authority: HOLD
+  lineage_decision: G9-P36-R11_THEN_P37
+  notion_receipt: 3eaef561-cf92-81bd-bdea-fa6c38c28ad8
+  harvest_receipt: 3eaef561-cf92-814f-a78f-fcce9b8d70f8
 current_r10_r7:
   selected_packet: 240
   overt_to_null_selected: 160
@@ -215,6 +235,8 @@ authority:
   counterfactual_realization_preference: HOLD
   structured_variation: PROMOTED
   KSGT_REALIZE_v0_3: SEALED
+  KSGT_CFPAIR_v0_2: SEALED
+  native_preference_pilot: READY
 github_actions_policy:
   r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
   contents_permission: READ
@@ -231,4 +253,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_G9_P36_R10_R8_INFORMATION_STRUCTURE_PRESERVING_COUNTERFACTUAL_REALIZER
+next_action: BEGIN_G9_P36_R11_NATIVE_PREFERENCE_AUTHORITY_CLOSURE
