@@ -19,19 +19,21 @@ active_research_line:
   - G9-P36-R10-R2
   - G9-P36-R10-R3
   - G9-P36-R10-R4
-current_phase: G9-P36-R10-R3
-current_status: CLOSED_R3_CROSS_LAYER_WORLD_CONTACT
-current_verdict: PASS_EXACT_CROSS_LAYER_ALIGNMENT_PROVEN_SEMANTIC_ROLE_TOKEN_AUTHORITY_STRUCTURALLY_UNAVAILABLE_UNDER_CURRENT_EXPLICIT_GOLD_CASEFRAME_PARTIAL_IDENTIFICATION_ONLY
+  - G9-P36-R10-R5
+current_phase: G9-P36-R10-R5
+current_status: CLOSED_R5_ROBUST_REALIZATION_THEORY
+current_verdict: PASS_SURFACE_RISK_SET_GEOMETRY_REPLICATED_KSGT_REALIZE_V0_2_SEALED_COUNTERFACTUAL_OMISSION_UTILITY_NOT_IDENTIFIED
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
   retired_relation_motif_probe: C3-R9-LD-v1_DIAGNOSTIC_ONLY
   argument_recoverability_graph: KSGT-ARG-v1.1
   cross_layer_authority_graph: KSGT-XARG-v0.1
+  realization_decision: KSGT-REALIZE-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 1dd750d3d37aa49352079faf0f20dfb27736b9b9
-current_engineering_commit: 79e1263560e330b0fc61d9c3a064481cd08aa433
+current_science_commit: 26b00ed3ea13607bbc8183750192608ec116ba6e
+current_engineering_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
   ZA_2025_exact_multilayer_identity: 30346_OF_30346
@@ -50,6 +52,28 @@ current_r10_r3:
   analysis_drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R3_CROSS_LAYER_WORLD_CONTACT
   notion_receipt: 3e9ef561-cf92-816d-9783-ea2fb8bf551d
   harvest_receipt: 3e9ef561-cf92-81eb-9c6d-e54b33c9ded4
+current_r10_r5:
+  prospective_2024_predicate_tokens: 481404
+  prospective_2024_subject_omitted_share: 0.5576153163455508
+  prospective_2024_object_omitted_share: 0.2521153266006809
+  prospective_2024_mixed_action_strata: 22870
+  prospective_hypotheses: PASS_4_OF_4
+  discovery_2025_subject_omitted_share: 0.620504512844249
+  discovery_2025_object_omitted_share: 0.23332108068369786
+  discovery_2025_predicate_sense_auc: 0.8194713484211184
+  prior_text_available_null_slots: 39335
+  future_text_required_null_slots: 14423
+  theory: KSGT-REALIZE-v0.2
+  risk_set_geometry: MULTISET_VALUED
+  default_decision_rule: ROBUST_PARETO_FRONTIER
+  default_scalarization: FORBIDDEN
+  counterfactual_utility: NOT_IDENTIFIED
+  information_structure_effect: HOLD
+  rust_court_run: 36501966778
+  rust_court_artifact: 11005648144
+  rust_court_sha256: a8f3383c2714c70b579dc6cd2cbfcba0d8e898b5a03a58c7180aeb2f0b9772da
+  notion_receipt: 3eaef561-cf92-81f4-bc00-f0e98c5a60ce
+  harvest_receipt: 3eaef561-cf92-8113-8949-f06d3079925e
 current_r10_r4:
   theory: KSGT-REALIZE-v0.1
   recoverability_realization_separation: PROMOTED
@@ -141,6 +165,9 @@ authority:
   KSGT_ARG_v1_1_token_equivalence: SEALED
   semantic_role: STRUCTURALLY_UNAVAILABLE_FROM_CURRENT_EXPLICIT_GOLD
   cross_language_reuse: HOLD
+  realization_risk_set_geometry: PROMOTED
+  KSGT_REALIZE_v0_2: SEALED
+  counterfactual_realization_preference: HOLD
 github_actions_policy:
   r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
   contents_permission: READ
@@ -157,4 +184,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_G9_P36_R10_R5_NATIVE_OVERT_NULL_DECISION_COURT
+next_action: BEGIN_G9_P36_R10_R6_COMPARABLE_OVERT_NULL_CHOICE_SET_COURT
