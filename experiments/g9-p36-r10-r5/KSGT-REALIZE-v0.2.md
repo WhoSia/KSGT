@@ -87,3 +87,37 @@ Return one realization only when it robustly dominates all alternatives, or when
 
 ## 10. Research consequence
 KSGT is not a classifier that hides uncertainty behind one probability. It is a constrained generator whose world contact removes impossible choices, whose mathematics preserves unresolved distinctions, and whose style layer ranks only realizations that remain semantically and referentially authorized.
+
+## 11. Constrained communication geometry
+
+Let m be the intended semantic/referential state, y a candidate surface realization, and C_t the information available at generation time t.
+
+A listener model induces a family of admissible posteriors Q(m|y,C_t,omega) over uncertainty state omega. Define protected distortion components rather than one global loss:
+
+D(y,omega)=(D_semantic,D_referential,D_discourse,D_information_structure,D_social_pragmatic).
+
+Surface economy is represented separately by
+
+C(y)=(token_cost,redundancy_cost,repetition_cost,register_deviation).
+
+The generation problem is therefore: find the robustly efficient realizations y in F_i that satisfy hard semantic/referential constraints while reducing communicative distortion and avoidable surface cost across admissible uncertainty states.
+
+This gives a rate-distortion-style interpretation:
+- omission can reduce code length and repetition;
+- overt realization can reduce referential or discourse distortion;
+- neither action is globally preferable;
+- the tradeoff is context- and authority-dependent.
+
+Current NIKL corpora do not identify the listener posterior Q, human style weights, or counterfactual distortion of unrealized alternatives. This geometry is therefore a constitutional model, not an empirically calibrated human utility function.
+
+Its free parameters may only be calibrated later from genuinely comparable overt/null choice data or prospective native judgments.
+
+## 12. Relationship to neighboring theories
+
+Centering/topic-chain models are candidate structures for H_i, not deterministic omission rules.
+
+Probabilistic pragmatic or Rational-Speech-Act-style models are possible listener/speaker models for Q only after their priors and alternative sets are world-contact calibrated.
+
+Uniform-information-density and redundancy-reduction theories may contribute components of C(y) or D_discourse, but are not sovereign generators.
+
+Partial-identification and robust multiobjective decision theory supply the default authority discipline when Q, H_i, Gamma_i, or preference weights remain uncertain.
