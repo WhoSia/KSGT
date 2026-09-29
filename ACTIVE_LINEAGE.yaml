@@ -23,9 +23,16 @@ active_research_line:
   - G9-P36-R10-R6
   - G9-P36-R10-R7
   - G9-P36-R10-R8
-current_phase: G9-P36-R10-R8
-current_status: CLOSED_R8_NATIVE_PREFERENCE_PILOT_READY
-current_verdict: PASS_INFORMATION_STRUCTURE_CARGO_SEPARATED_POSITION_LATTICE_CERTIFIED_DUPLICATE_FREE_PACKET_RECONSTITUTED_NATIVE_PREFERENCE_PILOT_READY
+  - G9-P36-R11
+  - G9-P37
+  - G9-P38
+  - G9-P39
+  - G9-P40
+  - G9-P41
+  - G9-P42
+current_phase: G9-P42
+current_status: CLOSED_PASS_WITH_DIRECT_WORLD_CONTACT_HOLD
+current_verdict: PASS_PPG_OPERATOR_CENTERED_AI_STYLE_MARKER_MECHANISM_SEPARATED_RAW_LITERARY_TAIL_HOLD
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -37,8 +44,8 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 082867dfdace3c68593abe660d783dced0170675
-current_engineering_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
+current_science_commit: 914bbf4c861425cf1064b2da5f30d8d5ee442595
+current_engineering_commit: c6e675b0b214f9e529f8eead7aec84872b91c063
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
   ZA_2025_exact_multilayer_identity: 30346_OF_30346
@@ -219,6 +226,25 @@ r10_gold_intake:
   state: R1_ONTOLOGY_RECONSTITUTION_CLOSED
   scoring_authorized: true
   resume_same_phase_on_arrival: true
+current_g9_p42:
+  peak_preservation_guard: KSGT-PPG-v0.1
+  wildness_theory: KSGT-WILDNESS-v0.2
+  p22_p23_flattening_bridge: PASS
+  collateral_nonforced_edits:
+    RIGC_1: 5_OF_54
+    DIRECT_REGENERATION: 31_OF_54
+    UNIFORM_POLISH: 41_OF_54
+  distinct_revision_signatures:
+    RIGC_1: 15_OF_18
+    DIRECT_REGENERATION: 10_OF_18
+    UNIFORM_POLISH: 6_OF_18
+  operator_mechanism: ENTRY_TIMING_X_REVISION_SCOPE_X_COMMON_ATTRACTOR_PRESSURE
+  marker_transport: REJECTED_BY_DEFAULT
+  marker_mechanism_separation: PROMOTED
+  native_trace_acquisition: PARTIAL
+  direct_korean_literary_tail_world_contact: HOLD_RAW_ALIGNED_REVISION_TRACE
+  notion_receipt: 3eaef561-cf92-8153-bb0e-ec4e6bd7520a
+  harvest_receipt: 3eaef561-cf92-814b-bbef-ef4ad7f9f091
 authority:
   MNMC_5: RETAINED
   MNMC_6: NOT_JUSTIFIED
@@ -236,7 +262,10 @@ authority:
   structured_variation: PROMOTED
   KSGT_REALIZE_v0_3: SEALED
   KSGT_CFPAIR_v0_2: SEALED
-  native_preference_pilot: READY
+  native_preference_pilot: HISTORICAL_READY_NO_LONGER_ACTIVE_GATE
+  KSGT_PPG_v0_1: SEALED_NONAUTHORITATIVE
+  KSGT_WILDNESS_v0_2: PRETHEORY_OPERATOR_CENTERED
+  literary_tail_direct_authority: HOLD_RAW_ALIGNED_REVISION_TRACE
 github_actions_policy:
   r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
   contents_permission: READ
@@ -253,4 +282,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: BEGIN_G9_P36_R11_NATIVE_PREFERENCE_AUTHORITY_CLOSURE
+next_action: BEGIN_G9_P43_RAW_NATIVE_TRACE_PEAK_SURVIVAL_EXECUTION
