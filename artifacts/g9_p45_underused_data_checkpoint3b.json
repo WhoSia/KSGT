@@ -1,0 +1,93 @@
+{
+  "schema": "ksgt.g9.p45.underused-data-checkpoint3b.v1",
+  "phase": "G9-P45",
+  "status": "OPEN_CORPUS_WAIT_PLUS_DEV_LIT",
+  "klicke_real_join": {
+    "holistic_ids": 4992,
+    "demographic_ids": 4992,
+    "typing_ids": 4992,
+    "vocabulary_ids": 4967,
+    "four_way_complete": 4967,
+    "holistic_demographic_overlap": 4992,
+    "holistic_typing_overlap": 4992,
+    "holistic_vocabulary_overlap": 4967,
+    "prompts": {
+      "MATERIALISM": 1293,
+      "APPEARANCE": 1234,
+      "HAPPINESS": 1329,
+      "COMPETITION": 1136
+    },
+    "holistic_score": {
+      "min": 1,
+      "p25": 3,
+      "median": 3.5,
+      "p75": 4.5,
+      "p90": 5,
+      "max": 6,
+      "mean": 3.7185496794871793
+    },
+    "final_text_length_chars": {
+      "min": 363,
+      "p25": 1482,
+      "median": 2007,
+      "p75": 2749.5,
+      "p90": 3616.7,
+      "max": 7983,
+      "mean": 2247.0462740384614
+    },
+    "real_data_ingestion_failure": {
+      "file": "holistic_scores.csv",
+      "observed": "UTF-8 strict decoding fails on Windows-1252 smart-quote byte 0x92",
+      "successful_probe": "cp1252",
+      "verdict": "SOURCE_SPECIFIC_ENCODING_ADAPTER_REQUIRED",
+      "authority_effect": "NONE_IF_EXPLICITLY_RECORDED_NO_REPLACEMENT_DECODING"
+    },
+    "authority": "AUXILIARY_PROCESS_CONFOUND_LANE_ONLY"
+  },
+  "moon_green_kushlev_osf": {
+    "essay_registry_rows": 2200,
+    "unique_ids": 2200,
+    "duplicate_ids": 0,
+    "study_counts": {
+      "s1": 200,
+      "s2": 400,
+      "s3": 1600
+    },
+    "authorship_counts": {
+      "gpt-4": 1200,
+      "human": 1000
+    },
+    "model_counts": {
+      "base": 600,
+      "human": 200,
+      "param-modi": 100,
+      "naive_prompt": 100,
+      "diverse_human": 400,
+      "cot": 400,
+      "random_human": 400
+    },
+    "study_model": {
+      "s1|base": 100,
+      "s1|human": 100,
+      "s2|base": 100,
+      "s2|param-modi": 100,
+      "s2|naive_prompt": 100,
+      "s2|human": 100,
+      "s3|diverse_human": 400,
+      "s3|base": 400,
+      "s3|cot": 400,
+      "s3|random_human": 400
+    },
+    "sentence_embedding_asset_bytes": 630708068,
+    "role": "GENERATION_POLICY_DIVERSITY_EXTERNAL_DONOR",
+    "p45_diachronic_authority": false
+  },
+  "court": [
+    "KLICKE_FOUR_WAY_JOIN_IS_NEAR_COMPLETE_4967_OF_4992",
+    "KLICKE_HOLISTIC_SOURCE_ENCODING_IS_NOT_UTF8",
+    "ENCODING_FAILURE_IS_AN_INGESTION_BUG_NOT_A_SCIENTIFIC_ZERO",
+    "MOON_GREEN_KUSHLEV_IS_MULTI_POLICY_DIVERSITY_DATA_NOT_MERE_AI_VS_HUMAN",
+    "UNDERUSED_DATA_HAS_REUSABLE_GENERATION_SIDE_VALUE",
+    "NO_AUXILIARY_DATA_PROMOTED_TO_KOREAN_DIACHRONIC_AUTHORITY"
+  ]
+}
