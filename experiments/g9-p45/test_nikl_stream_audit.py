@@ -44,6 +44,7 @@ assert groups[("POST_2024_MIXED_PROVENANCE", 2024, "P1")]["documents"] == 1
 assert groups[("TRANSITION_2022_11_30_2023", 2022, "P1")]["documents"] == 1
 finalized = [m._finalize(v, True) for v in groups.values()]
 assert all("text" not in row and "form" not in row for row in finalized)
+assert sum(t["text_units"] for row in finalized for t in row["topic_features"]) == 2
 
 with tempfile.TemporaryDirectory() as tmp:
     csv_zip = Path(tmp) / "written.csv.zip"
@@ -53,17 +54,23 @@ with tempfile.TemporaryDirectory() as tmp:
                 "f1,d2,P1,20200102,T2,third sentence\n")
     with zipfile.ZipFile(csv_zip, "w", compression=zipfile.ZIP_DEFLATED) as z:
         z.writestr("rows.csv", csv_data)
-    csv_result = m.process_csv_archive(csv_zip, False)
+    csv_result = m.process_csv_archive(csv_zip, True)
     invalid = next(v for k, v in csv_result["groups"].items() if k.startswith("INVALID_CALENDAR_DATE|"))
     assert invalid["documents"] == 1
     assert invalid["text_units"] == 2
     assert invalid["date_errors"] == {"INVALID_CALENDAR_DATE": 1}
     assert invalid["date_shapes"] == {"YYYYMMDD": 1}
+    assert invalid["topic_features"][0]["topic"] == "T1"
+    assert invalid["topic_features"][0]["documents"] == 1
+    assert invalid["topic_features"][0]["text_units"] == 2
 
 def cell(n, counts):
-    return {"documents": n, "text_units": n, "edf": {c: counts.get(c, 0) for c in m.EDF},
-            "markers": {c: {x: counts.get(c, 0) if x == m.EDF[c][0] else 0 for x in ms}
-                        for c, ms in m.EDF.items()}}
+    edf = {c: counts.get(c, 0) for c in m.EDF}
+    markers = {c: {x: counts.get(c, 0) if x == m.EDF[c][0] else 0 for x in ms}
+               for c, ms in m.EDF.items()}
+    return {"documents": n, "text_units": n, "edf": edf, "markers": markers,
+            "topic_features": [{"topic":"topic-A", "documents":n, "text_units":n,
+                                "edf":edf, "markers":markers}]}
 
 files = [
     {"name":"a.zip","source_family":"NIKL_NEWSPAPER","serialization":"CSV",
@@ -84,5 +91,16 @@ assert len(drift["omitted_nonconsecutive_year_gaps"]) == 1
 assert drift["omitted_nonconsecutive_year_gaps"][0]["archive_a"] == "b.zip"
 assert drift["omitted_nonconsecutive_year_gaps"][0]["archive_b"] == "c.zip"
 assert drift["ambiguous_year_source_collisions"] == []
+files[1]["groups"]["PRE_CHATGPT_2020_2022_11_29|2021|P1"]["topic_features"].append(
+    {"topic":"topic-B", "documents":2, "text_units":2,
+     "edf":{c:0 for c in m.EDF}, "markers":{c:{x:0 for x in ms} for c,ms in m.EDF.items()}}
+)
+topic_drift = m.topic_drift_tables(files)
+assert len(topic_drift["annual_adjacent_topic_pairs"]) == 1
+assert topic_drift["annual_adjacent_topic_pairs"][0]["topic"] == "topic-A"
+assert topic_drift["annual_adjacent_topic_pairs"][0]["archive_a"] == "a.zip"
+assert topic_drift["annual_adjacent_topic_pairs"][0]["archive_b"] == "b.zip"
+assert len(topic_drift["omitted_nonconsecutive_topic_gaps"]) == 1
+assert topic_drift["ambiguous_topic_year_source_collisions"] == []
 print("PASS P45 NIKL streaming parser, frozen EDF, exact date cut, and feature-only output")
 
