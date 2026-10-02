@@ -15,9 +15,18 @@
       ],
       "raw_text_retention": "FEATURE_ONLY_BY_DEFAULT",
       "p45_diachronic_authority": true,
-      "status": "USER_REPORTED_LOCAL_RAW_AVAILABLE_UNVERIFIED",
+      "status": "USER_REPORTED_RAW_NOT_FOUND_IN_DECLARED_DOWNLOADS_SCAN_CUSTODY_UNVERIFIED",
       "local_custody_policy": "LOCAL_IMMUTABLE_RAW_FIRST; MANIFEST_AND_DERIVED_FEATURES_TO_DRIVE; RAW_DRIVE_MIRROR_OPTIONAL_AFTER_HASH_AND_LICENSE_REVIEW",
-      "next_gate": "VERIFY_LOCAL_BYTES_AND_SHARD_MANIFEST_BEFORE_SCIENTIFIC_INGESTION"
+      "next_gate": "USER_PROVIDE_EXACT_RAW_LOCATION_OR_PLACE_RAW_IN_STABLE_LOCAL_DIRECTORY",
+      "prior_user_reported_status": "USER_REPORTED_LOCAL_RAW_AVAILABLE_UNVERIFIED",
+      "last_location_audit": {
+        "path": "C:\\Users\\kimwo\\Downloads",
+        "recursive_file_count": 235,
+        "total_bytes": 29485596298,
+        "matching_filename_count": 0,
+        "files_at_least_20gb": 0,
+        "audit_scope": "metadata inventory only; no corpus contents opened"
+      }
     },
     "NIKL_NEWSPAPER": {
       "role": "SAME_REGISTER_DIACHRONIC_BRIDGE",
