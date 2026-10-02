@@ -1,0 +1,68 @@
+{
+  "schema": "ksgt.g9.p44.edf-v0.1",
+  "phase": "G9-P44",
+  "object": "explicit discourse-function observational grammar",
+  "classes": {
+    "CONTRAST": [
+      "그러나",
+      "그런데",
+      "하지만",
+      "그렇지만",
+      "반면",
+      "오히려",
+      "도리어",
+      "그럼에도",
+      "비록"
+    ],
+    "CAUSE_RESULT": [
+      "그래서",
+      "그러므로",
+      "따라서",
+      "때문에",
+      "그러자",
+      "그리하여",
+      "결국",
+      "그러니",
+      "그러면",
+      "이에"
+    ],
+    "TEMPORAL": [
+      "그때",
+      "이때",
+      "먼저",
+      "뒤에",
+      "후에",
+      "마침내",
+      "이윽고",
+      "곧",
+      "동안",
+      "한동안"
+    ],
+    "EXPANSION": [
+      "그리고",
+      "또한",
+      "또",
+      "게다가",
+      "더구나",
+      "즉",
+      "이를테면",
+      "예컨대",
+      "다시 말해"
+    ],
+    "DIALOGUE_INTERACTION": "surface quotation/dialogue state, tracked separately"
+  },
+  "authority": {
+    "implicit_relation_inference": false,
+    "semantic_role_inference": false,
+    "literary_quality_authority": false,
+    "process_authority": false,
+    "scalar_literary_score": false
+  },
+  "promoted_distinctions": [
+    "FUNCTION_CLASS != SURFACE_REALIZER",
+    "TEMPORAL_PROVENANCE_MUST_BE_EXPLICIT",
+    "MODERN_KOREAN_GENERATION_AUTHORITY_FROM_PREWAR_ONLY = FORBIDDEN"
+  ],
+  "generator_design_candidate": "MECHANISM_PERSISTENCE_WITH_SURFACE_SUBSTITUTION",
+  "raw_text_policy": "do not commit copyrighted modern article bodies; retain derived features/source metadata only"
+}
