@@ -1,0 +1,60 @@
+{
+  "schema": "ksgt.g9.p44.closure-checkpoint8.v1",
+  "phase": "G9-P44",
+  "status": "CLOSED_WITH_TEMPORAL_CORPUS_HOLD",
+  "formal_title": "KSGT Generation IX G9-P44 — Multi-Author Pre-AI Korean Product-Geometry Expansion, Author×Genre Tail Decomposition, Local-Deviation Functional Binding, Long-Range Contextual Payoff, Non-Literary Negative Controls, Product↔Process Firewall & Literary-Sharpness Falsification Court",
+  "checkpoints": 8,
+  "canonical": {
+    "notion_page": "3ecef561-cf92-814e-9953-c0c29ca7bf5b",
+    "harvest_page": "3edef561-cf92-81e4-8683-c3bd5b6a6bea",
+    "drive_folder_id": "1ODKEvVIzRK36L-U708s22nqBFq0g6jly",
+    "drive_workbook_id": "192WtNkLLbUCcnhH6LqzV0AG3c9KNyRaM5T3IK--XInk"
+  },
+  "retired_as_stable_literary_sharpness_proxies": [
+    "sentence_length_tail",
+    "exact_lexical_recurrence",
+    "surface_grammatical_role_transport",
+    "explicit_anchor_return_position",
+    "return_coupled_surface_discourse_state_transition"
+  ],
+  "supported": {
+    "explicit_anchor_position": "GENERAL_DISCOURSE_COHESION_CANDIDATE_NOT_FICTION_SPECIFIC",
+    "coarse_function_temporal_transport": "SUPPORTED_AT_ENDPOINTS",
+    "temporal_provenance_requirement": "PROMOTED",
+    "function_realizer_separation": "PROMOTED"
+  },
+  "endpoint_temporal_test": {
+    "historical_reservoir": "1930s known-human 5 fiction + 5 same-author controls",
+    "modern_reservoir": "2020-2021 named-author pre-ChatGPT columns, 8 texts, 355 segmented sentences",
+    "js_divergence_bits": {
+      "coarse_four_edf_classes": 0.0203,
+      "modern_vs_1930s_fiction_coarse": 0.0198,
+      "modern_vs_1930s_control_coarse": 0.0093,
+      "marker_within_CONTRAST": 0.3712,
+      "marker_within_CAUSE_RESULT": 0.1462,
+      "marker_within_TEMPORAL": 0.264,
+      "marker_within_EXPANSION": 0.1181
+    }
+  },
+  "promoted_laws": [
+    "FUNCTION_CLASS != SURFACE_REALIZER",
+    "TEMPORAL_PROVENANCE_MUST_BE_EXPLICIT",
+    "MODERN_KOREAN_GENERATION_AUTHORITY_FROM_PREWAR_ONLY = FORBIDDEN"
+  ],
+  "promoted_candidate": "MECHANISM_PERSISTENCE_WITH_SURFACE_SUBSTITUTION",
+  "not_promoted": [
+    "literary_quality",
+    "PPG_CONTEXT",
+    "revision_process_authority",
+    "universal_diachronic_law",
+    "population_claim"
+  ],
+  "holds": {
+    "intermediate_era_continuity_1940s_2010s": "REQUIRES_NEW_PROVENANCE_QUALIFIED_CORPUS",
+    "post_2024_mixed_provenance_transport": "HOLD",
+    "source_valid_heldout_author_expansion": "PARTIAL",
+    "github_local_history_reconstruction": "NOT_ATTEMPTED_NO_HISTORY_FABRICATION"
+  },
+  "next_phase_candidate": "G9-P45",
+  "raw_text_policy": "modern copyrighted article bodies not committed; derived features and source metadata only"
+}
