@@ -55,7 +55,7 @@ def aggregate(rows):
     return out
 
 def compare(a,b):
-    if a[5]!=b[5]:
+    if a[0][5]!=b[0][5]:
         raise ValueError("REPRESENTATION_MIX_FORBIDDEN")
     out={"coarse_jsd":jsd([a[1]["edf"][c] for c in CLASSES],
                           [b[1]["edf"][c] for c in CLASSES]),
