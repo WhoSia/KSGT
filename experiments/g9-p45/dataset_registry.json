@@ -1,0 +1,65 @@
+{
+  "schema": "ksgt.g9.p45.dataset-registry.v1",
+  "phase": "G9-P45",
+  "datasets": {
+    "OKHC": {
+      "role": "PRIMARY_PUBLIC_DIACHRONIC_BRIDGE_CANDIDATE",
+      "source": "seyoungsong/Open-Korean-Historical-Corpus",
+      "language_scope": "Korean and historical multilingual material",
+      "authority": [
+        "PERIOD",
+        "SOURCE",
+        "CORPUS",
+        "SCRIPT",
+        "COPYRIGHT_METADATA"
+      ],
+      "raw_text_retention": "FEATURE_ONLY_BY_DEFAULT",
+      "p45_diachronic_authority": true
+    },
+    "NIKL_NEWSPAPER": {
+      "role": "PENDING_SAME_REGISTER_CONFIRMATORY_BRIDGE",
+      "status": "USER_APPLICATION_PENDING",
+      "authority": [
+        "PERIOD",
+        "NEWSPAPER_REGISTER"
+      ],
+      "p45_diachronic_authority": true
+    },
+    "KLICKE_WRITING": {
+      "role": "AUXILIARY_PROCESS_CONFOUND_LANE",
+      "participant_id_key": "8-digit ID",
+      "components": [
+        "final_text",
+        "holistic_score",
+        "keystroke_log",
+        "typing_test",
+        "vocabulary_test",
+        "demographic"
+      ],
+      "p45_diachronic_authority": false
+    },
+    "DOSHI_HAUSER_DRYAD": {
+      "role": "GENERATION_SIDE_EXTERNAL_CONTROL_DONOR",
+      "source_doi": "10.5061/dryad.qfttdz0pm",
+      "components": [
+        "writers_raw",
+        "evaluators_raw",
+        "processed_stata",
+        "analysis_scripts"
+      ],
+      "p45_diachronic_authority": false
+    },
+    "MOON_GREEN_KUSHLEV_OSF": {
+      "role": "AI_ASSISTED_PRODUCT_DIVERSITY_EXTERNAL_DONOR",
+      "source_identity": "Moon-Green-Kushlev GPT-4 diversity package",
+      "p45_diachronic_authority": false
+    }
+  },
+  "invariants": [
+    "AUXILIARY_DATA != DIACHRONIC_AUTHORITY",
+    "DATE != PROVENANCE",
+    "RAW_TEXT != REQUIRED_OUTPUT",
+    "SOURCE_IDENTITY_MUST_BE_EXPLICIT",
+    "P43_AUXILIARY_REUSE_DOES_NOT_REOPEN_P43"
+  ]
+}
