@@ -34,8 +34,8 @@ active_research_line:
   - G9-P44
   - G9-P45
 current_phase: G9-P45
-current_status: OPEN_NIKL_COMPLETE_OKHC_LOCAL_RAW_PENDING_VERIFICATION
-current_verdict: NIKL_13_OF_13_STREAMED_TOPIC_CONDITIONED_DRIFT_RECORDED_OKHC_INDEPENDENT_REPLICATION_PENDING
+current_status: OPEN_NIKL_CP4E_RECORDED_OKHC_LOCATION_UNRESOLVED
+current_verdict: NIKL_TOPIC_TAIL_SUPPORT_SENSITIVITY_AND_FORMAT_CONCORDANCE_RECORDED_OKHC_RAW_NOT_LOCATED
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -47,8 +47,8 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: c37c55c612f7448a82c219e52e7be8c348e2ecba
-current_engineering_commit: 216230a92b0c9453da301fd30757ca8190f4feca
+current_science_commit: f942a58ef5ebae92dd9390e6cf36a2493121088c
+current_engineering_commit: ca88a8a2a7fc1ec9eabff9a79c23d337368145bc
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
   ZA_2025_exact_multilayer_identity: 30346_OF_30346
@@ -230,7 +230,7 @@ r10_gold_intake:
   scoring_authorized: true
   resume_same_phase_on_arrival: true
 current_g9_p45:
-  status: OPEN_NIKL_COMPLETE_OKHC_LOCAL_RAW_PENDING_VERIFICATION
+  status: OPEN_NIKL_CP4E_RECORDED_OKHC_LOCATION_UNRESOLVED
   state_key: PERIOD_X_GENRE_X_REGISTER_X_PROVENANCE
   constitution_commit: 29bba94976d6c0ef118439ca8718b50eb5ce3ba3
   census_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
@@ -252,9 +252,28 @@ current_g9_p45:
   nikl_topic_adjacent_year_pairs: 3225
   nikl_topic_gaps: 42
   nikl_topic_collisions: 0
-  okhc_local_raw: USER_REPORTED_28GB_AVAILABLE_UNVERIFIED
+  okhc_local_raw: USER_REPORTED_28GB_BUT_NOT_FOUND_IN_EXPECTED_DOWNLOADS_SCAN
   okhc_raw_custody_policy: LOCAL_IMMUTABLE_FIRST_DERIVED_FEATURES_TO_DRIVE
   checkpoint4d_receipt: artifacts/g9_p45_state_reconciliation_checkpoint4d.json
+  topic_tail_checkpoint4e:
+    receipt: artifacts/g9_p45_nikl_topic_tail_checkpoint4e.json
+    drive_receipt_id: 1hw-uYDeV5B46op1euVVvbgWShYWO41nb
+    input_drive_artifact_id: 1MXBH1QxKBXrU9QBRm8ZzelkNBVkvOV3O
+    input_sha256: 270fd4a632d73b2836b88453762d122921c8d1f784f03d85134438b5fb31f5aa
+    topic_cells: 3225
+    top_one_percent_all_min_support_under_10: 33_OF_33
+    news_2009_2018_q90_min_support_under_50: 208_OF_230
+    csv_json_pre_chatgpt_exact_pair_concordance: 450_OF_450
+    csv_json_pearson_spearman: 1.0_1.0
+    recurrent_stratum_hotspots: 66
+  okhc_downloads_audit_checkpoint4f:
+    path: "C:\\Users\\kimwo\\Downloads"
+    recursive_files: 235
+    total_bytes: 29485596298
+    matching_raw_filename_count: 0
+    files_at_least_20gb: 0
+    custody_status: LOCATION_UNRESOLVED_NO_RAW_BYTES_VERIFIED
+    next_gate: USER_PROVIDE_EXACT_PATH_OR_PLACE_RAW_IN_STABLE_LOCAL_DIRECTORY
 
 current_g9_p44:
   status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
