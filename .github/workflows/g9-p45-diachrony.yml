@@ -32,6 +32,8 @@ jobs:
         run: python experiments/g9-p45/test_source_contract_probe.py
       - name: NIKL streaming intake and feature-only authority contract
         run: python experiments/g9-p45/test_nikl_stream_audit.py
+      - name: OKHC local large-raw custody manifest
+        run: python experiments/g9-p45/test_okhc_local_custody.py
       - name: Fixture streaming smoke test
         run: |
           python experiments/g9-p45/okhc_adapter.py             experiments/g9-p45/fixture.jsonl             --source-contract experiments/g9-p45/source_contract.json             --output /tmp/g9-p45-features.jsonl
