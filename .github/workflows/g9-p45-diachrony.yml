@@ -28,6 +28,8 @@ jobs:
         run: python experiments/g9-p45/test_archive_probe.py
       - name: KLiCKe feature-only compiler
         run: python experiments/g9-p45/test_klicke_feature_compiler.py
+      - name: Source contract admission gate
+        run: python experiments/g9-p45/test_source_contract_probe.py
       - name: Fixture streaming smoke test
         run: |
           python experiments/g9-p45/okhc_adapter.py             experiments/g9-p45/fixture.jsonl             --source-contract experiments/g9-p45/source_contract.json             --output /tmp/g9-p45-features.jsonl
