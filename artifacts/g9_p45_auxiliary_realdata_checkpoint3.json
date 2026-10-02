@@ -1,0 +1,163 @@
+{
+  "schema": "ksgt.g9.p45.auxiliary-realdata-checkpoint3.v1",
+  "phase": "G9-P45",
+  "status": "OPEN_CORPUS_WAIT_PLUS_DEV_LIT",
+  "klicke": {
+    "authority": "AUXILIARY_PROCESS_COVARIATE_ONLY",
+    "typing": {
+      "participants": 4992,
+      "task_count_distribution": {
+        "4": 2,
+        "5": 4,
+        "6": 10,
+        "7": 4976
+      },
+      "events": {
+        "mean": 1040.3013,
+        "p10": 885,
+        "p50": 1042,
+        "p90": 1188,
+        "min": 91,
+        "max": 2244
+      },
+      "revision_event_rate": {
+        "mean": 0.0303403,
+        "p10": 0.006969,
+        "p50": 0.0258248,
+        "p90": 0.0584983,
+        "min": 0,
+        "max": 0.327381
+      },
+      "input_event_rate": {
+        "mean": 0.954821,
+        "p10": 0.918848,
+        "p50": 0.9615,
+        "p90": 0.983921,
+        "min": 0.465347,
+        "max": 0.996088
+      },
+      "long_pause_ge_2s_rate": {
+        "mean": 0.0075139,
+        "p10": 0.0008858,
+        "p50": 0.00417188,
+        "p90": 0.0169064,
+        "min": 0,
+        "max": 0.290398
+      },
+      "median_pause_ms": {
+        "mean": 185.25,
+        "p10": 116,
+        "p50": 167,
+        "p90": 276.9,
+        "min": 2,
+        "max": 1357
+      },
+      "p90_pause_ms": {
+        "mean": 510.542,
+        "p10": 255,
+        "p50": 428.4,
+        "p90": 887.75,
+        "min": 139,
+        "max": 3654
+      }
+    },
+    "vocabulary": {
+      "participants": 4967,
+      "accuracy": {
+        "mean": 0.8801103,
+        "p10": 0.698413,
+        "p50": 0.920635,
+        "p90": 0.984127,
+        "min": 0.301587,
+        "max": 1
+      }
+    },
+    "joinability": {
+      "writing_inventory_ids": 4992,
+      "demographic_ids": 4992,
+      "writing_demographic_overlap": 4992,
+      "typing_ids": 4992,
+      "vocabulary_ids": 4967,
+      "typing_vocabulary_overlap": 4967,
+      "typing_only_without_vocabulary": 25
+    },
+    "missing_vocabulary_typing_comparison": {
+      "missing_n": 25,
+      "observed_n": 4967,
+      "missing_means": {
+        "tasks": 7,
+        "events": 1060.4,
+        "revision_event_rate": 0.0360617,
+        "input_event_rate": 0.941924,
+        "long_pause_ge_2s_rate": 0.0103264
+      },
+      "observed_means": {
+        "tasks": 6.99517,
+        "events": 1040.2001,
+        "revision_event_rate": 0.0303115,
+        "input_event_rate": 0.954886,
+        "long_pause_ge_2s_rate": 0.00749974
+      },
+      "verdict": "MISSINGNESS_FLAG_REQUIRED_NO_INFERENTIAL_CLAIM"
+    }
+  },
+  "doshi_hauser_dryad": {
+    "authority": "GENERATION_SIDE_EXTERNAL_CONTROL_DONOR_ONLY",
+    "source_doi": "10.5061/dryad.qfttdz0pm",
+    "writer_raw_rows": 500,
+    "writer_columns": 478,
+    "completed_writers": 296,
+    "completed_conditions": {
+      "human": 98,
+      "human_1AI": 100,
+      "human_5AI": 98
+    },
+    "evaluator_raw_rows": 1000,
+    "evaluator_columns": 447,
+    "evaluator_story_slots": 7256,
+    "evaluator_unique_story_ids": 300,
+    "package_contains": [
+      "raw writer CSV",
+      "raw evaluator CSV",
+      "processed Stata data",
+      "Stata analysis scripts",
+      "Python similarity/DAT scripts"
+    ],
+    "p45_diachronic_authority": false
+  },
+  "okhc": {
+    "authority": "PRIMARY_PUBLIC_DIACHRONIC_BRIDGE_CANDIDATE",
+    "public_dataset_size": "28.6 GB",
+    "reported_documents": 17700000,
+    "reported_tokens": 5100000000,
+    "reported_sources": 19,
+    "raw_file_families_observed": [
+      "news_archive_part_*_of_003.jsonl",
+      "newslibrary_part_*_of_150.jsonl",
+      "source-specific JSONL shards"
+    ],
+    "viewer_failure": "ArrowNotImplementedError: empty translation struct cannot be written to Parquet",
+    "engineering_verdict": "RAW_JSONL_STREAMING_IS_AUTHORITATIVE_PATH_DO_NOT_REQUIRE_ARROW_PARQUET_CONVERSION",
+    "schema_variants_observed": {
+      "copyright": [
+        "copyright",
+        "copyright_status"
+      ],
+      "analytics": [
+        "analytics",
+        "text_analytics"
+      ],
+      "text_body": [
+        "text",
+        "content.body"
+      ]
+    }
+  },
+  "court": [
+    "KLICKE_AUXILIARY_DATA_HAS_NONTRIVIAL_PROCESS_VARIATION",
+    "VOCAB_MISSINGNESS_MUST_BE_FLAGGED",
+    "DRYAD_PACKAGE_IS_FULL_REPRODUCIBILITY_DONOR_NOT_STATIC_ONLY",
+    "OKHC_JSONL_STREAMING_PROMOTED_OVER_DATASET_VIEWER_CONVERSION",
+    "AUXILIARY_ENGLISH_DATA_DOES_NOT_ENTER_P45_DIACHRONIC_AUTHORITY"
+  ]
+}
