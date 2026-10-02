@@ -34,8 +34,8 @@ active_research_line:
   - G9-P44
   - G9-P45
 current_phase: G9-P45
-current_status: OPEN_CHECKPOINT_1_CORPUS_LATTICE_AND_ACQUISITION_CENSUS
-current_verdict: ENDPOINT_TRANSPORT_SURVIVES_BUT_INTERMEDIATE_CONTINUITY_REQUIRES_NEW_CORPUS
+current_status: OPEN_NIKL_COMPLETE_OKHC_LOCAL_RAW_PENDING_VERIFICATION
+current_verdict: NIKL_13_OF_13_STREAMED_TOPIC_CONDITIONED_DRIFT_RECORDED_OKHC_INDEPENDENT_REPLICATION_PENDING
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -47,8 +47,8 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
-current_engineering_commit: c6e675b0b214f9e529f8eead7aec84872b91c063
+current_science_commit: c37c55c612f7448a82c219e52e7be8c348e2ecba
+current_engineering_commit: 216230a92b0c9453da301fd30757ca8190f4feca
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
   ZA_2025_exact_multilayer_identity: 30346_OF_30346
@@ -230,19 +230,31 @@ r10_gold_intake:
   scoring_authorized: true
   resume_same_phase_on_arrival: true
 current_g9_p45:
-  status: OPEN_CHECKPOINT_1_CORPUS_LATTICE_AND_ACQUISITION_CENSUS
+  status: OPEN_NIKL_COMPLETE_OKHC_LOCAL_RAW_PENDING_VERIFICATION
   state_key: PERIOD_X_GENRE_X_REGISTER_X_PROVENANCE
   constitution_commit: 29bba94976d6c0ef118439ca8718b50eb5ce3ba3
   census_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
   endpoint_1930s: AVAILABLE_FROM_P44
   endpoint_2020_2021: AVAILABLE_FROM_P44
   postlib_public_archive_lane: OPEN_BODY_SCHEMA_UNVERIFIED
-  NIKL_2009_2018: OFFICIAL_IDENTIFIED_TERMS_GATED_RAW_MISSING
-  NIKL_2019: OFFICIAL_IDENTIFIED_TERMS_GATED_RAW_MISSING
-  intermediate_continuity: NOT_ESTABLISHED
+  NIKL_2009_2018: COMPLETE_WITHIN_13_ARCHIVE_STREAMING_FAMILY
+  NIKL_2019: COMPLETE_WITHIN_13_ARCHIVE_STREAMING_FAMILY
+  intermediate_continuity: PARTIALLY_ESTABLISHED_WITHIN_NIKL_REGISTER_OKHC_INDEPENDENT_REPLICATION_PENDING
   notion_receipt: 3edef561-cf92-815e-8115-e064f5e65cf3
   drive_folder: 11gyHOKlViatdwRs2DjQs1matk5AxgvKQ
   drive_workbook: 10mIUISI7gd_hO9c_uxcmh94ZD6tWD1vEUV5UF4M8gCo
+  nikl_archives_complete: 13_OF_13
+  nikl_compressed_bytes: 15830328122
+  nikl_uncompressed_bytes: 60536767380
+  nikl_archive_representation_document_records: 12352778
+  nikl_distinct_article_id_sum_by_archive: 3321250
+  nikl_text_units: 142922388
+  nikl_topic_adjacent_year_pairs: 3225
+  nikl_topic_gaps: 42
+  nikl_topic_collisions: 0
+  okhc_local_raw: USER_REPORTED_28GB_AVAILABLE_UNVERIFIED
+  okhc_raw_custody_policy: LOCAL_IMMUTABLE_FIRST_DERIVED_FEATURES_TO_DRIVE
+  checkpoint4d_receipt: artifacts/g9_p45_state_reconciliation_checkpoint4d.json
 
 current_g9_p44:
   status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
@@ -321,4 +333,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: MATERIALIZE_POSTLIB_PUBLIC_SAMPLE_AND_ACQUIRE_APPROVED_NIKL_2009_2019_RAW
+next_action: VERIFY_LOCAL_OKHC_BYTES_STREAM_INDEPENDENT_REPLICATION_AND_EXTEND_SOURCE_MATCHED_DRIFT
