@@ -72,10 +72,20 @@ def markers(text: str) -> tuple[dict[str, int], dict[str, dict[str, int]]]:
 def _new_group() -> dict[str, Any]:
     return {"documents": 0, "text_units": 0, "characters": 0,
             "edf": Counter(), "markers": {c: Counter() for c in EDF},
+            "topic_features": {},
             "topics": Counter(), "date_shapes": Counter(), "date_errors": Counter(),
             "missing_publisher": 0, "missing_topic": 0, "empty_text_units": 0}
 
-def _add_text(g: dict[str, Any], text: str, extract_features: bool) -> None:
+def _topic_cell(g: dict[str, Any], topic: str | None) -> dict[str, Any]:
+    return g["topic_features"].setdefault(topic, {
+        "documents": 0, "text_units": 0, "characters": 0, "edf": Counter(),
+        "markers": {c: Counter() for c in EDF},
+    })
+
+def _add_topic_document(g: dict[str, Any], topic: str | None) -> None:
+    _topic_cell(g, topic)["documents"] += 1
+
+def _add_text(g: dict[str, Any], text: str, extract_features: bool, topic: str | None = None) -> None:
     g["text_units"] += 1
     if extract_features:
         ec, detail = markers(text)
@@ -85,6 +95,12 @@ def _add_text(g: dict[str, Any], text: str, extract_features: bool) -> None:
         g["edf"].update(ec)
         for cls, values in detail.items():
             g["markers"][cls].update(values)
+        tg = _topic_cell(g, topic)
+        tg["text_units"] += 1
+        tg["characters"] += len(text)
+        tg["edf"].update(ec)
+        for cls, values in detail.items():
+            tg["markers"][cls].update(values)
 
 def _finalize(g: dict[str, Any], extract_features: bool) -> dict[str, Any]:
     out = {"documents": g["documents"], "text_units": g["text_units"],
@@ -95,7 +111,13 @@ def _finalize(g: dict[str, Any], extract_features: bool) -> dict[str, Any]:
     if extract_features:
         out.update({"characters": g["characters"], "edf": dict(g["edf"]),
                     "markers": {c: dict(g["markers"][c]) for c in EDF},
-                    "empty_text_units": g["empty_text_units"]})
+                    "empty_text_units": g["empty_text_units"],
+                    "topic_features": [
+                        {"topic": topic, "documents": tg["documents"], "text_units": tg["text_units"],
+                         "characters": tg["characters"], "edf": dict(tg["edf"]),
+                         "markers": {c: dict(tg["markers"][c]) for c in EDF}}
+                        for topic, tg in sorted(g["topic_features"].items(), key=lambda x: (x[0] is not None, x[0] or ""))
+                    ]})
     return out
 
 def newspaper_provenance(period: str, year: int | None) -> str:
@@ -231,6 +253,7 @@ def _add_document(groups: dict[tuple[str, int | None, str], dict[str, Any]], doc
     if year is None:
         g["date_errors"][period] += 1
     topic = str(meta.get("topic") or "")
+    _add_topic_document(g, topic or None)
     if topic:
         g["topics"][topic] += 1
     else:
@@ -243,7 +266,7 @@ def _add_document(groups: dict[tuple[str, int | None, str], dict[str, Any]], doc
         return
     for item in paragraphs:
         if isinstance(item, dict) and isinstance(item.get("form"), str):
-            _add_text(g, item["form"], extract_features)
+            _add_text(g, item["form"], extract_features, topic or None)
         else:
             g["date_errors"]["MALFORMED_PARAGRAPH_FORM"] += 1
 
@@ -312,11 +335,12 @@ def process_csv_archive(path: Path, extract_features: bool) -> dict[str, Any]:
                                 g["topics"][topic] += 1
                             else:
                                 g["missing_topic"] += 1
+                            _add_topic_document(g, topic or None)
                             if publisher == "UNKNOWN_PUBLISHER":
                                 g["missing_publisher"] += 1
                         elif seen[docid] != (group_key, topic, raw_date):
                             g["date_errors"]["DOCUMENT_METADATA_INCONSISTENT"] += 1
-                        _add_text(g, row.get("sentence") or "", extract_features)
+                        _add_text(g, row.get("sentence") or "", extract_features, topic or None)
                     text.detach()
             except Exception as exc:
                 errors.append({"member_name_hash": members[-1]["name_hash"],
@@ -435,6 +459,55 @@ def drift_tables(files: list[dict[str, Any]]) -> dict[str, Any]:
             "period_pooling": "HOLD_UNTIL_SOURCE_OVERLAP_AND_EDITION_IDENTITY_ARE_RESOLVED",
             "pair_rule": "same NIKL source family, serialization, publisher, and fixed period; unique archive per period-year; adjacent calendar years only; no CSV/JSON pooling"}
 
+def topic_drift_tables(files: list[dict[str, Any]]) -> dict[str, Any]:
+    by_year: dict[tuple[str, str, str, str, str | None, int], list[tuple[dict[str, Any], str, str]]] = defaultdict(list)
+    for f in files:
+        for key, g in f["groups"].items():
+            period, year_s, publisher = key.split("|", 2)
+            try:
+                year = int(year_s)
+            except ValueError:
+                continue
+            for tf in g.get("topic_features", []):
+                by_year[(f["source_family"], f["serialization"], publisher, period,
+                         tf.get("topic"), year)].append((tf, f["name"], g.get("edition_scope", "NOT_RECORDED")))
+    collisions = [{"source_family": k[0], "serialization": k[1], "publisher": k[2],
+                   "period": k[3], "topic": k[4], "year": k[5],
+                   "archives": [x[1] for x in v]} for k, v in sorted(by_year.items(), key=lambda x: str(x[0])) if len(v) > 1]
+    eligible: dict[tuple[str, str, str, str, str | None], list[tuple[int, dict[str, Any], str, str]]] = defaultdict(list)
+    for (family, serialization, publisher, period, topic, year), cells in by_year.items():
+        if len(cells) == 1:
+            tf, archive, scope = cells[0]
+            eligible[(family, serialization, publisher, period, topic)].append((year, tf, archive, scope))
+    pairs = []
+    gaps = []
+    for (family, serialization, publisher, period, topic), rows in sorted(eligible.items(), key=lambda x: str(x[0])):
+        rows.sort(key=lambda x: x[0])
+        for (ya, a, archive_a, scope_a), (yb, b, archive_b, scope_b) in zip(rows, rows[1:]):
+            if yb != ya + 1:
+                gaps.append({"source_family": family, "serialization": serialization, "publisher": publisher,
+                             "period": period, "topic": topic, "archive_a": archive_a, "archive_b": archive_b,
+                             "year_a": ya, "year_b": yb, "gap_years": yb - ya})
+                continue
+            pairs.append({
+                "source_family": family, "serialization": serialization, "publisher": publisher,
+                "period": period, "topic": topic, "archive_a": archive_a, "archive_b": archive_b,
+                "edition_scope_a": scope_a, "edition_scope_b": scope_b,
+                "year_a": ya, "year_b": yb,
+                "coarse_class_jsd": jsd([a["edf"].get(c, 0) for c in EDF], [b["edf"].get(c, 0) for c in EDF]),
+                "within_class_marker_jsd": {
+                    c: jsd([a["markers"].get(c, {}).get(m, 0) for m in EDF[c]],
+                           [b["markers"].get(c, {}).get(m, 0) for m in EDF[c]]) for c in EDF
+                },
+                "documents_a": a["documents"], "documents_b": b["documents"],
+                "text_units_a": a["text_units"], "text_units_b": b["text_units"],
+                "interpretation": "TOPIC_CONDITIONED_SURFACE_MARKER_DISTRIBUTION_ONLY"
+            })
+    return {"annual_adjacent_topic_pairs": pairs,
+            "omitted_nonconsecutive_topic_gaps": gaps,
+            "ambiguous_topic_year_source_collisions": collisions,
+            "pair_rule": "same source family, serialization, publisher, fixed period, exact source topic; unique archive per cell; adjacent calendar years only; no pooling"}
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("archives", nargs="+", type=Path)
@@ -455,9 +528,11 @@ def main() -> None:
                "mode": args.mode,
                "method": "full archive streaming; no extraction; no raw text persistence; no normalization",
                "feature_contract": "KSGT-EDF-v0.1 exact frozen markers and class membership" if extract_features else "NOT_RUN_OUTCOME_BLIND_CENSUS",
+               "topic_feature_contract": "exact source topic labels; no mapping, recoding, merging, or pooling" if extract_features else "NOT_RUN",
                "provenance_rule": "UNKNOWN pending explicit NIKL source-contract admission; date controls period only",
                "files": results,
                "drift": drift_tables(results) if extract_features else {"status": "NOT_RUN_BEFORE_CENSUS_FREEZE"},
+               "topic_conditioned_drift": topic_drift_tables(results) if extract_features else {"status": "NOT_RUN_BEFORE_TOPIC_PRESEAL"},
                "admission": {"source_identity": "user-supplied NIKL official-corpus ZIP family",
                              "package_terms": "not independently revalidated in this execution; source PDFs present in ZIPs; local analysis only",
                              "raw_text_retained": False,
