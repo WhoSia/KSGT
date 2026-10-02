@@ -1,0 +1,124 @@
+{
+  "schema": "ksgt.g9.p45.real-data-development-checkpoint3.v1",
+  "phase": "G9-P45",
+  "status": "OPEN_CORPUS_WAIT_PLUS_DEV_LIT",
+  "klicke_auxiliary_measured": {
+    "typing": {
+      "participants": 4992,
+      "csv_files": 34920,
+      "keystroke_events": 5193184,
+      "task_file_count_distribution": {
+        "4": 2,
+        "5": 4,
+        "6": 10,
+        "7": 4976
+      },
+      "activity_counts": {
+        "Input": 4956683,
+        "Remove/Cut": 160587,
+        "Nonproduction": 75208,
+        "Replace": 355,
+        "Paste": 345,
+        "Move_other": 6
+      },
+      "event_count_per_participant": {
+        "min": 91,
+        "p25": 958.75,
+        "median": 1042,
+        "p75": 1124,
+        "p90": 1188,
+        "max": 2244
+      },
+      "max_word_count": {
+        "min": 13,
+        "p25": 17,
+        "median": 26,
+        "p75": 35,
+        "p90": 42,
+        "max": 214
+      }
+    },
+    "vocabulary": {
+      "participants": 4967,
+      "items_per_participant": 63,
+      "accuracy": {
+        "min": 0.30158730158730157,
+        "p25": 0.8253968253968254,
+        "median": 0.9206349206349206,
+        "p75": 0.9682539682539683,
+        "p90": 0.984126984126984,
+        "max": 1
+      }
+    },
+    "joins": {
+      "typing_vocabulary_overlap": 4967,
+      "typing_only_without_vocabulary": 25,
+      "vocabulary_only_without_typing": 0,
+      "writing_inventory_ids": 4992,
+      "demographic_ids": 4992,
+      "writing_demographic_overlap": 4992
+    },
+    "authority": "AUXILIARY_PROCESS_OR_PROFICIENCY_COVARIATE_ONLY",
+    "p45_diachronic_authority": false,
+    "p43_reopening": false
+  },
+  "doshi_hauser_dryad_measured": {
+    "writers_rows": 500,
+    "evaluators_rows": 1000,
+    "writer_columns": 478,
+    "evaluator_columns": 447,
+    "writer_condition_counts": {
+      "human": 100,
+      "human_1AI": 103,
+      "human_5AI": 106,
+      "blank_or_noncompletion": 191
+    },
+    "writer_nonempty_story_ids": 303,
+    "writer_unique_story_ids": 303,
+    "evaluator_story_slots": 7256,
+    "evaluator_unique_story_ids": 300,
+    "writer_evaluator_story_overlap": 300,
+    "package_components": [
+      "writers raw CSV",
+      "evaluators raw CSV",
+      "processed Stata data",
+      "analysis scripts",
+      "AI-human story similarity script"
+    ],
+    "authority": "GENERATION_SIDE_EXTERNAL_CONTROL_DONOR_ONLY",
+    "p45_diachronic_authority": false
+  },
+  "okhc_development": {
+    "repo": "seyoungsong/Open-Korean-Historical-Corpus",
+    "shard_manifest": "experiments/g9-p45/okhc_shard_manifest.json",
+    "news_archive_public_bridge": {
+      "files": 3,
+      "approximate_total_mb": 772,
+      "source": "National Library of Korea",
+      "corpus": "Korean Newspaper Archive",
+      "genre": "news",
+      "register": "institutional_editorial"
+    },
+    "ingestion": "RAW_JSONL_STREAMING_FEATURE_ONLY_BY_DEFAULT",
+    "p45_diachronic_authority": true
+  },
+  "engineering_present": [
+    "dataset_registry.json",
+    "archive_probe.py",
+    "okhc_adapter.py",
+    "okhc_shard_manifest.json",
+    "nikl_stream_audit.py",
+    "diachronic_drift.py",
+    "klicke_auxiliary_audit.py",
+    "klicke_feature_compiler.py",
+    "dryad_creativity_probe.py",
+    "source_contract_probe.py",
+    "test suite under g9-p45-diachrony workflow"
+  ],
+  "court": [
+    "UNUSED_KLICKE_DATA_NOW_MEASURED_NOT_MERELY_CUSTODIED",
+    "AUXILIARY_PROCESS_DATA_NEVER_LAUNDERED_INTO_DIACHRONIC_AUTHORITY",
+    "DOSHI_HAUSER_PACKAGE_SUPPORTS_STORY_LEVEL_WRITER_EVALUATOR_JOIN",
+    "P45_REMAINS_OPEN_PENDING_NIKL_AND_REAL_INTERMEDIATE_CORPUS_EXECUTION"
+  ]
+}
