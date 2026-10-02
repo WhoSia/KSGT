@@ -1,0 +1,129 @@
+{
+  "schema": "ksgt.g9.p45.nikl-archive-probe-observed.v1",
+  "phase": "G9-P45",
+  "raw_text_stored": false,
+  "archives": [
+    {
+      "archive_name": "NIKL_Korean_Multi-layered_Structural_Analysis_Corpus_2025_v1.0.zip",
+      "archive_bytes": 31631747,
+      "sha256": "5e5c554bf408c4de4e804e568d1c9492046fc84ab92c9007eba2358f9157ba78",
+      "member_count": 4,
+      "extensions": {
+        ".json": 2,
+        ".pdf": 2
+      },
+      "schema": {
+        "type": "dict",
+        "keys": [
+          "id",
+          "metadata",
+          "document"
+        ]
+      }
+    },
+    {
+      "archive_name": "NIKL_LS_2025_v1.0.zip",
+      "archive_bytes": 10500051,
+      "sha256": "3fb3d288ebe4533d6a5254211db5a5ef44f94ab222aa5deab315eaf8d9d26629",
+      "member_count": 4,
+      "extensions": {
+        ".json": 2,
+        ".pdf": 2
+      },
+      "schema": {
+        "type": "dict",
+        "keys": [
+          "id",
+          "metadata",
+          "document"
+        ]
+      }
+    },
+    {
+      "archive_name": "NIKL_SR_2025_v1.0.zip",
+      "archive_bytes": 10884060,
+      "sha256": "00146f3f16b7907536fbd2ec56e38c0db2521f8f33c28d647c185ec2ea8c2374",
+      "member_count": 4,
+      "extensions": {
+        ".pdf": 2,
+        ".json": 2
+      },
+      "schema": {
+        "type": "dict",
+        "keys": [
+          "id",
+          "metadata",
+          "document"
+        ]
+      }
+    },
+    {
+      "archive_name": "NIKL_ZA_2024_v1.0.zip",
+      "archive_bytes": 40432735,
+      "sha256": "0c1755e3a786edd2c9a60f7fa53b40a590d44d178ad827519bcde1642c863215",
+      "member_count": 4,
+      "extensions": {
+        ".pdf": 2,
+        ".json": 2
+      },
+      "schema": {
+        "type": "dict",
+        "keys": [
+          "id",
+          "metadata",
+          "document"
+        ]
+      }
+    },
+    {
+      "archive_name": "NIKL_ZA_2025_v1.0.zip",
+      "archive_bytes": 8749612,
+      "sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+      "member_count": 4,
+      "extensions": {
+        ".pdf": 2,
+        ".json": 2
+      },
+      "schema": {
+        "type": "dict",
+        "keys": [
+          "id",
+          "metadata",
+          "document"
+        ]
+      }
+    },
+    {
+      "archive_name": "NIKL_ZA_CSV.zip",
+      "archive_bytes": 21866414,
+      "sha256": "c8179e1bce2eaed22ae6d7afdf764034aac1e2ccdffe54b7f261ede2ad717610",
+      "member_count": 3,
+      "extensions": {
+        ".pdf": 1,
+        ".csv": 2
+      },
+      "schema": {
+        "type": "csv",
+        "header": [
+          "doc_id",
+          "sentence_id",
+          "form",
+          "za_predicate",
+          "predicate_sntid",
+          "predicate_begin",
+          "predicate_end",
+          "antecedent_form",
+          "antecedent_type",
+          "antecedent_sntid",
+          "antecedent_begin",
+          "antecedent_end"
+        ]
+      }
+    }
+  ],
+  "verdict": [
+    "GENERIC_NIKL_ARCHIVE_PROBE_VALIDATED_ON_REAL_ARCHIVES",
+    "JSON_AND_CSV_SCHEMA_FAMILIES_SUPPORTED",
+    "PENDING_NEWSPAPER_ZIP_CAN_ENTER_CENSUS_WITHOUT_MANUAL_EXTRACTION"
+  ]
+}

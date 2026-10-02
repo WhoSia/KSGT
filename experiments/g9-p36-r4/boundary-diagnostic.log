@@ -1,0 +1,18 @@
+{
+  "candidate_pairs": 8071,
+  "representation_complete_pairs": 1205,
+  "post_grounding": 180,
+  "compatible_core_any_grounding": 3,
+  "compatible_core_and_grounding": 0,
+  "mismatch": {
+    "class": 114,
+    "predicate": 137,
+    "arg0": 179,
+    "polarity": 10,
+    "modal": 56,
+    "quantifier": 40,
+    "condition": 3,
+    "authority": 31,
+    "value_conflict": 0
+  }
+}

@@ -1,0 +1,135 @@
+phase: KSGT Generation IX G9-P36-R6
+title: Obligation-Factor Semantic Quotienting, Protected-Core vs Revisable-Content Decomposition, Subgraph-Level Redundancy Recovery, Compositional Proof-Carrying Microfusion, Cross-Lingual Realization Independence & Whole-Obligation Sparsity Law Court
+date: 2026-09-25
+status: PROSPECTIVE_CHARTER_SEALED_BEFORE_R6_SCORING
+inherits:
+  phase: G9-P36-R5
+  verdict: PASS_SELECTION_SHIFT_ESTABLISHED_NATURAL_FRONTIER_NOT_REOPENED
+  active_head: 89eab1f364735c09b51cf9dbb0862783e2d114f2
+  r5_selector: C3-R5-RNSN-v1
+  r5_selector_mutation: FORBIDDEN
+source_status:
+  corpus: EMNLP24_LOCAL_TEST_118
+  source_exposure: PREVIOUSLY_OPENED_ONCE_BY_R5
+  fresh_source_world_contact_claim: FORBIDDEN
+  r6_question: PROSPECTIVELY_FROZEN_NEW_QUESTION_ON_PREVIOUSLY_OPENED_SOURCE
+representation:
+  base: C3-R4-BCOG-v1
+  quotient: C3-R6-OFQ-v1
+principle:
+  - FACTOR_REUSE_DOES_NOT_IMPLY_FUSION_AUTHORITY
+  - QUOTIENTING_MUST_PRESERVE_PROTECTED_BINDINGS
+  - FALSE_FACTOR_INDEPENDENCE_MUST_ABSTAIN
+  - FLUENCY_CANNOT_CREATE_SEMANTIC_AUTHORITY
+factorization:
+  protected_core:
+    - frame_class
+    - predicate
+    - ARG0
+    - authority
+    - polarity
+    - modal
+    - quantifier_scope
+    - condition_scope
+    - value_and_comparator_bindings
+  revisable_content:
+    - ARG1_typed_atoms
+    - evidence_or_rationale_payload_when_bound_as_ARG1
+    - experiment_or_proposal_payload_when_bound_as_ARG1
+    - document_pointer_payload
+  custody:
+    - exact_surface
+    - source_offsets_when_available
+  grounding:
+    - review_root
+    - response_chunk_id
+    - structural_role
+    - block_type
+    - attachment_key
+    - antecedent_key
+    - local_scope_key
+quotient_maps:
+  q_core: typed_hash_of_protected_core
+  q_content: typed_hash_multiset_of_ARG1_content_atoms
+  q_ground: typed_hash_of_grounding
+  q_realization: surface_only_non_authoritative
+courts:
+  factor_reuse:
+    may_cross_grounding: true
+    authority: DESCRIPTIVE_REDUNDANCY_ONLY
+    requires:
+      - same_typed_factor_family
+      - representation_complete
+      - no_value_conflict
+  microfusion:
+    may_cross_grounding: false
+    requires:
+      - q_ground_exact
+      - q_core_exact
+      - complementary_nonempty_content
+      - no_protected_binding_change
+      - controlled_recomposition
+      - graph_roundtrip
+      - positive_compression_gain
+  false_factor_independence:
+    reject_if:
+      - factor_substitution_changes_ARG0
+      - factor_substitution_changes_authority
+      - factor_substitution_changes_force_or_scope
+      - factor_substitution_changes_value_binding
+      - factor_substitution_changes_relation_direction
+      - unbound_residual_created
+      - composition_order_changes_protected_graph
+controls:
+  positive_minimum: 6
+  adversarial_negative_minimum: 12
+  metamorphic_minimum: 4
+  composition_order_controls: REQUIRED
+  indexed_search_equivalence: REQUIRED
+  inherited_R3_proof_controls: 12_of_12_REQUIRED
+hypotheses:
+  H1_macro_sparse_micro_redundant: factor reuse exists even when whole-obligation neighborhood is empty
+  H2_microfusion_nonempty: at least one natural same-grounding proof-carrying microfusion exists
+  H3_macro_sparse_micro_sparse: no legally reusable factor neighborhood survives typed quotienting
+adjudication:
+  macro_sparse_micro_redundant_requires:
+    - natural_factor_reuse_pairs_gt_0
+    - controls_all_pass
+  natural_microfusion_frontier_reopened_requires:
+    - natural_certified_microfusion_gt_0
+    - controls_all_pass
+    - inherited_R3_proof_controls_12_of_12
+  if_reuse_gt_0_but_microfusion_eq_0: FACTOR_REUSE_WITHOUT_FUSION_AUTHORITY
+  if_reuse_eq_0: MICRO_REDUNDANCY_NOT_ESTABLISHED
+scalability:
+  global_all_pairs: FORBIDDEN
+  algorithm: typed_hash_postings_plus_sparse_content_index
+  independent_count_crosscheck: REQUIRED
+korean_transport:
+  semantic_quotient: LANGUAGE_NEUTRAL
+  surface_realization: DOWNSTREAM_ONLY
+  protected:
+    - predicate_argument_roles
+    - force
+    - scope
+    - authority
+    - value
+    - grounding
+  particles_scrambling_ellipsis:
+    allowed_only_if: protected_graph_equivalent_or_explicitly_authorized_quotient_equivalent
+  fluency_ranker:
+    authority: RANK_WITHIN_AUTHORIZED_REALIZATIONS_ONLY
+  korean_court:
+    minimum_metamorphic_families:
+      - particle_alternation_without_role_change
+      - word_order_scrambling_without_role_change
+      - recoverable_argument_ellipsis
+      - honorific_or_role_change_negative_control
+literature_donors:
+  - KSGT Grammar Return Note — Role Geometry, Realization Freedom & Korean Fluency
+  - Chen et al. 2024 Korean Semantic Role Labeling
+  - Lee and Song 2012 Korean particle realization and ellipsis
+  - Lee et al. 2026 Korean Quantification in AMR
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport

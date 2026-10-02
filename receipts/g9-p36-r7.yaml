@@ -1,0 +1,48 @@
+phase: KSGT Generation IX G9-P36-R7
+title: Relation-Bearing Semantic Factor Promotion, Lexical-Collision Null Court, Role–Event Motif Canonicalization, Native-Korean Particle/Scrambling/Ellipsis Transport, Cross-Corpus Sparse Retrieval & Micro-Reuse Authority Court
+verdict: PASS_RELATION_MOTIF_PRIMARY_EMPTY_MICRO_REUSE_NOT_PROMOTED
+date: 2026-09-25
+lineage:
+  inherited_phase: G9-P36-R6
+  preseal_commit: 860a5de8b50c52292aaa01f6973e0dc896d02425
+  first_run: 36130126321
+  first_full_success_run: 36134585401
+  canonical_run: 36134758751
+  canonical_materialization_commit: 08a88175d01f93ee76b636567b43a78d4636221b
+  adjudicator_fix_commit: f0377504d38540377473d6421524c1c0b8dd5556
+english:
+  papers: 118
+  obligations: 4849
+  exploratory_relation_pairs: 10
+  connected_chain_pairs: 2
+  primary_cross_paper_pairs: 0
+  rust_crosscheck: PASS_10_2_0
+  micro_reuse_authority: NOT_PROMOTED
+  semantic_equivalence_authority: NOT_GRANTED
+  fusion_authority: NOT_GRANTED
+korean:
+  corpus: StyleKQC
+  rows: 15000
+  particle_change_pairs: 5755
+  order_inversion_proxy_pairs: 103
+  surface_shortening_proxy_pairs: 11099
+  ellipsis_status: HOLD_ANNOTATION_INSUFFICIENT
+retrieval:
+  paired_target_recall: 0.9498
+  top1_exact_pair_rate: 0.6443333333333333
+  median_candidate_size: 6
+  global_all_pairs: false
+validation:
+  controls: PASS
+  stylekqc: PASS
+  inherited_r3_controls: PASS_12_OF_12
+notion:
+  canonical_receipt: 3e6ef561-cf92-8186-968a-dd417e4626cc
+  harvest: 3e6ef561-cf92-8149-83ca-dc4069b1503e
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+next_phase:
+  id: G9-P36-R8
+  title: Cross-Document Relation-Motif Generalization, Predicate-Family Equivalence Preseal, Fresh-Corpus Transfer, Korean Zero-Argument Annotation Recovery & Micro-Reuse Authority Reopening Court
+user_action: NONE

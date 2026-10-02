@@ -1,0 +1,39 @@
+{
+  "candidate_pairs": 8071,
+  "unique_candidate_obligations": 3238,
+  "representation_complete_unique_obligations": 1193,
+  "representation_complete_rate": 0.3684373069796171,
+  "unresolved_reason_counts": {
+    "SURFACE_CUSTODY_GAP": 51,
+    "NO_BINDABLE_PREDICATE": 1804,
+    "NEGATION_SCOPE_AMBIGUOUS": 162,
+    "NESTED_RELATION_UNRESOLVED": 30,
+    "UNBOUND_VALUE:3x": 1,
+    "UNBOUND_VALUE:2": 3,
+    "UNBOUND_VALUE:1": 2,
+    "UNBOUND_VALUE:3": 1,
+    "UNBOUND_VALUE:4": 1,
+    "UNBOUND_VALUE:5": 1,
+    "UNBOUND_VALUE:4.3": 1,
+    "UNBOUND_VALUE:1974": 2,
+    "UNBOUND_VALUE:2024": 1
+  },
+  "frame_class_counts": {
+    "CAUSAL_RELATION": 115,
+    "COPULAR_ATTRIBUTE": 756,
+    "UNBOUND": 1804,
+    "REPORT_EVIDENCE": 198,
+    "EXISTENCE_POSSESSION": 187,
+    "REVISION_ACTION": 120,
+    "COMPARISON": 32,
+    "GENERIC_LEXICAL_RELATION": 26
+  },
+  "core_compatibility_counts": {
+    "INCOMPLETE_REPRESENTATION": 6866,
+    "CORE_BINDING_MISMATCH": 1202,
+    "COMPATIBLE_CORE": 3
+  },
+  "controlled_witness_reason_counts": {
+    "NOT_ATTEMPTED": 8071
+  }
+}

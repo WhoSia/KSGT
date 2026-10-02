@@ -1,0 +1,59 @@
+{
+  "phase": "G9-P38",
+  "status": "CLOSED_PASS",
+  "parent": "G9-P37",
+  "theory": "KSGT-SUPPORT-FRONTIER-v0.2",
+  "evidence": {
+    "strict_states": 1649,
+    "exact_cross_register": 86,
+    "unique_register_pairs": 43,
+    "r8_exact_transport": "40/160",
+    "backoff": {
+      "drop_prior_subjecthood": {
+        "predicted": 98,
+        "corroborated": 86,
+        "unsupported": 12,
+        "precision": 0.877551
+      },
+      "drop_proper_prior": {
+        "predicted": 134,
+        "corroborated": 86,
+        "unsupported": 48,
+        "precision": 0.641791
+      },
+      "drop_recency": {
+        "predicted": 167,
+        "corroborated": 86,
+        "unsupported": 81,
+        "precision": 0.51497
+      },
+      "predicate_family": {
+        "predicted": 168,
+        "corroborated": 86,
+        "unsupported": 82,
+        "precision": 0.511905
+      }
+    },
+    "predicate_geometry": {
+      "senses": 660,
+      "lemma_families": 500,
+      "multisense_families": 79,
+      "sense_pairs": 365,
+      "median_jaccard": 0.090909,
+      "identical_signature_pairs": 8,
+      "robust_pairs": 150,
+      "robust_jaccard_ge_0_8": 2
+    }
+  },
+  "verdicts": [
+    "STRICT_FRONTIER_RETAINED",
+    "SINGLE_COORDINATE_BACKOFFS_REJECTED_FOR_AUTHORITY",
+    "PREDICATE_FAMILY_QUOTIENT_REJECTED",
+    "OOS_DISTANCE_DIAGNOSTIC_ONLY",
+    "ABSTENTION_PRESERVED",
+    "FRESH_HUMAN_REQUIREMENT_NONE"
+  ],
+  "notion": "3eaef561-cf92-8169-9527-d48a33778d01",
+  "harvest": "3eaef561-cf92-812b-84cd-f51048e6c106",
+  "next": "G9-P39"
+}

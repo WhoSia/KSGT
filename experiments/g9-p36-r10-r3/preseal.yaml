@@ -1,0 +1,142 @@
+phase: KSGT Generation IX G9-P36-R10-R3
+title: Zero-Anaphora↔Semantic-Role Cross-Layer Authority Reconstitution, 2024 Bridge Ontology Replication, Predicate-Sense/Case-Frame Binding, Dependency-Controlled Argument Identity & KSGT-ARG-v1.1 Semantic-Role World-Contact Court
+date: 2026-09-28
+status: CROSS_LAYER_SOURCE_SET_PRESEALED_BEFORE_NEW_ROW_LEVEL_SOURCE_OPENING
+
+inherits:
+  phase: G9-P36-R10-R2
+  verdict: PASS_NATIVE_GOLD_BINDING_KSGT_ARG_V1_TOKEN_EQUIVALENCE_REJECTED_V1_1_REPAIR_SEALED_SEMANTIC_ROLE_HOLD
+  graph: KSGT-ARG-v1.1
+  live_hold: SEMANTIC_ROLE_AUTHORITY_REQUIRES_INDEPENDENT_WORLD_CONTACT
+
+explanandum:
+  core_question: >
+    Under what exact join conditions can native Korean zero-anaphora recoverability observations be enriched with independently authorized semantic-role information without laundering syntactic slot, dependency relation, case marker, predicate lexeme, or frame prior into role truth?
+  direct_progress:
+    - establish at least one exact cross-layer row-level join path from ZA event/slot token to independent SRL gold
+    - show dependency and case-frame layers constrain or falsify joins without themselves supplying role truth
+    - replicate the 2020↔2025 ontology transition through a 2024 bridge if official bytes are available
+  forbidden_claims:
+    - subject_equals_AGENT
+    - object_equals_THEME
+    - dependency_label_equals_semantic_role
+    - case_frame_prior_equals_token_role_gold
+    - predicate_lexeme_alone_identifies_sense
+    - model_parser_output_upgrades_to_gold
+    - cross_corpus_title_similarity_counts_as_join
+
+source_roles:
+  ZA_2024:
+    function: ONTOLOGY_BRIDGE
+    authority: ZERO_ARGUMENT_RECOVERABILITY_ONLY
+  MULTILAYER_2025:
+    function: ALIGNMENT_BACKBONE_IF_SHARED_DOCUMENT_SENTENCE_IDS_EXIST
+    authority: ONLY_ANNOTATIONS_EXPLICITLY_PRESENT
+  SRL_2025:
+    function: SEMANTIC_ROLE_GOLD
+    authority: TOKEN_ROLE_WORLD_CONTACT
+  DEPENDENCY_2025:
+    function: SYNTACTIC_CONTROL
+    authority: ATTACHMENT_AND_GRAMMATICAL_RELATION_ONLY
+  CASE_FRAME:
+    function: PREDICATE_SENSE_ROLE_PRIOR
+    authority: LEXICAL_FRAME_PRIOR_NOT_TOKEN_ROLE_TRUTH
+  COREFERENCE_2019:
+    function: REFERENT_IDENTITY_OPTIONAL_SECONDARY
+    authority: COREFERENCE_ONLY
+
+minimum_join_authority:
+  token_role_promotion_requires:
+    - same_official_source_family_or_explicit_alignment_map
+    - exact_document_id
+    - exact_sentence_id
+    - exact_predicate_token_or_span
+    - exact_argument_token_or_span_or_gold_zero_slot_alignment
+    - independently_present_SRL_label
+  if_any_missing: ABSTAIN_FROM_TOKEN_ROLE_AUTHORITY
+
+predicate_sense:
+  lexeme_only_join: FORBIDDEN
+  exact_sense_id_if_present: PREFERRED
+  otherwise:
+    - candidate_frame_set_only
+    - no_unique_role_authority
+  case_frame_can:
+    - enumerate_licensed_role_inventory
+    - expose obligatoriness_or_valency_prior
+    - reject_impossible_frame_bindings
+  case_frame_cannot:
+    - assign_token_role_without_token_gold
+
+dependency_control:
+  use:
+    - argument_attachment_consistency
+    - voice_configuration
+    - scrambling_invariance_stress
+    - subject_object_surface_slot_diagnostics
+  cannot:
+    - create_semantic_role_labels
+
+bridge_2024:
+  target:
+    - locate_2024_on_2020_to_2025_ontology_path
+    - test_whether_multi_span_or_restored_node_changes_emerge_before_2025
+    - identify_marker_semantics_for_external_or_special_antecedents
+  no_temporal_language_change_claim: true
+
+cross_layer_graph:
+  version: KSGT-XARG-v0.1
+  nodes:
+    - EVENT_TOKEN
+    - ZERO_SLOT_TOKEN
+    - RESTORED_SURFACE
+    - ANTECEDENT_SPAN_SET
+    - DEPENDENCY_ARGUMENT
+    - SRL_ARGUMENT
+    - PREDICATE_SENSE
+    - CASE_FRAME_ROLE
+    - REFERENT_ENTITY
+  edges:
+    - REALIZES
+    - RECOVERS_TO
+    - ATTACHES_TO
+    - BEARS_SEMANTIC_ROLE
+    - INSTANTIATES_SENSE
+    - LICENSED_BY_FRAME
+    - COREFERS_WITH
+  authority_rule: EACH_EDGE_RETAINS_SOURCE_PROVENANCE
+
+promotion_gate:
+  semantic_role_token_authority:
+    required:
+      - exact_join_precision_verified_on_manual_or_internal_consistency_controls
+      - nonzero_exact_join_count
+      - zero_cross_document_false_join_on_negative_controls
+      - SRL_label_present_from_authorized_source
+      - no_role_imputation_from_slot_or_dependency
+  graph_version_promotion:
+    requires:
+      - all_joined_edges_source_provenanced
+      - ambiguity_preserved
+      - token_identity_KSGT_ARG_v1_1_preserved
+
+ravel_attacks_presealed:
+  - shared_sentence_text_without_shared_ids_may_create_false_alignment
+  - corpus_versions_may_not_share_underlying_documents
+  - SRL_argument_spans_may_not_include_zero_arguments
+  - case_frame_sense_inventory_may_not_match_token_sense
+  - dependency_and_SRL_tokenization_may_diverge
+  - 2024_bridge_may_be_annotation_policy_change_not_world_change
+  - multi_layered_corpus_may_be_subset_or_reannotation_not_alignment_backbone
+
+method_selection:
+  - CROSS_LEVEL_AUTHORITY_SEPARATION
+  - BRIDGE_INTENT_DOES_NOT_IMPLY_BRIDGE_CLOSURE
+  - SOURCE_FIRST_EXPERT_SYNTHESIS
+  - RETURN_TO_ORIGIN
+
+origin_return:
+  milestone: CORE
+  return_edge: >
+    Resolve the single remaining semantic-role authority hold created by R2. If exact row-level cross-layer alignment is unavailable, close the hold as structurally unidentifiable under current public sources rather than spawning indefinite infrastructure.
+  debt_policy: NO_THIRD_CONSECUTIVE_ENABLING_STAGE

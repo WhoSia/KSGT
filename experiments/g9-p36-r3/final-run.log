@@ -1,0 +1,20 @@
+{
+  "verdict": "PASS_WITH_PROOF_SYSTEM_CALIBRATED_NATURAL_FRONTIER_NOT_REOPENED",
+  "validation": {
+    "papers_121": true,
+    "controls_12_12": true,
+    "positive_controls_3_3": true,
+    "negative_controls_9_9": true,
+    "inherited_r2_validation": true,
+    "inherited_r2_certifiable_zero": true,
+    "pass": true
+  },
+  "frontier_reopened": false,
+  "certifiable_natural": 0,
+  "reason_counts": {
+    "REPRESENTATION_SUFFICIENCY_VETO": 7945,
+    "GROUNDING_MISMATCH": 108,
+    "FORCE_VALUE_ACTION_MISMATCH": 14,
+    "NO_POSITIVE_COMPRESSION_GAIN": 4
+  }
+}

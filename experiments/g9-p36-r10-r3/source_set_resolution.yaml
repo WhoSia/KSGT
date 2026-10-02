@@ -1,0 +1,94 @@
+phase: KSGT Generation IX G9-P36-R10-R3
+status: SOURCE_SET_RESOLVED_ROW_LEVEL_WORLD_CONTACT_PENDING
+date: 2026-09-28
+
+minimal_required_set:
+  - source: NIKL Korean Multi-layered Structural Analysis Corpus 2025
+    role: PRIMARY_ALIGNMENT_BACKBONE
+    why:
+      - integrated morphology_lexical_semantics_dependency_SRL_ZA construction
+      - same project and source pool as official ZA 2025
+      - only source currently capable of testing exact cross-layer token joins in one integrated object
+    authority_target:
+      - predicate_token_alignment
+      - overt_argument_SRL
+      - dependency_control
+      - lexical_sense_ids_if_present
+      - ZA_alignment_if present
+  - source: NIKL Zero Anaphora Corpus 2024
+    role: ONTOLOGY_BRIDGE
+    why:
+      - directly between 2020 and 2025 annotation regimes
+      - already documented as predecessor guideline source for 2025 ZA
+    authority_target:
+      - bridge ontology replication
+      - restoration role inventory transition
+      - external_marker_and_span_policy_transition
+  - source: NIKL Dependency-Parsed Corpus 2024
+    role: BRIDGE_SYNTACTIC_CONTROL
+    why:
+      - 2024 ZA was built jointly with dependency analysis
+      - tests whether 2024 zero-slot candidate geometry is recoverable from same-generation syntax
+    authority_target:
+      - exact predicate_attachment control
+      - surface_slot diagnostics
+  - source: NIKL Case Frame
+    role: PREDICATE_SENSE_ROLE_PRIOR
+    why:
+      - obligatory semantic roles keyed by Urimalsaem and Sejong semantic IDs
+      - can constrain but not create token-role truth
+    authority_target:
+      - frame compatibility
+      - sense-conditioned role inventory
+
+recommended_crosscheck_set:
+  - source: NIKL Semantic Role Labeling Corpus 2025
+    role: STANDALONE_LAYER_EXPORT_CROSSCHECK
+    evidence_independence: NO_SAME_PROJECT
+    use:
+      - standalone_vs_multilayer_serialization_identity
+      - SRL_label_inventory audit
+  - source: NIKL Dependency-Parsed Corpus 2025
+    role: STANDALONE_LAYER_EXPORT_CROSSCHECK
+    evidence_independence: NO_SAME_PROJECT
+    use:
+      - standalone_vs_multilayer_dependency_identity
+  - source: NIKL Word Sense Tagged Corpus 2025
+    role: SENSE_ID_EXPORT_CROSSCHECK
+    evidence_independence: NO_SAME_PROJECT
+    use:
+      - Urimalsaem sense ID identity before Case Frame binding
+
+deferred_not_required_now:
+  - source: NIKL Coreference Resolution Corpus 2019
+    reason: REFERENT_IDENTITY_NOT_CURRENT_BOTTLENECK_AFTER_ZA_GOLD_BINDING
+  - source: dialogue corpora
+    reason: DOMAIN_EXTENSION_ONLY_AFTER_ROLE_AUTHORITY
+
+authority_ladder:
+  J0:
+    condition: same_surface_text_only
+    authority: NONE
+  J1:
+    condition: same_document_sentence_predicate_token
+    authority: EVENT_ALIGNMENT
+  J2:
+    condition: same_argument_or_zero_slot_alignment
+    authority: ARGUMENT_TOKEN_ALIGNMENT
+  J3:
+    condition: explicit_SRL_label_on_exact_aligned_argument
+    authority: TOKEN_SEMANTIC_ROLE_GOLD
+  J4:
+    condition: exact_or_candidate_predicate_sense_plus_Case_Frame
+    authority: FRAME_COMPATIBILITY_ONLY
+  J5:
+    condition: dependency_relation_consistent
+    authority: SYNTACTIC_CONSISTENCY_ONLY
+
+promotion_rule: ONLY_J3_CREATES_TOKEN_SEMANTIC_ROLE_AUTHORITY
+veto_rule: J4_OR_J5_MAY_REJECT_OR_FLAG_A_JOIN_BUT_CANNOT_CREATE_A_ROLE
+
+research_decision:
+  acquire_minimum_first: true
+  if_application_allows_batch: ACQUIRE_RECOMMENDED_CROSSCHECK_SET_TOO
+  do_not_acquire_more_sources_until_exact_join_rate_is_known: true

@@ -1,0 +1,61 @@
+phase: KSGT Generation IX G9-P36-R10-R4
+title: Recoverability↔Realization Authority Separation, Null-vs-Overt Counterfactual Non-Identifiability, Discourse-Salience/Information-Structure State Constitution, Forward/Backward Antecedent Licensing, Style-Preserving Omission Decision Boundary & KSGT Return-to-Generation Court
+status: CLOSED
+verdict: PASS_RECOVERABILITY_REALIZATION_AUTHORITY_SEPARATED_KSGT_REALIZE_V0_1_SEALED
+date: 2026-09-28
+
+lineage:
+  inherited_phase: G9-P36-R10-R2
+  parallel_waiting_phase: G9-P36-R10-R3
+  r3_state: ACTIVE_SOURCE_ACQUISITION_HOLD
+  r4_preseal_commit: 9f0e652001b750da372cfbfc56a5808fb67392dc
+  theory_commit: c30da2a1515fc1288400c5a8d7ed57b040667da3
+
+theory:
+  version: KSGT-REALIZE-v0.1
+  laws:
+    - RECOVERABLE_DOES_NOT_IMPLY_SHOULD_OMIT
+    - OFFLINE_RECOVERABLE_DOES_NOT_IMPLY_ONLINE_LICENSED
+    - NO_TEXTUAL_ANTECEDENT_DOES_NOT_IMPLY_UNRECOVERABLE
+    - ONE_ZERO_ARGUMENT_DOES_NOT_IMPLY_ONE_ANTECEDENT_MENTION
+    - TOPIC_SALIENCE_IS_PRIOR_NOT_NULLNESS_COMMAND
+    - NULL_OVERT_PREFERENCE_REQUIRES_COMPARABLE_RISK_SET
+
+identifiability:
+  ZA_observes: RECOVERY_STRUCTURE_GIVEN_NULL
+  does_not_identify:
+    - NULL_PROBABILITY_GIVEN_CONTEXT
+    - NULL_VS_OVERT_PREFERENCE
+    - STYLE_UTILITY_OF_NULLNESS
+  reason: NO_MATCHED_OVERT_RISK_SET_IN_ZA_GOLD
+
+online_offline:
+  following_antecedents_observed_in_R2: true
+  default_generation_rule: FUTURE_TEXT_CANNOT_LICENSE_CURRENT_OMISSION
+  exception_requires: INDEPENDENT_CATAPHORIC_OR_STRUCTURAL_AUTHORITY
+
+authority:
+  recoverability_realization_separation: PROMOTED
+  online_offline_separation: PROMOTED
+  null_vs_overt_preference: HOLD
+  style_utility_of_nullness: HOLD
+  population_omission_probability: HOLD
+
+notion:
+  canonical_receipt: 3e9ef561-cf92-818c-8315-e4a65650a956
+  harvest: 3e9ef561-cf92-81d6-93ac-d200adf772bf
+
+r3_waiting_sources:
+  - NIKL Korean Multi-layered Structural Analysis Corpus 2025
+  - NIKL Zero Anaphora Corpus 2024
+  - NIKL Dependency-Parsed Corpus 2024
+  - NIKL Case Frame
+  - NIKL Semantic Role Labeling Corpus 2025
+  - NIKL Dependency-Parsed Corpus 2025
+  - NIKL Word Sense Tagged Corpus 2025
+
+resume_policy:
+  when_any_r3_source_arrives: RESUME_G9_P36_R10_R3_FIRST
+  r4_is_closed: true
+
+user_action: NONE_UNTIL_R3_SOURCE_DELIVERY

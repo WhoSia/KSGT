@@ -1,0 +1,18 @@
+{
+  "verdict": "PASS_MACRO_SPARSE_MICRO_REDUNDANT_FUSION_AUTHORITY_NOT_REOPENED",
+  "whole_obligation_law": "MACRO_SPARSE_MICRO_REDUNDANT",
+  "reuse": 114,
+  "microCandidates": 0,
+  "roundtrip": 0,
+  "certified": 0,
+  "ceiling": "GROUNDING_CONDITIONED_MICROFUSION_SPARSITY",
+  "validation": {
+    "source_118": true,
+    "presealed_controls": true,
+    "sparse_factor_index": true,
+    "inherited_r3_controls": true,
+    "proof_count": true,
+    "roundtrip_required": true,
+    "pass": true
+  }
+}

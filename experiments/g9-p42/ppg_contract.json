@@ -1,0 +1,49 @@
+{
+  "schema": "ksgt.g9.p42.ppg-contract.v1",
+  "object": "PPG-1",
+  "authority": "NON_AUTHORITATIVE_DIAGNOSTIC_GUARD",
+  "inherited_pipeline": "request -> revision-intent graph -> authority/dependency cone -> local alternatives -> selective realization -> impacted-neighbor recheck -> stop",
+  "placement": "after authority/dependency obligations are resolved; before optional polish is accepted",
+  "purpose": "detect flattening pressure introduced by non-required revision; never generate roughness and never override required repair",
+  "inputs": [
+    "pre_text",
+    "post_text",
+    "forced_spans",
+    "dependency_cone",
+    "protected_spans",
+    "revision_intent",
+    "licensed_alternatives",
+    "provenance",
+    "language",
+    "register"
+  ],
+  "current_observables": [
+    "collateral_edit_outside_dependency_cone",
+    "licensed_alternative_loss",
+    "revision_signature_convergence",
+    "leave_intact_violation"
+  ],
+  "future_raw_trace_observables": [
+    "local_lexical_surprise_peak",
+    "clause_length_or_rhythm_peak",
+    "syntactic_deviation_peak",
+    "specificity_peak",
+    "long_range_callback_or_dependency_peak",
+    "peak_location_survival_through_revision",
+    "top_k_deviation_mass_concentration"
+  ],
+  "rules": [
+    "NEVER_BLOCK_REQUIRED_REPAIR",
+    "ROUGHNESS_NOT_REWARDED",
+    "HIGH_SURPRISE_NOT_QUALITY",
+    "WARN_ONLY_WHEN_OPTIONAL_EDIT_REMOVES_NONDEFEATED_LOCAL_STRUCTURE",
+    "SURFACE_MARKERS_ARE_LANGUAGE_MODEL_TIME_REGIME_SPECIFIC",
+    "CROSS_LANGUAGE_TRANSPORT_REQUIRES_MECHANISM_LEVEL_RETEST"
+  ],
+  "outputs": [
+    "PASS_NO_OPTIONAL_FLATTENING",
+    "WARN_OPTIONAL_FLATTENING",
+    "INSUFFICIENT_RAW_TRACE"
+  ],
+  "scalar_style_score": "FORBIDDEN"
+}

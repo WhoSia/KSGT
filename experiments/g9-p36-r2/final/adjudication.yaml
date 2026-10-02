@@ -1,0 +1,74 @@
+phase: KSGT Generation IX G9-P36-R2
+title: Local Structural Grounding, Table/Code/Example Attachment, Antecedent-Identity Closure, Context-Complete Proof Objects & Natural Redundancy Reopening Stress
+verdict: PASS_FULL121_STRUCTURAL_NEGATIVE_CLOSURE
+compiler: C3-R2-STRUCTURAL-v1
+source:
+  archive: Re3Align_v1.0
+  source_item: 8d57be09-68f3-4d47-aed4-2e555cbcc503
+  archive_sha256: d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+  emnlp24_csv_sha256: 599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28
+  replay_root: archive_root
+replay:
+  papers: 121
+  response_files: 173
+  structural_units: 5803
+  obligations: 5579
+  unresolved_obligations: 1877
+  existing_chunk_files: 162
+  reconstructed_chunk_files: 11
+  missing_papers: 0
+candidate_census:
+  total: 46
+  W0: 36
+  W1: 3
+  W2: 7
+  certifiable: 0
+failure_localization:
+  STRUCTURAL_CONTEXT_MISMATCH: 39
+  UNRESOLVED_CONTEXT: 4
+  ROLE_NOT_CERTIFIABLE: 3
+positive_controls:
+  exact_duplicate_assertion_same_attachment_same_antecedent: PASS_W0_CERTIFIABLE
+  punctuation_alias_duplicate_assertion_same_attachment_same_antecedent: PASS_W1_CERTIFIABLE
+  exact_duplicate_revision_commitment_same_target: PASS_W0_CERTIFIABLE
+r1_regression:
+  emnlp24_doc387: PASS_1_CANDIDATE_0_CERTIFIABLE
+  emnlp24_doc739: PASS_1_CANDIDATE_0_CERTIFIABLE
+  emnlp24_doc1035: PASS_3_CANDIDATES_0_CERTIFIABLE
+  emnlp24_doc199: PASS_1_CANDIDATE_0_CERTIFIABLE
+  emnlp24_doc103: PASS_2_CANDIDATES_0_CERTIFIABLE
+  emnlp24_doc1043: PASS_2_CANDIDATES_0_CERTIFIABLE
+validation:
+  missing_pass: true
+  positive_controls_pass: true
+  r1_regression_pass: true
+  pass: true
+frontier:
+  reopened: false
+  natural_safe_deletion_witnesses: 0
+constitution:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  G_operational_refinement:
+    - review_root
+    - response_chunk_id
+    - block_type
+    - structural_role
+    - attachment_key
+    - antecedent_key
+    - local_scope_key
+laws:
+  - REVIEW_ROOT_GROUNDING_LT_LOCAL_STRUCTURAL_GROUNDING_FOR_DELETION_AUTHORITY
+  - SURFACE_RECURRENCE_NE_REDUNDANCY_WHEN_ATTACHMENT_IDENTITY_DIFFERS
+  - TABLE_CODE_EXAMPLE_RECURRENCE_IS_CONTAINER_BOUND_ABSENT_STRONGER_EQUIVALENCE_PROOF
+  - ZERO_NATURAL_WITNESS_IS_INTERPRETABLE_ONLY_WITH_CERTIFIABLE_POSITIVE_CONTROLS
+  - INCREASED_CANDIDATE_RECALL_NE_INCREASED_DELETION_AUTHORITY
+  - ZERO_WITNESSES_IN_CALIBRATION_NE_POPULATION_ABSENCE
+incident:
+  class: EXECUTION_ROOT_BUG
+  description: initial public runner searched below data_triplets instead of the archive root
+  scientific_contract_changed: false
+  repaired_run: PASS
+notion_receipt: 3e6ef561-cf92-8178-9314-f8ad646a3e9f
+public_materialization_commit: 75631287ea4ab4fa93a100ddc569dcc0a88f7346
+next: KSGT Generation IX G9-P36-R3 — Cross-Sentence Obligation Subsumption, Distributed Semantic Redundancy, Entailment-Bidirectional Fusion, Context-Preserving Compression Proofs & Non-Local Frontier Reopening Court

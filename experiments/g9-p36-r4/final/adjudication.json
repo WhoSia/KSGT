@@ -1,0 +1,188 @@
+{
+  "phase": "KSGT Generation IX G9-P36-R4",
+  "court": "Binding-Complete Obligation Graph Recovery, Predicate-Argument-Value-Scope Reattachment, Representation-Sufficiency Witnesses, Cross-Sentence Proof-Carrying Fusion Reconstitution & Natural Frontier Reopening Court",
+  "compiler": "C3-R4-BCOG-v1",
+  "proof_kernel": "INHERITED_UNCHANGED_C3-R3_RUST_KERNEL",
+  "source": {
+    "archive_sha256": "d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b",
+    "csv_sha256": "599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28"
+  },
+  "extraction": {
+    "phase": "G9-P36-R4",
+    "compiler": "C3-R4-BCOG-v1",
+    "papers_discovered": 121,
+    "response_files": 173,
+    "obligations": 5579,
+    "unresolved_obligations": 1877,
+    "eligible_pair_windows": 8071,
+    "candidates": 8071,
+    "representation_complete_pairs": 1205,
+    "controlled_roundtrip_witnesses": 0
+  },
+  "representation_audit": {
+    "candidate_pairs": 8071,
+    "unique_candidate_obligations": 3238,
+    "representation_complete_unique_obligations": 1193,
+    "representation_complete_rate": 0.3684373069796171,
+    "unresolved_reason_counts": {
+      "SURFACE_CUSTODY_GAP": 51,
+      "NO_BINDABLE_PREDICATE": 1804,
+      "NEGATION_SCOPE_AMBIGUOUS": 162,
+      "NESTED_RELATION_UNRESOLVED": 30,
+      "UNBOUND_VALUE:3x": 1,
+      "UNBOUND_VALUE:2": 3,
+      "UNBOUND_VALUE:1": 2,
+      "UNBOUND_VALUE:3": 1,
+      "UNBOUND_VALUE:4": 1,
+      "UNBOUND_VALUE:5": 1,
+      "UNBOUND_VALUE:4.3": 1,
+      "UNBOUND_VALUE:1974": 2,
+      "UNBOUND_VALUE:2024": 1
+    },
+    "frame_class_counts": {
+      "CAUSAL_RELATION": 115,
+      "COPULAR_ATTRIBUTE": 756,
+      "UNBOUND": 1804,
+      "REPORT_EVIDENCE": 198,
+      "EXISTENCE_POSSESSION": 187,
+      "REVISION_ACTION": 120,
+      "COMPARISON": 32,
+      "GENERIC_LEXICAL_RELATION": 26
+    },
+    "core_compatibility_counts": {
+      "INCOMPLETE_REPRESENTATION": 6866,
+      "CORE_BINDING_MISMATCH": 1202,
+      "COMPATIBLE_CORE": 3
+    },
+    "controlled_witness_reason_counts": {
+      "NOT_ATTEMPTED": 8071
+    }
+  },
+  "proof_objects": 8071,
+  "operation_counts": {
+    "F1_CONJUNCTIVE_FUSION": 4237,
+    "S1_SUBSUMPTION": 3834
+  },
+  "reason_counts": {
+    "REPRESENTATION_SUFFICIENCY_VETO": 6866,
+    "GROUNDING_MISMATCH": 1025,
+    "FORCE_VALUE_ACTION_MISMATCH": 180
+  },
+  "certifiable_natural": 0,
+  "frontier_reopened": false,
+  "certified_witnesses": [],
+  "controls": {
+    "r4_representation": {
+      "positive": true,
+      "negative": true,
+      "fusion": true,
+      "metamorphic": true,
+      "pass": true
+    },
+    "r3_inherited": [
+      {
+        "id": "POS_SUBSUMPTION",
+        "expected": "CERTIFY",
+        "observed": "CERTIFY",
+        "pass": true,
+        "reason": "PROOF_COMPLETE"
+      },
+      {
+        "id": "POS_FUSION",
+        "expected": "CERTIFY",
+        "observed": "CERTIFY",
+        "pass": true,
+        "reason": "PROOF_COMPLETE"
+      },
+      {
+        "id": "POS_COMMITMENT_FUSION",
+        "expected": "CERTIFY",
+        "observed": "CERTIFY",
+        "pass": true,
+        "reason": "PROOF_COMPLETE"
+      },
+      {
+        "id": "NEG_VALUE_BINDING_SWAP",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "FORCE_VALUE_ACTION_MISMATCH"
+      },
+      {
+        "id": "NEG_POLARITY_SCOPE_SWAP",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "FORCE_VALUE_ACTION_MISMATCH"
+      },
+      {
+        "id": "NEG_MODAL_FORCE",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "FORCE_VALUE_ACTION_MISMATCH"
+      },
+      {
+        "id": "NEG_CONDITION",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "FORCE_VALUE_ACTION_MISMATCH"
+      },
+      {
+        "id": "NEG_CROSS_ATTACHMENT",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "GROUNDING_MISMATCH"
+      },
+      {
+        "id": "NEG_CROSS_ANTECEDENT",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "GROUNDING_MISMATCH"
+      },
+      {
+        "id": "NEG_ONE_WAY_ADDITION",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "BIDIRECTIONAL_PROOF_FAILED"
+      },
+      {
+        "id": "NEG_FLUENT_MISSING_ATOM",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "BIDIRECTIONAL_PROOF_FAILED"
+      },
+      {
+        "id": "NEG_REPRESENTATION_GAP",
+        "expected": "ABSTAIN",
+        "observed": "ABSTAIN",
+        "pass": true,
+        "reason": "REPRESENTATION_SUFFICIENCY_VETO"
+      }
+    ]
+  },
+  "validation": {
+    "source_papers_121": true,
+    "frozen_r3_window_exact": true,
+    "r4_representation_controls": true,
+    "inherited_r3_controls": true,
+    "inherited_r3_closure": true,
+    "f1_certificates_have_roundtrip_witness": true,
+    "pass": true
+  },
+  "verdict": "PASS_BINDING_GRAPH_RECOVERED_NATURAL_FRONTIER_NOT_REOPENED",
+  "authority": {
+    "MNMC_5": "RETAINED",
+    "MNMC_6": "NOT_JUSTIFIED_BY_DESIGN",
+    "external_AMR_SRL_as_truth": "REJECTED",
+    "natural_language_realization": "OUTSIDE_CERTIFICATE_AUTHORITY",
+    "representation_authority": "EXPANDED_RELATIVE_TO_R3",
+    "safe_transport": "ABSTAIN",
+    "human_recruitment": "HOLD"
+  }
+}

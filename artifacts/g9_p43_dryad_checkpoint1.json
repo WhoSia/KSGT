@@ -1,0 +1,84 @@
+{
+  "schema": "ksgt.g9.p43.dryad-checkpoint1.v1",
+  "source": "Doshi & Hauser 2024 Dryad 10.5061/dryad.qfttdz0pm",
+  "custody": {
+    "drive_file": "doi_10_5061_dryad_qfttdz0pm__v20240614.zip",
+    "drive_id": "1qLMu7TGl2s0xwYRLgEVIU8q0B3_VkmyT",
+    "outer_bytes": 2476017,
+    "nested_archive": "GenAI_creativity_scripts.zip",
+    "raw_writers_rows": 500,
+    "analyzable_story_rows": 297,
+    "analyzable_condition_counts": {
+      "human": 98,
+      "human_1AI": 100,
+      "human_5AI": 99
+    }
+  },
+  "analysis": "independent P43 structural-tail screen; not the authors' original outcome reproduction",
+  "metrics": {
+    "human": {
+      "sent_cv_mean": 0.3687,
+      "max_to_mean_mean": 1.6417,
+      "top2_mass_mean": 0.3929,
+      "ttr_mean": 0.6559,
+      "short_sent_share_mean": 0.0619,
+      "long_sent_share_mean": 0.199
+    },
+    "human_1AI": {
+      "sent_cv_mean": 0.3701,
+      "max_to_mean_mean": 1.6629,
+      "top2_mass_mean": 0.384,
+      "ttr_mean": 0.6393,
+      "short_sent_share_mean": 0.0408,
+      "long_sent_share_mean": 0.2265
+    },
+    "human_5AI": {
+      "sent_cv_mean": 0.3481,
+      "max_to_mean_mean": 1.6063,
+      "top2_mass_mean": 0.3832,
+      "ttr_mean": 0.6417,
+      "short_sent_share_mean": 0.0346,
+      "long_sent_share_mean": 0.2653
+    }
+  },
+  "bootstrap_human_minus_pooled_ai_95ci": {
+    "sent_cv": {
+      "diff": 0.0096,
+      "lo": -0.022,
+      "hi": 0.0404
+    },
+    "max_to_mean": {
+      "diff": 0.0069,
+      "lo": -0.0647,
+      "hi": 0.0803
+    },
+    "top2_mass": {
+      "diff": 0.0093,
+      "lo": -0.0112,
+      "hi": 0.03
+    },
+    "ttr": {
+      "diff": 0.0154,
+      "lo": -0.0015,
+      "hi": 0.0323
+    },
+    "short_sent_share": {
+      "diff": 0.0241,
+      "lo": -0.0036,
+      "hi": 0.0547
+    },
+    "long_sent_share": {
+      "diff": -0.0468,
+      "lo": -0.1019,
+      "hi": 0.0093
+    }
+  },
+  "verdicts": [
+    "SIMPLE_LOCAL_LENGTH_TAIL_COMPRESSION_NOT_DETECTED",
+    "AI_ASSISTANCE_NOT_EQUIVALENT_TO_UNIFORM_POLISH",
+    "LEXICAL_DIVERSITY_SIGNAL_WEAK_REQUIRES_LENGTH_TOPIC_CONTROL",
+    "P42_OPERATOR_CENTERED_THEORY_SURVIVES",
+    "DIRECT_PEAK_PAYOFF_TEST_NOT_YET_IDENTIFIED"
+  ],
+  "next_within_p43": "DATASET_2_BEGUS_OSF_RAW_CUSTODY_AND_MATCHED_HUMAN_LLM_STORY_ANALYSIS"
+}

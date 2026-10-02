@@ -1,0 +1,61 @@
+{
+  "schema": "ksgt.g9.p40.closure.v1",
+  "phase": "G9-P40",
+  "title": "Cross-Layer Corpus Identity Fusion, Replay-Guided Exact-Cell Recovery, Sense-Preserving WSD↔ZA↔SRL Join, Evidence-Source Value-of-Information Allocation, Targeted Human Elicitation Re-entry & Surface-Authority Reopening Court",
+  "parent_commit": "b2d1168937e99d4ded3191bdc87e88a503f14766",
+  "theory": "KSGT-EVIDENCE-OBSERVATION-v0.1",
+  "cross_layer": {
+    "sentence_identity": {
+      "news": "13907/13907",
+      "spoken": "16439/16439",
+      "total": "30346/30346"
+    },
+    "inherited_layer_identity": {
+      "ZA": "30346/30346",
+      "DP": "30346/30346",
+      "SRL": "30346/30346",
+      "WSD": "30345/30346"
+    },
+    "new_exact_oos_cell_promotions": 0,
+    "p39_frontier": "unchanged"
+  },
+  "human_observation": {
+    "operator": [
+      "FRAME",
+      "RECRUIT",
+      "CONSENT",
+      "ASSIGN",
+      "RESPOND",
+      "INSTRUMENT",
+      "AGGREGATE"
+    ],
+    "missingness_types": [
+      "frame_exclusion",
+      "noncontact_or_refusal",
+      "consent_loss",
+      "item_nonresponse",
+      "breakoff",
+      "context_insufficient",
+      "post_response_exclusion"
+    ],
+    "panel_gold": false,
+    "reentry": "AUTHORIZED_AS_TYPED_OBSERVATION_LANE",
+    "launch": "NOT_EXECUTED"
+  },
+  "promoted_laws": [
+    "LAYER_MULTIPLICITY_NOT_SAMPLE_MULTIPLICITY",
+    "IDENTITY_GAIN_NOT_COVERAGE_GAIN",
+    "EVIDENCE_SOURCE_VOI_IS_TYPED",
+    "HUMAN_PANEL_NOT_GOLD",
+    "OBSERVED_HUMAN_JUDGMENT_CONDITIONAL_ON_OBSERVATION_OPERATOR",
+    "RESPONSE_RATE_NOT_NONRESPONSE_BIAS",
+    "MISSINGNESS_RATE_NOT_EVIDENTIAL_DAMAGE_SUFFICIENT_STATISTIC",
+    "WEIGHTING_NOT_MNAR_IDENTIFICATION",
+    "HUMAN_JUDGMENT_AUTHORITY_NOT_NATURALISTIC_SUPPORT_AUTHORITY",
+    "NO_IDEAL_PANEL_ASSUMPTION"
+  ],
+  "notion": "3eaef561-cf92-8192-9162-e01f071c7fc4",
+  "harvest": "3eaef561-cf92-811b-ba0b-d3945d9921cf",
+  "verdict": "CLOSED_PASS",
+  "next": "G9-P41"
+}

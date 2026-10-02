@@ -1,0 +1,95 @@
+{
+  "phase": "KSGT Generation IX G9-P36-R8",
+  "verdict": "PASS_FRESH_TRANSFER_SIGNAL_INSUFFICIENT_FOR_MICRO_REUSE_PROMOTION",
+  "preseal_commit": "f8a29c9294d6085156d36a720c0a0d5ba1e32b0b",
+  "action_run": 36136391353,
+  "action_head": "ea8cfd3fb75dc75f7b7232ad0dcf7ea6dfc1b4fb",
+  "artifact": {
+    "id": 10865426711,
+    "name": "g9-p36-r8-fresh-relation-court",
+    "sha256": "99df208c19cb163686e203a8064e1063baf67b7049ecb5c611d1afe688d8fbb8",
+    "size_bytes": 6631756
+  },
+  "fresh_holdout": {
+    "dataset": "shwu22/RMR-75K",
+    "total_rows": 75542,
+    "total_papers": 4824,
+    "excluded_preseal_example_papers": [
+      "6cMmSnOpCs",
+      "zzqn5G9fjn"
+    ],
+    "selected_papers": 595,
+    "selected_rows_before_dedupe": 9183,
+    "deduped_rows": 8235,
+    "rule": "sha256(KSGT-G9-P36-R8-HOLDOUT|paper_id).first_byte<32",
+    "source_file_sha256": "c36f3af27399dc4b017f4525afd04c014ee7204d76d5abd0efeb792639d8434c"
+  },
+  "relation_court": {
+    "total_segments": 62779,
+    "representation_complete_segments": 22260,
+    "exact": {
+      "exploratory": 125,
+      "chains": 15,
+      "primary_cross_paper": 1
+    },
+    "family": {
+      "exploratory": 144,
+      "chains": 16,
+      "primary_cross_paper": 1,
+      "distinct_primary_papers": 2,
+      "distinct_primary_families": 1
+    },
+    "family_minus_exact_primary": 0,
+    "rust_crosscheck": "PASS_EXACT_1_FAMILY_1_PAPERS_2_FAMILIES_1",
+    "null": {
+      "replicates": 127,
+      "observed": 1,
+      "mean": 0.031496062992125984,
+      "p95": 0,
+      "max": 1,
+      "plus_one_p": 0.0390625,
+      "pass": true
+    },
+    "promotion_gate": {
+      "min_pairs": 5,
+      "min_papers": 5,
+      "min_families": 3,
+      "primary_pairs": false,
+      "distinct_papers": false,
+      "distinct_families": false,
+      "null": true,
+      "validation": true,
+      "pass": false
+    }
+  },
+  "korean_zero_argument": {
+    "source": "NIKL Zero Anaphora Corpus 2020",
+    "catalog_recovered": true,
+    "corpus_bytes_acquired": false,
+    "gold_annotation_execution": false,
+    "authority": "SOURCE_RECOVERED_BYTES_HOLD",
+    "description_match": true
+  },
+  "witness_identity": {
+    "diagnostic_run": 36137104678,
+    "paper_left": {
+      "id": "ISrxxvXJQO",
+      "title": "On the Hidden Waves of Image"
+    },
+    "paper_right": {
+      "id": "o87xfYKQC1",
+      "title": "Image as First-Order Norm+Linear Autoregression: Unveiling Mathematical Invariance"
+    },
+    "external_lineage_check": "SAME_AUTHOR_TEAM_AND_FINOLA_RESEARCH_LINEAGE",
+    "authority_effect": "READ_ONLY_DIAGNOSTIC_DOES_NOT_CHANGE_PRESEALED_GATE"
+  },
+  "authority": {
+    "predicate_family": "NO_INCREMENTAL_CROSS_DOCUMENT_SIGNAL",
+    "micro_reuse": "NOT_PROMOTED",
+    "semantic_equivalence": "NOT_GRANTED",
+    "fusion": "NOT_GRANTED",
+    "korean_zero_argument_gold": "HOLD",
+    "MNMC_5": "RETAINED",
+    "MNMC_6": "NOT_JUSTIFIED"
+  }
+}

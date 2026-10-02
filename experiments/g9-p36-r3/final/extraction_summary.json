@@ -1,0 +1,14 @@
+{
+  "phase": "G9-P36-R3",
+  "papers_discovered": 121,
+  "response_files": 173,
+  "obligations": 5579,
+  "unresolved_obligations": 1877,
+  "eligible_pair_windows": 8071,
+  "candidates": 8071,
+  "operation_counts": {
+    "S1_SUBSUMPTION": 1,
+    "F1_CONJUNCTIVE_FUSION": 8070
+  },
+  "representation_sufficient_candidates": 126
+}

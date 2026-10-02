@@ -1,0 +1,8 @@
+{
+  "phase":"G9-P36-R10-R1",
+  "raw_files":[
+    {"name":"NIKL_ZA_2020_v1.0_JSON.zip","bytes":62420368,"sha256":"56d55a3915ba1a05de576c0de27ed931afea2dfcc8c26d289bb1d37412be376e","drive_id":"14aRKadoBQ_l60pWnuMgpQYQHjauZ7k17"},
+    {"name":"NIKL_ZA_2025_v1.0.zip","bytes":8749612,"sha256":"c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d","drive_id":"1hnPT6CztaxtFukrM6uAMLHIFGgZmoDM2"},
+    {"name":"NIKL_ZA_CSV.zip","bytes":21866414,"sha256":"c8179e1bce2eaed22ae6d7afdf764034aac1e2ccdffe54b7f261ede2ad717610","drive_id":"1uJfzGphk2JpT2lg7kuuyUY2HpZyFVTix"}
+  ]
+}

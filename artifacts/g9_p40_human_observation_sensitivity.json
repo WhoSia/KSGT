@@ -1,0 +1,32 @@
+{
+  "schema": "ksgt.g9.p40.human-observation-sensitivity.v1",
+  "scope": "R6 matched comparable-choice reservoir; diagnostic sensitivity donor only",
+  "comparable_records": 6560,
+  "actor_proxies_ge5": 337,
+  "actor_records_ge5": 5875,
+  "matched_baseline_null_share": 0.5003,
+  "sensitivity_model": "logistic response propensity correlated with actor-level realization propensity; coefficient endpoints ±4; not an empirical nonresponse estimate",
+  "envelopes": {
+    "response_rate_0_30": {
+      "null_share_low": 0.4272,
+      "null_share_high": 0.5728,
+      "max_abs_shift": 0.073
+    },
+    "response_rate_0_50": {
+      "null_share_low": 0.449,
+      "null_share_high": 0.5515,
+      "max_abs_shift": 0.0513
+    },
+    "response_rate_0_70": {
+      "null_share_low": 0.4692,
+      "null_share_high": 0.5316,
+      "max_abs_shift": 0.0313
+    }
+  },
+  "interpretation": [
+    "response rate alone does not identify nonresponse bias",
+    "panel composition can alter observed realization distribution",
+    "sensitivity endpoints are not population estimates",
+    "human observation claims remain conditional on recruitment and response process"
+  ]
+}

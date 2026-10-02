@@ -1,0 +1,51 @@
+phase: KSGT Generation IX G9-P36-R2
+title: Local Structural Grounding, Table/Code/Example Attachment, Antecedent-Identity Closure, Context-Complete Proof Objects & Natural Redundancy Reopening Stress
+verdict: PASS_WITH_FULL_CALIBRATION_STRUCTURAL_NEGATIVE_CLOSURE
+human_recruitment: HOLD
+safe_transport: ABSTAIN
+compiler:
+  name: C3-R2-STRUCTURAL-v1
+  preseal_commit_prefix: 730bfc51
+source:
+  archive_sha256: d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b
+  csv_sha256: 599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28
+  source_item: 8d57be09-68f3-4d47-aed4-2e555cbcc503
+  replay_root: archive_root
+full_replay:
+  papers: 121
+  response_files: 173
+  structural_units: 5803
+  obligations: 5579
+  unresolved_obligations: 1877
+  existing_chunk_files: 162
+  reconstructed_chunk_files: 11
+  missing: 0
+natural_redundancy:
+  candidates: 46
+  W0: 36
+  W1: 3
+  W2: 7
+  certifiable: 0
+  frontier_reopened: false
+failure_localization:
+  STRUCTURAL_CONTEXT_MISMATCH: 39
+  UNRESOLVED_CONTEXT: 4
+  ROLE_NOT_CERTIFIABLE: 3
+controls:
+  positive_controls: 3/3_PASS
+  r1_regression_papers: 6/6_PASS
+  missing_data_gate: PASS
+constitution:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  G_status: LOCAL_STRUCTURAL_PROVENANCE_REQUIRED_FOR_DELETION_AUTHORITY
+incident:
+  initial_public_runner: EXECUTION_ROOT_BUG
+  scientific_contract_changed: false
+  final_repaired_run: PASS
+github:
+  public_materialization: 75631287ea4ab4fa93a100ddc569dcc0a88f7346
+  adjudication: 06087cb386f0b8ce960f6cd81ece9a7516303e93
+notion:
+  receipt: 3e6ef561-cf92-8178-9314-f8ad646a3e9f
+next: KSGT Generation IX G9-P36-R3 — Cross-Sentence Obligation Subsumption, Distributed Semantic Redundancy, Entailment-Bidirectional Fusion, Context-Preserving Compression Proofs & Non-Local Frontier Reopening Court

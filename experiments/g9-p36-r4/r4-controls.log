@@ -1,0 +1,124 @@
+{
+  "validation": {
+    "positive": true,
+    "negative": true,
+    "fusion": true,
+    "metamorphic": true,
+    "pass": true
+  },
+  "positive": [
+    [
+      "simple_transitive",
+      true
+    ],
+    [
+      "revision_commitment",
+      true
+    ],
+    [
+      "directed_comparison",
+      true
+    ],
+    [
+      "entity_value_unit",
+      true
+    ],
+    [
+      "negated_relation",
+      true
+    ],
+    [
+      "modal_relation",
+      true
+    ],
+    [
+      "conditioned_relation",
+      true
+    ],
+    [
+      "quantified_argument",
+      true
+    ]
+  ],
+  "negative": [
+    [
+      "argument_role_swap",
+      true
+    ],
+    [
+      "relation_direction_swap",
+      true
+    ],
+    [
+      "value_binding_swap",
+      true
+    ],
+    [
+      "unit_binding_swap",
+      true
+    ],
+    [
+      "comparator_direction_swap",
+      true
+    ],
+    [
+      "negation_scope_swap",
+      true
+    ],
+    [
+      "modal_scope_swap",
+      true
+    ],
+    [
+      "quantifier_scope_swap",
+      true
+    ],
+    [
+      "condition_attachment_swap",
+      true
+    ],
+    [
+      "authority_commitment_swap",
+      true
+    ],
+    [
+      "same_anchor_different_graph",
+      true
+    ],
+    [
+      "fluent_missing_edge",
+      true
+    ],
+    [
+      "antecedent_swap",
+      true
+    ],
+    [
+      "attachment_swap",
+      true
+    ],
+    [
+      "unbound_residual_content",
+      true
+    ]
+  ],
+  "fusion": true,
+  "metamorphic": [
+    {
+      "id": "punctuation_invariance",
+      "pass": true
+    },
+    {
+      "id": "whitespace_invariance",
+      "pass": true
+    },
+    {
+      "id": "surface_alias_binding",
+      "pass": true
+    },
+    {
+      "id": "role_change_not_invariant",
+      "pass": true
+    }
+  ]
+}

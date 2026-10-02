@@ -1,0 +1,75 @@
+{
+  "schema": "ksgt.g9.p45.intake-custody-checkpoint2b.v1",
+  "phase": "G9-P45",
+  "status": "OPEN_CORPUS_WAIT_PLUS_DEV_LIT",
+  "research_os_literature_sweep": {
+    "intake_folder_id": "1MLtYh0pv8QUZDReYzRqjDrOjRkSJAD16",
+    "final_intake_item_count": 0,
+    "normalized_paper_pdfs_to_10_papers": 26,
+    "edited_volumes_to_11_books": 1,
+    "non_paper_objects_to_20_non_paper_sources": 1,
+    "duplicate_policy": "title/identity audit before admission; 2014 SIAM Review Rubik's Cube republication retained as distinct published edition from 2013 original",
+    "byte_policy": "Drive IDs and raw bytes preserved; metadata-only rename/move"
+  },
+  "project_data_moves": {
+    "CUBE_REV": {
+      "object": "WCA_export_v2_273_20260930T000036Z.sql",
+      "destination": "CUBE-REV/20_SECONDARY_DATA_FRONTIER",
+      "contents": [
+        "metadata.json",
+        "README.md",
+        "WCA_export.sql"
+      ],
+      "sql_bytes": 1951432828
+    },
+    "KSGT": {
+      "destination_folder_id": "1wy4uYGDleBiXIQOe-4xC2ovW_5l8D3X-",
+      "destination": "KSGT/02_PUBLIC_EVIDENCE_RAW/G9-P43_P45_EXTERNAL_DATASETS",
+      "top_level_objects": [
+        "Moon_Green_Kushlev_2025_OSF_GPT4_Diversity",
+        "klicke_writing_inventory.csv",
+        "klicke_writing",
+        "TypingTests.zip",
+        "VocabularyKnowledgeTest.zip",
+        "doi_10_5061_dryad_qfttdz0pm__v20240614.zip",
+        "demographic_info.csv"
+      ]
+    }
+  },
+  "unused_zip_audit": {
+    "TypingTests": {
+      "participant_ids": 4992,
+      "structure": "participant-level keystroke event streams with time, cursor, pause, TextChange and Activity fields",
+      "role": "AUXILIARY_PROCESS_COVARIATE",
+      "P45_diachronic_authority": false
+    },
+    "VocabularyKnowledgeTest": {
+      "participant_ids": 4967,
+      "structure": "participant-level Word/Response/Key tests",
+      "role": "AUXILIARY_PROFICIENCY_COVARIATE",
+      "P45_diachronic_authority": false
+    },
+    "joinability": {
+      "writing_inventory_ids": 4992,
+      "demographic_ids": 4992,
+      "writing_demographic_overlap": 4992,
+      "typing_ids": 4992,
+      "vocabulary_ids": 4967,
+      "typing_vocabulary_overlap": 4967,
+      "typing_only_without_vocab": 25
+    }
+  },
+  "source_identity_correction": {
+    "previous_label": "begus_osf",
+    "corrected_label": "Moon_Green_Kushlev_2025_OSF_GPT4_Diversity",
+    "reason": "P43 source-custody audit established this package is Moon–Green–Kushlev GPT-4 diversity material, not Beguš",
+    "authority_effect": "no Beguš / human-vs-Llama authority"
+  },
+  "court": [
+    "00_INTAKE_EMPTY_AFTER_SWEEP",
+    "LITERATURE_COMMONS_CUSTODY_RESTORED",
+    "PROJECT_NATIVE_RAW_DATA_SEPARATED_FROM_PAPERS",
+    "UNUSED_KLICKE_ZIPS_STRUCTURALLY_AUDITED_AND_REPURPOSED_AS_AUXILIARY_COVARIATES",
+    "AUXILIARY_PROCESS_DATA_DOES_NOT_ENTER_P45_DIACHRONIC_AUTHORITY"
+  ]
+}

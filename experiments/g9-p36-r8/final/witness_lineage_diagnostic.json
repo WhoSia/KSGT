@@ -1,0 +1,28 @@
+{
+  "status": "POSTHOC_READ_ONLY_WITNESS_LINEAGE_DIAGNOSTIC_NO_GATE_CHANGE",
+  "primary_pair_count": 1,
+  "pair": {
+    "left": {
+      "paper_id": "ISrxxvXJQO",
+      "title": "On the Hidden Waves of Image",
+      "predicate": "is"
+    },
+    "right": {
+      "paper_id": "o87xfYKQC1",
+      "title": "Image as First-Order Norm+Linear Autoregression: Unveiling Mathematical Invariance",
+      "predicate": "is"
+    },
+    "shared_relation_chain": [
+      "convolutional>decoder",
+      "feature>map",
+      "map>followed"
+    ]
+  },
+  "local_identity_run": 36137104678,
+  "external_identity": {
+    "same_author_team": true,
+    "same_research_lineage": "FINOLA / hidden-waves image representation",
+    "interpretation": "The sole fresh cross-paper witness is not an independent cross-team generalization witness."
+  },
+  "gate_effect": "NONE_PRESEALED_GATE_ALREADY_FAILS_1_PAIR_2_PAPERS_1_FAMILY"
+}

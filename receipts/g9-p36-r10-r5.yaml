@@ -1,0 +1,99 @@
+phase: KSGT Generation IX G9-P36-R10-R5
+title: Native-Korean Overt↔Null Risk-Set Reconstruction, Generation-Time Recoverability Estimation, Information-Structure–Conditioned Realization Choice, Counterfactual Omission Utility, Semantic-Role-Uncertainty Preservation & KSGT-REALIZE-v0.1 Prospective Decision Court
+status: CLOSED
+verdict: PASS_SURFACE_RISK_SET_GEOMETRY_REPLICATED_KSGT_REALIZE_V0_2_SEALED_COUNTERFACTUAL_OMISSION_UTILITY_NOT_IDENTIFIED
+date: 2026-09-29
+
+lineage:
+  inherited_R3: PASS_EXACT_CROSS_LAYER_ALIGNMENT_PROVEN_SEMANTIC_ROLE_TOKEN_AUTHORITY_STRUCTURALLY_UNAVAILABLE_UNDER_CURRENT_EXPLICIT_GOLD_CASEFRAME_PARTIAL_IDENTIFICATION_ONLY
+  inherited_R4: PASS_RECOVERABILITY_REALIZATION_AUTHORITY_SEPARATED_KSGT_REALIZE_V0_1_SEALED
+  preseal_commit: a760b2d78082cc917a5bae89da9583095147dea3
+  empirical_receipt_commit: 8d6ebfe7653d21b256c868eedaa85aed996236a7
+  theory_initial_commit: 33e8e200215a0497e196d552ccd3360d0729f4b8
+  theory_final_commit: 8bcf716950788466895d00fd153393d39a1fef24
+
+prospective_2024:
+  predicate_tokens: 481404
+  mapping_failures: 0
+  SUBJECT:
+    omitted: 256972
+    overt: 203869
+    simultaneous: 8718
+    omitted_share_excluding_simultaneous: 0.5576153163455508
+  OBJECT:
+    omitted: 52650
+    overt: 156183
+    simultaneous: 933
+    omitted_share_excluding_simultaneous: 0.2521153266006809
+  mixed_action_strata: 22870
+  mixed_action_tokens: 422426
+  H1: PASS
+  H2: PASS
+  H3: PASS
+  H4: PASS
+
+discovery_2025:
+  predicate_tokens: 73169
+  SUBJECT_omitted_share: 0.620504512844249
+  OBJECT_omitted_share: 0.23332108068369786
+  predicate_sense_slot_mixed_action_strata: 3594
+  predictive_ceiling_AUC:
+    slot: 0.6726509098496987
+    slot_lane: 0.6903371770404344
+    slot_lemma_sense: 0.8194713484211184
+    slot_lane_lemma_sense: 0.8164057758112796
+  generation_time_recoverability:
+    PRIOR_TEXT_AVAILABLE: 39335
+    FUTURE_TEXT_REQUIRED: 14423
+    DEICTIC_SPECIAL: 6619
+    POSITION_UNRESOLVED: 2449
+    UNRESOLVED: 5
+
+theory:
+  version: KSGT-REALIZE-v0.2
+  opportunity_geometry: MULTISET_VALUED
+  default_decision_rule: ROBUST_PARETO_FRONTIER
+  default_scalarization: FORBIDDEN
+  semantic_role_uncertainty: PRESERVED
+  counterfactual_omission_utility: NOT_POINT_IDENTIFIED
+  information_structure_choice_effect: HOLD
+  communication_geometry: CONSTRAINED_DISTORTION_AND_SURFACE_COST
+
+engineering:
+  rust_manifest_commit: ee818922cb483015da8616cf824e3e01534e79a6
+  rust_core_commit: 1c112a642103483efbc5c2e67eb2ce8536d4a274
+  controls_commit: 2700b7517bd2c21ccd85bd0bf606e5590eba4d3c
+  workflow_commit: f0d811b7f9f1e8febbd4c91aab1f77cee09efa46
+  trigger_commit: 532e34962392ab791cc5f055ee49b050fe9aee71
+  run: 36501966778
+  artifact_id: 11005648144
+  artifact_sha256: a8f3383c2714c70b579dc6cd2cbfcba0d8e898b5a03a58c7180aeb2f0b9772da
+  controls: PASS_5_OF_5
+  scalarization_used: false
+
+drive:
+  analysis_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R5_REALIZATION_DECISION_THEORY
+
+notion:
+  canonical_receipt: 3eaef561-cf92-81f4-bc00-f0e98c5a60ce
+  harvest: 3eaef561-cf92-8113-8949-f06d3079925e
+
+authority:
+  surface_risk_set_geometry: PROMOTED
+  generation_time_evidence_partition: PROMOTED
+  predicate_sense_distributional_prior: PROMOTED_AS_PRIOR_NOT_DECISION_AUTHORITY
+  KSGT_REALIZE_v0_2: SEALED
+  counterfactual_null_overt_preference: HOLD
+  style_utility: HOLD
+  information_structure_effect: HOLD
+  semantic_role_uncertainty: PRESERVED
+
+next_phase:
+  id: G9-P36-R10-R6
+  title: Comparable Overt↔Null Choice-Set Materialization, Antecedent-Available Overt Controls, Information-Structure Proxy Falsification, Native-Original Counterfactual Pair Construction, Preference-Authority Calibration & KSGT-REALIZE-v0.2 World-Choice Court
+
+user_action: NONE
+
+closure:
+  initial_receipt_commit: 26b00ed3ea13607bbc8183750192608ec116ba6e
+  active_lineage_commit: cbc44b1a8b2a5703154075fbb14d5bcc6e709b7c

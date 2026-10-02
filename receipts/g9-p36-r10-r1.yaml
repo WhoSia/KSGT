@@ -1,0 +1,86 @@
+phase: KSGT Generation IX G9-P36-R10-R1
+title: Official NIKL Zero-Anaphora Raw-Byte Intake, 2020↔2025 Annotation-Ontology Reconstitution, JSON↔CSV Cross-Format Identity Audit, Document/Sentence/Predicate–Ellipsis–Antecedent Graph Census, Canonical Drive Archival & Adjacent Korean Argument-Omission Corpus Discovery Court
+verdict: PASS_OFFICIAL_BYTES_VALIDATED_CROSS_FORMAT_IDENTITY_PROVEN_ONTOLOGY_RECONSTITUTED_REAL_SCHEMA_ADAPTER_SEALED
+status: CLOSED
+date: 2026-09-28
+boundary:
+  retrospective_raw_intake: true
+  prospective_schema_claim: forbidden
+raw_custody:
+  folder: /Google Drive/KSGT/01_SOURCE_ACCRUAL_RAW/G9-P36-R10-R1_NIKL_ZA_CANONICAL_RAW
+  files:
+    - name: NIKL_ZA_2020_v1.0_JSON.zip
+      sha256: 56d55a3915ba1a05de576c0de27ed931afea2dfcc8c26d289bb1d37412be376e
+      drive_id: 14aRKadoBQ_l60pWnuMgpQYQHjauZ7k17
+    - name: NIKL_ZA_2025_v1.0.zip
+      sha256: c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d
+      drive_id: 1hnPT6CztaxtFukrM6uAMLHIFGgZmoDM2
+    - name: NIKL_ZA_CSV.zip
+      sha256: c8179e1bce2eaed22ae6d7afdf764034aac1e2ccdffe54b7f261ede2ad717610
+      drive_id: 1uJfzGphk2JpT2lg7kuuyUY2HpZyFVTix
+analysis_custody:
+  folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R1_NIKL_ZA_ONTOLOGY_AUDIT
+cross_format:
+  NX:
+    rows: 320224
+    sha256: c37f1dda226433aa3d1c47e0b464c898d9c13ce903b467c6b0b28baac6557878
+    exact: true
+  SX:
+    rows: 313427
+    sha256: ca9fd608f6be6ece4194ac0dc84dc236c60a77d327fe5a3b67eb2bfc93396750
+    exact: true
+ontology:
+  y2020:
+    documents: 7688
+    sentences: 371571
+    za_predicates: 434741
+    slots: 493333
+    subject: 409738
+    object: 83595
+    external_or_unspecified_minus1: 92917
+    za_location: document.ZA[]
+  y2025:
+    documents: 1102
+    sentences: 30346
+    za_predicates: 50247
+    slots: 62831
+    antecedent_spans: 81840
+    multi_span_ellipsis: 11675
+    multi_span_rate: 0.185816
+    subject: 43696
+    object: 7977
+    adjunct: 11105
+    complement: 50
+    blank_type: 3
+    hash_spans: 6618
+    empty_antecedent_arrays: 5
+    za_location: document.sentence[].ZA[].ellipsis[]
+adapter:
+  implementation: experiments/g9-p36-r10-r1/nikl_real_adapter_r1.py
+  adapted_records: 556164
+  independent_validation_failures: 0
+  rust_core: KSGT-ARG-v1
+  regression_run: 36382301004
+  regression_artifact: 10952632794
+  regression_artifact_sha256: 6f4b1ee20b2c5d29b49ad654ed81eb2df7df2f89800ef9dda1a713674132a4cf
+laws:
+  - SYNTACTIC_SLOT_IS_NOT_SEMANTIC_ROLE
+  - MULTI_SPAN_ANTECEDENT_IS_A_SET_VALUED_WITNESS_NOT_A_FAKE_SINGLE_SPAN
+  - LEGACY_MINUS1_AND_MODERN_HASH_MARKERS_MUST_NOT_BE_COLLAPSED
+  - ANNOTATION_EDGE_STATES_MUST_BE_PRESERVED_NOT_AUTOREPAIRED
+  - CROSS_FORMAT_SERIALIZATION_IDENTITY_DOES_NOT_IMPLY_CROSS_VERSION_ONTOLOGY_IDENTITY
+adjacent_corpus_priority:
+  - NIKL Zero Anaphora Corpus 2024
+  - NIKL Korean Multi-layered Structural Analysis Corpus 2025
+  - NIKL Semantic Role Labeling Corpus 2025
+  - NIKL Dependency-Parsed Corpus 2025
+  - NIKL Case Frame
+  - NIKL Coreference Resolution Corpus 2019
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+user_action: NONE
+
+notion:
+  canonical_receipt: 3e9ef561-cf92-8137-a3b8-dec6138666f7
+  harvest: 3e9ef561-cf92-81ee-8323-d9548f0b2245

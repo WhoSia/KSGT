@@ -1,0 +1,333 @@
+{
+  "law": {
+    "version": "C3-R5-RNSN-v1",
+    "predicateEquivalence": "EXACT_LEMMA_ONLY",
+    "globalAllPairs": false,
+    "minSharedTokens": 2,
+    "minTokenJaccard": 0.25
+  },
+  "positive": [
+    {
+      "id": "shared_object_fusion",
+      "pass": true,
+      "result": {
+        "pass": true,
+        "reason": "R5_FUSION_NEIGHBOR",
+        "operation": "F1_CONJUNCTIVE_FUSION",
+        "overlap": {
+          "shared_tokens": 2,
+          "jaccard": 0.5,
+          "rich": true
+        },
+        "left_unique": [
+          "ROLE:ARG1:BIGRAM:analysis>discussion",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "right_unique": [
+          "ROLE:ARG1:BIGRAM:analysis>appendix",
+          "ROLE:ARG1:TOK:appendix"
+        ],
+        "union": [
+          "ROLE:ARG1:BIGRAM:analysis>appendix",
+          "ROLE:ARG1:BIGRAM:analysis>discussion",
+          "ROLE:ARG1:BIGRAM:detailed>analysis",
+          "ROLE:ARG1:TOK:analysis",
+          "ROLE:ARG1:TOK:appendix",
+          "ROLE:ARG1:TOK:detailed",
+          "ROLE:ARG1:TOK:discussion"
+        ]
+      }
+    },
+    {
+      "id": "strict_subsumption",
+      "pass": true,
+      "result": {
+        "pass": true,
+        "reason": "R5_SUBSUMPTION_NEIGHBOR",
+        "operation": "S1_SUBSUMPTION",
+        "overlap": {
+          "shared_tokens": 3,
+          "jaccard": 0.75,
+          "rich": true
+        },
+        "left_unique": [],
+        "right_unique": [
+          "ROLE:ARG1:BIGRAM:discussion>appendix",
+          "ROLE:ARG1:TOK:appendix"
+        ],
+        "union": [
+          "ROLE:ARG1:BIGRAM:ablation>discussion",
+          "ROLE:ARG1:BIGRAM:detailed>ablation",
+          "ROLE:ARG1:BIGRAM:discussion>appendix",
+          "ROLE:ARG1:TOK:ablation",
+          "ROLE:ARG1:TOK:appendix",
+          "ROLE:ARG1:TOK:detailed",
+          "ROLE:ARG1:TOK:discussion"
+        ]
+      }
+    }
+  ],
+  "negative": [
+    {
+      "id": "predicate",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "arg0",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_OR_ALIAS_R2_TERRITORY"
+      }
+    },
+    {
+      "id": "authority",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "ground_chunk",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "attachment",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "antecedent",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "scope",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "force",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "condition",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "EXACT_INVARIANT_MISMATCH"
+      }
+    },
+    {
+      "id": "low_overlap",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "ARG1_TYPED_OVERLAP_BELOW_THRESHOLD",
+        "overlap": {
+          "shared_tokens": 0,
+          "jaccard": 0,
+          "rich": false
+        }
+      }
+    },
+    {
+      "id": "value_conflict",
+      "pass": true,
+      "result": {
+        "pass": false,
+        "reason": "VALUE_CONFLICT"
+      }
+    }
+  ],
+  "metamorphic": [
+    {
+      "id": "punctuation",
+      "pass": true,
+      "result": {
+        "pass": true,
+        "reason": "R5_FUSION_NEIGHBOR",
+        "operation": "F1_CONJUNCTIVE_FUSION",
+        "overlap": {
+          "shared_tokens": 2,
+          "jaccard": 0.5,
+          "rich": true
+        },
+        "left_unique": [
+          "ROLE:ARG1:BIGRAM:analysis>discussion",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "right_unique": [
+          "ROLE:ARG1:BIGRAM:analysis>appendix",
+          "ROLE:ARG1:TOK:appendix"
+        ],
+        "union": [
+          "ROLE:ARG1:BIGRAM:analysis>appendix",
+          "ROLE:ARG1:BIGRAM:analysis>discussion",
+          "ROLE:ARG1:BIGRAM:detailed>analysis",
+          "ROLE:ARG1:TOK:analysis",
+          "ROLE:ARG1:TOK:appendix",
+          "ROLE:ARG1:TOK:detailed",
+          "ROLE:ARG1:TOK:discussion"
+        ]
+      }
+    },
+    {
+      "id": "whitespace",
+      "pass": true,
+      "result": {
+        "pass": true,
+        "reason": "R5_FUSION_NEIGHBOR",
+        "operation": "F1_CONJUNCTIVE_FUSION",
+        "overlap": {
+          "shared_tokens": 2,
+          "jaccard": 0.5,
+          "rich": true
+        },
+        "left_unique": [
+          "ROLE:ARG1:BIGRAM:analysis>discussion",
+          "ROLE:ARG1:TOK:discussion"
+        ],
+        "right_unique": [
+          "ROLE:ARG1:BIGRAM:analysis>appendix",
+          "ROLE:ARG1:TOK:appendix"
+        ],
+        "union": [
+          "ROLE:ARG1:BIGRAM:analysis>appendix",
+          "ROLE:ARG1:BIGRAM:analysis>discussion",
+          "ROLE:ARG1:BIGRAM:detailed>analysis",
+          "ROLE:ARG1:TOK:analysis",
+          "ROLE:ARG1:TOK:appendix",
+          "ROLE:ARG1:TOK:detailed",
+          "ROLE:ARG1:TOK:discussion"
+        ]
+      }
+    }
+  ],
+  "controlled_fusion": {
+    "pass": true,
+    "reason": "ROUNDTRIP_GRAPH_EQUAL",
+    "text": "We will add a detailed analysis discussion and a detailed analysis appendix.",
+    "compiled": {
+      "version": "C3-R4-BCOG-v1",
+      "text": "We will add a detailed analysis discussion and a detailed analysis appendix.",
+      "complete": true,
+      "unresolved": [],
+      "frame": {
+        "class": "REVISION_ACTION",
+        "predicate": "add",
+        "surfacePredicate": "add",
+        "arg0": "AUTHOR",
+        "arg1": "a detailed analysis discussion and a detailed analysis appendix.",
+        "modal": "will",
+        "condition": "NONE",
+        "authority": "AUTHOR_COMMITMENT",
+        "arg0_canon": "author",
+        "arg1_canon": "a detailed analysis discussion and a detailed analysis appendix"
+      },
+      "force": {
+        "polarity": "POS",
+        "modal": "will",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "values": {
+        "bindings": [],
+        "pointers": [],
+        "unresolved": []
+      },
+      "custody": {
+        "pass": true,
+        "missing": [],
+        "token_count": 7
+      },
+      "atoms": [
+        "ACTION:add@AUTHOR",
+        "AUTH:AUTHOR_COMMITMENT",
+        "EDGE:add:ARG0",
+        "EDGE:add:ARG1",
+        "FORCE:MODAL:will@add",
+        "FORCE:POLARITY:POS@add",
+        "PRED:REVISION_ACTION:add",
+        "ROLE:ARG1:BIGRAM:analysis>appendix",
+        "ROLE:ARG1:BIGRAM:analysis>discussion",
+        "ROLE:ARG1:BIGRAM:detailed>analysis",
+        "ROLE:ARG1:TOK:analysis",
+        "ROLE:ARG1:TOK:appendix",
+        "ROLE:ARG1:TOK:detailed",
+        "ROLE:ARG1:TOK:discussion"
+      ],
+      "grounding": {
+        "review_root": "review::x",
+        "response_chunk_id": "chunk",
+        "structural_role": "REVISION_COMMITMENT",
+        "block_type": "PROSE",
+        "attachment_key": "same",
+        "antecedent_key": null,
+        "local_scope_key": "scope"
+      },
+      "representation_certificate": {
+        "surface_custody": true,
+        "predicate_argument_bound": true,
+        "value_binding_complete": true,
+        "force_scope_closed": true,
+        "grounding_present": true,
+        "pass": true
+      }
+    },
+    "union_atoms": [
+      "ACTION:add@AUTHOR",
+      "AUTH:AUTHOR_COMMITMENT",
+      "EDGE:add:ARG0",
+      "EDGE:add:ARG1",
+      "FORCE:MODAL:will@add",
+      "FORCE:POLARITY:POS@add",
+      "PRED:REVISION_ACTION:add",
+      "ROLE:ARG1:BIGRAM:analysis>appendix",
+      "ROLE:ARG1:BIGRAM:analysis>discussion",
+      "ROLE:ARG1:BIGRAM:detailed>analysis",
+      "ROLE:ARG1:TOK:analysis",
+      "ROLE:ARG1:TOK:appendix",
+      "ROLE:ARG1:TOK:detailed",
+      "ROLE:ARG1:TOK:discussion"
+    ],
+    "gain_chars": 9
+  },
+  "index_test": {
+    "items": 3,
+    "signature_atom_postings": 9,
+    "shared_pair_keys": 1,
+    "emitted_pairs": 1,
+    "global_all_pairs": false
+  },
+  "validation": {
+    "positive": true,
+    "negative": true,
+    "metamorphic": true,
+    "roundtrip": true,
+    "indexed": true,
+    "pass": true
+  }
+}

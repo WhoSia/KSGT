@@ -1,0 +1,12 @@
+{
+  "schema": "ksgt.g9.p45.source-contract.v1",
+  "mappings": {
+    "Korean Newspaper Archive": {
+      "genre": "news",
+      "register": "institutional_editorial",
+      "provenance_pre_chatgpt": "INSTITUTIONAL_EDITORIAL_PRE_CHATGPT",
+      "provenance_post_2022": "UNKNOWN"
+    }
+  },
+  "rule": "Date never determines provenance by itself. Unmapped corpora remain UNKNOWN."
+}

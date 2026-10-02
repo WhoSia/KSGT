@@ -1,0 +1,69 @@
+{
+  "schema": "ksgt.g9.p36.r11.closure.v1",
+  "phase": "KSGT Generation IX G9-P36-R11",
+  "title": "Existing-Human Provenance Preference Reconstruction, Overt↔Null Choice-Trace Recovery, Source/Slot Conditional Selection Geometry, Counterfactual Realizer External Adjudication, Preference-Authority Boundary & G9-P36 Closure Court",
+  "parent_active_lineage": "184a16025bb650dac13f18d788440fb2f065c073",
+  "evidence": {
+    "r6_records_exclusive": 106125,
+    "r6_overt_exclusive": 58290,
+    "r6_null_exclusive": 47835,
+    "aggregate_null_share": 0.45074204947,
+    "cell_null_share": {
+      "N_SUBJECT": 0.5597331851,
+      "N_OBJECT": 0.14094679929,
+      "S_SUBJECT": 0.59422522416,
+      "S_OBJECT": 0.36211651155
+    },
+    "r8_packet": 160,
+    "r8_strict_counteraction_support": 160,
+    "same_actor_counteraction_support": 22,
+    "same_document_counteraction_support": 25,
+    "counteraction_witnesses": {
+      "median": 2,
+      "mean": 9.9875,
+      "min": 1,
+      "max": 86
+    },
+    "r8_direction_cell": {
+      "OVERT_TO_NULL": {
+        "N_SUBJECT": 30,
+        "N_OBJECT": 30,
+        "S_SUBJECT": 30,
+        "S_OBJECT": 30
+      },
+      "NULL_TO_OVERT": {
+        "N_SUBJECT": 20,
+        "N_OBJECT": 0,
+        "S_SUBJECT": 20,
+        "S_OBJECT": 0
+      }
+    }
+  },
+  "promoted_constitution": "KSGT-PROVENANCE-SELECTION-v0.1",
+  "laws": [
+    "PAIR_AUTHORITY != PREFERENCE_AUTHORITY",
+    "NATURALISTIC_SUPPORT = CONDITIONAL",
+    "SCALAR_NATIVE_PREFERENCE = RETIRED",
+    "FRESH_HUMAN_COLLECTION = NOT_A_P36_REQUIREMENT",
+    "OUT_OF_SUPPORT => ABSTAIN",
+    "OBJECT_NULL_TO_OVERT = OUTSIDE_CURRENT_AUTHORIZED_SURFACE"
+  ],
+  "verdict": {
+    "existing_human_provenance_geometry": "PASS",
+    "r8_160_strict_counteraction_support": "160/160",
+    "scalar_preference_authority": "RETIRED",
+    "fresh_human_requirement": "NONE",
+    "g9_p36": "CLOSED_PASS",
+    "next": "G9-P37"
+  },
+  "notion": {
+    "r11_page": "3eaef561-cf92-8144-8283-c5d85dd7e953",
+    "harvest_page": "3eaef561-cf92-81a9-8d2d-f9136cee5f23"
+  },
+  "literature_checks": [
+    "10.15718/discog.2008.15.3.127",
+    "10.1075/prag.22023.par",
+    "10.18855/lisoko.2020.45.2.010",
+    "10.1016/j.lingua.2025.103913"
+  ]
+}

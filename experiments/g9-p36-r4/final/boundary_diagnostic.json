@@ -1,0 +1,1339 @@
+{
+  "phase": "G9-P36-R4-BOUNDARY-DIAGNOSTIC",
+  "candidate_pairs": 8071,
+  "representation_complete_pairs": 1205,
+  "representation_complete_and_grounding_compatible": 180,
+  "compatible_core_any_grounding": 3,
+  "compatible_core_and_grounding_compatible": 0,
+  "post_grounding_mismatch_dimensions": {
+    "class": 114,
+    "predicate": 137,
+    "arg0": 179,
+    "polarity": 10,
+    "modal": 56,
+    "quantifier": 40,
+    "condition": 3,
+    "authority": 31,
+    "value_conflict": 0
+  },
+  "mismatch_examples": {
+    "class": [
+      {
+        "id": "emnlp24_doc848|v1_review0_response.itg.json|70|72",
+        "texts": [
+          "We will add the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "We are once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper."
+        ],
+        "left_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "once again grateful for your careful attention which will significantly improve the quality and completeness of our paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc848|v1_review0_response.itg.json|143|145",
+        "texts": [
+          "A10: Thank you very much for your thorough review, we have noted the typing errors mentioned.",
+          "We greatly appreciate your valuable feedback, which is essential for improving the quality of our paper."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "A10: Thank you very much for your thorough review, we",
+          "arg1": "noted the typing errors mentioned.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "a10 thank you very much for your thorough review we",
+          "arg1_canon": "noted the typing errors mentioned"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "We greatly appreciate your valuable feedback, which",
+          "arg1": "essential for improving the quality of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we greatly appreciate your valuable feedback which",
+          "arg1_canon": "essential for improving the quality of our paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc689|v1_review0_response.itg.json|12|13",
+        "texts": [
+          "Additionally, we have noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "We are very grateful and will integrate your suggestions in the next version."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "Additionally, we",
+          "arg1": "noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "additionally we",
+          "arg1_canon": "noted your valuable suggestions regarding the organization content typos and other aspects of our paper"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "very grateful and will integrate your suggestions in the next version.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "very grateful and will integrate your suggestions in the next version"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      }
+    ],
+    "predicate": [
+      {
+        "id": "emnlp24_doc848|v1_review0_response.itg.json|70|72",
+        "texts": [
+          "We will add the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "We are once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper."
+        ],
+        "left_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "once again grateful for your careful attention which will significantly improve the quality and completeness of our paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc848|v1_review0_response.itg.json|143|145",
+        "texts": [
+          "A10: Thank you very much for your thorough review, we have noted the typing errors mentioned.",
+          "We greatly appreciate your valuable feedback, which is essential for improving the quality of our paper."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "A10: Thank you very much for your thorough review, we",
+          "arg1": "noted the typing errors mentioned.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "a10 thank you very much for your thorough review we",
+          "arg1_canon": "noted the typing errors mentioned"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "We greatly appreciate your valuable feedback, which",
+          "arg1": "essential for improving the quality of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we greatly appreciate your valuable feedback which",
+          "arg1_canon": "essential for improving the quality of our paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc689|v1_review0_response.itg.json|12|13",
+        "texts": [
+          "Additionally, we have noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "We are very grateful and will integrate your suggestions in the next version."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "Additionally, we",
+          "arg1": "noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "additionally we",
+          "arg1_canon": "noted your valuable suggestions regarding the organization content typos and other aspects of our paper"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "very grateful and will integrate your suggestions in the next version.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "very grateful and will integrate your suggestions in the next version"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      }
+    ],
+    "arg0": [
+      {
+        "id": "emnlp24_doc848|v1_review0_response.itg.json|70|72",
+        "texts": [
+          "We will add the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "We are once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper."
+        ],
+        "left_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "once again grateful for your careful attention which will significantly improve the quality and completeness of our paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc848|v1_review0_response.itg.json|143|145",
+        "texts": [
+          "A10: Thank you very much for your thorough review, we have noted the typing errors mentioned.",
+          "We greatly appreciate your valuable feedback, which is essential for improving the quality of our paper."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "A10: Thank you very much for your thorough review, we",
+          "arg1": "noted the typing errors mentioned.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "a10 thank you very much for your thorough review we",
+          "arg1_canon": "noted the typing errors mentioned"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "We greatly appreciate your valuable feedback, which",
+          "arg1": "essential for improving the quality of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we greatly appreciate your valuable feedback which",
+          "arg1_canon": "essential for improving the quality of our paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc689|v1_review0_response.itg.json|12|13",
+        "texts": [
+          "Additionally, we have noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "We are very grateful and will integrate your suggestions in the next version."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "Additionally, we",
+          "arg1": "noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "additionally we",
+          "arg1_canon": "noted your valuable suggestions regarding the organization content typos and other aspects of our paper"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "very grateful and will integrate your suggestions in the next version.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "very grateful and will integrate your suggestions in the next version"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      }
+    ],
+    "authority": [
+      {
+        "id": "emnlp24_doc848|v1_review0_response.itg.json|70|72",
+        "texts": [
+          "We will add the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "We are once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper."
+        ],
+        "left_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "add",
+          "surfacePredicate": "add",
+          "arg0": "AUTHOR",
+          "arg1": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work.",
+          "modal": "will",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "the necessary references and fully update the literature review section to introduce innovative argumentation research and focus discussions on the areas and methods which are significant to our work"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "once again grateful for your careful attention, which will significantly improve the quality and completeness of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "once again grateful for your careful attention which will significantly improve the quality and completeness of our paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc153|v1_review0_response.itg.json|9|10",
+        "texts": [
+          "In our evaluation, the annotator model assesses pairs {x, g1, g2} and outputs a label y indicating whether g1 is preferred over g2 or vice versa.",
+          "We conducted evaluations in two settings detailed in Table 1 and Table 2."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "In our evaluation, the annotator model assesses pairs {x, g1, g2} and outputs a label y indicating whether g1",
+          "arg1": "preferred over g2 or vice versa.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "in our evaluation the annotator model assesses pairs x g1 g2 and outputs a label y indicating whether g1",
+          "arg1_canon": "preferred over g2 or vice versa"
+        },
+        "right_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "conduct",
+          "surfacePredicate": "conducted",
+          "arg0": "AUTHOR",
+          "arg1": "evaluations in two settings detailed in Table 1 and Table 2.",
+          "modal": "assert",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "evaluations in two settings detailed in table 1 and table 2"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "assert",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc153|v1_review0_response.itg.json|10|11",
+        "texts": [
+          "We conducted evaluations in two settings detailed in Table 1 and Table 2.",
+          "For Table 1, g1 is the output of our BPO-trained Gemma 1 model, and g2 is the ground truth reference."
+        ],
+        "left_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "conduct",
+          "surfacePredicate": "conducted",
+          "arg0": "AUTHOR",
+          "arg1": "evaluations in two settings detailed in Table 1 and Table 2.",
+          "modal": "assert",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "evaluations in two settings detailed in table 1 and table 2"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "For Table 1, g1",
+          "arg1": "the output of our BPO-trained Gemma 1 model, and g2 is the ground truth reference.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "for table 1 g1",
+          "arg1_canon": "the output of our bpo-trained gemma 1 model and g2 is the ground truth reference"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "assert",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      }
+    ],
+    "modal": [
+      {
+        "id": "emnlp24_doc689|v1_review0_response.itg.json|12|13",
+        "texts": [
+          "Additionally, we have noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "We are very grateful and will integrate your suggestions in the next version."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "Additionally, we",
+          "arg1": "noted your valuable suggestions regarding the organization, content, typos, and other aspects of our paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "additionally we",
+          "arg1_canon": "noted your valuable suggestions regarding the organization content typos and other aspects of our paper"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We",
+          "arg1": "very grateful and will integrate your suggestions in the next version.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we",
+          "arg1_canon": "very grateful and will integrate your suggestions in the next version"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "will",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc153|v1_review0_response.itg.json|9|10",
+        "texts": [
+          "In our evaluation, the annotator model assesses pairs {x, g1, g2} and outputs a label y indicating whether g1 is preferred over g2 or vice versa.",
+          "We conducted evaluations in two settings detailed in Table 1 and Table 2."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "In our evaluation, the annotator model assesses pairs {x, g1, g2} and outputs a label y indicating whether g1",
+          "arg1": "preferred over g2 or vice versa.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "in our evaluation the annotator model assesses pairs x g1 g2 and outputs a label y indicating whether g1",
+          "arg1_canon": "preferred over g2 or vice versa"
+        },
+        "right_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "conduct",
+          "surfacePredicate": "conducted",
+          "arg0": "AUTHOR",
+          "arg1": "evaluations in two settings detailed in Table 1 and Table 2.",
+          "modal": "assert",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "evaluations in two settings detailed in table 1 and table 2"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "assert",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc153|v1_review0_response.itg.json|10|11",
+        "texts": [
+          "We conducted evaluations in two settings detailed in Table 1 and Table 2.",
+          "For Table 1, g1 is the output of our BPO-trained Gemma 1 model, and g2 is the ground truth reference."
+        ],
+        "left_frame": {
+          "class": "REVISION_ACTION",
+          "predicate": "conduct",
+          "surfacePredicate": "conducted",
+          "arg0": "AUTHOR",
+          "arg1": "evaluations in two settings detailed in Table 1 and Table 2.",
+          "modal": "assert",
+          "condition": "NONE",
+          "authority": "AUTHOR_COMMITMENT",
+          "arg0_canon": "author",
+          "arg1_canon": "evaluations in two settings detailed in table 1 and table 2"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "For Table 1, g1",
+          "arg1": "the output of our BPO-trained Gemma 1 model, and g2 is the ground truth reference.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "for table 1 g1",
+          "arg1_canon": "the output of our bpo-trained gemma 1 model and g2 is the ground truth reference"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "assert",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      }
+    ],
+    "quantifier": [
+      {
+        "id": "emnlp24_doc349|v1_review0_response.itg.json|15|18",
+        "texts": [
+          "The payment for our data collection protocol was made fully transparent to users, and all protocols were approved by an IRB.",
+          "In fact, we still have Quizbowl users studying with our app and KARL to practice for trivia competitions, even though our user study is complete."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "was",
+          "surfacePredicate": "was",
+          "arg0": "The payment for our data collection protocol",
+          "arg1": "made fully transparent to users, and all protocols were approved by an IRB.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "the payment for our data collection protocol",
+          "arg1_canon": "made fully transparent to users and all protocols were approved by an irb"
+        },
+        "right_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "In fact, we still",
+          "arg1": "Quizbowl users studying with our app and KARL to practice for trivia competitions, even though our user study is complete.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "in fact we still",
+          "arg1_canon": "quizbowl users studying with our app and karl to practice for trivia competitions even though our user study is complete"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [
+            "all"
+          ],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc159|v1_review1_response.itg.json|14|15",
+        "texts": [
+          "If we consider designing a dataset for a romanization system, then a single transliteration scheme can be considered since all the variations of romanization are valid.",
+          "For instance, “ভাই”-> “bhai” and “ভাই”-> “vai” are both valid forms of romanization, and following any particular scheme would suffice."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1": "valid.",
+          "modal": "ASSERT",
+          "condition": "if we consider designing a dataset for a romanization system",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1_canon": "valid"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "For instance, “ভাই”-> “bhai” and “ভাই”-> “vai”",
+          "arg1": "both valid forms of romanization, and following any particular scheme would suffice.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "for instance ভাই -> bhai and ভাই -> vai",
+          "arg1_canon": "both valid forms of romanization and following any particular scheme would suffice"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "can",
+          "quantifiers": [
+            "all"
+          ],
+          "condition": "if we consider designing a dataset for a romanization system"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "would",
+          "quantifiers": [
+            "any"
+          ],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc159|v1_review1_response.itg.json|14|19",
+        "texts": [
+          "If we consider designing a dataset for a romanization system, then a single transliteration scheme can be considered since all the variations of romanization are valid.",
+          "Hence, for the practical usability and robustness of the models, we have considered multiple transliteration schemes while designing the dataset."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1": "valid.",
+          "modal": "ASSERT",
+          "condition": "if we consider designing a dataset for a romanization system",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1_canon": "valid"
+        },
+        "right_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "Hence, for the practical usability and robustness of the models, we",
+          "arg1": "considered multiple transliteration schemes while designing the dataset.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "hence for the practical usability and robustness of the models we",
+          "arg1_canon": "considered multiple transliteration schemes while designing the dataset"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "can",
+          "quantifiers": [
+            "all"
+          ],
+          "condition": "if we consider designing a dataset for a romanization system"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      }
+    ],
+    "polarity": [
+      {
+        "id": "emnlp24_doc317|v1_review1_response.itg.json|1|2",
+        "texts": [
+          "Consequently, we do not have a complete set of results for LSTM.",
+          "However, we are happy to provide more details on the LSTM experiments conducted during model development if desired."
+        ],
+        "left_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "Consequently, we do not",
+          "arg1": "a complete set of results for LSTM.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "consequently we do not",
+          "arg1_canon": "a complete set of results for lstm"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "However, we",
+          "arg1": "happy to provide more details on the LSTM experiments conducted during model development if desired.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "however we",
+          "arg1_canon": "happy to provide more details on the lstm experiments conducted during model development if desired"
+        },
+        "left_force": {
+          "polarity": "NEG",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc387|v1_review1_response.itg.json|7|9",
+        "texts": [
+          "We do not explicitly handle trigram activation overlaps as the resulting models are already well performing.",
+          "Again, each vocabulary is of hidden-dimension 4k and therefore should be able to handle some ambiguity."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "We do not explicitly handle trigram activation overlaps as the resulting models",
+          "arg1": "already well performing.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "we do not explicitly handle trigram activation overlaps as the resulting models",
+          "arg1_canon": "already well performing"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "Again, each vocabulary",
+          "arg1": "of hidden-dimension 4k and therefore should be able to handle some ambiguity.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "again each vocabulary",
+          "arg1_canon": "of hidden-dimension 4k and therefore should be able to handle some ambiguity"
+        },
+        "left_force": {
+          "polarity": "NEG",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "should",
+          "quantifiers": [
+            "each",
+            "some"
+          ],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc387|v1_review1_response.itg.json|25|27",
+        "texts": [
+          "As discussed in the main comment, our solution as proposed is classical subwod-tokenizer Free (i.p.",
+          "As a quick-fix to the infinite word space (which did not cause harm on our exhaustive eval experiments), one could apply a large tokenizer, e.g. of vocab size 500k, around T-Free, to still benefit from its compression during training and the explicitly modeled word-similarities, as discussed in the paper."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "is",
+          "surfacePredicate": "is",
+          "arg0": "As discussed in the main comment, our solution as proposed",
+          "arg1": "classical subwod-tokenizer Free (i.p.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "as discussed in the main comment our solution as proposed",
+          "arg1_canon": "classical subwod-tokenizer free i p"
+        },
+        "right_frame": {
+          "class": "CAUSAL_RELATION",
+          "predicate": "cause",
+          "surfacePredicate": "cause",
+          "arg0": "As a quick-fix to the infinite word space (which did not",
+          "arg1": "harm on our exhaustive eval experiments), one could apply a large tokenizer, e.g. of vocab size 500k, around T-Free, to still benefit from its compression during training and the explicitly modeled word-similarities, as discussed in the paper.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "as a quick-fix to the infinite word space which did not",
+          "arg1_canon": "harm on our exhaustive eval experiments one could apply a large tokenizer e g of vocab size 500k around t-free to still benefit from its compression during training and the explicitly modeled word-similarities as discussed in the paper"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        },
+        "right_force": {
+          "polarity": "NEG",
+          "modal": "could",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      }
+    ],
+    "condition": [
+      {
+        "id": "emnlp24_doc159|v1_review1_response.itg.json|14|15",
+        "texts": [
+          "If we consider designing a dataset for a romanization system, then a single transliteration scheme can be considered since all the variations of romanization are valid.",
+          "For instance, “ভাই”-> “bhai” and “ভাই”-> “vai” are both valid forms of romanization, and following any particular scheme would suffice."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1": "valid.",
+          "modal": "ASSERT",
+          "condition": "if we consider designing a dataset for a romanization system",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1_canon": "valid"
+        },
+        "right_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "For instance, “ভাই”-> “bhai” and “ভাই”-> “vai”",
+          "arg1": "both valid forms of romanization, and following any particular scheme would suffice.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "for instance ভাই -> bhai and ভাই -> vai",
+          "arg1_canon": "both valid forms of romanization and following any particular scheme would suffice"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "can",
+          "quantifiers": [
+            "all"
+          ],
+          "condition": "if we consider designing a dataset for a romanization system"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "would",
+          "quantifiers": [
+            "any"
+          ],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc159|v1_review1_response.itg.json|14|19",
+        "texts": [
+          "If we consider designing a dataset for a romanization system, then a single transliteration scheme can be considered since all the variations of romanization are valid.",
+          "Hence, for the practical usability and robustness of the models, we have considered multiple transliteration schemes while designing the dataset."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1": "valid.",
+          "modal": "ASSERT",
+          "condition": "if we consider designing a dataset for a romanization system",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "then a single transliteration scheme can be considered since all the variations of romanization",
+          "arg1_canon": "valid"
+        },
+        "right_frame": {
+          "class": "EXISTENCE_POSSESSION",
+          "predicate": "have",
+          "surfacePredicate": "have",
+          "arg0": "Hence, for the practical usability and robustness of the models, we",
+          "arg1": "considered multiple transliteration schemes while designing the dataset.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "hence for the practical usability and robustness of the models we",
+          "arg1_canon": "considered multiple transliteration schemes while designing the dataset"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "can",
+          "quantifiers": [
+            "all"
+          ],
+          "condition": "if we consider designing a dataset for a romanization system"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "NONE"
+        }
+      },
+      {
+        "id": "emnlp24_doc443|v1_review0_response.itg.json|35|36",
+        "texts": [
+          "When speakers use common vocabulary, the transcripts are generally accurate.",
+          "However, for local vocabulary, some terms are often used in spoken rather than written form, which leads to some errors in the transcripts."
+        ],
+        "left_frame": {
+          "class": "COPULAR_ATTRIBUTE",
+          "predicate": "are",
+          "surfacePredicate": "are",
+          "arg0": "the transcripts",
+          "arg1": "generally accurate.",
+          "modal": "ASSERT",
+          "condition": "when speakers use common vocabulary",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "the transcripts",
+          "arg1_canon": "generally accurate"
+        },
+        "right_frame": {
+          "class": "CAUSAL_RELATION",
+          "predicate": "lead_to",
+          "surfacePredicate": "leads to",
+          "arg0": "However, for local vocabulary, some terms are often used in spoken rather than written form, which",
+          "arg1": "some errors in the transcripts.",
+          "modal": "ASSERT",
+          "condition": "NONE",
+          "authority": "AUTHOR_ASSERTION",
+          "arg0_canon": "however for local vocabulary some terms are often used in spoken rather than written form which",
+          "arg1_canon": "some errors in the transcripts"
+        },
+        "left_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [],
+          "condition": "when speakers use common vocabulary"
+        },
+        "right_force": {
+          "polarity": "POS",
+          "modal": "ASSERT",
+          "quantifiers": [
+            "some"
+          ],
+          "condition": "NONE"
+        }
+      }
+    ]
+  },
+  "compatible_core_witnesses": [
+    {
+      "id": "emnlp24_doc159|v1_review0_response.itg.json|5|9",
+      "paper": "emnlp24_doc159",
+      "file": "v1_review0_response.itg.json",
+      "operation": "F1_CONJUNCTIVE_FUSION",
+      "texts": [
+        "The scores indicate strong resemblance between the expert and general annotation.",
+        "The scores indicate considerably high inter-annotator agreement between the experts."
+      ],
+      "grounding_compatible": false,
+      "grounding": {
+        "compatible": false,
+        "left": {
+          "review_root": "v1_review0::`w1: given the preference of using romanized script in indic languages, a more detailed section on dataset creation would have been beneficial. for example, how exactly is the verification process conducted by the domain experts? additionally, what was the agreement between the experts?`",
+          "response_chunk_id": "emnlp24_doc159_v1_review0_response_2_RQ-0",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "we appreciate the reviewer s suggestion to enhance the dataset creation section we have answered the aforementioned questions",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::we appreciate the reviewer s suggestion to enhance the dataset creation section we have answered the aforementioned questions::1"
+        },
+        "right": {
+          "review_root": "v1_review0::`w1: given the preference of using romanized script in indic languages, a more detailed section on dataset creation would have been beneficial. for example, how exactly is the verification process conducted by the domain experts? additionally, what was the agreement between the experts?`",
+          "response_chunk_id": "emnlp24_doc159_v1_review0_response_2_RQ-0",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "- dataset verification by domain experts following sec-3 2 3 lines 242 254 of our manuscript the linguistic experts reannotated 1000 random samples from the banglatlit da",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::- dataset verification by domain experts following sec-3 2 3 lines 242 254 of our manuscript the linguistic experts reannotated 1000 random samples from the banglatlit da::2"
+        }
+      },
+      "representation_pass": true,
+      "core": {
+        "pass": true,
+        "reason": "COMPATIBLE_CORE"
+      },
+      "witness": {
+        "pass": false,
+        "reason": "NOT_ATTEMPTED",
+        "text": null
+      },
+      "left_frame": {
+        "class": "REPORT_EVIDENCE",
+        "predicate": "indicate",
+        "surfacePredicate": "indicate",
+        "arg0": "The scores",
+        "arg1": "strong resemblance between the expert and general annotation.",
+        "modal": "ASSERT",
+        "condition": "NONE",
+        "authority": "AUTHOR_ASSERTION",
+        "arg0_canon": "the scores",
+        "arg1_canon": "strong resemblance between the expert and general annotation"
+      },
+      "right_frame": {
+        "class": "REPORT_EVIDENCE",
+        "predicate": "indicate",
+        "surfacePredicate": "indicate",
+        "arg0": "The scores",
+        "arg1": "considerably high inter-annotator agreement between the experts.",
+        "modal": "ASSERT",
+        "condition": "NONE",
+        "authority": "AUTHOR_ASSERTION",
+        "arg0_canon": "the scores",
+        "arg1_canon": "considerably high inter-annotator agreement between the experts"
+      },
+      "left_force": {
+        "polarity": "POS",
+        "modal": "ASSERT",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "right_force": {
+        "polarity": "POS",
+        "modal": "ASSERT",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "compression": {
+        "source_chars": 166,
+        "fused_ir_chars": 999999999,
+        "gain_chars": -999999999
+      }
+    },
+    {
+      "id": "emnlp24_doc739|v1_review0_response.itg.json|39|45",
+      "paper": "emnlp24_doc739",
+      "file": "v1_review0_response.itg.json",
+      "operation": "F1_CONJUNCTIVE_FUSION",
+      "texts": [
+        "\"Large language models are human-level prompt engineers.\"",
+        "\"Large Language Models are Zero-Shot Reasoners\""
+      ],
+      "grounding_compatible": false,
+      "grounding": {
+        "compatible": false,
+        "left": {
+          "review_root": "v1_review0::> w4: conducting experiments solely on chatgpt is insufficient to demonstrate the effectiveness of the method.",
+          "response_chunk_id": "emnlp24_doc739_v1_review0_response_4_RQ-0",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "2 chengrun yang et al large language models as optimizers",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::2 chengrun yang et al large language models as optimizers::15"
+        },
+        "right": {
+          "review_root": "v1_review0::> w4: conducting experiments solely on chatgpt is insufficient to demonstrate the effectiveness of the method.",
+          "response_chunk_id": "emnlp24_doc739_v1_review0_response_4_RQ-0",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "5 qinyuan ye et al prompt engineering a prompt engineer",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::5 qinyuan ye et al prompt engineering a prompt engineer::18"
+        }
+      },
+      "representation_pass": true,
+      "core": {
+        "pass": true,
+        "reason": "COMPATIBLE_CORE"
+      },
+      "witness": {
+        "pass": false,
+        "reason": "NOT_ATTEMPTED",
+        "text": null
+      },
+      "left_frame": {
+        "class": "COPULAR_ATTRIBUTE",
+        "predicate": "are",
+        "surfacePredicate": "are",
+        "arg0": "\"Large language models",
+        "arg1": "human-level prompt engineers.\"",
+        "modal": "ASSERT",
+        "condition": "NONE",
+        "authority": "AUTHOR_ASSERTION",
+        "arg0_canon": "large language models",
+        "arg1_canon": "human-level prompt engineers"
+      },
+      "right_frame": {
+        "class": "COPULAR_ATTRIBUTE",
+        "predicate": "are",
+        "surfacePredicate": "are",
+        "arg0": "\"Large Language Models",
+        "arg1": "Zero-Shot Reasoners\"",
+        "modal": "ASSERT",
+        "condition": "NONE",
+        "authority": "AUTHOR_ASSERTION",
+        "arg0_canon": "large language models",
+        "arg1_canon": "zero-shot reasoners"
+      },
+      "left_force": {
+        "polarity": "POS",
+        "modal": "ASSERT",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "right_force": {
+        "polarity": "POS",
+        "modal": "ASSERT",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "compression": {
+        "source_chars": 105,
+        "fused_ir_chars": 999999999,
+        "gain_chars": -999999999
+      }
+    },
+    {
+      "id": "emnlp24_doc61|v1_review0_response.itg.json|8|13",
+      "paper": "emnlp24_doc61",
+      "file": "v1_review0_response.itg.json",
+      "operation": "F1_CONJUNCTIVE_FUSION",
+      "texts": [
+        "We are committed to further exploring these measures to improve our system's performance and reliability in future work.",
+        "We are deeply grateful for your meticulous and thorough review of our work."
+      ],
+      "grounding_compatible": false,
+      "grounding": {
+        "compatible": false,
+        "left": {
+          "review_root": "v1_review0::on choose of backbone models** > weakness 1: it seems that the choice of model for the examiner, questioner, and accessor might introduce bias. if all models are the same, there could be a self-bias that leads the weaknesses to converge in a specific direction. it would be useful to have an analysis or perspective on this issue.",
+          "response_chunk_id": "emnlp24_doc61_v1_review0_response_2_RQ-0",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "- multiple agent interaction 1 incorporating interactions among multiple llm-based agents can diversify perspectives and reduce the risk of converging biases and assessment bias",
+          "antecedent_key": "{\"A\":[\"believe\",\"strategies\",\"enhance\",\"robustness\",\"fairness\",\"framework\"],\"R\":[],\"F\":{\"polarity\":\"POS\",\"modal\":\"will\",\"comparator\":\"none\",\"condition\":\"none\"},\"V\":{\"values\":[],\"entities\":[]},\"ACTION\":null}",
+          "local_scope_key": "PROSE::- multiple agent interaction 1 incorporating interactions among multiple llm-based agents can diversify perspectives and reduce the risk of converging biases and assessment bias::3"
+        },
+        "right": {
+          "review_root": "v1_review0::on choose of backbone models** > weakness 1: it seems that the choice of model for the examiner, questioner, and accessor might introduce bias. if all models are the same, there could be a self-bias that leads the weaknesses to converge in a specific direction. it would be useful to have an analysis or perspective on this issue.",
+          "response_chunk_id": "emnlp24_doc61_v1_review0_response_2_RQ-0",
+          "structural_role": "ASSERTION",
+          "block_type": "PROSE",
+          "attachment_key": "general",
+          "antecedent_key": null,
+          "local_scope_key": "PROSE::general::7"
+        }
+      },
+      "representation_pass": true,
+      "core": {
+        "pass": true,
+        "reason": "COMPATIBLE_CORE"
+      },
+      "witness": {
+        "pass": false,
+        "reason": "NOT_ATTEMPTED",
+        "text": null
+      },
+      "left_frame": {
+        "class": "COPULAR_ATTRIBUTE",
+        "predicate": "are",
+        "surfacePredicate": "are",
+        "arg0": "We",
+        "arg1": "committed to further exploring these measures to improve our system's performance and reliability in future work.",
+        "modal": "ASSERT",
+        "condition": "NONE",
+        "authority": "AUTHOR_ASSERTION",
+        "arg0_canon": "we",
+        "arg1_canon": "committed to further exploring these measures to improve our system s performance and reliability in future work"
+      },
+      "right_frame": {
+        "class": "COPULAR_ATTRIBUTE",
+        "predicate": "are",
+        "surfacePredicate": "are",
+        "arg0": "We",
+        "arg1": "deeply grateful for your meticulous and thorough review of our work.",
+        "modal": "ASSERT",
+        "condition": "NONE",
+        "authority": "AUTHOR_ASSERTION",
+        "arg0_canon": "we",
+        "arg1_canon": "deeply grateful for your meticulous and thorough review of our work"
+      },
+      "left_force": {
+        "polarity": "POS",
+        "modal": "ASSERT",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "right_force": {
+        "polarity": "POS",
+        "modal": "ASSERT",
+        "quantifiers": [],
+        "condition": "NONE"
+      },
+      "compression": {
+        "source_chars": 196,
+        "fused_ir_chars": 999999999,
+        "gain_chars": -999999999
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+phase: KSGT Generation IX G9-P36-R9
+title: Research-Lineage-Independent Relation-Motif Replication, Author/Method Ancestry Decontamination, Predicate-Family Necessity Ablation, NIKL Zero-Anaphora Gold Ingestion & Cross-Language Reuse-Authority Reopening Court
+date: 2026-09-25
+status: PROSPECTIVE_CHARTER_SEALED_BEFORE_R9_FRESH_BUCKET_ROW_ACCESS
+inherits:
+  phase: G9-P36-R8
+  verdict: PASS_FRESH_TRANSFER_SIGNAL_INSUFFICIENT_FOR_MICRO_REUSE_PROMOTION
+  r8_science_commit: e743d1522099d99246f123a7c13d2ea370b3a113
+  r8_active_head: b786d73d41a643f8f96498c00e5ec06d8a0dfc4c
+  r8_primary: 1
+  r8_primary_lineage_status: SAME_AUTHOR_TEAM_SAME_FINOLA_LINEAGE
+fresh_replication:
+  corpus: shwu22/RMR-75K
+  paper_hash_key: KSGT-G9-P36-R8-HOLDOUT|paper_id
+  r8_bucket: first_byte_lt_32
+  r9_bucket: first_byte_gte_32_and_lt_64
+  overlap_with_r8: FORBIDDEN
+  known_public_examples_excluded: [zzqn5G9fjn, 6cMmSnOpCs]
+  row_access_before_r9_preseal: FORBIDDEN
+  exact_normalized_rebuttal_dedupe_within_paper: REQUIRED
+relation_motif:
+  representation: C3-R8-PFE-v1
+  exact_arm: REQUIRED
+  predicate_family_arm: REQUIRED
+  family_definitions: INHERIT_R8_UNCHANGED
+  primary_base:
+    - connected_chain
+    - at_least_two_shared_ordered_ARG1_bigrams
+    - different_paper
+    - nonidentical_surface
+    - complementary_context
+lineage_decontamination:
+  version: C3-R9-LD-v1
+  author_metadata_source_order:
+    - RMR_COLUMNS_IF_PRESENT
+    - OPENREVIEW_PUBLIC_NOTE_BY_FORUM_ID
+  shared_author_rule:
+    if_any_normalized_author_overlap: LINEAGE_COUPLED
+  method_identifier_rule:
+    extraction:
+      - uppercase_or_mixedcase_identifier_length_gte_3
+      - alphanumeric_method_token_with_letter_and_digit
+      - hyphenated_named_method_token
+    stoplist:
+      - CNN
+      - RNN
+      - LLM
+      - NLP
+      - AI
+      - ML
+      - GPU
+      - CPU
+      - SOTA
+    coupling:
+      shared_distinctive_identifier_and_title_token_jaccard_gte_0_15: LINEAGE_COUPLED
+  independent_primary:
+    requires:
+      - base_primary
+      - no_shared_normalized_author
+      - no_method_ancestry_coupling
+  unknown_author_metadata:
+    policy: ABSTAIN_FROM_LINEAGE_INDEPENDENT_AUTHORITY
+predicate_family_necessity:
+  compare:
+    - exact_primary_lineage_independent
+    - family_primary_lineage_independent
+  family_increment_required_for_family_authority: gte_1
+  family_unique_witness_required: true
+promotion_gate:
+  micro_reuse_authority_requires:
+    - lineage_independent_family_primary_pairs_gte_5
+    - distinct_papers_gte_8
+    - distinct_author_components_gte_5
+    - distinct_predicate_families_gte_3
+    - adjacency_null_plus_one_p_lte_0_05
+    - observed_gt_null_p95
+    - independent_rust_count_match
+    - controls_all_pass
+  semantic_equivalence_authority: NOT_GRANTED_BY_THIS_GATE
+  fusion_authority: NOT_GRANTED_BY_THIS_GATE
+null_court:
+  version: C3-R9-LINEAGE-AWARE-ADJACENCY-NULL-v1
+  replicates: 127
+  seed: KSGT-G9-P36-R9-20260925
+  preserves:
+    - predicate_family_shell
+    - token_marginals
+    - item_edge_counts
+    - rebuttal_impact_label
+    - review_perspective
+    - paper_membership
+  score_after_lineage_decontamination: REQUIRED
+korean_zero_argument:
+  source: NIKL_Zero_Anaphora_Corpus_2020
+  ingestion_attempt: REQUIRED
+  accepted_gold_requires:
+    - actual_annotation_bytes
+    - parseable_zero_argument_records
+    - provenance_hash
+  catalog_html_or_metadata_only: INSUFFICIENT
+  if_download_requires_auth_or_application: USER_ACQUISITION_REQUIRED
+  proxy_as_gold: FORBIDDEN
+cross_language:
+  authority_reopening_requires:
+    english_lineage_independent_signal: PROMOTED
+    korean_zero_argument_gold: EXECUTED
+  otherwise: CROSS_LANGUAGE_REUSE_AUTHORITY_HOLD
+scalability:
+  global_all_pairs: FORBIDDEN
+  retrieval: typed_inverted_postings
+  independent_implementation: RUST_REQUIRED
+github_actions:
+  auto_commit: DISABLED
+  permissions: CONTENTS_READ
+  outputs: ARTIFACT_ONLY
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  human_recruitment: HOLD
+  safe_transport: ABSTAIN
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport

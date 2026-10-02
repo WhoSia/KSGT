@@ -1,0 +1,135 @@
+phase: KSGT Generation IX G9-P36-R10-R7
+title: Native-Original Overt↔Null Counterfactual Surface Materialization, Meaning-Preservation/Reference-Safety Adjudication, Author-Specific Explicitness Calibration, Blind Native Preference Collection Readiness & KSGT-REALIZE-v0.3 Preference-Authority Court
+date: 2026-09-29
+status: PROSPECTIVE_COUNTERFACTUAL_PACKET_CONSTITUTION_SEALED_BEFORE_PAIR_TEXT_OPENING
+
+inherits:
+  R6:
+    native_original_pairable_pairs: 3280
+    strict_mixed_strata: 1649
+    theory: KSGT-REALIZE-v0.3
+    true_counterfactual_preference: HOLD
+
+selection:
+  source_pool: R6_NATIVE_ORIGINAL_MATCHED_PAIR_INDEX
+  deterministic_hash_selection: true
+  target_packet_size: 240
+  strata:
+    - source_lane
+    - syntactic_slot
+    - accessibility_tier
+    - actor_explicitness_bin
+  no_outcome_based_selection: true
+
+counterfactual_directions:
+  OVERT_TO_NULL:
+    default_status: ELIGIBLE_FOR_AUTOMATED_SURFACE_MATERIALIZATION
+    requires:
+      - exact_overt_argument_span
+      - generation_time_accessibility_proxy_at_least_P1
+      - deletion_does_not_remove_predicate_or_clause_operator
+      - no_coordination_fragment
+      - no_current_argument_internal_contrast_marker_without_review
+  NULL_TO_OVERT:
+    restored_form_source: OFFICIAL_ZA_GOLD
+    default_status: POSITION_AUTHORITY_REQUIRED
+    insertion_rule:
+      - use_exact_position_only_if_official_or_uniquely_derivable_from_aligned_native_structure
+      - otherwise_emit_candidate_positions_and_SURFACE_POSITION_HOLD
+    no_forced_single_position: true
+
+meaning_preservation:
+  hard_reject:
+    - referent_identity_changes_or_unknown_after_edit
+    - quantifier_or_scope_change
+    - honorific_or_person_feature_conflict
+    - deletion_of_focus_or_contrast_bearing_material
+    - coordination_or_apposition_boundary_break
+    - restored_form_contains_unsupported_content
+  soft_hold:
+    - ambiguity_increases_without_reference_resolution
+    - information_structure_change_possible
+    - multiple_valid_insertion_positions
+    - punctuation_or_spacing_repair_needed_beyond_local_edit
+
+reference_safety:
+  overt_to_null:
+    minimum: generation_time_prior_accessibility
+    P1: exact_head_repeat
+    P2: prior_proper_name_repeat
+    authority: ACCESSIBILITY_PROXY_NOT_COREFERENCE_GOLD
+  null_to_overt:
+    source: official_ZA_recovery
+    authority: RECOVERY_GOLD
+  future_only_recovery: EXCLUDE_FROM_PREFERENCE_PACKET
+  deictic_special: EXCLUDE_FROM_FIRST_PACKET
+
+counterfactual_packet:
+  version: KSGT-CFPAIR-v0.1
+  fields:
+    - pair_id
+    - native_original_id
+    - source_lane
+    - slot
+    - direction
+    - original_surface
+    - counterfactual_surface
+    - edit_span
+    - restored_or_deleted_form
+    - accessibility_tier
+    - reference_safety_state
+    - meaning_preservation_state
+    - position_authority_state
+    - author_explicitness_bin
+    - blind_order_seed
+  row_level_storage: DRIVE_ONLY
+  github: AGGREGATES_CODE_SCHEMA_ONLY
+
+author_specific_calibration:
+  source: R6_ACTOR_PROXY
+  use: PRIOR_FOR_PACKET_BALANCING_ONLY
+  causal_personality_interpretation: FORBIDDEN
+  bins: [LOW_EXPLICITNESS,MID_EXPLICITNESS,HIGH_EXPLICITNESS]
+  binning: within_source_slot_empirical_quantiles
+
+blind_preference_readiness:
+  packet_must_hide:
+    - original_vs_counterfactual_identity
+    - KSGT_labels
+    - predicted_action
+    - author_explicitness_bin
+  task_dimensions:
+    - naturalness
+    - preferred_explicitness
+    - redundancy
+    - discourse_coherence
+    - register_style_fit
+  no_human_collection_until:
+    - counterfactual_packet_frozen
+    - internal_surface_gate_pass
+    - meaning_reference_gate_pass
+    - duplicate_or_near_duplicate_audit_pass
+
+promotion_gates:
+  packet_readiness:
+    minimum_total_pass: 120
+    each_source_slot_cell_min: 15
+    overt_to_null_pass_rate_min: 0.50
+    null_to_overt_unheld_rate_min: 0.20
+  preference_authority:
+    remains: HOLD_UNTIL_BLIND_NATIVE_JUDGMENT
+  meaning_preservation_authority:
+    internal_gate_only: NOT_HUMAN_GOLD
+
+stopping_rule:
+  if_packet_readiness_passes: HUMAN_COLLECTION_READY
+  if_null_to_overt_position_authority_fails_broadly: FIRST_HUMAN_PACKET_MAY_BE_OVERT_TO_NULL_HEAVY
+  no_pressure_to_balance_direction_at_cost_of_SURFACE_AUTHORITY: true
+
+selection_amendment_before_selected_surface_opening:
+  directional_quota:
+    OVERT_TO_NULL: 160
+    NULL_TO_OVERT: 80
+  rationale: >
+    Overt deletion has exact native span authority; null insertion has gold restored-form authority but generally non-unique Korean surface position.
+  no_rebalancing_after_gate_results: true

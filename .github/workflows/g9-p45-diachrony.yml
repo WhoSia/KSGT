@@ -1,0 +1,45 @@
+name: g9-p45-diachrony-adapter
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "experiments/g9-p45/**"
+      - ".github/workflows/g9-p45-diachrony.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  authority-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit contract
+        run: python experiments/g9-p45/test_adapter.py
+      - name: Auxiliary data authority contract
+        run: python experiments/g9-p45/test_auxiliary_data.py
+      - name: Diachronic drift representation firewall
+        run: python experiments/g9-p45/test_drift.py
+      - name: Generic archive schema probe
+        run: python experiments/g9-p45/test_archive_probe.py
+      - name: KLiCKe feature-only compiler
+        run: python experiments/g9-p45/test_klicke_feature_compiler.py
+      - name: Source contract admission gate
+        run: python experiments/g9-p45/test_source_contract_probe.py
+      - name: NIKL streaming intake and feature-only authority contract
+        run: python experiments/g9-p45/test_nikl_stream_audit.py
+      - name: Fixture streaming smoke test
+        run: |
+          python experiments/g9-p45/okhc_adapter.py             experiments/g9-p45/fixture.jsonl             --source-contract experiments/g9-p45/source_contract.json             --output /tmp/g9-p45-features.jsonl
+          test "$(wc -l < /tmp/g9-p45-features.jsonl)" -eq 9
+          python - <<'PY'
+          import json
+          rows=[json.loads(x) for x in open("/tmp/g9-p45-features.jsonl", encoding="utf-8")]
+          assert all("text" not in x and "content" not in x for x in rows)
+          assert rows[-1]["provenance"] == "UNKNOWN"
+          print("PASS feature-only / post-2024 provenance firewall")
+          PY

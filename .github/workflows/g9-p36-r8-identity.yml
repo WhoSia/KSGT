@@ -1,0 +1,18 @@
+name: G9-P36-R8 witness identity diagnostic
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['experiments/g9-p36-r8/identity_trigger.txt']
+permissions: {contents: read}
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve witness paper identities
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pandas pyarrow
+          python experiments/g9-p36-r8/diagnose_r8_identity.py

@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';
+const r8=JSON.parse(fs.readFileSync('experiments/g9-p36-r8/final/canonical_result.json','utf8'));
+const r9=JSON.parse(fs.readFileSync('experiments/g9-p36-r9/final/canonical_result.json','utf8'));
+const b8={papers:r8.fresh_holdout?.selected_papers??595,exact:r8.relation_court?.exact?.primary_cross_paper_pairs??1,family:r8.relation_court?.family?.primary_cross_paper_pairs??1,family_inc:r8.relation_court?.family_minus_exact_primary??0};
+const b9={papers:r9.fresh_bucket?.selected_papers??618,exact:r9.exact_arm?.base_cross_paper_primary_pairs??0,family:r9.family_arm?.base_cross_paper_primary_pairs??0,family_inc:r9.family_arm?.family_minus_exact_primary??0};
+const replicated=(b8.family>0&&b9.family>0),familyIncrement=(b8.family_inc+b9.family_inc);
+const retire=!replicated&&familyIncrement===0;
+const result={phase:'G9-P36-R10',epistemic_status:'RETROSPECTIVE_SYNTHESIS_OF_ALREADY_OPENED_R8_R9',buckets:{r8:b8,r9:b9},combined:{papers:b8.papers+b9.papers,primary_pairs:b8.family+b9.family,buckets_with_primary:[b8.family>0,b9.family>0].filter(Boolean).length,family_primary_increment:familyIncrement},decision:{authority_bearing_relation_motif_lane:retire?'RETIRED':'RECONSTITUTE_REQUIRED',diagnostic_probe:'RETAINED',threshold_retuning:'FORBIDDEN',reason:retire?'PRIMARY_SUPPORT_FAILED_DISJOINT_BUCKET_REPLICATION_AND_FAMILY_INCREMENT_ZERO':'SUPPORT_REQUIRES_NEW_PRESEALED_RECONSTITUTION'},laws:['ONE_BUCKET_WITNESS_DOES_NOT_ESTABLISH_REPLICABLE_REUSE_LAW','CANDIDATE_EXPANSION_WITHOUT_PRIMARY_INCREMENT_DOES_NOT_JUSTIFY_ONTOLOGY_EXPANSION','RETIRED_AUTHORITY_FEATURE_MAY_REMAIN_DIAGNOSTIC_PROBE']};
+fs.mkdirSync('experiments/g9-p36-r10/final',{recursive:true});fs.writeFileSync('experiments/g9-p36-r10/final/two_bucket_synthesis.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

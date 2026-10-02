@@ -1,0 +1,37 @@
+{
+  "phase": "G9-P36-R6",
+  "source_status": "PREVIOUSLY_OPENED_BY_R5_NOT_FRESH_SOURCE_WORLD_CONTACT",
+  "papers_expected": 118,
+  "papers_discovered": 118,
+  "response_files": 165,
+  "obligations": 4849,
+  "representation_complete_obligations": 1301,
+  "quotient_complete_obligations": 1295,
+  "inherited_r5_whole_obligation_neighbors": 0,
+  "factor_reuse": {
+    "items": 4849,
+    "raw_factor_postings": 15778,
+    "qualified_factor_postings": 15778,
+    "raw_factor_pair_collisions": 52921,
+    "core_qualified_reuse_pairs": 114,
+    "same_grounding_reuse_pairs": 0,
+    "cross_grounding_reuse_pairs": 114,
+    "global_all_pairs": false,
+    "same_paper_pairs": 29,
+    "cross_paper_pairs": 85,
+    "factor_family_posting_counts": {
+      "ARG1_BIGRAM": 5480,
+      "ARG1_TOKEN": 10144,
+      "DOC_POINTER": 154
+    }
+  },
+  "microfusion": {
+    "items": 4849,
+    "qualified_grounded_postings": 15778,
+    "shared_pair_keys": 0,
+    "microfusion_candidate_pairs": 0,
+    "global_all_pairs": false,
+    "controlled_roundtrip_pass_pairs": 0,
+    "controlled_roundtrip_fail_pairs": 0
+  }
+}

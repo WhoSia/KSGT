@@ -1,0 +1,112 @@
+phase: KSGT Generation IX G9-P36-R8
+title: Cross-Document Relation-Motif Generalization, Predicate-Family Equivalence Preseal, Fresh-Corpus Transfer, Korean Zero-Argument Annotation Recovery & Micro-Reuse Authority Reopening Court
+date: 2026-09-25
+status: PROSPECTIVE_CHARTER_SEALED_BEFORE_R8_FRESH_HOLDOUT_ROW_ACCESS
+inherits:
+  phase: G9-P36-R7
+  verdict: PASS_RELATION_MOTIF_PRIMARY_EMPTY_MICRO_REUSE_NOT_PROMOTED
+  r7_science_commit: df592824fe2f39a0d89b00b166b9dca22e56d129
+  r7_active_head: 9d93fbe857b5e69c78783653483ecde9bdb1ed04
+fresh_transfer:
+  corpus: shwu22/RMR-75K
+  license: MIT_AS_REPORTED_BY_HUGGING_FACE
+  source_role: INDEPENDENT_REBUTTAL_CORPUS
+  known_preseal_example_papers_to_exclude:
+    - zzqn5G9fjn
+    - 6cMmSnOpCs
+  paper_holdout_rule:
+    hash: SHA256
+    key: KSGT-G9-P36-R8-HOLDOUT|paper_id
+    admission: first_byte_lt_32
+    expected_fraction: 0.125
+  row_access_before_preseal: FORBIDDEN_EXCEPT_PUBLIC_DATASET_CARD_EXAMPLES_LISTED_ABOVE
+  duplicate_policy: dedupe_exact_normalized_rebuttal_content_within_paper
+predicate_family_equivalence:
+  version: C3-R8-PFE-v1
+  exact_predicate_arm: REQUIRED
+  family_arm: REQUIRED
+  families:
+    ADD: [add, include, provide, incorporate, introduce, append]
+    REVISE: [revise, update, modify, change, rewrite, edit, correct]
+    CLARIFY: [clarify, explain, discuss, describe, elaborate]
+    ANALYZE: [analyze, analyse, evaluate, assess, examine, investigate]
+    SHOW: [show, demonstrate, indicate, report, present]
+    RUN: [run, conduct, perform, execute]
+    COMPARE: [compare, contrast]
+    RELEASE: [release, publish, share]
+  fallback: EXACT_PREDICATE
+  protected:
+    - frame_class
+    - ARG0
+    - authority
+    - polarity
+    - modal
+    - quantifier_scope
+    - condition_scope
+    - value_bindings
+    - rebuttal_impact_label
+    - review_perspective
+relation_motif:
+  base: C3-R7-REM-v1
+  relation_edge: ORDERED_ARG1_BIGRAM
+  exploratory:
+    - same_protected_shell
+    - same_predicate_key_for_arm
+    - shared_ordered_ARG1_bigram
+    - nonidentical_surface
+    - complementary_context
+  primary:
+    - exploratory
+    - at_least_two_shared_ordered_ARG1_bigrams
+    - connected_chain
+    - different_paper
+  promotion_requires:
+    - family_primary_cross_paper_pairs_gte_5
+    - distinct_papers_in_primary_gte_5
+    - distinct_predicate_families_in_primary_gte_3
+    - adjacency_null_plus_one_p_lte_0_05
+    - observed_gt_null_p95
+    - independent_rust_count_match
+    - all_controls_pass
+  semantic_equivalence_authority: NOT_GRANTED_BY_THIS_GATE
+  fusion_authority: NOT_GRANTED_BY_THIS_GATE
+null_court:
+  version: C3-R8-FAMILY-ADJACENCY-NULL-v1
+  replicates: 127
+  seed: KSGT-G9-P36-R8-20260925
+  preserves:
+    - predicate_family_shell
+    - token_marginals
+    - item_edge_counts
+    - rebuttal_impact_label
+    - review_perspective
+  destroys: observed_ARG1_adjacency
+korean_zero_argument:
+  target_source: NIKL_Zero_Anaphora_Corpus_2020
+  official_description: omitted_subjects_and_objects_restored_according_to_context
+  source_recovery_authority: OFFICIAL_NIKL_CATALOG
+  required_for_gold:
+    - actual_corpus_bytes_or_export
+    - explicit_zero_argument_annotations
+    - provenance_receipt
+  if_bytes_unavailable: SOURCE_RECOVERED_BYTES_HOLD
+  proxy_as_gold: FORBIDDEN
+  supporting_literature:
+    - Korean_Null_Pronouns_Classification_and_Annotation_Han_2004
+    - Korean_SRL_Chen_Lim_Park_2024
+scalability:
+  global_all_pairs: FORBIDDEN
+  retrieval: typed_inverted_postings
+  independent_implementation: RUST_REQUIRED
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  human_recruitment: HOLD
+  safe_transport: ABSTAIN
+github_actions:
+  auto_commit_from_github_actions_bot: DISABLED_FOR_R8
+  derived_outputs: ACTION_ARTIFACT_ONLY
+  canonical_repo_commit: CHAT_CONNECTOR_AFTER_ADJUDICATION
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport

@@ -1,0 +1,13 @@
+{
+  "phase":"G9-P36-R10-R1",
+  "status":"OBSERVED_IN_OFFICIAL_BYTES_DO_NOT_AUTOFIX",
+  "items":[
+    {"kind":"2025_PACKAGE_ID_MISMATCH","file":"NXZA2502512313.json","internal_id":"NXZA2502512312"},
+    {"kind":"2025_BLANK_RESTORED_OBJECT","count":3},
+    {"kind":"2025_EMPTY_ANTECEDENT_ARRAY","count":5},
+    {"kind":"2025_SPECIAL_HASH_ANTECEDENT_SPANS","count":6618},
+    {"kind":"2025_NONSTANDARD_ANTECEDENT_SENTENCE_ID","count":2,"examples":["7","#07"]},
+    {"kind":"2025_SPECIAL_RESTORED_FORM_HASH","count":1},
+    {"kind":"2020_EXTERNAL_UNSPECIFIED_SENTENCE_ID_MINUS1","count":92917}
+  ]
+}

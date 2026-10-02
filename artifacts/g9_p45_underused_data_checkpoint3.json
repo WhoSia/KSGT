@@ -1,0 +1,73 @@
+{
+  "schema": "ksgt.g9.p45.underused-data-checkpoint3.v1",
+  "phase": "G9-P45",
+  "status": "OPEN_CORPUS_WAIT_PLUS_DEV_LIT",
+  "klicke": {
+    "writing_inventory_ids": 4992,
+    "demographic_ids": 4992,
+    "writing_demographic_overlap": 4992,
+    "typing_ids": 4992,
+    "vocabulary_ids": 4967,
+    "typing_vocabulary_overlap": 4967,
+    "typing_only_without_vocabulary": 25,
+    "writing_score_schema": [
+      "ID",
+      "Prompt",
+      "Text",
+      "Score"
+    ],
+    "role": "AUXILIARY_PROCESS_AND_PROFICIENCY_CONFOUND_LANE",
+    "p45_diachronic_authority": false
+  },
+  "doshi_hauser_dryad": {
+    "doi": "10.5061/dryad.qfttdz0pm",
+    "writers_rows": 500,
+    "writers_columns": 478,
+    "writer_conditions": {
+      "human": 100,
+      "human_1AI": 103,
+      "human_5AI": 106
+    },
+    "writer_unique_story_ids": 303,
+    "evaluators_rows": 1000,
+    "evaluators_columns": 447,
+    "evaluator_story_slots": 7256,
+    "evaluator_unique_story_ids": 300,
+    "role": "GENERATION_SIDE_EXTERNAL_CONTROL_DONOR",
+    "p45_diachronic_authority": false
+  },
+  "moon_green_kushlev": {
+    "DGR_essays_rows": 2200,
+    "DGR_schema": [
+      "id",
+      "original_id",
+      "study",
+      "authorship",
+      "model"
+    ],
+    "study1_human_dsi_rows": 100,
+    "study1_gpt_dsi_rows": 910,
+    "study2_human_dsi_rows": 100,
+    "study2_gpt_base_rows": 922,
+    "study2_gpt_prompt_rows": 898,
+    "study2_gpt_parameter_rows": 736,
+    "sentence_embedding_file_bytes": 630708068,
+    "collective_outputs": "5000-bootstrap human/GPT diversity files by sample size",
+    "role": "GENERATION_DIVERSITY_EXTERNAL_CONTROL",
+    "p45_diachronic_authority": false
+  },
+  "engineering": [
+    "dataset_registry.json",
+    "klicke_auxiliary_audit.py",
+    "dryad_creativity_probe.py",
+    "archive_probe.py",
+    "okhc_adapter.py real-schema hardened",
+    "diachronic_drift.py representation-safe"
+  ],
+  "court": [
+    "UNDERUSED_DATA_REPURPOSED_WITH_AUTHORITY_SEPARATION",
+    "AUXILIARY_PROCESS_DATA_DOES_NOT_REOPEN_P43",
+    "ENGLISH_GENERATION_CONTROL_DOES_NOT_ENTER_KOREAN_DIACHRONIC_AUTHORITY",
+    "NIKL_WAIT_REMAINS_ONLY_CONFIRMATORY_CORPUS_BLOCKER"
+  ]
+}

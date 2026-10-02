@@ -1,0 +1,74 @@
+{
+  "phase": "KSGT Generation IX G9-P36-R9",
+  "verdict": "PASS_FRESH_REPLICATION_PRIMARY_EMPTY_CROSS_LANGUAGE_AUTHORITY_CLOSED",
+  "preseal_commit": "0f3ec73f5812e776f8c8e315a90ed35e4a554fcb",
+  "canonical_run": 36141327598,
+  "canonical_head": "4a282c21cfebdea3d782a53fdcd34b2d8b80fccc",
+  "artifact": {
+    "id": 10867220375,
+    "sha256": "2552f145846f2ac4bb2fc9f639180e26ccd253dc142ec1cb3d8778a5516429d3",
+    "size_bytes": 6943728
+  },
+  "fresh_bucket": {
+    "corpus": "shwu22/RMR-75K",
+    "selected_papers": 618,
+    "selected_rows_before_dedupe": 9341,
+    "deduped_rows": 8409,
+    "total_segments": 65492,
+    "representation_complete_segments": 22914,
+    "r8_overlap_papers": 0,
+    "rule": "32<=sha256(KSGT-G9-P36-R8-HOLDOUT|paper_id).first_byte<64"
+  },
+  "exact_arm": {
+    "items": 13667,
+    "exploratory_pairs": 134,
+    "chain_pairs": 10,
+    "base_cross_paper_primary_pairs": 0
+  },
+  "family_arm": {
+    "items": 13667,
+    "exploratory_pairs": 161,
+    "chain_pairs": 10,
+    "base_cross_paper_primary_pairs": 0,
+    "family_minus_exact_primary": 0
+  },
+  "author_metadata": {
+    "source": "OPENREVIEW_PUBLIC_NOTE_BY_FORUM_ID",
+    "selected_papers": 618,
+    "resolved": 0,
+    "error": "HTTP_403",
+    "effect": "NOT_NEEDED_TO_ESTABLISH_PRIMARY_EMPTY"
+  },
+  "null": {
+    "observed": 0,
+    "plus_one_p": 1,
+    "pass": false,
+    "shortcut": "EXACT_BY_UNKNOWN_AUTHOR_ABSTENTION",
+    "interpretation": "Non-dispositive because base primary was already zero."
+  },
+  "korean_zero_argument": {
+    "source": "NIKL Zero Anaphora Corpus 2020",
+    "catalog_recovered": true,
+    "annotation_bytes_acquired": false,
+    "gold_execution_ready": false,
+    "authority": "USER_ACQUISITION_REQUIRED",
+    "catalog_sha256": "ab4d99b1641f530bfc8e40eb45e6ee10a8ab0bdccd896df4fcfe8a3fa58a8dac"
+  },
+  "controls": "PASS",
+  "rust_crosscheck": "PASS_ZERO_ZERO",
+  "authority": {
+    "micro_reuse": "NOT_PROMOTED",
+    "semantic_equivalence": "NOT_GRANTED",
+    "fusion": "NOT_GRANTED",
+    "cross_language_reuse": "HOLD",
+    "MNMC_5": "RETAINED",
+    "MNMC_6": "NOT_JUSTIFIED"
+  },
+  "implementation_history": {
+    "first_run": 36140652999,
+    "first_failure": "OPENREVIEW_METADATA_HTTP_403_BEFORE_SCORING",
+    "second_run": 36140947949,
+    "second_failure": "ADJUDICATOR_SYNTAX_ONLY_AFTER_SCIENCE_SUCCESS",
+    "final_run": 36141327598
+  }
+}

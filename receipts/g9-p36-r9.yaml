@@ -1,0 +1,84 @@
+phase: KSGT Generation IX G9-P36-R9
+title: Research-Lineage-Independent Relation-Motif Replication, Author/Method Ancestry Decontamination, Predicate-Family Necessity Ablation, NIKL Zero-Anaphora Gold Ingestion & Cross-Language Reuse-Authority Reopening Court
+verdict: PASS_FRESH_REPLICATION_PRIMARY_EMPTY_CROSS_LANGUAGE_AUTHORITY_CLOSED
+date: 2026-09-25
+lineage:
+  inherited_phase: G9-P36-R8
+  inherited_verdict: PASS_FRESH_TRANSFER_SIGNAL_INSUFFICIENT_FOR_MICRO_REUSE_PROMOTION
+  inherited_science_commit: e743d1522099d99246f123a7c13d2ea370b3a113
+  inherited_active_head: b786d73d41a643f8f96498c00e5ec06d8a0dfc4c
+  preseal_commit: 0f3ec73f5812e776f8c8e315a90ed35e4a554fcb
+  canonical_run: 36141327598
+  canonical_head: 4a282c21cfebdea3d782a53fdcd34b2d8b80fccc
+  artifact_id: 10867220375
+  artifact_sha256: 2552f145846f2ac4bb2fc9f639180e26ccd253dc142ec1cb3d8778a5516429d3
+  canonical_result_commit: bce8a2ca13aea38073ee51d4144f049bfd7c3b4b
+fresh_replication:
+  corpus: shwu22/RMR-75K
+  bucket: 32_to_63_of_sha256_KSGT_G9_P36_R8_HOLDOUT_paper_id
+  selected_papers: 618
+  r8_overlap_papers: 0
+  selected_rows_before_dedupe: 9341
+  deduped_rows: 8409
+  analyzed_segments: 65492
+  representation_complete_segments: 22914
+exact_arm:
+  exploratory_pairs: 134
+  chain_pairs: 10
+  base_cross_paper_primary_pairs: 0
+family_arm:
+  exploratory_pairs: 161
+  chain_pairs: 10
+  base_cross_paper_primary_pairs: 0
+predicate_family_necessity:
+  base_family_minus_exact_primary: 0
+  authority: NO_INCREMENTAL_PRIMARY_SIGNAL
+author_metadata:
+  source: OPENREVIEW_PUBLIC_NOTE_BY_FORUM_ID
+  resolved: 0
+  selected: 618
+  access_state: HTTP_403_SOURCE_HOLD
+  scientific_effect: NOT_NEEDED_TO_ESTABLISH_BASE_PRIMARY_EMPTY
+null_court:
+  observed: 0
+  null_p95: 0
+  plus_one_p: 1
+  pass: false
+  interpretation: NON_DISPOSITIVE_PRIMARY_ALREADY_EMPTY
+korean_zero_argument:
+  source: NIKL Zero Anaphora Corpus 2020
+  catalog_recovered: true
+  annotation_bytes_acquired: false
+  gold_execution_ready: false
+  authority: USER_ACQUISITION_REQUIRED
+  catalog_sha256: ab4d99b1641f530bfc8e40eb45e6ee10a8ab0bdccd896df4fcfe8a3fa58a8dac
+validation:
+  controls: PASS
+  fresh_bucket: PASS
+  sparse_index: PASS
+  rust_crosscheck: PASS
+  nikl_source: PASS
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  micro_reuse: NOT_PROMOTED
+  semantic_equivalence: NOT_GRANTED
+  fusion: NOT_GRANTED
+  cross_language_reuse: HOLD
+  human_recruitment: HOLD
+  safe_transport: ABSTAIN
+github_actions_policy:
+  auto_commit: DISABLED
+  outputs: ARTIFACT_ONLY
+  canonical_commits: CONNECTED_GITHUB_AUTHOR_IDENTITY
+notion:
+  canonical_receipt: 3e6ef561-cf92-810e-b22c-c2f687228caf
+  harvest: 3e6ef561-cf92-8168-995c-da6e9311f1c4
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+  - NIKL Zero Anaphora Corpus 2020 annotation bytes
+next_phase:
+  id: G9-P36-R10
+  title: Two-Bucket Support-Geometry Synthesis, Relation-Motif Retirement-or-Reconstitution Decision, Native-Korean Zero-Argument Gold Intake, Argument-Recoverability Graph Induction & Language-Neutral Semantic-Reuse Return-to-Origin Court
+user_action: REQUEST_AND_DOWNLOAD_NIKL_ZERO_ANAPHORA_2020_ANNOTATION_CORPUS

@@ -1,0 +1,151 @@
+{
+  "phase": "KSGT Generation IX G9-P36-R3",
+  "court": "Cross-Sentence Obligation Subsumption, Distributed Semantic Redundancy, Entailment-Bidirectional Fusion, Context-Preserving Compression Proofs & Non-Local Frontier Reopening Court",
+  "compiler": "C3-R3-FUSION-PROOF-v1",
+  "source": {
+    "archive_sha256": "d400a34d8dcf557c0e49b1d140db29a34153688a7047e451bba9635c5944519b",
+    "csv_sha256": "599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28"
+  },
+  "extraction": {
+    "phase": "G9-P36-R3",
+    "papers_discovered": 121,
+    "response_files": 173,
+    "obligations": 5579,
+    "unresolved_obligations": 1877,
+    "eligible_pair_windows": 8071,
+    "candidates": 8071,
+    "operation_counts": {
+      "S1_SUBSUMPTION": 1,
+      "F1_CONJUNCTIVE_FUSION": 8070
+    },
+    "representation_sufficient_candidates": 126
+  },
+  "proof_objects": 8071,
+  "operation_counts": {
+    "F1_CONJUNCTIVE_FUSION": 8070,
+    "S1_SUBSUMPTION": 1
+  },
+  "reason_counts": {
+    "REPRESENTATION_SUFFICIENCY_VETO": 7945,
+    "GROUNDING_MISMATCH": 108,
+    "FORCE_VALUE_ACTION_MISMATCH": 14,
+    "NO_POSITIVE_COMPRESSION_GAIN": 4
+  },
+  "certifiable_natural": 0,
+  "representation_sufficiency_veto": 7945,
+  "controls": [
+    {
+      "id": "POS_SUBSUMPTION",
+      "expected": "CERTIFY",
+      "observed": "CERTIFY",
+      "reason": "PROOF_COMPLETE",
+      "pass": true
+    },
+    {
+      "id": "POS_FUSION",
+      "expected": "CERTIFY",
+      "observed": "CERTIFY",
+      "reason": "PROOF_COMPLETE",
+      "pass": true
+    },
+    {
+      "id": "POS_COMMITMENT_FUSION",
+      "expected": "CERTIFY",
+      "observed": "CERTIFY",
+      "reason": "PROOF_COMPLETE",
+      "pass": true
+    },
+    {
+      "id": "NEG_VALUE_BINDING_SWAP",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "FORCE_VALUE_ACTION_MISMATCH",
+      "pass": true
+    },
+    {
+      "id": "NEG_POLARITY_SCOPE_SWAP",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "FORCE_VALUE_ACTION_MISMATCH",
+      "pass": true
+    },
+    {
+      "id": "NEG_MODAL_FORCE",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "FORCE_VALUE_ACTION_MISMATCH",
+      "pass": true
+    },
+    {
+      "id": "NEG_CONDITION",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "FORCE_VALUE_ACTION_MISMATCH",
+      "pass": true
+    },
+    {
+      "id": "NEG_CROSS_ATTACHMENT",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "GROUNDING_MISMATCH",
+      "pass": true
+    },
+    {
+      "id": "NEG_CROSS_ANTECEDENT",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "GROUNDING_MISMATCH",
+      "pass": true
+    },
+    {
+      "id": "NEG_ONE_WAY_ADDITION",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "BIDIRECTIONAL_PROOF_FAILED",
+      "pass": true
+    },
+    {
+      "id": "NEG_FLUENT_MISSING_ATOM",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "BIDIRECTIONAL_PROOF_FAILED",
+      "pass": true
+    },
+    {
+      "id": "NEG_REPRESENTATION_GAP",
+      "expected": "ABSTAIN",
+      "observed": "ABSTAIN",
+      "reason": "REPRESENTATION_SUFFICIENCY_VETO",
+      "pass": true
+    }
+  ],
+  "inherited_r2": {
+    "papers": 121,
+    "candidates": 46,
+    "certifiable": 0,
+    "validation": {
+      "missing_pass": true,
+      "positive_controls_pass": true,
+      "r1_regression_pass": true,
+      "pass": true
+    }
+  },
+  "validation": {
+    "papers_121": true,
+    "controls_12_12": true,
+    "positive_controls_3_3": true,
+    "negative_controls_9_9": true,
+    "inherited_r2_validation": true,
+    "inherited_r2_certifiable_zero": true,
+    "pass": true
+  },
+  "frontier_reopened": false,
+  "authority": {
+    "fusion_ir": "NO_NATURAL_CERTIFIED_WITNESS",
+    "natural_language_realization": "OUTSIDE_CERTIFICATE_AUTHORITY",
+    "MNMC_5": "RETAINED",
+    "MNMC_6": "NOT_JUSTIFIED",
+    "safe_transport": "ABSTAIN"
+  },
+  "certified_witnesses": []
+}

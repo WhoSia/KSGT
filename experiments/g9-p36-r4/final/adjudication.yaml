@@ -1,0 +1,14 @@
+phase: KSGT Generation IX G9-P36-R4
+verdict: PASS_BINDING_GRAPH_RECOVERED_NATURAL_FRONTIER_NOT_REOPENED
+papers: 121
+candidate_pairs: 8071
+representation_complete_pairs: 1205
+controlled_roundtrip_witnesses: 0
+certifiable_natural: 0
+frontier_reopened: false
+r4_representation_controls: PASS
+inherited_r3_controls: PASS
+MNMC_5: RETAINED
+MNMC_6: NOT_JUSTIFIED
+safe_transport: ABSTAIN
+human_recruitment: HOLD

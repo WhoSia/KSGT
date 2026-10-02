@@ -1,0 +1,157 @@
+phase: KSGT Generation IX G9-P36-R10
+title: Two-Bucket Support-Geometry Synthesis, Relation-Motif Retirement-or-Reconstitution Decision, Native-Korean Zero-Argument Gold Intake, Argument-Recoverability Graph Induction & Language-Neutral Semantic-Reuse Return-to-Origin Court
+date: 2026-09-26
+status: ACTIVE_WITH_EXTERNAL_GOLD_WAIT
+epistemic_split:
+  english_two_bucket_synthesis: RETROSPECTIVE_SYNTHESIS_OF_ALREADY_OPENED_R8_R9
+  korean_arg_constitution: PROSPECTIVELY_SEALED_BEFORE_NIKL_ANNOTATION_BYTES
+  nikl_gold_scoring: FORBIDDEN_UNTIL_OFFICIAL_BYTES_ARRIVE
+inherits:
+  r8_verdict: PASS_FRESH_TRANSFER_SIGNAL_INSUFFICIENT_FOR_MICRO_REUSE_PROMOTION
+  r8_science_commit: e743d1522099d99246f123a7c13d2ea370b3a113
+  r9_verdict: PASS_FRESH_REPLICATION_PRIMARY_EMPTY_CROSS_LANGUAGE_AUTHORITY_CLOSED
+  r9_science_commit: 487deb3d76fd26ae165938b6b2475443e96165d2
+two_bucket_synthesis:
+  r8:
+    papers: 595
+    exact_primary: 1
+    family_primary: 1
+    family_increment: 0
+  r9:
+    papers: 618
+    exact_primary: 0
+    family_primary: 0
+    family_increment: 0
+  total_papers: 1213
+  authority_lane_retirement_rule:
+    - no_promotion_gate_pass_in_either_bucket
+    - primary_support_not_replicated_across_buckets
+    - predicate_family_increment_zero_in_both_buckets
+  relation_motif_diagnostic_probe: RETAIN
+  threshold_retuning_on_r8_r9: FORBIDDEN
+  reconstitution_requires:
+    - new_semantic_representation_not_threshold_relaxation
+    - prospectively_frozen_new_source_or_gold
+    - cross_partition_or_cross_domain_replication
+korean_argument_recoverability_graph:
+  version: KSGT-ARG-v1
+  core_law: NULL_SURFACE_DOES_NOT_DELETE_SEMANTIC_ARGUMENT
+  layers:
+    semantic:
+      - EVENT
+      - PREDICATE_ID
+      - ROLE_SLOT
+      - REFERENT
+      - ROLE_EDGE
+      - VALUE_SCOPE_FORCE
+    frame:
+      - OBLIGATORY_OPTIONAL_UNKNOWN
+      - CASE_FRAME_SOURCE
+    recovery:
+      - EXPLICIT
+      - ZERO_ANAPHORIC
+      - ZERO_DEICTIC
+      - ZERO_GENERIC_OR_EXOPHORIC
+      - UNSATURATED_UNKNOWN
+      - RECOVERY_WITNESS
+    realization:
+      - PARTICLE
+      - LINEAR_POSITION
+      - TOPOLOGICAL_FIELD
+      - VOICE
+      - HONORIFIC
+      - OVERT_NULL
+    discourse:
+      - TOPIC
+      - FOCUS
+      - CONTRAST
+      - ANTECEDENT_CHAIN
+      - SPEAKER_ADDRESSEE_STATE
+  invariants:
+    - PARTICLE_IS_EVIDENCE_NOT_ROLE_IDENTITY
+    - WORD_ORDER_IS_REALIZATION_NOT_ROLE_IDENTITY
+    - NULLNESS_IS_REALIZATION_NOT_ARGUMENT_ABSENCE
+    - RECOVERABILITY_IS_DISTINCT_FROM_OMISSION_PREFERENCE
+    - TOPIC_FOCUS_IS_DISTINCT_FROM_ARGUMENT_IDENTITY
+    - DEPENDENCY_RELATION_IS_DISTINCT_FROM_LINEAR_ORDER
+    - ACTIVE_PASSIVE_MAY_PRESERVE_SEMANTIC_ROLE_GEOMETRY_WITH_EXPLICIT_MAPPING
+    - CAUSATIVE_MAY_ADD_CAUSER_AND_MUST_NOT_BE_COLLAPSED_AS_SURFACE_VARIANT
+    - QUANTIFIER_SCOPE_AND_BINDING_CAN_BLOCK_SCRAMBLING_EQUIVALENCE
+    - HONORIFIC_AGREEMENT_MAY_CONSTRAIN_REALIZATION_WITHOUT_REWRITING_ROLE_IDENTITY
+gold_authority:
+  accepted_sources:
+    - NIKL_ZERO_ANAPHORA_CORPUS_2020_OFFICIAL_EXPORT
+    - NIKL_ZERO_ANAPHORA_CORPUS_2025_OFFICIAL_EXPORT
+  requested_sources:
+    - NIKL_ZERO_ANAPHORA_CORPUS_2020
+    - NIKL_ZERO_ANAPHORA_CORPUS_2025
+  current_state: USER_REQUEST_SUBMITTED_BYTES_WAITING
+  report_or_catalog_as_row_gold: FORBIDDEN
+  surface_shortening_as_zero_gold: FORBIDDEN
+  automatic_parser_as_gold: FORBIDDEN
+gold_intake_contract:
+  before_scoring:
+    - raw_byte_sha256
+    - archive_inventory
+    - schema_census
+    - annotation_version_detection
+    - subject_object_zero_label_census
+    - antecedent_link_census
+    - train_dev_test_or_document_boundary_census
+  no_schema_assumptions_before_bytes: REQUIRED
+syntactic_constitution:
+  case_frame:
+    role_obligatoriness_authority: NIKL_CASE_FRAME_WHEN_EXACT_PREDICATE_SENSE_BOUND
+    dictionary_mismatch_policy: DEFEASIBLE_NOT_SOVEREIGN
+  dependency:
+    use: SYNTACTIC_ATTACHMENT_EVIDENCE
+    semantic_role_authority: FORBIDDEN_BY_ITSELF
+  scrambling:
+    default: POSSIBLE_REALIZATION_VARIATION
+    invariance_requires:
+      - role_binding_preserved
+      - scope_preserved
+      - information_structure_not_claimed_identical_without_evidence
+  particles:
+    case_particle: ROLE_EVIDENCE
+    topic_contrast_particle: INFORMATION_STRUCTURE_EVIDENCE
+    one_marker_one_role: FORBIDDEN
+  zero_arguments:
+    recovered_slot_must_have: [predicate, role, recovery_type, witness_or_gold_link]
+    unresolved_zero_slot: ABSTAIN
+  double_subject:
+    surface_np_count_equals_argument_count: FORBIDDEN
+  voice:
+    semantic_role_mapping_required: true
+  information_structure:
+    downstream_of_role_geometry: true
+    may_rank_realizations: true
+    may_rewrite_role_identity: false
+controls:
+  synthetic_arg_graph_minimum: 10
+  adverse_controls:
+    - missing_antecedent
+    - role_changing_particle_swap
+    - causative_added_causer
+    - scope_changing_scramble
+    - topic_role_conflation
+    - honorific_role_conflation
+  roundtrip_graph_invariance: REQUIRED_FOR_EQUIVALENT_REALIZATIONS
+cross_language_return_to_origin:
+  semantic_reuse_unit_candidate: ROLE_EVENT_RECOVERABILITY_GRAPH
+  english_relation_bigram_as_universal_unit: RETIRED_FROM_AUTHORITY_LANE
+  english_evidence_status: DISCOVERY_AND_NEGATIVE_CONTROL_PRIOR
+  korean_native_gold_status: REALIZATION_AND_RECOVERABILITY_AUTHORITY_WHEN_INGESTED
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  human_recruitment: HOLD
+  safe_transport: ABSTAIN
+github_actions:
+  auto_commit: DISABLED
+  outputs: ARTIFACT_ONLY
+waiting:
+  - NIKL Zero Anaphora Corpus 2020 annotation bytes
+  - NIKL Zero Anaphora Corpus 2025 annotation bytes
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport

@@ -1,0 +1,2 @@
+G9-P36-R8 prospective fresh-transfer trigger
+preseal=f8a29c9294d6085156d36a720c0a0d5ba1e32b0b

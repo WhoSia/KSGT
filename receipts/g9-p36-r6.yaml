@@ -1,0 +1,128 @@
+phase: KSGT Generation IX G9-P36-R6
+title: Obligation-Factor Semantic Quotienting, Protected-Core vs Revisable-Content Decomposition, Subgraph-Level Redundancy Recovery, Compositional Proof-Carrying Microfusion, Cross-Lingual Realization Independence & Whole-Obligation Sparsity Law Court
+verdict: PASS_MACRO_SPARSE_MICRO_REDUNDANT_FUSION_AUTHORITY_NOT_REOPENED
+date: 2026-09-25
+lineage:
+  inherited_phase: G9-P36-R5
+  inherited_verdict: PASS_SELECTION_SHIFT_ESTABLISHED_NATURAL_FRONTIER_NOT_REOPENED
+  inherited_active_head: 89eab1f364735c09b51cf9dbb0862783e2d114f2
+  preseal_commit: 6832563abf11ad3f6c5f2a97d8bdc6c9e3f6a5d5
+  first_debug_run: 36126837709
+  first_debug_materialization: 4a2a3043f9a5ef8b2ec06f0e862394eb495182b9
+  first_debug_status: PRE_NATURAL_IMPLEMENTATION_DEBUG_NOT_SCIENTIFIC_OUTCOME
+  arg0_control_repair_commit: 083c87f5f2cc7b3190b4d45a465e2564cecdd2cc
+  successful_run: 36126933256
+  replay_materialization_commit: 85c0c4ed074299b6ab07745ddb55cf7f8a944435
+  factor_semanticity_diagnostic_commit: 58976e3bb176f7fe4fe3fc10b0e48d683e66230c
+source:
+  corpus: EMNLP24_LOCAL_TEST
+  epistemic_status: NEW_PROSPECTIVE_QUESTION_ON_PREVIOUSLY_OPENED_R5_SOURCE_NOT_FRESH_SOURCE_WORLD_CONTACT
+  papers: 118
+  response_files: 165
+  obligations: 4849
+  representation_complete_obligations: 1301
+  quotient_complete_obligations: 1295
+representation:
+  base: C3-R4-BCOG-v1
+  quotient: C3-R6-OFQ-v1
+  inherited_r5_selector: C3-R5-RNSN-v1_IMMUTABLE_NEGATIVE_REFERENCE
+  proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_UNCHANGED
+factor_law:
+  protected_core:
+    - frame_class
+    - predicate
+    - ARG0
+    - authority
+    - polarity
+    - modal
+    - quantifier_scope
+    - condition_scope
+    - value_and_comparator_bindings
+  content_factors:
+    - ARG1_TOKEN
+    - ARG1_BIGRAM
+    - DOC_POINTER
+  grounding:
+    - review_root
+    - response_chunk_id
+    - structural_role
+    - block_type
+    - attachment_key
+    - antecedent_key
+    - local_scope_key
+  reuse_authority: DESCRIPTIVE_REDUNDANCY_ONLY
+  microfusion_cross_grounding: FORBIDDEN
+natural_result:
+  inherited_whole_obligation_neighbors: 0
+  factor_reuse_pairs: 114
+  same_grounding_reuse_pairs: 0
+  cross_grounding_reuse_pairs: 114
+  same_paper_pairs: 29
+  cross_paper_pairs: 85
+  microfusion_candidate_pairs: 0
+  controlled_roundtrip_natural: 0
+  proof_objects: 0
+  certified_natural_microfusion: 0
+  frontier_reopened: false
+scalability:
+  global_all_pairs: false
+  factor_postings: 15778
+  raw_factor_pair_collisions: 52921
+  method: typed_hash_postings_plus_sparse_content_index
+  independent_rust_crosscheck:
+    reuse_pairs: 114
+    microfusion_candidates: 0
+    exact_match_to_js: PASS
+controls:
+  factor_positive: PASS_6_OF_6
+  adversarial_negative: PASS_13_OF_13
+  metamorphic: PASS_4_OF_4
+  composition_order: PASS
+  controlled_roundtrip: PASS
+  indexed_search_equivalence: PASS
+  korean_synthetic_boundary_controls: PASS_5_OF_5
+  inherited_R3_proof_controls: PASS_12_OF_12
+posthoc_factor_semanticity_diagnostic_not_quotient_authority:
+  exact_factor_sets: 19
+  subset_factor_sets: 7
+  complementary_factor_sets: 88
+  shared_factor_count_1: 71
+  shared_factor_count_2_to_3: 24
+  shared_factor_count_4_plus: 19
+  pairs_with_shared_ARG1_bigram: 30
+  token_only_shared_pairs: 84
+  complementary_pairs_with_shared_bigram: 10
+  interpretation: >
+    The 114 pairs establish typed atom-level recurrence under C3-R6-OFQ-v1.
+    They are not 114 semantic-equivalence certificates. Single-token collisions remain
+    descriptive reuse evidence only. No posthoc selector or threshold change is authorized.
+laws:
+  - FACTOR_REUSE_DOES_NOT_IMPLY_FUSION_AUTHORITY
+  - WHOLE_OBLIGATION_SPARSITY_DOES_NOT_ENTAIL_SUBGRAPH_SPARSITY
+  - CROSS_GROUNDING_REDUNDANCY_IS_REUSE_EVIDENCE_NOT_FUSION_AUTHORITY
+  - PROTECTED_CORE_AND_GROUNDING_REMAIN_CONJUNCTIVE_FOR_MICROFUSION
+  - FLUENCY_CANNOT_CREATE_SEMANTIC_AUTHORITY
+korean_boundary:
+  semantic_quotient: LANGUAGE_NEUTRAL
+  realization: DOWNSTREAM_ONLY
+  preserved_geometry: [predicate, ARG0, ARG1, force, scope, authority, value, grounding]
+  particle_scrambling_recoverable_ellipsis: AUTHORIZED_ONLY_INSIDE_PRESERVED_GEOMETRY
+  natural_korean_semantic_authority: NOT_ESTABLISHED_BY_R6_ENGLISH_CORPUS
+  fluency_as_semantic_authority: FORBIDDEN
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  safe_transport: ABSTAIN
+  human_recruitment: HOLD
+  natural_fusion_frontier: NOT_REOPENED
+external_state:
+  github: COMPLETE
+  notion_canonical_receipt: 3e6ef561-cf92-8180-91b0-d6b62b437a27
+  notion_harvest: 3e6ef561-cf92-816f-bba4-f3cb8d2c2b24
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+next_phase:
+  id: G9-P36-R7
+  title: Relation-Bearing Semantic Factor Promotion, Lexical-Collision Null Court, Role–Event Motif Canonicalization, Native-Korean Particle/Scrambling/Ellipsis Transport, Cross-Corpus Sparse Retrieval & Micro-Reuse Authority Court
+user_action: NONE

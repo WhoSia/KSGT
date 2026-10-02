@@ -1,0 +1,46 @@
+name: G9-P36-R10-R5 robust realization decision court
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['experiments/g9-p36-r10-r5/action_trigger.txt']
+permissions: {contents: read}
+jobs:
+  court:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify R5 preseal
+        run: grep -q 'PROSPECTIVE_2024_REPLICATION_SEALED_AFTER_2025_DISCOVERY' experiments/g9-p36-r10-r5/preseal.yaml
+      - name: Build KSGT-REALIZE-v0.2 Rust core
+        run: cargo build --release --manifest-path experiments/g9-p36-r10-r5/realize-core-rs/Cargo.toml
+      - name: Generate controls
+        run: python experiments/g9-p36-r10-r5/generate_realize_controls.py /tmp/r5-controls
+      - name: Execute robust-frontier controls
+        run: |
+          set -euo pipefail
+          BIN=experiments/g9-p36-r10-r5/realize-core-rs/target/release/ksgt_realize_v02
+          for f in /tmp/r5-controls/*.json; do
+            case "$f" in *.expected.json) continue;; esac
+            base="${f%.json}"
+            "$BIN" "$f" "$base.out.json"
+          done
+          python - <<'PY'
+          import glob,json,os
+          rows=[]
+          for f in glob.glob('/tmp/r5-controls/*.out.json'):
+              base=f[:-9]
+              out=json.load(open(f))
+              exp=json.load(open(base+'.expected.json'))
+              got=sorted(out['robust_frontier']); exp=sorted(exp)
+              assert got==exp,(f,got,exp)
+              assert out['scalarization_used'] is False
+              rows.append({'case':os.path.basename(base),'frontier':got})
+          assert len(rows)==5
+          json.dump({'pass':True,'cases':rows,'scalarization_used':False},open('/tmp/r5-control-receipt.json','w'),indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p36-r10-r5-robust-realization-court
+          path: /tmp/r5-control-receipt.json

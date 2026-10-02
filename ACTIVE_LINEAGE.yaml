@@ -6,18 +6,319 @@ active_research_line:
   - G9-P35
   - G9-P36
   - G9-P36-R1
-current_phase: G9-P36-R1
-current_verdict: PASS_WITH_FULL_CALIBRATION_NEGATIVE_CLOSURE
+  - G9-P36-R2
+  - G9-P36-R3
+  - G9-P36-R4
+  - G9-P36-R5
+  - G9-P36-R6
+  - G9-P36-R7
+  - G9-P36-R8
+  - G9-P36-R9
+  - G9-P36-R10
+  - G9-P36-R10-R1
+  - G9-P36-R10-R2
+  - G9-P36-R10-R3
+  - G9-P36-R10-R4
+  - G9-P36-R10-R5
+  - G9-P36-R10-R6
+  - G9-P36-R10-R7
+  - G9-P36-R10-R8
+  - G9-P36-R11
+  - G9-P37
+  - G9-P38
+  - G9-P39
+  - G9-P40
+  - G9-P41
+  - G9-P42
+  - G9-P43
+  - G9-P44
+  - G9-P45
+current_phase: G9-P45
+current_status: OPEN_CHECKPOINT_1_CORPUS_LATTICE_AND_ACQUISITION_CENSUS
+current_verdict: ENDPOINT_TRANSPORT_SURVIVES_BUT_INTERMEDIATE_CONTINUITY_REQUIRES_NEW_CORPUS
 current_compiler:
-  name: C3-R1-FULL121-v1
-  preseal_commit: 8c29a839de8369ccde349c5fd8b0d130b888f5d9
-current_science_commit: 09908d33b085498f71fefedc3ed82fbbdb9285d2
-notion_receipt: 3e5ef561-cf92-81fe-99db-e5f86c00ddfe
+  representation: C3-R4-BCOG-v1
+  quotient: C3-R6-OFQ-v1
+  retired_relation_motif_probe: C3-R9-LD-v1_DIAGNOSTIC_ONLY
+  argument_recoverability_graph: KSGT-ARG-v1.1
+  cross_layer_authority_graph: KSGT-XARG-v0.1
+  realization_decision: KSGT-REALIZE-v0.2
+  realization_variation: KSGT-REALIZE-v0.3
+  counterfactual_pair_authority: KSGT-CFPAIR-v0.2
+  proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
+  preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
+current_science_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
+current_engineering_commit: c6e675b0b214f9e529f8eead7aec84872b91c063
+current_r10_r3:
+  cross_layer_graph: KSGT-XARG-v0.1
+  ZA_2025_exact_multilayer_identity: 30346_OF_30346
+  DP_2025_exact_multilayer_identity: 30346_OF_30346
+  SRL_2025_exact_multilayer_identity: 30346_OF_30346
+  WSD_2025_exact_multilayer_identity: 30345_OF_30346
+  ZA_predicate_exact_SRL_match: 42513_OF_50247
+  ZA_slots_on_exact_SRL_predicate: 52898_OF_62831
+  explicit_SRL_label_on_zero_slot: 0
+  CaseFrame_exact_zero_slots: 1816
+  CaseFrame_unique_residual_candidates: 794
+  semantic_role_token_authority: STRUCTURALLY_UNAVAILABLE_FROM_CURRENT_EXPLICIT_GOLD
+  bridge_2024_sentence_exact_join: 253264
+  bridge_2024_multi_span_slot_groups: 4096
+  raw_drive_folder: /Google Drive/KSGT/01_SOURCE_ACCRUAL_RAW/G9-P36-R10-R3_CROSS_LAYER_CANONICAL_RAW
+  analysis_drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R3_CROSS_LAYER_WORLD_CONTACT
+  notion_receipt: 3e9ef561-cf92-816d-9783-ea2fb8bf551d
+  harvest_receipt: 3e9ef561-cf92-81eb-9c6d-e54b33c9ded4
+current_r10_r8:
+  safe_overt_to_null_candidates: 1556
+  unique_position_null_to_overt_candidates: 160
+  restored_form_safe_null_to_overt_candidates: 145
+  blind_packet_total: 160
+  blind_packet_overt_to_null: 120
+  blind_packet_null_to_overt: 40
+  inverse_roundtrip_pass: 160
+  exact_duplicate_surfaces: 0
+  near_duplicate_clusters: 0
+  R7_overlap: 0
+  pilot_total: 24
+  pilot_each_source_slot: 6
+  theory: KSGT-CFPAIR-v0.2
+  human_collection_ready_internal: true
+  true_preference_authority: HOLD
+  lineage_decision: G9-P36-R11_THEN_P37
+  notion_receipt: 3eaef561-cf92-81bd-bdea-fa6c38c28ad8
+  harvest_receipt: 3eaef561-cf92-814f-a78f-fcce9b8d70f8
+current_r10_r7:
+  selected_packet: 240
+  overt_to_null_selected: 160
+  overt_to_null_pass_internal: 96
+  null_to_overt_selected: 80
+  null_to_overt_pass_internal: 0
+  JX_information_structure_holds: 50
+  nonunique_insertion_position_holds: 79
+  duplicate_surface_excess: 1
+  human_collection_ready: false
+  theory: KSGT-CFPAIR-v0.1
+  deletion_geometry: PARTIAL_FUNCTION
+  insertion_geometry: SET_VALUED_RELATION
+  information_structure_cargo_gate: REQUIRED
+  true_preference_authority: HOLD
+  human_recruitment: HOLD
+  notion_receipt: 3eaef561-cf92-81d6-b49b-e05f8242c4e4
+  harvest_receipt: 3eaef561-cf92-818e-9e63-fe26d00349cd
+current_r10_r6:
+  comparable_choice_set: PROMOTED
+  exclusive_opportunities: 106125
+  strict_mixed_strata: 1649
+  native_original_pairable_pairs: 3280
+  high_accessibility_overt_controls_P2: 9557
+  actor_specific_strict_mixed_strata: 618
+  document_overdispersion:
+    N_SUBJECT: 2.393171146076571
+    N_OBJECT: 1.6500786186559666
+    S_SUBJECT: 6.714553801677202
+    S_OBJECT: 4.316495328481774
+  local_state_sign:
+    N_SUBJECT: NEGATIVE
+    N_OBJECT: POSITIVE
+    S_SUBJECT: POSITIVE
+    S_OBJECT: POSITIVE
+  theory: KSGT-REALIZE-v0.3
+  global_temperature_noise: FORBIDDEN
+  universal_poisson_or_burstiness_law: REJECTED
+  true_counterfactual_preference: HOLD
+  notion_receipt: 3eaef561-cf92-8173-aa0f-fc017590ab36
+  harvest_receipt: 3eaef561-cf92-813b-a131-e6119f71d195
+current_r10_r5:
+  prospective_2024_predicate_tokens: 481404
+  prospective_2024_subject_omitted_share: 0.5576153163455508
+  prospective_2024_object_omitted_share: 0.2521153266006809
+  prospective_2024_mixed_action_strata: 22870
+  prospective_hypotheses: PASS_4_OF_4
+  discovery_2025_subject_omitted_share: 0.620504512844249
+  discovery_2025_object_omitted_share: 0.23332108068369786
+  discovery_2025_predicate_sense_auc: 0.8194713484211184
+  prior_text_available_null_slots: 39335
+  future_text_required_null_slots: 14423
+  theory: KSGT-REALIZE-v0.2
+  risk_set_geometry: MULTISET_VALUED
+  default_decision_rule: ROBUST_PARETO_FRONTIER
+  default_scalarization: FORBIDDEN
+  counterfactual_utility: NOT_IDENTIFIED
+  information_structure_effect: HOLD
+  rust_court_run: 36501966778
+  rust_court_artifact: 11005648144
+  rust_court_sha256: a8f3383c2714c70b579dc6cd2cbfcba0d8e898b5a03a58c7180aeb2f0b9772da
+  notion_receipt: 3eaef561-cf92-81f4-bc00-f0e98c5a60ce
+  harvest_receipt: 3eaef561-cf92-8113-8949-f06d3079925e
+current_r10_r4:
+  theory: KSGT-REALIZE-v0.1
+  recoverability_realization_separation: PROMOTED
+  online_offline_recoverability_separation: PROMOTED
+  null_vs_overt_preference: HOLD
+  style_utility_of_nullness: HOLD
+  population_omission_probability: HOLD
+  r3_parallel_waiting_state: CLOSED
+  notion_receipt: 3e9ef561-cf92-818c-8315-e4a65650a956
+  harvest_receipt: 3e9ef561-cf92-81d6-93ac-d200adf772bf
+current_r10_r2:
+  official_gold_records: 556164
+  observable_roundtrip_rate: 1.0
+  ontology_transport_structural_rate: 0.6597698588276488
+  ontology_transport_fully_lossless_rate: 0.14319364644840923
+  multi_span_rate: 0.185816
+  v1_collision_record_rate: 0.17354593249473177
+  v1_cross_document_collision_groups: 9339
+  v1_token_equivalence: REJECTED
+  repaired_graph: KSGT-ARG-v1.1
+  v1_1_unique_token_anchors: 556164
+  v1_1_duplicate_token_anchors: 0
+  v1_1_validation_rate: 1.0
+  semantic_role_authority: HOLD_EXTERNAL_SRL_REQUIRED
+  notion_receipt: 3e9ef561-cf92-8163-bd89-cfc6f80581c3
+  harvest_receipt: 3e9ef561-cf92-810d-8b83-f16b923831de
+current_r10_r1:
+  official_byte_intake: CLOSED
+  raw_drive_folder: /Google Drive/KSGT/01_SOURCE_ACCRUAL_RAW/G9-P36-R10-R1_NIKL_ZA_CANONICAL_RAW
+  analysis_drive_folder: /Google Drive/KSGT/03_ANALYSIS_SAFE/G9-P36-R10-R1_NIKL_ZA_ONTOLOGY_AUDIT
+  adapter: experiments/g9-p36-r10-r1/nikl_real_adapter_r1.py
+  adapted_records: 556164
+  independent_validation_failures: 0
+  regression_run: 36382301004
+  regression_artifact: 10952632794
+  regression_artifact_sha256: 6f4b1ee20b2c5d29b49ad654ed81eb2df7df2f89800ef9dda1a713674132a4cf
+  json_csv_identity: EXACT_NX_AND_SX
+  ontology_transition: RECONSTITUTED
+  notion_receipt: 3e9ef561-cf92-8137-a3b8-dec6138666f7
+  harvest_receipt: 3e9ef561-cf92-81ee-8323-d9548f0b2245
+canonical_pre_gold_result_commit: cff1ae1e78976ae3a40bee33a00ce91db09596e5
+public_replay_run: 36384528790
+public_replay_head: 8fe713efa26024b0b8fe10c0f6594b517b99d7bb
+public_replay_artifact:
+  id: 10954190991
+  sha256: 705ad40bc13a5a7e0eecaa1cac817f743b3dd15b6bd31602e1e60119af951991
+notion_receipt: 3e9ef561-cf92-8163-bd89-cfc6f80581c3
+harvest_receipt: 3e9ef561-cf92-810d-8b83-f16b923831de
+r10_two_bucket_synthesis:
+  total_papers: 1213
+  r8_primary_pairs: 1
+  r9_primary_pairs: 0
+  buckets_with_primary: 1
+  predicate_family_primary_increment_total: 0
+  relation_motif_authority_lane: RETIRED
+  relation_motif_diagnostic_probe: RETAINED
+  threshold_retuning: FORBIDDEN
+r10_korean_arg:
+  version: KSGT-ARG-v1.1
+  controls: PASS_V1_1_TOKEN_IDENTITY_REPAIR
+  semantic_reuse_candidate: TOKEN_ANCHORED_ROLE_EVENT_RECOVERABILITY_GRAPH
+  zero_surface_is_not_argument_absence: true
+  particle_is_not_role_identity: true
+  word_order_is_not_role_identity: true
+  recoverability_is_not_omission_preference: true
+  topic_focus_is_not_argument_identity: true
+  dependency_is_not_linear_order: true
+r10_gold_intake:
+  engineering_state: OFFICIAL_BYTES_INGESTED_R1_CLOSED
+  canonical_semantic_core: RUST_KSGT_ARG_v1_1
+  legacy_js: REGRESSION_ONLY
+  final_rehearsal_run: 36190297866
+  final_rehearsal_artifact: 10886594950
+  final_rehearsal_sha256: 836314950a81e108b02b90d7e7b4c2acf3685ea936ddad4199b4eadfa3b066f4
+  expected_new_coding_on_arrival: NONE_UNLESS_SCHEMA_UNRECOGNIZED
+  source_2020: OFFICIAL_BYTES_ACQUIRED_VALIDATED
+  source_2025: OFFICIAL_BYTES_ACQUIRED_VALIDATED
+  state: R1_ONTOLOGY_RECONSTITUTION_CLOSED
+  scoring_authorized: true
+  resume_same_phase_on_arrival: true
+current_g9_p45:
+  status: OPEN_CHECKPOINT_1_CORPUS_LATTICE_AND_ACQUISITION_CENSUS
+  state_key: PERIOD_X_GENRE_X_REGISTER_X_PROVENANCE
+  constitution_commit: 29bba94976d6c0ef118439ca8718b50eb5ce3ba3
+  census_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
+  endpoint_1930s: AVAILABLE_FROM_P44
+  endpoint_2020_2021: AVAILABLE_FROM_P44
+  postlib_public_archive_lane: OPEN_BODY_SCHEMA_UNVERIFIED
+  NIKL_2009_2018: OFFICIAL_IDENTIFIED_TERMS_GATED_RAW_MISSING
+  NIKL_2019: OFFICIAL_IDENTIFIED_TERMS_GATED_RAW_MISSING
+  intermediate_continuity: NOT_ESTABLISHED
+  notion_receipt: 3edef561-cf92-815e-8115-e064f5e65cf3
+  drive_folder: 11gyHOKlViatdwRs2DjQs1matk5AxgvKQ
+  drive_workbook: 10mIUISI7gd_hO9c_uxcmh94ZD6tWD1vEUV5UF4M8gCo
+
+current_g9_p44:
+  status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
+  formal_title: Multi-Author Pre-AI Korean Product-Geometry Expansion, Author×Genre Tail Decomposition, Local-Deviation Functional Binding, Long-Range Contextual Payoff, Non-Literary Negative Controls, Product↔Process Firewall & Literary-Sharpness Falsification Court
+  edf: KSGT-EDF-v0.1
+  coarse_four_class_jsd_bits: 0.0203
+  marker_jsd_bits:
+    CONTRAST: 0.3712
+    CAUSE_RESULT: 0.1462
+    TEMPORAL: 0.2640
+    EXPANSION: 0.1181
+  function_realizer_separation: PROMOTED
+  temporal_provenance_requirement: PROMOTED
+  generator_design_candidate: MECHANISM_PERSISTENCE_WITH_SURFACE_SUBSTITUTION
+  literary_quality_authority: NONE
+  PPG_CONTEXT: NOT_REOPENED
+  intermediate_era_continuity: HOLD_NEW_CORPUS_REQUIRED
+  notion_receipt: 3ecef561-cf92-814e-9953-c0c29ca7bf5b
+  harvest_receipt: 3edef561-cf92-81e4-8683-c3bd5b6a6bea
+  drive_folder: 1ODKEvVIzRK36L-U708s22nqBFq0g6jly
+  drive_workbook: 192WtNkLLbUCcnhH6LqzV0AG3c9KNyRaM5T3IK--XInk
+
+current_g9_p42:
+  peak_preservation_guard: KSGT-PPG-v0.1
+  wildness_theory: KSGT-WILDNESS-v0.2
+  p22_p23_flattening_bridge: PASS
+  collateral_nonforced_edits:
+    RIGC_1: 5_OF_54
+    DIRECT_REGENERATION: 31_OF_54
+    UNIFORM_POLISH: 41_OF_54
+  distinct_revision_signatures:
+    RIGC_1: 15_OF_18
+    DIRECT_REGENERATION: 10_OF_18
+    UNIFORM_POLISH: 6_OF_18
+  operator_mechanism: ENTRY_TIMING_X_REVISION_SCOPE_X_COMMON_ATTRACTOR_PRESSURE
+  marker_transport: REJECTED_BY_DEFAULT
+  marker_mechanism_separation: PROMOTED
+  native_trace_acquisition: PARTIAL
+  direct_korean_literary_tail_world_contact: HOLD_RAW_ALIGNED_REVISION_TRACE
+  notion_receipt: 3eaef561-cf92-8153-bb0e-ec4e6bd7520a
+  harvest_receipt: 3eaef561-cf92-814b-bbef-ef4ad7f9f091
+authority:
+  MNMC_5: RETAINED
+  MNMC_6: NOT_JUSTIFIED
+  relation_motif_authority_lane: RETIRED
+  predicate_family_authority: NOT_PROMOTED
+  micro_reuse: NOT_PROMOTED
+  NIKL_ZA_observable_binding: PROMOTED
+  KSGT_ARG_v1_token_equivalence: REJECTED
+  KSGT_ARG_v1_1_token_equivalence: SEALED
+  semantic_role: STRUCTURALLY_UNAVAILABLE_FROM_CURRENT_EXPLICIT_GOLD
+  cross_language_reuse: HOLD
+  realization_risk_set_geometry: PROMOTED
+  KSGT_REALIZE_v0_2: SEALED
+  counterfactual_realization_preference: HOLD
+  structured_variation: PROMOTED
+  KSGT_REALIZE_v0_3: SEALED
+  KSGT_CFPAIR_v0_2: SEALED
+  native_preference_pilot: HISTORICAL_READY_NO_LONGER_ACTIVE_GATE
+  KSGT_PPG_v0_1: SEALED_NONAUTHORITATIVE
+  KSGT_WILDNESS_v0_2: PRETHEORY_OPERATOR_CENTERED
+  literary_tail_direct_authority: HOLD_RAW_ALIGNED_REVISION_TRACE
+github_actions_policy:
+  r8_and_successors_default: ARTIFACT_ONLY_NO_AUTOCOMMIT
+  contents_permission: READ
+  canonical_repo_writes: CONNECTED_GITHUB_AUTHOR_IDENTITY
+  existing_bot_commits: PRESERVE_HISTORY_NO_REWRITE
 raw_data_policy:
-  re3align_raw: DRIVE_ONLY_DO_NOT_COMMIT
-  literature_pdfs: TEN_PAPERS_COMMONS_DO_NOT_COMMIT
+  rmr_raw: PUBLIC_DATASET_OR_ACTION_ARTIFACT_ONLY_DO_NOT_COMMIT
+  nikl_gold: USER_ACQUIRED_OR_OFFICIAL_EXPORT_ONLY
+  literature_pdfs: COMMONS_DO_NOT_COMMIT
 language_policy:
   status: UNRESTRICTED
   rule: choose_language_by_problem_structure_reproducibility_and_execution_cost
 lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_experimental_branches
-next_phase: G9-P36-R2
+waiting:
+  - P33-R2 legacy strict-30 exact row crosswalk
+  - PeerJ external transport
+next_action: MATERIALIZE_POSTLIB_PUBLIC_SAMPLE_AND_ACQUIRE_APPROVED_NIKL_2009_2019_RAW

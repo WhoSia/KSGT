@@ -49,9 +49,8 @@ jobs:
           test -n "$CSV"
           CSV_SHA=$(sha256sum "$CSV" | awk '{print $1}')
           test "$CSV_SHA" = '599ff1bbfeddf0aa81f018416a4103e1c842e2e043f8090c12d46ff762e13e28'
-          ROOT=$(dirname "$CSV")
-          echo "DATA_ROOT=$ROOT" >> "$GITHUB_ENV"
-          printf 'archive_sha256: %s\ncsv_sha256: %s\nsource_item: %s\n' "$(cut -d' ' -f1 /tmp/archive.sha256)" "$CSV_SHA" '8d57be09-68f3-4d47-aed4-2e555cbcc503' > experiments/g9-p36-r2/source_integrity.yaml
+          echo "DATA_ROOT=/tmp/re3" >> "$GITHUB_ENV"
+          printf 'archive_sha256: %s\ncsv_sha256: %s\nsource_item: %s\nreplay_root: archive_root\n' "$(cut -d' ' -f1 /tmp/archive.sha256)" "$CSV_SHA" '8d57be09-68f3-4d47-aed4-2e555cbcc503' > experiments/g9-p36-r2/source_integrity.yaml
 
       - name: Run frozen C3-R2 structural replay
         id: replay
