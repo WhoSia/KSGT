@@ -364,11 +364,16 @@ def archive_summary(path: Path, mode: str) -> dict[str, Any]:
             cell["genre"] = "NEWS"
             cell["register"] = "INSTITUTIONAL_EDITORIAL"
             cell["provenance"] = newspaper_provenance(period, year)
+            if "NEWSPAPER_V2.0" in path.name.upper():
+                cell["edition_scope"] = "WITHIN_CATALOG_DECLARED_2009_2018" if year is not None and 2009 <= year <= 2018 else "OUTSIDE_CATALOG_DECLARED_2009_2018"
+            else:
+                cell["edition_scope"] = "PER_ARCHIVE_DECLARED_RANGE_NOT_REVALIDATED"
             cell["classification_basis"] = "NIKL newspaper source identity + exact item date; institutional publication only, not a human-authorship claim"
         else:
             cell["genre"] = "UNKNOWN"
             cell["register"] = "UNKNOWN"
             cell["provenance"] = "UNKNOWN"
+            cell["edition_scope"] = "NOT_ASSIGNED"
             cell["classification_basis"] = "NIKL written corpus; subgenre/register/provenance not assigned"
     return {"name": path.name, "bytes": path.stat().st_size, "sha256": sha256(path),
             "member_count": len(entries), "extensions": dict(ext),
@@ -410,6 +415,8 @@ def drift_tables(files: list[dict[str, Any]]) -> dict[str, Any]:
                 "archive_a": archive_a, "archive_b": archive_b,
                 "year_a": ya, "year_b": yb, "period": period,
                 "period_a": period, "period_b": period,
+                "edition_scope_a": a.get("edition_scope", "NOT_RECORDED"),
+                "edition_scope_b": b.get("edition_scope", "NOT_RECORDED"),
                 "gap_years": yb - ya,
                 "coarse_class_jsd": jsd([a["edf"].get(c, 0) for c in EDF],
                                          [b["edf"].get(c, 0) for c in EDF]),
