@@ -305,17 +305,17 @@ def process_csv_archive(path: Path, extract_features: bool) -> dict[str, Any]:
                         elif docid not in seen:
                             seen[docid] = (group_key, topic, raw_date)
                             g["documents"] += 1
+                            g["date_shapes"]["YYYYMMDD" if re.fullmatch(r"\d{8}", raw_date) else "OTHER"] += 1
+                            if year is None:
+                                g["date_errors"][period] += 1
                             if topic:
                                 g["topics"][topic] += 1
                             else:
                                 g["missing_topic"] += 1
+                            if publisher == "UNKNOWN_PUBLISHER":
+                                g["missing_publisher"] += 1
                         elif seen[docid] != (group_key, topic, raw_date):
                             g["date_errors"]["DOCUMENT_METADATA_INCONSISTENT"] += 1
-                        g["date_shapes"]["YYYYMMDD" if re.fullmatch(r"\d{8}", str(row.get("date") or "")) else "OTHER"] += 1
-                        if year is None:
-                            g["date_errors"][period] += 1
-                        if publisher == "UNKNOWN_PUBLISHER":
-                            g["missing_publisher"] += 1
                         _add_text(g, row.get("sentence") or "", extract_features)
                     text.detach()
             except Exception as exc:
@@ -379,28 +379,28 @@ def archive_summary(path: Path, mode: str) -> dict[str, Any]:
 def drift_tables(files: list[dict[str, Any]]) -> dict[str, Any]:
     # Keep publisher, serialization, year, and archive/version separate. A year
     # is comparable only when exactly one archive supplies that source-format cell.
-    by_year: dict[tuple[str, str, str, int], list[tuple[str, dict[str, Any], str]]] = defaultdict(list)
+    by_year: dict[tuple[str, str, str, str, int], list[tuple[dict[str, Any], str]]] = defaultdict(list)
     for f in files:
         for key, g in f["groups"].items():
             period, year_s, publisher = key.split("|", 2)
             try: year = int(year_s)
             except ValueError: continue
-            by_year[(f["source_family"], f["serialization"], publisher, year)].append((period, g, f["name"]))
-    collisions = [{"source_family": k[0], "serialization": k[1], "publisher": k[2], "year": k[3],
-                   "archives": [x[2] for x in v]} for k, v in sorted(by_year.items()) if len(v) > 1]
-    eligible: dict[tuple[str, str, str], list[tuple[int, str, dict[str, Any], str]]] = defaultdict(list)
-    for (family, serialization, publisher, year), cells in by_year.items():
+            by_year[(f["source_family"], f["serialization"], publisher, period, year)].append((g, f["name"]))
+    collisions = [{"source_family": k[0], "serialization": k[1], "publisher": k[2], "period": k[3], "year": k[4],
+                   "archives": [x[1] for x in v]} for k, v in sorted(by_year.items()) if len(v) > 1]
+    eligible: dict[tuple[str, str, str, str], list[tuple[int, dict[str, Any], str]]] = defaultdict(list)
+    for (family, serialization, publisher, period, year), cells in by_year.items():
         if len(cells) == 1:
-            period, g, archive = cells[0]
-            eligible[(family, serialization, publisher)].append((year, period, g, archive))
+            g, archive = cells[0]
+            eligible[(family, serialization, publisher, period)].append((year, g, archive))
     comparisons = []
     nonconsecutive_gaps = []
-    for (family, serialization, publisher), rows in sorted(eligible.items()):
+    for (family, serialization, publisher, period), rows in sorted(eligible.items()):
         rows.sort(key=lambda x: x[0])
-        for (ya, pa, a, archive_a), (yb, pb, b, archive_b) in zip(rows, rows[1:]):
+        for (ya, a, archive_a), (yb, b, archive_b) in zip(rows, rows[1:]):
             if yb != ya + 1:
                 nonconsecutive_gaps.append({"source_family": family, "serialization": serialization,
-                                            "publisher": publisher, "archive_a": archive_a,
+                                            "publisher": publisher, "period": period, "archive_a": archive_a,
                                             "archive_b": archive_b, "year_a": ya, "year_b": yb,
                                             "gap_years": yb - ya,
                                             "reason": "not_an_adjacent_calendar_year; omitted from annual estimate"})
@@ -408,7 +408,8 @@ def drift_tables(files: list[dict[str, Any]]) -> dict[str, Any]:
             comparisons.append({
                 "source_family": family, "serialization": serialization, "publisher": publisher,
                 "archive_a": archive_a, "archive_b": archive_b,
-                "year_a": ya, "year_b": yb, "period_a": pa, "period_b": pb,
+                "year_a": ya, "year_b": yb, "period": period,
+                "period_a": period, "period_b": period,
                 "gap_years": yb - ya,
                 "coarse_class_jsd": jsd([a["edf"].get(c, 0) for c in EDF],
                                          [b["edf"].get(c, 0) for c in EDF]),
@@ -425,7 +426,7 @@ def drift_tables(files: list[dict[str, Any]]) -> dict[str, Any]:
             "omitted_nonconsecutive_year_gaps": nonconsecutive_gaps,
             "ambiguous_year_source_collisions": collisions,
             "period_pooling": "HOLD_UNTIL_SOURCE_OVERLAP_AND_EDITION_IDENTITY_ARE_RESOLVED",
-            "pair_rule": "same NIKL source family, same serialization, same publisher; unique archive per observed year; no CSV/JSON pooling"}
+            "pair_rule": "same NIKL source family, serialization, publisher, and fixed period; unique archive per period-year; adjacent calendar years only; no CSV/JSON pooling"}
 
 def main() -> None:
     ap = argparse.ArgumentParser()
