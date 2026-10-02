@@ -20,6 +20,8 @@ jobs:
           python-version: "3.12"
       - name: Unit contract
         run: python experiments/g9-p45/test_adapter.py
+      - name: Auxiliary data authority contract
+        run: python experiments/g9-p45/test_auxiliary_data.py
       - name: Fixture streaming smoke test
         run: |
           python experiments/g9-p45/okhc_adapter.py             experiments/g9-p45/fixture.jsonl             --source-contract experiments/g9-p45/source_contract.json             --output /tmp/g9-p45-features.jsonl
