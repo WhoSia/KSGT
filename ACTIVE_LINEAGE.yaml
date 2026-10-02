@@ -32,9 +32,10 @@ active_research_line:
   - G9-P42
   - G9-P43
   - G9-P44
-current_phase: G9-P44
-current_status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
-current_verdict: FUNCTION_CLASS_SURVIVES_ENDPOINT_TEMPORAL_TRANSPORT_WHILE_SURFACE_REALIZERS_DRIFT
+  - G9-P45
+current_phase: G9-P45
+current_status: OPEN_CHECKPOINT_1_CORPUS_LATTICE_AND_ACQUISITION_CENSUS
+current_verdict: ENDPOINT_TRANSPORT_SURVIVES_BUT_INTERMEDIATE_CONTINUITY_REQUIRES_NEW_CORPUS
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -46,7 +47,7 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: a7d27edb9f2dc31d4604134dfcbd6cc02f20d92b
+current_science_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
 current_engineering_commit: c6e675b0b214f9e529f8eead7aec84872b91c063
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
@@ -228,6 +229,21 @@ r10_gold_intake:
   state: R1_ONTOLOGY_RECONSTITUTION_CLOSED
   scoring_authorized: true
   resume_same_phase_on_arrival: true
+current_g9_p45:
+  status: OPEN_CHECKPOINT_1_CORPUS_LATTICE_AND_ACQUISITION_CENSUS
+  state_key: PERIOD_X_GENRE_X_REGISTER_X_PROVENANCE
+  constitution_commit: 29bba94976d6c0ef118439ca8718b50eb5ce3ba3
+  census_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
+  endpoint_1930s: AVAILABLE_FROM_P44
+  endpoint_2020_2021: AVAILABLE_FROM_P44
+  postlib_public_archive_lane: OPEN_BODY_SCHEMA_UNVERIFIED
+  NIKL_2009_2018: OFFICIAL_IDENTIFIED_TERMS_GATED_RAW_MISSING
+  NIKL_2019: OFFICIAL_IDENTIFIED_TERMS_GATED_RAW_MISSING
+  intermediate_continuity: NOT_ESTABLISHED
+  notion_receipt: 3edef561-cf92-815e-8115-e064f5e65cf3
+  drive_folder: 11gyHOKlViatdwRs2DjQs1matk5AxgvKQ
+  drive_workbook: 10mIUISI7gd_hO9c_uxcmh94ZD6tWD1vEUV5UF4M8gCo
+
 current_g9_p44:
   status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
   formal_title: Multi-Author Pre-AI Korean Product-Geometry Expansion, Author×Genre Tail Decomposition, Local-Deviation Functional Binding, Long-Range Contextual Payoff, Non-Literary Negative Controls, Product↔Process Firewall & Literary-Sharpness Falsification Court
@@ -305,4 +321,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: OPEN_G9_P45_WITH_PROVENANCE_QUALIFIED_INTERMEDIATE_ERA_CORPUS
+next_action: MATERIALIZE_POSTLIB_PUBLIC_SAMPLE_AND_ACQUIRE_APPROVED_NIKL_2009_2019_RAW
