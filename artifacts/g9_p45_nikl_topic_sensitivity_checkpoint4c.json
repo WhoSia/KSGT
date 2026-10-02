@@ -21,7 +21,7 @@
     "errors": 0,
     "compressed_bytes": 15830328122,
     "uncompressed_bytes": 60536767380,
-    "represented_documents": 3321250,
+    "represented_documents": 12352778,
     "text_units": 142922388,
     "rollup": [
       {
@@ -167,7 +167,8 @@
         "serialization": "JSON",
         "source_family": "NIKL_NEWSPAPER"
       }
-    ]
+    ],
+    "distinct_article_id_sum_by_archive": 3321250
   },
   "topic_conditioned_drift": {
     "pairs": 3225,
