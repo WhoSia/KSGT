@@ -22,6 +22,10 @@ jobs:
         run: python experiments/g9-p45/test_adapter.py
       - name: Auxiliary data authority contract
         run: python experiments/g9-p45/test_auxiliary_data.py
+      - name: Diachronic drift representation firewall
+        run: python experiments/g9-p45/test_drift.py
+      - name: Generic archive schema probe
+        run: python experiments/g9-p45/test_archive_probe.py
       - name: Fixture streaming smoke test
         run: |
           python experiments/g9-p45/okhc_adapter.py             experiments/g9-p45/fixture.jsonl             --source-contract experiments/g9-p45/source_contract.json             --output /tmp/g9-p45-features.jsonl
