@@ -31,9 +31,10 @@ active_research_line:
   - G9-P41
   - G9-P42
   - G9-P43
-current_phase: G9-P43
-current_status: OPEN_CHECKPOINT_1_DOSHI_HAUSER_RAW_SCREEN
-current_verdict: INTERIM_SIMPLE_LOCAL_LENGTH_TAIL_COMPRESSION_NOT_DETECTED
+  - G9-P44
+current_phase: G9-P44
+current_status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
+current_verdict: FUNCTION_CLASS_SURVIVES_ENDPOINT_TEMPORAL_TRANSPORT_WHILE_SURFACE_REALIZERS_DRIFT
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -45,7 +46,7 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: 8fe38882b5ff21872ffdb3592fd78e2ea34453e6
+current_science_commit: a7d27edb9f2dc31d4604134dfcbd6cc02f20d92b
 current_engineering_commit: c6e675b0b214f9e529f8eead7aec84872b91c063
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
@@ -227,6 +228,27 @@ r10_gold_intake:
   state: R1_ONTOLOGY_RECONSTITUTION_CLOSED
   scoring_authorized: true
   resume_same_phase_on_arrival: true
+current_g9_p44:
+  status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
+  formal_title: Multi-Author Pre-AI Korean Product-Geometry Expansion, Author×Genre Tail Decomposition, Local-Deviation Functional Binding, Long-Range Contextual Payoff, Non-Literary Negative Controls, Product↔Process Firewall & Literary-Sharpness Falsification Court
+  edf: KSGT-EDF-v0.1
+  coarse_four_class_jsd_bits: 0.0203
+  marker_jsd_bits:
+    CONTRAST: 0.3712
+    CAUSE_RESULT: 0.1462
+    TEMPORAL: 0.2640
+    EXPANSION: 0.1181
+  function_realizer_separation: PROMOTED
+  temporal_provenance_requirement: PROMOTED
+  generator_design_candidate: MECHANISM_PERSISTENCE_WITH_SURFACE_SUBSTITUTION
+  literary_quality_authority: NONE
+  PPG_CONTEXT: NOT_REOPENED
+  intermediate_era_continuity: HOLD_NEW_CORPUS_REQUIRED
+  notion_receipt: 3ecef561-cf92-814e-9953-c0c29ca7bf5b
+  harvest_receipt: 3edef561-cf92-81e4-8683-c3bd5b6a6bea
+  drive_folder: 1ODKEvVIzRK36L-U708s22nqBFq0g6jly
+  drive_workbook: 192WtNkLLbUCcnhH6LqzV0AG3c9KNyRaM5T3IK--XInk
+
 current_g9_p42:
   peak_preservation_guard: KSGT-PPG-v0.1
   wildness_theory: KSGT-WILDNESS-v0.2
@@ -283,4 +305,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: CONTINUE_G9_P43_DATASET_2_BEGUS_OSF_RAW_ANALYSIS
+next_action: OPEN_G9_P45_WITH_PROVENANCE_QUALIFIED_INTERMEDIATE_ERA_CORPUS
