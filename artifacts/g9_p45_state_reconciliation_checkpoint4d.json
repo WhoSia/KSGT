@@ -1,0 +1,44 @@
+{
+  "schema": "ksgt.g9.p45.state-reconciliation-checkpoint4d.v1",
+  "phase": "G9-P45",
+  "status": "OPEN_NIKL_COMPLETE_OKHC_LOCAL_RAW_PENDING_VERIFICATION",
+  "nikl": {
+    "archives_complete": "13_OF_13",
+    "compressed_bytes": 15830328122,
+    "uncompressed_bytes": 60536767380,
+    "archive_representation_document_records": 12352778,
+    "distinct_article_id_sum_by_archive": 3321250,
+    "text_units": 142922388,
+    "errors": 0,
+    "topic_adjacent_year_pairs": 3225,
+    "topic_gaps": 42,
+    "topic_collisions": 0,
+    "latest_receipt": "artifacts/g9_p45_nikl_topic_sensitivity_checkpoint4c.json",
+    "latest_receipt_commit": "c37c55c612f7448a82c219e52e7be8c348e2ecba"
+  },
+  "okhc": {
+    "status": "USER_REPORTED_28GB_LOCAL_RAW_AVAILABLE_UNVERIFIED",
+    "custody_policy": [
+      "DO_NOT_DUPLICATE_TO_DRIVE_BEFORE_HASH_AND_LICENSE_REVIEW",
+      "MOVE_OUT_OF_DOWNLOADS_TO_STABLE_LOCAL_IMMUTABLE_RAW_DIRECTORY",
+      "GENERATE_FULL_SHA256_MANIFEST",
+      "STREAM_FEATURES_LOCALLY",
+      "UPLOAD_DERIVED_FEATURES_AND_RECEIPTS_TO_DRIVE",
+      "OPTIONAL_RAW_DRIVE_MIRROR_ONLY_AFTER_CUSTODY_DECISION"
+    ],
+    "tool": "experiments/g9-p45/okhc_local_custody.py"
+  },
+  "authority": [
+    "P45_REMAINS_OPEN",
+    "NIKL_COMPLETE_DOES_NOT_CLOSE_P45",
+    "OKHC_LOCAL_AVAILABILITY_IS_NOT_VERIFIED_CUSTODY",
+    "RAW_AND_NORMALIZED_REPRESENTATIONS_REMAIN_SEPARATE",
+    "SOURCE_TOPIC_IS_OBSERVED_METADATA_NOT_SEMANTIC_IDENTITY"
+  ],
+  "commits": {
+    "registry_reconciliation": "e0ccdcde6a5fd6329fc77e5eeace6c29e02bf70e",
+    "okhc_custody_tool": "9571aa075f2fbb0bbf7dd6f31c4c63696e4272ec",
+    "okhc_custody_test": "860bf2eab64330fa5a45b2e7273942147cb487f6",
+    "ci_gate": "216230a92b0c9453da301fd30757ca8190f4feca"
+  }
+}
