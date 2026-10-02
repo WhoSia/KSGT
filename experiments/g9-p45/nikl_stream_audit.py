@@ -383,24 +383,26 @@ def drift_tables(files: list[dict[str, Any]]) -> dict[str, Any]:
             by_year[(f["source_family"], f["serialization"], publisher, year)].append((period, g, f["name"]))
     collisions = [{"source_family": k[0], "serialization": k[1], "publisher": k[2], "year": k[3],
                    "archives": [x[2] for x in v]} for k, v in sorted(by_year.items()) if len(v) > 1]
-    eligible: dict[tuple[str, str, str], list[tuple[int, str, dict[str, Any]]]] = defaultdict(list)
+    eligible: dict[tuple[str, str, str], list[tuple[int, str, dict[str, Any], str]]] = defaultdict(list)
     for (family, serialization, publisher, year), cells in by_year.items():
         if len(cells) == 1:
-            period, g, _archive = cells[0]
-            eligible[(family, serialization, publisher)].append((year, period, g))
+            period, g, archive = cells[0]
+            eligible[(family, serialization, publisher)].append((year, period, g, archive))
     comparisons = []
     nonconsecutive_gaps = []
     for (family, serialization, publisher), rows in sorted(eligible.items()):
         rows.sort(key=lambda x: x[0])
-        for (ya, pa, a), (yb, pb, b) in zip(rows, rows[1:]):
+        for (ya, pa, a, archive_a), (yb, pb, b, archive_b) in zip(rows, rows[1:]):
             if yb != ya + 1:
                 nonconsecutive_gaps.append({"source_family": family, "serialization": serialization,
-                                            "publisher": publisher, "year_a": ya, "year_b": yb,
+                                            "publisher": publisher, "archive_a": archive_a,
+                                            "archive_b": archive_b, "year_a": ya, "year_b": yb,
                                             "gap_years": yb - ya,
                                             "reason": "not_an_adjacent_calendar_year; omitted from annual estimate"})
                 continue
             comparisons.append({
                 "source_family": family, "serialization": serialization, "publisher": publisher,
+                "archive_a": archive_a, "archive_b": archive_b,
                 "year_a": ya, "year_b": yb, "period_a": pa, "period_b": pb,
                 "gap_years": yb - ya,
                 "coarse_class_jsd": jsd([a["edf"].get(c, 0) for c in EDF],
