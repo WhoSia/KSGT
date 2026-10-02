@@ -1,0 +1,76 @@
+{
+  "schema": "ksgt.g9.p45.okhc-shard-manifest.v1",
+  "source_repo": "seyoungsong/Open-Korean-Historical-Corpus",
+  "repo_size_gb": 28.6,
+  "license": "CC-BY-NC-4.0",
+  "ingestion_rule": "RAW_JSONL_STREAMING_ONLY_BY_DEFAULT",
+  "viewer_boundary": "Hugging Face full dataset viewer/Parquet generation fails on empty translation struct; this is not a raw JSONL failure.",
+  "families": {
+    "news_archive": {
+      "files": [
+        {
+          "name": "news_archive_part_001_of_003.jsonl",
+          "approx_mb": 300
+        },
+        {
+          "name": "news_archive_part_002_of_003.jsonl",
+          "approx_mb": 300
+        },
+        {
+          "name": "news_archive_part_003_of_003.jsonl",
+          "approx_mb": 172
+        }
+      ],
+      "first_row_contract": {
+        "source": "National Library of Korea",
+        "corpus": "Korean Newspaper Archive",
+        "copyright": "Public Domain",
+        "genre": "news",
+        "register": "institutional_editorial"
+      },
+      "p45_priority": "HIGH_INTERMEDIATE_ERA_PUBLIC_BRIDGE"
+    },
+    "newslibrary": {
+      "naming_pattern": "newslibrary_part_NNN_of_150.jsonl",
+      "declared_shard_count_from_filename": 150,
+      "observed_shards": "001-023 visible in first repository page; remaining shards require pagination/file listing",
+      "approx_mb_per_observed_shard": "116-118",
+      "first_row_contract": "UNPROBED",
+      "p45_priority": "HIGH_AFTER_FIRST_ROW_SOURCE_CONTRACT"
+    },
+    "source_specific_observed": {
+      "files": [
+        "aks_kyu_nhm.jsonl",
+        "bibyeonsa.jsonl",
+        "gaksa.jsonl",
+        "gaksa_modern.jsonl",
+        "gongu.jsonl",
+        "goryeosa.jsonl",
+        "ilseongnok_part_001_of_003.jsonl",
+        "ilseongnok_part_002_of_003.jsonl",
+        "ilseongnok_part_003_of_003.jsonl",
+        "jpn_records.jsonl",
+        "kcna_jp.jsonl",
+        "kisu_journal.jsonl",
+        "kisu_literary.jsonl",
+        "klc_part_001_of_008.jsonl",
+        "klc_part_002_of_008.jsonl",
+        "klc_part_003_of_008.jsonl",
+        "klc_part_004_of_008.jsonl",
+        "klc_part_005_of_008.jsonl",
+        "klc_part_006_of_008.jsonl",
+        "klc_part_007_of_008.jsonl",
+        "klc_part_008_of_008.jsonl",
+        "magazine.jsonl"
+      ],
+      "authority": "NO_P45_REGISTER_OR_PROVENANCE_MAPPING_UNTIL_ROW_LEVEL_PROBE"
+    }
+  },
+  "invariants": [
+    "FILENAME != SOURCE_CONTRACT",
+    "DATE != PROVENANCE",
+    "FIRST_ROW_PROBE_PRECEDES_REGISTER_MAPPING",
+    "RAW_JSONL != PARQUET_VIEWER",
+    "FEATURE_ONLY_OUTPUT_BY_DEFAULT"
+  ]
+}
