@@ -53,6 +53,10 @@ files = [
 drift = m.drift_tables(files)
 assert len(drift["annual_adjacent_calendar_year_pairs"]) == 1
 assert drift["annual_adjacent_calendar_year_pairs"][0]["year_a"] == 2019
+assert drift["annual_adjacent_calendar_year_pairs"][0]["archive_a"] == "a.zip"
+assert drift["annual_adjacent_calendar_year_pairs"][0]["archive_b"] == "b.zip"
 assert len(drift["omitted_nonconsecutive_year_gaps"]) == 1
+assert drift["omitted_nonconsecutive_year_gaps"][0]["archive_a"] == "b.zip"
+assert drift["omitted_nonconsecutive_year_gaps"][0]["archive_b"] == "c.zip"
 print("PASS P45 NIKL streaming parser, frozen EDF, exact date cut, and feature-only output")
 
