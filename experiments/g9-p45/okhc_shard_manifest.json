@@ -71,6 +71,32 @@
     "DATE != PROVENANCE",
     "FIRST_ROW_PROBE_PRECEDES_REGISTER_MAPPING",
     "RAW_JSONL != PARQUET_VIEWER",
-    "FEATURE_ONLY_OUTPUT_BY_DEFAULT"
-  ]
+    "FEATURE_ONLY_OUTPUT_BY_DEFAULT",
+    "FULL_OKHC_DOWNLOAD_NOT_REQUIRED_BEFORE_MINIMUM_REPLICATION_SET_FAILS",
+    "LANGUAGE_KOREAN_REQUIRED_FOR_P45_EDF_AUTHORITY",
+    "YEAR_ONLY_2022_CANNOT_RESOLVE_2022_11_30_BOUNDARY"
+  ],
+  "minimum_p45_independent_replication_set": {
+    "family": "news_archive",
+    "reason": "Independent public newspaper source with intermediate-era coverage; acquire before any broader OKHC family.",
+    "files": [
+      "news_archive_part_001_of_003.jsonl",
+      "news_archive_part_002_of_003.jsonl",
+      "news_archive_part_003_of_003.jsonl"
+    ],
+    "expected_source_contract": {
+      "source": "National Library of Korea",
+      "corpus": "Korean Newspaper Archive",
+      "genre": "news",
+      "register": "institutional_editorial"
+    },
+    "row_authority_gate": [
+      "language == Korean",
+      "corpus == Korean Newspaper Archive",
+      "source_contract_status == MAPPED",
+      "period != YEAR_2022_BOUNDARY_UNRESOLVED",
+      "raw and normalized representations never mixed"
+    ],
+    "escalation_rule": "Acquire broader newslibrary/source-specific shards only if the minimum set lacks support in required P45 periods."
+  }
 }
