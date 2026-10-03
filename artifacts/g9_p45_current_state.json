@@ -1,0 +1,55 @@
+{
+  "schema": "ksgt.g9.p45.current-state.v1",
+  "phase": "G9-P45",
+  "status": "OPEN_NIKL_CP5_COMPLETE_OKHC_SELECTIVE_ACQUISITION_PENDING",
+  "nikl": {
+    "cp5_complete": true,
+    "document_rows": 12352778,
+    "sufficient_stats_gzip_bytes": 857083889,
+    "sufficient_stats_sha256": "9f9baa781c56241de1b1b84cac2bed6080f12c71350d6bda1d30cd4100a0aa76",
+    "raw_text_present": false,
+    "multipart_manifest_drive_id": "1yBMfcJvDvXs_XSTzvkcyjN-wRbYKuMhY",
+    "raw_corpus_retirement": "NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES; RETAIN_IMMUTABLE_RAW_ARCHIVES",
+    "further_default_slicing": "STOP_DIMINISHING_RETURN",
+    "independent_replication": "HOLD"
+  },
+  "scientific_readout": {
+    "within_class_marker_drift_gt_coarse": "3161_OF_3225",
+    "support_1_9_median_coarse_jsd": 0.0664,
+    "support_ge_200_median_coarse_jsd": 0.00102,
+    "bootstrap_comparisons": 40,
+    "bootstrap_ci_excluding_zero": "40_OF_40",
+    "median_balanced_jsd": 0.000122,
+    "interpretation": "surface realizer distributions move more than coarse class distributions internally, but effect size is small and independent-source replication is absent"
+  },
+  "okhc": {
+    "local_raw_present": false,
+    "full_download_default": false,
+    "minimum_replication_family": "news_archive",
+    "minimum_files": [
+      "news_archive_part_001_of_003.jsonl",
+      "news_archive_part_002_of_003.jsonl",
+      "news_archive_part_003_of_003.jsonl"
+    ],
+    "authority_gates": [
+      "language == Korean",
+      "corpus == Korean Newspaper Archive",
+      "source contract mapped",
+      "year-only 2022 remains unresolved",
+      "raw/normalized representations never mixed"
+    ],
+    "selective_acquire_tool": "experiments/g9-p45/okhc_selective_acquire.py"
+  },
+  "engineering": {
+    "klicke_fixture_bug": "FIX_FORWARD_COMMITTED",
+    "klicke_holistic_encoding": "STRICT_UTF8_THEN_SOURCE_SPECIFIC_CP1252",
+    "klicke_typing_vocab_encoding": "STRICT_NO_REPLACEMENT",
+    "okhc_2022_false_precision": "FIX_FORWARD_COMMITTED",
+    "multilingual_authority_gate": "FIX_FORWARD_COMMITTED",
+    "hosted_ci": "UNVERIFIED_AFTER_FIX_FORWARD",
+    "cp5_ci_gate": "CONFIGURED",
+    "okhc_selective_ci_gate": "CONFIGURED"
+  },
+  "final_adjudication": "HOLD_UNTIL_INDEPENDENT_EXTERNAL_SOURCE_REPLICATION",
+  "no_new_checkpoint_required": true
+}
