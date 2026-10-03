@@ -7,7 +7,7 @@ m=importlib.util.module_from_spec(spec); assert spec.loader; spec.loader.exec_mo
 
 expected={1948:"POSTLIB_1945_1959",1971:"INDUSTRIAL_1960_1979",1994:"LATE20C_1980_1999",
           2005:"EARLY_DIGITAL_2000_2008",2014:"NEWS_2009_2018",2019:"NEWS_2019",
-          2021:"PRE_CHATGPT_2020_2022_11_29",2023:"TRANSITION_2022_11_30_2023",
+          2021:"PRE_CHATGPT_2020_2021",2022:"YEAR_2022_BOUNDARY_UNRESOLVED",2023:"TRANSITION_2022_11_30_2023",
           2025:"POST_2024_MIXED_PROVENANCE"}
 for y,p in expected.items(): assert m.period_bin(y)==p
 
@@ -24,16 +24,30 @@ assert pre["copyright"]=="Public Domain"
 assert pre["doc_type"]=="news"
 assert pre["source_reported_text_length"]==10
 assert pre["representation"]=="RAW"
+assert pre["p45_edf_authority"] is True
+assert pre["p45_admission_status"]=="ADMITTED_DESCRIPTIVE_EDF"
 assert pre["edf"]["CONTRAST"]==1 and pre["edf"]["CAUSE_RESULT"]==1 and pre["edf"]["EXPANSION"]==1
 assert "text" not in pre and "content" not in pre
 
-post=m.feature_row({"id":"y","year":2025,"text":"하지만","corpus":"Korean Newspaper Archive"},
+year_2022_boundary=m.feature_row({"id":"b","year":2022,"text":"하지만","language":"Korean","corpus":"Korean Newspaper Archive"},
+                                 m.DEFAULT_SOURCE_CONTRACT)
+assert year_2022_boundary["period"]=="YEAR_2022_BOUNDARY_UNRESOLVED"
+assert year_2022_boundary["provenance"]=="UNKNOWN"
+assert year_2022_boundary["p45_edf_authority"] is False
+
+post=m.feature_row({"id":"y","year":2025,"text":"하지만","language":"Korean","corpus":"Korean Newspaper Archive"},
                    m.DEFAULT_SOURCE_CONTRACT)
 assert post["provenance"]=="UNKNOWN"
 
 unknown=m.feature_row({"id":"z","year":1988,"text":"그러나","corpus":"Unmapped Corpus"},
                       m.DEFAULT_SOURCE_CONTRACT)
 assert unknown["provenance"]=="UNKNOWN" and unknown["source_contract_status"]=="UNMAPPED"
+assert unknown["p45_edf_authority"] is False
+
+nonko=m.feature_row({"id":"n","year":1988,"text":"그러나","language":"Japanese","corpus":"Korean Newspaper Archive"},
+                    m.DEFAULT_SOURCE_CONTRACT)
+assert nonko["p45_edf_authority"] is False
+assert "NON_KOREAN_LANGUAGE" in nonko["p45_admission_reasons"]
 
 normalized={**real_schema,"normalized_text":"그러나 그래서 그리고"}
 rows=list(m.feature_rows(normalized,m.DEFAULT_SOURCE_CONTRACT,True))
