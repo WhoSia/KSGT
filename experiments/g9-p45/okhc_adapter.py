@@ -24,7 +24,7 @@ PERIODS=[
  (1930,1939,"PREWAR_1930S"),(1945,1959,"POSTLIB_1945_1959"),
  (1960,1979,"INDUSTRIAL_1960_1979"),(1980,1999,"LATE20C_1980_1999"),
  (2000,2008,"EARLY_DIGITAL_2000_2008"),(2009,2018,"NEWS_2009_2018"),
- (2019,2019,"NEWS_2019"),(2020,2022,"PRE_CHATGPT_2020_2022_11_29"),
+ (2019,2019,"NEWS_2019"),(2020,2021,"PRE_CHATGPT_2020_2021"),
  (2023,2023,"TRANSITION_2022_11_30_2023"),(2024,9999,"POST_2024_MIXED_PROVENANCE"),
 ]
 DEFAULT_SOURCE_CONTRACT={
@@ -39,6 +39,7 @@ def period_bin(year:int|None)->str:
     if year is None:return "UNKNOWN_PERIOD"
     if year<1930:return "OUT_OF_SCOPE_PRE1930"
     if 1940<=year<=1944:return "WARTIME_1940_1944_UNMODELED"
+    if year==2022:return "YEAR_2022_BOUNDARY_UNRESOLVED"
     for lo,hi,name in PERIODS:
         if lo<=year<=hi:return name
     return "UNKNOWN_PERIOD"
@@ -56,12 +57,25 @@ def classify_source(row:dict[str,Any],contract:dict[str,Any])->dict[str,str]:
         return {"genre":"UNKNOWN","register":"UNKNOWN","provenance":"UNKNOWN",
                 "source_contract_status":"UNMAPPED"}
     genre=spec.get("genre","UNKNOWN"); register=spec.get("register","UNKNOWN")
-    if isinstance(year,int) and year<=2022:
+    if isinstance(year,int) and year<=2021:
         prov=spec.get("provenance_pre_chatgpt","UNKNOWN")
     else:
+        # Year-only 2022 cannot resolve the 2022-11-30 boundary.
         prov=spec.get("provenance_post_2022","UNKNOWN")
     return {"genre":genre,"register":register,"provenance":prov,
             "source_contract_status":"MAPPED"}
+
+def p45_admission(row:dict[str,Any],source_state:dict[str,str],year:int|None)->tuple[str,list[str]]:
+    reasons=[]
+    language=str(row.get("language") or "")
+    period=period_bin(year)
+    if language!="Korean":
+        reasons.append("NON_KOREAN_LANGUAGE")
+    if source_state.get("source_contract_status")!="MAPPED":
+        reasons.append("UNMAPPED_SOURCE_CONTRACT")
+    if period in {"UNKNOWN_PERIOD","OUT_OF_SCOPE_PRE1930","WARTIME_1940_1944_UNMODELED","YEAR_2022_BOUNDARY_UNRESOLVED"}:
+        reasons.append("PERIOD_NOT_AUTHORITY_READY")
+    return ("ADMITTED_DESCRIPTIVE_EDF" if not reasons else "HOLD_OR_EXCLUDE", reasons)
 
 def get_raw_text(row:dict[str,Any])->str:
     x=row.get("text")
@@ -105,13 +119,17 @@ def feature_row(row:dict[str,Any],contract:dict[str,Any],
     analytics=row.get("text_analytics")
     if not isinstance(analytics,dict):analytics=row.get("analytics")
     if not isinstance(analytics,dict):analytics={}
+    admission,reasons=p45_admission(row,source_state,year)
     return {
       "id":row.get("id"),"year":year,"period":period_bin(year),
       "language":row.get("language"),"script":row.get("script"),
       "source":row.get("source"),"corpus":row.get("corpus"),
       "doc_type":row.get("doc_type"),"copyright":copyright_value,
       "url":row.get("url"),"representation":representation,
-      **source_state,"text_length":len(text),
+      **source_state,"p45_admission_status":admission,
+      "p45_admission_reasons":reasons,
+      "p45_edf_authority":admission=="ADMITTED_DESCRIPTIVE_EDF",
+      "text_length":len(text),
       "source_reported_text_length":analytics.get("text_length"),
       "edf":edf_counts(text),"markers":marker_counts(text),
     }
