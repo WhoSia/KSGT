@@ -36,4 +36,9 @@ with tempfile.TemporaryDirectory() as td:
     assert r["has_demographic"] is True
     assert "Gender" not in r
     assert r["authority"]=="AUXILIARY_PROCESS_COVARIATE_ONLY"
+    hol_cp=td/"holistic_cp1252.csv"
+    hol_cp.write_bytes('ID,Prompt,Text,Score\\n12345678,P,"it\\u2019s fine",4.5\\n'.encode("cp1252"))
+    hcp=m.read_holistic(hol_cp)
+    assert hcp["12345678"]["final_text_length"]==9
+    print("PASS cp1252 holistic source adapter")
 print("PASS KLiCKe feature-only compiler")
