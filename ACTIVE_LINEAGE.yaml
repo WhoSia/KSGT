@@ -34,8 +34,8 @@ active_research_line:
   - G9-P44
   - G9-P45
 current_phase: G9-P45
-current_status: OPEN_NIKL_CP4E_RECORDED_OKHC_LOCATION_UNRESOLVED
-current_verdict: NIKL_TOPIC_TAIL_SUPPORT_SENSITIVITY_AND_FORMAT_CONCORDANCE_RECORDED_OKHC_RAW_NOT_LOCATED
+current_status: OPEN_NIKL_CP5_COMPLETE_OKHC_SELECTIVE_ACQUISITION_PENDING
+current_verdict: NIKL_INTERNAL_EVIDENCE_SHOWS_SURFACE_REALIZER_DRIFT_DOMINATES_COARSE_CLASS_DRIFT_BUT_EFFECT_IS_SMALL_INDEPENDENT_SOURCE_REPLICATION_HOLD
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -47,8 +47,8 @@ current_compiler:
   counterfactual_pair_authority: KSGT-CFPAIR-v0.2
   proof_kernel: C3-R3-FUSION-PROOF-v1_RUST_INHERITED_UNCHANGED
   preseal_commit: 22a372433c1bc5bc2e8ec501963f83a50c8ce5e5
-current_science_commit: f942a58ef5ebae92dd9390e6cf36a2493121088c
-current_engineering_commit: ca88a8a2a7fc1ec9eabff9a79c23d337368145bc
+current_science_commit: 9da9832381fa8d045fa63d35c954266f2fba0c70
+current_engineering_commit: 130e2512f94072effb5e226d73df58750f685d8f
 current_r10_r3:
   cross_layer_graph: KSGT-XARG-v0.1
   ZA_2025_exact_multilayer_identity: 30346_OF_30346
@@ -230,7 +230,7 @@ r10_gold_intake:
   scoring_authorized: true
   resume_same_phase_on_arrival: true
 current_g9_p45:
-  status: OPEN_NIKL_CP4E_RECORDED_OKHC_LOCATION_UNRESOLVED
+  status: OPEN_NIKL_CP5_COMPLETE_OKHC_SELECTIVE_ACQUISITION_PENDING
   state_key: PERIOD_X_GENRE_X_REGISTER_X_PROVENANCE
   constitution_commit: 29bba94976d6c0ef118439ca8718b50eb5ce3ba3
   census_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
@@ -252,7 +252,7 @@ current_g9_p45:
   nikl_topic_adjacent_year_pairs: 3225
   nikl_topic_gaps: 42
   nikl_topic_collisions: 0
-  okhc_local_raw: USER_REPORTED_28GB_BUT_NOT_FOUND_IN_EXPECTED_DOWNLOADS_SCAN
+  okhc_local_raw: NOT_PRESENT_LOCALLY
   okhc_raw_custody_policy: LOCAL_IMMUTABLE_FIRST_DERIVED_FEATURES_TO_DRIVE
   checkpoint4d_receipt: artifacts/g9_p45_state_reconciliation_checkpoint4d.json
   topic_tail_checkpoint4e:
@@ -266,6 +266,25 @@ current_g9_p45:
     csv_json_pre_chatgpt_exact_pair_concordance: 450_OF_450
     csv_json_pearson_spearman: 1.0_1.0
     recurrent_stratum_hotspots: 66
+  cp5_nikl:
+    reconciliation_receipt: artifacts/g9_p45_nikl_cp5_reconciliation.json
+    reconciliation_commit: 9da9832381fa8d045fa63d35c954266f2fba0c70
+    document_rows: 12352778
+    sufficient_stats_gzip_bytes: 857083889
+    sufficient_stats_sha256: 9f9baa781c56241de1b1b84cac2bed6080f12c71350d6bda1d30cd4100a0aa76
+    within_class_marker_gt_coarse: 3161_OF_3225
+    q90_hotspot_transitions: 164
+    recurrent_hotspot_keys: 66
+    matched_horizon_comparisons: 40
+    median_balanced_jsd: 0.000122
+    bootstrap_ci_excludes_zero: 40_OF_40
+    raw_corpus_retirement: NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES_RETAIN_IMMUTABLE_RAW
+    independent_source_replication: HOLD
+  okhc_minimum_replication_set:
+    family: news_archive
+    shards: 3
+    full_download_required: false
+    next_gate: ACQUIRE_3_SHARDS_THEN_ROW_LEVEL_ADMISSION_AND_NIKL_REPLICATION
   okhc_downloads_audit_checkpoint4f:
     path: "C:\\Users\\kimwo\\Downloads"
     recursive_files: 235
@@ -352,4 +371,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: VERIFY_LOCAL_OKHC_BYTES_STREAM_INDEPENDENT_REPLICATION_AND_EXTEND_SOURCE_MATCHED_DRIFT
+next_action: ACQUIRE_MINIMUM_OKHC_NEWS_ARCHIVE_3_SHARDS_RUN_ROW_LEVEL_ADMISSION_AND_INDEPENDENT_REPLICATION
