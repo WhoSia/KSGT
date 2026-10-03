@@ -34,6 +34,8 @@ jobs:
         run: python experiments/g9-p45/test_nikl_stream_audit.py
       - name: NIKL CP4c topic-tail descriptive court
         run: python experiments/g9-p45/test_nikl_topic_tail.py
+      - name: NIKL CP5 frozen-analysis contracts
+        run: python experiments/g9-p45/test_nikl_cp5.py
       - name: OKHC local large-raw custody manifest
         run: python experiments/g9-p45/test_okhc_local_custody.py
       - name: Fixture streaming smoke test
