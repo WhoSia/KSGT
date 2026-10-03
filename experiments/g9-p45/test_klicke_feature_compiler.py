@@ -14,7 +14,7 @@ with tempfile.TemporaryDirectory() as td:
     demo.write_text(',ID,Gender\n1,12345678,X\n',encoding="utf-8")
     with zipfile.ZipFile(tz,"w") as z:
         z.writestr("TypingTests/csv/12345678_TYPING1.csv",
-          '","DownEventID","UpEventID","DownTime","UpTime","ActionTime","DownEvent","UpEvent","CursorPosition","PauseTime","WordCount","TextChange","Activity"\n'
+          ',"DownEventID","UpEventID","DownTime","UpTime","ActionTime","DownEvent","UpEvent","CursorPosition","PauseTime","WordCount","TextChange","Activity"\n'
           '"1",1,1,100,120,20,"a","a",1,0,1,"a","Input"\n'
           '"2",2,2,2200,2220,20,"Backspace","Backspace",0,2100,0,"a","Remove/Cut"\n')
     with zipfile.ZipFile(vz,"w") as z:
