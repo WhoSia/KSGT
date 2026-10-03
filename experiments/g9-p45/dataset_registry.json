@@ -15,9 +15,9 @@
       ],
       "raw_text_retention": "FEATURE_ONLY_BY_DEFAULT",
       "p45_diachronic_authority": true,
-      "status": "USER_REPORTED_RAW_NOT_FOUND_IN_DECLARED_DOWNLOADS_SCAN_CUSTODY_UNVERIFIED",
+      "status": "NOT_PRESENT_LOCALLY_SELECTIVE_ACQUISITION_READY",
       "local_custody_policy": "LOCAL_IMMUTABLE_RAW_FIRST; MANIFEST_AND_DERIVED_FEATURES_TO_DRIVE; RAW_DRIVE_MIRROR_OPTIONAL_AFTER_HASH_AND_LICENSE_REVIEW",
-      "next_gate": "USER_PROVIDE_EXACT_RAW_LOCATION_OR_PLACE_RAW_IN_STABLE_LOCAL_DIRECTORY",
+      "next_gate": "ACQUIRE_MINIMUM_NEWS_ARCHIVE_3_SHARDS_THEN_ROW_LEVEL_CUSTODY_AND_SOURCE_LANGUAGE_PERIOD_GATES",
       "prior_user_reported_status": "USER_REPORTED_LOCAL_RAW_AVAILABLE_UNVERIFIED",
       "last_location_audit": {
         "path": "C:\\Users\\kimwo\\Downloads",
@@ -26,11 +26,17 @@
         "matching_filename_count": 0,
         "files_at_least_20gb": 0,
         "audit_scope": "metadata inventory only; no corpus contents opened"
-      }
+      },
+      "minimum_acquisition_set": [
+        "news_archive_part_001_of_003.jsonl",
+        "news_archive_part_002_of_003.jsonl",
+        "news_archive_part_003_of_003.jsonl"
+      ],
+      "full_download_required": false
     },
     "NIKL_NEWSPAPER": {
       "role": "SAME_REGISTER_DIACHRONIC_BRIDGE",
-      "status": "COMPLETE_13_OF_13_STREAMED",
+      "status": "COMPLETE_CP5_DERIVED_SUFFICIENT_STATS_RAW_RETIRED_FOR_ENCODED_ANALYSES",
       "source_identity": "user-supplied official NIKL corpus ZIP family",
       "compressed_bytes": 15830328122,
       "uncompressed_bytes": 60536767380,
@@ -50,8 +56,18 @@
         "source topic labels are preserved, not semantically pooled",
         "raw/normalized separation remains pending"
       ],
-      "latest_receipt": "artifacts/g9_p45_nikl_topic_sensitivity_checkpoint4c.json",
-      "latest_receipt_commit": "c37c55c612f7448a82c219e52e7be8c348e2ecba"
+      "latest_receipt": "artifacts/g9_p45_nikl_cp5_reconciliation.json",
+      "latest_receipt_commit": "9da9832381fa8d045fa63d35c954266f2fba0c70",
+      "document_sufficient_stats": {
+        "rows": 12352778,
+        "gzip_bytes": 857083889,
+        "gzip_sha256": "9f9baa781c56241de1b1b84cac2bed6080f12c71350d6bda1d30cd4100a0aa76",
+        "raw_text_present": false,
+        "drive_manifest_id": "1yBMfcJvDvXs_XSTzvkcyjN-wRbYKuMhY",
+        "multipart_parts": 10
+      },
+      "raw_reopen_policy": "NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES; RETAIN_IMMUTABLE_RAW_ARCHIVES",
+      "independent_source_replication": "HOLD"
     },
     "KLICKE_WRITING": {
       "role": "AUXILIARY_PROCESS_CONFOUND_LANE",
@@ -64,7 +80,8 @@
         "vocabulary_test",
         "demographic"
       ],
-      "p45_diachronic_authority": false
+      "p45_diachronic_authority": false,
+      "encoding_policy": "UTF8_STRICT_WITH_SOURCE_SPECIFIC_CP1252_FALLBACK_FOR_HOLISTIC_ONLY; TYPING_AND_VOCAB_STRICT_NO_REPLACEMENT"
     },
     "DOSHI_HAUSER_DRYAD": {
       "role": "GENERATION_SIDE_EXTERNAL_CONTROL_DONOR",
@@ -90,6 +107,11 @@
     "SOURCE_IDENTITY_MUST_BE_EXPLICIT",
     "P43_AUXILIARY_REUSE_DOES_NOT_REOPEN_P43",
     "LOCAL_RAW_AVAILABILITY != VERIFIED_CUSTODY",
-    "LARGE_RAW_CORPUS_NEED_NOT_BE_DUPLICATED_TO_DRIVE_BEFORE_HASH_AND_TERMS_REVIEW"
+    "LARGE_RAW_CORPUS_NEED_NOT_BE_DUPLICATED_TO_DRIVE_BEFORE_HASH_AND_TERMS_REVIEW",
+    "RAW_CORPUS_RETIREMENT != RAW_DELETION",
+    "FORMAT_CONCORDANCE != INDEPENDENT_SOURCE_REPLICATION",
+    "YEAR_ONLY_2022 != PRE_CHATGPT_PROVENANCE",
+    "NON_KOREAN_OKHC_ROWS != P45_EDF_AUTHORITY",
+    "FULL_OKHC_DOWNLOAD_NOT_REQUIRED_BEFORE_MINIMUM_REPLICATION_SET_FAILS"
   ]
 }
