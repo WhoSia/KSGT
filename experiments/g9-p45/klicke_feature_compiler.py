@@ -28,9 +28,18 @@ def read_demographic_ids(path:Path)->set[str]:
             if ID_RE.fullmatch(x):out.add(x)
     return out
 
+def _decode_holistic(path:Path)->str:
+    data=path.read_bytes()
+    try:
+        return data.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        # KLiCKe holistic_scores.csv is a legacy Windows-1252 export.
+        # Strict fallback only: never replacement-decode source text.
+        return data.decode("cp1252")
+
 def read_holistic(path:Path):
     out={}
-    with path.open(encoding="utf-8-sig",newline="") as f:
+    with io.StringIO(_decode_holistic(path),newline="") as f:
         for r in csv.DictReader(f):
             pid=(r.get("ID") or "").strip()
             if not ID_RE.fullmatch(pid):continue
