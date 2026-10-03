@@ -68,7 +68,7 @@ def typing_features(path:Path):
             pid=m.group("id"); task=m.group("task")
             a=agg[pid]; a["tasks"].add(task)
             with z.open(name) as raw:
-                txt=io.TextIOWrapper(raw,encoding="utf-8-sig",errors="replace",newline="")
+                txt=io.TextIOWrapper(raw,encoding="utf-8-sig",errors="strict",newline="")
                 for r in csv.DictReader(txt):
                     a["events"]+=1
                     pause=_f(r.get("PauseTime"))
@@ -106,7 +106,7 @@ def vocab_features(path:Path):
             if not m:continue
             pid=m.group("id"); n=correct=falsepos=falseneg=0
             with z.open(name) as raw:
-                txt=io.TextIOWrapper(raw,encoding="utf-8-sig",errors="replace",newline="")
+                txt=io.TextIOWrapper(raw,encoding="utf-8-sig",errors="strict",newline="")
                 for r in csv.DictReader(txt):
                     resp=_f(r.get("Response")); key=_f(r.get("Key"))
                     if resp is None or key is None:continue
