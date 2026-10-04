@@ -34,7 +34,7 @@ active_research_line:
   - G9-P44
   - G9-P45
 current_phase: G9-P45
-current_status: OPEN_NIKL_CP5_COMPLETE_OKHC_SELECTIVE_ACQUISITION_PENDING
+current_status: OPEN_INTERNAL_EXECUTION_COMPLETE_EXTERNAL_REPLICATION_HOLD
 current_verdict: NIKL_INTERNAL_EVIDENCE_SHOWS_SURFACE_REALIZER_DRIFT_DOMINATES_COARSE_CLASS_DRIFT_BUT_EFFECT_IS_SMALL_INDEPENDENT_SOURCE_REPLICATION_HOLD
 current_compiler:
   representation: C3-R4-BCOG-v1
@@ -230,7 +230,7 @@ r10_gold_intake:
   scoring_authorized: true
   resume_same_phase_on_arrival: true
 current_g9_p45:
-  status: OPEN_NIKL_CP5_COMPLETE_OKHC_SELECTIVE_ACQUISITION_PENDING
+  status: OPEN_INTERNAL_EXECUTION_COMPLETE_EXTERNAL_REPLICATION_HOLD
   state_key: PERIOD_X_GENRE_X_REGISTER_X_PROVENANCE
   constitution_commit: 29bba94976d6c0ef118439ca8718b50eb5ce3ba3
   census_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
@@ -280,6 +280,11 @@ current_g9_p45:
     bootstrap_ci_excludes_zero: 40_OF_40
     raw_corpus_retirement: NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES_RETAIN_IMMUTABLE_RAW
     independent_source_replication: HOLD
+  internal_execution_complete: true
+  internal_default_additional_nikl_slicing: STOP_DIMINISHING_RETURN
+  internal_raw_reopen_default: NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES
+  hosted_ci_after_fix_forward: UNVERIFIED
+  current_state_receipt: artifacts/g9_p45_current_state.json
   okhc_minimum_replication_set:
     family: news_archive
     shards: 3
@@ -371,4 +376,4 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: ACQUIRE_MINIMUM_OKHC_NEWS_ARCHIVE_3_SHARDS_RUN_ROW_LEVEL_ADMISSION_AND_INDEPENDENT_REPLICATION
+next_action: ACQUIRE_MINIMUM_OKHC_NEWS_ARCHIVE_3_SHARDS_OR_EQUIVALENT_INDEPENDENT_SOURCE_THEN_FINAL_P45_ADJUDICATION
