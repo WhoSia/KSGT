@@ -33,9 +33,10 @@ active_research_line:
   - G9-P43
   - G9-P44
   - G9-P45
-current_phase: G9-P45
-current_status: OPEN_INTERNAL_EXECUTION_COMPLETE_EXTERNAL_REPLICATION_HOLD
-current_verdict: NIKL_INTERNAL_EVIDENCE_SHOWS_SURFACE_REALIZER_DRIFT_DOMINATES_COARSE_CLASS_DRIFT_BUT_EFFECT_IS_SMALL_INDEPENDENT_SOURCE_REPLICATION_HOLD
+  - G9-P46
+current_phase: G9-P46
+current_status: PRESEALED_OPEN_REPRESENTATION_COURT
+current_verdict: REPRESENTATION_COURT_OPEN_P45_EMPIRICAL_RESULTS_PRESERVED_NO_REPRESENTATION_PRIVILEGED
 current_compiler:
   representation: C3-R4-BCOG-v1
   quotient: C3-R6-OFQ-v1
@@ -377,3 +378,26 @@ waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
 next_action: ACQUIRE_MINIMUM_OKHC_NEWS_ARCHIVE_3_SHARDS_OR_EQUIVALENT_INDEPENDENT_SOURCE_THEN_FINAL_P45_ADJUDICATION
+
+current_g9_p46:
+  status: PRESEALED_OPEN_REPRESENTATION_COURT
+  notion_receipt: 3efef561-cf92-8139-ab18-d55101c7266a
+  empirical_parent: G9-P45
+  p45_external_replication: STILL_ACTIVE_AS_EVIDENCE_LANE
+  current_representation_privilege: FORBIDDEN
+  raw_nikl_reopen: NOT_AUTHORIZED
+  rivals:
+    - R0_LEGACY_EDF_V0_1_MULTI_HIT
+    - R1_EXCLUSIVE_LEXICAL_MARKER_EVENTS
+    - R2_DISCRETE_TYPED_SEMANTIC_GRAPH
+    - R3_DISTRIBUTIONAL_QUOTIENT_FIBER
+    - R4_LEARNED_LATENT
+    - R5_HYBRID_CONSTRAINED_LATENT_TYPED
+    - R6_DECISION_SUFFICIENT_QUOTIENT
+  constitution_path: experiments/g9-p46/constitution.json
+  kernel_path: experiments/g9-p46/quotient_fiber.py
+  test_path: experiments/g9-p46/test_quotient_fiber.py
+  constitution_commit: ac621cfd942e74e909bda0a3f5738c13ca6650c3
+  kernel_commit: a72b38dca258fa343344d5863a00e1966f3b0cd6
+  test_commit: 9e692d859b4d8a88e3c2e5bddb942346f47eb479
+  synthetic_tests: UNVERIFIED_UNTIL_HOSTED_CI
