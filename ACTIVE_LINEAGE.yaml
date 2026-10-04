@@ -404,3 +404,41 @@ current_g9_p46:
   workflow_commit: 22412f718b9d016c03bafb92ab5f34692ef581be
   hosted_ci: UNVERIFIED_NO_STATUS_RETURNED
   synthetic_tests: UNVERIFIED_UNTIL_HOSTED_CI
+
+  r2_typed_state_reentry:
+    status: PRESEALED_REENTRY_WITH_FIELD_AUTHORITY_MOSAIC
+    constitution_commit: e4e3d347984d9980cb706cd7e4b3a76842e45e0d
+    kernel_commit: 5b71fdb9022c333770d92279b9807d0170b37186
+    tests_commit: ed6a7ea93a2090e4400ec50608fe2ce80ed98967
+    authority_mosaic_commit: 874e2a7ff7d2c33ac00113e5ef5fa48ef91d1337
+    argument_recoverability: PROMOTED_OFFICIAL_NIKL_GOLD
+    zero_slot_semantic_role: STRUCTURALLY_UNAVAILABLE_CURRENT_EXPLICIT_GOLD
+    historical_projection_actuality_discourse: LIVE_HYPOTHESIS
+  r4_r5_learned_hybrid:
+    status: PRESEALED_BEFORE_MODEL_TRAINING
+    contract_commit: f5f3eca54974f5c278228b31118b2e90b105cc6d
+    tests_commit: 01622cbbca771fd96032b01d80aa37fd21e852e1
+    aihub_temporal_split_commit: 501c84a6524253d92505be9247f368d952ca835a
+    development_year: 2020
+    temporal_holdout_year: 2021
+    eligible_2020: 9285
+    eligible_2021: 12197
+  r6_decision_continuation:
+    status: PRESEALED
+    constitution_commit: 8421a79a731081c369b4a12155b84991a70c03a3
+    tests_commit: 094dae71811ad7f8c23f72c4664d2417cc81a657
+    relation: PROJECTION_AND_DECISION_RELATIVE_CONTINUATION_EQUIVALENCE
+  t3_revision_time:
+    status: SPLIT_BY_AUTHORITY
+    constitution_commit: 032d46bb1d299e928de2cd76f365cfce5676c229
+    sublanes:
+      - T3a_CONTROLLED_REVISION
+      - T3b_NATURALISTIC_WIKI_REVISION
+      - T3c_EXACT_EVENT_PROCESS_HOLD
+      - T3d_TRIGGER_LINKED_HUMAN_REVISION
+  t2_okhc_historical:
+    status: ACQUISITION_MANIFEST_SEALED
+    manifest_commit: 4ef05206fc977f760b7df89fa7ddb2c4fd8ce995
+    selected_files: 3
+    approximate_total_mb: 772
+    full_repo_download_required: false
