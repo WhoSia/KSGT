@@ -1,16 +1,20 @@
 {
   "schema": "ksgt.g9.p46.current-state.v1",
   "phase": "G9-P46",
-  "status": "PRESEALED_OPEN_REPRESENTATION_COURT",
+  "status": "OPEN_REPRESENTATION_TEMPORAL_TOURNAMENT_R1_ROBUSTNESS_PASS",
   "notion_id": "3efef561-cf92-8139-ab18-d55101c7266a",
   "parent": "G9-P45",
-  "p45_external_replication": "ACTIVE_AS_EMPIRICAL_PARENT_LANE",
+  "p45_external_replication": "CLOSED_DESCRIPTIVE_GEOMETRY_PARENT",
   "authority": {
     "current_representation_privilege": false,
     "p45_empirical_results_preserved": true,
     "p45_mechanism_inference_promoted": false,
     "raw_nikl_reopen_authorized": false,
-    "global_representation_winner_preassumed": false
+    "global_representation_winner_preassumed": false,
+    "p45_external_replication_pass": true,
+    "exclusive_event_robustness_pass": true,
+    "semantic_function_quotient_identified": false,
+    "mechanism_persistence_promoted": false
   },
   "repo": {
     "constitution_commit": "ac621cfd942e74e909bda0a3f5738c13ca6650c3",
@@ -21,13 +25,21 @@
     "lineage_verification_boundary_commit": "17f802a2ed9cbb38cbee09fdfdd4f27d18f5a440",
     "commit_author_committer": "WhoSia",
     "github_actions_bot_authored_commits": 0,
-    "hosted_ci": "UNVERIFIED_NO_STATUS_RETURNED"
+    "hosted_ci": "UNVERIFIED_NO_STATUS_RETURNED",
+    "p46_aihub_exclusive_receipt_commit": "828e9dbe590eebc3281c5ec5fae665859fd7da05",
+    "active_lineage_reconciliation_commit": "71fb40f46d98a040fa9e843cc16396bedcbfa624"
   },
   "next_execution": [
-    "P46-A hosted synthetic quotient-fiber tests",
-    "P46-B derived-only NIKL CP5 quotient-fiber replay",
-    "P46-C AI-Hub 017 legacy-vs-exclusive external representation replay",
-    "P46-D provenance-qualified counterfactual separation",
-    "P46-E learned/hybrid rivals after evaluation contract freeze"
+    "P46-D provenance-qualified human revision / counterfactual representation separation",
+    "P46-R2 recovered discrete typed semantic graph re-entry",
+    "P46-R4 learned latent frozen-vs-adaptive temporal lane",
+    "P46-R5 constrained hybrid",
+    "P46-R6 decision-sufficient continuation-aware quotient",
+    "P46-T2 OKHC historical multi-year external transport when acquired"
+  ],
+  "completed_execution": [
+    "P46-B exact quotient-fiber accounting on 1,739 matched NIKL four-year common chains",
+    "P46-C AI-Hub 017 R0 legacy vs R1 exclusive-event replay on exact P45 canonical corpus",
+    "R1 overlap removal: 20,072 / 317,757 legacy hits removed; 15/15 directional signs preserved"
   ]
 }
