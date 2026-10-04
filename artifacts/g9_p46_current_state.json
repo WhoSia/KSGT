@@ -1,0 +1,33 @@
+{
+  "schema": "ksgt.g9.p46.current-state.v1",
+  "phase": "G9-P46",
+  "status": "PRESEALED_OPEN_REPRESENTATION_COURT",
+  "notion_id": "3efef561-cf92-8139-ab18-d55101c7266a",
+  "parent": "G9-P45",
+  "p45_external_replication": "ACTIVE_AS_EMPIRICAL_PARENT_LANE",
+  "authority": {
+    "current_representation_privilege": false,
+    "p45_empirical_results_preserved": true,
+    "p45_mechanism_inference_promoted": false,
+    "raw_nikl_reopen_authorized": false,
+    "global_representation_winner_preassumed": false
+  },
+  "repo": {
+    "constitution_commit": "ac621cfd942e74e909bda0a3f5738c13ca6650c3",
+    "kernel_commit": "a72b38dca258fa343344d5863a00e1966f3b0cd6",
+    "test_commit": "9e692d859b4d8a88e3c2e5bddb942346f47eb479",
+    "lineage_open_commit": "22575ddf07cd876ce70f794f1c328182a0404b43",
+    "workflow_commit": "22412f718b9d016c03bafb92ab5f34692ef581be",
+    "lineage_verification_boundary_commit": "17f802a2ed9cbb38cbee09fdfdd4f27d18f5a440",
+    "commit_author_committer": "WhoSia",
+    "github_actions_bot_authored_commits": 0,
+    "hosted_ci": "UNVERIFIED_NO_STATUS_RETURNED"
+  },
+  "next_execution": [
+    "P46-A hosted synthetic quotient-fiber tests",
+    "P46-B derived-only NIKL CP5 quotient-fiber replay",
+    "P46-C AI-Hub 017 legacy-vs-exclusive external representation replay",
+    "P46-D provenance-qualified counterfactual separation",
+    "P46-E learned/hybrid rivals after evaluation contract freeze"
+  ]
+}
