@@ -1,0 +1,27 @@
+name: G9-P46 Representation Court
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p46/**"
+      - ".github/workflows/g9-p46-representation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quotient-fiber-synthetic:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/g9-p46
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run quotient-fiber synthetic tests
+        run: python -m unittest -v test_quotient_fiber.py
