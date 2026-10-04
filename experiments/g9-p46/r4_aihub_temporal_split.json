@@ -1,0 +1,54 @@
+{
+  "schema": "ksgt.g9.p46.r4.aihub-temporal-split.v1",
+  "status": "PRESEALED_BEFORE_EMBEDDING_OR_TRAINING",
+  "source_parent": "P45/P46-C canonical AI-Hub 017 corpus",
+  "canonical_articles": 179290,
+  "eligible_cells": "the same 15 exact publisher×category cells common to 2020 and 2021; no new cell discovery",
+  "common_publishers": [
+    "경기일보",
+    "중앙일보"
+  ],
+  "years": {
+    "development": 2020,
+    "temporal_holdout": 2021
+  },
+  "counts": {
+    "eligible_2020": 9285,
+    "eligible_2021": 12197,
+    "note": "Counts are corpus support, not class balance; per-cell macro evaluation is mandatory."
+  },
+  "development_split": {
+    "method": "SHA-256(doc_id || fixed salt) deterministic split within each 2020 publisher×category cell",
+    "train_fraction": 0.8,
+    "calibration_fraction": 0.2,
+    "salt": "KSGT-G9-P46-R4-AIHUB-2020-DEV-v1",
+    "temporal_holdout_access": "2021 embeddings/results unavailable until representation/pooling/evaluation contract is frozen"
+  },
+  "views": {
+    "cell_macro": "equal weight over 15 common publisher×category cells",
+    "natural_mixture": "observed article-weighted mixture",
+    "both_required": true
+  },
+  "first_court": {
+    "R4a": "frozen pretrained encoder(s), no AI-Hub parameter updates",
+    "R4b": "adaptive/fine-tuned encoder only after R4a report is sealed",
+    "comparison": "R4a vs R0/R1/R2/R6 on the P46 partial-order vector; no single accuracy leaderboard"
+  },
+  "prohibited": [
+    "using 2021 to select encoder, layer, pooling, dimension or normalization",
+    "adding cells because 2021 results look favorable",
+    "year classification accuracy as semantic authority",
+    "source classification leakage interpreted as linguistic structure",
+    "retraining R4a on 2021",
+    "post-hoc representation rotation from temporal-holdout outcomes"
+  ],
+  "evaluation_minimum": [
+    "within-cell temporal representation displacement",
+    "cell-macro vs natural-mixture separation",
+    "publisher/source sensitivity",
+    "effective rank / collapse diagnostic",
+    "R6 decision-distance on available counterfactual/decision cases",
+    "R2 typed-counterfactual selectivity where authority exists"
+  ],
+  "authority": "SPLIT_AND_EVALUATION_PRESEAL_ONLY"
+}
