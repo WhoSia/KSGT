@@ -1,0 +1,26 @@
+{
+  "schema": "ksgt.g9.p46.temporal-path.external-preseal.v1",
+  "status": "PRESEALED",
+  "eligible_source": "independent multi-year Korean corpus with >=4 consecutive annual states in same frozen environment key",
+  "metric": "sqrt(JS) temporal path efficiency eta",
+  "environment_key": "source-family × serialization/representation × stable source/publisher × exact topic/genre where available",
+  "horizons": "anchored y->y+1,y+2,y+3 with all intermediate years present",
+  "support_controls": [
+    "all chains",
+    "min 50 documents each year",
+    "min 200 documents each year when feasible"
+  ],
+  "primary_comparison": "fine/exclusive-event eta versus quotient eta on matched chains",
+  "prohibited": [
+    "retuning marker inventory from external result",
+    "calling eta linguistic persistence",
+    "calling non-unit eta holonomy or curvature",
+    "pooling unmatched environment trajectories to improve significance"
+  ],
+  "acceptable_outcomes": [
+    "fine path less efficient",
+    "coarse path less efficient",
+    "no stable ordering",
+    "source-specific reversal"
+  ]
+}
