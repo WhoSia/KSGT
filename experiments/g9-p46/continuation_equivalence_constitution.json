@@ -1,0 +1,22 @@
+{
+  "schema": "ksgt.g9.p46.continuation-equivalence.v1",
+  "status": "PRESEALED",
+  "principle": "SNAPSHOT_SIMILARITY_DOES_NOT_IMPLY_FUTURE_CONTINUATION_EQUIVALENCE",
+  "ancestry": "Recovered from G8-P3.68→P3.71 persistence semantics and branch/rejoin stress",
+  "objects": {
+    "state": "representation state z_t",
+    "future_family": "bounded environment/task family E",
+    "relation": "z ~cont,E z' iff admissible downstream KSGT decisions are preserved under the same semantic veto, abstention, and authority rules"
+  },
+  "adaptive_required_metadata": [
+    "training_or_data_ancestry",
+    "adaptation_event_identity",
+    "alignment_or_correspondence_map",
+    "causal_frontier_of_evidence_that_changed_representation",
+    "downstream_decision_delta"
+  ],
+  "false_uniqueness": "Do not force one global winner when lanes are valid on different regions.",
+  "false_plurality": "Do not count implementation/latent-basis differences as substantive if continuation-equivalent for the frozen decision family.",
+  "merge_rule": "Adaptive representation branches may be collapsed only when continuation-equivalent and authority-equivalent for the target family.",
+  "authority": "THEORY_CONSTITUTION_ONLY_UNTIL_COUNTERFACTUAL_AND_EXTERNAL_TESTS"
+}
