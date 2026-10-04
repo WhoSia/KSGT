@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p46.current-state.v1",
   "phase": "G9-P46",
-  "status": "OPEN_REPRESENTATION_TEMPORAL_TOURNAMENT_R1_ROBUSTNESS_PASS",
+  "status": "OPEN_COMPETING_LANES_PROGRAM_R1_PASS_R2_R4_R5_R6_PRESEALED",
   "notion_id": "3efef561-cf92-8139-ab18-d55101c7266a",
   "parent": "G9-P45",
   "p45_external_replication": "CLOSED_DESCRIPTIVE_GEOMETRY_PARENT",
@@ -27,19 +27,32 @@
     "github_actions_bot_authored_commits": 0,
     "hosted_ci": "UNVERIFIED_NO_STATUS_RETURNED",
     "p46_aihub_exclusive_receipt_commit": "828e9dbe590eebc3281c5ec5fae665859fd7da05",
-    "active_lineage_reconciliation_commit": "71fb40f46d98a040fa9e843cc16396bedcbfa624"
+    "active_lineage_reconciliation_commit": "71fb40f46d98a040fa9e843cc16396bedcbfa624",
+    "active_lineage_competing_lanes_commit": "75a77a04d7ac4558cd31f3b4f420c85fdf6a046c",
+    "r2_authority_mosaic_commit": "874e2a7ff7d2c33ac00113e5ef5fa48ef91d1337",
+    "r4_r5_contract_commit": "f5f3eca54974f5c278228b31118b2e90b105cc6d",
+    "r4_aihub_temporal_split_commit": "501c84a6524253d92505be9247f368d952ca835a",
+    "r6_contract_commit": "8421a79a731081c369b4a12155b84991a70c03a3",
+    "t3_revision_sublanes_commit": "032d46bb1d299e928de2cd76f365cfce5676c229",
+    "t2_okhc_manifest_commit": "4ef05206fc977f760b7df89fa7ddb2c4fd8ce995"
   },
   "next_execution": [
-    "P46-D provenance-qualified human revision / counterfactual representation separation",
-    "P46-R2 recovered discrete typed semantic graph re-entry",
-    "P46-R4 learned latent frozen-vs-adaptive temporal lane",
-    "P46-R5 constrained hybrid",
-    "P46-R6 decision-sufficient continuation-aware quotient",
-    "P46-T2 OKHC historical multi-year external transport when acquired"
+    "Acquire or receive the three OKHC news_archive shards; run schema/year/publisher/script census before any P46 outcome metric",
+    "Execute R4a frozen-encoder court on the sealed 2020-development / 2021-holdout AI-Hub split after model/pooling contract is fixed",
+    "Build R2/R6 counterfactual packet from provenance-qualified P23/P25/P36 cases",
+    "Keep KLiCKe T3c on exact-event semantic HOLD until source semantics are resolved",
+    "Compare local winners in the representation × temporal-evidence matrix; do not force a global scalar winner"
   ],
   "completed_execution": [
     "P46-B exact quotient-fiber accounting on 1,739 matched NIKL four-year common chains",
     "P46-C AI-Hub 017 R0 legacy vs R1 exclusive-event replay on exact P45 canonical corpus",
-    "R1 overlap removal: 20,072 / 317,757 legacy hits removed; 15/15 directional signs preserved"
+    "R1 overlap removal: 20,072 / 317,757 legacy hits removed; 15/15 directional signs preserved",
+    "T3 revision-time evidence split into four authority-preserving sublanes",
+    "R6 authority-aware decision/continuation quotient sealed",
+    "R2 projection-relative typed-state re-entry sealed",
+    "R2 field-authority mosaic derived from P36 native-gold courts",
+    "R4/R5 learned/hybrid evaluation contract sealed before training",
+    "R4a AI-Hub 2020 development -> 2021 temporal holdout split sealed",
+    "T2 OKHC three-shard 772 MB historical acquisition manifest sealed"
   ]
 }
