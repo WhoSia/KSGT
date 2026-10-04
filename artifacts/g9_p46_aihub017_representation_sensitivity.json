@@ -1,0 +1,59 @@
+{
+  "schema": "ksgt.g9.p46.aihub017-representation-sensitivity.v1",
+  "phase": "G9-P46-C",
+  "status": "EXTERNAL_MODERN_REPRESENTATION_COMPARISON_COMPLETE",
+  "source": "same deduplicated AI-Hub 017 source-data corpus as P45 external replay",
+  "matched_cells": 15,
+  "overlap_audit": {
+    "articles_changed_by_exclusive_event_resolution": 17602,
+    "legacy_marker_hits": 317757,
+    "exclusive_marker_events": 297685,
+    "hits_removed": 20072,
+    "fraction_legacy_hits_removed": 0.06316776656375785,
+    "marker_removals": {
+      "또": 19439,
+      "동안": 593,
+      "때문에": 40
+    }
+  },
+  "legacy_R0": {
+    "within_gt_coarse": 15,
+    "wilson_lower_95": 0.7961166989641514,
+    "median_coarse_jsd": 0.0026948462424180863,
+    "median_mean_within_class_marker_jsd": 0.03714591519188389,
+    "median_difference": 0.03269114424924183,
+    "qfid_median": {
+      "D_Q": 0.0026948462424181106,
+      "D_F": 0.03226469520236766,
+      "D_T": 0.035704868253447694,
+      "fiber_share": 0.9038333870271855
+    },
+    "qfid_max_identity_residual": 1.6653345369377348e-16
+  },
+  "exclusive_R1": {
+    "within_gt_coarse": 15,
+    "wilson_lower_95": 0.7961166989641514,
+    "median_coarse_jsd": 0.0020749119452023717,
+    "median_mean_within_class_marker_jsd": 0.03791324163777226,
+    "median_difference": 0.03574829972391518,
+    "qfid_median": {
+      "D_Q": 0.002074911945202408,
+      "D_F": 0.03420861229015143,
+      "D_T": 0.03829975541802016,
+      "fiber_share": 0.9008453283348682
+    },
+    "qfid_max_identity_residual": 1.465841337200402e-16
+  },
+  "sensitivity": {
+    "directional_sign_flips": 0,
+    "median_abs_coarse_jsd_change": 0.00036363666993208515,
+    "median_abs_within_jsd_change": 0.0005813547628454388,
+    "median_exclusive_minus_legacy_paired_difference": 0.0009311392359822313
+  },
+  "verdict": [
+    "PASS_DIRECTIONAL_GEOMETRY_ROBUST_TO_EXCLUSIVE_EVENT_RECONSTRUCTION_ON_THIS_EXTERNAL_SET",
+    "LEGACY_OVERLAP_IS_NONTRIVIAL_BUT_NOT_SUFFICIENT_TO_EXPLAIN_DIRECTIONAL_RESULT",
+    "ABSOLUTE_GEOMETRY_REMAINS_REPRESENTATION_SENSITIVE",
+    "SEMANTIC_FUNCTION_QUOTIENT_STILL_NOT_IDENTIFIED"
+  ]
+}
