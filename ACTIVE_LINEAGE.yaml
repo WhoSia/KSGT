@@ -231,7 +231,7 @@ r10_gold_intake:
   scoring_authorized: true
   resume_same_phase_on_arrival: true
 current_g9_p45:
-  status: OPEN_INTERNAL_EXECUTION_COMPLETE_EXTERNAL_REPLICATION_HOLD
+  status: CLOSED_AS_DESCRIPTIVE_GEOMETRY_COURT
   state_key: PERIOD_X_GENRE_X_REGISTER_X_PROVENANCE
   constitution_commit: 29bba94976d6c0ef118439ca8718b50eb5ce3ba3
   census_commit: b76e45e14c2403eb91645cb60d8513d2239d5477
@@ -280,7 +280,7 @@ current_g9_p45:
     median_balanced_jsd: 0.000122
     bootstrap_ci_excludes_zero: 40_OF_40
     raw_corpus_retirement: NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES_RETAIN_IMMUTABLE_RAW
-    independent_source_replication: HOLD
+    independent_source_replication: PASS_AI_HUB_017_LIMITED_PUBLISHER_ECOLOGY
   internal_execution_complete: true
   internal_default_additional_nikl_slicing: STOP_DIMINISHING_RETURN
   internal_raw_reopen_default: NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES
@@ -377,13 +377,13 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: ACQUIRE_MINIMUM_OKHC_NEWS_ARCHIVE_3_SHARDS_OR_EQUIVALENT_INDEPENDENT_SOURCE_THEN_FINAL_P45_ADJUDICATION
+next_action: G9_P46_COMPETING_LANES_CONTINUE_R1_CLOSED_R2_R4_R5_R6_AND_T2_T3_ACTIVE
 
 current_g9_p46:
   status: PRESEALED_OPEN_REPRESENTATION_COURT
   notion_receipt: 3efef561-cf92-8139-ab18-d55101c7266a
   empirical_parent: G9-P45
-  p45_external_replication: STILL_ACTIVE_AS_EVIDENCE_LANE
+  p45_external_replication: CLOSED_DESCRIPTIVE_GEOMETRY_PARENT
   current_representation_privilege: FORBIDDEN
   raw_nikl_reopen: NOT_AUTHORIZED
   rivals:
