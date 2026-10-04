@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p45.current-state.v1",
   "phase": "G9-P45",
-  "status": "OPEN_NIKL_CP5_COMPLETE_OKHC_SELECTIVE_ACQUISITION_PENDING",
+  "status": "OPEN_INTERNAL_EXECUTION_COMPLETE_EXTERNAL_REPLICATION_HOLD",
   "nikl": {
     "cp5_complete": true,
     "document_rows": 12352778,
@@ -48,8 +48,19 @@
     "multilingual_authority_gate": "FIX_FORWARD_COMMITTED",
     "hosted_ci": "UNVERIFIED_AFTER_FIX_FORWARD",
     "cp5_ci_gate": "CONFIGURED",
-    "okhc_selective_ci_gate": "CONFIGURED"
+    "okhc_selective_ci_gate": "CONFIGURED",
+    "latest_ci_config_commit": "acb56a03de2a8ecdf919152fb79ff7997898cc2f"
   },
   "final_adjudication": "HOLD_UNTIL_INDEPENDENT_EXTERNAL_SOURCE_REPLICATION",
-  "no_new_checkpoint_required": true
+  "no_new_checkpoint_required": true,
+  "internal_execution": {
+    "complete": true,
+    "default_additional_nikl_slicing": "STOP_DIMINISHING_RETURN",
+    "raw_reopen": "NO_REOPEN_REQUIRED_FOR_ENCODED_CP5_ANALYSES",
+    "klicke_ci_fixture": "MALFORMED_TEST_FIXTURE_FIXED",
+    "klicke_holistic_encoding": "STRICT_UTF8_THEN_SOURCE_SPECIFIC_CP1252",
+    "cp5_ci_gate": "CONFIGURED_ONCE",
+    "workflow_duplicate_gate": "REMOVED",
+    "external_data_required_for_next_scientific_authority": true
+  }
 }
