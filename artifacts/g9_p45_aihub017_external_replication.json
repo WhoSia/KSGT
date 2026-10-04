@@ -1,0 +1,119 @@
+{
+  "schema": "ksgt.g9.p45.aihub017-external-replication.v1",
+  "phase": "G9-P45",
+  "status": "CLOSED_EXTERNAL_MODERN_REPLICATION_PASS_WITH_LIMITED_PUBLISHER_ECOLOGY",
+  "source": {
+    "archive": "017.7z",
+    "archive_bytes": 305123509,
+    "archive_sha256": "e0af7c78338ccc61289112b8b1c6731697cd46955721bb04f0d9bfac252ec713",
+    "admitted": "TS_* and VS_* source-data ZIPs only",
+    "excluded": "TL_* and VL_* QA labels",
+    "source_family": "AI-Hub 017 / Korea Press Foundation BigKinds news",
+    "observed_years": [
+      2020,
+      2021
+    ],
+    "strict_utf8_decode_failures": 0,
+    "source_provided_ufffd_doc_ids": 14
+  },
+  "custody": {
+    "source_record_occurrences": 180030,
+    "unique_doc_ids_first_pass": 179331,
+    "conflicting_doc_ids_quarantined": 7,
+    "exact_cross_id_duplicate_groups": 33,
+    "exact_cross_id_duplicate_docs": 67,
+    "exact_duplicate_extra_removed": 34,
+    "final_articles": 179290,
+    "final_2020": 17266,
+    "final_2021": 162024,
+    "publishers": 17,
+    "categories": 9,
+    "common_2020_2021_publisher_category_cells": 15,
+    "common_publishers": [
+      "경기일보",
+      "중앙일보"
+    ]
+  },
+  "method": {
+    "representation": "KSGT-EDF-v0.1 exact Python substring counts",
+    "comparison": "2020 vs 2021 within exact publisher×category common cells",
+    "coarse": "four EDF class JSD using exact P45 base-2 epsilon-smoothed jsd implementation",
+    "within": "unweighted mean of four class-conditional marker JSDs",
+    "primary_rule": "Wilson 95% lower bound for within>coarse > 0.5 AND median(within-coarse)>0",
+    "thresholds_retuned": false,
+    "marker_inventory_retuned": false
+  },
+  "primary": {
+    "matched_cells": 15,
+    "within_gt_coarse": 15,
+    "ties": 0,
+    "wilson_lower_95": 0.7961166989641514,
+    "median_coarse_jsd": 0.0026948462424180863,
+    "median_mean_within_class_marker_jsd": 0.03714591519188389,
+    "median_paired_difference": 0.03269114424924183,
+    "mean_paired_difference": 0.03808561910511071,
+    "verdict": "PASS_PRESEALED_DIRECTIONAL_EXTERNAL_REPLICATION"
+  },
+  "source_stratified": {
+    "경기일보": {
+      "cells": 8,
+      "within_gt_coarse": 8,
+      "wilson_lower_95": 0.6755924351161198,
+      "median_difference": 0.03360515131438262
+    },
+    "중앙일보": {
+      "cells": 7,
+      "within_gt_coarse": 7,
+      "wilson_lower_95": 0.6456695649333126,
+      "median_difference": 0.03269114424924183
+    }
+  },
+  "support_bins": {
+    "1-9": {
+      "n": 1,
+      "within_gt": 1,
+      "wilson_lower_95": 0.20654931437723742,
+      "median_difference": 0.09171421805285267
+    },
+    "10-49": {
+      "n": 2,
+      "within_gt": 2,
+      "wilson_lower_95": 0.3423802275066531,
+      "median_difference": 0.08469734767178871
+    },
+    "50-199": {
+      "n": 9,
+      "within_gt": 9,
+      "wilson_lower_95": 0.700854951580456,
+      "median_difference": 0.03269114424924183
+    },
+    "200+": {
+      "n": 3,
+      "within_gt": 3,
+      "wilson_lower_95": 0.4385029682449545,
+      "median_difference": 0.0072166555138440044
+    }
+  },
+  "robustness": {
+    "exclude_all_14_source_provided_ufffd_docs": {
+      "matched_cells": 15,
+      "within_gt_coarse": 15,
+      "wilson_lower_95": 0.7961166989641514,
+      "median_difference": 0.03269114424924183
+    }
+  },
+  "authority": {
+    "promoted": "REPLICATED_SURFACE_MARKER_GEOMETRY_ON_INDEPENDENT_MODERN_CORPUS_PRODUCT",
+    "not_promoted": [
+      "MECHANISM_PERSISTENCE_WITH_SURFACE_SUBSTITUTION",
+      "SEMANTIC_FUNCTION_QUOTIENT",
+      "BROAD_PUBLISHER_ECOLOGY_REPLICATION",
+      "HISTORICAL_MULTIYEAR_EXTERNAL_TRANSPORT"
+    ],
+    "limitation": "Only two publishers contribute exact 2020↔2021 common publisher×category cells; directional geometry replicates, scale/ecology does not establish a general Korean-language mechanism."
+  },
+  "terminal": {
+    "p45_status": "CLOSED_AS_DESCRIPTIVE_GEOMETRY_COURT",
+    "p46_transfer": "historical multi-year external transport and representation adjudication continue in G9-P46 T2 and rival lanes"
+  }
+}
