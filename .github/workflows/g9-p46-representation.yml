@@ -24,4 +24,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Run quotient-fiber synthetic tests
-        run: python -m unittest -v test_quotient_fiber.py test_temporal_profile.py
+        run: python -m unittest -v test_*.py
