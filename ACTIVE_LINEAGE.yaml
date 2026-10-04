@@ -400,4 +400,7 @@ current_g9_p46:
   constitution_commit: ac621cfd942e74e909bda0a3f5738c13ca6650c3
   kernel_commit: a72b38dca258fa343344d5863a00e1966f3b0cd6
   test_commit: 9e692d859b4d8a88e3c2e5bddb942346f47eb479
+  workflow_path: .github/workflows/g9-p46-representation.yml
+  workflow_commit: 22412f718b9d016c03bafb92ab5f34692ef581be
+  hosted_ci: UNVERIFIED_NO_STATUS_RETURNED
   synthetic_tests: UNVERIFIED_UNTIL_HOSTED_CI
