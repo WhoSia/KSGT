@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p46.current-state.v1",
   "phase": "G9-P46",
-  "status": "OPEN_COMPETING_LANES_PROGRAM_T2_CANONICAL_RECOVERED_R7_PRESEALED",
+  "status": "CLOSED_REPRESENTATION_VALIDITY_REGION_AND_OBSERVATION_CHANNEL_COURT",
   "notion_id": "3efef561-cf92-8139-ab18-d55101c7266a",
   "parent": "G9-P45",
   "p45_external_replication": "CLOSED_DESCRIPTIVE_GEOMETRY_PARENT",
@@ -27,7 +27,11 @@
     "okhc_canonical_analysis_field": "top-level text",
     "okhc_content_body_for_historical_edf": "FORBIDDEN_TRANSLATION_PACKAGING_WITNESS",
     "r7_historical_observation_channel": "PRESEALED_EXTENSION",
-    "raw_reexecution_requires_canonical_receipt_reload": true
+    "raw_reexecution_requires_canonical_receipt_reload": true,
+    "p46_closed": true,
+    "global_representation_winner_identified": false,
+    "learned_latent_superiority_promoted": false,
+    "hybrid_superiority_promoted": false
   },
   "repo": {
     "constitution_commit": "ac621cfd942e74e909bda0a3f5738c13ca6650c3",
@@ -59,11 +63,7 @@
     "noncanonical_content_body_branch_supersession_commit": "1f7ce3c4301134cf2e834708e9dd6d467ad651f9"
   },
   "next_execution": [
-    "Execute R4a frozen learned-encoder court on sealed AI-Hub 2020-development / 2021 temporal holdout",
-    "Transport the same frozen R4a representation to OKHC pre-1910 and postlib validity islands with observability diagnostics",
-    "Build R2/R6 counterfactual packet from provenance-qualified P23/P25/P36 cases",
-    "Keep R7 raw-vs-validated-transduction as a future rival only; no PUA modernization without validated mapping",
-    "Never bridge the OKHC 1911-1944 support desert as continuous time"
+    "OPEN_G9_P47_AS_ONE_COMPLETE_PHASE_AFTER_FORMAL_TITLE_ACCEPTANCE"
   ],
   "completed_execution": [
     "P46-B exact quotient-fiber accounting on 1,739 matched NIKL four-year common chains",
@@ -111,5 +111,11 @@
         "bytes": 171640799
       }
     }
-  }
+  },
+  "terminal_closure": {
+    "receipt": "artifacts/g9_p46_terminal_closure.json",
+    "commit": "335f384f9fdf2e7d948c8e608648cd383ffec960",
+    "verdict": "REPRESENTATION_VALIDITY_IS_REGION_RELATIVE_OBSERVATION_CHANNEL_CONDITIONING_REQUIRED_NO_GLOBAL_WINNER"
+  },
+  "workflow_default_from_p47": "ONE_PHASE_ONE_COMPLETE_OUTPUT_NO_CHECKPOINT_PROLIFERATION"
 }
