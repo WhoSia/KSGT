@@ -1,0 +1,334 @@
+{
+  "schema": "ksgt.g9.p46.okhc-t2-article-sensitivity.v1",
+  "phase": "G9-P46-T2",
+  "status": "SECONDARY_ARTICLE_ONLY_SENSITIVITY_COMPLETE",
+  "source": {
+    "repository": "seyoungsong/Open-Korean-Historical-Corpus",
+    "selected_family": "news_archive",
+    "files": [
+      {
+        "name": "news_archive_part_001_of_003.jsonl",
+        "bytes": 299999863,
+        "rows": 144794,
+        "sha256": "0ef1e00f4055be6adf288cc91f75539d9fed9d7733279956f471bcc2a84ac1df"
+      },
+      {
+        "name": "news_archive_part_002_of_003.jsonl",
+        "bytes": 299999459,
+        "rows": 146497,
+        "sha256": "046a95987197086e2af8ccfe9845991366c4bb33b1de84ecabb266c7d4ccc34a"
+      },
+      {
+        "name": "news_archive_part_003_of_003.jsonl",
+        "bytes": 171640799,
+        "rows": 73118,
+        "sha256": "dd143e14a930a56aa1ecbe9db3424962c535db1358e0d62f24edaaf44802e32f"
+      }
+    ],
+    "total_bytes": 771640121,
+    "total_rows": 364409,
+    "invariants": {
+      "source": "National Library of Korea",
+      "corpus": "Korean Newspaper Archive",
+      "doc_type": "news_article",
+      "copyright_status": "Public Domain",
+      "text_composition": "{body}"
+    }
+  },
+  "census": {
+    "year_range": [
+      1883,
+      1952
+    ],
+    "year_null": 983,
+    "language": {
+      "Modern Korean": 315645,
+      "Hanmun": 26995,
+      "English": 17681,
+      "Early Modern Korean": 3102,
+      "Korean": 928,
+      "Japanese": 58
+    },
+    "script": {
+      "Hanja, Old Hangeul": 263908,
+      "Hanja, Hangeul": 32792,
+      "Hanja": 26500,
+      "Hangeul": 22975,
+      "Latin": 17681,
+      "Hanja, Latin": 495,
+      "Kanji, Kana": 58
+    },
+    "nonnull_publishers": 38,
+    "missing_publisher_rows": 17828,
+    "id_duplicate_groups": 0,
+    "exact_text_duplicate_groups": 15688,
+    "exact_text_duplicate_extra_rows": 80627,
+    "exact_text_duplicate_participating_rows": 96315,
+    "duplicate_ecology": "Overwhelmingly advertising/culture; 94,135 duplicate-participating rows carry 광고 and 67,527 are exact keyword tuple 광고/문화.",
+    "text_length_median": 108,
+    "text_length_p90": 441
+  },
+  "observation_channel": {
+    "top_level_text_equals_content_body": 231082,
+    "top_level_text_differs": 133327,
+    "mismatch_classes": {
+      "whitespace_only": 77031,
+      "nfkc_only_exact": 22872,
+      "nfkc_plus_whitespace": 13823,
+      "other": 19601
+    },
+    "body_original_label_rows": 20478,
+    "body_translation_label_rows": 19602,
+    "admitted_article_translation_label_rows": 14831,
+    "admitted_article_marker_count_changed_text_vs_body": 5045,
+    "changed_marker_rows_all_have_translation_label": true,
+    "pre1910_top_text_marker_hits": 34986,
+    "pre1910_content_body_marker_hits": 46989,
+    "body_inflation_fraction": 0.34308008917852856,
+    "verdict": "USE_TOP_LEVEL_TEXT_AS_OKHC_CANONICAL_TEXT; CONTENT.BODY_CAN_CONTAIN ORIGINAL_PLUS_TRANSLATION_AND_WOULD_LEAK_MODERN_TRANSLATION_MARKERS"
+  },
+  "temporal_support": {
+    "regimes": {
+      "1883-1895": {
+        "rows": 3202,
+        "note": "Early Modern Korean/Hanmun; Hanseong Sunbo/Jubo"
+      },
+      "1896-1910": {
+        "rows": 337354,
+        "note": "dense historical island"
+      },
+      "1911-1944": {
+        "rows": 211,
+        "note": "support desert; do not bridge trajectories across it"
+      },
+      "1945-1952": {
+        "rows": 22659,
+        "note": "post-liberation island"
+      }
+    },
+    "main_admission": "Modern Korean + integer year + publisher + exact script + exact keyword tuple containing 기사 + top-level text",
+    "admitted_documents": 204649,
+    "within_cell_exact_text_dedup_documents": 203528,
+    "within_cell_exact_text_removed": 1121,
+    "within_cell_exact_text_removed_fraction": 0.005477671525392257,
+    "four_year_chains": {
+      "all": 73,
+      "min_50_each_year": 40,
+      "min_200_each_year": 28
+    },
+    "dense_base_series": [
+      [
+        "황성신문",
+        "Hanja, Old Hangeul",
+        [
+          "기사",
+          "사회"
+        ],
+        1898,
+        1910,
+        846,
+        73555
+      ],
+      [
+        "황성신문",
+        "Hanja, Old Hangeul",
+        [
+          "기사",
+          "정치"
+        ],
+        1898,
+        1910,
+        241,
+        26756
+      ],
+      [
+        "대한매일신보",
+        "Hanja, Old Hangeul",
+        [
+          "기사",
+          "사회"
+        ],
+        1905,
+        1910,
+        2023,
+        46520
+      ],
+      [
+        "대한매일신보",
+        "Hanja, Old Hangeul",
+        [
+          "기사",
+          "정치"
+        ],
+        1905,
+        1910,
+        961,
+        10247
+      ],
+      [
+        "대한매일신보",
+        "Hanja, Old Hangeul",
+        [
+          "기사",
+          "문화"
+        ],
+        1906,
+        1910,
+        200,
+        2925
+      ]
+    ]
+  },
+  "edf_observability": {
+    "pre1910": {
+      "documents": 190055,
+      "document_feature_coverage": 0.13582384046723317,
+      "r0_hits": 34986,
+      "r1_events": 34984,
+      "overlap_removed_fraction": 0.00005716572343223003,
+      "effective_marker_count": 1.8582545593754147,
+      "dominant_marker": "즉",
+      "dominant_share": 0.8670039444349168,
+      "coarse_class_shares": {
+        "EXPANSION": 0.8678328474246841,
+        "TEMPORAL": 0.06425427313782656,
+        "CONTRAST": 0.037529297433259015,
+        "CAUSE_RESULT": 0.030383582004230265
+      }
+    },
+    "postlib_1945_1959": {
+      "documents": 14386,
+      "document_feature_coverage": 0.5189767829834562,
+      "r0_hits": 18367,
+      "r1_events": 16954,
+      "overlap_removed_fraction": 0.0769314531496706,
+      "effective_marker_count": 10.35602729256515,
+      "dominant_marker": "또",
+      "dominant_share": 0.2493058202210486,
+      "coarse_class_shares": {
+        "EXPANSION": 0.4981216311863669,
+        "CONTRAST": 0.20999618881689988,
+        "CAUSE_RESULT": 0.19861708498938313,
+        "TEMPORAL": 0.09326509500735014
+      }
+    }
+  },
+  "qfid_dense_28_dedup": {
+    "support": "same publisher × exact script × exact keyword tuple; four consecutive years; >=200 documents every year",
+    "n": 28,
+    "R0": {
+      "h1": {
+        "median_DQ": 0.00795265652848485,
+        "median_DF": 0.0022693953212272284,
+        "median_DT": 0.010408678812975778,
+        "median_fiber_share": 0.348234621367789
+      },
+      "h2": {
+        "median_DQ": 0.010930570840760202,
+        "median_DF": 0.0018742824288569,
+        "median_DT": 0.013208197672780043,
+        "median_fiber_share": 0.22701652118915872
+      },
+      "h3": {
+        "median_DQ": 0.012870801584301815,
+        "median_DF": 0.0023446340540686636,
+        "median_DT": 0.019364291711216872,
+        "median_fiber_share": 0.10532404484815466
+      },
+      "h3_gt_h1": {
+        "DT": 17,
+        "DF": 12,
+        "DQ": 21
+      },
+      "fiber_share_h3_lt_h1": 18,
+      "eta_fine_median": 0.46699949900721993,
+      "eta_coarse_median": 0.47376412723191563,
+      "eta_fine_lt_coarse": 21
+    },
+    "R1": {
+      "h1": {
+        "median_DQ": 0.00795265652848485,
+        "median_DF": 0.0022693953212272284,
+        "median_DT": 0.010408678812975778,
+        "median_fiber_share": 0.348234621367789
+      },
+      "h2": {
+        "median_DQ": 0.010930570840760202,
+        "median_DF": 0.0018742824288569,
+        "median_DT": 0.013079526944637824,
+        "median_fiber_share": 0.22701652118915872
+      },
+      "h3": {
+        "median_DQ": 0.012870801584301815,
+        "median_DF": 0.0023446340540686636,
+        "median_DT": 0.019364291711216872,
+        "median_fiber_share": 0.10532404484815466
+      },
+      "eta_fine_median": 0.46699949900721993,
+      "eta_coarse_median": 0.4682427492309626,
+      "eta_fine_lt_coarse": 21
+    },
+    "max_abs_qfid_identity_residual": 1.9081958235744878e-16,
+    "authority": "NUMERICALLY_EXACT_FEATURE_GEOMETRY_BUT_PRE1910_EDF_OBSERVABILITY_IS_COLLAPSED; DO_NOT PROMOTE SEMANTIC TEMPORAL LAW"
+  },
+  "postlib_bridge_1949_1952": {
+    "status": "LOWER_SUPPORT_BRIDGE_SIGNAL_ONLY",
+    "lanes": {
+      "마산일보|Hanja,Hangeul|기사,사회": {
+        "docs": [
+          102,
+          88,
+          473,
+          963
+        ],
+        "marker_coverage": [
+          0.5686274509803921,
+          0.42045454545454547,
+          0.5285412262156448,
+          0.5223260643821391
+        ],
+        "R0_fiber_share_h1_h2_h3": [
+          0.9393875439619114,
+          0.6674569158562353,
+          0.8524991666706605
+        ],
+        "R0_eta_fine": 0.2457977543145033,
+        "R0_eta_coarse": 0.3123320814242101
+      },
+      "마산일보|Hanja,Hangeul|기사,정치": {
+        "docs": [
+          77,
+          299,
+          491,
+          942
+        ],
+        "marker_coverage": [
+          0.7142857142857143,
+          0.3879598662207358,
+          0.5906313645621181,
+          0.6507430997876859
+        ],
+        "R0_fiber_share_h1_h2_h3": [
+          0.672252259293244,
+          0.7593586784770625,
+          0.6676683639456762
+        ],
+        "R0_eta_fine": 0.34647471485222925,
+        "R0_eta_coarse": 0.41541640132708607
+      }
+    },
+    "interpretation": "Postlib marker inventory is much more observable/diverse and shows fiber-dominant movement, closer in qualitative form to modern NIKL/AI-Hub lanes, but only two four-year lanes meet >=50 support."
+  },
+  "verdict": [
+    "PASS_OKHC_EXACT_THREE_SHARD_CUSTODY",
+    "PASS_TEMPORAL_SUPPORT_LATTICE",
+    "PASS_QFID_IDENTITY_ON_HISTORICAL_FEATURE_HITS",
+    "EXTERNAL_TEMPORAL_PATH_FINE_LT_COARSE_ON_21_OF_28_DENSE_CHAINS",
+    "LEGACY_EDF_PRE1910_OBSERVABILITY_COLLAPSE",
+    "POSTLIB_EDF_PARTIAL_VALIDITY_RECOVERY_SIGNAL",
+    "NO_CONTINUOUS_1911_1944_TEMPORAL_BRIDGE",
+    "NO_SEMANTIC_FUNCTION_OR_LANGUAGE_LAW_PROMOTED"
+  ],
+  "parent_primary_receipt": "artifacts/g9_p46_okhc_t2_receipt.json",
+  "authority_note": "This stricter Modern-Korean exact-script exact-keyword 기사 lane refines the canonical broader T2 receipt; it does not replace D1 primary admission."
+}
