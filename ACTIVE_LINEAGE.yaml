@@ -377,11 +377,16 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: G9_P46_R4A_FROZEN_LEARNED_COURT_THEN_OKHC_VALIDITY_ISLAND_TRANSPORT_AND_R2_R6_COUNTERFACTUAL_PACKET_R7_OBSERVATION_CHANNEL_CONTROL
+next_action: AWAIT_G9_P47_FORMAL_TITLE_ACCEPTANCE_THEN_OPEN_AS_ONE_COMPLETE_PHASE
 
 current_g9_p46:
-  status: OPEN_COMPETING_LANES_PROGRAM_T2_PRIMARY_AND_ARTICLE_SENSITIVITY_COMPLETE
+  status: CLOSED_REPRESENTATION_VALIDITY_REGION_AND_OBSERVATION_CHANNEL_COURT
   notion_receipt: 3efef561-cf92-8139-ab18-d55101c7266a
+  terminal_closure:
+    receipt: artifacts/g9_p46_terminal_closure.json
+    commit: 335f384f9fdf2e7d948c8e608648cd383ffec960
+    verdict: REPRESENTATION_VALIDITY_IS_REGION_RELATIVE_OBSERVATION_CHANNEL_CONDITIONING_REQUIRED_NO_GLOBAL_WINNER
+    p47_workflow: ONE_PHASE_ONE_COMPLETE_OUTPUT_DEFAULT
   empirical_parent: G9-P45
   p45_external_replication: CLOSED_DESCRIPTIVE_GEOMETRY_PARENT
   current_representation_privilege: FORBIDDEN
