@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p46.current-state.v1",
   "phase": "G9-P46",
-  "status": "OPEN_COMPETING_LANES_PROGRAM_R1_PASS_R2_R4_R5_R6_PRESEALED",
+  "status": "OPEN_COMPETING_LANES_PROGRAM_T2_EXECUTED_R1_PASS_R2_R4_R5_R6_PRESEALED",
   "notion_id": "3efef561-cf92-8139-ab18-d55101c7266a",
   "parent": "G9-P45",
   "p45_external_replication": "CLOSED_DESCRIPTIVE_GEOMETRY_PARENT",
@@ -14,7 +14,12 @@
     "p45_external_replication_pass": true,
     "exclusive_event_robustness_pass": true,
     "semantic_function_quotient_identified": false,
-    "mechanism_persistence_promoted": false
+    "mechanism_persistence_promoted": false,
+    "okhc_t2_historical_world_contact": true,
+    "legacy_edf_historical_universal_transport": false,
+    "global_fiber_dominance_law": false,
+    "script_conditioning_required": true,
+    "topic_conditioning_required": true
   },
   "repo": {
     "constitution_commit": "ac621cfd942e74e909bda0a3f5738c13ca6650c3",
@@ -34,14 +39,17 @@
     "r4_aihub_temporal_split_commit": "501c84a6524253d92505be9247f368d952ca835a",
     "r6_contract_commit": "8421a79a731081c369b4a12155b84991a70c03a3",
     "t3_revision_sublanes_commit": "032d46bb1d299e928de2cd76f365cfce5676c229",
-    "t2_okhc_manifest_commit": "4ef05206fc977f760b7df89fa7ddb2c4fd8ce995"
+    "t2_okhc_manifest_commit": "4ef05206fc977f760b7df89fa7ddb2c4fd8ce995",
+    "okhc_t2_receipt_commit": "d6496e281349bde040979a1c89c308228c5fc9a8",
+    "observability_surface_commit": "6d8278b1201171ffbb7a01ceb0a65d1d93a6e690",
+    "active_lineage_t2_close_commit": "00199011b915cad66fd3b2146cd131fa72581468"
   },
   "next_execution": [
-    "Acquire or receive the three OKHC news_archive shards; run schema/year/publisher/script census before any P46 outcome metric",
-    "Execute R4a frozen-encoder court on the sealed 2020-development / 2021-holdout AI-Hub split after model/pooling contract is fixed",
+    "Execute R4a frozen learned-encoder court on the already sealed AI-Hub 2020-development / 2021-holdout split",
+    "Use T2 OKHC as historical holdout for learned-representation observability/transport after R4a model family is frozen",
     "Build R2/R6 counterfactual packet from provenance-qualified P23/P25/P36 cases",
-    "Keep KLiCKe T3c on exact-event semantic HOLD until source semantics are resolved",
-    "Compare local winners in the representation × temporal-evidence matrix; do not force a global scalar winner"
+    "Keep T3c KLiCKe exact-event semantics on HOLD",
+    "Compare local Pareto winners across R0-R6 × T0-T3; do not force a global winner"
   ],
   "completed_execution": [
     "P46-B exact quotient-fiber accounting on 1,739 matched NIKL four-year common chains",
@@ -53,6 +61,10 @@
     "R2 field-authority mosaic derived from P36 native-gold courts",
     "R4/R5 learned/hybrid evaluation contract sealed before training",
     "R4a AI-Hub 2020 development -> 2021 temporal holdout split sealed",
-    "T2 OKHC three-shard 772 MB historical acquisition manifest sealed"
+    "T2 OKHC three-shard 772 MB historical acquisition manifest sealed",
+    "T2 OKHC three-shard historical world-contact executed on 364,409 rows with 0 parse errors",
+    "T2 D1 same-host-year exact-body dedup retained 285,053 known-year articles",
+    "T2 representation observability surface exposed historical R0/R1 coverage ceiling",
+    "T2 script- and topic-conditioned QFID/path analysis completed; no global fiber-dominance or temporal-scaling law promoted"
   ]
 }
