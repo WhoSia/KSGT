@@ -1,0 +1,21 @@
+{
+  "schema": "ksgt.g9.p47.f1-native-limit-sensitivity.v1",
+  "status": "PROCESS_TRIGGERED_PRESEAL_BEFORE_METRIC_READBACK",
+  "trigger": "Runtime tokenizer warning plus official sentence_bert_config.json declaring max_seq_length=128.",
+  "primary_preserved": "Canonical F0-F3 run 37389716969 remains max_length=512 parity Court.",
+  "sensitivity": {
+    "model": "jhgan/ko-sroberta-multitask",
+    "exact_primary_model_sha": "8fca7c9c98c26599be0e14b9916b11a756a26f19",
+    "native_max_length": 128,
+    "comparison": "F1 embeddings/observability at native 128 vs primary parity 512 on exact same 768-row packet",
+    "metrics": [
+      "token truncation rate",
+      "content proxy",
+      "effective rank",
+      "anisotropy",
+      "temporal centroid/path",
+      "nuisance probes"
+    ]
+  },
+  "authority": "ROBUSTNESS_ONLY_CANNOT_REPLACE_PRIMARY_REGARDLESS_OF_DIRECTION"
+}
