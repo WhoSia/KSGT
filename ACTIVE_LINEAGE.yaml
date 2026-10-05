@@ -377,7 +377,7 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: AWAIT_G9_P47_FORMAL_TITLE_ACCEPTANCE_THEN_OPEN_AS_ONE_COMPLETE_PHASE
+next_action: G9_P47_FROZEN_LEARNED_TRANSPORT_COURT_ACTIVE
 
 current_g9_p46:
   status: CLOSED_REPRESENTATION_VALIDITY_REGION_AND_OBSERVATION_CHANNEL_COURT
@@ -500,3 +500,31 @@ current_g9_p46:
     supersession_commit: 1f7ce3c4301134cf2e834708e9dd6d467ad651f9
     reason: RAW_REEXECUTION_BEFORE_CANONICAL_DERIVED_RECEIPT_RELOAD
     authority: NONE
+
+current_g9_p47:
+  status: OPEN_MODEL_FAMILY_FROZEN_PUBLIC_OKHC_ACTION_QUEUED
+  notion_receipt: 3f0ef561-cf92-81bc-ba6a-c45471b7bdda
+  parent: G9-P46
+  workflow_style: ONE_PHASE_ONE_COMPLETE_OUTPUT_DEFAULT
+  models:
+    F0: klue/roberta-base
+    F1: jhgan/ko-sroberta-multitask
+    F2: intfloat/multilingual-e5-base
+    F3: BAAI/bge-m3
+  constitution_commit: 68fd8de3a520c3edb13318cad66acab872c10987
+  packet_compiler_commit: c7a3f0c9028a87e90d8acbf4d510d123883a19b8
+  encoder_runner_commit: 84569b9fa496cf8fdded523c8cca2db66627069c
+  workflow_commit: ac3ab931b3e142260b619e78ca8383694e4879c0
+  workflow_run_id: 37389716969
+  partial_order_commit: da897fbfc4bb80755042bb8c264aa65e48dc3f85
+  current_state_commit: c2ed1f188784b6f1fe4d46483b97910b631675f8
+  private_aihub_external_compute_export: NOT_AUTHORIZED
+  private_drive_sharing_changed: false
+  fresh_human_recruitment: NOT_AUTHORIZED
+  public_okhc_packet:
+    regimes: 3
+    years_each: 4
+    sample_per_regime_year: 64
+    expected_rows: 768
+    canonical_text_field: TOP_LEVEL_TEXT
+  current_gate: OBSERVE_ACTION_PACKET_AND_FROZEN_ENCODER_ARTIFACTS
