@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p46.current-state.v1",
   "phase": "G9-P46",
-  "status": "OPEN_COMPETING_LANES_PROGRAM_T2_PRIMARY_AND_ARTICLE_SENSITIVITY_COMPLETE",
+  "status": "OPEN_COMPETING_LANES_PROGRAM_T2_CANONICAL_RECOVERED_R7_PRESEALED",
   "notion_id": "3efef561-cf92-8139-ab18-d55101c7266a",
   "parent": "G9-P45",
   "p45_external_replication": "CLOSED_DESCRIPTIVE_GEOMETRY_PARENT",
@@ -23,7 +23,11 @@
     "okhc_t2_primary_complete": true,
     "okhc_article_sensitivity_complete": true,
     "observation_channel_conditioning_required": true,
-    "pre1910_legacy_edf_observability_collapsed": true
+    "pre1910_legacy_edf_observability_collapsed": true,
+    "okhc_canonical_analysis_field": "top-level text",
+    "okhc_content_body_for_historical_edf": "FORBIDDEN_TRANSLATION_PACKAGING_WITNESS",
+    "r7_historical_observation_channel": "PRESEALED_EXTENSION",
+    "raw_reexecution_requires_canonical_receipt_reload": true
   },
   "repo": {
     "constitution_commit": "ac621cfd942e74e909bda0a3f5738c13ca6650c3",
@@ -49,14 +53,17 @@
     "active_lineage_t2_close_commit": "00199011b915cad66fd3b2146cd131fa72581468",
     "okhc_t2_article_sensitivity_commit": "cc055bc71f4e09f2783266bfea371a559070defa",
     "okhc_t2_article_sensitivity_replay_commit": "7adad9263e048774fee0cea784df888a393f273f",
-    "active_lineage_okhc_reconciliation_commit": "5e128d344ece462a146a4da512f3e057429bbbec"
+    "active_lineage_okhc_reconciliation_commit": "5e128d344ece462a146a4da512f3e057429bbbec",
+    "r7_initial_commit": "c105d41fd80d987c1832cbdf565b9de956689616",
+    "r7_canonical_alignment_commit": "3df3531f6594ba3baca61962079ed4a899d85d16",
+    "noncanonical_content_body_branch_supersession_commit": "1f7ce3c4301134cf2e834708e9dd6d467ad651f9"
   },
   "next_execution": [
     "Execute R4a frozen learned-encoder court on sealed AI-Hub 2020-development / 2021 temporal holdout",
-    "After R4a is sealed, transport the same frozen representation to OKHC validity islands with observability diagnostics",
+    "Transport the same frozen R4a representation to OKHC pre-1910 and postlib validity islands with observability diagnostics",
     "Build R2/R6 counterfactual packet from provenance-qualified P23/P25/P36 cases",
-    "Keep KLiCKe T3c exact-event semantic lane on HOLD",
-    "Do not bridge 1911-1944 OKHC support desert as a continuous temporal trajectory"
+    "Keep R7 raw-vs-validated-transduction as a future rival only; no PUA modernization without validated mapping",
+    "Never bridge the OKHC 1911-1944 support desert as continuous time"
   ],
   "completed_execution": [
     "P46-B exact quotient-fiber accounting on 1,739 matched NIKL four-year common chains",
@@ -77,7 +84,11 @@
     "T2 stricter Modern-Korean exact-script exact-topic article sensitivity completed",
     "OKHC observation-channel audit showed content.body translation packaging can inflate historical EDF markers",
     "Representation observability surface extended to source-channel conditioning",
-    "Drive raw custody verified for 017.7z and all three OKHC shards with no assistant re-upload"
+    "Drive raw custody verified for 017.7z and all three OKHC shards with no assistant re-upload",
+    "T2 canonical top-level-text receipt reloaded before further raw interpretation",
+    "Fresh content.body reanalysis branch marked NONCANONICAL/SUPERSEDED because translation packaging violates canonical observation field",
+    "R7 historical orthography/encoding observation-channel rival presealed and aligned to canonical observability surface",
+    "Research OS raw re-execution firewall failure witness recorded"
   ],
   "drive_raw_custody": {
     "raw_upload_by_assistant": false,
