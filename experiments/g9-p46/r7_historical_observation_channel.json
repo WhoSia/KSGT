@@ -1,6 +1,6 @@
 {
   "schema": "ksgt.g9.p46.r7.historical-observation-channel.v1",
-  "status": "PRESEALED_AFTER_SCHEMA_UNICODE_AUDIT_BEFORE_ANY_PUA_MAPPING",
+  "status": "PRESEALED_EXTENSION_OF_CANONICAL_OBSERVATION_SURFACE",
   "phase": "G9-P46",
   "motivation": {
     "okhc_pua_docs": 284674,
@@ -20,7 +20,8 @@
     "ORTHOGRAPHIC_CHANNEL_DRIFT != LEXICAL_REALIZATION_DRIFT",
     "LEXICAL_REALIZATION_DRIFT != SEMANTIC_FUNCTION_DRIFT",
     "PUA_PRESENCE != CORRUPTION",
-    "NO_PUA_TO_MODERN_MAPPING_WITHOUT_EXTERNAL_OR_INTERNAL VALIDATION"
+    "NO_PUA_TO_MODERN_MAPPING_WITHOUT_EXTERNAL_OR_INTERNAL VALIDATION",
+    "CONTENT_BODY_TRANSLATION_PACKAGING_MUST_NOT_ENTER_HISTORICAL_MARKER_COUNTS"
   ],
   "allowed_future_methods": [
     "validated PUA/old-Hangeul mapping table with provenance",
@@ -40,5 +41,10 @@
     "NORMALIZATION_INDUCES_FALSE_EQUIVALENCE",
     "R7_REMAINS_UNIDENTIFIED"
   ],
-  "authority": "RIVAL_CONSTITUTION_ONLY_NO_MAPPING_EXECUTED"
+  "authority": "RIVAL_CONSTITUTION_ONLY_NO_MAPPING_EXECUTED",
+  "canonical_analysis_field": "top-level OKHC text",
+  "canonical_parent": {
+    "observability_surface": "experiments/g9-p46/representation_observability_surface.json",
+    "commit": "6bf6a798f0bd6fc87e46a6cacf1f050b3d4de1ce"
+  }
 }
