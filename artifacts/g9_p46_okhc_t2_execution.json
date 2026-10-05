@@ -1,0 +1,227 @@
+{
+  "schema": "ksgt.g9.p46.t2.okhc-execution.v1",
+  "phase": "G9-P46-T2",
+  "status": "DERIVED_EXECUTION_COMPLETE_LOCAL_HISTORICAL_TRANSPORT",
+  "custody": {
+    "drive_parent": "KSGT root",
+    "drive_parent_id": "1T3NsDscZzkVFs66ValvPWKbvhwVppcnc",
+    "files": [
+      {
+        "name": "news_archive_part_001_of_003.jsonl",
+        "bytes": 299999863,
+        "sha256": "0ef1e00f4055be6adf288cc91f75539d9fed9d7733279956f471bcc2a84ac1df"
+      },
+      {
+        "name": "news_archive_part_002_of_003.jsonl",
+        "bytes": 299999459,
+        "sha256": "046a95987197086e2af8ccfe9845991366c4bb33b1de84ecabb266c7d4ccc34a"
+      },
+      {
+        "name": "news_archive_part_003_of_003.jsonl",
+        "bytes": 171640799,
+        "sha256": "dd143e14a930a56aa1ecbe9db3424962c535db1358e0d62f24edaaf44802e32f"
+      }
+    ],
+    "note": "Local uploaded bytes match the presealed Hugging Face manifest exactly. Drive copies have matching names/sizes and KSGT-root parent; Drive byte hashes were not independently recomputed."
+  },
+  "census": {
+    "rows": 364409,
+    "bad_json": 0,
+    "schema_variants": 1,
+    "corpus": "Korean Newspaper Archive",
+    "source": "National Library of Korea",
+    "doc_type": "news_article",
+    "copyright_status": "Public Domain",
+    "year_min": 1883,
+    "year_max": 1952,
+    "unique_years": 55,
+    "null_year": 983,
+    "languages": {
+      "Modern Korean": 315645,
+      "Hanmun": 26995,
+      "English": 17681,
+      "Early Modern Korean": 3102,
+      "Korean": 928,
+      "Japanese": 58
+    },
+    "scripts": {
+      "Hanja, Old Hangeul": 263908,
+      "Hanja, Hangeul": 32792,
+      "Hanja": 26500,
+      "Hangeul": 22975,
+      "Latin": 17681,
+      "Hanja, Latin": 495,
+      "Kanji, Kana": 58
+    },
+    "publishers": 39,
+    "missing_publisher": 17828,
+    "id_unique": 364409,
+    "id_duplicate_exact": 0,
+    "id_conflict": 0,
+    "empty_body": 0,
+    "source_provided_ufffd_docs": 0,
+    "body_length_median": 115,
+    "body_length_p90": 482,
+    "body_length_p99": 1708,
+    "body_length_max": 15471,
+    "exact_date_available": 225379,
+    "exact_date_unknown": 139030,
+    "exact_date_duplicate_groups": 14,
+    "exact_date_duplicate_extras": 14
+  },
+  "unicode_audit": {
+    "pua_docs": 284674,
+    "cjk_docs": 324029,
+    "hangul_syllable_docs": 319193,
+    "jamo_docs": 12254,
+    "modern_korean_old_hangeul_pua_rate": 0.9941,
+    "modern_korean_hangeul_pua_rate": 0.9758,
+    "text_equals_content_body_rate": 0.6341281362425187,
+    "authority": "No normalization was applied. PUA is treated as an observation-channel fact, not corruption."
+  },
+  "frozen_edf_coverage": {
+    "Modern Korean|Hanja, Old Hangeul": {
+      "docs": 263711,
+      "marker_docs": 29241,
+      "marker_doc_rate": 0.1109,
+      "hits": 48701
+    },
+    "Modern Korean|Hanja, Hangeul": {
+      "docs": 29829,
+      "marker_docs": 7065,
+      "marker_doc_rate": 0.2369,
+      "hits": 16735
+    },
+    "Modern Korean|Hangeul": {
+      "docs": 22105,
+      "marker_docs": 6150,
+      "marker_doc_rate": 0.2782,
+      "hits": 21032
+    },
+    "note": "Coverage is representation observability, not historical incidence."
+  },
+  "primary_gate": {
+    "language": "Modern Korean",
+    "keyword_head": "기사",
+    "exact_publisher": true,
+    "exact_script": true,
+    "consecutive_years": 4,
+    "min_documents_each_year": 200,
+    "min_marker_positive_documents_each_year": 100,
+    "dedup": "Only exact-date-known identical publisher/date/title/body duplicates; 3 extras removed in the primary gated subset.",
+    "primary_documents_after_gate_universe": 197441,
+    "legacy_hits": 54182,
+    "exclusive_events": 52480,
+    "overlap_hits_removed": 1702
+  },
+  "four_year_windows": {
+    "eligible_overlapping_windows": 9,
+    "support_max_canonical_series": [
+      {
+        "publisher": "대한매일신보",
+        "script": "Hanja, Old Hangeul",
+        "years": "1906-1909",
+        "documents": [
+          8894,
+          12525,
+          13253,
+          14021
+        ],
+        "marker_docs": [
+          1482,
+          1679,
+          2204,
+          1479
+        ],
+        "h1_fiber_share": 0.6203767004446772,
+        "h2_fiber_share": 0.3884,
+        "h3_fiber_share": 0.2612,
+        "fine_path_efficiency": 0.3486646111992607,
+        "coarse_path_efficiency": 0.36950394313228957
+      },
+      {
+        "publisher": "황성신문",
+        "script": "Hanja, Old Hangeul",
+        "years": "1907-1910",
+        "documents": [
+          12075,
+          12482,
+          15831,
+          13644
+        ],
+        "marker_docs": [
+          961,
+          1985,
+          2825,
+          1382
+        ],
+        "h1_fiber_share": 0.4501,
+        "h2_fiber_share": 0.5565,
+        "h3_fiber_share": 0.37603170237942624,
+        "fine_path_efficiency": 0.41949966772967634,
+        "coarse_path_efficiency": 0.4460559127514093
+      },
+      {
+        "publisher": "독립신문(서재필)",
+        "script": "Hangeul",
+        "years": "1896-1899",
+        "documents": [
+          854,
+          2235,
+          2358,
+          1357
+        ],
+        "marker_docs": [
+          195,
+          738,
+          722,
+          420
+        ],
+        "h1_fiber_share": 0.7975,
+        "h2_fiber_share": 0.9108,
+        "h3_fiber_share": 0.7038,
+        "fine_path_efficiency": 0.4856429676363211,
+        "coarse_path_efficiency": 0.64659421595591
+      }
+    ],
+    "canonical_median_fiber_share": {
+      "h1": 0.6203767004446772,
+      "h2": 0.5564681936380428,
+      "h3": 0.37603170237942624
+    },
+    "exact_qfid_identity_max_residual": "<1.5e-16",
+    "verdict": "HIGH_FIBER_SHARE_IS_NOT_HISTORICALLY_TRANSPORT_INVARIANT_ACROSS_PUBLISHER_SCRIPT_REGIMES"
+  },
+  "topic_control": {
+    "rule": "Second keyword label used only when broad stable labels and support pass; entity-like keyword labels are not treated as a stable topic ontology.",
+    "support_threshold": {
+      "min_documents_each_year": 50,
+      "min_marker_positive_each_year": 20
+    },
+    "support_max_series": 7,
+    "canonical_median_fiber_share": {
+      "h1": 0.639944172481348,
+      "h2": 0.5782054943950281,
+      "h3": 0.6234941299696872
+    },
+    "median_fine_path_efficiency": 0.3499155740735585,
+    "median_coarse_path_efficiency": 0.39138034415860506,
+    "fine_path_less_than_coarse": "3/7",
+    "interpretation": "Publisher-level natural-mixture and topic-conditioned geometry differ materially; composition drift is decision-relevant and prevents a single historical scaling law."
+  },
+  "authority": {
+    "promoted": [
+      "PASS_OKHC_RAW_CENSUS_AND_CUSTODY",
+      "PASS_EXACT_QFID_ACCOUNTING_ON_ADMISSIBLE_HISTORICAL_FEATURE_HITS",
+      "HISTORICAL_REPRESENTATION_GEOMETRY_IS_PUBLISHER_SCRIPT_AND_TOPIC_REGIME_DEPENDENT",
+      "COMMON_SUPPORT_AND_NATURAL_MIXTURE_MUST_REMAIN_SEPARATE"
+    ],
+    "not_promoted": [
+      "HISTORICAL_SEMANTIC_FUNCTION_QUOTIENT",
+      "ERA_INVARIANT_SURFACE_SUBSTITUTION_MECHANISM",
+      "EDF_MARKER_ABSENCE_AS_TRUE_HISTORICAL_ABSENCE",
+      "TEMPORAL_SCALING_LAW",
+      "PUA_NORMALIZED_EQUIVALENCE"
+    ]
+  }
+}
