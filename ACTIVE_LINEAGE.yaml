@@ -377,7 +377,7 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: G9_P46_R4A_FROZEN_LEARNED_COURT_THEN_OKHC_VALIDITY_ISLAND_TRANSPORT_AND_R2_R6_COUNTERFACTUAL_PACKET
+next_action: G9_P46_R4A_FROZEN_LEARNED_COURT_THEN_OKHC_VALIDITY_ISLAND_TRANSPORT_AND_R2_R6_COUNTERFACTUAL_PACKET_R7_OBSERVATION_CHANNEL_CONTROL
 
 current_g9_p46:
   status: OPEN_COMPETING_LANES_PROGRAM_T2_PRIMARY_AND_ARTICLE_SENSITIVITY_COMPLETE
@@ -394,6 +394,7 @@ current_g9_p46:
     - R4_LEARNED_LATENT
     - R5_HYBRID_CONSTRAINED_LATENT_TYPED
     - R6_DECISION_SUFFICIENT_QUOTIENT
+    - R7_HISTORICAL_OBSERVATION_CHANNEL
   constitution_path: experiments/g9-p46/constitution.json
   kernel_path: experiments/g9-p46/quotient_fiber.py
   test_path: experiments/g9-p46/test_quotient_fiber.py
@@ -480,3 +481,17 @@ current_g9_p46:
       okhc_part_001: 17dWmWX3z5ZwV3SFN22BGsLbwTbsjaG_N
       okhc_part_002: 1lJFtiwb7_pcYR3bsw0pwyqhqfXWlH2mB
       okhc_part_003: 1fBXJgoQfq3l64pNznfEMQRW-jM03SKVo
+
+  r7_historical_observation_channel:
+    status: PRESEALED_EXTENSION_OF_CANONICAL_OBSERVATION_SURFACE
+    constitution_commit_initial: c105d41fd80d987c1832cbdf565b9de956689616
+    canonical_alignment_commit: 3df3531f6594ba3baca61962079ed4a899d85d16
+    canonical_analysis_field: TOP_LEVEL_OKHC_TEXT
+    content_body_historical_edf: FORBIDDEN_TRANSLATION_PACKAGING_WITNESS
+    model: F_TO_R_TO_O_t_TO_X
+    pua_modernization: NOT_AUTHORIZED_WITHOUT_VALIDATED_MAPPING
+  t2_noncanonical_content_body_branch:
+    status: SUPERSEDED_FAILURE_WITNESS
+    supersession_commit: 1f7ce3c4301134cf2e834708e9dd6d467ad651f9
+    reason: RAW_REEXECUTION_BEFORE_CANONICAL_DERIVED_RECEIPT_RELOAD
+    authority: NONE
