@@ -1,0 +1,65 @@
+{
+  "schema": "ksgt.g9.p46.t2.okhc-topic-control.v1",
+  "status": "PRESEALED_BEFORE_T2_QFID_OUTCOMES",
+  "primary_language": "Modern Korean",
+  "primary_environment": "exact host × exact script × Modern Korean",
+  "metadata_topic_field": "first recognized value in metadata.keyword excluding generic '기사'",
+  "recognized_topics": [
+    "사회",
+    "정치",
+    "광고",
+    "문화",
+    "논설",
+    "기고",
+    "경제"
+  ],
+  "rationale": "closed semantic category list selected from repeated archive metadata labels before QFID/temporal outcomes; arbitrary named entities/bylines are not promoted to topic",
+  "views": {
+    "environment_natural_mixture": "all D1 documents within admitted host×script×year",
+    "topic_common_support": "exact host×script×recognized-topic with >=4 consecutive years and >=100 documents per year",
+    "note": "topic-control view is sensitivity/transport control, not replacement of primary environment trajectory"
+  },
+  "main_historical_language_lanes": [
+    [
+      "황성신문",
+      "Modern Korean",
+      "Hanja, Old Hangeul",
+      1898,
+      1910
+    ],
+    [
+      "대한매일신보",
+      "Modern Korean",
+      "Hanja, Old Hangeul",
+      1905,
+      1910
+    ],
+    [
+      "황성신문",
+      "Modern Korean",
+      "Hanja, Hangeul",
+      1903,
+      1910
+    ],
+    [
+      "독립신문(서재필)",
+      "Modern Korean",
+      "Hangeul",
+      1896,
+      1899
+    ],
+    [
+      "마산일보",
+      "Modern Korean",
+      "Hanja, Hangeul",
+      1949,
+      1952
+    ]
+  ],
+  "controls": [
+    "Hanmun/Hanja trajectories retained as language control, never pooled with Modern Korean",
+    "English/Latin lane retained as archive control only",
+    "missing-host rows excluded from primary publisher trajectories"
+  ],
+  "authority": "TOPIC_CONTROL_ADMISSION_ONLY"
+}
