@@ -377,10 +377,10 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: G9_P46_COMPETING_LANES_CONTINUE_R1_CLOSED_R2_R4_R5_R6_AND_T2_T3_ACTIVE
+next_action: G9_P46_R4A_FROZEN_LEARNED_COURT_THEN_OKHC_VALIDITY_ISLAND_TRANSPORT_AND_R2_R6_COUNTERFACTUAL_PACKET
 
 current_g9_p46:
-  status: PRESEALED_OPEN_REPRESENTATION_COURT
+  status: OPEN_COMPETING_LANES_PROGRAM_T2_PRIMARY_AND_ARTICLE_SENSITIVITY_COMPLETE
   notion_receipt: 3efef561-cf92-8139-ab18-d55101c7266a
   empirical_parent: G9-P45
   p45_external_replication: CLOSED_DESCRIPTIVE_GEOMETRY_PARENT
