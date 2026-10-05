@@ -1,0 +1,18 @@
+{
+  "schema": "ksgt.g9.p47.surface-nuisance-control.v1",
+  "status": "PRESEALED_BEFORE_ANY_F0_F3_RESULT",
+  "representation": "character 2-5 gram TF-IDF, min_df=2, sublinear_tf=true, L2 normalized",
+  "packet": "exact same 768-row public OKHC packet",
+  "purposes": [
+    "Estimate how much regime/year identity is available from shallow orthographic surface alone.",
+    "Prevent high neural nuisance-probe accuracy from being misread as learned functional structure.",
+    "Provide same-document split retrieval surface baseline."
+  ],
+  "metrics": [
+    "regime balanced accuracy",
+    "within-regime year balanced accuracy",
+    "split-view retrieval R@1/MRR"
+  ],
+  "authority": "INTERPRETATION_CONTROL_ONLY_NOT_A_KSGT_REPRESENTATION_WINNER",
+  "rule": "If a neural model's nuisance separability is comparable to this control, the nuisance result receives no latent-structure credit."
+}
