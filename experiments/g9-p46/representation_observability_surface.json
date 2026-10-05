@@ -1,0 +1,23 @@
+{
+  "schema": "ksgt.g9.p46.representation-observability-surface.v1",
+  "status": "POSTHOC_DIAGNOSTIC_ON_OKHC_PROSPECTIVE_REQUIREMENT_FOR_FUTURE_LANES",
+  "phase": "G9-P46",
+  "motivation": "Exact quotient/fiber accounting can be mathematically correct while the representation observes only a small or highly concentrated subset of documents/events.",
+  "coordinates": {
+    "omega": "Ω_R(E,t)=P_x[N_R(x)>0] — document observability / nonzero-event coverage",
+    "lambda": "λ_R(E,t)=E_x[N_R(x)] — mean detected events per document",
+    "effective_marker_support": "N_eff=exp(H(P_R(M|detected event))) — effective number of active marker types",
+    "event_distribution": "P_R(M | detected event) — conditional realized-event geometry"
+  },
+  "principle": [
+    "EXACT_DECOMPOSITION != ADEQUATE_MEASUREMENT",
+    "LOW_OBSERVABILITY_OR_SINGLE_MARKER_DOMINANCE_LIMITS_GEOMETRIC_INTERPRETATION",
+    "TEMPORAL_CHANGE_IN_OMEGA_IS_MEASUREMENT_TRANSPORT_EVIDENCE_NOT_AUTOMATIC_STYLE_DRIFT",
+    "QFID_MUST_BE_REPORTED_WITH_OBSERVABILITY_AND_CONCENTRATION_DIAGNOSTICS"
+  ],
+  "authority": {
+    "current_OKHC_use": "post-hoc diagnostic only; no hard coverage threshold promoted from observed outcomes",
+    "future_lanes": "Ω, λ and N_eff are mandatory prospective report fields",
+    "hard_threshold": "NONE_PRESEALED"
+  }
+}
