@@ -240,7 +240,7 @@ current_g9_p45:
   postlib_public_archive_lane: OPEN_BODY_SCHEMA_UNVERIFIED
   NIKL_2009_2018: COMPLETE_WITHIN_13_ARCHIVE_STREAMING_FAMILY
   NIKL_2019: COMPLETE_WITHIN_13_ARCHIVE_STREAMING_FAMILY
-  intermediate_continuity: PARTIALLY_ESTABLISHED_WITHIN_NIKL_REGISTER_OKHC_INDEPENDENT_REPLICATION_PENDING
+  intermediate_continuity: P45_CLOSED_ON_AI_HUB_EXTERNAL_REPLICATION_OKHC_HISTORICAL_LANE_EXECUTED_LATER_UNDER_P46
   notion_receipt: 3edef561-cf92-815e-8115-e064f5e65cf3
   drive_folder: 11gyHOKlViatdwRs2DjQs1matk5AxgvKQ
   drive_workbook: 10mIUISI7gd_hO9c_uxcmh94ZD6tWD1vEUV5UF4M8gCo
@@ -253,8 +253,8 @@ current_g9_p45:
   nikl_topic_adjacent_year_pairs: 3225
   nikl_topic_gaps: 42
   nikl_topic_collisions: 0
-  okhc_local_raw: NOT_PRESENT_LOCALLY
-  okhc_raw_custody_policy: LOCAL_IMMUTABLE_FIRST_DERIVED_FEATURES_TO_DRIVE
+  okhc_session_bytes: VERIFIED_3_OF_3_EXACT_SHA256_ON_2026_10_05
+  okhc_raw_custody_policy: USER_UPLOADED_ORIGINALS_RETAINED_UNMODIFIED_KSGT_DRIVE_ROOT_NO_ASSISTANT_RAW_UPLOAD
   checkpoint4d_receipt: artifacts/g9_p45_state_reconciliation_checkpoint4d.json
   topic_tail_checkpoint4e:
     receipt: artifacts/g9_p45_nikl_topic_tail_checkpoint4e.json
@@ -290,15 +290,15 @@ current_g9_p45:
     family: news_archive
     shards: 3
     full_download_required: false
-    next_gate: ACQUIRE_3_SHARDS_THEN_ROW_LEVEL_ADMISSION_AND_NIKL_REPLICATION
+    next_gate: COMPLETED_UNDER_G9_P46_T2
   okhc_downloads_audit_checkpoint4f:
     path: "C:\\Users\\kimwo\\Downloads"
     recursive_files: 235
     total_bytes: 29485596298
     matching_raw_filename_count: 0
     files_at_least_20gb: 0
-    custody_status: LOCATION_UNRESOLVED_NO_RAW_BYTES_VERIFIED
-    next_gate: USER_PROVIDE_EXACT_PATH_OR_PLACE_RAW_IN_STABLE_LOCAL_DIRECTORY
+    custody_status: SUPERSEDED_BY_2026_10_05_EXACT_3_SHARD_SESSION_AND_DRIVE_CUSTODY
+    next_gate: HISTORICAL_AUDIT_CLOSED_NO_ACTION
 
 current_g9_p44:
   status: CLOSED_WITH_TEMPORAL_CORPUS_HOLD
@@ -457,7 +457,15 @@ current_g9_p46:
     receipt: artifacts/g9_p46_okhc_t2_receipt.json
     receipt_commit: d6496e281349bde040979a1c89c308228c5fc9a8
     observability_constitution: experiments/g9-p46/representation_observability_surface.json
-    observability_commit: 6d8278b1201171ffbb7a01ceb0a65d1d93a6e690
+    observability_commit: 6bf6a798f0bd6fc87e46a6cacf1f050b3d4de1ce
+    article_sensitivity_receipt: artifacts/g9_p46_okhc_t2_article_sensitivity.json
+    article_sensitivity_commit: cc055bc71f4e09f2783266bfea371a559070defa
+    article_sensitivity_replay: experiments/g9-p46/okhc_t2_article_sensitivity.py
+    article_sensitivity_replay_commit: 7adad9263e048774fee0cea784df888a393f273f
+    observation_channel_text_body_marker_change_docs: 5045
+    observation_channel_translation_bearing_article_rows: 14831
+    pre1910_article_marker_coverage: 0.13582384046723317
+    postlib_article_marker_coverage: 0.5189767829834562
     verdicts:
       - PASS_OKHC_T2_HISTORICAL_WORLD_CONTACT
       - R0_R1_HISTORICAL_OBSERVABILITY_CEILING_EXPOSED
@@ -467,3 +475,8 @@ current_g9_p46:
       - NO_TEMPORAL_SCALING_LAW
     raw_upload_by_assistant: false
     raw_drive_custody: KSGT_ROOT_EXISTING_USER_UPLOAD
+    drive_raw_custody_ids:
+      017_7z: 1tmvqqfPUibSuDq8N_K2pOD0Ju3CZh6Am
+      okhc_part_001: 17dWmWX3z5ZwV3SFN22BGsLbwTbsjaG_N
+      okhc_part_002: 1lJFtiwb7_pcYR3bsw0pwyqhqfXWlH2mB
+      okhc_part_003: 1fBXJgoQfq3l64pNznfEMQRW-jM03SKVo
