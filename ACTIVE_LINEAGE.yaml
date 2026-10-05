@@ -437,8 +437,33 @@ current_g9_p46:
       - T3c_EXACT_EVENT_PROCESS_HOLD
       - T3d_TRIGGER_LINKED_HUMAN_REVISION
   t2_okhc_historical:
-    status: ACQUISITION_MANIFEST_SEALED
+    status: ACQUIRED_AND_EXECUTED
     manifest_commit: 4ef05206fc977f760b7df89fa7ddb2c4fd8ce995
     selected_files: 3
     approximate_total_mb: 772
     full_repo_download_required: false
+
+  t2_okhc_historical_world_contact:
+    status: DERIVED_EXECUTION_COMPLETE_REPRESENTATION_COVERAGE_CEILING_EXPOSED
+    source_rows: 364409
+    unique_ids: 364409
+    year_range: [1883, 1952]
+    parse_errors: 0
+    d1_known_year_docs: 285053
+    d1_same_host_year_exact_duplicate_extras_removed: 78374
+    r0_marker_hits: 101040
+    r1_exclusive_events: 97584
+    documents_with_any_r0_marker: 41942
+    receipt: artifacts/g9_p46_okhc_t2_receipt.json
+    receipt_commit: d6496e281349bde040979a1c89c308228c5fc9a8
+    observability_constitution: experiments/g9-p46/representation_observability_surface.json
+    observability_commit: 6d8278b1201171ffbb7a01ceb0a65d1d93a6e690
+    verdicts:
+      - PASS_OKHC_T2_HISTORICAL_WORLD_CONTACT
+      - R0_R1_HISTORICAL_OBSERVABILITY_CEILING_EXPOSED
+      - SCRIPT_CONDITIONING_MANDATORY
+      - TOPIC_CONDITIONING_MATERIALLY_CHANGES_FIBER_GEOMETRY
+      - NO_GLOBAL_FIBER_DOMINANCE_LAW
+      - NO_TEMPORAL_SCALING_LAW
+    raw_upload_by_assistant: false
+    raw_drive_custody: KSGT_ROOT_EXISTING_USER_UPLOAD
