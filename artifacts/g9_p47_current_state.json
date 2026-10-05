@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p47.current-state.v1",
   "phase": "G9-P47",
-  "status": "OPEN_MODEL_FAMILY_FROZEN_PUBLIC_OKHC_ACTION_QUEUED",
+  "status": "OPEN_PUBLIC_OKHC_PACKET_PASS_F0_F1_RUNNING_F2_F3_QUEUED",
   "notion_id": "3f0ef561-cf92-81bc-ba6a-c45471b7bdda",
   "parent": "G9-P46",
   "inherited_terminal_verdict": "REPRESENTATION_VALIDITY_IS_REGION_RELATIVE_OBSERVATION_CHANNEL_CONDITIONING_REQUIRED_NO_GLOBAL_WINNER",
@@ -16,27 +16,53 @@
     "canonical_text_field": "top-level text",
     "workflow_run_id": 37389716969,
     "workflow_head": "ac3ab931b3e142260b619e78ca8383694e4879c0",
-    "status": "QUEUED",
-    "private_aihub_export": false
+    "status": "PACKET_SUCCESS_MODEL_MATRIX_RUNNING",
+    "private_aihub_export": false,
+    "packet_artifact_id": 11380303016,
+    "packet_artifact_sha256": "fe09f05ebba6e75f6bd6bca753b95760a8447df62de54599f4449c45c9a868bf",
+    "packet_rows": 768,
+    "eligible_counts": {
+      "POSTLIB_HANJA_HANGEUL_MASAN": {
+        "1949": 189,
+        "1950": 444,
+        "1951": 1048,
+        "1952": 1993
+      },
+      "PRE_HANGEUL_INDEPENDENT": {
+        "1896": 1596,
+        "1897": 3717,
+        "1898": 3553,
+        "1899": 2532
+      },
+      "PRE_OLD_HANGEUL_DAEHAN": {
+        "1906": 8894,
+        "1907": 12525,
+        "1908": 13253,
+        "1909": 14022
+      }
+    }
   },
   "theoretical_contracts": {
     "constitution_commit": "68fd8de3a520c3edb13318cad66acab872c10987",
     "packet_compiler_commit": "c7a3f0c9028a87e90d8acbf4d510d123883a19b8",
     "encoder_runner_commit": "84569b9fa496cf8fdded523c8cca2db66627069c",
     "workflow_commit": "ac3ab931b3e142260b619e78ca8383694e4879c0",
-    "partial_order_commit": "da897fbfc4bb80755042bb8c264aa65e48dc3f85"
+    "partial_order_commit": "da897fbfc4bb80755042bb8c264aa65e48dc3f85",
+    "existing_human_provenance_commit": "8c4ef490d32ad4636379249f9d1234fe40fd27cb"
   },
   "authority": {
     "global_winner_preassumed": false,
     "high_nuisance_separability_is_benefit": false,
     "private_drive_sharing_changed": false,
     "human_preference_supervision_authorized": false,
-    "hybrid_hard_constraints_only_from_promoted_r2_fields": true
+    "hybrid_hard_constraints_only_from_promoted_r2_fields": true,
+    "scalar_native_preference": "RETIRED_FROM_P36_R11",
+    "r8_pair_preference_gold": false
   },
   "next_execution": [
-    "Observe public OKHC packet and four frozen encoder artifacts when workflow runner executes",
-    "Adjudicate tokenizer observability, content proxy, nuisance risk, temporal path and effective rank",
-    "Recover provenance-qualified P36 counterfactual surfaces without fresh recruitment",
-    "Only then decide whether adaptive/fine-tuned R4b or R5 hybrid earns execution"
+    "Complete F0-F3 public frozen encoder matrix",
+    "Adjudicate observability/content/nuisance/temporal coordinates as partial order",
+    "Use P36-R11 160/160 matched counter-action support only as conditional pair authority, never scalar preference gold",
+    "Then decide whether adaptive R4b or constrained R5 execution changes an authority-bearing coordinate"
   ]
 }
