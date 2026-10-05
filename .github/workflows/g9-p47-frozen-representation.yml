@@ -3,7 +3,9 @@ name: G9-P47 Frozen Representation Court
 on:
   push:
     paths:
-      - "experiments/g9-p47/**"
+      - "experiments/g9-p47/constitution.json"
+      - "experiments/g9-p47/prepare_okhc_public_packet.py"
+      - "experiments/g9-p47/run_frozen_encoder.py"
       - ".github/workflows/g9-p47-frozen-representation.yml"
   workflow_dispatch:
 
