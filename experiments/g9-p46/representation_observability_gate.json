@@ -1,0 +1,40 @@
+{
+  "schema": "ksgt.g9.p46.representation-observability-gate.v1",
+  "status": "SEALED_FROM_OKHC_T2_FAILURE_WITNESS",
+  "principle": "REPRESENTATION_GEOMETRY_REQUIRES_OBSERVABILITY_AUDIT_BEFORE_SEMANTIC_OR_TEMPORAL_INTERPRETATION",
+  "metrics": {
+    "coverage": "C_R = P(document contains at least one observable feature under R)",
+    "effective_support": "N_eff = exp(H(p_feature)) over observed feature mass",
+    "dominance": "D_max = max_j p_feature(j)",
+    "overlap_loss": "L_overlap = 1 - total_exclusive_events / total_legacy_hits when R1 exists",
+    "source_channel": "report whether canonical text differs from raw-ish/source body and whether that changes feature counts"
+  },
+  "no_threshold_rule": "No universal pass threshold is frozen from the OKHC outcome. These metrics define a validity surface and must accompany geometric claims.",
+  "interpretation": [
+    "Low coverage means many documents are invisible to the representation.",
+    "Low N_eff / high D_max means nominally high-dimensional representation has collapsed to a few features.",
+    "Geometry from a collapsed representation may be numerically exact yet scientifically non-comparable to another validity region.",
+    "Observation/canonicalization channels must be separated from language drift."
+  ],
+  "okhc_failure_witness": {
+    "pre1910_modern_korean_news": {
+      "documents": 190055,
+      "feature_coverage": 0.13582384046723317,
+      "r0_hits": 34986,
+      "effective_markers": 1.8582545593754147,
+      "dominant_marker": "즉",
+      "dominant_share": 0.8670039444349168,
+      "overlap_removed_fraction": 0.00005716572343223003
+    },
+    "postlib_1945_1959_modern_korean_news": {
+      "documents": 14386,
+      "feature_coverage": 0.5189767829834562,
+      "r0_hits": 18367,
+      "effective_markers": 10.35602729256515,
+      "dominant_marker": "또",
+      "dominant_share": 0.2493058202210486,
+      "overlap_removed_fraction": 0.0769314531496706
+    }
+  },
+  "consequence": "R0/R1 EDF has time-dependent validity regions; pre-1910 and postlib geometry cannot be treated as the same measurement channel without qualification."
+}
