@@ -1,0 +1,265 @@
+{
+  "schema": "ksgt.g9.p46.okhc-t2-historical-world-contact.v1",
+  "phase": "G9-P46-T2",
+  "status": "DERIVED_EXECUTION_COMPLETE_REPRESENTATION_COVERAGE_CEILING_EXPOSED",
+  "source": {
+    "repository": "seyoungsong/Open-Korean-Historical-Corpus",
+    "family": "news_archive",
+    "files": [
+      [
+        "news_archive_part_001_of_003.jsonl",
+        299999863,
+        "0ef1e00f4055be6adf288cc91f75539d9fed9d7733279956f471bcc2a84ac1df"
+      ],
+      [
+        "news_archive_part_002_of_003.jsonl",
+        299999459,
+        "046a95987197086e2af8ccfe9845991366c4bb33b1de84ecabb266c7d4ccc34a"
+      ],
+      [
+        "news_archive_part_003_of_003.jsonl",
+        171640799,
+        "dd143e14a930a56aa1ecbe9db3424962c535db1358e0d62f24edaaf44802e32f"
+      ]
+    ],
+    "parse_errors": 0,
+    "rows": 364409,
+    "unique_ids": 364409,
+    "year_range": [
+      1883,
+      1952
+    ],
+    "missing_year": 983
+  },
+  "census": {
+    "languages": {
+      "Modern Korean": 315645,
+      "Hanmun": 26995,
+      "English": 17681,
+      "Early Modern Korean": 3102,
+      "Korean": 928,
+      "Japanese": 58
+    },
+    "scripts": {
+      "Hanja, Old Hangeul": 263908,
+      "Hanja, Hangeul": 32792,
+      "Hanja": 26500,
+      "Hangeul": 22975,
+      "Latin": 17681,
+      "Hanja, Latin": 495,
+      "Kanji, Kana": 58
+    },
+    "largest_hosts": {
+      "황성신문": 188607,
+      "대한매일신보": 104936,
+      "독립신문(서재필)": 19636,
+      "남조선민보": 15026,
+      "매일신문": 6842,
+      "마산일보": 6220
+    }
+  },
+  "dedup": {
+    "global_exact_body_duplicate_extras": 78641,
+    "same_host_year_exact_body_duplicate_extras": 78374,
+    "D1_primary_known_year_docs": 285053,
+    "D1_rule": "collapse byte-exact content.body duplicates inside exact host×year, retain lexicographically smallest source id",
+    "D2_global_sensitivity_known_year_docs": 284786,
+    "result": "D2 metrics are nearly identical to D1 on admitted lanes; global duplicate collapse is not a material driver after D1"
+  },
+  "D1_marker_observability": {
+    "all_known_year_docs": 285053,
+    "docs_with_at_least_one_R0_marker": 41942,
+    "R0_hits": 101040,
+    "R1_exclusive_events": 97584,
+    "overlap_hits_removed": 3456
+  },
+  "primary_Modern_Korean_lanes": [
+    {
+      "env": [
+        "황성신문",
+        "Modern Korean",
+        "Hanja, Old Hangeul"
+      ],
+      "years": [
+        1898,
+        1910
+      ],
+      "documents": 125865,
+      "omega_median": 0.07986257186930304,
+      "omega_min": 0.019870682857593438,
+      "omega_max": 0.3128693994280267,
+      "marker_top": [
+        "즉",
+        16212
+      ],
+      "marker_top_share": 0.9433808553971487,
+      "effective_marker_support": 1.362489396364194,
+      "R0_adjacent_median": {
+        "total": 0.019038795904105038,
+        "quotient": 0.007540735339886362,
+        "fiber": 0.005702983355992036,
+        "fiber_share": 0.4464927479391525,
+        "path_eta": 0.4366430015033573
+      },
+      "R1_adjacent_median": {
+        "total": 0.01684716141610893,
+        "fiber_share": 0.4464927479391524,
+        "path_eta": 0.42774913812417703
+      }
+    },
+    {
+      "env": [
+        "대한매일신보",
+        "Modern Korean",
+        "Hanja, Old Hangeul"
+      ],
+      "years": [
+        1905,
+        1910
+      ],
+      "documents": 74392,
+      "omega_median": 0.14127502499870273,
+      "omega_min": 0.07028887266659714,
+      "omega_max": 0.2582322357019064,
+      "marker_top": [
+        "즉",
+        12323
+      ],
+      "marker_top_share": 0.9313732900007557,
+      "effective_marker_support": 1.425088962005769,
+      "R0_adjacent_median": {
+        "total": 0.005712088962369549,
+        "quotient": 0.0018006230399992323,
+        "fiber": 0.0020290114795745553,
+        "fiber_share": 0.582872192717444,
+        "path_eta": 0.5571434817621885
+      },
+      "R1_adjacent_median": {
+        "total": 0.005712088962369549,
+        "fiber_share": 0.5828721927174495,
+        "path_eta": 0.5571434817621885
+      }
+    },
+    {
+      "env": [
+        "황성신문",
+        "Modern Korean",
+        "Hanja, Hangeul"
+      ],
+      "years": [
+        1903,
+        1910
+      ],
+      "documents": 4928,
+      "omega_median": 0.004598330080128795,
+      "omega_min": 0,
+      "omega_max": 0.013953488372093023,
+      "marker_top": [
+        "즉",
+        78
+      ],
+      "marker_top_share": 1,
+      "effective_marker_support": 1,
+      "R0_adjacent_median": {
+        "total": 0,
+        "fiber_share": 0,
+        "path_eta": 0.5
+      },
+      "verdict": "LEGACY_EDF_OBSERVABILITY_COLLAPSE"
+    },
+    {
+      "env": [
+        "독립신문(서재필)",
+        "Modern Korean",
+        "Hangeul"
+      ],
+      "years": [
+        1896,
+        1899
+      ],
+      "documents": 11871,
+      "omega_median": 0.34344901403783124,
+      "omega_min": 0.274364406779661,
+      "omega_max": 0.3924050632911392,
+      "marker_top": [
+        "즉",
+        7428
+      ],
+      "marker_top_share": 0.42894265750418664,
+      "effective_marker_support": 6.709950399326116,
+      "R0_adjacent_median": {
+        "total": 0.008968971056544229,
+        "quotient": 0.0015503546523054847,
+        "fiber": 0.007418616404238741,
+        "fiber_share": 0.7566700630993295,
+        "path_eta": 0.5913909992725932
+      },
+      "R1_adjacent_median": {
+        "total": 0.009451844624464915,
+        "fiber_share": 0.762389094095211,
+        "path_eta": 0.58987259890459
+      }
+    },
+    {
+      "env": [
+        "마산일보",
+        "Modern Korean",
+        "Hanja, Hangeul"
+      ],
+      "years": [
+        1949,
+        1952
+      ],
+      "documents": 4446,
+      "omega_median": 0.48822548810871536,
+      "omega_min": 0.38169642857142855,
+      "omega_max": 0.5540540540540541,
+      "marker_top": [
+        "또",
+        1567
+      ],
+      "marker_top_share": 0.29289719626168226,
+      "effective_marker_support": 9.83514746119218,
+      "R0_adjacent_median": {
+        "total": 0.04386550113479148,
+        "quotient": 0.007558398233492823,
+        "fiber": 0.036307102901298655,
+        "fiber_share": 0.8585180550686625,
+        "path_eta": 0.29857317922616666
+      },
+      "R1_adjacent_median": {
+        "total": 0.050168069832264295,
+        "fiber_share": 0.8591401353568381,
+        "path_eta": 0.29203485373664884
+      }
+    }
+  ],
+  "topic_common_support": {
+    "admitted_lanes": 13,
+    "key_findings": [
+      "대한매일신보 Old-Hangeul R0 median fiber share varies from 0.0814 (정치) to 0.6384 (광고)",
+      "독립신문 Hangeul R0 median fiber share is 0.8346 (사회) vs 0.9093 (정치)",
+      "황성신문 Old-Hangeul topic lanes range from 0.0 to 0.5002"
+    ],
+    "interpretation": "topic-conditioned dynamics differ materially; no publisher-wide global fiber-dominance law is promoted"
+  },
+  "verdicts": [
+    "PASS_OKHC_T2_HISTORICAL_WORLD_CONTACT",
+    "PASS_EXACT_QFID_ACCOUNTING_WHERE_EVENTS_EXIST",
+    "R0_R1_HISTORICAL_OBSERVABILITY_CEILING_EXPOSED",
+    "SCRIPT_CONDITIONING_MANDATORY",
+    "TOPIC_CONDITIONING_MATERIALLY_CHANGES_FIBER_GEOMETRY",
+    "NO_GLOBAL_FIBER_DOMINANCE_LAW",
+    "NO_TEMPORAL_SCALING_LAW",
+    "R1_OVERLAP_REMOVAL_DOES_NOT_REPAIR_HISTORICAL_COVERAGE",
+    "D1_DEDUP_PRIMARY_ROBUST_TO_D2_GLOBAL_SENSITIVITY",
+    "R2_R4_R5_COMPETITION_STRENGTHENED"
+  ],
+  "not_promoted": [
+    "historical semantic-function quotient",
+    "monotone language drift",
+    "modern EDF validity across 1883-1952",
+    "cross-script pooling",
+    "causal style mechanism"
+  ]
+}
