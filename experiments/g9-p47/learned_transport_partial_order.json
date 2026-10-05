@@ -1,0 +1,41 @@
+{
+  "schema": "ksgt.g9.p47.learned-transport-partial-order.v1",
+  "phase": "G9-P47",
+  "status": "PRESEALED_BEFORE_FROZEN_ENCODER_OUTCOME",
+  "objects": {
+    "representation": "Z=phi(X)",
+    "authorized_functional_state": "Y_F when current evidence supports it",
+    "nuisance_state": "N=(period, source, publisher, script, observation-channel metadata)",
+    "decision_state": "Delta=(admissible_actions, veto, abstention, authority)"
+  },
+  "evaluation_vector": [
+    "O: tokenizer/observation coverage and truncation",
+    "C: weak same-document content preservation",
+    "T: frozen temporal path stability",
+    "N: nuisance separability risk",
+    "K: typed-counterfactual selectivity where R2 authority exists",
+    "D: R6 decision distortion where decision authority exists",
+    "A: adaptation cost for adaptive models"
+  ],
+  "rules": [
+    "No weighted scalar score is frozen.",
+    "High N is not a benefit by default; it is evidence that corpus/period/script identity is easily recoverable from Z.",
+    "C without K or D cannot establish semantic/function preservation.",
+    "Low N obtained by removing information post-hoc is not automatically good; content/decision damage must be tested.",
+    "A model may dominate in one validity region and lose in another.",
+    "Pareto incomparability is a valid terminal scientific result."
+  ],
+  "local_dominance": "R_i locally dominates R_j on validity region E only if no authority-bearing coordinate is worse beyond its frozen tolerance and at least one coordinate is strictly better; nuisance risk is ordered lower-is-better only after content/decision preservation is not worse.",
+  "hybrid_state": {
+    "form": "H=(Z, Q_promoted, Delta_authority)",
+    "hard_constraints": "only R2 PROMOTED fields within their native validity region",
+    "soft_or_abstain": [
+      "PARTIAL",
+      "HOLD",
+      "LIVE_HISTORICAL_HYPOTHESIS"
+    ],
+    "no_fresh_human_preference_supervision": true
+  },
+  "no_fresh_recruitment": "Existing-human provenance and public/canonical traces are exhausted first. Packet readiness does not authorize new participant recruitment.",
+  "authority": "CONSTITUTION_ONLY_UNTIL_EMPIRICAL_COORDINATES_ARE_AVAILABLE"
+}
