@@ -1,0 +1,51 @@
+name: G9-P48 KoLLA Generation Pilot
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p48/prepare_kolla_generation_packet.py"
+      - "experiments/g9-p48/run_kolla_generation_pilot.py"
+      - ".github/workflows/g9-p48-kolla-generation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile source and hidden-gold packets
+        run: python experiments/g9-p48/prepare_kolla_generation_packet.py
+      - name: Upload packet receipt only
+        uses: actions/upload-artifact@v4
+        with:
+          name: g9-p48-kolla-packet-receipt
+          path: g9_p48_kolla_packet_receipt.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Install frozen generator runtime
+        run: python -m pip install "torch==2.6.0" "transformers==4.49.0" "huggingface-hub==0.29.1" "safetensors>=0.4.5"
+      - name: Execute hidden-gold generation pilot
+        env:
+          TOKENIZERS_PARALLELISM: "false"
+        run: |
+          python experiments/g9-p48/run_kolla_generation_pilot.py \
+            --source p48_kolla_source_packet.jsonl \
+            --gold p48_kolla_hidden_gold.jsonl \
+            --out g9_p48_kolla_generation_result.json
+      - name: Delete ephemeral raw packets
+        if: always()
+        run: rm -f p48_kolla_source_packet.jsonl p48_kolla_hidden_gold.jsonl
+      - name: Upload aggregate result only
+        uses: actions/upload-artifact@v4
+        with:
+          name: g9-p48-kolla-generation-result
+          path: g9_p48_kolla_generation_result.json
+          if-no-files-found: error
+          retention-days: 30
