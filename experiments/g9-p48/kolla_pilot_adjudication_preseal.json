@@ -1,0 +1,35 @@
+{
+  "schema": "ksgt.g9.p48.kolla-pilot-adjudication-preseal.v1",
+  "status": "PRESEALED_BEFORE_RESULT",
+  "run_id": 37417945500,
+  "primary_unit": "A1 vs A3 on byte-identical K=4 candidate pools",
+  "authority_events": {
+    "RESCUE": "A1 top-ranked candidate is illegal AND at least one legal candidate exists; A3 selects the highest-scored legal candidate.",
+    "ABSTAIN": "No legal candidate exists; A3 returns no selected output.",
+    "DORMANT": "A1 top-ranked candidate is already legal; A3 necessarily selects the same candidate.",
+    "GATE_HARM": "Impossible by construction with respect to frozen legality: A3 cannot select an illegal candidate. Possible scientific harm can still occur if legality itself overconstrains a valid correction."
+  },
+  "primary_report": [
+    "rescue_count and rescue_rate overall/K1/K2",
+    "abstain_count and rate overall/K1/K2",
+    "A1 vs A3 hard-cargo pass rate on K1",
+    "candidate legal-set size distribution",
+    "A1-A3 divergence count"
+  ],
+  "primary_promotion": {
+    "architecture_activity": "RESCUE_COUNT > 0 promotes AUTHORITY_GATE_HAS_OUTPUT_LEVEL_EFFECT on this L2 GEC pilot.",
+    "preservation_gain": "K1 A3 cargo-pass > K1 A1 cargo-pass promotes LOCAL_HARD_CARGO_PRESERVATION_GAIN.",
+    "no_global_quality": "Neither event promotes better Korean writing."
+  },
+  "falsifiers": [
+    "If all candidate pools are DORMANT, this packet does not demonstrate a generation-time gate effect.",
+    "If A3 abstention is frequent because the frozen legality rule is too brittle, promote OVERCONSTRAINT_RISK rather than safety success.",
+    "If hidden-reference diagnostics worsen, record task-proxy tradeoff; do not tune the gate retrospectively."
+  ],
+  "hidden_gold_diagnostics": {
+    "exact_reference_hit": "diagnostic only",
+    "nearest_reference_char_distance": "diagnostic only",
+    "promotion_authority": false
+  },
+  "p48_closure_rule": "This bounded L2 pilot cannot by itself close P48 with a measurable-better-Korean-writing verdict. It can establish architecture activity/preservation behavior and determine the next world-contact lane."
+}
