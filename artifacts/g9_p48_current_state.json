@@ -1,71 +1,67 @@
 {
-  "schema": "ksgt.g9.p48.current-state.v1",
+  "schema": "ksgt.g9.p48.current-state.v2",
   "phase": "G9-P48",
-  "status": "OPEN_PREFLIGHT_COMPLETE_FIRST_GENERATION_PACKET_PRESEAL",
+  "status": "OPEN_CANDIDATE_BUDGET_INTERVENTION_RUNNING",
   "notion_id": "3f1ef561-cf92-81a8-b5d3-c42973a9618c",
   "parent": "G9-P47",
   "stage_type": "EXPERIMENT",
   "formal_title": "KSGT Generation IX G9-P48 — Authority-Gated Set-Valued Generation & Revision Reentry Experiment, Learned Proposal under Typed Legality, Supported-Plurality Preservation, Abstention-First Decoding, Semantic-Cargo / Register / Style Constraint Retention, Counterfactual Edit Minimality, Baseline Decoder Comparison & Whether Representation-Level Gains Survive as Measurable Korean Writing Improvement",
-  "inherited_terminal_verdict": "LEARNED_GEOMETRY_TRANSPORTS_LOCALLY_BUT_DOES_NOT_IDENTIFY_FUNCTIONAL_STRUCTURE_ALONE_ADAPTATION_MODEL_RELATIVE_NO_FREE_INVARIANCE_SET_VALUED_AUTHORITY_GATED_HYBRID_SURVIVES_NO_GLOBAL_WINNER",
-  "arms": [
-    "A0_SINGLE_BEST_UNCONSTRAINED",
-    "A1_LEARNED_SET_VALUED",
-    "A2_AUTHORITY_SET_ONLY",
-    "A3_AUTHORITY_GATED_HYBRID"
-  ],
-  "measurement_vector": [
-    "P",
-    "T",
-    "C",
-    "R",
-    "B",
-    "A"
-  ],
   "generator": {
-    "status": "EXACT_REVISION_FROZEN",
     "repo": "Qwen/Qwen2.5-0.5B-Instruct",
     "exact_sha": "7ae557604adf67be50417f59c2c2f167def9a775",
-    "freeze_commit": "4c3aa54aeffb15f7a7da9ca29a6ad46e4735b92a",
-    "freeze_update_commit": "066a8bc07a16d8c685d4f18cdbba7f6e83a4c450",
     "smoke_run_id": 37417176471,
-    "smoke_receipt": "artifacts/g9_p48_generator_smoke_adjudication.json",
-    "smoke_receipt_commit": "c7b9bf53c6b29ca55bd0c6e2dcdb2f9a0c28c9bc"
+    "status": "FROZEN_PASS"
   },
-  "sources": {
-    "stylekqc": {
-      "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
-      "audit_run_id": 37416866844,
-      "status": "AUDIT_COMPLETE_DIRECTED_REGISTER_GOLD_HOLD",
-      "receipt": "artifacts/g9_p48_stylekqc_source_adjudication.json"
-    },
-    "kolla_v2": {
-      "status": "AUDIT_COMPLETE_MULTI_REFERENCE_L2_GEC_PASS",
-      "doi": "10.5281/zenodo.16908784",
-      "m2_md5": "9a6f2e3fea1b39bbb7343445db1167f7",
-      "audit_run_id": 37417218534,
-      "audit_receipt": "artifacts/g9_p48_kolla_v2_source_adjudication.json",
-      "audit_receipt_commit": "002801478bb02aae61d64000307ef40569c97f0b"
-    },
-    "nikl_public_language": {
-      "status": "CORPUS_PROTOCOL_AUTHORITY_PASS_ROW_BYTES_NOT_LANDED"
-    },
-    "r8_private": {
-      "rows": 160,
-      "external_export": false
-    }
+  "first_kolla_pilot": {
+    "run_id": 37417945500,
+    "status": "CLOSED_ARCHITECTURE_ACTIVE_OVERCONSTRAINT_RISK",
+    "n": 32,
+    "K": 4,
+    "rescue": 18,
+    "abstain": 8,
+    "dormant": 6,
+    "K1_A1_cargo_pass_all_n": 0.6875,
+    "K1_A3_cargo_pass_all_n": 0.625,
+    "hard_cargo_gain": "NOT_PROMOTED",
+    "better_korean_writing": "NOT_AUTHORIZED"
+  },
+  "stylekqc": {
+    "source_audit_run_id": 37416866844,
+    "hard_cargo_replication": "SOURCE_SUPPORT_EMPTY",
+    "generic_robustness_run_id": 37419144116,
+    "generic_robustness": "PASS_LEGALITY_SELECTION_TRANSPORT_ONLY",
+    "A1_format_pass_rate": 0.71875,
+    "A3_format_pass_rate": 0.96875,
+    "rescue": 8,
+    "abstain": 1,
+    "receipt": "artifacts/g9_p48_stylekqc_generic_robustness_adjudication.json"
+  },
+  "candidate_budget_intervention": {
+    "preseal_commit": "6840adb4307b517faf6fe3fbf510a0b85722125f",
+    "compiler_commit": "6a983a68caa387fcc457c8d96d1c1195022315a7",
+    "runner_commit": "ecfb595d2a4d14726cfc47403daf289fbdc9afd2",
+    "workflow_commit": "ec995837d5ba48dc362e09f4a63d9531a321e2ec",
+    "canonical_run_id": 37435838070,
+    "fresh_packet": "16 K1 + 16 K2; original 32 source hashes excluded",
+    "nested_budgets": [4, 8, 12],
+    "gate_mutation": false,
+    "status": "RUNNING"
+  },
+  "terminal_rule": {
+    "preseal_commit": "3286e5d6a4ccb59cda1d429536a73a19a71965c5",
+    "architecture_pass_requires": [
+      "fresh KoLLA K1 K=12 A3 all-n hard-cargo pass >= A1 all-n hard-cargo pass",
+      "at least one authority-bearing selection/safety improvement without gate mutation",
+      "independent StyleKQC legality-selection transport"
+    ],
+    "writing_quality": "NOT_AUTHORIZED_BY_ARCHITECTURE_RULE"
   },
   "private_text_export": false,
   "fresh_human_recruitment": false,
   "next_execution": [
-    "Preseal first actual KoLLA generation/revision packet using source-derived hard invariants only",
-    "Keep human references hidden from legality and candidate ranking",
-    "Execute byte-identical A1/A3 candidate pools with A3 authority filtering",
-    "Report P/T/C/R/B/A without promoting automatic reference match to writing quality"
-  ],
-  "candidate_protocol": {
-    "status": "PRESEALED",
-    "commit": "073c85e3363efdcd6230b3170dc53326fbae3f71",
-    "primary_contrast": "A1_vs_A3",
-    "K": 4
-  }
+    "Complete canonical candidate-budget run 37435838070",
+    "Adjudicate finite-candidate scarcity vs persistent gate overconstraint prospectively",
+    "Apply frozen terminal promotion rule without mutation",
+    "Seal P48 terminal state and refresh entry/current pointers"
+  ]
 }
