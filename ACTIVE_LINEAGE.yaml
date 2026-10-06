@@ -614,4 +614,11 @@ current_g9_p48:
     status: RUNNING
   kolla_v2:
     status: LATEST_VERSION_RECONCILIATION_REQUIRED
-  current_gate: COMPLETE_PUBLIC_SOURCE_AUDIT_THEN_FREEZE_GENERATOR_BEFORE_OUTPUTS
+  generator_exact_sha: 7ae557604adf67be50417f59c2c2f167def9a775
+  generator_smoke_run_id: 37417176471
+  generator_smoke_receipt: artifacts/g9_p48_generator_smoke_adjudication.json
+  stylekqc_status: AUDIT_COMPLETE_DIRECTED_REGISTER_GOLD_HOLD
+  kolla_v2_status: AUDIT_COMPLETE_MULTI_REFERENCE_L2_GEC_PASS
+  first_generation_preseal_commit: edddc1b83340e5d30b15a75f0369ddf5111c9acc
+  first_generation_run_id: 37417945500
+  current_gate: KOLLA_HIDDEN_GOLD_GENERATION_PILOT_RUNNING
