@@ -1,0 +1,24 @@
+{
+  "schema": "ksgt.g9.p47.representation-purpose-separation.v1",
+  "status": "PROMOTED_FROM_FROZEN_AND_HYBRID_COURTS",
+  "layers": {
+    "observation_adequacy": "Can phi receive the source string without catastrophic tokenizer/coverage loss?",
+    "similarity_utility": "Does geometry support a declared similarity/retrieval task?",
+    "transport_invariance": "Does useful structure survive time/source/script shift without merely encoding identity?",
+    "decision_sufficiency": "Does the representation preserve authorized KSGT actions, vetoes and abstention?"
+  },
+  "non_implications": [
+    "OBSERVATION_ADEQUACY != SIMILARITY_UTILITY",
+    "SIMILARITY_UTILITY != SEMANTIC_INVARIANCE",
+    "LOW_NUISANCE_PROBE != DECISION_SUFFICIENCY",
+    "HIGH_EFFECTIVE_RANK != BETTER_KSGT_REPRESENTATION",
+    "LEARNED_GEOMETRY != GENERATION_AUTHORITY"
+  ],
+  "p47_witnesses": {
+    "observation": "F2/F3 ~4% UNK vs F0/F1 ~25% on historical packet",
+    "similarity": "F2 leads frozen neural content proxy but remains below character surface control",
+    "nuisance": "regime identity 0.970-0.985 in neural models and 0.992 in shallow surface",
+    "decision": "R11 plurality + P47 hybrid gate requires set-valued support/abstention rather than latent argmax"
+  },
+  "consequence": "Model choice must be task/validity-region specific; no representation may borrow authority from a different layer."
+}
