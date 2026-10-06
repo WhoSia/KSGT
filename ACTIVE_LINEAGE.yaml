@@ -377,7 +377,7 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: COMPLETE_G9_P47_ADAPTIVE_F0_F3_THEN_APPLY_PRESEALED_TERMINAL_COURT
+next_action: AWAIT_FORMAL_SUCCESSOR_TITLE_AUTHORITY_GATED_GENERATION_REVISION_REENTRY
 
 current_g9_p46:
   status: CLOSED_REPRESENTATION_VALIDITY_REGION_AND_OBSERVATION_CHANNEL_COURT
@@ -502,15 +502,24 @@ current_g9_p46:
     authority: NONE
 
 current_g9_p47:
-  status: OPEN_MODEL_FAMILY_FROZEN_PUBLIC_OKHC_ACTION_QUEUED
+  status: CLOSED_LEARNED_HYBRID_TRANSPORT_COURT
   notion_receipt: 3f0ef561-cf92-81bc-ba6a-c45471b7bdda
+  terminal_closure:
+    receipt: artifacts/g9_p47_terminal_closure.json
+    commit: c5c44544d61977eb8697fc34bad8545668e869cf
+    verdict: LEARNED_GEOMETRY_LOCAL_TRANSPORT_NO_FUNCTION_IDENTIFICATION_ADAPTATION_MODEL_RELATIVE_SET_VALUED_HYBRID_SURVIVES_NO_GLOBAL_WINNER
+    generation_return: ARCHITECTURE_LEVEL_ONLY
+
   parent: G9-P46
   workflow_style: ONE_PHASE_ONE_COMPLETE_OUTPUT_DEFAULT
   models:
-    F0: klue/roberta-base
+    F0: OVER_INVARIANCE
     F1: jhgan/ko-sroberta-multitask
     F2: intfloat/multilingual-e5-base
-    F3: BAAI/bge-m3
+    F3: TRADEOFF_NEAR_PRESERVED_FRESH_CONTENT
+    strict_pareto_winners: 0_OF_4
+    receipt: artifacts/g9_p47_adaptive_matrix_adjudication.json
+    receipt_commit: 47cd41edc42bf579da1a204b5ebc1c9a67347c49
   constitution_commit: 68fd8de3a520c3edb13318cad66acab872c10987
   packet_compiler_commit: c7a3f0c9028a87e90d8acbf4d510d123883a19b8
   encoder_runner_commit: 84569b9fa496cf8fdded523c8cca2db66627069c
@@ -548,7 +557,7 @@ current_g9_p47:
     receipt_commit: 853131a0fe84ba77e19afa4ad11a525a361c94c7
     hybrid_model_superiority: NOT_PROMOTED
   adaptive_geometry:
-    status: RUNNING_CANONICAL
+    status: COMPLETE_4_OF_4_NO_STRICT_PARETO_WINNER
     run_id: 37413043107
     fresh_holdout: HWANGSUNG_1907_1910_64_PER_YEAR
     F1: OVER_INVARIANCE_LOCAL
