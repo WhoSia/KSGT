@@ -1,0 +1,48 @@
+{
+  "schema": "ksgt.g9.p48.source-registry.v1",
+  "status": "OPEN_SOURCE_AUDIT_ACTIVE",
+  "sources": {
+    "STYLEKQC": {
+      "role": "REGISTER_REALIZATION_PUBLIC",
+      "repo": "cynthia/stylekqc",
+      "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+      "tree": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+      "declared_material_license": "CC-BY-SA-4.0_IN_README",
+      "github_license_api": "NULL",
+      "relevant_paths": [
+        "act/train.tsv",
+        "act/dev.tsv",
+        "act/test.tsv",
+        "topic/train.tsv",
+        "topic/dev.tsv",
+        "topic/test.tsv",
+        "sts/train.tsv",
+        "sts/dev.tsv",
+        "sts/test.tsv",
+        "stylekqc.py"
+      ],
+      "authority_ceiling": "REGISTER_INTENT_REALIZATION_ONLY",
+      "current_gate": "AUDIT_HEADERS_LABELS_AND_PAIR_STRUCTURE_BEFORE_DIRECTED_STYLE_GOLD"
+    },
+    "KOLLA_V2": {
+      "role": "MULTI_REFERENCE_LEARNER_CORRECTION",
+      "old_record_doi": "10.5281/zenodo.15287129",
+      "old_record_status": "OPEN_V1_WITH_NEWER_VERSION_POINTER",
+      "old_record_m2_md5": "9a6f2e3fea1b39bbb7343445db1167f7",
+      "latest_version": "UNRESOLVED_DO_NOT_FREEZE_OLD_V1_AS_CANONICAL",
+      "authority_ceiling": "L2_GEC_MULTI_REFERENCE_NOT_NATIVE_ORIGINAL_STYLE"
+    },
+    "NIKL_PUBLIC_LANGUAGE": {
+      "role": "KOREAN_FIRST_EDITORIAL_ACTION",
+      "authority": "CORPUS_PROTOCOL_LEVEL_A3_EDITOR_PASS",
+      "row_bytes": "NOT_LANDED",
+      "intervention_base_rate": "NOT_IDENTIFIABLE_FROM_EDIT_CONDITIONED_RELEASE"
+    },
+    "R8_PRIVATE": {
+      "role": "OVERT_NULL_COUNTERFACTUAL_PRIVATE",
+      "rows": 160,
+      "external_export": false,
+      "authority": "PAIR_STRUCTURE_PLUS_CONDITIONAL_NATURALISTIC_SUPPORT_NOT_PREFERENCE_GOLD"
+    }
+  }
+}
