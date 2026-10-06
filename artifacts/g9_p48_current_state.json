@@ -1,0 +1,54 @@
+{
+  "schema": "ksgt.g9.p48.current-state.v1",
+  "phase": "G9-P48",
+  "status": "OPEN_ARCHITECTURE_AND_MEASUREMENT_PRESEALED_PUBLIC_SOURCE_AUDIT_RUNNING",
+  "notion_id": "3f1ef561-cf92-81a8-b5d3-c42973a9618c",
+  "parent": "G9-P47",
+  "stage_type": "EXPERIMENT",
+  "formal_title": "KSGT Generation IX G9-P48 — Authority-Gated Set-Valued Generation & Revision Reentry Experiment, Learned Proposal under Typed Legality, Supported-Plurality Preservation, Abstention-First Decoding, Semantic-Cargo / Register / Style Constraint Retention, Counterfactual Edit Minimality, Baseline Decoder Comparison & Whether Representation-Level Gains Survive as Measurable Korean Writing Improvement",
+  "inherited_terminal_verdict": "LEARNED_GEOMETRY_TRANSPORTS_LOCALLY_BUT_DOES_NOT_IDENTIFY_FUNCTIONAL_STRUCTURE_ALONE_ADAPTATION_MODEL_RELATIVE_NO_FREE_INVARIANCE_SET_VALUED_AUTHORITY_GATED_HYBRID_SURVIVES_NO_GLOBAL_WINNER",
+  "arms": [
+    "A0_SINGLE_BEST_UNCONSTRAINED",
+    "A1_LEARNED_SET_VALUED",
+    "A2_AUTHORITY_SET_ONLY",
+    "A3_AUTHORITY_GATED_HYBRID"
+  ],
+  "measurement_vector": [
+    "P",
+    "T",
+    "C",
+    "R",
+    "B",
+    "A"
+  ],
+  "generator": {
+    "status": "NOT_YET_FROZEN",
+    "selection_by_p48_outcome": false
+  },
+  "sources": {
+    "stylekqc": {
+      "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+      "audit_run_id": 37416866844,
+      "status": "AUDIT_RUNNING"
+    },
+    "kolla_v2": {
+      "status": "LATEST_VERSION_RECONCILIATION_REQUIRED",
+      "old_v1_doi": "10.5281/zenodo.15287129"
+    },
+    "nikl_public_language": {
+      "status": "CORPUS_PROTOCOL_AUTHORITY_PASS_ROW_BYTES_NOT_LANDED"
+    },
+    "r8_private": {
+      "rows": 160,
+      "external_export": false
+    }
+  },
+  "private_text_export": false,
+  "fresh_human_recruitment": false,
+  "next_execution": [
+    "Complete exact StyleKQC source/schema audit",
+    "Resolve canonical KoLLA v2 version before acquisition",
+    "Freeze one custody-compatible reproducible generator lane before any generation outcome",
+    "Run same-generator A0-A3 experiment under P/T/C/R/B/A measurement"
+  ]
+}
