@@ -44,9 +44,16 @@
       "m2_md5": "9a6f2e3fea1b39bbb7343445db1167f7",
       "public_download": true,
       "rendered_v2_license_field": "EMPTY_OR_UNSPECIFIED_DO_NOT_INFER_REDISTRIBUTION_AUTHORITY",
-      "raw_repo_commit": "FORBIDDEN_UNTIL_LICENSE_AUTHORITY_RESOLVED",
+      "raw_repo_commit": false,
       "authority_ceiling": "L2_GEC_MULTI_REFERENCE_NOT_NATIVE_ORIGINAL_STYLE",
-      "current_gate": "SUMMARY_ONLY_SOURCE_AUDIT"
+      "current_gate": "SUMMARY_ONLY_SOURCE_AUDIT",
+      "status": "AUDIT_COMPLETE_MULTI_REFERENCE_L2_GEC_PASS",
+      "audit_run_id": 37417218534,
+      "audit_receipt": "artifacts/g9_p48_kolla_v2_source_adjudication.json",
+      "audit_receipt_commit": "002801478bb02aae61d64000307ef40569c97f0b",
+      "sentence_records": 1418,
+      "two_reference_sentences": 1410,
+      "one_reference_sentences": 8
     },
     "NIKL_PUBLIC_LANGUAGE": {
       "role": "KOREAN_FIRST_EDITORIAL_ACTION",
