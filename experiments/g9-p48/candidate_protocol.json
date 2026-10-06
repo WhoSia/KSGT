@@ -1,0 +1,46 @@
+{
+  "schema": "ksgt.g9.p48.candidate-protocol.v1",
+  "status": "PRESEALED_BEFORE_ANY_P48_GENERATION_ITEM",
+  "generator": "Qwen/Qwen2.5-0.5B-Instruct",
+  "primary_causal_contrast": "A1_LEARNED_SET_VALUED_vs_A3_AUTHORITY_GATED_HYBRID",
+  "shared_candidate_pool": {
+    "applies_to": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "K": 4,
+    "generation": {
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "max_new_tokens": 128,
+      "seeds": [
+        4801,
+        4802,
+        4803,
+        4804
+      ]
+    },
+    "retries": "NONE_EXCEPT_RUNTIME_FAILURE_WITH_SAME_GLOBAL_RULE",
+    "dedup": "Exact duplicate candidates collapse but no replacement sample is drawn."
+  },
+  "arms": {
+    "A0": "Greedy single output from the same frozen generator; practical baseline, not the primary gate-isolation contrast.",
+    "A1": "Shared K candidates ranked by length-normalized generator log-probability; top candidate selected. No authority legality filter.",
+    "A2": "Shared K candidates filtered to legal/support set; return legal set with deterministic stable ordering and abstain/review if empty/conflicted. No learned ranking.",
+    "A3": "Shared K candidates filtered exactly as A2, then ranked inside legal set by the same length-normalized log-probability as A1."
+  },
+  "learned_score": {
+    "metric": "length-normalized conditional log probability under frozen generator",
+    "authority": "PROPOSAL_RANKING_METADATA_ONLY",
+    "forbidden": "interpreting higher score as native preference or writing quality"
+  },
+  "isolation_rules": [
+    "A1 and A3 must see byte-identical candidate pools.",
+    "A2 and A3 must use byte-identical legality/support decisions.",
+    "No candidate regeneration after legality result.",
+    "A0 is reported separately because candidate budget differs."
+  ],
+  "output_policy": "Persist generated outputs only when source license/custody permits; otherwise persist hashes, metrics and minimal derived receipts."
+}
