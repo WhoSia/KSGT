@@ -1,0 +1,95 @@
+{
+  "schema": "ksgt.g9.p47.canonical-frozen-matrix-adjudication.v1",
+  "phase": "G9-P47",
+  "status": "FROZEN_MATRIX_CLOSED_LOCAL_PARTIAL_ORDER",
+  "canonical_run_id": 37389716969,
+  "collector_run_id": 37391229077,
+  "collector_artifact": {
+    "id": 11380714488,
+    "sha256": "d5aca7eec6af59a81cb6bb346ef68f917f3e99f6d9dde36c3084e43e6f8eac8e"
+  },
+  "packet": {
+    "rows": 768,
+    "regimes": 3,
+    "years_each": 4,
+    "canonical_text_field": "top-level text",
+    "normalization": "NONE"
+  },
+  "surface_control": {
+    "run_id": 37390646062,
+    "regime_balanced_accuracy": 0.9924242424242425,
+    "content_recall_at_1": 0.55859375,
+    "content_mrr": 0.6596671018131882,
+    "interpretation": "High historical-regime separability is already almost saturated by shallow orthographic surface."
+  },
+  "models": {
+    "F0": {
+      "repo": "klue/roberta-base",
+      "sha": "02f94ba5e3fcb7e2a58a390b8639b0fac974a8da",
+      "unk_fraction": 0.25182379085947904,
+      "truncation_fraction_512": 0.028645833333333332,
+      "effective_rank": 35.15132522583008,
+      "mean_offdiag_cosine": 0.7703835368156433,
+      "content_r1": 0.30078125,
+      "content_mrr": 0.40248445141996453,
+      "regime_bacc": 0.9774410774410774
+    },
+    "F1": {
+      "repo": "jhgan/ko-sroberta-multitask",
+      "sha": "8fca7c9c98c26599be0e14b9916b11a756a26f19",
+      "unk_fraction": 0.25182379085947904,
+      "truncation_fraction_512": 0.028645833333333332,
+      "effective_rank": 90.34342193603516,
+      "mean_offdiag_cosine": 0.5444613099098206,
+      "content_r1": 0.33984375,
+      "content_mrr": 0.44145226809838045,
+      "regime_bacc": 0.9850168350168351,
+      "native_128_sensitivity": "PRESEALED_RUNNING"
+    },
+    "F2": {
+      "repo": "intfloat/multilingual-e5-base",
+      "sha": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "unk_fraction": 0.03829468370405427,
+      "truncation_fraction_512": 0.036458333333333336,
+      "effective_rank": 181.955810546875,
+      "mean_offdiag_cosine": 0.8477558493614197,
+      "content_r1": 0.5,
+      "content_mrr": 0.6030113856347987,
+      "regime_bacc": 0.9774410774410774
+    },
+    "F3": {
+      "repo": "BAAI/bge-m3",
+      "sha": "5617a9f61b028005a4858fdac845db406aefb181",
+      "unk_fraction": 0.039003502683248176,
+      "truncation_fraction_512": 0.036458333333333336,
+      "effective_rank": 203.47393798828125,
+      "mean_offdiag_cosine": 0.43103528022766113,
+      "content_r1": 0.45703125,
+      "content_mrr": 0.5674190268366335,
+      "regime_bacc": 0.9698653198653199
+    }
+  },
+  "local_partial_order": {
+    "tokenizer_historical_observability": "F2≈F3 >> F0≈F1 by UNK fraction",
+    "weak_content_proxy": "surface control > F2 > F3 > F1 > F0",
+    "embedding_spread": "F3 highest effective rank and lowest mean off-diagonal cosine; F2 high rank but strongly anisotropic",
+    "nuisance_regime_identity": "all neural models highly separable; none earns credit because shallow surface control is even higher",
+    "temporal_geometry": "model-dependent and regime-dependent; no common scaling/path winner",
+    "global_winner": "NONE"
+  },
+  "promoted": [
+    "MULTILINGUAL_TOKENIZATION_ADVANTAGE_ON_HISTORICAL_ORTHOGRAPHY_LOCAL",
+    "F2_WEAK_CONTENT_PROXY_LEADER_AMONG_FROZEN_NEURAL_MODELS",
+    "F3_GEOMETRIC_SPREAD_LEADER_LOCAL",
+    "SHALLOW_ORTHOGRAPHY_EXPLAINS_NEAR_SATURATED_REGIME_IDENTITY",
+    "NO_GLOBAL_FROZEN_REPRESENTATION_WINNER"
+  ],
+  "not_promoted": [
+    "F2_FUNCTIONAL_SEMANTIC_WINNER",
+    "F3_FUNCTIONAL_SEMANTIC_WINNER",
+    "KOREAN_SPECIFIC_ENCODER_FAILURE_IN_MODERN_KOREAN",
+    "LOW_YEAR_PROBE_EQUALS_TEMPORAL_INVARIANCE",
+    "HIGH_EFFECTIVE_RANK_EQUALS_BETTER_KSGT_REPRESENTATION"
+  ],
+  "authority": "PUBLIC_HISTORICAL_TRANSPORT_ONLY; NO_PRIVATE_AIHUB_OR_R8_TEXT_USED"
+}
