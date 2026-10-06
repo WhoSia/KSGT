@@ -1,0 +1,24 @@
+name: G9-P47 Hybrid Reconstitution Regression
+
+on:
+  push:
+    paths:
+      - ".github/workflows/g9-p47-hybrid-regression.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hybrid-regression:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/g9-p47
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run authority-aware hybrid tests
+        run: python -m unittest -v test_hybrid_reconstitution.py
