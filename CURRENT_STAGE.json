@@ -1,0 +1,36 @@
+{
+  "schema": "ksgt.current-stage.v1",
+  "lab": "KSGT",
+  "generation": "IX",
+  "current_stage": "G9-P48",
+  "stage_type": "EXPERIMENT",
+  "status": "OPEN_CANDIDATE_BUDGET_INTERVENTION_RUNNING",
+  "canonical_notion_id": "3f1ef561-cf92-81a8-b5d3-c42973a9618c",
+  "latest_closed_stage": "G9-P47",
+  "latest_closed_notion_id": "3f0ef561-cf92-81bc-ba6a-c45471b7bdda",
+  "current_state_artifact": "artifacts/g9_p48_current_state.json",
+  "current_canonical_run": {
+    "name": "G9-P48 Candidate Budget Expansion",
+    "run_id": 37435838070,
+    "authority": "CANONICAL_FRESH_KOLLA_CANDIDATE_BUDGET_INTERVENTION"
+  },
+  "terminal_rule": {
+    "path": "experiments/g9-p48/terminal_promotion_preseal.json",
+    "commit": "3286e5d6a4ccb59cda1d429536a73a19a71965c5"
+  },
+  "resume_reads": [
+    "CURRENT_STAGE.json",
+    "artifacts/g9_p48_current_state.json",
+    "Notion G9-P48 page",
+    "artifacts/g9_p47_terminal_closure.json when P47 inheritance is needed",
+    "KSGT-Bench Seed Constitution v0 when writing-quality authority is in scope"
+  ],
+  "forbid": [
+    "Resume from ACTIVE_LINEAGE.yaml top-level current_phase without checking CURRENT_STAGE.json",
+    "Treat reference similarity or format legality as writing-quality authority",
+    "Mutate the frozen P48 legality gate after candidate-budget outcome",
+    "Export private AI-Hub or R8 text without explicit authorization",
+    "Create github-actions[bot]-authored or committer commits"
+  ],
+  "projection_note": "ACTIVE_LINEAGE.yaml contains historical appendices and a stale top-level current pointer. CURRENT_STAGE.json is the compact canonical runtime pointer until a full non-destructive lineage compaction is performed."
+}
