@@ -1,0 +1,20 @@
+{
+  "schema": "ksgt.g9.p48.stylekqc-robustness-support-failure.v1",
+  "status": "FAILED_PRE_GENERATION_HARD_CARGO_SUPPORT_EMPTY",
+  "run_id": 37418700032,
+  "preseal_commit": "819c9402cedbac4681ebe14c1bbef44fe8115134",
+  "compiler_commit": "57b6265875edd3c0e4ac149d7325f7a88ff04dc6",
+  "exact_source": {
+    "repo": "cynthia/stylekqc",
+    "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+    "path": "sts/test.tsv",
+    "sha256": "60906d8b4c7624000d19a182ae4ecb8dea4c86c03c410b62e7293f97f575b657"
+  },
+  "failure": "insufficient S1_HARD_CARGO: 0",
+  "interpretation": [
+    "The frozen protected-token extractor finds zero hard-cargo positive STS test pairs.",
+    "StyleKQC cannot replicate the KoLLA K1 exact-cargo preservation test under this constitution.",
+    "This is a source-support boundary, not a model/generation result."
+  ],
+  "allowed_successor": "A prospectively amended generic-only StyleKQC lane may test format/plurality/source-task robustness, but must not claim cargo-preservation replication."
+}
