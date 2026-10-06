@@ -1,0 +1,35 @@
+{
+  "schema": "ksgt.g9.p48.generator-freeze.v1",
+  "status": "GENERATOR_ID_FROZEN_SHA_RESOLVE_BEFORE_SCIENTIFIC_ITEMS",
+  "selected": {
+    "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+    "rationale": [
+      "0.49B parameter class for bounded CPU execution",
+      "instruction-tuned causal LM",
+      "explicit multilingual support including Korean",
+      "standard Transformers loading",
+      "Apache-2.0 model license on public model card"
+    ],
+    "selected_by": "EXECUTION_CONSTRAINTS_NOT_P48_OUTCOME"
+  },
+  "rejected_for_primary": {
+    "Qwen/Qwen3-0.6B": "Not rejected scientifically; newer chat stack/thinking behavior adds avoidable treatment complexity for first architecture isolation."
+  },
+  "exact_revision": {
+    "sha": "RESOLVE_IN_SMOKE_BEFORE_ANY_P48_DATA",
+    "mutation_rule": "Once resolved, all P48 primary generation jobs must load exactly that SHA."
+  },
+  "smoke": {
+    "scientific_authority": "NONE",
+    "dataset_rows": 0,
+    "purpose": "Verify exact revision resolution, tokenizer/model load and deterministic generation path only."
+  },
+  "default_generation": {
+    "do_sample": false,
+    "max_new_tokens": 96,
+    "temperature": null,
+    "top_p": null,
+    "num_beams": 1
+  },
+  "candidate_generation_note": "A1/A3 candidate-set stochastic protocol is a separate preseal and may not inherit these smoke defaults silently."
+}
