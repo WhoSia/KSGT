@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p47.current-state.v1",
   "phase": "G9-P47",
-  "status": "OPEN_FROZEN_MATRIX_SEALED_HYBRID_GATE_PASS_ADAPTIVE_RUNNING",
+  "status": "CLOSED_LEARNED_HYBRID_TRANSPORT_COURT",
   "notion_id": "3f0ef561-cf92-81bc-ba6a-c45471b7bdda",
   "parent": "G9-P46",
   "inherited_terminal_verdict": "REPRESENTATION_VALIDITY_IS_REGION_RELATIVE_OBSERVATION_CHANNEL_CONDITIONING_REQUIRED_NO_GLOBAL_WINNER",
@@ -75,16 +75,47 @@
     "multilingual_historical_tokenization_advantage_local": true,
     "hybrid_authority_gate_pass": true,
     "hybrid_model_superiority": false,
-    "typed_deterministic_action_sufficiency": false
+    "typed_deterministic_action_sufficiency": false,
+    "p47_closed": true,
+    "adaptive_strict_pareto_winners": "0/4",
+    "no_free_invariance": true,
+    "generation_return": "ARCHITECTURE_LEVEL_ONLY",
+    "private_aihub_learned_result": false,
+    "private_r8_neural_performance": false
   },
   "next_execution": [
-    "Complete adaptive centroid-residualization matrix on fresh Hwangsung holdout",
-    "Apply terminal presealed rules and close G9-P47 without fabricating private-text neural performance"
+    "AWAIT_FORMAL_SUCCESSOR_TITLE; NEXT_QUESTION_IS_AUTHORITY_GATED_GENERATION_REVISION_REENTRY"
   ],
   "adaptive_court": {
     "run_id": 37413043107,
-    "status": "RUNNING",
+    "status": "COMPLETE_4_OF_4_PLUS_COLLECTOR",
     "fresh_holdout": "황성신문 1907-1910; 64 docs/year",
-    "holdout_rows": 256
-  }
+    "holdout_rows": 256,
+    "receipt": "artifacts/g9_p47_adaptive_matrix_adjudication.json",
+    "receipt_commit": "47cd41edc42bf579da1a204b5ebc1c9a67347c49",
+    "strict_pareto_winners": "0/4",
+    "verdicts": {
+      "F0": "OVER_INVARIANCE",
+      "F1": "OVER_INVARIANCE",
+      "F2": "TRADEOFF_NEAR_PRESERVED_FRESH_CONTENT",
+      "F3": "TRADEOFF_NEAR_PRESERVED_FRESH_CONTENT"
+    }
+  },
+  "terminal_closure": {
+    "receipt": "artifacts/g9_p47_terminal_closure.json",
+    "commit": "c5c44544d61977eb8697fc34bad8545668e869cf",
+    "verdict": "LEARNED_GEOMETRY_TRANSPORTS_LOCALLY_BUT_DOES_NOT_IDENTIFY_FUNCTIONAL_STRUCTURE_ALONE_ADAPTATION_MODEL_RELATIVE_NO_FREE_INVARIANCE_SET_VALUED_AUTHORITY_GATED_HYBRID_SURVIVES_NO_GLOBAL_WINNER"
+  },
+  "completed_execution": [
+    "Canonical frozen F0-F3 public historical matrix completed and sealed",
+    "Character n-gram surface control showed 0.9924 regime separability",
+    "F1 native-128 robustness completed; primary 512 preserved",
+    "Private R8 packet custody recovered without external export",
+    "Typed decision-sufficiency metadata audit completed",
+    "Hybrid authority operator hosted regression 6/6 PASS",
+    "Fresh Hwangsung adaptive centroid-residualization F0-F3 completed",
+    "Adaptive strict Pareto winners 0/4; no-free-invariance promoted",
+    "P47 terminal closure sealed"
+  ],
+  "workflow_default_after_p47": "ONE_PHASE_ONE_COMPLETE_OUTPUT_DEFAULT"
 }
