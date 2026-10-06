@@ -1,0 +1,23 @@
+{
+  "schema": "ksgt.g9.p47.hybrid-regression-receipt.v1",
+  "status": "PASS",
+  "run_id": 37413297674,
+  "tests": 6,
+  "passed": 6,
+  "failed": 0,
+  "enforced": [
+    "supported plurality survives extreme learned score asymmetry",
+    "unsupported high-score action is not legalized",
+    "promoted typed veto applies before learned score",
+    "unknown-only state abstains",
+    "out-of-domain state abstains",
+    "all-supported-vetoed conflict reviews instead of forcing output"
+  ],
+  "verdict": "HYBRID_AUTHORITY_GATE_PASS",
+  "not_promoted": [
+    "HYBRID_MODEL_SUPERIORITY",
+    "PRIVATE_R8_NEURAL_PERFORMANCE",
+    "SCALAR_PREFERENCE_RECOVERY"
+  ],
+  "authority": "EXECUTABLE_DECISION_COMPILER_ONLY"
+}
