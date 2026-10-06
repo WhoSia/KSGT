@@ -22,7 +22,18 @@
         "stylekqc.py"
       ],
       "authority_ceiling": "REGISTER_INTENT_REALIZATION_ONLY",
-      "current_gate": "AUDIT_HEADERS_LABELS_AND_PAIR_STRUCTURE_BEFORE_DIRECTED_STYLE_GOLD"
+      "current_gate": "AUDIT_HEADERS_LABELS_AND_PAIR_STRUCTURE_BEFORE_DIRECTED_STYLE_GOLD",
+      "status": "AUDIT_COMPLETE_DIRECTED_REGISTER_GOLD_HOLD",
+      "audit_run_id": 37416866844,
+      "audit_receipt": "artifacts/g9_p48_stylekqc_source_adjudication.json",
+      "audit_receipt_commit": "b1cbf1daaddfbacae722e971f43cb3309962f27d",
+      "public_sts_rows": {
+        "train": 216000,
+        "dev": 10800,
+        "test": 43200
+      },
+      "directed_register_columns_present": false,
+      "allowed_now": "POSITIVE_STS_PAIR_PRESERVATION_PLURALITY_DIAGNOSTIC_ONLY"
     },
     "KOLLA_V2": {
       "role": "MULTI_REFERENCE_LEARNER_CORRECTION",
