@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p48.current-state.v1",
   "phase": "G9-P48",
-  "status": "OPEN_ARCHITECTURE_AND_MEASUREMENT_PRESEALED_PUBLIC_SOURCE_AUDIT_RUNNING",
+  "status": "OPEN_STYLEKQC_AUDIT_CLOSED_GENERATOR_SMOKE_RUNNING_KOLLA_AUDIT_QUEUED",
   "notion_id": "3f1ef561-cf92-81a8-b5d3-c42973a9618c",
   "parent": "G9-P47",
   "stage_type": "EXPERIMENT",
@@ -22,18 +22,24 @@
     "A"
   ],
   "generator": {
-    "status": "NOT_YET_FROZEN",
-    "selection_by_p48_outcome": false
+    "status": "MODEL_ID_FROZEN_SMOKE_RUNNING",
+    "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+    "exact_sha": "PENDING_SMOKE_RESOLUTION",
+    "freeze_commit": "4c3aa54aeffb15f7a7da9ca29a6ad46e4735b92a",
+    "smoke_run_id": 37417176471
   },
   "sources": {
     "stylekqc": {
       "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
       "audit_run_id": 37416866844,
-      "status": "AUDIT_RUNNING"
+      "status": "AUDIT_COMPLETE_DIRECTED_REGISTER_GOLD_HOLD",
+      "receipt": "artifacts/g9_p48_stylekqc_source_adjudication.json"
     },
     "kolla_v2": {
-      "status": "LATEST_VERSION_RECONCILIATION_REQUIRED",
-      "old_v1_doi": "10.5281/zenodo.15287129"
+      "status": "CANONICAL_V2_RESOLVED_SUMMARY_AUDIT_QUEUED",
+      "doi": "10.5281/zenodo.16908784",
+      "m2_md5": "9a6f2e3fea1b39bbb7343445db1167f7",
+      "audit_run_id": 37417218534
     },
     "nikl_public_language": {
       "status": "CORPUS_PROTOCOL_AUTHORITY_PASS_ROW_BYTES_NOT_LANDED"
@@ -46,9 +52,15 @@
   "private_text_export": false,
   "fresh_human_recruitment": false,
   "next_execution": [
-    "Complete exact StyleKQC source/schema audit",
-    "Resolve canonical KoLLA v2 version before acquisition",
-    "Freeze one custody-compatible reproducible generator lane before any generation outcome",
-    "Run same-generator A0-A3 experiment under P/T/C/R/B/A measurement"
-  ]
+    "Complete generator smoke and freeze exact Hub SHA",
+    "Complete KoLLA v2 summary-only source audit",
+    "Compile first public generation packet without leaking evaluation gold into legality",
+    "Execute same-generator A1-vs-A3 primary contrast under P/T/C/R/B/A"
+  ],
+  "candidate_protocol": {
+    "status": "PRESEALED",
+    "commit": "073c85e3363efdcd6230b3170dc53326fbae3f71",
+    "primary_contrast": "A1_vs_A3",
+    "K": 4
+  }
 }
