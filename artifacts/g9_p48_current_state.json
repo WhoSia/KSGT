@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p48.current-state.v1",
   "phase": "G9-P48",
-  "status": "OPEN_STYLEKQC_AUDIT_CLOSED_GENERATOR_SMOKE_RUNNING_KOLLA_AUDIT_QUEUED",
+  "status": "OPEN_PREFLIGHT_COMPLETE_FIRST_GENERATION_PACKET_PRESEAL",
   "notion_id": "3f1ef561-cf92-81a8-b5d3-c42973a9618c",
   "parent": "G9-P47",
   "stage_type": "EXPERIMENT",
@@ -22,11 +22,14 @@
     "A"
   ],
   "generator": {
-    "status": "MODEL_ID_FROZEN_SMOKE_RUNNING",
+    "status": "EXACT_REVISION_FROZEN",
     "repo": "Qwen/Qwen2.5-0.5B-Instruct",
-    "exact_sha": "PENDING_SMOKE_RESOLUTION",
+    "exact_sha": "7ae557604adf67be50417f59c2c2f167def9a775",
     "freeze_commit": "4c3aa54aeffb15f7a7da9ca29a6ad46e4735b92a",
-    "smoke_run_id": 37417176471
+    "freeze_update_commit": "066a8bc07a16d8c685d4f18cdbba7f6e83a4c450",
+    "smoke_run_id": 37417176471,
+    "smoke_receipt": "artifacts/g9_p48_generator_smoke_adjudication.json",
+    "smoke_receipt_commit": "c7b9bf53c6b29ca55bd0c6e2dcdb2f9a0c28c9bc"
   },
   "sources": {
     "stylekqc": {
@@ -36,10 +39,12 @@
       "receipt": "artifacts/g9_p48_stylekqc_source_adjudication.json"
     },
     "kolla_v2": {
-      "status": "CANONICAL_V2_RESOLVED_SUMMARY_AUDIT_QUEUED",
+      "status": "AUDIT_COMPLETE_MULTI_REFERENCE_L2_GEC_PASS",
       "doi": "10.5281/zenodo.16908784",
       "m2_md5": "9a6f2e3fea1b39bbb7343445db1167f7",
-      "audit_run_id": 37417218534
+      "audit_run_id": 37417218534,
+      "audit_receipt": "artifacts/g9_p48_kolla_v2_source_adjudication.json",
+      "audit_receipt_commit": "002801478bb02aae61d64000307ef40569c97f0b"
     },
     "nikl_public_language": {
       "status": "CORPUS_PROTOCOL_AUTHORITY_PASS_ROW_BYTES_NOT_LANDED"
@@ -52,10 +57,10 @@
   "private_text_export": false,
   "fresh_human_recruitment": false,
   "next_execution": [
-    "Complete generator smoke and freeze exact Hub SHA",
-    "Complete KoLLA v2 summary-only source audit",
-    "Compile first public generation packet without leaking evaluation gold into legality",
-    "Execute same-generator A1-vs-A3 primary contrast under P/T/C/R/B/A"
+    "Preseal first actual KoLLA generation/revision packet using source-derived hard invariants only",
+    "Keep human references hidden from legality and candidate ranking",
+    "Execute byte-identical A1/A3 candidate pools with A3 authority filtering",
+    "Report P/T/C/R/B/A without promoting automatic reference match to writing quality"
   ],
   "candidate_protocol": {
     "status": "PRESEALED",
