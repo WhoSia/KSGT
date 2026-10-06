@@ -1,0 +1,37 @@
+{
+  "schema": "ksgt.g9.p48.kolla-v2-source-adjudication.v1",
+  "status": "PASS_MULTI_REFERENCE_L2_GEC_SOURCE",
+  "run_id": 37417218534,
+  "artifact": {
+    "id": 11391532667,
+    "sha256": "767526c1ce7ac276e7c10b935013b21098a827fab9902efb9efe95dfcc5d2bd8"
+  },
+  "doi": "10.5281/zenodo.16908784",
+  "version": "v2",
+  "file": "KoLLA_multi-refs.m2",
+  "bytes": 349760,
+  "md5": "9a6f2e3fea1b39bbb7343445db1167f7",
+  "sha256": "d848bac8095bf4280e9c8f6bb7ef2733434cf0eb2c2977d34fd4a0eb6c061ed4",
+  "sentence_records": 1418,
+  "annotation_lines": 4464,
+  "annotator_ids": {
+    "0": 2252,
+    "1": 2212
+  },
+  "reference_annotator_count_per_sentence": {
+    "1": 8,
+    "2": 1410
+  },
+  "raw_text_persisted": false,
+  "authority": {
+    "multi_reference_plurality": "PASS_L2_GEC",
+    "native_original_style": "NONE",
+    "general_korean_writing_quality": "NONE",
+    "keep_intervene_base_rate": "NOT_INFERRED"
+  },
+  "p48_use": [
+    "Use two-reference sentences to test overcollapse versus alternative-valid correction.",
+    "Use L2 correction only; do not generalize to native-original stylistic preference.",
+    "Do not commit raw M2 until redistribution authority is independently resolved."
+  ]
+}
