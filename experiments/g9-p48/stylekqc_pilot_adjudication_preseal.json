@@ -1,0 +1,21 @@
+{
+  "schema": "ksgt.g9.p48.stylekqc-pilot-adjudication-preseal.v1",
+  "status": "PRESEALED_BEFORE_STYLEKQC_GENERATION",
+  "packet_run_id": 37418844729,
+  "packet": {
+    "eligible_positive_unique": 21588,
+    "selected": 32,
+    "source_packet_sha256": "74dcaf653ec7e3c6228b7502645b7e17fe39241a0b5ff061d9f22fb665094833",
+    "hidden_gold_sha256": "e2d01e14c02f25d166e6136efe0405916a370b3891f341bd1c84fb7d5e977b96"
+  },
+  "authority_ceiling": "FORMAT_PLURALITY_AND_SOURCE_TASK_ROBUSTNESS_ONLY",
+  "primary_contrast": "A1 vs A3 on identical K=4 pool with format-only legality",
+  "promotion": {
+    "ROBUST_GATE_ACTIVITY": "rescue_count > 0",
+    "SOURCE_TASK_TRANSPORT": "KoLLA and StyleKQC both have rescue_count > 0 under independently presealed packets",
+    "CARGO_TRANSPORT": "FORBIDDEN_NOT_TESTED",
+    "WRITING_QUALITY": "FORBIDDEN"
+  },
+  "overconstraint": "Any abstention is reported; substantial abstention blocks a free-safety interpretation.",
+  "hidden_positive": "Sentence2 opened only after decisions; exact/distance diagnostics have no writing-quality authority."
+}
