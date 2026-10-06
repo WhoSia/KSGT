@@ -1,0 +1,37 @@
+{
+  "schema": "ksgt.g9.p48.stylekqc-paraphrase-packet.v1.1",
+  "status": "AMENDED_AFTER_SOURCE_SUPPORT_FAILURE_BEFORE_ANY_STYLEKQC_GENERATION",
+  "parent_failure": "artifacts/g9_p48_stylekqc_robustness_support_failure.json",
+  "reason": "Frozen S1 hard-cargo eligible pool is exactly zero.",
+  "source": {
+    "repo": "cynthia/stylekqc",
+    "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+    "path": "sts/test.tsv",
+    "sha256": "60906d8b4c7624000d19a182ae4ecb8dea4c86c03c410b62e7293f97f575b657"
+  },
+  "task": "Meaning-preserving Korean paraphrase; no directed register claim.",
+  "selection": {
+    "filters": [
+      "similarity == 1",
+      "sentence1 != sentence2",
+      "exact ordered-pair deduplication"
+    ],
+    "stratum": "S2_GENERIC_ONLY",
+    "n": 32,
+    "salt": "KSGT-G9-P48-STYLEKQC-PARA-v1.1",
+    "selection": "32 lowest SHA256(sentence1 || NUL || sentence2 || salt)"
+  },
+  "hidden_positive": "sentence2 unavailable to generation/legality/ranking; revealed only after decisions.",
+  "authority_ceiling": "FORMAT_PLURALITY_AND_SOURCE_TASK_ROBUSTNESS_ONLY",
+  "forbidden": [
+    "CARGO_PRESERVATION_REPLICATION",
+    "DIRECTED_REGISTER_ATTAINMENT",
+    "GENERAL_WRITING_QUALITY"
+  ],
+  "generator": {
+    "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+    "sha": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "candidate_protocol": "candidate_protocol.json unchanged",
+  "primary_contrast": "A1 vs A3, though with format-only legality A3 may be dormant by design."
+}
