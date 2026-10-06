@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p47.current-state.v1",
   "phase": "G9-P47",
-  "status": "OPEN_PUBLIC_OKHC_PACKET_PASS_F0_F1_RUNNING_F2_F3_QUEUED",
+  "status": "OPEN_FROZEN_MATRIX_SEALED_HYBRID_GATE_PASS_ADAPTIVE_RUNNING",
   "notion_id": "3f0ef561-cf92-81bc-ba6a-c45471b7bdda",
   "parent": "G9-P46",
   "inherited_terminal_verdict": "REPRESENTATION_VALIDITY_IS_REGION_RELATIVE_OBSERVATION_CHANNEL_CONDITIONING_REQUIRED_NO_GLOBAL_WINNER",
@@ -16,7 +16,7 @@
     "canonical_text_field": "top-level text",
     "workflow_run_id": 37389716969,
     "workflow_head": "ac3ab931b3e142260b619e78ca8383694e4879c0",
-    "status": "PACKET_SUCCESS_MODEL_MATRIX_RUNNING",
+    "status": "FROZEN_MATRIX_COMPLETE",
     "private_aihub_export": false,
     "packet_artifact_id": 11380303016,
     "packet_artifact_sha256": "fe09f05ebba6e75f6bd6bca753b95760a8447df62de54599f4449c45c9a868bf",
@@ -40,7 +40,10 @@
         "1908": 13253,
         "1909": 14022
       }
-    }
+    },
+    "canonical_frozen_run_id": 37389716969,
+    "canonical_collector_run_id": 37391229077,
+    "surface_control_run_id": 37390646062
   },
   "theoretical_contracts": {
     "constitution_commit": "68fd8de3a520c3edb13318cad66acab872c10987",
@@ -48,7 +51,15 @@
     "encoder_runner_commit": "84569b9fa496cf8fdded523c8cca2db66627069c",
     "workflow_commit": "ac3ab931b3e142260b619e78ca8383694e4879c0",
     "partial_order_commit": "da897fbfc4bb80755042bb8c264aa65e48dc3f85",
-    "existing_human_provenance_commit": "8c4ef490d32ad4636379249f9d1234fe40fd27cb"
+    "existing_human_provenance_commit": "8c4ef490d32ad4636379249f9d1234fe40fd27cb",
+    "frozen_matrix_receipt_commit": "c985a10cf3b5c020669f7968ce2d763de3cb88fa",
+    "f1_native128_receipt_commit": "a1d83364a44389ad7fef4d5b8aae338d41a2a0ba",
+    "typed_decision_audit_commit": "65ad32ae41b1be441b2db48fa25fcefcdc513f81",
+    "hybrid_constitution_commit": "f4c75c2b698eb28b410614fd492bf161967053cb",
+    "hybrid_kernel_commit": "859845ce3aec3f0e8f63fe53a51df3c48e1204d5",
+    "hybrid_tests_commit": "b53ac46c361dac61538f02c11214984b483fe233",
+    "hybrid_regression_receipt_commit": "853131a0fe84ba77e19afa4ad11a525a361c94c7",
+    "adaptive_preseal_commit": "d14bff93a10a8a402c825e565b4aee9ec1cc6ff6"
   },
   "authority": {
     "global_winner_preassumed": false,
@@ -57,12 +68,23 @@
     "human_preference_supervision_authorized": false,
     "hybrid_hard_constraints_only_from_promoted_r2_fields": true,
     "scalar_native_preference": "RETIRED_FROM_P36_R11",
-    "r8_pair_preference_gold": false
+    "r8_pair_preference_gold": false,
+    "frozen_global_winner": "NONE",
+    "f2_weak_content_leader_local": true,
+    "f3_geometric_spread_leader_local": true,
+    "multilingual_historical_tokenization_advantage_local": true,
+    "hybrid_authority_gate_pass": true,
+    "hybrid_model_superiority": false,
+    "typed_deterministic_action_sufficiency": false
   },
   "next_execution": [
-    "Complete F0-F3 public frozen encoder matrix",
-    "Adjudicate observability/content/nuisance/temporal coordinates as partial order",
-    "Use P36-R11 160/160 matched counter-action support only as conditional pair authority, never scalar preference gold",
-    "Then decide whether adaptive R4b or constrained R5 execution changes an authority-bearing coordinate"
-  ]
+    "Complete adaptive centroid-residualization matrix on fresh Hwangsung holdout",
+    "Apply terminal presealed rules and close G9-P47 without fabricating private-text neural performance"
+  ],
+  "adaptive_court": {
+    "run_id": 37413043107,
+    "status": "RUNNING",
+    "fresh_holdout": "황성신문 1907-1910; 64 docs/year",
+    "holdout_rows": 256
+  }
 }
