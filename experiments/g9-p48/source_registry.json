@@ -26,11 +26,16 @@
     },
     "KOLLA_V2": {
       "role": "MULTI_REFERENCE_LEARNER_CORRECTION",
-      "old_record_doi": "10.5281/zenodo.15287129",
-      "old_record_status": "OPEN_V1_WITH_NEWER_VERSION_POINTER",
-      "old_record_m2_md5": "9a6f2e3fea1b39bbb7343445db1167f7",
-      "latest_version": "UNRESOLVED_DO_NOT_FREEZE_OLD_V1_AS_CANONICAL",
-      "authority_ceiling": "L2_GEC_MULTI_REFERENCE_NOT_NATIVE_ORIGINAL_STYLE"
+      "canonical_record_doi": "10.5281/zenodo.16908784",
+      "canonical_record_version": "v2",
+      "published": "2025-08-20",
+      "m2_file": "KoLLA_multi-refs.m2",
+      "m2_md5": "9a6f2e3fea1b39bbb7343445db1167f7",
+      "public_download": true,
+      "rendered_v2_license_field": "EMPTY_OR_UNSPECIFIED_DO_NOT_INFER_REDISTRIBUTION_AUTHORITY",
+      "raw_repo_commit": "FORBIDDEN_UNTIL_LICENSE_AUTHORITY_RESOLVED",
+      "authority_ceiling": "L2_GEC_MULTI_REFERENCE_NOT_NATIVE_ORIGINAL_STYLE",
+      "current_gate": "SUMMARY_ONLY_SOURCE_AUDIT"
     },
     "NIKL_PUBLIC_LANGUAGE": {
       "role": "KOREAN_FIRST_EDITORIAL_ACTION",
