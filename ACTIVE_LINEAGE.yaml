@@ -504,63 +504,89 @@ current_g9_p46:
 current_g9_p47:
   status: CLOSED_LEARNED_HYBRID_TRANSPORT_COURT
   notion_receipt: 3f0ef561-cf92-81bc-ba6a-c45471b7bdda
+  parent: G9-P46
+  workflow_style: ONE_PHASE_ONE_COMPLETE_OUTPUT_DEFAULT
+
   terminal_closure:
     receipt: artifacts/g9_p47_terminal_closure.json
     commit: c5c44544d61977eb8697fc34bad8545668e869cf
     verdict: LEARNED_GEOMETRY_LOCAL_TRANSPORT_NO_FUNCTION_IDENTIFICATION_ADAPTATION_MODEL_RELATIVE_SET_VALUED_HYBRID_SURVIVES_NO_GLOBAL_WINNER
     generation_return: ARCHITECTURE_LEVEL_ONLY
 
-  parent: G9-P46
-  workflow_style: ONE_PHASE_ONE_COMPLETE_OUTPUT_DEFAULT
   models:
-    F0: OVER_INVARIANCE
+    F0: klue/roberta-base
     F1: jhgan/ko-sroberta-multitask
     F2: intfloat/multilingual-e5-base
-    F3: TRADEOFF_NEAR_PRESERVED_FRESH_CONTENT
-    strict_pareto_winners: 0_OF_4
-    receipt: artifacts/g9_p47_adaptive_matrix_adjudication.json
-    receipt_commit: 47cd41edc42bf579da1a204b5ebc1c9a67347c49
+    F3: BAAI/bge-m3
+
   constitution_commit: 68fd8de3a520c3edb13318cad66acab872c10987
   packet_compiler_commit: c7a3f0c9028a87e90d8acbf4d510d123883a19b8
   encoder_runner_commit: 84569b9fa496cf8fdded523c8cca2db66627069c
   workflow_commit: ac3ab931b3e142260b619e78ca8383694e4879c0
-  workflow_run_id: 37389716969
-  partial_order_commit: da897fbfc4bb80755042bb8c264aa65e48dc3f85
-  current_state_commit: c2ed1f188784b6f1fe4d46483b97910b631675f8
+  canonical_frozen_run_id: 37389716969
+  canonical_collector_run_id: 37391229077
+  surface_control_run_id: 37390646062
+  current_state_commit: c002a160b9b1d1633e011e8f3ddecf1782757755
   private_aihub_external_compute_export: NOT_AUTHORIZED
   private_drive_sharing_changed: false
   fresh_human_recruitment: NOT_AUTHORIZED
+
   public_okhc_packet:
     regimes: 3
     years_each: 4
     sample_per_regime_year: 64
-    expected_rows: 768
+    rows: 768
     canonical_text_field: TOP_LEVEL_TEXT
-  current_gate: OBSERVE_ACTION_PACKET_AND_FROZEN_ENCODER_ARTIFACTS
 
   frozen_matrix:
     status: CLOSED_LOCAL_PARTIAL_ORDER
     receipt: artifacts/g9_p47_frozen_matrix_adjudication.json
     receipt_commit: c985a10cf3b5c020669f7968ce2d763de3cb88fa
     verdict: REPRESENTATION_PARTIAL_ORDER_NO_GLOBAL_WINNER
-    f2: WEAK_CONTENT_PROXY_LEADER_LOCAL
-    f3: GEOMETRIC_SPREAD_LEADER_LOCAL
+    F0: KOREAN_LM_CONTROL_HISTORICAL_UNK_LIMIT
+    F1: KOREAN_SENTENCE_TUNED_HISTORICAL_UNK_LIMIT
+    F2: WEAK_CONTENT_PROXY_LEADER_LOCAL
+    F3: GEOMETRIC_SPREAD_LEADER_LOCAL
     multilingual_historical_tokenization_advantage: PROMOTED_LOCAL
+
+  f1_native128_sensitivity:
+    status: COMPLETE_PRIMARY_512_PRESERVED
+    receipt: artifacts/g9_p47_f1_native128_sensitivity.json
+    receipt_commit: a1d83364a44389ad7fef4d5b8aae338d41a2a0ba
+
   typed_decision_sufficiency:
     status: COARSE_INSUFFICIENT_SPARSE_SIGNATURE_WARNING
+    receipt: artifacts/g9_p47_typed_decision_sufficiency_audit.json
     receipt_commit: 65ad32ae41b1be441b2db48fa25fcefcdc513f81
     deterministic_scalar_action: NOT_AUTHORIZED
     target: SET_VALUED_CONDITIONAL_ACTION_PLUS_ABSTENTION
+
   hybrid_authority_gate:
     status: HOSTED_PASS_6_OF_6
     run_id: 37413297674
+    receipt: artifacts/g9_p47_hybrid_regression_receipt.json
     receipt_commit: 853131a0fe84ba77e19afa4ad11a525a361c94c7
     hybrid_model_superiority: NOT_PROMOTED
+    learned_score_role: PROPOSAL_OR_RANKING_WITHIN_LEGAL_SET_ONLY
+
   adaptive_geometry:
     status: COMPLETE_4_OF_4_NO_STRICT_PARETO_WINNER
     run_id: 37413043107
     fresh_holdout: HWANGSUNG_1907_1910_64_PER_YEAR
-    F1: OVER_INVARIANCE_LOCAL
-    F2: REMOVABLE_IDENTITY_LOCAL_WITH_NEAR_PRESERVED_FRESH_CONTENT
-    F0: RUNNING
-    F3: RUNNING
+    fresh_holdout_rows: 256
+    F0: OVER_INVARIANCE
+    F1: OVER_INVARIANCE
+    F2: TRADEOFF_NEAR_PRESERVED_FRESH_CONTENT
+    F3: TRADEOFF_NEAR_PRESERVED_FRESH_CONTENT
+    strict_pareto_winners: 0_OF_4
+    verdict: ADAPTATION_MODEL_RELATIVE_NO_FREE_INVARIANCE
+    receipt: artifacts/g9_p47_adaptive_matrix_adjudication.json
+    receipt_commit: 47cd41edc42bf579da1a204b5ebc1c9a67347c49
+
+  generation_handoff:
+    status: ARCHITECTURE_LEVEL_ONLY
+    allowed: LEARNED_PROPOSAL_BEHIND_R2_R6_LEGALITY_SET_VALUED_SUPPORT_ABSTENTION
+    forbidden: LEARNED_ARGMAX_AS_NATIVE_PREFERENCE_OR_LEGALITY
+    private_text_neural_performance: NOT_CLAIMED
+
+  current_gate: CLOSED_AWAIT_FORMAL_SUCCESSOR_TITLE
