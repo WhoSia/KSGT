@@ -1,0 +1,55 @@
+{
+  "schema": "ksgt.g9.p48.stylekqc-generic-robustness-adjudication.v1",
+  "phase": "G9-P48",
+  "status": "PASS_LEGALITY_SELECTION_TRANSPORT_ONLY",
+  "run_id": 37419144116,
+  "artifact_id": 11391834761,
+  "artifact_zip_sha256": "686f3308ff59aa2f9694a739b595b51820d7bd6bdc494778786892425eff3e0e",
+  "source": {
+    "repo": "cynthia/stylekqc",
+    "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+    "path": "sts/test.tsv",
+    "source_sha256": "60906d8b4c7624000d19a182ae4ecb8dea4c86c03c410b62e7293f97f575b657",
+    "positive_unique_eligible": 21588,
+    "packet_n": 32,
+    "packet_mode": "S2_GENERIC_ONLY"
+  },
+  "generator": {
+    "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+    "sha": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "K": 4
+  },
+  "decision_sha256_before_gold": "32d0e6a06fb97e346b63ca51b05d920a0aa52a7bdc5cf431e36d1d0319d8898c",
+  "result": {
+    "A0_format_pass_rate": 0.9375,
+    "A1_format_pass_rate": 0.71875,
+    "A3_format_pass_rate": 0.96875,
+    "A3_abstain": 1,
+    "rescue": 8,
+    "dormant": 23,
+    "rescue_rate": 0.25,
+    "abstain_rate": 0.03125,
+    "mean_distinct_candidates": 3.84375,
+    "mean_legal_candidates": 3.1875,
+    "A0_hidden_positive_distance_diagnostic": 0.6723936840781743,
+    "A1_hidden_positive_distance_diagnostic": 0.7514038917750286,
+    "A3_hidden_positive_distance_diagnostic": 0.7235711326739829,
+    "exact_hidden_positive_hits_all_arms": 0
+  },
+  "adjudication": [
+    "The A1→A3 legality-selection effect transports from KoLLA correction to a disjoint public StyleKQC same-intent paraphrase surface.",
+    "With format-only legality, A3 raises emitted-format validity and rescues lower-ranked legal candidates with low abstention.",
+    "This is source/task robustness of selective decoding, not cargo-preservation replication, directed register attainment, semantic preservation proof, or general writing-quality improvement.",
+    "Hidden-positive distance is diagnostic only; A0 is lower than A3 here, so no quality superiority is promoted."
+  ],
+  "promoted": [
+    "LEGALITY_SELECTION_TRANSPORT_ACROSS_PUBLIC_SOURCE_TASK_LOCAL"
+  ],
+  "not_promoted": [
+    "CARGO_PRESERVATION_REPLICATION",
+    "DIRECTED_REGISTER_ATTAINMENT",
+    "GENERAL_WRITING_QUALITY",
+    "A3_SEMANTIC_SUPERIORITY"
+  ],
+  "authority_ceiling": "FORMAT_PLURALITY_SOURCE_TASK_ROBUSTNESS_ONLY"
+}
