@@ -1,0 +1,51 @@
+{
+  "schema": "ksgt.g9.p48.stylekqc-paraphrase-packet.v1",
+  "status": "PRESEALED_BEFORE_KOLLA_PILOT_RESULT",
+  "source": {
+    "repo": "cynthia/stylekqc",
+    "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+    "path": "sts/test.tsv",
+    "sha256": "60906d8b4c7624000d19a182ae4ecb8dea4c86c03c410b62e7293f97f575b657",
+    "declared_material_license": "CC-BY-SA-4.0_README",
+    "admitted_surface": "similarity=1 positive pairs only",
+    "directed_register_gold": false
+  },
+  "task": "Paraphrase sentence1 in natural Korean while preserving meaning/factual-reference content; return one sentence only.",
+  "hidden_positive": {
+    "field": "sentence2",
+    "unavailable_to_generation": true,
+    "unavailable_to_legality": true,
+    "unavailable_to_ranking": true,
+    "use_after_freeze": "similarity/reference diagnostic only"
+  },
+  "selection": {
+    "filters": [
+      "similarity == 1",
+      "sentence1 != sentence2",
+      "exact ordered pair deduplicated"
+    ],
+    "salt": "KSGT-G9-P48-STYLEKQC-PARA-v1",
+    "strata": [
+      {
+        "id": "S1_HARD_CARGO",
+        "n": 16,
+        "rule": "sentence1 has >=1 token under same protected-token extractor as KoLLA K1"
+      },
+      {
+        "id": "S2_GENERIC",
+        "n": 16,
+        "rule": "sentence1 has zero protected tokens"
+      }
+    ],
+    "selection": "lowest SHA256(sentence1 || NUL || sentence2 || salt || stratum)",
+    "no_text_inspection_before_selection": true
+  },
+  "generator": {
+    "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+    "sha": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "arms": "Same A0-A3 and K=4 shared-candidate protocol as candidate_protocol.json",
+  "legality": "Same source-derived format + hard-cargo gates; no hidden sentence2 use.",
+  "robustness_role": "B source/task transport from L2 correction to Korean question/command paraphrase-like similarity surface.",
+  "authority_ceiling": "PUBLIC_SAME_INTENT_SIMILARITY_DIAGNOSTIC; NOT_DIRECTED_REGISTER_OR_GENERAL_WRITING_QUALITY"
+}
