@@ -1,0 +1,62 @@
+{
+  "schema": "ksgt.g9.p47.adaptive-centroid-residualization.v1",
+  "status": "PRESEALED_BEFORE_FRESH_HOLDOUT_EMBEDDING",
+  "sequential_role": "Outcome-informed follow-up after frozen Court; cannot retroactively alter frozen verdict.",
+  "development_packet": {
+    "source": "canonical 768-row P47 public OKHC packet",
+    "regimes": [
+      "PRE_HANGEUL_INDEPENDENT",
+      "PRE_OLD_HANGEUL_DAEHAN",
+      "POSTLIB_HANJA_HANGEUL_MASAN"
+    ],
+    "labels_used": "regime only"
+  },
+  "operator": {
+    "name": "CENTROID_NUISANCE_RESIDUALIZATION",
+    "construction": "Let mu be global development centroid and U the orthonormal span of centered regime centroids (rank <=2). For each embedding z, z' = normalize(z - U U^T (z-mu)).",
+    "base_encoder_update": false,
+    "learned_parameters": "development regime centroid subspace only",
+    "target": "remove development-regime identity directions, not year or content labels"
+  },
+  "fresh_holdout": {
+    "publisher": "황성신문",
+    "language": "Modern Korean",
+    "script": "Hanja, Old Hangeul",
+    "years": [
+      1907,
+      1908,
+      1909,
+      1910
+    ],
+    "article_gate": "keyword tuple contains 기사; top-level text nonempty",
+    "sample": "64 lowest SHA256(id || salt) per year",
+    "salt": "KSGT-G9-P47-ADAPTIVE-HOLDOUT-v1",
+    "outcome_unseen_at_preseal": true
+  },
+  "models": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "metrics": {
+    "development": [
+      "regime balanced accuracy before/after",
+      "same-document split retrieval before/after",
+      "effective rank/anisotropy before/after"
+    ],
+    "fresh_holdout": [
+      "year balanced accuracy before/after",
+      "same-document split retrieval before/after",
+      "effective rank/anisotropy before/after",
+      "temporal centroid path before/after"
+    ]
+  },
+  "success_logic": [
+    "Lower development regime separability alone is NOT success.",
+    "If content proxy degrades materially, the operator demonstrates over-invariance.",
+    "If fresh publisher content/temporal geometry improves or is preserved while development regime separability falls, removable identity is supported locally.",
+    "No semantic/function authority without R2/R6 evidence."
+  ],
+  "authority": "ADAPTIVE_GEOMETRY_INTERVENTION_ONLY"
+}
