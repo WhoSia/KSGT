@@ -1,0 +1,118 @@
+{
+  "schema": "ksgt.g9.p48.kolla-generation-adjudication.v1",
+  "status": "PILOT_CLOSED_ARCHITECTURE_ACTIVE_OVERCONSTRAINT_RISK",
+  "run_id": 37417945500,
+  "artifacts": {
+    "packet": {
+      "id": 11391137753,
+      "zip_sha256": "172315cb5652c76cedd97085f9eafeefdfe0e7a2ee8bf9214c7f1477e3ef0264"
+    },
+    "result": {
+      "id": 11391053957,
+      "zip_sha256": "27ca8d3d1e6b267d9d30cdc1f6ed226aab46a6cb325e7443820f6d7c6c898589"
+    }
+  },
+  "packet": {
+    "eligible_unique_two_reference": 1400,
+    "pools": {
+      "K1_HARD_CARGO": 76,
+      "K2_GENERIC": 1324
+    },
+    "selected": {
+      "K1_HARD_CARGO": 16,
+      "K2_GENERIC": 16
+    },
+    "source_packet_sha256": "9a2b60c1555d72f3ce561746d994f66536217ffeb762a4553774f1ec9a01096c",
+    "hidden_gold_sha256": "25916e49bb6d8d17539bac0a5ac700999b8c3a5b16613d1ab5dcefd4c12ac834"
+  },
+  "execution": {
+    "generator": "Qwen/Qwen2.5-0.5B-Instruct",
+    "sha": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "K": 4,
+    "seeds": [
+      4801,
+      4802,
+      4803,
+      4804
+    ],
+    "decision_sha256_before_gold": "1c34cf4d3c78e1c887a0c1edb09da86aff79874fac204114754b7972f2e41004",
+    "gold_opened_after_decision_freeze": true,
+    "raw_text_persisted": false
+  },
+  "causal_events": {
+    "rescue_total": 18,
+    "abstain_total": 8,
+    "dormant_total": 6,
+    "rescue_rate": 0.5625,
+    "abstain_rate": 0.25,
+    "dormant_rate": 0.1875,
+    "K1": {
+      "rescue": 9,
+      "abstain": 6,
+      "dormant": 1,
+      "mean_legal_candidates": 0.875
+    },
+    "K2": {
+      "rescue": 9,
+      "abstain": 2,
+      "dormant": 5,
+      "mean_legal_candidates": 1.75
+    }
+  },
+  "frozen_metrics": {
+    "K1": {
+      "A1": {
+        "format_pass_rate": 0.3125,
+        "cargo_pass_rate": 0.6875,
+        "exact_ref_hit_rate": 0,
+        "nearest_ref_distance": 0.8360555821520934
+      },
+      "A3": {
+        "abstain": 6,
+        "format_pass_rate": 0.625,
+        "cargo_pass_rate": 0.625,
+        "exact_ref_hit_rate": 0,
+        "nearest_ref_distance_on_emitted": 0.431025657208873
+      },
+      "candidate_distinct_mean": 4
+    },
+    "K2": {
+      "A1": {
+        "format_pass_rate": 0.3125,
+        "cargo_pass_rate": 1,
+        "exact_ref_hit_rate": 0,
+        "nearest_ref_distance": 0.7433840904055864
+      },
+      "A3": {
+        "abstain": 2,
+        "format_pass_rate": 0.875,
+        "cargo_pass_rate": 0.875,
+        "exact_ref_hit_rate": 0,
+        "nearest_ref_distance_on_emitted": 0.5841319084676625
+      },
+      "candidate_distinct_mean": 3.9375
+    },
+    "exact_human_reference_reachable_items": 0
+  },
+  "metric_semantics": {
+    "warning": "Frozen cargo_pass_rate and format_pass_rate use all n as denominator; abstentions therefore count as non-pass.",
+    "consequence": "The presealed LOCAL_HARD_CARGO_PRESERVATION_GAIN rule is NOT satisfied because reported K1 cargo_pass_rate is 0.625 for A3 versus 0.6875 for A1.",
+    "descriptive_only": "Every emitted A3 output is legal by construction, but conditioning on emission is not allowed to retroactively replace the frozen promotion metric."
+  },
+  "adjudication": {
+    "AUTHORITY_GATE_HAS_OUTPUT_LEVEL_EFFECT": "PASS_LOCAL_L2_GEC",
+    "LOCAL_HARD_CARGO_PRESERVATION_GAIN": "NOT_PROMOTED_UNDER_FROZEN_RATE",
+    "OVERCONSTRAINT_RISK": "PROMOTED_K1_HIGH_K2_NONZERO",
+    "ABSTENTION_SURFACE": "ACTIVE",
+    "REFERENCE_QUALITY_CLAIM": "NONE",
+    "REVISION_BURDEN_CLAIM": "NONE",
+    "BETTER_KOREAN_WRITING": "NOT_AUTHORIZED",
+    "P48_STATUS": "OPEN_ROBUSTNESS_AND_LEGALITY_REFINEMENT_REQUIRED"
+  },
+  "interpretation": [
+    "Gate filtering has a direct causal effect conditional on the frozen candidate pool: 18/32 A1 choices are replaced by lower-ranked legal candidates.",
+    "Eight items have no legal candidate under the frozen gate, so safety is purchased with substantial coverage loss.",
+    "The hard-cargo lane is especially sparse and cannot support a free-safety claim.",
+    "Hidden-reference distance improvements are diagnostics only; exact human references were never produced by the K=4 candidate pools."
+  ]
+}
