@@ -1,0 +1,8 @@
+{
+  "schema": "ksgt.g9.p47.hybrid-monotonic-safety.v1",
+  "statement": "Given an action universe A, support-admissible set S(x), typed-veto complement V(x), and learned ranking L(x), the hybrid legal set H(x)=S(x)∩V(x) is independent of learned score magnitude. Therefore learned ranking cannot introduce an action outside H(x).",
+  "consequence": "If S and V are authority-correct, unsupported/vetoed-action violations under hybrid selection are no greater than under unconstrained learned argmax.",
+  "non_claim": "This does not prove utility, preference optimality, completeness, or semantic correctness.",
+  "failure_mode": "If S or V is over-authoritative or wrong, H can exclude valid realizations; therefore only PROMOTED R2 fields may hard-veto and UNKNOWN/HOLD fields must abstain or remain soft.",
+  "relation_to_r11": "When both OVERT and NULL are supported in the certified stratum, H contains both and no learned score may collapse legal plurality into an authority claim."
+}
