@@ -377,7 +377,7 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: G9_P47_FROZEN_LEARNED_TRANSPORT_COURT_ACTIVE
+next_action: COMPLETE_G9_P47_ADAPTIVE_F0_F3_THEN_APPLY_PRESEALED_TERMINAL_COURT
 
 current_g9_p46:
   status: CLOSED_REPRESENTATION_VALIDITY_REGION_AND_OBSERVATION_CHANNEL_COURT
@@ -528,3 +528,30 @@ current_g9_p47:
     expected_rows: 768
     canonical_text_field: TOP_LEVEL_TEXT
   current_gate: OBSERVE_ACTION_PACKET_AND_FROZEN_ENCODER_ARTIFACTS
+
+  frozen_matrix:
+    status: CLOSED_LOCAL_PARTIAL_ORDER
+    receipt: artifacts/g9_p47_frozen_matrix_adjudication.json
+    receipt_commit: c985a10cf3b5c020669f7968ce2d763de3cb88fa
+    verdict: REPRESENTATION_PARTIAL_ORDER_NO_GLOBAL_WINNER
+    f2: WEAK_CONTENT_PROXY_LEADER_LOCAL
+    f3: GEOMETRIC_SPREAD_LEADER_LOCAL
+    multilingual_historical_tokenization_advantage: PROMOTED_LOCAL
+  typed_decision_sufficiency:
+    status: COARSE_INSUFFICIENT_SPARSE_SIGNATURE_WARNING
+    receipt_commit: 65ad32ae41b1be441b2db48fa25fcefcdc513f81
+    deterministic_scalar_action: NOT_AUTHORIZED
+    target: SET_VALUED_CONDITIONAL_ACTION_PLUS_ABSTENTION
+  hybrid_authority_gate:
+    status: HOSTED_PASS_6_OF_6
+    run_id: 37413297674
+    receipt_commit: 853131a0fe84ba77e19afa4ad11a525a361c94c7
+    hybrid_model_superiority: NOT_PROMOTED
+  adaptive_geometry:
+    status: RUNNING_CANONICAL
+    run_id: 37413043107
+    fresh_holdout: HWANGSUNG_1907_1910_64_PER_YEAR
+    F1: OVER_INVARIANCE_LOCAL
+    F2: REMOVABLE_IDENTITY_LOCAL_WITH_NEAR_PRESERVED_FRESH_CONTENT
+    F0: RUNNING
+    F3: RUNNING
