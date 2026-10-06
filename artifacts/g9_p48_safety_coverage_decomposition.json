@@ -1,0 +1,47 @@
+{
+  "schema": "ksgt.g9.p48.safety-coverage-decomposition.v1",
+  "source_receipt": "artifacts/g9_p48_kolla_generation_adjudication.json",
+  "status": "DERIVED_FROM_PRESEALED_CAUSAL_EVENTS_NO_NEW_OUTCOME_SELECTION",
+  "overall": {
+    "n": 32,
+    "A1_legal_top": 6,
+    "A1_illegal_top": 26,
+    "A1_legal_rate": 0.1875,
+    "A3_rescue": 18,
+    "A3_abstain": 8,
+    "A3_dormant": 6,
+    "A3_emitted": 24,
+    "A3_coverage": 0.75,
+    "A3_emitted_legal": 24,
+    "A3_emitted_legality_rate": 1,
+    "rescue_given_A1_illegal": 0.6923076923076923,
+    "abstain_given_A1_illegal": 0.3076923076923077
+  },
+  "K1": {
+    "n": 16,
+    "A1_legal_top": 1,
+    "A1_illegal_top": 15,
+    "A3_rescue": 9,
+    "A3_abstain": 6,
+    "A3_dormant": 1,
+    "coverage": 0.625,
+    "mean_legal_candidates": 0.875
+  },
+  "K2": {
+    "n": 16,
+    "A1_legal_top": 5,
+    "A1_illegal_top": 11,
+    "A3_rescue": 9,
+    "A3_abstain": 2,
+    "A3_dormant": 5,
+    "coverage": 0.875,
+    "mean_legal_candidates": 1.75
+  },
+  "interpretation": [
+    "At fixed K=4, A3 converts a large fraction of A1 legality violations into either legal lower-ranked outputs or abstention.",
+    "The architecture is therefore selective rather than a free correction of learned ranking.",
+    "K1 has substantially lower support/coverage than K2, consistent with additional hard-cargo constraints.",
+    "This decomposition does not supersede the frozen all-n cargo-pass metric; LOCAL_HARD_CARGO_PRESERVATION_GAIN remains unpromoted."
+  ],
+  "next_identification_question": "Is abstention primarily finite-candidate scarcity or genuine gate overconstraint? Test candidate-budget expansion under frozen legality separately from any gate mutation."
+}
