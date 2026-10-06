@@ -377,7 +377,7 @@ lineage_policy: commit_only_live_authority_and_minimal_provenance_not_dead_exper
 waiting:
   - P33-R2 legacy strict-30 exact row crosswalk
   - PeerJ external transport
-next_action: AWAIT_FORMAL_SUCCESSOR_TITLE_AUTHORITY_GATED_GENERATION_REVISION_REENTRY
+next_action: G9_P48_AUTHORITY_GATED_GENERATION_REVISION_REENTRY_ACTIVE
 
 current_g9_p46:
   status: CLOSED_REPRESENTATION_VALIDITY_REGION_AND_OBSERVATION_CHANNEL_COURT
@@ -590,3 +590,28 @@ current_g9_p47:
     private_text_neural_performance: NOT_CLAIMED
 
   current_gate: CLOSED_AWAIT_FORMAL_SUCCESSOR_TITLE
+
+current_g9_p48:
+  status: OPEN_ARCHITECTURE_AND_MEASUREMENT_PRESEALED_PUBLIC_SOURCE_AUDIT_RUNNING
+  stage_type: EXPERIMENT
+  notion_receipt: 3f1ef561-cf92-81a8-b5d3-c42973a9618c
+  parent: G9-P47
+  constitution_commit: 1053040c5bddc51d27cba9bd437c2958c40a7f1e
+  source_registry_commit: 7e0d7957b7f234d3293bbe2fecda4ea3ce6bfdb5
+  current_state_commit: a332ef596d84b2daa321e51210d80f7880d31b0c
+  arms:
+    - A0_SINGLE_BEST_UNCONSTRAINED
+    - A1_LEARNED_SET_VALUED
+    - A2_AUTHORITY_SET_ONLY
+    - A3_AUTHORITY_GATED_HYBRID
+  measurement: P_T_C_R_B_A_GATE_THEN_VECTOR
+  generator: NOT_YET_FROZEN
+  private_text_export: NOT_AUTHORIZED
+  fresh_human_recruitment: NOT_AUTHORIZED
+  stylekqc:
+    exact_commit: f12bff2c26779969e1f8e54e1b98fcb8cfeeff77
+    audit_run_id: 37416866844
+    status: RUNNING
+  kolla_v2:
+    status: LATEST_VERSION_RECONCILIATION_REQUIRED
+  current_gate: COMPLETE_PUBLIC_SOURCE_AUDIT_THEN_FREEZE_GENERATOR_BEFORE_OUTPUTS
