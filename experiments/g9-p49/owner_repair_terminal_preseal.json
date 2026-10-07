@@ -1,0 +1,67 @@
+{
+  "schema": "ksgt.g9.p49.owner-repair-terminal-preseal.v1",
+  "status": "PRESEALED_BEFORE_ANY_OWNER_ACTION",
+  "phase": "G9-P49",
+  "packet": {
+    "source_items": 12,
+    "repair_decisions": 24,
+    "passes": 2,
+    "lanes": [
+      "KOLLA_K1_HARD_CARGO",
+      "KOLLA_K2_GENERIC",
+      "STYLEKQC_GENERIC"
+    ],
+    "human_actions_observed_at_preseal": 0,
+    "generation_run_id": 37550243190,
+    "decision_sha256_before_human": "b9a1f315aa40fe406bd049795fadbc31406e4e9f2058d82b56441c14b5de3632",
+    "pass1_sha256": "f2124344f515a8ef0541a673508ec562b008204b3a37389edaf61e096f4d1523",
+    "pass2_sha256": "749d6dc27e4c4724568a57871ebfd45041776f0cef89f159d5f4f0074d2334a2",
+    "hidden_key_sha256": "78b7bd3b0d0df4fba1da7dfece244ff7773ae3a97b3c475ec3f4ee3d3f8050f2",
+    "A3_abstain_items": 0
+  },
+  "primary_tests": {
+    "preservation_noninferiority": {
+      "population": "KOLLA_K1_HARD_CARGO paired items",
+      "pass": "sum(A3 preservation_failure) <= sum(A1 preservation_failure)",
+      "note": "No downstream repair gain can compensate for excess protected-cargo failure."
+    },
+    "overall_owner_repair_gain": {
+      "pass": "paired_verdict_counts[A3_DOMINATES] > paired_verdict_counts[A1_DOMINATES]",
+      "ties_and_incomparables": "retained; not coerced into wins"
+    },
+    "task_family_transport": {
+      "families": {
+        "KOLLA": [
+          "KOLLA_K1_HARD_CARGO",
+          "KOLLA_K2_GENERIC"
+        ],
+        "STYLEKQC": [
+          "STYLEKQC_GENERIC"
+        ]
+      },
+      "pass": "For each family, A3_DOMINATES count >= A1_DOMINATES count.",
+      "interpretation": "No sign destruction across the two public task families."
+    },
+    "selective_abstention": {
+      "pass": "workflow_gain_eligible == true",
+      "alternative": "If false, system/workflow gain cannot be promoted without separately presealed fallback-completion traces."
+    }
+  },
+  "terminal_logic": {
+    "owner_local_pass": "All four primary tests pass AND overall_owner_repair_gain is strict.",
+    "maximum_verdict": "OWNER_REPAIR_BURDEN_REDUCTION_PASS_LOCAL_PRESERVATION_NONINFERIOR",
+    "if_preservation_pass_but_no_strict_gain": "PRESERVATION_NONINFERIOR_BUT_HUMAN_REPAIR_NO_GAIN",
+    "if_task_family_sign_destroyed": "HUMAN_REPAIR_GAIN_TASK_LOCAL_ONLY",
+    "if_abstention_blocks_workflow": "REPAIR_REDUCTION_OFFSET_BY_ABSTENTION_COST",
+    "population_authority": "HOLD_REQUIRES_INDEPENDENT_EDITOR_TRANSPORT",
+    "R2_latent_burden": "HOLD_PROCESS_BYTES"
+  },
+  "authority_firewalls": [
+    "ACCEPT != correctness gold",
+    "REPAIR != universal edit necessity",
+    "REJECT != population quality gold",
+    "Owner-local evidence != Korean-speaker population authority",
+    "Reference distance and LLM judge cannot substitute for owner repair",
+    "No scalar weighting of preservation, repair, rejection, span, or abstention"
+  ]
+}
