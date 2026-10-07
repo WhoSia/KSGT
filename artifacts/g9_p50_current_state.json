@@ -11,7 +11,9 @@
     "constitution_commit": "aa2ad33ce49fb640e2892ae549c2b3e89aaefabd",
     "proposer_interface_commit": "8845a85003a2c8f7b25a223da3f3ce9704336cee",
     "pia_schema_commit": "d68666276a3586f75a27f27b23eab524940749fa",
-    "capacity_ladder_commit": "27190d39446c8e7006bfb436216e7f55e521e85f"
+    "capacity_ladder_commit": "27190d39446c8e7006bfb436216e7f55e521e85f",
+    "data_role_firewall_commit": "c4c7b96d88b938807a3760f131c5cff28148b3a8",
+    "rival_edit_reentry_commit": "2d318fe08e4f777adf579ab589049bd0536087f6"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -48,10 +50,11 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Audit existing KSGT Drive corpora, manifests, tokenizer/training assets, and literature/Harvest for P50 reuse eligibility.",
-    "Freeze tokenizer/corpus/objective/training-budget receipts before any endogenous SLM training.",
-    "Materialize the rival edit-proposer design at the same interface.",
-    "Compute exact parameter counts after tokenizer freeze.",
+    "Identify and license-seal a modern-Korean training corpus whose role is disjoint from P50 PIA/evaluation authority.",
+    "Reconstruct exact StyleKQC train-side split receipts only if historical operator evidence is reused for RIVAL_EDIT.",
+    "Freeze tokenizer, corpus manifest, deduplication policy, objective, training-token budgets, and PIA/evaluation contamination exclusions.",
+    "Compute exact trainable parameter counts for S0-S3 after tokenizer freeze.",
+    "Implement RIVAL_EDIT through the common proposer interface before claiming cross-proposer transport.",
     "Execute the 24-item PIA screen before any same-proposer governance comparison.",
     "Do not reopen human revision-burden validation until PIA passes."
   ],
@@ -63,5 +66,12 @@
     "Infer KSGT failure from a proposer that fails PIA.",
     "Turn P50 into generic small-LLM training without testing governance separation.",
     "Create github-actions[bot]-authored or committer commits."
-  ]
+  ],
+  "data_audit": {
+    "known_public_historical_news_bytes": 771640121,
+    "private_017_bytes": 305123509,
+    "training_corpus_status": "NOT_YET_SEALED",
+    "key_reason": "Existing assets carry prior evaluation/world-contact/private-authority roles and cannot silently become training supervision.",
+    "rival_reentry": "RIVAL_EDIT inherits S5 set compiler and S7 bounded edit-operator repertoire, but operator completeness remains HOLD."
+  }
 }
