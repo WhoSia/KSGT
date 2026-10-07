@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p49.current-state.v1",
   "phase": "G9-P49",
-  "status": "OPEN_OWNER_PILOT_TERMINATED_INSTRUMENT_ADEQUACY_FAILURE",
+  "status": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_G9_P50_OPEN",
   "notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
   "parent": "G9-P48",
   "stage_type": "EXPERIMENT",
@@ -42,10 +42,9 @@
     "population_authority": false
   },
   "next_execution": [
-    "Do not continue Pass 1 or open Pass 2/hidden key.",
-    "Define and preseal a proposal-instrument adequacy criterion before any new human-burden validation.",
-    "Use a competent pretrained LLM as proposal engine; KSGT remains governance/constraint/selection architecture rather than standalone language generator.",
-    "Only after adequacy passes, regenerate a fresh held-out owner packet and reopen human revision-burden validation."
+    "Do not resume the P49 owner packet.",
+    "Continue under G9-P50 only.",
+    "P49 terminal repair protocol may be reconsidered only after a competent proposal instrument passes P50 PIA on a fresh prospective surface."
   ],
   "execution": {
     "canonical_owner_packet_run_id": 37550243190,
@@ -73,5 +72,11 @@
     "revision_burden_identified": false,
     "A1_vs_A3_owner_comparison_authorized": false,
     "theory_as_governor_model_as_proposer": "PROMOTED_ARCHITECTURAL_PIVOT"
+  },
+  "successor": {
+    "phase": "G9-P50",
+    "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
+    "constitution": "experiments/g9-p50/constitution.json",
+    "reason": "P50 operationalizes proposal-instrument adequacy, endogenous proposer construction, same-proposer governance identification, and cross-proposer transport."
   }
 }
