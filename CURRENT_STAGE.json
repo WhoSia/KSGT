@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P50",
   "stage_type": "RECONSTITUTION_EXPERIMENT",
-  "status": "OPEN_P50_CONSTITUTION_AND_INSTRUMENT_SCHEMAS_SEALED",
+  "status": "OPEN_P50_CORPUS_TOKENIZER_ARCHITECTURE_PIA_SOURCE_PRESEALED",
   "canonical_notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent_stage": "G9-P49",
   "latest_closed_stage": "G9-P48",
@@ -31,7 +31,12 @@
     "experiments/g9-p50/data_role_firewall.json",
     "experiments/g9-p50/rival_edit_reentry.json",
     "Notion G9-P50",
-    "artifacts/g9_p49_owner_pilot_instrument_failure.json"
+    "artifacts/g9_p49_owner_pilot_instrument_failure.json",
+    "experiments/g9-p50/corpus_reservoir_preseal.json",
+    "experiments/g9-p50/tokenizer_preseal.json",
+    "experiments/g9-p50/slm_architecture_preseal.json",
+    "experiments/g9-p50/materialize_tokenizer.py",
+    "experiments/g9-p50/prepare_pia_sources.py"
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale",
@@ -45,5 +50,5 @@
     "Create github-actions[bot]-authored or committer commits"
   ],
   "next_human_action": "NONE",
-  "next_scientific_action": "Identify and license-seal a modern-Korean training corpus disjoint from P50 PIA/evaluation authority; then freeze tokenizer/corpus/objective/token-budget receipts and materialize SLM_AR plus RIVAL_EDIT through the common proposer interface."
+  "next_scientific_action": "Obtain tokenizer and PIA-source execution receipts; freeze PIA source hashes; decontaminate and seal the FineWeb2 model-training slice; then freeze token budget/optimizer/compute conditions before SLM training."
 }
