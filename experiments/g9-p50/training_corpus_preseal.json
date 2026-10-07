@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p50.training-corpus-preseal.v1",
   "phase": "G9-P50",
-  "status": "CORPUS_ROLE_COURT_PRESEALED_NO_BYTES_INGESTED",
+  "status": "SUPPLEMENTARY_EXTERNAL_CORPUS_AUDIT_CANONICAL_RESERVOIR_ALREADY_SELECTED",
   "decision_rule": "Prefer a reproducible, redistribution-compatible, Korean-rich training source whose training role can be kept disjoint from P50 PIA/evaluation authority. Dataset size alone is not authority.",
   "candidates": [
     {
@@ -92,8 +92,8 @@
     }
   ],
   "provisional_mainline": {
-    "base": "FW2_KOR_HANG",
-    "secondary": "NONE_UNTIL_OVERLAP_AUDIT",
+    "base": "FW2_KOR_HANG_CONFIRMS_CANONICAL_PRIMARY",
+    "secondary": "HPLT_V2_CLEANED_KOR_HANG_REMAINS_CANONICAL_SECONDARY; MOSCAR_KO_RETAINED_AS_FUTURE_RIVAL_ONLY",
     "tokenizer_diagnostic": "WIKIMEDIA_KO_20231101_ALLOWED_ONLY_ON_A_SEPARATE_NON_PIA_DIAGNOSTIC_ROLE",
     "controlled_assets": "NIKL_MODU_AND_EXISTING_PRIVATE_KSGT_ASSETS_REMAIN_OUT_OF_MAINLINE"
   },
@@ -116,5 +116,11 @@
     "If a public benchmark may occur in Common Crawl, exact/near-duplicate screen must run before model training.",
     "Cross-corpus Common-Crawl overlap is not independent replication."
   ],
-  "next_gate": "RESOLVE_FINEWEB2_KOR_HANG_REVISION_AND_BOUNDED_TRAINING_SLICE_MANIFEST"
+  "next_gate": "FOLLOW_CANONICAL_CORPUS_RESERVOIR_PRESEAL_AND_IMMUTABLE_FINEWEB2_SOURCE_FREEZE",
+  "authority_resolution": {
+    "canonical_reservoir_contract": "experiments/g9-p50/corpus_reservoir_preseal.json",
+    "canonical_primary": "FINEWEB2_KOR_HANG",
+    "canonical_secondary": "HPLT_V2_CLEANED_KOR_HANG",
+    "reason": "corpus_reservoir_preseal.json predates this external audit and owns P50 reservoir selection."
+  }
 }
