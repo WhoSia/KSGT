@@ -1,0 +1,31 @@
+{
+  "schema": "ksgt.g9.p49.selective-abstention-identification.v1",
+  "status": "PRESEALED_BEFORE_OWNER_REPAIR_ACTIONS",
+  "problem": "A3 selectively abstains; conditioning only on emitted outputs can make repair burden look artificially low.",
+  "estimands": {
+    "COMMON_EMISSION_REPAIR": {
+      "population": "Frozen P49 items on which both A1 and A3 emit a surface.",
+      "object": "Paired R0 repair vector under the same owner/task.",
+      "identifies": "Repairability difference among emitted outputs only.",
+      "does_not_identify": "End-to-end workflow burden when A3 abstains."
+    },
+    "SYSTEM_WORKFLOW_BURDEN": {
+      "population": "All frozen P49 source tasks including A3 abstentions.",
+      "object": "Generation/abstention plus any human fallback completion/repair needed to finish the task.",
+      "status": "PARTIALLY_IDENTIFIED_UNLESS_FALLBACK_TRACE_OBSERVED"
+    }
+  },
+  "rules": [
+    "Never impute zero repair burden to A3 abstention.",
+    "Never drop abstentions from coverage reporting.",
+    "A common-emission repair gain may be promoted as EMITTED_OUTPUT_OWNER_LOCAL only if preservation is non-worse.",
+    "A full system/workflow improvement claim requires either zero A3 abstention on the frozen packet or prospectively observed fallback-completion traces for abstained items.",
+    "Fallback completion is a separate action lane, not silently converted into ordinary REPAIR.",
+    "No arbitrary scalar abstention penalty is introduced."
+  ],
+  "promotion_ceiling": {
+    "with_abstention_without_fallback": "HUMAN_REPAIR_GAIN_ON_EMITTED_OUTPUTS_ONLY",
+    "zero_abstention_or_observed_fallback": "OWNER_LOCAL_SYSTEM_WORKFLOW_GAIN_ELIGIBLE",
+    "population_claim": "REQUIRES_INDEPENDENT_EDITOR_TRANSPORT"
+  }
+}
