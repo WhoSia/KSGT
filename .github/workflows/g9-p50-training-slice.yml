@@ -1,0 +1,93 @@
+name: G9-P50 Model Training Slice
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p50/materialize_model_training_slice.py"
+      - "experiments/g9-p50/slm_training_regime_preseal.json"
+      - "experiments/g9-p50/protected_pia_fingerprints.json"
+      - ".github/workflows/g9-p50-training-slice.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "datasets==4.1.1" "sentencepiece==0.2.1" "huggingface_hub>=0.35,<1"
+
+      - name: Fetch canonical tokenizer artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 37577478502 \
+            --repo "${{ github.repository }}" \
+            --name g9-p50-korean-tokenizer \
+            --dir tokenizer_artifact
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          p=Path("tokenizer_artifact/ksgt_g9_p50_sp_unigram_32k.model")
+          assert p.exists()
+          h=hashlib.sha256(p.read_bytes()).hexdigest()
+          assert h=="d99338c8e4e112fd2f9eef11e7a4a2b25435a452253bc7e5e653e74eca59b2c1"
+          print(h)
+          PY
+
+      - name: Materialize deterministic train and dev token streams
+        env:
+          HF_HUB_DISABLE_TELEMETRY: "1"
+        run: |
+          python experiments/g9-p50/materialize_model_training_slice.py \
+            --tokenizer-model tokenizer_artifact/ksgt_g9_p50_sp_unigram_32k.model \
+            --train-tokens 100000000 \
+            --dev-tokens 2000000 \
+            --out-dir g9_p50_training_slice
+
+      - name: Verify receipt and role disjointness
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("g9_p50_training_slice/manifest.json").read_text())
+          assert x["status"]=="MODEL_TRAINING_SLICE_MATERIALIZED"
+          assert x["source"]["revision"]=="fb08250"
+          assert x["tokenizer"]["piece_size"]==32768
+          assert x["tokenizer"]["model_sha256"]=="d99338c8e4e112fd2f9eef11e7a4a2b25435a452253bc7e5e653e74eca59b2c1"
+          assert x["train"]["tokens"]==100000000
+          assert x["dev"]["tokens"]==2000000
+          assert x["pairwise_record_overlap"]=={"tokenizer_train":0,"tokenizer_dev":0,"train_dev":0}
+          assert x["raw_text_in_artifact"] is False
+          assert x["model_training_authorized_by_receipt"] is False
+          assert Path("g9_p50_training_slice/train.u16le").stat().st_size==200000000
+          assert Path("g9_p50_training_slice/dev.u16le").stat().st_size==4000000
+          print(json.dumps({
+            "train_tokens":x["train"]["tokens"],
+            "dev_tokens":x["dev"]["tokens"],
+            "train_records":x["train"]["selected_records"],
+            "dev_records":x["dev"]["selected_records"],
+            "train_sha256":x["train"]["token_binary_sha256"],
+            "dev_sha256":x["dev"]["token_binary_sha256"]
+          },indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p50-model-training-slice
+          path: g9_p50_training_slice/
+          if-no-files-found: error
+          compression-level: 1
+          retention-days: 30
