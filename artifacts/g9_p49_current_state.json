@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p49.current-state.v1",
   "phase": "G9-P49",
-  "status": "OPEN_OWNER_REPAIR_PACKET_GENERATION_RUNNING",
+  "status": "OPEN_PASS1_READY_TERMINAL_RULE_SEALED_HUMAN_ACTION_REQUIRED",
   "notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
   "parent": "G9-P48",
   "stage_type": "EXPERIMENT",
@@ -17,7 +17,9 @@
     "owner_repair_instructions_commit": "efc9a8287fd477eececd66818d953d42acacb640",
     "source_compiler_commit": "6036cf36634f741b8d24cf15a090818120cdcfb4",
     "generation_runner_commit": "8bd12eb0138cb48b54ce58b4437892927f57758e",
-    "adjudicator_commit": "a49d9890a123fc56b7280ea2fc3aa2763ca91741"
+    "adjudicator_commit": "a49d9890a123fc56b7280ea2fc3aa2763ca91741",
+    "owner_repair_terminal_preseal_commit": "33a3f07e4a588041912669d053e7ac6ddf2f3d82",
+    "owner_repair_terminal_adjudicator_commit": "619efc13cb54653eb63b6a8b871c300731503392"
   },
   "burden_authority": {
     "R0_OPERATIONAL_REPAIR": "AUTHORIZED",
@@ -40,19 +42,29 @@
     "population_authority": false
   },
   "next_execution": [
-    "Complete canonical owner-repair packet generation",
-    "Audit P48 source-overlap=0, A1/A3 decision freeze hash, pass/key separation",
-    "Expose Pass 1 only to project owner under blind ACCEPT/REPAIR/REJECT instructions",
-    "Seal Pass 1 responses before revealing Pass 2",
-    "Run deterministic owner-repair adjudicator after both passes"
+    "Owner completes Pass 1 blind ACCEPT/REPAIR/REJECT actions only",
+    "Seal Pass 1 responses before exposing Pass 2",
+    "Owner completes Pass 2 blind actions",
+    "Run deterministic owner repair adjudicator",
+    "Run deterministic P49 terminal adjudicator under presealed rule"
   ],
   "execution": {
     "canonical_owner_packet_run_id": 37550243190,
     "workflow_commit": "8989ac1988620c2326c29e3989acc7246fba6e17",
-    "state": "SOURCE_SELECTION_PASS_GENERATION_IN_PROGRESS",
+    "state": "OWNER_PACKET_READY",
     "human_actions_observed": 0,
     "artifact_retention_days": 1,
     "raw_text_in_repo": false,
-    "raw_text_in_workflow_logs": false
+    "raw_text_in_workflow_logs": false,
+    "owner_packet_artifact_id": 11452174260,
+    "owner_packet_artifact_digest": "sha256:e82c018088fd78a103f46a1b2cb0fcedf25ad5f9b1628ef1d11f3e79394c44d3",
+    "preserved_packet_run_id": 37552493503,
+    "preserved_packet_artifact_id": 11453830464,
+    "preserved_packet_artifact_digest": "sha256:60e56ef384f819423446b810098c9fba31490ecd51cd52ff44858f2a607b276d",
+    "preserved_packet_expires_at": "2026-10-21T00:32:26Z",
+    "pass1_sha256": "f2124344f515a8ef0541a673508ec562b008204b3a37389edaf61e096f4d1523",
+    "pass2_sha256": "749d6dc27e4c4724568a57871ebfd45041776f0cef89f159d5f4f0074d2334a2",
+    "hidden_key_sha256": "78b7bd3b0d0df4fba1da7dfece244ff7773ae3a97b3c475ec3f4ee3d3f8050f2",
+    "A3_abstain_items": 0
   }
 }
