@@ -2,31 +2,39 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "NONE_SUCCESSOR_NOT_YET_OPENED",
-  "stage_type": null,
-  "status": "P48_CLOSED_SUCCESSOR_NOT_YET_OPENED",
-  "canonical_notion_id": "3f1ef561-cf92-81a8-b5d3-c42973a9618c",
+  "current_stage": "G9-P49",
+  "stage_type": "EXPERIMENT",
+  "status": "OPEN_CONSTITUTION_SEALED_OWNER_PACKET_BUILD_PENDING",
+  "canonical_notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
+  "parent_stage": "G9-P48",
   "latest_closed_stage": "G9-P48",
-  "latest_closed_notion_id": "3f1ef561-cf92-81a8-b5d3-c42973a9618c",
   "latest_closed_artifact": "artifacts/g9_p48_terminal_closure.json",
-  "latest_closed_commit": "2c88da67f1312cee07672c591f1e6d8c0e035bbf",
-  "latest_terminal_verdict": "AUTHORITY_GATED_SET_VALUED_GENERATION_REENTRY_PASS_LOCAL_BETTER_KOREAN_WRITING_NOT_ESTABLISHED",
-  "next_scientific_question": "Does the locally surviving authority-gated architecture reduce competent-human revision burden on held-out Korean writing tasks without increasing preservation failure?",
-  "successor_direction": "HUMAN_REVISION_BURDEN_VALIDATION_BEFORE_ANY_GENERAL_WRITING_IMPROVEMENT_CLAIM",
+  "current_artifact": "artifacts/g9_p49_current_state.json",
+  "current_constitution": "experiments/g9-p49/constitution.json",
+  "current_question": "Does P48 A3 reduce competent-human repair remaining after generation relative to A1 without worsening preservation or hiding cost through abstention?",
+  "current_authority": {
+    "R0_operational_repair": "AUTHORIZED",
+    "R1_process_observables": "CONDITIONAL",
+    "R2_latent_burden": "HOLD_PROCESS_BYTES",
+    "fresh_external_recruitment": false
+  },
   "resume_reads": [
     "CURRENT_STAGE.json",
-    "artifacts/g9_p48_terminal_closure.json",
-    "Notion G9-P48 page",
+    "artifacts/g9_p49_current_state.json",
+    "experiments/g9-p49/constitution.json",
+    "Notion G9-P49",
     "KSGT-Bench Seed Constitution v0",
-    "artifacts/g9_p47_terminal_closure.json when representation inheritance is needed"
+    "artifacts/g9_p48_terminal_closure.json"
   ],
   "forbid": [
-    "Resume from ACTIVE_LINEAGE.yaml top-level current_phase without checking CURRENT_STAGE.json",
-    "Treat P48 architecture PASS as better-Korean-writing PASS",
-    "Treat reference similarity or format legality as writing-quality authority",
-    "Erase K1 residual abstention/overconstraint debt",
+    "Treat edit distance/revision count/pause duration alone as revision burden",
+    "Treat ACCEPT/KEEP as correctness gold",
+    "Treat REPAIR/INTERVENE as edit-necessity gold",
+    "Treat human preference or LLM judge as burden authority",
+    "Assign zero cost to abstention",
+    "Treat owner pilot as population authority",
+    "Mutate P48 legality gate in P49 primary comparison",
     "Export private AI-Hub or R8 text without explicit authorization",
     "Create github-actions[bot]-authored or committer commits"
-  ],
-  "projection_note": "P48 is terminally closed. No P49 stage is opened by this pointer."
+  ]
 }
