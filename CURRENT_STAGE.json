@@ -28,6 +28,8 @@
     "experiments/g9-p50/proposer_interface.schema.json",
     "experiments/g9-p50/pia_adjudication.schema.json",
     "experiments/g9-p50/capacity_ladder_preseal.json",
+    "experiments/g9-p50/data_role_firewall.json",
+    "experiments/g9-p50/rival_edit_reentry.json",
     "Notion G9-P50",
     "artifacts/g9_p49_owner_pilot_instrument_failure.json"
   ],
@@ -43,5 +45,5 @@
     "Create github-actions[bot]-authored or committer commits"
   ],
   "next_human_action": "NONE",
-  "next_scientific_action": "Audit existing KSGT data/Harvest/training assets for endogenous SLM and rival-proposer construction, then freeze tokenizer/corpus/objective/training-budget receipts before execution."
+  "next_scientific_action": "Identify and license-seal a modern-Korean training corpus disjoint from P50 PIA/evaluation authority; then freeze tokenizer/corpus/objective/token-budget receipts and materialize SLM_AR plus RIVAL_EDIT through the common proposer interface."
 }
