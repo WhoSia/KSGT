@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P49",
   "stage_type": "EXPERIMENT",
-  "status": "OPEN_PASS1_READY_TERMINAL_RULE_SEALED_HUMAN_ACTION_REQUIRED",
+  "status": "OPEN_P49_INSTRUMENT_FAILURE_RECONSTITUTION_REQUIRED",
   "canonical_notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
   "parent_stage": "G9-P48",
   "latest_closed_stage": "G9-P48",
@@ -13,9 +13,9 @@
   "current_constitution": "experiments/g9-p49/constitution.json",
   "current_question": "Does P48 A3 reduce competent-human repair remaining after generation relative to A1 without worsening preservation or hiding cost through abstention?",
   "current_authority": {
-    "R0_operational_repair": "OWNER_PASS1_READY",
-    "R1_process_observables": "CONDITIONAL",
-    "R2_latent_burden": "HOLD_PROCESS_BYTES",
+    "R0_operational_repair": "HOLD_PROPOSAL_INSTRUMENT_INADEQUATE",
+    "R1_process_observables": "NOT_OPENED",
+    "R2_latent_burden": "HOLD",
     "fresh_external_recruitment": false
   },
   "resume_reads": [
@@ -37,5 +37,6 @@
     "Export private AI-Hub or R8 text without explicit authorization",
     "Create github-actions[bot]-authored or committer commits"
   ],
-  "next_human_action": "Complete blind Pass 1 only; do not inspect Pass 2 or hidden key."
+  "next_human_action": "NONE_OWNER_PILOT_STOPPED",
+  "next_scientific_question": "What minimum proposal-engine competence is required before KSGT governance effects on human revision burden become identifiable, and does a theory-as-governor / LLM-as-proposer architecture preserve KSGT authority without collapsing back into unconstrained LLM preference?"
 }
