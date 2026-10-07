@@ -2,7 +2,7 @@
   "schema": "ksgt.g9.p50.current-state.v1",
   "phase": "G9-P50",
   "generation": "IX",
-  "status": "OPEN_CONSTITUTION_AND_INSTRUMENT_SCHEMAS_SEALED_DATA_COMPUTE_AUDIT_NEXT",
+  "status": "OPEN_PIA_SOURCE_FROZEN_TOKENIZER_RETRY_QUEUED",
   "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent": "G9-P49",
   "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
@@ -24,7 +24,10 @@
     "training_corpus_preseal_commit": "d53f395975906270d508a5b5ef5a99ce24562bf0",
     "tokenizer_court_preseal_commit": "6507d146097d758dd6d237c78fee49bd92030a3c",
     "fineweb2_source_snapshot_commit": "e2ee3409b06742cc8c7e3a10bd4b47f3f8a588b7",
-    "fineweb2_remote_manifest_commit": "1d98d7fe4f15b8de42220e0ad3c107c4562d750c"
+    "fineweb2_remote_manifest_commit": "1d98d7fe4f15b8de42220e0ad3c107c4562d750c",
+    "protected_pia_fingerprints_commit": "9444d2ff8afeb6bc327560faa1bf8a3e791983a8",
+    "tokenizer_materializer_hardening_commit": "bf7215b2816e4fa245251ddfd5ef89b69e589022",
+    "tokenizer_workflow_hardening_commit": "b8cd6b5f54698c5f2114b186cb5646e8c7262c71"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -61,14 +64,12 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Acquire or stream a bounded FineWeb2 kor_Hang shard under revision fb08250 and record exact SHA256 before parsing.",
-    "Audit parquet schema and materialize only enough eligible text to fill the 1 GiB tokenizer-only role after protected-surface exclusions.",
-    "Run exact and near-duplicate contamination screens against P47/P48/P49/P50 protected surfaces.",
-    "Train T0/T1/T2 tokenizer candidates on the identical tokenizer-only bytes at vocab 24k and 32k.",
-    "Adjudicate tokenizer intrinsic Pareto court and freeze one winner before any SLM model outcome.",
-    "After tokenizer freeze, set exact S0-S3 trainable parameters and prospective training-token budgets.",
-    "Materialize RIVAL_EDIT training pool with historical S5/S7 authority ceilings intact.",
-    "Execute PIA before governance or human-burden comparison."
+    "Read back tokenizer retry run 37577478502 and require a successful artifact/manifest before any tokenizer PASS.",
+    "If successful, freeze realized piece_size/model SHA256 and recompute exact S0-S3 parameter counts.",
+    "Seal model-training token budgets and exact FineWeb2 training slice with PIA fingerprint exclusions.",
+    "Materialize RIVAL_EDIT training pool under S5/S7 authority ceilings.",
+    "Train capacity ladder only after tokenizer and training-slice receipts exist.",
+    "Execute PIA before same-proposer governance comparison; human revision burden remains HOLD."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -102,7 +103,21 @@
     "normalization": "identity",
     "byte_fallback": true,
     "shared_across_S0_S3": true,
-    "execution": "WORKFLOW_COMMITTED_RUN_READBACK_NOT_YET_OBTAINED"
+    "canonical_preseal": "experiments/g9-p50/tokenizer_preseal.json",
+    "later_rival_registry": "SUPPLEMENTARY_ONLY_NOT_ACTIVE_P50_SELECTION",
+    "attempt1": {
+      "run_id": 37576044664,
+      "conclusion": "ENGINEERING_FAILURE_NO_CANONICAL_RECEIPT",
+      "scientific_inference": "NONE",
+      "failure_receipt": "artifacts/g9_p50_tokenizer_attempt1_failure.json"
+    },
+    "retry": {
+      "desired_run_id": 37577478502,
+      "head": "b8cd6b5f54698c5f2114b186cb5646e8c7262c71",
+      "status": "QUEUED_AT_LAST_READBACK",
+      "source_revision": "fb08250",
+      "protected_pia_fingerprints": true
+    }
   },
   "slm_architecture": {
     "family": "decoder-only causal Transformer",
@@ -119,16 +134,23 @@
   "pia_source_packet": {
     "design": "8 KOLLA_K1_HARD_CARGO + 8 KOLLA_K2_GENERIC + 8 STYLEKQC_GENERIC",
     "exclusion": "P48 and P49 source selections deterministically reconstructed and excluded",
-    "execution": "WORKFLOW_COMMITTED_RUN_READBACK_NOT_YET_OBTAINED",
+    "execution": "SUCCESS",
+    "workflow_run_id": 37576195589,
+    "artifact_id": 11463265816,
+    "artifact_digest": "sha256:cbf4b7719c3d2ee50b934afe0b3c1f010e88dcc3015a59db71f64e72b84489e5",
+    "source_packet_sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+    "hidden_refs_sha256": "082fb84e2b242c22325d13d727c75cf278fc6688ab4e9f6d9b4c2ced513efd58",
+    "selected_total": 24,
+    "p48_p49_overlap": 0,
     "human_evaluation": "NOT_OPENED"
   },
   "corpus_court": {
-    "status": "PRESEALED_NO_BYTES_INGESTED",
-    "primary_candidate": "HuggingFaceFW/fineweb-2 kor_Hang / ODC-BY-1.0",
-    "secondary_candidate": "oscar-corpus/mOSCAR / CC-BY-4.0 / Korean subset and overlap audit pending",
-    "auxiliary_only": "wikimedia/wikipedia 20231101.ko",
-    "controlled_hold": "NIKL Modu Corpus",
-    "next_gate": "Resolve exact FineWeb2 revision/file manifest and prospectively bounded train/tokenizer slices; run contamination exclusions before download/training."
+    "canonical_primary": "FineWeb2 kor_Hang",
+    "canonical_secondary": "HPLT v2 cleaned kor-Hang / sensitivity only",
+    "source_revision": "fb08250",
+    "license": "ODC-BY-1.0 plus Common Crawl terms / no blanket underlying-text rights claim",
+    "external_candidate_audit": "SUPPLEMENTARY; mOSCAR/Wikipedia/NIKL do not override the earlier reservoir preseal",
+    "model_training_slice": "NOT_YET_SEALED"
   },
   "tokenizer_court": {
     "status": "PRESEALED_NOT_EXECUTED",
