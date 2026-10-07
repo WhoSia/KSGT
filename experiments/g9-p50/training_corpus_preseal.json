@@ -1,0 +1,120 @@
+{
+  "schema": "ksgt.g9.p50.training-corpus-preseal.v1",
+  "phase": "G9-P50",
+  "status": "CORPUS_ROLE_COURT_PRESEALED_NO_BYTES_INGESTED",
+  "decision_rule": "Prefer a reproducible, redistribution-compatible, Korean-rich training source whose training role can be kept disjoint from P50 PIA/evaluation authority. Dataset size alone is not authority.",
+  "candidates": [
+    {
+      "id": "FW2_KOR_HANG",
+      "source": "HuggingFaceFW/fineweb-2",
+      "config": "kor_Hang",
+      "license": "ODC-BY-1.0",
+      "remote_scale": "~106 GB listed on current Hub tree",
+      "strengths": [
+        "Large Korean-script web corpus suitable for from-scratch LM training",
+        "Global per-language deduplication",
+        "Language/script identification and language-specific filtering",
+        "Reproducible open pipeline"
+      ],
+      "risks": [
+        "Web-style noise and source-domain imbalance remain possible",
+        "Common-Crawl provenance means contamination with public benchmarks must be actively checked",
+        "ODC-BY attribution/provenance obligations must be preserved"
+      ],
+      "role": "PRIMARY_BASE_CORPUS_CANDIDATE",
+      "verdict": "PROMOTE_TO_MANIFEST_AND_CONTAMINATION_AUDIT"
+    },
+    {
+      "id": "MOSCAR_KO",
+      "source": "oscar-corpus/mOSCAR",
+      "license": "CC-BY-4.0",
+      "strengths": [
+        "Permissive attribution license",
+        "Large web pretraining corpus",
+        "Independent processing lineage from FineWeb2"
+      ],
+      "risks": [
+        "Still Common-Crawl derived, so not independent content-world contact",
+        "Korean subset size/composition must be resolved before quota assignment",
+        "Potential overlap with FineWeb2 requires URL/text dedup if mixed"
+      ],
+      "role": "SECONDARY_DIVERSIFICATION_OR_REPLICATION_CANDIDATE",
+      "verdict": "HOLD_PENDING_KOREAN_SUBSET_AND_OVERLAP_AUDIT"
+    },
+    {
+      "id": "WIKIMEDIA_KO_20231101",
+      "source": "wikimedia/wikipedia",
+      "config": "20231101.ko",
+      "remote_scale": "~783 MB",
+      "license": "CC-BY-SA-3.0 plus GFDL metadata on dataset card",
+      "strengths": [
+        "Clean encyclopedic Korean",
+        "Stable article structure",
+        "Useful tokenizer and factual-prose diagnostic source"
+      ],
+      "risks": [
+        "Genre too narrow for KSGT writing target",
+        "ShareAlike/GFDL obligations complicate a clean mainline training-license story",
+        "May overlap with benchmark/reference material"
+      ],
+      "role": "TOKENIZER_DIAGNOSTIC_OR_AUXILIARY_ONLY_BY_DEFAULT",
+      "verdict": "DO_NOT_USE_AS_PRIMARY_P50_TRAINING_CORPUS"
+    },
+    {
+      "id": "NIKL_MODU",
+      "source": "National Institute of Korean Language Modu Corpus",
+      "license": "individual corpus use agreement / approved-purpose regime",
+      "strengths": [
+        "High-value Korean language material including newspaper, books, conversation, messenger and web genres",
+        "Directly relevant to Korean language technology"
+      ],
+      "risks": [
+        "Identity verification and individual usage agreement",
+        "Use only within approved purposes and periods",
+        "External disclosure requires prior NIKL approval and corpus text cannot be included",
+        "Poor fit for a maximally reproducible open P50 training mainline"
+      ],
+      "role": "PRIVATE_OR_CONTROLLED_FUTURE_LANE",
+      "verdict": "HOLD_MAINLINE"
+    },
+    {
+      "id": "KORPORA",
+      "source": "ko-nlp/Korpora",
+      "license": "package CC-BY-4.0; each underlying corpus has its own license",
+      "strengths": [
+        "Convenient corpus access layer"
+      ],
+      "risks": [
+        "Wrapper license does not authorize all contained corpora for uniform training use"
+      ],
+      "role": "DISCOVERY_TOOL_ONLY",
+      "verdict": "NO_BLANKET_TRAINING_AUTHORITY"
+    }
+  ],
+  "provisional_mainline": {
+    "base": "FW2_KOR_HANG",
+    "secondary": "NONE_UNTIL_OVERLAP_AUDIT",
+    "tokenizer_diagnostic": "WIKIMEDIA_KO_20231101_ALLOWED_ONLY_ON_A_SEPARATE_NON_PIA_DIAGNOSTIC_ROLE",
+    "controlled_assets": "NIKL_MODU_AND_EXISTING_PRIVATE_KSGT_ASSETS_REMAIN_OUT_OF_MAINLINE"
+  },
+  "mandatory_manifest_fields": [
+    "dataset repo/config/revision",
+    "license and attribution text",
+    "acquisition timestamp",
+    "remote file list and hashes where available",
+    "document count / byte count / token count after filtering",
+    "deduplication policy",
+    "PII and unsafe-text filtering policy",
+    "benchmark/PIA contamination exclusions",
+    "train/dev/tokenizer-only/evaluation role",
+    "exact random/hash split salt"
+  ],
+  "contamination_firewall": [
+    "Exclude all P47/P48/P49 exact source IDs and texts where hashes are available.",
+    "Exclude all planned P50 PIA items before tokenizer or model fitting.",
+    "Do not use StyleKQC held-out human anchors, KoLLA evaluation rows, or P49 owner packet as training text.",
+    "If a public benchmark may occur in Common Crawl, exact/near-duplicate screen must run before model training.",
+    "Cross-corpus Common-Crawl overlap is not independent replication."
+  ],
+  "next_gate": "RESOLVE_FINEWEB2_KOR_HANG_REVISION_AND_BOUNDED_TRAINING_SLICE_MANIFEST"
+}
