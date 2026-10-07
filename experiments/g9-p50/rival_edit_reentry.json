@@ -1,0 +1,41 @@
+{
+  "schema": "ksgt.g9.p50.rival-edit-reentry.v1",
+  "phase": "G9-P50",
+  "status": "ANCESTOR_REENTRY_PRESEALED_DESIGN_ONLY",
+  "ancestor": {
+    "S5": "G8-P1.3-R2bd-S5 State-Licensed Candidate-Set Compiler",
+    "S7": "G8-P1.3-R2bd-S7 Human-Rewrite Operator Induction",
+    "inherited_compiler_states": [
+      "ADMIT",
+      "PREFER",
+      "REVIEW",
+      "BLOCK"
+    ],
+    "inherited_operator_seed": [
+      "O-END",
+      "O-DIRECTIVE",
+      "O-LEX",
+      "O-PART",
+      "O-DISC",
+      "O-ORDER",
+      "O-NP",
+      "O-QFRAME"
+    ],
+    "inherited_failure": "HOLD_OPERATOR_COMPLETENESS"
+  },
+  "proposer_design": {
+    "family": "RIVAL_EDIT",
+    "architecture": "SOURCE_CONDITIONED_RETRIEVAL_AUGMENTED_EDIT_PROPOSER",
+    "stages": [
+      "retrieve source/task-compatible native Korean exemplars or edit traces from training-authorized pool",
+      "propose bounded typed edit scripts over source rather than free left-to-right continuation",
+      "instantiate multiple surface candidates",
+      "attach proposal provenance and optional learned proposal score",
+      "hand candidate set to the unchanged KSGT governor interface"
+    ],
+    "allowed_learning": "proposal scoring / edit-script proposal within training-authorized evidence",
+    "forbidden": "Treat the eight historical operator labels as exhaustive ontology or give proposer score KSGT legality authority."
+  },
+  "scientific_reason": "Materially different proposal mechanism tests whether KSGT governance is architecture-neutral while reconnecting a historically unrefuted KSGT generation ancestor.",
+  "fail_condition": "If KSGT semantic/admissibility rules must be rewritten solely because proposals come from RIVAL_EDIT, record PROPOSER_SPECIFIC_AUTHORITY_LEAK."
+}
