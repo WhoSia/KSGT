@@ -2,7 +2,7 @@
   "schema": "ksgt.g9.p50.current-state.v1",
   "phase": "G9-P50",
   "generation": "IX",
-  "status": "OPEN_PIA_SOURCE_FROZEN_TOKENIZER_RETRY_QUEUED",
+  "status": "OPEN_TOKENIZER_FROZEN_MODEL_TRAINING_SLICE_AND_BUDGET_NEXT",
   "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent": "G9-P49",
   "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
@@ -27,7 +27,8 @@
     "fineweb2_remote_manifest_commit": "1d98d7fe4f15b8de42220e0ad3c107c4562d750c",
     "protected_pia_fingerprints_commit": "9444d2ff8afeb6bc327560faa1bf8a3e791983a8",
     "tokenizer_materializer_hardening_commit": "bf7215b2816e4fa245251ddfd5ef89b69e589022",
-    "tokenizer_workflow_hardening_commit": "b8cd6b5f54698c5f2114b186cb5646e8c7262c71"
+    "tokenizer_workflow_hardening_commit": "b8cd6b5f54698c5f2114b186cb5646e8c7262c71",
+    "tokenizer_canonical_receipt_commit": "97a21c7c84a9af973ada88181608c3635788f4d1"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -64,11 +65,11 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Read back tokenizer retry run 37577478502 and require a successful artifact/manifest before any tokenizer PASS.",
-    "If successful, freeze realized piece_size/model SHA256 and recompute exact S0-S3 parameter counts.",
-    "Seal model-training token budgets and exact FineWeb2 training slice with PIA fingerprint exclusions.",
+    "Preseal exact S0-S3 training token budgets before any model-loss or PIA outcome is observed.",
+    "Materialize a deterministic FineWeb2 kor_Hang model-training slice at revision fb08250, disjoint from tokenizer-only role and protected PIA fingerprints.",
+    "Record exact training-slice document/token/byte counts and provenance receipts; do not commit raw corpus text.",
     "Materialize RIVAL_EDIT training pool under S5/S7 authority ceilings.",
-    "Train capacity ladder only after tokenizer and training-slice receipts exist.",
+    "Train the SLM_AR capacity ladder under one frozen tokenizer/topology and prospectively fixed optimization schedule.",
     "Execute PIA before same-proposer governance comparison; human revision burden remains HOLD."
   ],
   "forbid": [
@@ -99,25 +100,23 @@
   },
   "tokenizer": {
     "family": "SentencePiece Unigram",
-    "nominal_vocab": 32768,
+    "piece_size": 32768,
     "normalization": "identity",
     "byte_fallback": true,
     "shared_across_S0_S3": true,
-    "canonical_preseal": "experiments/g9-p50/tokenizer_preseal.json",
-    "later_rival_registry": "SUPPLEMENTARY_ONLY_NOT_ACTIVE_P50_SELECTION",
-    "attempt1": {
-      "run_id": 37576044664,
-      "conclusion": "ENGINEERING_FAILURE_NO_CANONICAL_RECEIPT",
-      "scientific_inference": "NONE",
-      "failure_receipt": "artifacts/g9_p50_tokenizer_attempt1_failure.json"
-    },
-    "retry": {
-      "desired_run_id": 37577478502,
-      "head": "b8cd6b5f54698c5f2114b186cb5646e8c7262c71",
-      "status": "QUEUED_AT_LAST_READBACK",
-      "source_revision": "fb08250",
-      "protected_pia_fingerprints": true
-    }
+    "status": "PASS_CANONICAL_TOKENIZER_FROZEN",
+    "workflow_run_id": 37577478502,
+    "artifact_id": 11463637064,
+    "artifact_digest": "sha256:e2c884ad87a137c7388ad07f963905c34bbfd33110f359720192a0df53a10f81",
+    "model_sha256": "d99338c8e4e112fd2f9eef11e7a4a2b25435a452253bc7e5e653e74eca59b2c1",
+    "vocab_sha256": "9763e0e9241580445f651ae893f5548363aaae1ffb65b7ae49e1ea5a15971942",
+    "manifest_sha256": "8410018208e5f991283c0b2677d677526c9ae6431c64f0b7930cc1f32c89d2b6",
+    "sample_documents": 60326,
+    "sample_characters": 100002865,
+    "diagnostic_tokens_per_eojeol": 2.0420002529120005,
+    "diagnostic_byte_piece_fraction": 0.004395477364805355,
+    "diagnostic_unk_piece_count": 0,
+    "writing_quality_authority": "NONE"
   },
   "slm_architecture": {
     "family": "decoder-only causal Transformer",
@@ -129,7 +128,14 @@
       "S2": 41951744,
       "S3": 110119680
     },
-    "training_status": "NOT_AUTHORIZED"
+    "training_status": "HOLD_PENDING_EXACT_TRAINING_SLICE_AND_TOKEN_BUDGET",
+    "exact_parameter_counts": {
+      "S0": 11536640,
+      "S1": 23204736,
+      "S2": 41951744,
+      "S3": 110119680
+    },
+    "parameter_count_status": "EXACT_AFTER_REALIZED_VOCAB_32768"
   },
   "pia_source_packet": {
     "design": "8 KOLLA_K1_HARD_CARGO + 8 KOLLA_K2_GENERIC + 8 STYLEKQC_GENERIC",
