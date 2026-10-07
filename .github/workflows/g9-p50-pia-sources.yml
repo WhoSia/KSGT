@@ -1,0 +1,56 @@
+name: G9-P50 PIA Source Packet
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p50/prepare_pia_sources.py"
+      - ".github/workflows/g9-p50-pia-sources.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-packet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile fresh P50 PIA source packet
+        run: python experiments/g9-p50/prepare_pia_sources.py
+
+      - name: Validate prospective packet
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("g9_p50_pia_source_receipt.json").read_text())
+          assert r["selected_total"] == 24
+          assert r["selected_counts"] == {
+              "KOLLA_K1_HARD_CARGO": 8,
+              "KOLLA_K2_GENERIC": 8,
+              "STYLEKQC_GENERIC": 8,
+          }
+          assert r["p48_p49_overlap"] == 0
+          assert len(r["source_sha256"]) == 24
+          assert len(set(r["source_sha256"])) == 24
+          print(json.dumps({
+              "selected_counts": r["selected_counts"],
+              "source_packet_sha256": r["source_packet_sha256"],
+              "hidden_refs_sha256": r["hidden_refs_sha256"],
+          }, indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p50-pia-source-packet
+          path: |
+            p50_pia_source_packet.jsonl
+            p50_pia_hidden_refs.jsonl
+            g9_p50_pia_source_receipt.json
+          if-no-files-found: error
+          retention-days: 30
