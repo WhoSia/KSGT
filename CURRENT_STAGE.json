@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P50",
   "stage_type": "RECONSTITUTION_EXPERIMENT",
-  "status": "OPEN_P50_CORPUS_AND_TOKENIZER_PRESEALED_BYTE_CUSTODY_NEXT",
+  "status": "OPEN_P50_PIA_SOURCE_FROZEN_TOKENIZER_RETRY_QUEUED",
   "canonical_notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent_stage": "G9-P49",
   "latest_closed_stage": "G9-P48",
@@ -40,7 +40,9 @@
     "experiments/g9-p50/fineweb2_source_snapshot.json",
     "experiments/g9-p50/fineweb2_remote_manifest.json",
     "experiments/g9-p50/materialize_tokenizer.py",
-    "experiments/g9-p50/prepare_pia_sources.py"
+    "experiments/g9-p50/prepare_pia_sources.py",
+    "experiments/g9-p50/protected_pia_fingerprints.json",
+    "artifacts/g9_p50_tokenizer_attempt1_failure.json"
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale",
@@ -54,5 +56,5 @@
     "Create github-actions[bot]-authored or committer commits"
   ],
   "next_human_action": "NONE",
-  "next_scientific_action": "Acquire or stream a bounded FineWeb2 kor_Hang shard at frozen revision fb08250; record exact byte hash before parsing; materialize a protected-surface-clean 1 GiB tokenizer-only slice; execute the intrinsic T0/T1/T2 tokenizer court before any SLM training."
+  "next_scientific_action": "Read back the revision-pinned, PIA-excluding tokenizer retry; only a successful manifest/artifact may freeze tokenizer bytes. Then seal model-training slice/token budgets and recompute exact S0-S3 parameter counts."
 }
