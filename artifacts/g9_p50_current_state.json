@@ -13,7 +13,14 @@
     "pia_schema_commit": "d68666276a3586f75a27f27b23eab524940749fa",
     "capacity_ladder_commit": "27190d39446c8e7006bfb436216e7f55e521e85f",
     "data_role_firewall_commit": "c4c7b96d88b938807a3760f131c5cff28148b3a8",
-    "rival_edit_reentry_commit": "2d318fe08e4f777adf579ab589049bd0536087f6"
+    "rival_edit_reentry_commit": "2d318fe08e4f777adf579ab589049bd0536087f6",
+    "corpus_reservoir_preseal_commit": "8e94246592de2ab5213dde00694fc61ab5b261dc",
+    "tokenizer_preseal_commit": "965dcfa97ad432113b81a74ce692ffc48d64b473",
+    "slm_architecture_preseal_commit": "0192e9cc39f45e141d0ca824860f91a06ca63593",
+    "tokenizer_materializer_commit": "cd9f751c378455867cf67e4ad07d6c5f59ca4d25",
+    "tokenizer_workflow_commit": "277758a433cef092bd0b720b3ed4e233045b0c16",
+    "pia_source_compiler_commit": "85dcbbc3df5508a60902c1a782c31f1e7a2d016c",
+    "pia_source_workflow_commit": "93fb08239f4123f95b4bf8a3791b846dda762a4e"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -50,13 +57,12 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Identify and license-seal a modern-Korean training corpus whose role is disjoint from P50 PIA/evaluation authority.",
-    "Reconstruct exact StyleKQC train-side split receipts only if historical operator evidence is reused for RIVAL_EDIT.",
-    "Freeze tokenizer, corpus manifest, deduplication policy, objective, training-token budgets, and PIA/evaluation contamination exclusions.",
-    "Compute exact trainable parameter counts for S0-S3 after tokenizer freeze.",
-    "Implement RIVAL_EDIT through the common proposer interface before claiming cross-proposer transport.",
-    "Execute the 24-item PIA screen before any same-proposer governance comparison.",
-    "Do not reopen human revision-burden validation until PIA passes."
+    "Obtain tokenizer and PIA source workflow readback/artifact receipts; do not infer success from workflow-file presence.",
+    "Freeze exact P50 PIA source hashes before sealing the model-training slice.",
+    "Run exact and near-duplicate contamination exclusion from FineWeb2 training candidates against frozen PIA/evaluation surfaces.",
+    "Freeze FineWeb2 shard/sample manifest, model-training token budget, optimizer/schedule, and compute calibration.",
+    "Materialize SLM_AR checkpoints and RIVAL_EDIT through the common proposer interface.",
+    "Execute PIA before any same-proposer governance comparison or renewed human revision-burden experiment."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -73,5 +79,41 @@
     "training_corpus_status": "NOT_YET_SEALED",
     "key_reason": "Existing assets carry prior evaluation/world-contact/private-authority roles and cannot silently become training supervision.",
     "rival_reentry": "RIVAL_EDIT inherits S5 set compiler and S7 bounded edit-operator repertoire, but operator completeness remains HOLD."
+  },
+  "training_reservoir": {
+    "primary": "FineWeb2 kor_Hang",
+    "upstream_words": 48613120582,
+    "upstream_documents": 60874355,
+    "upstream_disk_size": "98.50GB",
+    "packaging_license": "ODC-By-1.0 plus Common Crawl terms",
+    "source_text_rights": "NOT_BLANKET_CLEARED_BY_DATASET_PACKAGING_LICENSE",
+    "secondary_holdout": "HPLT v2 cleaned kor-Hang",
+    "exact_model_training_slice": "NOT_YET_SEALED"
+  },
+  "tokenizer": {
+    "family": "SentencePiece Unigram",
+    "nominal_vocab": 32768,
+    "normalization": "identity",
+    "byte_fallback": true,
+    "shared_across_S0_S3": true,
+    "execution": "WORKFLOW_COMMITTED_RUN_READBACK_NOT_YET_OBTAINED"
+  },
+  "slm_architecture": {
+    "family": "decoder-only causal Transformer",
+    "context_length": 1024,
+    "topology": "RoPE + pre-RMSNorm + full MHA + GELU MLP + tied embeddings",
+    "nominal_parameter_counts": {
+      "S0": 11536640,
+      "S1": 23204736,
+      "S2": 41951744,
+      "S3": 110119680
+    },
+    "training_status": "NOT_AUTHORIZED"
+  },
+  "pia_source_packet": {
+    "design": "8 KOLLA_K1_HARD_CARGO + 8 KOLLA_K2_GENERIC + 8 STYLEKQC_GENERIC",
+    "exclusion": "P48 and P49 source selections deterministically reconstructed and excluded",
+    "execution": "WORKFLOW_COMMITTED_RUN_READBACK_NOT_YET_OBTAINED",
+    "human_evaluation": "NOT_OPENED"
   }
 }
