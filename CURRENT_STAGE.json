@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P50",
   "stage_type": "RECONSTITUTION_EXPERIMENT",
-  "status": "OPEN_P50_TOKENIZER_FROZEN_TRAINING_SLICE_AND_TOKEN_BUDGET_NEXT",
+  "status": "OPEN_P50_TRAINING_REGIME_PRESEALED_SLICE_RUNNING",
   "canonical_notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent_stage": "G9-P49",
   "latest_closed_stage": "G9-P48",
@@ -43,7 +43,10 @@
     "experiments/g9-p50/prepare_pia_sources.py",
     "experiments/g9-p50/protected_pia_fingerprints.json",
     "artifacts/g9_p50_tokenizer_attempt1_failure.json",
-    "artifacts/g9_p50_tokenizer_canonical_receipt.json"
+    "artifacts/g9_p50_tokenizer_canonical_receipt.json",
+    "experiments/g9-p50/slm_training_regime_preseal.json",
+    "experiments/g9-p50/materialize_model_training_slice.py",
+    ".github/workflows/g9-p50-training-slice.yml"
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale",
@@ -57,5 +60,5 @@
     "Create github-actions[bot]-authored or committer commits"
   ],
   "next_human_action": "NONE",
-  "next_scientific_action": "Preseal exact S0-S3 token budgets and materialize a deterministic FineWeb2 fb08250 model-training slice disjoint from tokenizer-only and PIA-protected surfaces; only then authorize model training."
+  "next_scientific_action": "Read back training-slice run 37579616336; require exact tokenizer-only reconstruction, 100M train/2M dev tokens, and zero role overlap before model-training authorization."
 }
