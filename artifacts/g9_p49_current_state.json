@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p49.current-state.v1",
   "phase": "G9-P49",
-  "status": "OPEN_CONSTITUTION_SEALED_OWNER_PACKET_BUILD_PENDING",
+  "status": "OPEN_OWNER_REPAIR_PACKET_GENERATION_RUNNING",
   "notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
   "parent": "G9-P48",
   "stage_type": "EXPERIMENT",
@@ -10,7 +10,14 @@
   "contracts": {
     "constitution_commit": "bd252bde7dac84f89f6eda45adf2fe7abc593fd5",
     "human_repair_schema_commit": "3d11edd3c067a30b2f89ecaa2dc064a3ed9cf75c",
-    "owner_pilot_preseal_commit": "3c4455ca0abda6647c78ee3014aa92b0a93e5103"
+    "owner_pilot_preseal_commit": "3c4455ca0abda6647c78ee3014aa92b0a93e5103",
+    "owner_repair_partial_order_commit": "aceb33c27bbd72a006b9d2a3224a9dbaa8e6714e",
+    "selective_abstention_commit": "0dfe0f972798a77a69e5852fc14c9dd7c960786c",
+    "burden_literature_pressure_test_commit": "de7f33be80c84555e27437ce502c55ef5ef21740",
+    "owner_repair_instructions_commit": "efc9a8287fd477eececd66818d953d42acacb640",
+    "source_compiler_commit": "6036cf36634f741b8d24cf15a090818120cdcfb4",
+    "generation_runner_commit": "8bd12eb0138cb48b54ce58b4437892927f57758e",
+    "adjudicator_commit": "a49d9890a123fc56b7280ea2fc3aa2763ca91741"
   },
   "burden_authority": {
     "R0_OPERATIONAL_REPAIR": "AUTHORIZED",
@@ -33,9 +40,19 @@
     "population_authority": false
   },
   "next_execution": [
-    "Build fresh public 12-item packet excluding all P48 confirmatory source hashes",
-    "Generate frozen K=12 A1/A3 surfaces with unchanged P48 generator and legality",
-    "Materialize two blind human-repair passes without condition labels or hidden references",
-    "Run owner repair action collection only after packet/key separation is sealed"
-  ]
+    "Complete canonical owner-repair packet generation",
+    "Audit P48 source-overlap=0, A1/A3 decision freeze hash, pass/key separation",
+    "Expose Pass 1 only to project owner under blind ACCEPT/REPAIR/REJECT instructions",
+    "Seal Pass 1 responses before revealing Pass 2",
+    "Run deterministic owner-repair adjudicator after both passes"
+  ],
+  "execution": {
+    "canonical_owner_packet_run_id": 37550243190,
+    "workflow_commit": "8989ac1988620c2326c29e3989acc7246fba6e17",
+    "state": "SOURCE_SELECTION_PASS_GENERATION_IN_PROGRESS",
+    "human_actions_observed": 0,
+    "artifact_retention_days": 1,
+    "raw_text_in_repo": false,
+    "raw_text_in_workflow_logs": false
+  }
 }
