@@ -1,0 +1,67 @@
+{
+  "schema": "ksgt.g9.p50.current-state.v1",
+  "phase": "G9-P50",
+  "generation": "IX",
+  "status": "OPEN_CONSTITUTION_AND_INSTRUMENT_SCHEMAS_SEALED_DATA_COMPUTE_AUDIT_NEXT",
+  "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
+  "parent": "G9-P49",
+  "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
+  "formal_title": "KSGT Generation IX G9-P50 — Endogenous Proposal-Mechanism Reconstitution, Small-Language-Model Proposer Construction, Proposal–Governance Architectural Separation, Repairable-Support Identification, Capacity–Authority Decoupling, Cross-Proposer Transport & the Minimal Generative Competence Required for Governable Korean Realization",
+  "contracts": {
+    "constitution_commit": "aa2ad33ce49fb640e2892ae549c2b3e89aaefabd",
+    "proposer_interface_commit": "8845a85003a2c8f7b25a223da3f3ce9704336cee",
+    "pia_schema_commit": "d68666276a3586f75a27f27b23eab524940749fa",
+    "capacity_ladder_commit": "27190d39446c8e7006bfb436216e7f55e521e85f"
+  },
+  "inherited_p49": {
+    "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
+    "owner_actions_observed": 2,
+    "confirmatory_authority": "NONE",
+    "A1_vs_A3_authorized": false,
+    "revision_burden_identified": false,
+    "architectural_pivot": "THEORY_AS_GOVERNOR_MODEL_AS_PROPOSER"
+  },
+  "open_authority": {
+    "proposer_instrument_adequacy": "NOT_EXECUTED",
+    "family_local_minimum_competence": "NOT_IDENTIFIED",
+    "governance_effect": "NOT_AUTHORIZED_UNTIL_PIA_PASS",
+    "cross_proposer_transport": "NOT_EXECUTED",
+    "human_revision_burden": "HOLD",
+    "population_writing_improvement": "HOLD"
+  },
+  "proposer_program": {
+    "SLM_AR": [
+      "S0_L4_D256",
+      "S1_L6_D384",
+      "S2_L8_D512",
+      "S3_L12_D768"
+    ],
+    "RIVAL_EDIT": "SOURCE_CONDITIONED_EDIT_TRANSDUCER_OR_RETRIEVAL_COMPOSITIONAL_EDITOR",
+    "architecture_privilege": "NONE"
+  },
+  "pia_gate": {
+    "packet_n": 24,
+    "repairable_support_min_count": 18,
+    "gross_reject_max_count": 4,
+    "no_task_family_gross_reject_majority": true,
+    "protected_cargo_hard_failure_blocks": true,
+    "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
+  },
+  "next_execution": [
+    "Audit existing KSGT Drive corpora, manifests, tokenizer/training assets, and literature/Harvest for P50 reuse eligibility.",
+    "Freeze tokenizer/corpus/objective/training-budget receipts before any endogenous SLM training.",
+    "Materialize the rival edit-proposer design at the same interface.",
+    "Compute exact parameter counts after tokenizer freeze.",
+    "Execute the 24-item PIA screen before any same-proposer governance comparison.",
+    "Do not reopen human revision-burden validation until PIA passes."
+  ],
+  "forbid": [
+    "Treat parameter count as a universal cross-architecture competence scale.",
+    "Retune PIA threshold or capacity ladder after outcomes.",
+    "Change proposer checkpoint or candidate reservoir between governed and ungoverned arms.",
+    "Use LLM judge or proposer preference as semantic/human authority.",
+    "Infer KSGT failure from a proposer that fails PIA.",
+    "Turn P50 into generic small-LLM training without testing governance separation.",
+    "Create github-actions[bot]-authored or committer commits."
+  ]
+}
