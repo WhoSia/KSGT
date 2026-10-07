@@ -1,0 +1,41 @@
+{
+  "schema": "ksgt.g9.p49.current-state.v1",
+  "phase": "G9-P49",
+  "status": "OPEN_CONSTITUTION_SEALED_OWNER_PACKET_BUILD_PENDING",
+  "notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
+  "parent": "G9-P48",
+  "stage_type": "EXPERIMENT",
+  "formal_title": "KSGT Generation IX G9-P49 — Human Revision-Burden Validation Experiment, Authority-Gated Generation under Competent-Human Repair, Preservation-Noninferiority, Edit-Effort Reduction, Accept/Repair/Reject Action Traces, Selective-Abstention Cost, Cross-Task / Cross-Register Generalization & Whether Local Decoder-Safety Gains Become Measurable Korean Writing Improvement",
+  "inherited_terminal_verdict": "AUTHORITY_GATED_SET_VALUED_GENERATION_REENTRY_PASS_LOCAL_BETTER_KOREAN_WRITING_NOT_ESTABLISHED",
+  "contracts": {
+    "constitution_commit": "bd252bde7dac84f89f6eda45adf2fe7abc593fd5",
+    "human_repair_schema_commit": "3d11edd3c067a30b2f89ecaa2dc064a3ed9cf75c",
+    "owner_pilot_preseal_commit": "3c4455ca0abda6647c78ee3014aa92b0a93e5103"
+  },
+  "burden_authority": {
+    "R0_OPERATIONAL_REPAIR": "AUTHORIZED",
+    "R1_PROCESS_OBSERVABLES": "EXISTING_METHOD_DONOR_ONLY_UNLESS_EXACT_TRACE",
+    "R2_LATENT_BURDEN": "HOLD_PROCESS_BYTES",
+    "reference_distance": "DIAGNOSTIC_ONLY",
+    "human_preference": "NOT_BURDEN_GOLD",
+    "llm_judge": "NOT_HUMAN_AUTHORITY"
+  },
+  "prospective_owner_pilot": {
+    "source_items": 12,
+    "repair_decisions": 24,
+    "passes": 2,
+    "lanes": [
+      "KOLLA_K1_HARD_CARGO",
+      "KOLLA_K2_GENERIC",
+      "STYLEKQC_GENERIC"
+    ],
+    "external_recruitment": false,
+    "population_authority": false
+  },
+  "next_execution": [
+    "Build fresh public 12-item packet excluding all P48 confirmatory source hashes",
+    "Generate frozen K=12 A1/A3 surfaces with unchanged P48 generator and legality",
+    "Materialize two blind human-repair passes without condition labels or hidden references",
+    "Run owner repair action collection only after packet/key separation is sealed"
+  ]
+}
