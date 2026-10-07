@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P50",
   "stage_type": "RECONSTITUTION_EXPERIMENT",
-  "status": "OPEN_P50_CORPUS_TOKENIZER_ARCHITECTURE_PIA_SOURCE_PRESEALED",
+  "status": "OPEN_P50_CORPUS_AND_TOKENIZER_PRESEALED_BYTE_CUSTODY_NEXT",
   "canonical_notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent_stage": "G9-P49",
   "latest_closed_stage": "G9-P48",
@@ -35,6 +35,10 @@
     "experiments/g9-p50/corpus_reservoir_preseal.json",
     "experiments/g9-p50/tokenizer_preseal.json",
     "experiments/g9-p50/slm_architecture_preseal.json",
+    "experiments/g9-p50/training_corpus_preseal.json",
+    "experiments/g9-p50/tokenizer_court_preseal.json",
+    "experiments/g9-p50/fineweb2_source_snapshot.json",
+    "experiments/g9-p50/fineweb2_remote_manifest.json",
     "experiments/g9-p50/materialize_tokenizer.py",
     "experiments/g9-p50/prepare_pia_sources.py"
   ],
@@ -50,5 +54,5 @@
     "Create github-actions[bot]-authored or committer commits"
   ],
   "next_human_action": "NONE",
-  "next_scientific_action": "Obtain tokenizer and PIA-source execution receipts; freeze PIA source hashes; decontaminate and seal the FineWeb2 model-training slice; then freeze token budget/optimizer/compute conditions before SLM training."
+  "next_scientific_action": "Acquire or stream a bounded FineWeb2 kor_Hang shard at frozen revision fb08250; record exact byte hash before parsing; materialize a protected-surface-clean 1 GiB tokenizer-only slice; execute the intrinsic T0/T1/T2 tokenizer court before any SLM training."
 }
