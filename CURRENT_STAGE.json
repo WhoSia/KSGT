@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P49",
   "stage_type": "EXPERIMENT",
-  "status": "OPEN_CONSTITUTION_SEALED_OWNER_PACKET_BUILD_PENDING",
+  "status": "OPEN_PASS1_READY_TERMINAL_RULE_SEALED_HUMAN_ACTION_REQUIRED",
   "canonical_notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
   "parent_stage": "G9-P48",
   "latest_closed_stage": "G9-P48",
@@ -13,7 +13,7 @@
   "current_constitution": "experiments/g9-p49/constitution.json",
   "current_question": "Does P48 A3 reduce competent-human repair remaining after generation relative to A1 without worsening preservation or hiding cost through abstention?",
   "current_authority": {
-    "R0_operational_repair": "AUTHORIZED",
+    "R0_operational_repair": "OWNER_PASS1_READY",
     "R1_process_observables": "CONDITIONAL",
     "R2_latent_burden": "HOLD_PROCESS_BYTES",
     "fresh_external_recruitment": false
@@ -21,7 +21,7 @@
   "resume_reads": [
     "CURRENT_STAGE.json",
     "artifacts/g9_p49_current_state.json",
-    "experiments/g9-p49/constitution.json",
+    "experiments/g9-p49/owner_repair_terminal_preseal.json",
     "Notion G9-P49",
     "KSGT-Bench Seed Constitution v0",
     "artifacts/g9_p48_terminal_closure.json"
@@ -36,5 +36,6 @@
     "Mutate P48 legality gate in P49 primary comparison",
     "Export private AI-Hub or R8 text without explicit authorization",
     "Create github-actions[bot]-authored or committer commits"
-  ]
+  ],
+  "next_human_action": "Complete blind Pass 1 only; do not inspect Pass 2 or hidden key."
 }
