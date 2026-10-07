@@ -2,7 +2,7 @@
   "schema": "ksgt.g9.p50.current-state.v1",
   "phase": "G9-P50",
   "generation": "IX",
-  "status": "OPEN_TOKENIZER_FROZEN_MODEL_TRAINING_SLICE_AND_BUDGET_NEXT",
+  "status": "OPEN_TRAINING_REGIME_PRESEALED_SLICE_MATERIALIZATION_RUNNING",
   "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent": "G9-P49",
   "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
@@ -28,7 +28,10 @@
     "protected_pia_fingerprints_commit": "9444d2ff8afeb6bc327560faa1bf8a3e791983a8",
     "tokenizer_materializer_hardening_commit": "bf7215b2816e4fa245251ddfd5ef89b69e589022",
     "tokenizer_workflow_hardening_commit": "b8cd6b5f54698c5f2114b186cb5646e8c7262c71",
-    "tokenizer_canonical_receipt_commit": "97a21c7c84a9af973ada88181608c3635788f4d1"
+    "tokenizer_canonical_receipt_commit": "97a21c7c84a9af973ada88181608c3635788f4d1",
+    "slm_training_regime_preseal_commit": "aedcbf7096652c390fdabc4668ca0d7bb23956f6",
+    "model_training_slice_materializer_commit": "00ff32089c8467d92bb7b35f31c69d8af8840d69",
+    "model_training_slice_workflow_commit": "f99beac475126666b65e04ee7a1b24a4b373a50c"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -65,12 +68,11 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Preseal exact S0-S3 training token budgets before any model-loss or PIA outcome is observed.",
-    "Materialize a deterministic FineWeb2 kor_Hang model-training slice at revision fb08250, disjoint from tokenizer-only role and protected PIA fingerprints.",
-    "Record exact training-slice document/token/byte counts and provenance receipts; do not commit raw corpus text.",
-    "Materialize RIVAL_EDIT training pool under S5/S7 authority ceilings.",
-    "Train the SLM_AR capacity ladder under one frozen tokenizer/topology and prospectively fixed optimization schedule.",
-    "Execute PIA before same-proposer governance comparison; human revision burden remains HOLD."
+    "Require training-slice run 37579616336 to reproduce the canonical tokenizer-only sample exactly and demonstrate zero tokenizer/train/dev record overlap.",
+    "Freeze the successful 100M/2M token-stream artifact hashes as the canonical model-training slice receipt.",
+    "Only after that receipt, authorize S0-S3 training under the already sealed equal-token regime.",
+    "Run engineering smoke tests with zero scientific authority before full S0 if needed.",
+    "Execute PIA only on canonical final checkpoints; governance comparison remains blocked until PIA_PASS."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -181,5 +183,16 @@
     "local_byte_custody": "NONE",
     "first_acquisition_rule": "bounded tokenizer-only acquisition; no default full-corpus download",
     "hashes": "PENDING_BYTE_ACQUISITION"
+  },
+  "training_regime": {
+    "status": "PRESEALED_OUTCOME_UNSEEN",
+    "primary_design": "EQUAL_TOKEN_EXPOSURE_CAPACITY_LADDER",
+    "train_tokens_per_model": 100000000,
+    "dev_tokens_shared": 2000000,
+    "effective_batch_tokens": 65536,
+    "optimizer_steps": 1526,
+    "model_training_authorized": false,
+    "slice_run_id": 37579616336,
+    "slice_status": "IN_PROGRESS_AT_LAST_READBACK"
   }
 }
