@@ -1,8 +1,8 @@
 {
   "schema": "ksgt.g9.p50.tokenizer-court-preseal.v1",
   "phase": "G9-P50",
-  "status": "TOKENIZER_COURT_PRESEALED_BEFORE_MODEL_TRAINING",
-  "purpose": "Select one tokenizer prospectively using tokenizer-intrinsic Korean criteria, then freeze it across S0-S3 so model-capacity effects are not confounded with tokenization.",
+  "status": "SUPPLEMENTARY_TOKENIZER_RIVAL_REGISTRY_NOT_ACTIVE_SELECTION_COURT",
+  "purpose": "Preserve literature-motivated tokenizer rivals for a later sensitivity study without changing the already sealed P50 tokenizer.",
   "candidates": [
     {
       "id": "T0_BYTE_BPE",
@@ -36,7 +36,7 @@
       "morpheme_boundary_alignment_on_a_non_training_diagnostic_set",
       "token_length_tail"
     ],
-    "selection_rule": "Pareto court; no single weighted scalar. Reject any tokenizer with nonzero unrecoverable OOV or severe Hangul/Jamo fragmentation. Among survivors, choose a non-dominated tokenizer before any SLM PIA result exists.",
+    "selection_rule": "NOT_EXECUTED_IN_PRIMARY_P50. Do not use P50 outcomes to reopen tokenizer selection.",
     "downstream_model_quality_used_for_selection": false
   },
   "capacity_firewall": [
@@ -50,5 +50,12 @@
     "Polyglot-Ko uses a vocabulary around 30k.",
     "EACL 2026 reports advantages for morpheme-based Korean subword tokenization, motivating T2 as a live rival."
   ],
-  "next_gate": "MATERIALIZE_TOKENIZER_ONLY_CORPUS_SLICE_AND_EXECUTE_INTRINSIC_TOKENIZER_COURT"
+  "next_gate": "NONE_PRIMARY_P50_CANONICAL_TOKENIZER_REMAINS_SENTENCEPIECE_UNIGRAM_32768",
+  "authority_resolution": {
+    "canonical_preseal": "experiments/g9-p50/tokenizer_preseal.json",
+    "canonical_choice": "SentencePiece Unigram / vocabulary 32768 / identity normalization / byte fallback",
+    "reason": "tokenizer_preseal.json was sealed earlier together with SLM architecture and execution workflow; this later literature-informed registry cannot retroactively reopen tokenizer choice.",
+    "p50_primary_effect": "NONE",
+    "future_role": "POST_P50_SENSITIVITY_OR_SUCCESSOR_PHASE_ONLY"
+  }
 }
