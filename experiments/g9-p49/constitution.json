@@ -1,0 +1,155 @@
+{
+  "schema": "ksgt.g9.p49.constitution.v1",
+  "phase": "G9-P49",
+  "status": "OPEN_CONSTITUTION_SEALED",
+  "notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
+  "parent_phase": "G9-P48",
+  "stage_type": "EXPERIMENT",
+  "formal_title": "KSGT Generation IX G9-P49 — Human Revision-Burden Validation Experiment, Authority-Gated Generation under Competent-Human Repair, Preservation-Noninferiority, Edit-Effort Reduction, Accept/Repair/Reject Action Traces, Selective-Abstention Cost, Cross-Task / Cross-Register Generalization & Whether Local Decoder-Safety Gains Become Measurable Korean Writing Improvement",
+  "primary_question": "Does P48 A3 reduce competent-human repair remaining after generation relative to A1, without worsening preservation and without hiding cost through abstention?",
+  "inherited_firewalls": [
+    "REVISION_FOOTPRINT != REVISION_BURDEN",
+    "REVISION_DEBT != REVISION_BURDEN",
+    "HUMAN_ACTION != ERROR_GOLD",
+    "HUMAN_ACTION != EDIT_NECESSITY",
+    "HUMAN_ACTION != IMPROVEMENT_GUARANTEE",
+    "PAIR_AUTHORITY != PREFERENCE_AUTHORITY",
+    "REFERENCE_SIMILARITY != HUMAN_REPAIR_BURDEN",
+    "LLM_JUDGE != HUMAN_AUTHORITY",
+    "BENCHMARK_GAIN != REAL_WORKFLOW_GAIN"
+  ],
+  "burden_layers": {
+    "R0_OPERATIONAL_REPAIR": {
+      "authority": "PRIMARY_EXECUTABLE_P49_OBJECT",
+      "observables": [
+        "ACCEPT|REPAIR|REJECT",
+        "final repaired text",
+        "typed edit operations",
+        "affected span",
+        "preservation audit",
+        "coverage/abstention context"
+      ]
+    },
+    "R1_PROCESS_OBSERVABLES": {
+      "authority": "ONLY_WHEN_EXACT_PROCESS_TRACE_EXISTS",
+      "observables": [
+        "active time",
+        "pause structure",
+        "ordered edit events",
+        "revision bursts",
+        "cursor-mediated sequence"
+      ]
+    },
+    "R2_LATENT_BURDEN": {
+      "authority": "HOLD_PROCESS_BYTES_AT_OPEN",
+      "meaning": "task-local effort/cognitive/time-cost construct independently tied to exact item",
+      "forbidden_proxies": [
+        "edit distance alone",
+        "revision count alone",
+        "pause duration alone",
+        "preference score alone"
+      ]
+    }
+  },
+  "human_authority": {
+    "default": "EXISTING_HUMAN_TRACES_FIRST",
+    "first_prospective_evaluator": "PROJECT_OWNER_SINGLE_EDITOR",
+    "scope": "WITHIN_EDITOR_MECHANISM_ONLY_NOT_POPULATION_AUTHORITY",
+    "fresh_external_recruitment": false,
+    "native_speaker_population_claim": false
+  },
+  "primary_arms": {
+    "generator": {
+      "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+      "sha": "7ae557604adf67be50417f59c2c2f167def9a775"
+    },
+    "candidate_budget": 12,
+    "A1": "top candidate by frozen length-normalized generator log probability; no legality filter",
+    "A3": "same 12 candidates; frozen P48 legality/support filter; same learned ranking inside legal set; abstain if empty",
+    "gate_mutation": "FORBIDDEN"
+  },
+  "owner_pilot": {
+    "public_sources": [
+      {
+        "lane": "KOLLA_K1_HARD_CARGO",
+        "n": 4,
+        "task": "minimal Korean correction; hard cargo preservation"
+      },
+      {
+        "lane": "KOLLA_K2_GENERIC",
+        "n": 4,
+        "task": "minimal Korean correction"
+      },
+      {
+        "lane": "STYLEKQC_GENERIC",
+        "n": 4,
+        "task": "meaning-preserving Korean paraphrase; no directed-register claim"
+      }
+    ],
+    "fresh_relative_to": "ALL_P48_KOLLA_AND_STYLEKQC_CONFIRMATORY_PACKETS",
+    "source_items": 12,
+    "total_repairs": 24,
+    "passes": 2,
+    "design": "Each source appears once per pass; opposite arm in the other pass. Arm assignment and item order are deterministic hash-based and balanced within lane.",
+    "blind_to_evaluator": [
+      "A1/A3 condition",
+      "hidden reference",
+      "model score",
+      "legality result except visible abstention"
+    ],
+    "evaluator_actions": [
+      "ACCEPT",
+      "REPAIR",
+      "REJECT"
+    ],
+    "repair_rule": "For REPAIR, provide the minimal final text the editor would actually submit for the frozen task."
+  },
+  "preservation": {
+    "hard_gate": true,
+    "KoLLA_K1": "frozen protected-token gate from P48",
+    "KoLLA_K2": "no invented semantic oracle",
+    "StyleKQC": "task-local meaning preservation; hidden positive remains diagnostic only",
+    "rule": "Lower repair burden cannot compensate for increased preservation failure."
+  },
+  "abstention": {
+    "zero_cost_imputation": "FORBIDDEN",
+    "report": [
+      "emitted-output repair vector",
+      "coverage",
+      "abstention count/stratum",
+      "fallback burden separately if observed"
+    ],
+    "system_burden": "PARTIAL_ORDER_OR_INTERVAL; NO_ARBITRARY_SCALAR_ABSTENTION_PENALTY"
+  },
+  "primary_reporting_vector": [
+    "P_fail",
+    "ACCEPT",
+    "REPAIR",
+    "REJECT",
+    "typed_edit_operations",
+    "affected_span",
+    "coverage",
+    "abstain",
+    "R1_process_if_available",
+    "R2_validated_burden_if_available"
+  ],
+  "promotion_rule": {
+    "owner_local_pass_requires": [
+      "A3 preservation failure non-worse than A1 on frozen owner packet",
+      "A3 paired R0 repair footprint locally dominates A1 under predeclared partial order",
+      "gain is not solely caused by lower coverage/higher abstention",
+      "direction not destroyed across KoLLA and StyleKQC task families"
+    ],
+    "maximum_claim": "MEASURABLE_KOREAN_WRITING_IMPROVEMENT_OWNER_LOCAL",
+    "independent_editor_transport_required_for": "population/general writing improvement"
+  },
+  "terminal_verdicts": [
+    "OWNER_REPAIR_BURDEN_REDUCTION_PASS_LOCAL_PRESERVATION_NONINFERIOR",
+    "REPAIR_REDUCTION_OFFSET_BY_ABSTENTION_COST",
+    "PRESERVATION_NONINFERIOR_BUT_HUMAN_REPAIR_NO_GAIN",
+    "HUMAN_REPAIR_GAIN_TASK_LOCAL_ONLY",
+    "OWNER_REPAIR_SIGNAL_PRESENT_POPULATION_AUTHORITY_HOLD",
+    "R0_OPERATIONAL_REPAIR_PASS_R2_LATENT_BURDEN_HOLD",
+    "P49_FAIL_ARCHITECTURE_SAFETY_GAIN_DOES_NOT_SURVIVE_HUMAN_REPAIR"
+  ]
+}
