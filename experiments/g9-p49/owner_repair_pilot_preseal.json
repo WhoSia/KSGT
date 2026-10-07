@@ -1,0 +1,56 @@
+{
+  "schema": "ksgt.g9.p49.owner-repair-pilot-preseal.v1",
+  "status": "PRESEALED_BEFORE_P49_OUTPUT_GENERATION",
+  "source_selection": {
+    "salt": "KSGT-G9-P49-OWNER-REPAIR-v1",
+    "exclude": "All source hashes used by P48 KoLLA initial+budget packets and P48 StyleKQC packet.",
+    "strata": [
+      {
+        "id": "KOLLA_K1_HARD_CARGO",
+        "n": 4
+      },
+      {
+        "id": "KOLLA_K2_GENERIC",
+        "n": 4
+      },
+      {
+        "id": "STYLEKQC_GENERIC",
+        "n": 4
+      }
+    ],
+    "selection": "lowest SHA256(source || NUL || hidden_reference_identity_when_required || salt || stratum) after exclusion",
+    "outcome_blind": true
+  },
+  "generation": {
+    "inherited_generator": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+    "candidate_budget": 12,
+    "seeds": [
+      4911,
+      4912,
+      4913,
+      4914,
+      4915,
+      4916,
+      4917,
+      4918,
+      4919,
+      4920,
+      4921,
+      4922
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_new_tokens": 128,
+    "A1_A3_same_candidate_pool": true,
+    "legality": "P48 frozen gate unchanged"
+  },
+  "blinding": {
+    "passes": 2,
+    "arm_assignment": "SHA256(source_hash || P49-ARM) parity, balanced within stratum; second pass receives opposite arm",
+    "item_order": "independent SHA256(blind_item_id || pass_id || P49-ORDER)",
+    "condition_labels_in_human_packet": false,
+    "hidden_reference_in_human_packet": false,
+    "key_separate": true
+  },
+  "authority": "OWNER_SINGLE_EDITOR_PILOT_ONLY"
+}
