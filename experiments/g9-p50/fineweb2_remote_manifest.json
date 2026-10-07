@@ -1,0 +1,148 @@
+{
+  "schema": "ksgt.g9.p50.fineweb2-remote-manifest.v1",
+  "phase": "G9-P50",
+  "status": "REMOTE_DIRECTORY_ENUMERATED_CONTENT_HASHES_PENDING",
+  "repo": "HuggingFaceFW/fineweb-2",
+  "revision_short": "fb08250",
+  "path": "data/kor_Hang/train",
+  "license": "ODC-BY-1.0",
+  "reported_directory_size": "106 GB",
+  "files": [
+    {
+      "name": "000_00000.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "000_00001.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "000_00002.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "000_00003.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "000_00004.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "001_00000.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "001_00001.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "001_00002.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "001_00003.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "001_00004.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "002_00000.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "002_00001.parquet",
+      "reported_size": "4.85 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "002_00002.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "002_00003.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "002_00004.parquet",
+      "reported_size": "4.85 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "003_00000.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "003_00001.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "003_00002.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "003_00003.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "003_00004.parquet",
+      "reported_size": "4.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "004_00000.parquet",
+      "reported_size": "1.91 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "004_00001.parquet",
+      "reported_size": "1.84 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "004_00002.parquet",
+      "reported_size": "1.77 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "004_00003.parquet",
+      "reported_size": "1.72 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    },
+    {
+      "name": "004_00004.parquet",
+      "reported_size": "1.65 GB",
+      "sha256": "PENDING_BYTE_ACQUISITION"
+    }
+  ],
+  "shard_count": 25,
+  "byte_custody": "NONE_LOCAL_AT_PRESEAL",
+  "acquisition_policy": {
+    "initial_acquisition": "Do not fetch all 106 GB by default.",
+    "first_target": "Materialize the smallest sufficient subset needed to fill the 1 GiB tokenizer-only role after filtering and protected-surface exclusion.",
+    "shard_choice": "Shard names carry no scientific priority. If partial file streaming is unavailable, start from 004_00004.parquet only as a transport-cost convenience, then apply the same salted document hash ordering within acquired eligible records.",
+    "outcome_based_shard_choice": "FORBIDDEN",
+    "full_corpus_expansion": "Allowed only after tokenizer seal and training-token budget preseal."
+  },
+  "hash_rule": "Upon byte acquisition, record exact remote/local SHA256 per acquired file before parsing. Display-size metadata is not a byte receipt.",
+  "next_gate": "BYTE_RECEIPT_FOR_FIRST_BOUNDED_SHARD_OR_STREAM + SCHEMA_AUDIT + PROTECTED_SURFACE_CONTAMINATION_SCAN"
+}
