@@ -1,0 +1,54 @@
+{
+  "schema": "ksgt.g9.p50.tokenizer-court-preseal.v1",
+  "phase": "G9-P50",
+  "status": "TOKENIZER_COURT_PRESEALED_BEFORE_MODEL_TRAINING",
+  "purpose": "Select one tokenizer prospectively using tokenizer-intrinsic Korean criteria, then freeze it across S0-S3 so model-capacity effects are not confounded with tokenization.",
+  "candidates": [
+    {
+      "id": "T0_BYTE_BPE",
+      "family": "byte-level or character-aware BPE",
+      "rationale": "Strong baseline with no lexical OOV; historically common in Korean GPT-style models."
+    },
+    {
+      "id": "T1_UNIGRAM",
+      "family": "SentencePiece Unigram",
+      "rationale": "Frequency-based subword baseline with flexible segmentation and compact vocabulary."
+    },
+    {
+      "id": "T2_MORPH_AWARE",
+      "family": "morpheme-aware subword tokenizer",
+      "rationale": "2026 Korean evidence suggests morphology-aware segmentation can reduce token count and improve downstream performance; included as a rival, not presumed winner."
+    }
+  ],
+  "frozen_vocabulary_sizes": [
+    24000,
+    32000
+  ],
+  "court_design": {
+    "tokenizer_training_text": "A fixed tokenizer-only slice from the P50 training-authorized corpus; no PIA/evaluation text.",
+    "selection_metrics": [
+      "tokens_per_Korean_character",
+      "tokens_per_eojeol",
+      "byte_fallback_or_UNK_rate",
+      "Hangul_jamo_fragmentation_rate",
+      "whitespace_boundary_stability",
+      "mixed_Hangul_Latin_number_robustness",
+      "morpheme_boundary_alignment_on_a_non_training_diagnostic_set",
+      "token_length_tail"
+    ],
+    "selection_rule": "Pareto court; no single weighted scalar. Reject any tokenizer with nonzero unrecoverable OOV or severe Hangul/Jamo fragmentation. Among survivors, choose a non-dominated tokenizer before any SLM PIA result exists.",
+    "downstream_model_quality_used_for_selection": false
+  },
+  "capacity_firewall": [
+    "The tokenizer winner and vocabulary size are identical for S0-S3.",
+    "Tokenizer embeddings are reported separately from non-embedding transformer parameters.",
+    "No tokenizer retuning after seeing PIA or governance outcomes.",
+    "If T2 requires a morphological analyzer, analyzer version and failure policy are frozen and its errors do not gain semantic authority."
+  ],
+  "evidence_context": [
+    "KoGPT2 historically used Korean-trained BPE/Character-BPE vocabularies around 50k.",
+    "Polyglot-Ko uses a vocabulary around 30k.",
+    "EACL 2026 reports advantages for morpheme-based Korean subword tokenization, motivating T2 as a live rival."
+  ],
+  "next_gate": "MATERIALIZE_TOKENIZER_ONLY_CORPUS_SLICE_AND_EXECUTE_INTRINSIC_TOKENIZER_COURT"
+}
