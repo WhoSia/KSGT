@@ -6,6 +6,8 @@ on:
       - "experiments/g9-p50/materialize_tokenizer.py"
       - "experiments/g9-p50/tokenizer_preseal.json"
       - "experiments/g9-p50/corpus_reservoir_preseal.json"
+      - "experiments/g9-p50/fineweb2_source_snapshot.json"
+      - "experiments/g9-p50/protected_pia_fingerprints.json"
       - ".github/workflows/g9-p50-tokenizer.yml"
   workflow_dispatch:
 
@@ -36,22 +38,25 @@ jobs:
             --target-chars 100000000 \
             --out-dir g9_p50_tokenizer_artifact
 
-      - name: Verify no raw sample is packaged
+      - name: Verify frozen source and no raw sample
         run: |
           test ! -e g9_p50_tokenizer_artifact/tokenizer_sample.txt
           python - <<'PY'
           import json
           from pathlib import Path
-          p = Path("g9_p50_tokenizer_artifact/manifest.json")
-          x = json.loads(p.read_text())
+          x = json.loads(Path("g9_p50_tokenizer_artifact/manifest.json").read_text())
           assert x["raw_training_text_in_artifact"] is False
           assert x["raw_training_text_in_repo"] is False
           assert x["model_training_authorized_by_this_receipt"] is False
+          assert x["sample"]["revision"] == "fb08250"
+          assert x["sample"]["protected_source_hash_count"] == 24
+          assert x["sample"]["protected_word8_shingle_count"] == 55
           assert x["tokenizer"]["piece_size"] > 32000
           print(json.dumps({
               "piece_size": x["tokenizer"]["piece_size"],
               "sample_docs": x["sample"]["documents"],
               "sample_chars": x["sample"]["realized_characters"],
+              "skipped_protected_pia": x["sample"]["skipped_protected_pia"],
               "tokens_per_eojeol": x["diagnostic"]["tokens_per_eojeol"],
               "byte_piece_fraction": x["diagnostic"]["byte_piece_fraction"],
               "unk_piece_count": x["diagnostic"]["unk_piece_count"],
