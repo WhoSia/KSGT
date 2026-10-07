@@ -22,7 +22,9 @@
     "pia_source_compiler_commit": "85dcbbc3df5508a60902c1a782c31f1e7a2d016c",
     "pia_source_workflow_commit": "93fb08239f4123f95b4bf8a3791b846dda762a4e",
     "training_corpus_preseal_commit": "d53f395975906270d508a5b5ef5a99ce24562bf0",
-    "tokenizer_court_preseal_commit": "6507d146097d758dd6d237c78fee49bd92030a3c"
+    "tokenizer_court_preseal_commit": "6507d146097d758dd6d237c78fee49bd92030a3c",
+    "fineweb2_source_snapshot_commit": "e2ee3409b06742cc8c7e3a10bd4b47f3f8a588b7",
+    "fineweb2_remote_manifest_commit": "1d98d7fe4f15b8de42220e0ad3c107c4562d750c"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -59,13 +61,14 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Resolve an immutable FineWeb2 kor_Hang revision and remote shard manifest.",
-    "Freeze a tokenizer-only slice and a disjoint model-training slice by deterministic document hash.",
-    "Freeze exclusions for P47/P48/P49 texts, StyleKQC/KoLLA heldouts, planned P50 PIA, and known benchmark material.",
-    "Execute the intrinsic tokenizer court on the tokenizer-only slice; do not use SLM PIA to choose a tokenizer.",
-    "Freeze tokenizer winner/vocabulary, then compute exact S0-S3 trainable parameters and token budgets.",
-    "Only then materialize SLM_AR training and RIVAL_EDIT training pools.",
-    "Execute PIA before any same-proposer governance or human-burden comparison."
+    "Acquire or stream a bounded FineWeb2 kor_Hang shard under revision fb08250 and record exact SHA256 before parsing.",
+    "Audit parquet schema and materialize only enough eligible text to fill the 1 GiB tokenizer-only role after protected-surface exclusions.",
+    "Run exact and near-duplicate contamination screens against P47/P48/P49/P50 protected surfaces.",
+    "Train T0/T1/T2 tokenizer candidates on the identical tokenizer-only bytes at vocab 24k and 32k.",
+    "Adjudicate tokenizer intrinsic Pareto court and freeze one winner before any SLM model outcome.",
+    "After tokenizer freeze, set exact S0-S3 trainable parameters and prospective training-token budgets.",
+    "Materialize RIVAL_EDIT training pool with historical S5/S7 authority ceilings intact.",
+    "Execute PIA before governance or human-burden comparison."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -140,5 +143,15 @@
     ],
     "selection": "Intrinsic Pareto court before any SLM PIA; winner frozen across S0-S3.",
     "downstream_model_outcomes_used_for_selection": false
+  },
+  "fineweb2_source": {
+    "revision": "fb08250",
+    "path": "data/kor_Hang/train",
+    "license": "ODC-BY-1.0",
+    "remote_reported_size": "106 GB",
+    "shard_count": 25,
+    "local_byte_custody": "NONE",
+    "first_acquisition_rule": "bounded tokenizer-only acquisition; no default full-corpus download",
+    "hashes": "PENDING_BYTE_ACQUISITION"
   }
 }
