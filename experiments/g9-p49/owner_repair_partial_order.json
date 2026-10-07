@@ -1,0 +1,31 @@
+{
+  "schema": "ksgt.g9.p49.owner-repair-partial-order.v1",
+  "status": "PRESEALED_BEFORE_OWNER_REPAIR_PACKET",
+  "item_level_vector": [
+    "preservation_failure",
+    "system_abstain",
+    "human_reject_if_emitted",
+    "human_repair_if_emitted",
+    "changed_character_count_if_repaired",
+    "affected_span_fraction_if_repaired",
+    "typed_operation_count_if_identifiable"
+  ],
+  "emitted_output_order": {
+    "rule": "A3 locally dominates A1 only if preservation_failure, reject, repair, changed-character/span and identifiable-operation coordinates are all non-worse, with at least one strict improvement.",
+    "incomparable": "Any crossing of authority-bearing coordinates yields INCOMPARABLE; no weights are introduced."
+  },
+  "action_interpretation": {
+    "ACCEPT": "zero observed human repair under this evaluator/task; not correctness gold",
+    "REPAIR": "nonzero local repair supplied; not proof that original was universally wrong",
+    "REJECT": "surface judged unsuitable for local repair under frozen task; not population-quality gold",
+    "ABSTAIN": "system emitted no candidate; separate coverage/fallback debt, not zero burden"
+  },
+  "aggregate_rule": [
+    "Report paired win/tie/loss/incomparable counts by lane.",
+    "Report ACCEPT/REPAIR/REJECT counts and repair-footprint distributions separately.",
+    "Do not condition system-level success only on emitted A3 outputs.",
+    "Owner-local promotion requires preservation noninferiority and no task-family sign destruction."
+  ],
+  "latent_burden": "R2 time/effort/cognitive burden remains HOLD unless exact instrumentation is acquired.",
+  "no_scalar": true
+}
