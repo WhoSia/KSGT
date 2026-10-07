@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p49.current-state.v1",
   "phase": "G9-P49",
-  "status": "OPEN_PASS1_READY_TERMINAL_RULE_SEALED_HUMAN_ACTION_REQUIRED",
+  "status": "OPEN_OWNER_PILOT_TERMINATED_INSTRUMENT_ADEQUACY_FAILURE",
   "notion_id": "3f1ef561-cf92-8104-a12f-e68519857d59",
   "parent": "G9-P48",
   "stage_type": "EXPERIMENT",
@@ -42,17 +42,16 @@
     "population_authority": false
   },
   "next_execution": [
-    "Owner completes Pass 1 blind ACCEPT/REPAIR/REJECT actions only",
-    "Seal Pass 1 responses before exposing Pass 2",
-    "Owner completes Pass 2 blind actions",
-    "Run deterministic owner repair adjudicator",
-    "Run deterministic P49 terminal adjudicator under presealed rule"
+    "Do not continue Pass 1 or open Pass 2/hidden key.",
+    "Define and preseal a proposal-instrument adequacy criterion before any new human-burden validation.",
+    "Use a competent pretrained LLM as proposal engine; KSGT remains governance/constraint/selection architecture rather than standalone language generator.",
+    "Only after adequacy passes, regenerate a fresh held-out owner packet and reopen human revision-burden validation."
   ],
   "execution": {
     "canonical_owner_packet_run_id": 37550243190,
     "workflow_commit": "8989ac1988620c2326c29e3989acc7246fba6e17",
     "state": "OWNER_PACKET_READY",
-    "human_actions_observed": 0,
+    "human_actions_observed": 2,
     "artifact_retention_days": 1,
     "raw_text_in_repo": false,
     "raw_text_in_workflow_logs": false,
@@ -65,6 +64,14 @@
     "pass1_sha256": "f2124344f515a8ef0541a673508ec562b008204b3a37389edaf61e096f4d1523",
     "pass2_sha256": "749d6dc27e4c4724568a57871ebfd45041776f0cef89f159d5f4f0074d2334a2",
     "hidden_key_sha256": "78b7bd3b0d0df4fba1da7dfece244ff7773ae3a97b3c475ec3f4ee3d3f8050f2",
-    "A3_abstain_items": 0
+    "A3_abstain_items": 0,
+    "owner_pilot_confirmatory_authority": "NONE",
+    "owner_pilot_stop_reason": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
+    "instrument_failure_receipt_commit": "aa2aee6b615304a8806786c68ac35a6003c171f0"
+  },
+  "authority": {
+    "revision_burden_identified": false,
+    "A1_vs_A3_owner_comparison_authorized": false,
+    "theory_as_governor_model_as_proposer": "PROMOTED_ARCHITECTURAL_PIVOT"
   }
 }
