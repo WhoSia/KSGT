@@ -138,11 +138,12 @@
   "byte_custody": "NONE_LOCAL_AT_PRESEAL",
   "acquisition_policy": {
     "initial_acquisition": "Do not fetch all 106 GB by default.",
-    "first_target": "Materialize the smallest sufficient subset needed to fill the 1 GiB tokenizer-only role after filtering and protected-surface exclusion.",
+    "first_target": "Materialize only enough eligible records to satisfy the canonical 100,000,000-character tokenizer sample after filtering and protected-surface exclusion.",
     "shard_choice": "Shard names carry no scientific priority. If partial file streaming is unavailable, start from 004_00004.parquet only as a transport-cost convenience, then apply the same salted document hash ordering within acquired eligible records.",
     "outcome_based_shard_choice": "FORBIDDEN",
-    "full_corpus_expansion": "Allowed only after tokenizer seal and training-token budget preseal."
+    "full_corpus_expansion": "Allowed only after tokenizer seal and training-token budget preseal.",
+    "note": "Earlier tokenizer_preseal.json owns the sample scale; no 1 GiB requirement remains."
   },
   "hash_rule": "Upon byte acquisition, record exact remote/local SHA256 per acquired file before parsing. Display-size metadata is not a byte receipt.",
-  "next_gate": "BYTE_RECEIPT_FOR_FIRST_BOUNDED_SHARD_OR_STREAM + SCHEMA_AUDIT + PROTECTED_SURFACE_CONTAMINATION_SCAN"
+  "next_gate": "REVISION_PINNED_STREAM + PROTECTED_PIA_EXCLUSION + TOKENIZER_RECEIPT"
 }
