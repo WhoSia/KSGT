@@ -21,9 +21,10 @@
   },
   "role_partitions": {
     "tokenizer_only": {
-      "selector": "first eligible documents in canonical hash order until 1 GiB UTF-8 text after P50 filtering",
+      "selector": "canonical tokenizer_preseal target: first eligible deterministic sample totaling at least 100,000,000 normalized characters under the frozen selection procedure; no PIA/evaluation text",
       "may_train_model": false,
-      "may_contain_PIA_or_evaluation": false
+      "may_contain_PIA_or_evaluation": false,
+      "note": "The earlier tokenizer_preseal.json controls sample scale. The later 1 GiB proposal is superseded."
     },
     "model_train": {
       "selector": "continue canonical hash order after tokenizer-only slice; consume prospectively declared token budgets after tokenizer freeze",
@@ -67,5 +68,5 @@
     "No training or tokenizer result yet.",
     "No independence claim for another Common-Crawl-derived corpus."
   ],
-  "next_execution": "Acquire only metadata/file manifest first; then materialize bounded tokenizer-only slice and run contamination audit before tokenizer fitting."
+  "next_execution": "Run the already sealed 100M-character tokenizer materialization only after revision pinning and protected-PIA exclusion are active."
 }
