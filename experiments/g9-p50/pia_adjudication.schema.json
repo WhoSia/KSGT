@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ksgt.g9.p50.pia-adjudication.v1",
+  "title": "KSGT G9-P50 Proposal-Instrument Adequacy Adjudication",
+  "type": "object",
+  "required": [
+    "item_id",
+    "proposer_family",
+    "checkpoint_id",
+    "class",
+    "preservation_hard_failure",
+    "task_family"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposer_family": {
+      "type": "string",
+      "enum": [
+        "SLM_AR",
+        "RIVAL_EDIT"
+      ]
+    },
+    "checkpoint_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "class": {
+      "type": "string",
+      "enum": [
+        "ACCEPTABLE_AS_IS",
+        "LOCAL_REPAIRABLE",
+        "GROSS_REJECT"
+      ]
+    },
+    "preservation_hard_failure": {
+      "type": "boolean"
+    },
+    "gross_reject_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TASK_NONRESPONSE",
+          "MEANING_CHANGING_CONTRADICTION",
+          "HALLUCINATED_CARGO_OR_COMMITMENT",
+          "UNUSABLE_TRUNCATION",
+          "MALFORMED_OUTPUT",
+          "GLOBAL_REGENERATION_REQUIRED",
+          "OTHER_TYPED_GROSS_FAILURE"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "local_repair_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "class": {
+            "const": "GROSS_REJECT"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "gross_reject_reasons": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "authority_note": "This schema classifies proposal-instrument entry support only. It is not correctness gold, edit-necessity gold, human-burden authority, or population-quality authority."
+}
