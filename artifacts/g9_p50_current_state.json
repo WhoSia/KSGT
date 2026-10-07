@@ -20,7 +20,9 @@
     "tokenizer_materializer_commit": "cd9f751c378455867cf67e4ad07d6c5f59ca4d25",
     "tokenizer_workflow_commit": "277758a433cef092bd0b720b3ed4e233045b0c16",
     "pia_source_compiler_commit": "85dcbbc3df5508a60902c1a782c31f1e7a2d016c",
-    "pia_source_workflow_commit": "93fb08239f4123f95b4bf8a3791b846dda762a4e"
+    "pia_source_workflow_commit": "93fb08239f4123f95b4bf8a3791b846dda762a4e",
+    "training_corpus_preseal_commit": "d53f395975906270d508a5b5ef5a99ce24562bf0",
+    "tokenizer_court_preseal_commit": "6507d146097d758dd6d237c78fee49bd92030a3c"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -57,12 +59,13 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Obtain tokenizer and PIA source workflow readback/artifact receipts; do not infer success from workflow-file presence.",
-    "Freeze exact P50 PIA source hashes before sealing the model-training slice.",
-    "Run exact and near-duplicate contamination exclusion from FineWeb2 training candidates against frozen PIA/evaluation surfaces.",
-    "Freeze FineWeb2 shard/sample manifest, model-training token budget, optimizer/schedule, and compute calibration.",
-    "Materialize SLM_AR checkpoints and RIVAL_EDIT through the common proposer interface.",
-    "Execute PIA before any same-proposer governance comparison or renewed human revision-burden experiment."
+    "Resolve an immutable FineWeb2 kor_Hang revision and remote shard manifest.",
+    "Freeze a tokenizer-only slice and a disjoint model-training slice by deterministic document hash.",
+    "Freeze exclusions for P47/P48/P49 texts, StyleKQC/KoLLA heldouts, planned P50 PIA, and known benchmark material.",
+    "Execute the intrinsic tokenizer court on the tokenizer-only slice; do not use SLM PIA to choose a tokenizer.",
+    "Freeze tokenizer winner/vocabulary, then compute exact S0-S3 trainable parameters and token budgets.",
+    "Only then materialize SLM_AR training and RIVAL_EDIT training pools.",
+    "Execute PIA before any same-proposer governance or human-burden comparison."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -115,5 +118,27 @@
     "exclusion": "P48 and P49 source selections deterministically reconstructed and excluded",
     "execution": "WORKFLOW_COMMITTED_RUN_READBACK_NOT_YET_OBTAINED",
     "human_evaluation": "NOT_OPENED"
+  },
+  "corpus_court": {
+    "status": "PRESEALED_NO_BYTES_INGESTED",
+    "primary_candidate": "HuggingFaceFW/fineweb-2 kor_Hang / ODC-BY-1.0",
+    "secondary_candidate": "oscar-corpus/mOSCAR / CC-BY-4.0 / Korean subset and overlap audit pending",
+    "auxiliary_only": "wikimedia/wikipedia 20231101.ko",
+    "controlled_hold": "NIKL Modu Corpus",
+    "next_gate": "Resolve exact FineWeb2 revision/file manifest and prospectively bounded train/tokenizer slices; run contamination exclusions before download/training."
+  },
+  "tokenizer_court": {
+    "status": "PRESEALED_NOT_EXECUTED",
+    "candidates": [
+      "T0_BYTE_BPE",
+      "T1_UNIGRAM",
+      "T2_MORPH_AWARE"
+    ],
+    "vocab_sizes": [
+      24000,
+      32000
+    ],
+    "selection": "Intrinsic Pareto court before any SLM PIA; winner frozen across S0-S3.",
+    "downstream_model_outcomes_used_for_selection": false
   }
 }
