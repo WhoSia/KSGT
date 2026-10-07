@@ -1,0 +1,45 @@
+{
+  "schema": "ksgt.g9.p49.owner-repair-instrument-failure.v1",
+  "phase": "G9-P49",
+  "status": "OWNER_PILOT_TERMINATED_NO_CONFIRMATORY_INFERENCE",
+  "reason": "The blinded owner-repair packet failed the proposal-instrument adequacy requirement: surfaces were dominated by gross task failure, semantic drift, hallucination, truncation and translationese, so ACCEPT/REPAIR/REJECT would primarily measure base-generator floor effects rather than KSGT governance or human revision burden.",
+  "observed_human_actions_before_stop": [
+    {
+      "blind_item_id": "631c34d0e69b6dd2",
+      "action": "REJECT",
+      "rationale": [
+        "unnatural translationese",
+        "incomplete/truncated sentence",
+        "hallucination",
+        "illogical/unscientific explanation"
+      ]
+    },
+    {
+      "blind_item_id": "aca5a9c3e4f03e44",
+      "action": "REJECT",
+      "rationale": [
+        "task not answered",
+        "required context missing",
+        "invented commitment/claim"
+      ]
+    }
+  ],
+  "not_inferred": [
+    "No claim that all 12 Pass-1 items would be REJECT.",
+    "No A1-vs-A3 comparison.",
+    "No owner-repair burden estimate.",
+    "No KSGT architecture failure claim.",
+    "No population-level writing claim."
+  ],
+  "methodological_diagnosis": {
+    "name": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
+    "identification_problem": "Human repair burden is not interpretable when proposal quality lies below a repairable-support floor. Gross semantic/task failure censors the downstream burden measure and confounds governance effects with generator incapacity.",
+    "consequence": "Revision-burden validation requires a proposal engine competent enough that most evaluation mass lies in ACCEPT or local-REPAIR support before comparing governance policies."
+  },
+  "architectural_pivot": "THEORY_AS_GOVERNOR_MODEL_AS_PROPOSER",
+  "preserved_assets": [
+    "P49 terminal rule remains a valid future protocol once instrument adequacy is established.",
+    "Blind packet and human-action schema remain reusable only with a new prospectively frozen competent proposal instrument and fresh evaluation items.",
+    "P48 legality/abstention results remain intact."
+  ]
+}
