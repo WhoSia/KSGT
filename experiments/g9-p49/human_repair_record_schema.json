@@ -1,0 +1,42 @@
+{
+  "schema": "ksgt.g9.p49.human-repair-record.v1",
+  "action_enum": [
+    "ACCEPT",
+    "REPAIR",
+    "REJECT"
+  ],
+  "row_fields": [
+    "blind_item_id",
+    "pass_id",
+    "source_task",
+    "source_text",
+    "system_surface",
+    "action",
+    "repaired_text_if_any",
+    "optional_reason_tag",
+    "evaluator_scope"
+  ],
+  "derived_after_unblinding": [
+    "arm",
+    "source_hash",
+    "preservation_before",
+    "preservation_after",
+    "edit_char_count",
+    "edit_span_fraction",
+    "insert_count",
+    "delete_count",
+    "replace_count",
+    "sentence_split_merge_flags",
+    "paired_item_delta"
+  ],
+  "hidden_during_human_repair": [
+    "arm",
+    "condition_key",
+    "hidden_reference",
+    "generator_score",
+    "candidate_legality_metadata"
+  ],
+  "missingness_rule": "No repair text required for ACCEPT; REJECT has no fabricated final text unless evaluator independently supplies one.",
+  "abstention_rule": "System ABSTAIN is recorded as system action, not ACCEPT and not zero repair cost.",
+  "no_scalar_score": true
+}
