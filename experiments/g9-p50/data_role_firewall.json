@@ -1,0 +1,65 @@
+{
+  "schema": "ksgt.g9.p50.data-role-firewall.v1",
+  "phase": "G9-P50",
+  "status": "PRESEALED_BEFORE_TRAINING",
+  "rule": "DATA_EXISTENCE != TRAINING_AUTHORITY; prior evaluation/world-contact authority is not silently converted into training supervision.",
+  "known_assets": [
+    {
+      "asset": "OKHC news_archive parts 001-003",
+      "drive_ids": [
+        "17dWmWX3z5ZwV3SFN22BGsLbwTbsjaG_N",
+        "1lJFtiwb7_pcYR3bsw0pwyqhqfXWlH2mB",
+        "1fBXJgoQfq3l64pNznfEMQRW-jM03SKVo"
+      ],
+      "bytes": 771640121,
+      "prior_role": "P47 public historical world-contact / representation transport source",
+      "p50_training_role": "HOLD",
+      "reason": "Using prior world-contact source for training would change its evidential role and can contaminate transport claims. A prospectively disjoint derivative may be opened only with an explicit role split."
+    },
+    {
+      "asset": "017.7z",
+      "drive_id": "1tmvqqfPUibSuDq8N_K2pOD0Ju3CZh6Am",
+      "bytes": 305123509,
+      "prior_role": "private AI-Hub / structured Korean custody used under prior private-data firewall",
+      "p50_training_role": "HOLD_LICENSE_CUSTODY_AND_EXECUTION_SURFACE",
+      "reason": "No external-compute export or training use is authorized by P50 merely because bytes exist."
+    },
+    {
+      "asset": "Raw KoLLA semantic-risk lineage",
+      "drive_id": "1LvNGU0SSltC2RBQGAm-jEphEj-OrwcTx",
+      "prior_role": "semantic-risk/evaluation authority",
+      "p50_training_role": "HOLD_BY_DEFAULT",
+      "reason": "Preserve evaluation authority unless an exact non-overlapping train split and license role are prospectively sealed."
+    },
+    {
+      "asset": "StyleKQC S6/S7 lineage",
+      "drive_ids": [
+        "1L0AAvvWquzi0hnSm6dpsd827gqwTGYV5",
+        "18jxN8X1QF7UWWld91MRPDWBlO4c05raJ"
+      ],
+      "prior_role": "human-anchor, query-group holdout, operator-induction and revision-surface evidence",
+      "p50_training_role": "TRAIN_SIDE_COMPONENTS_ONLY_IF_EXACT_HISTORICAL_SPLIT_RECEIPTS_RECONSTRUCTED",
+      "reason": "Held-out human anchors and future PIA/evaluation items may not become training labels."
+    },
+    {
+      "asset": "Human revision / candidate-set Court folders",
+      "drive_ids": [
+        "167Ra9r9GCYCNpNP_DckEaEC57KxXJQ31",
+        "1chVcp_s-94MX8dscLzTjYGlvJQ6QuP-K",
+        "1Z991iesKeR_H8FpfKWsIimGmD083cIou"
+      ],
+      "prior_role": "authority, compiler, generation and revision evidence",
+      "p50_training_role": "NO_AUTOMATIC_GOLD",
+      "reason": "Human rewrite/action and KSGT compiler output retain typed authority ceilings; neither is universal correctness supervision."
+    }
+  ],
+  "required_before_any_training": [
+    "training corpus manifest with source/license/provenance",
+    "explicit train/dev/PIA/evaluation role partition",
+    "contamination check against P47/P48/P49 and planned P50 evaluation IDs",
+    "tokenizer training manifest separated from evaluation role",
+    "training token budget and deduplication policy",
+    "private-data custody decision"
+  ],
+  "current_verdict": "TRAINING_CORPUS_NOT_YET_SEALED_EXISTING_ASSETS_ARE_NOT_A_READY_TRAINING_SET"
+}
