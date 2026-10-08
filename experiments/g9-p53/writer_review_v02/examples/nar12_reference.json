@@ -1,0 +1,29 @@
+{
+  "text": "서아는 엽서 네 장을 탁자에 펼쳤다. 풍경 사진이 있는 엽서 두 장은 왼편에 놓았다. 그림이 있는 엽서 두 장은 오른편에 놓았다. 그중 한 장을 서랍에 넣었다.\n",
+  "groups": [
+    {
+      "id": "LANDSCAPE",
+      "kind": "POSTCARD",
+      "size": 2,
+      "accessible": true,
+      "quote": "풍경 사진이 있는 엽서 두 장"
+    },
+    {
+      "id": "DRAWING",
+      "kind": "POSTCARD",
+      "size": 2,
+      "accessible": true,
+      "quote": "그림이 있는 엽서 두 장"
+    }
+  ],
+  "query": {
+    "anaphor": "그중 한 장",
+    "kind": "POSTCARD",
+    "count": 1,
+    "targetGroupId": "LANDSCAPE"
+  },
+  "directive": {
+    "authorConfirmed": true,
+    "objective": "CLARIFY"
+  }
+}

@@ -41,7 +41,8 @@
     "p0_writer_improvement": "NOT_TESTED_NO_UK_OUTPUTS",
     "human_revision_burden": "NOT_COLLECTED",
     "genre_authority_v01": "REMOTE_CI_SUCCESS_24_SYNTHETIC_CONTRACT_9_PRIOR_PARTITIVE_NO_REAL_WRITING_EFFECT",
-    "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES"
+    "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES",
+    "writer_review_v02": "OFFLINE_NON_DESTRUCTIVE_KOREAN_DRAFT_REVIEW_CANDIDATE_SELECTION_LOCAL_TESTS_PASS_15_PENDING_REMOTE"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -72,7 +73,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "Review F/E/L/W author-warrant and natural source fidelity in small corpus; obtain independent writer-facing validation before running B/U/K. No friend-server use while substantial no-compute work remains.",
+  "next_scientific_action": "G9-P53: Audit writer-selected alternate source/semantic faithfulness on natural Korean context; then integrate a competent pretrained model without discarding KEEP candidate, preserving explicit creative license and source evidence. Borrowed server not used.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -194,5 +195,16 @@
     "ci_prior_tests": 9,
     "retrospective_report": "experiments/g9-p53/genre_authority_v01/RETROSPECTIVE_OBSERVATIONS.md",
     "model_calls_since_last_run": 0
+  },
+  "latest_writer_review": {
+    "path": "experiments/g9-p53/writer_review_v02",
+    "cli": "experiments/g9-p53/writer_review_v02/cli.cjs",
+    "example": "experiments/g9-p53/writer_review_v02/examples/nar12_draft.txt",
+    "source": "experiments/g9-p53/genre_authority_v01/src/genre_contract.cjs",
+    "krc_source": "experiments/g9-p53/krc_v07/intent_writer.cjs",
+    "local_tests": "15_OF_15",
+    "independent_quality": "NOT_MEASURED",
+    "model_outputs_this_run": 0,
+    "write_policy": "NEVER_OVERWRITE_AND_EXPLICIT_SELECTION_ONLY"
   }
 }

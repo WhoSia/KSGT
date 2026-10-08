@@ -1,0 +1,28 @@
+name: G9-P53 Offline Writer Review v0.2
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/writer_review_v02/**'
+      - '.github/workflows/g9-p53-writer-review-v02.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  non-destructive-writer-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test actionable writer CLI and partitive source safety
+        run: |
+          node --test experiments/g9-p53/writer_review_v02/test/*.test.cjs
+          node --test experiments/g9-p53/krc_v07/intent_writer.test.cjs
+      - name: Demonstrate one no-model Korean draft candidate review
+        run: |
+          node experiments/g9-p53/writer_review_v02/cli.cjs \
+            --briefs experiments/g9-p53/genre_authority_v01/fixtures/briefs.json \
+            --id NAR12 \
+            --draft experiments/g9-p53/writer_review_v02/examples/nar12_draft.txt \
+            --reference experiments/g9-p53/writer_review_v02/examples/nar12_reference.json
