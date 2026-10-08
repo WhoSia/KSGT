@@ -1,0 +1,93 @@
+{
+  "schema": "ksgt.g9.p53.historical-indexed-span-regression-evidence.v1",
+  "phase": "G9-P53",
+  "status": "MECHANICAL_PROTOCOL_GAIN_BUT_PRIMARY_PIA_FLOOR_UNMET",
+  "run": {
+    "id": 37720969811,
+    "url": "https://github.com/WhoSia/KSGT/actions/runs/37720969811",
+    "status": "completed",
+    "conclusion": "success",
+    "artifact_id": 11526440921,
+    "artifact_sha256": "252596ea84354c77595659a88d30b76a7d5dbfbda3146af57eccd4f449bea0ba",
+    "inner_receipt_sha256": "9cd703a36a5bbb431b6123b2f2c09b50ab402ae95a1f10e012db1823d14ba9c2"
+  },
+  "engineering": {
+    "synthetic_unit_tests": 9,
+    "synthetic_pass": 9,
+    "cpp_runtime_build": "PASS",
+    "pinned_model_bytes": "PASS",
+    "synthetic_model_transport": "PASS",
+    "source_packet_hash": "PASS",
+    "source_only_24x4": "PASS",
+    "raw_source_in_artifact": false,
+    "raw_candidate_in_artifact": false
+  },
+  "model": {
+    "repo": "Qwen/Qwen3-0.6B-GGUF",
+    "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "file": "Qwen3-0.6B-Q8_0.gguf",
+    "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "llama_cpp_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+  },
+  "source": {
+    "source_only_packet_sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+    "items": 24,
+    "role": "HISTORICAL_REUSED_DIAGNOSTIC_ONLY_NOT_FRESH_PIA",
+    "training_overlap_certified": false
+  },
+  "p53": {
+    "attempts": 96,
+    "valid_nonidentity_attempts": 47,
+    "identity_attempts": 40,
+    "bad_json": 3,
+    "bad_schema": 6,
+    "primary_nonidentity_items": 10,
+    "any_nonidentity_items": 20,
+    "by_family": {
+      "KOLLA_K1_HARD_CARGO": {
+        "n": 8,
+        "primary": 4,
+        "any": 5
+      },
+      "KOLLA_K2_GENERIC": {
+        "n": 8,
+        "primary": 3,
+        "any": 7
+      },
+      "STYLEKQC_GENERIC": {
+        "n": 8,
+        "primary": 3,
+        "any": 8
+      }
+    },
+    "lexical_cargo_loss_flagged_attempts": 1,
+    "lexical_cargo_loss_item": "P50-KOLLA_K1_HARD_CARGO-01",
+    "lexical_cargo_loss_candidate_index": 1
+  },
+  "p52_comparator": {
+    "run": 37719544157,
+    "attempts": 96,
+    "valid_nonidentity_attempts": 2,
+    "primary_nonidentity_items": 0,
+    "any_nonidentity_items": 2,
+    "interface": "free-form unique exact before quote"
+  },
+  "scoped_inference": {
+    "positive": "Holding model checkpoint, generator runtime and 24 source packet constant, the indexed segmentation plus modified prompt/decoder instrument produced more mechanically valid nonidentity outputs than the previous exact-source-quote instrument.",
+    "not_isolated": "This is a joint protocol+prompt+decoder intervention; does not identify the causal effect of numbering alone.",
+    "not_independent": "The 24-source packet has been used across P50-P53 and the new protocol was informed by prior failures; regressions are not fresh confirmatory PIA.",
+    "not_semantic": "A modified string and lexical cargo equality do not establish grammatical accuracy, paraphrase faithfulness, meaning preservation or repair cost.",
+    "threshold": "Primary 10/24 is below the 18/24 necessary task-responsiveness floor; any-of-four 20/24 cannot rescue candidate0.",
+    "human_pia": "NOT_PERFORMED",
+    "governor_comparison": "NOT_PERFORMED",
+    "candidate_pool": "Only hashed attempt receipts, no exact private raw candidate escrow; identical U/K pools cannot be reconstructed from hashes.",
+    "model_pretrain_membership": "UNKNOWN"
+  },
+  "open_decisions": [
+    "Fresh independent outcome-unseen 8+8+8 PIA with source rights and historical source-hash exclusion; version-specific KoLLA license needs ruling",
+    "Privately authorized exact raw candidate escrow for any paired governor test",
+    "Independent semantic/preservation adjudication, including one secondary protected-cargo loss",
+    "Do not retune the P53 preseal after reading regression outcomes"
+  ],
+  "authority": "MECHANICAL_HISTORICAL_REGRESSION_ONLY_NO_PIA_OR_GOVERNOR_CLAIM"
+}
