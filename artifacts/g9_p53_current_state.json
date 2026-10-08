@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "P53_KRC_V01_SURVEY_RETIRED_V03_STRONGER_DECODER_SEMANTIC_GATE_FAILED",
+  "status": "P53_KRC_V04_11_TESTS_4_SOURCE_GROUNDED_KOREAN_PASSAGES_NO_NATURALNESS_VERDICT",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -28,11 +28,10 @@
     "exact_candidate_escrow": "NOT_AVAILABLE_HASH_RECEIPT_ONLY"
   },
   "next": [
-    "KRC v0.1 human survey remains cancelled; retain 18 texts solely as visible failure cases.",
-    "Do not optimize further critic scores: make Korean proposition/argument/polarity/discourse commitments the object of generative operators.",
-    "Use a capable generic writing baseline and new source evidence; verify factual integrity and grammar before comparing literary texture.",
-    "Do not equate 4B prompt effects with typed KRC independent causal effect; no naturalness win or human ratings.",
-    "No user action required."
+    "KRC v0.5 should test Korean valency-based clause combination, reference ellipsis and scope-preserving register/particle realization; fail closed on source event changes.",
+    "Expand on genuinely fresh Korean material rather than optimize current v0.4 surface ordering for a style score.",
+    "Keep user-facing whole-passage quality and semantic fidelity separate from low-level type-check PASS.",
+    "Do not reactivate invalid KRC v0.1 human reader packet."
   ],
   "authority": "OPEN_PROSPECTIVE_NOT_EMPIRICAL",
   "historical_regression": {
@@ -204,5 +203,19 @@
     "result": "FORMAT_IMPROVED_BUT_SOURCE_FIDELITY_AND_GENRE_FAILED",
     "verdict": "artifacts/g9_p53_krc_v03_decoder_gate_verdict.json",
     "drive": "https://drive.google.com/drive/folders/1oV9xfafzRmexTzAL1Px9pkIjE2HM_yxv"
+  },
+  "krc_v04": {
+    "result": "artifacts/g9_p53_krc_v04_terminal_readback.json",
+    "source": "experiments/g9-p53/krc_v04/fact_frames.json",
+    "compiler": "experiments/g9-p53/krc_v04/compiler.cjs",
+    "morphology": "experiments/g9-p53/krc_v04/morphology.cjs",
+    "run_id": 37742686521,
+    "tests": "11/11_PASS",
+    "doc_variants": "4",
+    "real_word_order_changes": 5,
+    "semantic_scope": "INTERNAL_TYPED_FRAME_AND_KOREAN_CONSTITUENT_CUSTODY",
+    "limitations": "AUTHOR_LICENSED_MICROGRAMMAR_NOT_NATURALNESS_OR_GENERALIZATION",
+    "old_reader": "CANCELLED",
+    "drive": "https://drive.google.com/drive/folders/1R4f-_U4vFwR03XyX_LiT38OvNwqUn3Oa"
   }
 }
