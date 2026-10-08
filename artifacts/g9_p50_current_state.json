@@ -2,7 +2,7 @@
   "schema": "ksgt.g9.p50.current-state.v1",
   "phase": "G9-P50",
   "generation": "IX",
-  "status": "OPEN_TRAINING_REGIME_PRESEALED_SLICE_MATERIALIZATION_RUNNING",
+  "status": "OPEN_TRAINING_SLICE_RETRY_QUEUED_MODEL_IMPLEMENTATION_SMOKE_TEST_LOCAL",
   "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent": "G9-P49",
   "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
@@ -68,11 +68,10 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Require training-slice run 37579616336 to reproduce the canonical tokenizer-only sample exactly and demonstrate zero tokenizer/train/dev record overlap.",
-    "Freeze the successful 100M/2M token-stream artifact hashes as the canonical model-training slice receipt.",
-    "Only after that receipt, authorize S0-S3 training under the already sealed equal-token regime.",
-    "Run engineering smoke tests with zero scientific authority before full S0 if needed.",
-    "Execute PIA only on canonical final checkpoints; governance comparison remains blocked until PIA_PASS."
+    "Verify retry 37712642109 finishes successfully and produces artifact with exact 100M/2M tokens, hash consistency and zero role overlap.",
+    "Do not authorize S0 training from exit-code-134 attempt logs alone.",
+    "Promote S0-S3 frozen architecture implementation only after code provenance and CI tests are in GitHub.",
+    "Execute S0 final-checkpoint training with frozen regime; then PIA, governance and RIVAL_EDIT gates remain."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -192,7 +191,9 @@
     "effective_batch_tokens": 65536,
     "optimizer_steps": 1526,
     "model_training_authorized": false,
-    "slice_run_id": 37579616336,
-    "slice_status": "IN_PROGRESS_AT_LAST_READBACK"
+    "slice_run_id": 37712642109,
+    "slice_status": "QUEUED_AT_LATEST_READBACK",
+    "previous_attempt": "ENGINEERING_FAILURE_EXIT_134",
+    "previous_failure_receipt": "artifacts/g9_p50_training_slice_attempt1_failure.json"
   }
 }
