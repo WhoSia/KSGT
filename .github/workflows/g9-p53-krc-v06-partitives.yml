@@ -21,6 +21,8 @@ jobs:
           node-version: "22"
       - name: Run source-grounded Korean partitive and conjugation tests
         run: node --test experiments/g9-p53/krc_v06/tests/*.test.cjs
+      - name: Test private-NIKL metadata adapter on synthetic records only
+        run: python -m unittest discover -s experiments/g9-p53/krc_v06/tests -p 'test_*.py' -v
       - name: Construct four Korean source-traceable documents
         run: |
           mkdir -p results
