@@ -6,6 +6,7 @@
  */
 const fs=require("node:fs"),crypto=require("node:crypto");
 const data=require("./fact_frames.json"),constitution=require("./constitution.json");
+const morphology=require("./morphology.cjs");
 const sha=s=>crypto.createHash("sha256").update(s).digest("hex");
 const freeze=()=>{if(constitution.status!=="FROZEN_BEFORE_V04_TESTS"||data.briefs.length!==2)throw Error("FROZEN_CONTRACT_INVALID");};
 function fail(code){const e=new Error(code);e.code=code;throw e;}
@@ -31,6 +32,7 @@ function validate(a){
  for(const o of a.orders){
   if(o[o.length-1]!==a.segments.length-1)fail("FINITE_VERB_MUST_BE_LAST");
  }
+ for(const obligation of a.case_obligations||[])morphology.verifyInSegments(a,obligation);
  const last=a.segments[a.segments.length-1];
  if(a.semantic.polarity==="NEG"&&!/않|못|없/u.test(last))fail("NEGATION_FORM_NOT_ATTESTED");
  if(a.semantic.polarity==="POS"&&/않|못하지|없었다/u.test(last))fail("POSITIVE_POLARITY_CONTRADICTION");
