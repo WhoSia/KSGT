@@ -1,0 +1,53 @@
+name: G9-P53 Offline Writer Authority and Human Paraphrase Corpus Census
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/writer_review_v03/**'
+      - 'experiments/g9-p53/empirical_stylekqc_v01/**'
+      - '.github/workflows/g9-p53-writer-authority-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-authority-and-real-corpus-geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Guard writer intent and existing reference behavior without models
+        run: |
+          node --test experiments/g9-p53/writer_review_v03/test/*.test.cjs
+          node --test experiments/g9-p53/writer_review_v02/test/*.test.cjs
+          node --test experiments/g9-p53/krc_v07/intent_writer.test.cjs
+      - name: Test aggregate-only human-corpus census on synthetic fixtures
+        run: node --test experiments/g9-p53/empirical_stylekqc_v01/test/census.test.cjs
+      - name: Verify official public source bytes and compute metadata only
+        run: |
+          mkdir -p "$RUNNER_TEMP/ksgt_g9p53_public_source" outcomes
+          curl -fLsS --retry 3 --connect-timeout 30 \
+            https://raw.githubusercontent.com/cynthia/stylekqc/f12bff2c26779969e1f8e54e1b98fcb8cfeeff77/topic/test.tsv \
+            -o "$RUNNER_TEMP/ksgt_g9p53_public_source/topic_test.tsv"
+          node experiments/g9-p53/empirical_stylekqc_v01/census.cjs \
+            "$RUNNER_TEMP/ksgt_g9p53_public_source/topic_test.tsv" > outcomes/stylekqc_census.json
+          node - <<'NODE'
+          const r=require('./outcomes/stylekqc_census.json');
+          if(r.rows!==4800||r.groups!==480||r.full_ten_distinct_groups!==477||
+             r.groups_with_duplicates!==3||r.literal_substring_occurrences['그중']!==0||
+             r.source.git_blob!=='27846d77675f45284873d45658efc31996396bbf'||
+             r.limitations.sentence_bytes_in_receipt!==false)process.exit(1);
+          console.log(JSON.stringify({status:'PINNED_PUBLIC_HUMAN_CORPUS_METADATA_PASS',
+             rows:r.rows,groups:r.groups,groups_with_ten_distinct:r.full_ten_distinct_groups,
+             source_sha:r.source.git_blob,raw_redistributed:false}));
+          NODE
+          rm -rf "$RUNNER_TEMP/ksgt_g9p53_public_source"
+      - name: Preserve aggregate receipt only, no human text or model weights
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-stylekqc-metadata-only-census
+          path: outcomes/stylekqc_census.json
+          retention-days: 30
+          if-no-files-found: ignore

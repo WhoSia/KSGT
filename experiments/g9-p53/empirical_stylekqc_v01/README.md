@@ -1,0 +1,11 @@
+# G9-P53 — StyleKQC Public Human Rewriting Geometry Census
+**RETROSPECTIVE DESCRIPTIVE SOURCE CENSUS; NOT BLINDED EVALUATION OR DIRECT HUMAN EDIT CHOICE.**
+
+Official source: [cynthia/stylekqc](https://github.com/cynthia/stylekqc), `topic/test.tsv` at commit `f12bff2c26779969e1f8e54e1b98fcb8cfeeff77`, Git blob SHA-1 `27846d77675f45284873d45658efc31996396bbf`; paper: [Cho et al. (LREC 2022)](https://aclanthology.org/2022.lrec-1.771/). Official repository README declares its materials under **CC BY-SA 4.0**. The **proceedings paper** separately displays CC BY-NC 4.0; these are different artifacts, **not by itself a conflicting dataset license**. Downstream redistribution/modification must obey the relevant dataset version terms, and the public KSGT repo does not mirror raw human sentences.
+
+A 10-row consecutive grouping assumption is inherited from the corpus's formal/informal paraphrase design and prior KSGT G8 S7/S10 source audit. Inspect it rather than silently accepting topic changes. The Node script validates all 4,800 rows by ten-row groups, exact Git blob SHA, topic uniformity within groups, literal `그중/나머지` occurrences, and counts repeated/unique surface strings. Output is **aggregate metadata only**, no excerpt or copied human sentence. One group of ten distinct rewrites is not evidence of ten equivalent meanings, naturalness ordering, actual same-writer edits or no-op/EDIT preference.
+
+For offline authorized source custody: `node experiments/g9-p53/empirical_stylekqc_v01/census.cjs PRIVATE_TEST_TSV`.
+The GitHub Actions pipeline only temporarily obtains the exact pinned public file, verifies it, publishes an aggregate JSON receipt as an Actions artifact, and discards raw TSV when the ephemeral runner exits. No trained model, server, GPU, NIKL raw, GitHub Actions-authored commit or new user-provided download is needed.
+
+**Observed descriptive results prior to GitHub Actions readback:** 4,800 rows; 480 groups; 477 groups have 10 distinct strings and 3 contain a duplicate; no cross-half exact duplicates; literal `그중` appears 0 times and `나머지` once. This is useful **for Korean style-expression plurality**, but gives **no partitive reference gold**. A source-only intervention detector cannot infer an individual writer's editing choice from this structure.

@@ -42,7 +42,9 @@
     "human_revision_burden": "NOT_COLLECTED",
     "genre_authority_v01": "REMOTE_CI_SUCCESS_24_SYNTHETIC_CONTRACT_9_PRIOR_PARTITIVE_NO_REAL_WRITING_EFFECT",
     "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES",
-    "writer_review_v02": "REMOTE_GITHUB_CI_SUCCESS_15_NEW_PLUS_9_KRC_TESTS_NONDESTRUCTIVE_WRITER_CLI_NO_HUMAN_QUALITY"
+    "writer_review_v02": "REMOTE_GITHUB_CI_SUCCESS_15_NEW_PLUS_9_KRC_TESTS_NONDESTRUCTIVE_WRITER_CLI_NO_HUMAN_QUALITY",
+    "writer_review_v03": "OFFLINE_POLICY_FIX_LOCAL_11_TESTS_PASS_GITHUB_CI_PENDING_NO_HUMAN_PREFERENCE",
+    "stylekqc_empirical_census": "RETROSPECTIVE_PINNED_PUBLIC_DATA_4800_ROWS_480_GROUPS_AGGREGATE_ONLY_CI_PENDING"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -73,7 +75,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "Use writer-facing no-op/alternate review on rights-cleared independent natural Korean passages, explicitly adjudicating source preservation and author permission before selective model generation. No borrowed server needed.",
+  "next_scientific_action": "Address v0.2 high-level writer CONTEXTUAL versus lower-level CLARIFY authority conflict; use descriptive real StyleKQC forms for candidate diversity, not KEEP/EDIT or partitive labels. Obtain source-disjoint direct Korean writer edit choices or legitimate context before auto preference.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -212,5 +214,25 @@
     "ci_existing_ref_tests": "9_OF_9",
     "real_model_replay": "RETROSPECTIVE_8B_VS_14B_NAR02_TWO_CANDIDATES_NO_EVALUATION",
     "real_model_replay_status": "NO_NEW_MODEL_CALLS_NO_WRITER_PREFERENCE"
+  },
+  "latest_offline_empirical_stage": {
+    "stage": "G9-P53",
+    "version": "writer_authority_v03_and_empirical_stylekqc_v01",
+    "codepaths": [
+      "experiments/g9-p53/writer_review_v03",
+      "experiments/g9-p53/empirical_stylekqc_v01"
+    ],
+    "source_blob": "27846d77675f45284873d45658efc31996396bbf",
+    "source_commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+    "descriptive_human_rows": 4800,
+    "human_paraphrase_groups": 480,
+    "distinct_ten_groups": 477,
+    "reference_gold": "NO_PARTITIVE_GOLD",
+    "evidence_level": "DESCRIPTIVE_STYLE_ONLY_NO_DIRECT_WRITER_PREFERENCE",
+    "new_writer_authority_local_tests": 11,
+    "new_census_synthetic_tests": 8,
+    "ci": "PENDING",
+    "model_calls": 0,
+    "borrowed_server_used": false
   }
 }
