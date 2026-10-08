@@ -1,0 +1,19 @@
+name: G9-P53 KRC v0.7 Finite Writer Intent Probe
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/krc_v07/**'
+      - '.github/workflows/g9-p53-krc-v07.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bounded-partitive-writer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify bounded writer-intent and partitive decisions
+        run: node --test experiments/g9-p53/krc_v07/intent_writer.test.cjs
