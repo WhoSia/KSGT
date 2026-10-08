@@ -45,7 +45,8 @@
     "writer_review_v02": "REMOTE_GITHUB_CI_SUCCESS_15_NEW_PLUS_9_KRC_TESTS_NONDESTRUCTIVE_WRITER_CLI_NO_HUMAN_QUALITY",
     "writer_review_v03": "REMOTE_CI_SUCCESS_HIGH_LEVEL_CONTEXTUAL_INTENT_HOLD_11_NEW_TESTS_NO_AUTO_PREFERENCE",
     "stylekqc_empirical_census": "PINNED_REAL_HUMAN_PARAPHRASE_4800_ROWS_480_GROUPS_477_TEN_DISTINCT_NO_PARTITIVE_GOLD",
-    "nikl2025_private_geujung": "PRIVATE_PINNED_REAL_BYTES_25_SOURCE_CANDIDATES_NO_PARTITIVE_GOLD_REMOTE_SYNTHETIC_CI_PASS"
+    "nikl2025_private_geujung": "PRIVATE_PINNED_REAL_BYTES_25_SOURCE_CANDIDATES_NO_PARTITIVE_GOLD_REMOTE_SYNTHETIC_CI_PASS",
+    "partitive_context_v02": "PINNED_NIKL_2025_25_REAL_CONTEXTS_5_SURFACE_FORMS_0_KRC_V07_EXACT_PATTERN_HITS_PRIVATE_PROVISIONAL_19_PLAUSIBLE_6_HOLD_NO_GOLD"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -76,7 +77,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "With existing private NIKL 2025 raw and StyleKQC metadata, select and independently adjudicate true Korean partitive antecedents within context (25 lexical candidate rows, not gold). Keep A0-A3 no auto edit, test source meaning and writer preference before promoting KSGT.",
+  "next_scientific_action": "Independently review 25 real NIKL group-reference contexts (including right-continuation spoken rows); do not generalize KRC v0.7's lone '그중 한 X' construction to 25 unseen surface forms or turn exploratory AI labels into human gold. Human writer KEEP/EDIT choices remain missing.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -274,5 +275,30 @@
     "actual_private_corpus_scanned_locally": true,
     "actual_private_corpus_in_ci": false,
     "human_partitive_gold": "NOT_COLLECTED"
+  },
+  "latest_private_partitive_context_v02": {
+    "status": "EXPLORATORY_AI_SINGLE_PASS_NOT_INDEPENDENT_GOLD",
+    "public_report": "artifacts/g9_p53_nikl2025_construction_census_v02.json",
+    "source_code": "experiments/g9-p53/empirical_partitive_context_v02/construction_court.py",
+    "existing_source": "NIKL_ZA_2025_v1.0.zip",
+    "exact_archive_sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+    "surface_forms": {
+      "GEUJUNG_BARE": 8,
+      "GEUJUNG_E": 6,
+      "GEUJUNG_ESEO": 6,
+      "GEUJUNG_ESEODO": 4,
+      "GEUJUNG_ESEON": 1
+    },
+    "narrow_writer_v07_exact_pattern_hits": 0,
+    "independently_adjudicated_group_antecedents": 0,
+    "assistant_provisional_review": {
+      "plausible": 19,
+      "context_unresolved": 6,
+      "independent_human": false
+    },
+    "private_review_file": "PRIVATE_LOCAL_EXCLUDED_FROM_GITHUB",
+    "actual_new_model_calls": 0,
+    "friend_server_used": false,
+    "ci": "PENDING"
   }
 }

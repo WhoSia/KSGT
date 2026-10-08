@@ -1,0 +1,20 @@
+name: G9-P53 NIKL Construction Context Court (Synthetic Source Only)
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/empirical_partitive_context_v02/**'
+      - '.github/workflows/g9-p53-partitive-context-v02.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  no-raw-reference-guards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify construction-classification and fail-closed semantics
+        run: python3 -m unittest discover -s experiments/g9-p53/empirical_partitive_context_v02/tests -v
+      - name: Guard against private raw copy in the repository
+        run: |
+          test ! -f NIKL_ZA_2025_v1.0.zip
+          test ! -f experiments/g9-p53/empirical_partitive_context_v02/PRIVATE_25_context_review.json

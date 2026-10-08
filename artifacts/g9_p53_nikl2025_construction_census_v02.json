@@ -1,0 +1,45 @@
+{
+  "schema": "ksgt.g9p53.nikl2025_construction_census.v2",
+  "source_sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+  "method": "EXACT_LITERAL_CONTEXT_BOUNDARY_DIAGNOSTICS",
+  "by_split": {
+    "NX": {
+      "GEUJUNG_ESEODO": 1,
+      "TOTAL": 9,
+      "PRECEDING_SENTENCE_EXISTS": 9,
+      "HAS_ZA_ANNOTATION_ROWS": 7,
+      "GEUJUNG_BARE": 8
+    },
+    "SX": {
+      "GEUJUNG_ESEO": 6,
+      "TOTAL": 16,
+      "PRECEDING_SENTENCE_EXISTS": 16,
+      "HAS_ZA_ANNOTATION_ROWS": 10,
+      "GEUJUNG_E": 6,
+      "GEUJUNG_ESEON": 1,
+      "GEUJUNG_ESEODO": 3
+    }
+  },
+  "construction_counts": {
+    "GEUJUNG_ESEODO": 4,
+    "TOTAL": 25,
+    "PRECEDING_SENTENCE_EXISTS": 25,
+    "HAS_ZA_ANNOTATION_ROWS": 17,
+    "GEUJUNG_BARE": 8,
+    "GEUJUNG_ESEO": 6,
+    "GEUJUNG_E": 6,
+    "GEUJUNG_ESEON": 1
+  },
+  "krc_v07_literal_pattern_hits": 0,
+  "private_model_exploratory_review": {
+    "candidate_potential_group_selection": 19,
+    "context_unresolved": 6,
+    "reviewer": "SINGLE_AI_EXPLORATORY_NON_INDEPENDENT",
+    "independent_gold": 0,
+    "distribution_not_a_performance_score": true
+  },
+  "partitive_antecedent_gold": "NOT_COLLECTED",
+  "human_writer_edits": "NOT_COLLECTED",
+  "actual_linguistic_promotion": "NO",
+  "no_raw_corpus_in_receipt": true
+}
