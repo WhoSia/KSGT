@@ -40,7 +40,7 @@
     "p0_14b_q4": "4_OF_4_B_COMPLETED_3_OF_4_TWO_PARAGRAPHS_SOURCE_LICENSED_CREATIVE_BOUNDARY_UNRESOLVED",
     "p0_writer_improvement": "NOT_TESTED_NO_UK_OUTPUTS",
     "human_revision_burden": "NOT_COLLECTED",
-    "genre_authority_v01": "OFFLINE_F_E_L_W_SYNTHETIC_PRESEAL_24_TESTS_LOCAL_NO_GENERATOR_GAIN",
+    "genre_authority_v01": "REMOTE_CI_SUCCESS_24_SYNTHETIC_CONTRACT_9_PRIOR_PARTITIVE_NO_REAL_WRITING_EFFECT",
     "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES"
   },
   "resume_reads": [
@@ -187,6 +187,12 @@
     "local_tests": 24,
     "independent_writing_benefit": "NOT_EVALUATED",
     "existing_partitive": "REUSED_NOT_RESEALED",
-    "data": "METADATA_ONLY_NO_NEW_RAW_CORPORA"
+    "data": "METADATA_ONLY_NO_NEW_RAW_CORPORA",
+    "ci_run": 37786152731,
+    "ci_status": "SUCCESS",
+    "ci_new_tests": 24,
+    "ci_prior_tests": 9,
+    "retrospective_report": "experiments/g9-p53/genre_authority_v01/RETROSPECTIVE_OBSERVATIONS.md",
+    "model_calls_since_last_run": 0
   }
 }

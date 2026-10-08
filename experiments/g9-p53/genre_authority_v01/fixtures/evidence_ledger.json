@@ -11,11 +11,12 @@
   {
     "source_id": "KOLLA_V2",
     "class": "LEARNER_CORRECTION",
-    "license_status": "VERIFIED",
+    "license_status": "PENDING",
     "authority": "EDITOR",
     "independent_partitive_gold": false,
     "public_raw": false,
-    "custody": "EXISTING_PRIVATE_DRIVE"
+    "custody": "EXISTING_PRIVATE_DRIVE",
+    "license_note": "Open Zenodo custody confirmed; exact deposited record license and downstream reuse terms not yet independently read back"
   },
   {
     "source_id": "STYLEKQC",
