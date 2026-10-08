@@ -1,0 +1,304 @@
+{
+  "schema": "ksgt.g9.p53.krc.v04.controlled-fact-frames.v1",
+  "status": "AUTHOR_COMPOSED_MICROGRAMMAR_SOURCES_NOT_HUMAN_REFERENCES",
+  "material_rights": "New fictional controlled Korean passages; no user text, third-party article or historical test corpus.",
+  "briefs": [
+    {
+      "id": "EX11",
+      "genre": "science_explainer",
+      "audience": "고등학생",
+      "style": "scientific_concise",
+      "unknowns": [
+        "두 장소의 정확한 바람 세기",
+        "햇빛만이 온도차의 원인인지"
+      ],
+      "atoms": [
+        {
+          "id": "F1",
+          "paragraph": 1,
+          "role": "SETUP",
+          "semantic": {
+            "predicate": "PREPARE",
+            "polarity": "POS",
+            "theme": "종이띠",
+            "number": 2,
+            "condition": "같은 길이"
+          },
+          "segments": [
+            "같은 길이의 종이띠 두 장을",
+            "준비했다"
+          ],
+          "orders": [
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "F2",
+          "paragraph": 1,
+          "role": "PROCEDURE",
+          "semantic": {
+            "predicate": "PLACE_TWO",
+            "polarity": "POS",
+            "theme": "종이띠 두 장",
+            "place_a": "햇빛이 드는 곳",
+            "place_b": "그늘"
+          },
+          "segments": [
+            "종이띠 한 장은 햇빛이 드는 곳에",
+            "나머지 한 장은 그늘에",
+            "놓았다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "F3",
+          "paragraph": 1,
+          "role": "MEASURE",
+          "semantic": {
+            "predicate": "CHECK_TEMPERATURE",
+            "polarity": "POS",
+            "time_after_minutes": 15,
+            "theme": "두 종이띠",
+            "property": "표면 온도"
+          },
+          "segments": [
+            "15분 뒤",
+            "두 종이띠의 표면 온도를",
+            "확인했다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "F4",
+          "paragraph": 2,
+          "role": "RESULT",
+          "semantic": {
+            "predicate": "HIGHER_THAN",
+            "polarity": "POS",
+            "theme": "햇빛에 둔 종이띠의 표면 온도",
+            "comparator": "다른 종이띠",
+            "direction": "HIGHER"
+          },
+          "segments": [
+            "햇빛에 둔 종이띠의 표면 온도가",
+            "다른 종이띠보다",
+            "높았다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "F5",
+          "paragraph": 2,
+          "role": "LIMITATION",
+          "semantic": {
+            "predicate": "MEASURE_WIND",
+            "polarity": "NEG",
+            "theme": "두 장소의 바람 세기",
+            "epistemic": "NOT_MEASURED"
+          },
+          "segments": [
+            "두 장소의 바람 세기는",
+            "측정하지 않았다"
+          ],
+          "orders": [
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": "F4",
+          "to": "F5",
+          "relation": "EPISTEMIC_LIMIT",
+          "connective": "다만",
+          "causal_warrant": false
+        }
+      ]
+    },
+    {
+      "id": "EX12",
+      "genre": "scene_essay",
+      "audience": "일반 독자",
+      "style": "observational_restrained",
+      "unknowns": [
+        "우체국 앞에 있었던 사람의 감정",
+        "버스가 멈춘 이유",
+        "화자의 개인적 사연"
+      ],
+      "atoms": [
+        {
+          "id": "F1",
+          "paragraph": 1,
+          "role": "VIEWPOINT",
+          "semantic": {
+            "predicate": "ARRIVE",
+            "polarity": "POS",
+            "agent": "NARRATOR",
+            "place": "우체국 앞",
+            "time": "늦은 오후"
+          },
+          "segments": [
+            "늦은 오후에",
+            "나는",
+            "우체국 앞에",
+            "도착했다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "id": "F2",
+          "paragraph": 1,
+          "role": "SCENE",
+          "semantic": {
+            "predicate": "PLACED",
+            "polarity": "POS",
+            "theme": "작은 안내판",
+            "place": "유리문 옆"
+          },
+          "segments": [
+            "유리문 옆에",
+            "작은 안내판이",
+            "놓여 있었다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "F3",
+          "paragraph": 1,
+          "role": "ACTION",
+          "semantic": {
+            "predicate": "EXIT_HOLDING",
+            "polarity": "POS",
+            "agent": "한 사람",
+            "theme": "봉투",
+            "place": "건물 밖"
+          },
+          "segments": [
+            "한 사람이",
+            "봉투를 손에 들고",
+            "건물 밖으로 나왔다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "F4",
+          "paragraph": 2,
+          "role": "EVENT",
+          "semantic": {
+            "predicate": "STOP",
+            "polarity": "POS",
+            "agent": "버스",
+            "place": "도로 건너편"
+          },
+          "segments": [
+            "도로 건너편에서",
+            "버스가",
+            "멈췄다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "F5",
+          "paragraph": 2,
+          "role": "EXIT",
+          "semantic": {
+            "predicate": "WALK_CROSSING",
+            "polarity": "POS",
+            "agent": "NARRATOR",
+            "path": "횡단보도",
+            "direction": "정류장 쪽"
+          },
+          "segments": [
+            "나는",
+            "횡단보도를 건너",
+            "정류장 쪽으로 걸었다"
+          ],
+          "orders": [
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "edges": []
+    }
+  ],
+  "surface_license": "Source authors accept these exact phrase constituents as manually curated Korean possibilities; structural validation does not prove universal grammaticality or equality of information focus."
+}
