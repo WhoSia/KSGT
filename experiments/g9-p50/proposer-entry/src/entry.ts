@@ -7,6 +7,7 @@ export interface FrozenEntryContract {
     max_new_tokens: number;
     combined_max_context: number;
     frozen_task_map: Record<string, string>;
+    frozen_source_admission: {source_sha256_by_id: Record<string,string>};
   };
   candidate_generation: {
     budget_per_source: number;
@@ -31,7 +32,8 @@ export type SourceHold =
   | "PACKET_HASH_MISMATCH"
   | "SOURCE_CONTENT_HASH_MISMATCH"
   | "TASK_LANE_MISMATCH"
-  | "NOOP_PERMISSION_CONFLICT";
+  | "NOOP_PERMISSION_CONFLICT"
+  | "SOURCE_ID_HASH_BINDING_MISMATCH";
 
 export interface FrozenSource {
   sourceId: string;
@@ -111,6 +113,8 @@ export function prepareSourceEntry(
     return { kind: "HOLD", reason: "SOURCE_DELIMITER_COLLISION", sourceId: source.sourceId };
   if (hashSourceText(source.text) !== source.frozenSourceSha256)
     return {kind:"HOLD",reason:"SOURCE_CONTENT_HASH_MISMATCH",sourceId:source.sourceId};
+  if (contract.serialized_primary_route.frozen_source_admission.source_sha256_by_id[source.sourceId] !== source.frozenSourceSha256)
+    return {kind:"HOLD",reason:"SOURCE_ID_HASH_BINDING_MISMATCH",sourceId:source.sourceId};
   if (source.permitsNoOp !== false)
     return {kind:"HOLD",reason:"NOOP_PERMISSION_CONFLICT",sourceId:source.sourceId};
 
