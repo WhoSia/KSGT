@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P53",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_P53_KRC_V04_MICROGRAMMAR_PROVED_LOCAL_ONLY_NEXT_CONTEXT_LICENSED_CLAUSE_FORMATION",
+  "status": "OPEN_P53_KRC_V05_KOREAN_CLAUSE_COMPOSITION_PASS_NEXT_ANAPHORA_AND_PRODUCTIVE_MORPHOLOGY",
   "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "parent_stage": "G9-P52",
   "latest_closed_stage": "G9-P52",
@@ -26,14 +26,16 @@
     "injected_error_repair": "3_OF_3_MECHANICAL_ONLY",
     "korean_semantic_critic": "DISPROVEN_BY_THREE_ADVERSARIAL_CONTRADICTIONS",
     "natural_korean_improvement": "NO_CLAIM",
-    "human_reader_naturalness": "CANCELLED_FOR_INVALID_COMPARATORS",
+    "human_reader_naturalness": "CANCELLED_INVALID_PREVIOUS_MATERIAL",
     "weight_updates": "NONE",
     "v03": "SIX_REAL_4B_OUTPUTS_ALL_WITH_SOURCE_OR_DISCOURSE_CONCERNS",
     "krc_v04": "FINITE_TYPED_CONSTRUCTION_PASS_WITH_GIVEN_FRAME_AUTHORITY",
-    "semantic_fidelity": "SOURCE_FRAME_IDENTITY_ONLY_NO_LANGUAGE_ENTAILMENT_PROOF"
+    "semantic_fidelity": "TYPED_EVENT_PROVENANCE_ONLY_SURFACE_INTERPRETATION_NOT_PROVEN",
+    "krc_v05": "TWO_JOINS_TWO_ELLIPSES_PASS_BOUNDED_AUTHORED_CONTEXTS"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
+    "artifacts/g9_p53_krc_v05_terminal_readback.json",
     "artifacts/g9_p53_krc_v04_terminal_readback.json",
     "artifacts/g9_p53_krc_v03_decoder_gate_verdict.json",
     "artifacts/g9_p53_krc_v02_terminal_verdict.json",
@@ -58,8 +60,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE; old v0.1 human survey remains withdrawn as invalid.",
-  "next_scientific_action": "KRC v0.5: test context-licensed Korean clause combination and recoverable argument ellipsis with explicit predicate/argument scope, requiring genuinely nontrivial whole-passage transformations and source entailment adversarial probes on new examples.",
+  "next_human_action": "NONE; invalid historical reader survey stays retired; no recruitment.",
+  "next_scientific_action": "KRC v0.6: resolve the implicit '그중 한 컵' partitive antecedent from typed source cardinalities; examine productive verb -고 formation and reference scope under conflicting discourse subjects. Use genuinely fresh Korean passages and context-based counterexamples.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -79,7 +81,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "KRC v0.4 concrete Korean construction microgrammar closed; 11/11 tests, 4 exact-source prose variants, no quality claims",
+  "current_substage": "KRC v0.5: two source-grounded clause joins and two actor omissions with 8/8 source-context tests, construction only",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -119,17 +121,17 @@
     "drive": "https://drive.google.com/drive/folders/1oV9xfafzRmexTzAL1Px9pkIjE2HM_yxv"
   },
   "latest_construction": {
-    "verdict": "artifacts/g9_p53_krc_v04_terminal_readback.json",
-    "formal_result": "experiments/g9-p53/krc_v04/FORMAL_RESULT.md",
-    "run_id": 37742686521,
-    "structural_test_count": "11/11_PASS",
-    "authored_source_briefs": 2,
-    "typed_source_facts": 10,
-    "generated_passages": 4,
-    "reordered_fact_occurrences": 5,
-    "human_naturalness": "NOT_MEASURED",
-    "universal_korean_grammar": "NOT_CLAIMED",
-    "general_ai_comparison": "NOT_PERFORMED",
-    "archived_result": "https://drive.google.com/drive/folders/1R4f-_U4vFwR03XyX_LiT38OvNwqUn3Oa"
+    "verdict": "artifacts/g9_p53_krc_v05_terminal_readback.json",
+    "formal_result": "experiments/g9-p53/krc_v05/FORMAL_RESULT.md",
+    "run_id": 37745597095,
+    "tests": "8/8_PASS",
+    "new_briefs": 2,
+    "source_events": 10,
+    "documents": 4,
+    "joined_clauses": 2,
+    "actor_omissions": 2,
+    "event_trace": "UNCHANGED_INTERNAL_SOURCE_EVENT_OBJECTS",
+    "proof_ceiling": "NO_NATURAL_LANGUAGE_EQUIVALENCE_OR_HUMAN_NATURALNESS",
+    "stored_at": "https://drive.google.com/drive/folders/1K7BX-p0S3AXP6yUwK12Jt3L1lmrkVEBC"
   }
 }
