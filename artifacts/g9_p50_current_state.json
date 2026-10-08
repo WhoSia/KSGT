@@ -2,7 +2,7 @@
   "schema": "ksgt.g9.p50.current-state.v1",
   "phase": "G9-P50",
   "generation": "IX",
-  "status": "OPEN_TRAINING_SLICE_RETRY_QUEUED_MODEL_IMPLEMENTATION_SMOKE_TEST_LOCAL",
+  "status": "OPEN_TRAINING_SLICE_RETRY_QUEUED_POLYGLOT_VERIFIER_CI_PENDING",
   "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent": "G9-P49",
   "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
@@ -192,8 +192,18 @@
     "optimizer_steps": 1526,
     "model_training_authorized": false,
     "slice_run_id": 37712642109,
-    "slice_status": "QUEUED_AT_LATEST_READBACK",
+    "slice_status": "QUEUED_AT_LAST_READBACK",
     "previous_attempt": "ENGINEERING_FAILURE_EXIT_134",
     "previous_failure_receipt": "artifacts/g9_p50_training_slice_attempt1_failure.json"
+  },
+  "polyglot_toolchain": {
+    "doctrine": "LANGUAGE_FOLLOWS_THE_BOTTLENECK_CAPABILITY_VISIBLE_POLYGLOT_WHEN_EARNED",
+    "python": "FineWeb2 streaming, SentencePiece tokenization, PyTorch training",
+    "rust": "Independent token-byte receipt verification, structural and provenance consistency; cannot independently certify record-level disjointness without sets",
+    "rust_verifier_commit": "a5a097ca8a20ca5b3c1fb07062a7503d1b2a30e6",
+    "rust_ci_commit": "d30316759a68cc272435bd257e6020c78321f985",
+    "rust_ci_status": "QUEUED_OR_UNVERIFIED",
+    "migration": "NO_PYTHON_REWRITE",
+    "scientific_authority": "NONE_UNTIL_SUCCESSFUL_ARTIFACT_AND_VALIDATION"
   }
 }
