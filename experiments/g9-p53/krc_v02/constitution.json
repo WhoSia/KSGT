@@ -1,0 +1,75 @@
+{
+  "schema": "ksgt.g9.p53.krc-v02.adversarial-clause-court.v1",
+  "stage": "G9-P53",
+  "name": "KRC v0.2 — Warranted Korean Clause Game, Typed Critic Witnesses & Bounded Repair",
+  "status": "FROZEN_BEFORE_MODEL_OUTPUTS",
+  "parent": "artifacts/g9_p53_krc_v01_terminal_readback.json",
+  "purpose": "Test whether a typed, clause-local generator and separate witness-producing critic can form two-paragraph Korean passages without monolithic decoder leaking instructions or inventing source facts.",
+  "scientific_hypothesis": "Local source-fact realization with fixed bounded critic feedback and deterministic paragraph assembly has a greater mechanical chance of paragraph correctness and source-anchored phrases than the v0.1 monolithic planner. It does not by itself establish naturalness.",
+  "mathematical_contract": {
+    "source": "Γ=(F,U,C,D) licensed facts, explicit unknowns, situation and discourse order",
+    "generator": "G(Γ,slot,feedback) proposes one Korean clause and declared fact-id; cannot revise Γ or select new facts",
+    "critic": "V(Γ,slot,candidate) returns typed counterexample witnesses, never a scalar realism discriminator",
+    "game": "For each slot, at most 2 generator proposals (one initial, one witness-conditioned repair); if neither passes mechanical invariants use exact source-fact fallback; deterministic composer concatenates slots into exactly two paragraphs",
+    "no_true_GAN_claim": "No differentiable discriminator, backpropagated gradients, model weight updates or adversarial training; GAN-inspired bounded inference-time proposer-critic game only",
+    "primary_unit": "Fact-carrying clause, not approval of generic revision or guessing model identity",
+    "obligations": [
+      "FACT_ID_MATCH",
+      "VALID_JSON",
+      "EXACT_SOURCE_NUMERALS_NOT_EXPANDED",
+      "BASIC_SOURCE_ANCHOR_PRESENT",
+      "NO_META_RESPONSE",
+      "NO_CAUSAL_CERTAINTY_FOR_UNRESOLVED_SOURCE",
+      "NO_UNGROUNDED_MENTAL_STATE",
+      "CLAUSE_NONEMPTY_AND_LOCAL"
+    ],
+    "evidence_proofs": "Only exact source atom fallback proves literal custody. Lexical anchor presence in model-generated clause is necessary weak evidence, never a semantic fidelity guarantee."
+  },
+  "model": {
+    "repo": "Qwen/Qwen3-0.6B-GGUF",
+    "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "file": "Qwen3-0.6B-Q8_0.gguf",
+    "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "runner": "ggml-org/llama.cpp",
+    "runner_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+  },
+  "runtime": {
+    "language": "Node.js 22 orchestration and deterministic witness critic + C++ llama.cpp runner",
+    "port": 8912,
+    "model_context_tokens": 3072,
+    "temperature": 0.4,
+    "top_p": 0.9,
+    "max_tokens": 130,
+    "seed_base": 53020,
+    "seed_fn": "53020+slotGlobalIndex*2+attemptIndex",
+    "max_attempts": 2,
+    "repair_uses_only_typed_witness": true,
+    "max_source_slots": 10,
+    "source_count": 2,
+    "final_document_paragraphs": 2,
+    "model_interface": "JSON exactly {\"fact_id\":\"F1\",\"sentence\":\"단일 한국어 문장.\"}",
+    "input": "All fact atoms available as context. Slot includes one source fact and its place in discourse.",
+    "retries_on_transport_failure": 0,
+    "feedback_prompt": "Only witnessed failures and original source fact, never evaluator-generated replacement text or aesthetic points",
+    "original_source_authority": "Never alter briefs or facts following result"
+  },
+  "evaluations": {
+    "round0": "Typed validity by slot, excluding unsupported numeric/categorical facts from source",
+    "round1": "Same typed validity after one witness-conditioned repair if round0 inadmissible",
+    "fall_back": "Exact verbatim original fact clause, labeled SOURCE_LITERAL_FALLBACK, not rewritten as model success",
+    "text_audit": "2-paragraph compliance, all slots represented, fallback rate, suspicious lexical flags, no human quality estimates",
+    "reader": "HOLD — user will recruit readers using prior v0.1 blind materials independently",
+    "human_semantic_judgment": "NOT_EXECUTED",
+    "comparison_to_v01": "Descriptive and task-mismatched (new briefs): cannot claim causal improvement of grammar or Korean naturalness"
+  },
+  "prohibitions": [
+    "No generator self-grade",
+    "No scalar discriminator or 'AI humanlike' detector",
+    "No source/meta leakage into passage",
+    "No judge authority promotion from regex cues",
+    "No third iteration regardless of outcome",
+    "No hidden reference or historical 24 PIA access"
+  ],
+  "stop": "At most 2×5 slots×2 requests; stop after one bounded run, preserve all raw candidates in limited research artifact, no post-result prompt tuning.",
+  "authority": "PROSPECTIVE_DUAL_AGENT_MECHANICAL_DEMO_NOT_HUMAN_PREFERENCE_OR_SEMANTIC_PROOF"
+}
