@@ -2,7 +2,7 @@
   "schema": "ksgt.g9.p50.current-state.v1",
   "phase": "G9-P50",
   "generation": "IX",
-  "status": "OPEN_TRAINING_SLICE_RETRY_QUEUED_POLYGLOT_VERIFIER_CI_PENDING",
+  "status": "OPEN_SLICE_RUNNING_SOURCE_CONDITIONING_AND_CONTAMINATION_AUDIT_HOLD",
   "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent": "G9-P49",
   "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
@@ -68,10 +68,11 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Verify retry 37712642109 finishes successfully and produces artifact with exact 100M/2M tokens, hash consistency and zero role overlap.",
-    "Do not authorize S0 training from exit-code-134 attempt logs alone.",
-    "Promote S0-S3 frozen architecture implementation only after code provenance and CI tests are in GitHub.",
-    "Execute S0 final-checkpoint training with frozen regime; then PIA, governance and RIVAL_EDIT gates remain."
+    "Read back slice retry 37712642109 and artifact hashes; no training authorization from queued/in-progress state.",
+    "Close source-conditioned proposer serialization and decoding contract before interpreting PIA competence.",
+    "Satisfy corpus preseal near-duplicate screen and independent record disjointness evidence, or explicitly narrow authority without claiming gate PASS.",
+    "Resolve EOS packing/reset objective semantics across train and dev.",
+    "Retain original token budget, frozen corpus revision, tokenizer, and PIA adjudication thresholds."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -205,5 +206,16 @@
     "rust_ci_status": "QUEUED_OR_UNVERIFIED",
     "migration": "NO_PYTHON_REWRITE",
     "scientific_authority": "NONE_UNTIL_SUCCESSFUL_ARTIFACT_AND_VALIDATION"
+  },
+  "identifiability_risk_audit": {
+    "receipt": "artifacts/g9_p50_identifiability_risk_audit.json",
+    "commit": "c98f9f75aa5fa346bdf11c261da4782bf8875627",
+    "critical": "SOURCE_CONDITIONED_PROPOSAL_INTERFACE_NOT_IDENTIFIED_FROM_NEXT_TOKEN_PRETRAINING_ALONE",
+    "additional_blockers": [
+      "PRESEALED_NEAR_DUPLICATE_SCREEN_UNSATISFIED",
+      "INDEPENDENT_RECORD_DISJOINTNESS_NOT_CERTIFIED",
+      "EOS_PACKING_SEMANTICS_UNDECLARED"
+    ],
+    "authority": "AUDIT_ONLY_NO_MODEL_TRAINING_AUTHORIZATION"
   }
 }
