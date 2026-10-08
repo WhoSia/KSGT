@@ -1,0 +1,28 @@
+name: G9-P53 KRC Typed Planner Validation
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v01/constitution.json"
+      - "experiments/g9-p53/krc_v01/planner.cjs"
+      - "experiments/g9-p53/krc_v01/tests/planner.test.cjs"
+      - ".github/workflows/g9-p53-krc-planner.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate typed meaning and discourse plans
+        run: |
+          node --test experiments/g9-p53/krc_v01/tests/planner.test.cjs
+          node experiments/g9-p53/krc_v01/planner.cjs > /tmp/krc_planner_trace.json
+          node -e "const x=require('/tmp/krc_planner_trace.json');if(x.plans.length!==6||x.generation_order.length!==18)throw Error('INVALID_PLAN')"
