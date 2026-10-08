@@ -1,0 +1,73 @@
+name: G9-P50 Cold Archive
+
+on:
+  push:
+    paths:
+      - ".github/workflows/g9-p50-cold-archive.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  cold_archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Package precise retired P50 source tree
+        env:
+          SOURCE_COMMIT: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,subprocess,zipfile
+          from pathlib import Path
+          all_paths=subprocess.check_output(["git","ls-files","-z"]).decode().split("\0")
+          paths=sorted(p for p in all_paths if p and (
+              p.startswith("experiments/g9-p50/") or
+              p.startswith("artifacts/g9_p50_") or
+              p.startswith(".github/workflows/g9-p50-") or
+              p in ("CURRENT_STAGE.json","README.md","ACTIVE_LINEAGE.yaml")
+          ))
+          if len(paths)<30: raise RuntimeError("P50 snapshot unexpectedly incomplete")
+          if any(p.endswith((".u16le",".parquet",".bin")) for p in paths):
+              raise RuntimeError("Refuse to include reconstructible corpus/token bytes")
+          manifest={"schema":"ksgt.g9.p50.cold-source-archive.v1",
+              "source_repo":"WhoSia/KSGT","source_commit":os.environ["SOURCE_COMMIT"],
+              "boundary":"TEXT_REPOSITORY_ONLY_NO_EXTERNAL_TOKEN_ARTIFACT",
+              "paths":[{"path":p,"bytes":Path(p).stat().st_size,
+                        "sha256":hashlib.sha256(Path(p).read_bytes()).hexdigest()}
+                       for p in paths],
+              "scientific_verdict":"ENABLING_INFRASTRUCTURE_ONLY_NO_PIA_OR_GOVERNANCE_IDENTIFICATION"}
+          data=(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n").encode()
+          zpath=Path("KSGT_G9-P50_RETIRED_SOURCE_SNAPSHOT.zip")
+          with zipfile.ZipFile(zpath,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+              for p in paths:
+                  info=zipfile.ZipInfo(p,date_time=(1980,1,1,0,0,0))
+                  info.compress_type=zipfile.ZIP_DEFLATED
+                  z.writestr(info,Path(p).read_bytes())
+              info=zipfile.ZipInfo("ARCHIVE_MANIFEST.json",date_time=(1980,1,1,0,0,0))
+              info.compress_type=zipfile.ZIP_DEFLATED
+              z.writestr(info,data)
+          with zipfile.ZipFile(zpath) as z:
+              decoded=json.loads(z.read("ARCHIVE_MANIFEST.json"))
+              for item in decoded["paths"]:
+                  assert hashlib.sha256(z.read(item["path"])).hexdigest()==item["sha256"]
+          receipt={"schema":"ksgt.g9.p50.cold-archive-receipt.v1",
+              "source_commit":manifest["source_commit"],"file_count":len(paths),
+              "zip_file":zpath.name,"zip_sha256":hashlib.sha256(zpath.read_bytes()).hexdigest(),
+              "zip_bytes":zpath.stat().st_size,
+              "no_token_stream_in_source_archive":True,
+              "archive_members_sha256_verified":True}
+          Path("G9-P50_ARCHIVE_RECEIPT.json").write_text(json.dumps(receipt,indent=2)+"\n")
+          print(json.dumps(receipt,indent=2),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p50-cold-source-archive
+          path: |
+            KSGT_G9-P50_RETIRED_SOURCE_SNAPSHOT.zip
+            G9-P50_ARCHIVE_RECEIPT.json
+          if-no-files-found: error
+          retention-days: 30
