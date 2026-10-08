@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "P53_KRC_V02_BOUNDED_GAME_COMPLETE_COPYING_EQUILIBRIUM_SEMANTIC_CRITIC_DEFEATED",
+  "status": "P53_KRC_V01_SURVEY_RETIRED_V03_STRONGER_DECODER_SEMANTIC_GATE_FAILED",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -28,11 +28,11 @@
     "exact_candidate_escrow": "NOT_AVAILABLE_HASH_RECEIPT_ONLY"
   },
   "next": [
-    "KRC v0.2 source+outcome preserved without retuning its naturalness claim.",
-    "Form a Korean construction type system for predicate-argument polarity, negation, comparison direction, tense/aspect, topic/focus, discourse relations, referent-licensed ellipsis and genre/ending stance.",
-    "Identify how a nontrivial Korean surface change can be proof-obligated and evaluated without encouraging unsupported invention or mere source copying.",
-    "Use NEW briefs and equal-information controls to separate symbolic assembly from actual G/V feedback effect.",
-    "Keep independent real-reader naturalness court ON_HOLD until recruited voluntarily; distribute only anonymous packets, no unblinding key."
+    "KRC v0.1 human survey remains cancelled; retain 18 texts solely as visible failure cases.",
+    "Do not optimize further critic scores: make Korean proposition/argument/polarity/discourse commitments the object of generative operators.",
+    "Use a capable generic writing baseline and new source evidence; verify factual integrity and grammar before comparing literary texture.",
+    "Do not equate 4B prompt effects with typed KRC independent causal effect; no naturalness win or human ratings.",
+    "No user action required."
   ],
   "authority": "OPEN_PROSPECTIVE_NOT_EMPIRICAL",
   "historical_regression": {
@@ -187,5 +187,22 @@
     "drive_archive": "https://drive.google.com/drive/folders/1Ro8EZajBr5clLdxHJosssPa0wwZqbTvE",
     "reviewer_form": "https://drive.google.com/file/d/141KddGIPYjWCMIEkRjnDLKrAYJ_vmfGt/view",
     "comparative_naturalness": "NOT_ESTABLISHED"
+  },
+  "critical_invalidity": {
+    "v01": "artifacts/g9_p53_krc_v01_invalidity_ruling.json",
+    "cause": "ELEMENTARY_KOREAN_AND_FACTUAL_TASK_FAILURE",
+    "old_human_survey": "CANCELLED_DO_NOT_RECRUIT"
+  },
+  "quality_floor": "artifacts/g9_p53_korean_writing_quality_floor.json",
+  "v03": {
+    "constitution": "experiments/g9-p53/krc_v03/constitution.json",
+    "new_sources": "experiments/g9-p53/krc_v03/new_briefs.json",
+    "run_id": 37732682355,
+    "readback_run": 37733414010,
+    "generated": 6,
+    "model": "Qwen3-4B-Instruct-2507 Q4_K_M",
+    "result": "FORMAT_IMPROVED_BUT_SOURCE_FIDELITY_AND_GENRE_FAILED",
+    "verdict": "artifacts/g9_p53_krc_v03_decoder_gate_verdict.json",
+    "drive": "https://drive.google.com/drive/folders/1oV9xfafzRmexTzAL1Px9pkIjE2HM_yxv"
   }
 }
