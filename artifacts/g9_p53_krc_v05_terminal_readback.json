@@ -1,0 +1,69 @@
+{
+  "schema": "ksgt.g9.p53.krc-v05.terminal-readback.v1",
+  "date": "2026-10-08",
+  "stage": "G9-P53",
+  "substage": "KRC-v0.5",
+  "disposition": "CLOSED_FINITE_KOREAN_CLAUSE_COMPOSITION_AND_ELLIPSIS_PASS_MEANING_AND_NATURALNESS_OPEN",
+  "constitution": "experiments/g9-p53/krc_v05/constitution.json",
+  "source": "experiments/g9-p53/krc_v05/source_events.json",
+  "composer": "experiments/g9-p53/krc_v05/composer.cjs",
+  "method": "experiments/g9-p53/krc_v05/FORMAL_RESULT.md",
+  "execution": {
+    "workflow_run_id": 37745597095,
+    "conclusion": "SUCCESS",
+    "test_count": 8,
+    "passed": 8,
+    "failed": 0,
+    "source_contexts": [
+      "EX13 controlled science",
+      "EX14 observed scene"
+    ],
+    "source_events_total": 10,
+    "outputs": 4,
+    "per_output_paragraphs": 2,
+    "per_output_source_event_coverage": 5,
+    "canonical_sentences_per_output": 5,
+    "composed_sentences_per_output": 4,
+    "join_operations": 2,
+    "actor_ellipsis_operations": 2,
+    "licensed_epistemic_connectives": 1,
+    "model_calls": 0,
+    "human_evaluation_count": 0,
+    "source_event_semantic_hashes_equal_within_each_pair": true,
+    "evidence_artifact_id": 11535314750,
+    "github_artifact_digest": "sha256:faf04575accf739579ebcbb2fee3ce42cc4d1b36ced2beabc4ef44acbc93cee7"
+  },
+  "defeaters_tested": [
+    "JOIN_ACTOR_MISMATCH",
+    "JOIN_TEMPORAL_ORDER",
+    "UNLICENSED_SEQUENTIAL_JOIN",
+    "CROSS_PARAGRAPH_JOIN",
+    "AMBIGUOUS_ANTECEDENT",
+    "REFERENT_NOT_RECOVERABLE",
+    "CROSS_PARAGRAPH_ELLIPSIS",
+    "NO_CAUSAL_WARRANT",
+    "POLARITY_MUTATION_FORBIDDEN",
+    "COMPARISON_REVERSAL_FORBIDDEN",
+    "EVENT_INVENTION_FORBIDDEN",
+    "PREDICATE_SURFACE_WITNESS_MISMATCH",
+    "CONJUNCTIVE_PREDICATE_WITNESS_MISMATCH"
+  ],
+  "main_result": "Source-attested Korean -고 clauses and two non-repeated actor mentions composed from explicit event/actor/discourse-state criteria; source event tokens and role references conserved.",
+  "limits": [
+    "Source full and conjunctive Korean strings were manually authored; no productive general Korean inflection/valency grammar proved.",
+    "Internal source event hash identity proves only ledger provenance, NOT Korean semantic entailment or equal rhetorical emphasis.",
+    "'그중 한 컵' object-partitive antecedent is manually licensed but not independently machine resolved.",
+    "No credible general AI comparator or human stylistic rating; earlier invalid KRC v0.1 reader packet remains withdrawn.",
+    "Licensed sequence relations are authored conditions, not automatically inferred from open-world texts."
+  ],
+  "custody": {
+    "drive_folder": "https://drive.google.com/drive/folders/1K7BX-p0S3AXP6yUwK12Jt3L1lmrkVEBC",
+    "drive_file": "https://drive.google.com/file/d/1UWSQ22cTbCO5bEtAsUjmLAYL8P_mDSWS/view",
+    "drive_name_and_byte_count_readback": "PASS_2913_BYTES",
+    "drive_sha256_verification": "NOT_PERFORMED"
+  },
+  "research_next": "KRC v0.6 — Typed Korean Partitive/Deictic Reference Resolution, Productive Conjunctive Verb Formation, and Discourse Scope Preservation with Fresh Contextual Counterexamples",
+  "human_reader_status": "CANCELLED_FOR_OLD_INVALID_V01_MATERIAL_NO_RECRUITMENT",
+  "authority": "LOCAL_CONSTRUCTION_CAPABILITY_NOT_HOLISTIC_NATURAL_KOREAN_PROOF",
+  "bot_commits_allowed": false
+}
