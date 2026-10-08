@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "P53_KRC_V04_11_TESTS_4_SOURCE_GROUNDED_KOREAN_PASSAGES_NO_NATURALNESS_VERDICT",
+  "status": "P53_KRC_V05_BOUNDED_CLAUSE_LINK_AND_ACTOR_ELLIPSIS_PASS_NO_QUALITY_CLAIM",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -28,10 +28,10 @@
     "exact_candidate_escrow": "NOT_AVAILABLE_HASH_RECEIPT_ONLY"
   },
   "next": [
-    "KRC v0.5 should test Korean valency-based clause combination, reference ellipsis and scope-preserving register/particle realization; fail closed on source event changes.",
-    "Expand on genuinely fresh Korean material rather than optimize current v0.4 surface ordering for a style score.",
-    "Keep user-facing whole-passage quality and semantic fidelity separate from low-level type-check PASS.",
-    "Do not reactivate invalid KRC v0.1 human reader packet."
+    "KRC v0.6 source-cardinality and antecedent recovery including '그중' and competing actors.",
+    "Test productive finite-to-conjunctive Korean morphology under source polarity and temporal scope, rather than one more LLM judge.",
+    "Qualify full passage meaning and naturalness separately once constructions generalize to unseen sentence contexts.",
+    "Do not reactivate invalid KRC v0.1 reader survey or assert general AI superiority."
   ],
   "authority": "OPEN_PROSPECTIVE_NOT_EMPIRICAL",
   "historical_regression": {
@@ -217,5 +217,24 @@
     "limitations": "AUTHOR_LICENSED_MICROGRAMMAR_NOT_NATURALNESS_OR_GENERALIZATION",
     "old_reader": "CANCELLED",
     "drive": "https://drive.google.com/drive/folders/1R4f-_U4vFwR03XyX_LiT38OvNwqUn3Oa"
+  },
+  "krc_v05": {
+    "formal": "experiments/g9-p53/krc_v05/FORMAL_RESULT.md",
+    "receipt": "artifacts/g9_p53_krc_v05_terminal_readback.json",
+    "run": 37745597095,
+    "tests": "8_PASS_0_FAIL",
+    "new_contexts": 2,
+    "source_event_records": 10,
+    "documents": 4,
+    "joins": 2,
+    "actor_ellipses": 2,
+    "paragraphed": "4_OF_4_TWO_PARAGRAPHS",
+    "limits": [
+      "AUTHOR_ATTESTED_KOREAN_FINITE_CLAUSES",
+      "OBJECT_PARTITIVE_ANAPHORA_UNVALIDATED",
+      "NO_HUMAN_NATURALNESS_MEASUREMENT"
+    ],
+    "reader": "OLD_V01_PACKET_RETIRED_NO_NEW_READERS",
+    "drive": "https://drive.google.com/drive/folders/1K7BX-p0S3AXP6yUwK12Jt3L1lmrkVEBC"
   }
 }
