@@ -32,14 +32,17 @@ function validateEvent(e){
  if(!["POS","NEG"].includes(polarity)||typeof predicate!=="string")fail("INVALID_PREDICATION");
  if(actor!==null&&!ACTOR_PREFIX[actor])fail("UNKNOWN_ACTOR_ROLE");
  if(typeof e.surfaces.full!=="string"||!e.surfaces.full.endsWith("."))fail("NO_FINITE_SOURCE");
+ if(typeof e.event.predicate_witness!=="string"||!e.surfaces.full.endsWith(e.event.predicate_witness))fail("PREDICATE_SURFACE_WITNESS_MISMATCH");
  if(actor&&!e.surfaces.full.startsWith(ACTOR_PREFIX[actor])&&
     !(e.id==="F4"&&e.event.predicate==="HIGHER_THAN"))fail("OVERT_ACTOR_MISMATCH");
  if(e.surfaces.no_actor){
+  if(!e.surfaces.no_actor.endsWith(e.event.predicate_witness))fail("ELLIPTIC_PREDICATE_WITNESS_MISMATCH");
   if(actor===null||!e.surfaces.no_actor.endsWith(".")||
      e.surfaces.no_actor.startsWith(ACTOR_PREFIX[actor]))fail("UNLICENSED_ELLIPTIC_SURFACE");
  }
  if(e.surfaces.go){
   if(!e.surfaces.go.endsWith("고")||!["POS"].includes(polarity))fail("UNLICENSED_CONJUNCTIVE_SURFACE");
+  if(!e.event.conjunctive_witness||!e.surfaces.go.endsWith(e.event.conjunctive_witness))fail("CONJUNCTIVE_PREDICATE_WITNESS_MISMATCH");
   if(typeof e.surfaces.go_actor_realized!=="boolean")fail("UNDECLARED_GO_ACTOR_REALIZATION");
   const overt=e.surfaces.go.startsWith(ACTOR_PREFIX[actor]||"!NULL!");
   if(e.surfaces.go_actor_realized!==overt)fail("CONJUNCTIVE_ACTOR_MARKER_MISMATCH");
