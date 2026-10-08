@@ -27,7 +27,7 @@ test("no automatic claims or retries and experimental baseline competence gate",
  assert.equal(cfg.design.retries,0);
  assert.equal(cfg.design.n_outputs,6);
  assert.equal(cfg.reader_status,"OLD_V01_SURVEY_CANCELLED");
- assert.equal(cfg.gate.semantic.includes("CURRENTLY"),true);
+ assert.equal(cfg.gate.semantic.includes("human independent"),true);
 });
 test("a mocked six-output run does not invent human or semantic success",async()=>{
  let calls=0;
