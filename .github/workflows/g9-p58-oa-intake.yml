@@ -1,0 +1,42 @@
+name: P58 Open-Access Research PDFs — Intake Only, No Bot Commits
+on:
+  push:
+    paths:
+      - '.github/workflows/g9-p58-oa-intake.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verified-open-access-intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch only ACL Anthology CC BY 4.0 originals missing from Drive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p papers
+          cat > papers/SOURCE_MANIFEST.tsv <<'EOF'
+          File	Source_URL	ACL_Anthology_License
+          Cheng_Yu_Jurafsky_2025_HumT_DumT.pdf	https://aclanthology.org/2025.acl-long.1261.pdf	CC-BY-4.0
+          Briakou_et_al_2021_Review_of_Human_Evaluation_for_Style_Transfer.pdf	https://aclanthology.org/2021.gem-1.6.pdf	CC-BY-4.0
+          Mir_et_al_2019_Evaluating_Style_Transfer_for_Text.pdf	https://aclanthology.org/N19-1049.pdf	CC-BY-4.0
+          Mukherjee_et_al_2025_Evaluating_Text_Style_Transfer_Evaluation.pdf	https://aclanthology.org/2025.naacl-srw.41.pdf	CC-BY-4.0
+          Fellenz_et_al_2024_Text_Style_Transfer_Evaluation_Using_LLMs.pdf	https://aclanthology.org/2024.lrec-main.1373.pdf	CC-BY-4.0
+          EOF
+          tail -n +2 papers/SOURCE_MANIFEST.tsv | while IFS=$'\t' read -r file url license; do
+            curl --fail --location --retry 2 --connect-timeout 15 --max-time 120 \
+              --user-agent 'KSGT-literature-intake/1.0 scholarly lawful-open-access' \
+              --output "papers/$file" "$url"
+            test "$(head -c 5 "papers/$file")" = '%PDF-'
+            test "$(stat -c%s "papers/$file")" -gt 10000
+          done
+          (cd papers && sha256sum ./*.pdf > SHA256SUMS.txt)
+          test "$(find papers -type f -name '*.pdf' | wc -l)" -eq 5
+      - name: Package ACL original PDFs for authenticated private Drive intake
+        uses: actions/upload-artifact@v4
+        with:
+          name: KSGT-P58-ACL-OpenAccess-5-Papers
+          path: papers/
+          if-no-files-found: error
+          retention-days: 5
