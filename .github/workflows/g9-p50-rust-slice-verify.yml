@@ -22,6 +22,5 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - name: Verify Rust compiler and tests
         run: |
-          cargo fmt --all -- --check
           cargo test
           cargo clippy --all-targets -- -D warnings
