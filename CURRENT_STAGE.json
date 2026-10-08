@@ -4,17 +4,19 @@
   "generation": "IX",
   "current_stage": "G9-P57",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_G9_P57_NATIVE_GOLD_ADMISSIBILITY_AND_HUMAN_PROSE_LITERATURE",
+  "status": "CLOSED_G9_P57_BOUNDED_NATIVE_ADJACENT_GOLD_AUTHORITY_PASS_EXPLICIT_PARTITIVE_GOLD_HOLD",
   "canonical_notion_id": "3f3ef561-cf92-811a-a77c-c7f799f5301d",
   "parent_stage": "G9-P56",
-  "latest_closed_stage": "G9-P56",
+  "latest_closed_stage": "G9-P57",
   "latest_closed_artifact": {
-    "stage": "G9-P56",
-    "terminal_file": "artifacts/g9_p56_terminal_ruling.md",
-    "disposition": "CLOSED_BOUNDED_HISTORICAL_RECOVERY_AND_SET_PROVENANCE_PASS_GOLD_AND_CALIBRATION_HOLD",
-    "github_ci_run": 37803344020,
-    "remote_tests": "18_OF_18_PASS",
-    "archive_sources": 6
+    "stage": "G9-P57",
+    "terminal_file": "artifacts/g9_p57_terminal_ruling.md",
+    "disposition": "CLOSED_BOUNDED_EXISTING_SOURCE_AUDIT_PASS_TARGET_SPECIFIC_GOLD_AND_DISAGREEMENT_HOLD",
+    "ci_run": 37805524779,
+    "ci_tests": "19_OF_19",
+    "inspected_sources": 5,
+    "adjacent_native_human_gold": 2,
+    "explicit_partitive_gold": 0
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
   "current_artifact": "experiments/g9-p57/evidence_authority/data/source_registry.json",
@@ -76,12 +78,16 @@
     "p56_local_tests": "18_OF_18_PASS_REMOTE_PENDING",
     "p56_ci": "SUCCESS_37803344020_18_OF_18_SYNTHETIC",
     "p56_history": "EARLY_JULY_2026_SENSE_SET_AND_ARGUMENT_MEMORY_CONFIRMED_BY_DIRECT_DRIVE_CHAT_EXPORT",
-    "p57": "MATERIALIZED_KOREAN_CHARACTER_COREFERENCE_ADJACENT_GOLD_EXISTS_DIRECT_PARTITIVE_GOLD_NOT_VERIFIED",
+    "p57": "CLOSED_2_HUMAN_KOREAN_ADJACENT_COREFERENCE_SOURCE_CONTACTS_0_EXPLICIT_GEJUNG_GOLD_NO_TRAIN_NEGATIVE_CLAIM",
     "p57_source_contact": "KOCO_JSONL_10_ROWS_GOLEM_KO_DEV_TEST_ZERO_LITERAL_GEJUNG_GOLEM_TRAIN_NOT_INSPECTED",
     "p57_calibration": "NOT_ADMISSIBLE_WITHOUT_EXPLICIT_GROUP_GOLD_AND_SCORED_OUTCOMES",
     "p57_remote_ci": "REGRESSION_19_TESTS_PENDING",
     "p57_accuracy": "UNESTIMABLE_WITHOUT_FROZEN_SOURCE_DISJOINT_PREDICTION_GOLD_PAIRS_EVEN_WHEN_GOLD_EXISTS",
-    "p57_new_primary_syntax_sources": "SHIN_2017_PARTITIVE_DESCRIPTIONS_SONG_2021_IHRC_PARTITIVE_DIAGNOSTICS"
+    "p57_new_primary_syntax_sources": "SHIN_2017_PARTITIVE_DESCRIPTIONS_SONG_2021_IHRC_PARTITIVE_DIAGNOSTICS",
+    "p57_gold": "0_VERIFIED_DIRECT_EXPLICIT_PARTITIVE_GROUP_LABELS_IN_INSPECTED_SCOPE",
+    "p57_humanize": "LITERATURE_GROUNDED_NATURALNESS_AXES_NOT_HUMAN_PREFERENCE_OR_GENERATOR_IMPROVEMENT",
+    "p57_ci": "SUCCESS_37805524779_19_OF_19_AUTHORITY_TESTS",
+    "p57_paper_priority": "SHIN_2017_PARTITIVE_DESCRIPTIONS_SONG_2021_AMONG_DIAGNOSTICS"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -111,8 +117,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE",
-  "next_scientific_action": "Complete P57 source authority gate, remote test, report verified limits and adjacent gold contact, then close quickly. Later pursue genre-sensitive Korean referential economy with actual human writer actions only when legitimate.",
+  "next_human_action": "Optionally approve P58 formal name; no new human collection or friend-server operations required.",
+  "next_scientific_action": "P57 CLOSED. P58 only if accepted: literature-grounded true/pseudo partitive semantic typing and genre-conditioned referential economy; preserve P55 strict count as specialized valid domain, not universal grammar.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -132,7 +138,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "Direct native Korean coreference gold task-mismatch and source-rights court",
+  "current_substage": "TERMINAL_G9_P57_CLOSED_AUTHORITY_AND_HUMAN_PROSE_RESEARCH",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -334,10 +340,11 @@
     "ci": "PENDING"
   },
   "next_stage_proposal": {
-    "stage": "G9-P57",
-    "formal_name_proposed": "KSGT Generation IX G9-P57 — Existing-Source Antecedent Authority, Native Context Disagreement & Gold-Admissibility Boundaries",
-    "status": "OPEN",
-    "canonical_name_status": "CONFIRMED_BY_USER",
-    "one_question": "Existing lawful independent target labels and source-task mismatch, not more syntax surface regex."
+    "stage": "G9-P58",
+    "formal_name_proposed": "KSGT Generation IX G9-P58 — Partitive Semantic Typing, Discourse-Given Set Recovery & Genre-Conditioned Referential Economy",
+    "status": "NOT_YET_OPENED",
+    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
+    "one_question": "How does Korean partitive vs pseudo-partitive / kind-level semantics alter reference realization and naturalness constraints?",
+    "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   }
 }
