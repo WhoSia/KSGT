@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "P53_ORIGIN_RETURN_EARLY_SYNTAX_AND_HOLISTIC_WRITING_COMPARISON_PRESEALED",
+  "status": "P53_ORIGIN_RETURN_SIX_PASSAGE_BRIEFS_TWO_ILLUSTRATIONS_NO_HUMAN_BENCHMARK",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -108,5 +108,16 @@
     "initial_pilot": "2 genres x 3 prompts x 3 arms = 18 documents",
     "human_reader_data": "NOT_COLLECTED",
     "scientific_authority": "DESIGN_ONLY"
+  },
+  "natural_writing_pilot": {
+    "status": "SIX_FROZEN_BRIEFS_TWO_K_DEMONSTRATION_DRAFTS_NO_CONTROLLED_COMPARISON",
+    "briefs": "experiments/g9-p53/natural_writing_pilot_briefs.json",
+    "samples": "experiments/g9-p53/natural_writing_prototype_specimens.json",
+    "validator": "experiments/g9-p53/tests/natural_writing_pilot.test.cjs",
+    "test_status": "AUTHORED_NOT_EXECUTED",
+    "design": "2 genres x 3 briefs x 3 arms = planned 18 outputs",
+    "available": "6 briefs and 2 illustrative K manuscripts",
+    "missing": "B/A/K same frozen model generation, 16 additional arm outputs (two illustrative prototypes are not eligible as controlled K-arm results), blind reader judgments",
+    "authority": "NO_MODEL_COMPARISON_OR_NATURALNESS_ADVANTAGE_CLAIM"
   }
 }
