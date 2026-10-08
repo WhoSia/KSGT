@@ -1,0 +1,45 @@
+name: G9-P53 KRC v0.6 Cardinality and Conjunctive Korean Court
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v06/**"
+      - ".github/workflows/g9-p53-krc-v06-partitives.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  realize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run source-grounded Korean partitive and conjugation tests
+        run: node --test experiments/g9-p53/krc_v06/tests/*.test.cjs
+      - name: Construct four Korean source-traceable documents
+        run: |
+          mkdir -p results
+          node experiments/g9-p53/krc_v06/realizer.cjs results/krc_v06_four_passages.json
+          node - <<'JS'
+          const fs=require("node:fs"),x=JSON.parse(fs.readFileSync("results/krc_v06_four_passages.json"));
+          if(x.output_passages!==4||x.lexical_links!==2||x.partitive_tokens!==2||
+             x.human_scores!==0||x.model_calls!==0||
+             x.documents.some(d=>d.paragraphs!==2||d.source_event_count!==5))
+              throw Error("PROSPECTIVE_SOURCE_CUSTODY_FAILED");
+          console.log(JSON.stringify({documents:x.output_passages,partitives:x.partitive_tokens,joins:x.lexical_links,semantic:"CARDINALITY_ONLY"}));
+          for(const d of x.documents){
+            console.log("--- "+d.brief_id+" "+d.mode+" ---");
+            console.log(d.text);
+          }
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v06-four-korean-cardinality-passages
+          path: results/krc_v06_four_passages.json
+          retention-days: 30
+          if-no-files-found: error
