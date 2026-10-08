@@ -1,0 +1,230 @@
+{
+  "schema": "ksgt.g9.p53.krc.v05.source-frames.v1",
+  "status": "FROZEN_AUTHOR_ATTESTED_FINITE_KOREAN",
+  "source_rights": "New fictional Korean microgrammar sources; not personal or third-party writing.",
+  "briefs": [
+    {
+      "id": "EX13",
+      "genre": "science_explainer",
+      "reader": "고등학생",
+      "objective": "원인을 단정하지 않고 준비·절차·관찰·한계를 시간 순서대로 쓰기",
+      "events": [
+        {
+          "id": "F1",
+          "paragraph": 1,
+          "event": {
+            "actor": "MINJI",
+            "predicate": "PLACE",
+            "polarity": "POS",
+            "sequence": 1,
+            "theme": "투명한 컵 두 개",
+            "location": "실험대 위"
+          },
+          "surfaces": {
+            "full": "민지는 실험대 위에 투명한 컵 두 개를 놓았다.",
+            "go": "민지는 실험대 위에 투명한 컵 두 개를 놓고"
+          }
+        },
+        {
+          "id": "F2",
+          "paragraph": 1,
+          "event": {
+            "actor": "MINJI",
+            "predicate": "POUR",
+            "polarity": "POS",
+            "sequence": 2,
+            "theme": "같은 양의 물",
+            "destination": "두 컵"
+          },
+          "surfaces": {
+            "full": "민지는 두 컵에 같은 양의 물을 부었다.",
+            "no_actor": "두 컵에 같은 양의 물을 부었다."
+          }
+        },
+        {
+          "id": "F3",
+          "paragraph": 1,
+          "event": {
+            "actor": "MINJI",
+            "predicate": "MOVE",
+            "polarity": "POS",
+            "sequence": 3,
+            "theme": "컵 하나",
+            "destination": "창가"
+          },
+          "surfaces": {
+            "full": "민지는 그중 한 컵을 창가로 옮겼다.",
+            "no_actor": "그중 한 컵을 창가로 옮겼다."
+          }
+        },
+        {
+          "id": "F4",
+          "paragraph": 2,
+          "event": {
+            "actor": null,
+            "predicate": "HIGHER_THAN",
+            "polarity": "POS",
+            "sequence": 4,
+            "comparison": "HIGHER",
+            "theme": "창가 컵의 물 온도",
+            "comparator": "다른 컵",
+            "time": "20분 뒤"
+          },
+          "surfaces": {
+            "full": "20분 뒤 창가에 둔 컵의 물 온도가 다른 컵보다 높았다."
+          }
+        },
+        {
+          "id": "F5",
+          "paragraph": 2,
+          "event": {
+            "actor": "MINJI",
+            "predicate": "MEASURE_AIR",
+            "polarity": "NEG",
+            "epistemic": "NOT_MEASURED",
+            "sequence": 5,
+            "theme": "두 컵 주변의 공기 온도"
+          },
+          "surfaces": {
+            "full": "민지는 두 컵 주변의 공기 온도를 측정하지 않았다."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "F1",
+          "to": "F2",
+          "type": "SEQUENTIAL_AND",
+          "attested_event_order": true,
+          "actor_id": "MINJI"
+        },
+        {
+          "from": "F2",
+          "to": "F3",
+          "type": "ELLIPSIS_ALLOW",
+          "antecedents": [
+            "MINJI"
+          ],
+          "actor_id": "MINJI",
+          "discourse_anchor": "F2"
+        },
+        {
+          "from": "F4",
+          "to": "F5",
+          "type": "EPISTEMIC_LIMIT",
+          "connective": "다만",
+          "causal_warrant": false
+        }
+      ]
+    },
+    {
+      "id": "EX14",
+      "genre": "scene_essay",
+      "reader": "일반 독자",
+      "objective": "도서관 앞에서 안으로 이어지는 행동을 관찰 가능한 장면으로 쓰기",
+      "events": [
+        {
+          "id": "F1",
+          "paragraph": 1,
+          "event": {
+            "actor": "SEOYUN",
+            "predicate": "ARRIVE",
+            "polarity": "POS",
+            "sequence": 1,
+            "time": "늦은 오후",
+            "location": "도서관 앞"
+          },
+          "surfaces": {
+            "full": "서윤은 늦은 오후에 도서관 앞에 도착했다."
+          }
+        },
+        {
+          "id": "F2",
+          "paragraph": 1,
+          "event": {
+            "actor": "SEOYUN",
+            "predicate": "PUT_UMBRELLA",
+            "polarity": "POS",
+            "sequence": 2,
+            "theme": "우산",
+            "location": "입구 옆"
+          },
+          "surfaces": {
+            "full": "서윤은 입구 옆에 우산을 세워 두었다.",
+            "no_actor": "입구 옆에 우산을 세워 두었다.",
+            "go": "입구 옆에 우산을 세워 두고"
+          }
+        },
+        {
+          "id": "F3",
+          "paragraph": 1,
+          "event": {
+            "actor": "SEOYUN",
+            "predicate": "OPEN_DOOR",
+            "polarity": "POS",
+            "sequence": 3,
+            "theme": "유리문"
+          },
+          "surfaces": {
+            "full": "서윤은 유리문을 열었다.",
+            "no_actor": "유리문을 열었다."
+          }
+        },
+        {
+          "id": "F4",
+          "paragraph": 2,
+          "event": {
+            "actor": null,
+            "predicate": "HEAR_PAGE_SOUND",
+            "polarity": "POS",
+            "sequence": 4,
+            "location": "도서관 안쪽",
+            "theme": "책장 넘기는 소리"
+          },
+          "surfaces": {
+            "full": "안쪽에서 책장을 넘기는 소리가 들렸다."
+          }
+        },
+        {
+          "id": "F5",
+          "paragraph": 2,
+          "event": {
+            "actor": "SEOYUN",
+            "predicate": "READ_NOTICE",
+            "polarity": "POS",
+            "sequence": 5,
+            "theme": "안내판"
+          },
+          "surfaces": {
+            "full": "서윤은 안내판을 읽었다."
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "F1",
+          "to": "F2",
+          "type": "ELLIPSIS_ALLOW",
+          "antecedents": [
+            "SEOYUN"
+          ],
+          "actor_id": "SEOYUN",
+          "discourse_anchor": "F1"
+        },
+        {
+          "from": "F2",
+          "to": "F3",
+          "type": "SEQUENTIAL_AND",
+          "attested_event_order": true,
+          "actor_id": "SEOYUN"
+        }
+      ]
+    }
+  ],
+  "scope_notes": [
+    "The source events and full/no-actor/-고 realizations are human-authored construction attestations.",
+    "Asserting that certain objects were 'put' and 'then opened' is confined to declared source event order.",
+    "The lab temperature result is a comparison observation, not proof of a sunlight mechanism.",
+    "All surface variants are finite and require source-level trace; no arbitrary generalization to all Korean clauses."
+  ]
+}
