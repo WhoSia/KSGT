@@ -1,0 +1,111 @@
+{
+  "schema": "ksgt.g9.p53.krc.v06.data-acquisition-register.v1",
+  "status": "SOURCES_DISCOVERED_OR_EXISTING_NOT_ALL_IMPORTED",
+  "gate": "NO_SOURCE_RAW_TEXT_IN_PUBLIC_GITHUB; preserve license, corpus vintage, documents, and exact row/provenance identifiers. Previous G9-P36-R10 NIKL census is precedent, not a novel discovery.",
+  "sources": [
+    {
+      "id": "NIKL_ZA_2020_CSV",
+      "status": "EXISTS_IN_USER_DRIVE_AND_LOCAL_BYTES_REVERIFIED",
+      "source_type": "NIKL zero-anaphora restored subjects and objects",
+      "drive_id": "1uJfzGphk2JpT2lg7kuuyUY2HpZyFVTix",
+      "sha256": "c8179e1bce2eaed22ae6d7afdf764034aac1e2ccdffe54b7f261ede2ad717610",
+      "total_zip_bytes": 21866414,
+      "member_csvs": [
+        {
+          "filename": "NXZA2002003180.csv",
+          "rows": 320224,
+          "annotated_slots": 281797,
+          "subject": 241351,
+          "object": 40446
+        },
+        {
+          "filename": "SXZA2002003180.csv",
+          "rows": 313427,
+          "annotated_slots": 211536,
+          "subject": 168387,
+          "object": 43149
+        }
+      ],
+      "fit": "Direct omitted SUBJECT/OBJECT analysis; no explicit partitive group gold",
+      "reliability": "Rows and counts cross-verified on original bytes. NIKL redistribution rules need separate permission check."
+    },
+    {
+      "id": "NIKL_ZA_2025",
+      "status": "EXISTS_IN_USER_DRIVE_AND_BYTES_SHA_VERIFIED",
+      "source_type": "NIKL zero-anaphora subject/object/complement/adjunct and multi-span antecedent",
+      "drive_id": "1hnPT6CztaxtFukrM6uAMLHIFGgZmoDM2",
+      "sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+      "zip_bytes": 8749612,
+      "existing_G9_P36_R10_readoff": {
+        "documents": 1102,
+        "ellipsis_slots": 62831,
+        "antecedent_spans": 81840,
+        "multi_span_ellipsis": 11675,
+        "slot_labels": {
+          "subject": 43696,
+          "object": 7977,
+          "adjunct": 11105,
+          "complement": 50
+        }
+      },
+      "fit": "Best existing direct observed zero-argument corpus; multi-antecedent relations require explicit handling. Not annotated as numeral partitives.",
+      "restrictions": "Raw corpus remains in user Drive. Do not push to GitHub; audit prior NIKL data terms before redistribution."
+    },
+    {
+      "id": "KoCoNovel",
+      "status": "PUBLIC_REPO_IDENTIFIED_NOT_INGESTED",
+      "source_type": "Korean novel character coreference, source from Wikisource public-domain works",
+      "url": "https://github.com/storidient/KoCoNovel",
+      "license": "CC BY-SA 4.0 as dataset README, check individual works/attribution",
+      "fit": "Full-document entity and speaker reference; not numerically annotated partitives."
+    },
+    {
+      "id": "GOLEMcoref_Korean",
+      "status": "PUBLIC_REPO_IDENTIFIED_NOT_INGESTED",
+      "source_type": "Gold fiction coreference with zero anaphora in CoNLL/CorefUD",
+      "url": "https://github.com/GOLEM-lab/GOLEMcoref",
+      "license": "CC BY-NC 4.0 repository, original stories from contemporary fanfiction platforms: per-text rights care",
+      "fit": "Independent zero-anaphora and split-antecedent annotation; hold raw rehosting."
+    },
+    {
+      "id": "UD_Korean_KSL",
+      "status": "PUBLIC_REPO_IDENTIFIED_NOT_INGESTED",
+      "source_type": "Korean learner writing dependency treebank",
+      "url": "https://github.com/UniversalDependencies/UD_Korean-KSL",
+      "license": "CC BY-SA 4.0",
+      "fit": "Independent Korean clause structure/case analysis, but learner errors make it unsuitable as flawless native prose reference."
+    },
+    {
+      "id": "KLUE_DP",
+      "status": "PUBLIC_ACCESS_DATASET_NOT_INGESTED",
+      "source_type": "Korean dependency parsing",
+      "url": "https://github.com/KLUE-benchmark/KLUE",
+      "fit": "Dependency controls not true ellipsis/partitive gold"
+    },
+    {
+      "id": "KoSEnd",
+      "status": "REPO_IDENTIFIED_RIGHTS_NOT_VERIFIED",
+      "source_type": "Korean sentence endings with naturalness annotation",
+      "url": "https://github.com/seungukyu/KoSEnd",
+      "fit": "Ending/mood/register future operation, not current pronoun-partitive task",
+      "restrictions": "Confirm corpus license before copying"
+    },
+    {
+      "id": "StyleKQC",
+      "status": "ALREADY_IN_KSGT_PRIOR_SOURCES",
+      "source_type": "Korean directive paraphrases and formality",
+      "url": "https://github.com/cynthia/stylekqc",
+      "fit": "Natural Korean formality transfer, not direct narrative/partitive gold; historical source tests may overlap."
+    },
+    {
+      "id": "KoLLA_v2",
+      "status": "ALREADY_IN_KSGT_PRIOR_SOURCES",
+      "source_type": "Korean learner multi-reference correction",
+      "drive_folder": "https://drive.google.com/drive/folders/13Td60Gz3zVygXKZond5E8maRx5peThie",
+      "fit": "Human correction alternatives; not native narrative coreference gold."
+    }
+  ],
+  "next_data_action": "Extract a private, rights-checked bounded ZA 2025 sampled relational audit: object versus subject, intrasentential versus discourse antecedents, null/exophoric markers, compare with external GOLEM/KoCoNovel coref when acquired. Keep direct Korean writing quality evaluation separate.",
+  "negative_control": "The NIKL 2020 and 2025 annotation layouts and populations differ. Never interpret 493,333 vs 62,831 as decline in linguistic usage.",
+  "confidence": "INVENTORY_AND_ARCHIVE_REVERIFICATION_ONLY_NO_CORPUS_NATIVE_QUALITY_ESTIMATE"
+}
