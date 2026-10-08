@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P53",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_P53_KRC_V01_HUMAN_SURVEY_CANCELLED_V03_COMPETENCE_GATE_EXECUTING",
+  "status": "OPEN_P53_KRC_V03_STRONGER_DECODER_GATE_EXECUTED_FACTUAL_COMPETENCE_FAILURE",
   "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "parent_stage": "G9-P52",
   "latest_closed_stage": "G9-P52",
@@ -25,13 +25,14 @@
     "spontaneous_repair": "NONE",
     "injected_error_repair": "3_OF_3_MECHANICAL_ONLY",
     "korean_semantic_critic": "DISPROVEN_BY_THREE_ADVERSARIAL_CONTRADICTIONS",
-    "natural_korean_improvement": "NOT_IDENTIFIED",
-    "human_reader_naturalness": "ON_HOLD_NO_RATINGS",
+    "natural_korean_improvement": "NOT_ESTABLISHED",
+    "human_reader_naturalness": "CANCELLED_FOR_INVALID_COMPARATORS",
     "weight_updates": "NONE",
-    "v03": "AWAITING_PINNED_4B_GENERATION"
+    "v03": "SIX_REAL_4B_OUTPUTS_ALL_WITH_SOURCE_OR_DISCOURSE_CONCERNS"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
+    "artifacts/g9_p53_krc_v03_decoder_gate_verdict.json",
     "artifacts/g9_p53_krc_v02_terminal_verdict.json",
     "artifacts/g9_p53_krc_v01_terminal_readback.json",
     "artifacts/g9_p53_current_state.json",
@@ -54,8 +55,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE. Do not recruit readers for v0.1 comparison.",
-  "next_scientific_action": "First read frozen six 4B B/U/K outputs and independently classify paragraph form, grammar, source entailment and causal uncertainty. If baseline is incompetent, stop as instrument failure. Do not restart human survey.",
+  "next_human_action": "NONE. Historical KRC v0.1 reader survey is withdrawn as invalid.",
+  "next_scientific_action": "Do not treat 4B clean format as proof of correct Korean writing. Shift from prose posthoc screening to an explicit Korean meaning+construction representation that can license nonverbatim fluent transformations without new facts; test on new tasks against credible well-formed baseline.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -75,7 +76,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "KRC v0.2 mechanical game executed; source-copy equilibrium and semantic critic false negatives isolated",
+  "current_substage": "KRC v0.3 stronger-decoder generated six new Korean passages; semantic/idiomatic competence not established; old human survey retired",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -102,12 +103,16 @@
   "latest_invalidity_ruling": "artifacts/g9_p53_krc_v01_invalidity_ruling.json",
   "latest_decoder_gate": {
     "preseal": "experiments/g9-p53/krc_v03/constitution.json",
-    "generator": "experiments/g9-p53/krc_v03/generate.cjs",
+    "verdict": "artifacts/g9_p53_krc_v03_decoder_gate_verdict.json",
     "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
     "run_id": 37732682355,
-    "status": "IN_PROGRESS",
-    "reader": "CANCELLED",
-    "prompt_revision_after_results": "FORBIDDEN",
-    "semantic_quality": "UNKNOWN_PENDING_OUTPUT"
+    "readback_run_id": 37733414010,
+    "completed": 6,
+    "conditions": "B_CLEAN U_PLAIN_PLAN K_TYPED_PLAN x 2 new briefs",
+    "source_fidelity": "QUALITATIVE_FAILURES_IN_ALL_ARMS",
+    "clean_baseline": "FORMALLY_PROSE_BUT_FACTUAL_AND_GENRE_ERRORS",
+    "K_qualified": "NO_TYPED_PLAN_LEAKS_SOURCE_REFERENCE_LABELS",
+    "reader": "V01_CANCELED_V03_NOT_RECRUITED",
+    "drive": "https://drive.google.com/drive/folders/1oV9xfafzRmexTzAL1Px9pkIjE2HM_yxv"
   }
 }
