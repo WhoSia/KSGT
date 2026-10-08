@@ -1,0 +1,169 @@
+{
+  "schema": "ksgt.g9.p53.early-syntax-to-natural-writing-reentry.v1",
+  "status": "SOURCE_VERIFIED_RESEARCH_DESIGN_NO_EMPIRICAL_NATURALNESS_CLAIM",
+  "historical_source": {
+    "file": "KSGT 1.md",
+    "drive_id": "1H8V-JIYFOgRXJag9OjTBBxbXNNlUcrVy",
+    "origin": "2026-07-15",
+    "additional_notions": [
+      "KSGT — Origin & Drift Audit",
+      "KSGT — Recovered Theory Ancestors & Live Rival Ecology",
+      "G8-P3 Expressive-Style Objective Reconstitution"
+    ]
+  },
+  "goal": "Produce Korean writing that is more contextually natural, factually faithful, rhythmically appropriate and purpose-fitting than a preregistered general-purpose model baseline; not fool an AI detector or maximize scarcity of visible patterns.",
+  "historical_syntax_inventory": [
+    {
+      "id": "S01",
+      "name": "UNLICENSED_ANTITHESIS",
+      "surface": [
+        "A가 아니라 B다",
+        "단순히 A를 넘어 B다"
+      ],
+      "hypothesized_failure": "Introduce an unasserted strawman A or imply false exclusivity",
+      "legitimate_use": "Actual correction/reclassification/contrast evidenced by antecedent",
+      "measure": "discourse-supported relation and reader inference, not regex count"
+    },
+    {
+      "id": "S02",
+      "name": "TRANSLATIONESE_FUNCTIONAL_VERB",
+      "surface": [
+        "기능한다",
+        "역할을 수행한다",
+        "~로 작용한다"
+      ],
+      "hypothesized_failure": "Unmotivated calque/abstract predicate displaces concrete event descriptions",
+      "legitimate_use": "Technical writing where function/role is literal and appropriate",
+      "measure": "specificity, referential grounding, contextual idiomaticity"
+    },
+    {
+      "id": "S03",
+      "name": "EVALUATIVE_FLATTERY_AND_META",
+      "surface": [
+        "핵심을 찔렀다",
+        "정말 깊은 질문이다",
+        "좋은 지적이다"
+      ],
+      "hypothesized_failure": "Unsupported self/reader-directed evaluation replacing substance",
+      "legitimate_use": "Genuine interactional appraisal when warranted",
+      "measure": "unsupported evaluative utterance rates with pragmatic context"
+    },
+    {
+      "id": "S04",
+      "name": "THREE_PART_PARALLEL_TEMPLATE",
+      "surface": [
+        "A는 B를 보여준다. 또한 C는 D를 강화한다. 이러한 E는 F에 기여한다.",
+        "항목 세 가지의 반복 병렬"
+      ],
+      "hypothesized_failure": "Sentence skeleton recurrence unrelated to information hierarchy",
+      "legitimate_use": "Deliberate parallelism for argument contrast, emphasis, poetry",
+      "measure": "syntactic skeleton repetitions, information novelty and reader cadence"
+    },
+    {
+      "id": "S05",
+      "name": "SENTENCE_AND_PARAGRAPH_CADENCE",
+      "surface": [
+        "균일한 길이의 문단",
+        "비슷한 종결 구조 반복",
+        "습관적 결론 재포장"
+      ],
+      "hypothesized_failure": "One-size-fits-all rhythm independent of content",
+      "legitimate_use": "Genre-controlled formulaic forms",
+      "measure": "sentence span distribution, clause structure, ending alternation, information-flow arrangement"
+    },
+    {
+      "id": "S06",
+      "name": "UNJUSTIFIED_DISCOURSE_CONNECTIVES",
+      "surface": [
+        "따라서",
+        "특히",
+        "이러한",
+        "결국",
+        "그러나"
+      ],
+      "hypothesized_failure": "Connective licenses a causal/contrastive/inferential relation not actually present",
+      "legitimate_use": "Verified cause, elaboration, contrast, consequence",
+      "measure": "annotated discourse relation truth conditions and causal support"
+    },
+    {
+      "id": "S07",
+      "name": "NOMINALIZED_ABSTRACTION",
+      "surface": [
+        "~성/~화 명사",
+        "~에 대한 관점/측면",
+        "~라는 의미에서"
+      ],
+      "hypothesized_failure": "Excessive abstraction loses events, actors and evidence",
+      "legitimate_use": "Conceptual or technical arguments",
+      "measure": "proposition grounding and explicit event reference"
+    },
+    {
+      "id": "S08",
+      "name": "INFORMATION_STRUCTURE",
+      "surface": [
+        "은/는",
+        "이/가",
+        "주제 연속성과 초점 도입"
+      ],
+      "hypothesized_failure": "A single subject particle or clause order used without observed discourse state",
+      "legitimate_use": "Multiple licensed realizations under given preceding discourse",
+      "measure": "context-conditioned felicity, contrast inference and referent tracking"
+    },
+    {
+      "id": "S09",
+      "name": "VOICE_AND_RELATIONSHIP",
+      "surface": [
+        "-다/-요/-습니다",
+        "지시어·경어",
+        "화자 거리"
+      ],
+      "hypothesized_failure": "Register and stance drifting without audience/genre justification",
+      "legitimate_use": "Context-grounded social stance and narrative perspective",
+      "measure": "reader-perceived speaker relation and consistency"
+    },
+    {
+      "id": "S10",
+      "name": "ELLIPSIS_REPETITION_LEXICAL_TEXTURE",
+      "surface": [
+        "주어 생략과 재도입",
+        "고유어·한자어·기술어 배합",
+        "의도적 반복"
+      ],
+      "hypothesized_failure": "Overexplicitness or unnatural synonym substitution flattens Korean cohesive style",
+      "legitimate_use": "Referentially recoverable ellipsis, meaningful emphasis, genre-specific texture",
+      "measure": "referent recoverability and lexical/pragmatic coherence"
+    }
+  ],
+  "research_design": {
+    "primary_object": "A passage-level Korean writing decision, with documented intent, actual information, audience, genre and discourse state.",
+    "test_material": "Construct two task banks: authored short controlled linguistic contrasts, then licensed Korean factual/essay prompts with verifiable source packets. Human written reference or edits only under informed lawful collection.",
+    "arms": [
+      "B: frozen general-purpose AI baseline, no hidden quality feedback",
+      "K: KSGT-informed writer using context/meaning/discourse/rhythm variables, not simple lexical blacklist",
+      "A: targeted anti-template ablation only, to test whether surface bans explain perceived naturalness"
+    ],
+    "primary_comparison": "Blind randomized reader pairwise preference for idiomatic, purpose-fitting Korean with factual faithfulness checked separately. No model self-scoring as human gold.",
+    "outcomes": [
+      "naturalness contextual appropriateness",
+      "meaning/factual preservation",
+      "information ordering and discourse coherence",
+      "rhythm and intentional asymmetry",
+      "register and genre fit",
+      "unsupported relation/evaluation intrusions"
+    ],
+    "anti_shortcut": [
+      "Avoid teaching model to mimic typos, randomness or 'human' imperfection",
+      "Do not use AI detector evasion as quality metric",
+      "Do not penalize grammatical or rhetorical constructions solely because AI also uses them",
+      "Evaluate paragraph-level coherence, not only sentence-level edits",
+      "Do not optimize weights on the heldout reader panel"
+    ],
+    "control_plan": "Same prompt/source facts and token/length range; preregister baseline model version and decoding; isolate semantic changes from style changes; no prompt leakage between arms.",
+    "separation": "Historical P50 24 PIA corpus is reused diagnostic and cannot be called fresh; the writing study needs different newly authored or licensed essays with heldout subjects and prompts.",
+    "analysis": "Paired reader preference with uncertainty and task-level estimates; preserve ties and dissensus, no single scalar quality verdict. Check genre interactions and hard factual errors.",
+    "minimum_viable_pilot": "Two distinct genres × three documents × three arms = 18 drafts; blinded readers judge pairs, then new heldout bank for replication. This is a design target, not collected data.",
+    "stop_rule": "Every stage must contribute a concrete Korean realization contrast, a bounded written passage sample, or new reader observation; no more than one infrastructure-only stage without return to writing.",
+    "authority": "PREREGISTERED_HYPOTHESES_AND_COMPARATIVE_DESIGN_ONLY_NO_BENCHMARK_WIN_CLAIM"
+  },
+  "adjacent_existing_measurement": "6-context 12-trial topic/focus pilot remains one narrow part of the larger syntax ecology, not a surrogate for holistic natural writing."
+}
