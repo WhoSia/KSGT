@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "P53_INDEXED_REGRESSION_COMPLETE_KOREAN_WRITING_ORIGIN_RETURN",
+  "status": "P53_ORIGIN_RETURN_LINGUISTIC_CONTRAST_DRAFTED_EMPIRICAL_HOLD",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -81,5 +81,20 @@
     "fresh_pia": "NOT_AUTOMATIC_NEXT_OBJECTIVE",
     "next": "Define one controlled Korean linguistic contrast and explicitly state its semantic, pragmatic and discourse question before any new generator run.",
     "tooling_stop_rule": "No further >1 stage proposer/governance work without directly observed Korean form/context result"
+  },
+  "korean_linguistic_contrast": {
+    "status": "PROSPECTIVE_SIX_PAIRED_CONTEXTS_AUTHORED_UNTESTED",
+    "experiment": "experiments/g9-p53/information_structure_contrast_preseal.json",
+    "validation_code": "experiments/g9-p53/tests/information_structure_contrast.test.cjs",
+    "validation_status": "NOT_EXECUTED_WORKFLOW_CREATION_BLOCKED",
+    "design": "3 discourse settings × 2 final-segment subject stems × -(n)un versus -i/ka = 12 stimulus trials",
+    "hypotheses": [
+      "topic-focus conventional analysis",
+      "salience-based analysis",
+      "broader discourse-conditioned reference/focus account"
+    ],
+    "empirical_human_observations": 0,
+    "authority": "ILLUSTRATIVE_MATERIAL_ONLY",
+    "next": "Review stimulus confounds and run read-only synthetic validator; then pilot human contextual interpretations before any generalization."
   }
 }
