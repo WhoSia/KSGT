@@ -4,15 +4,15 @@
   "generation": "IX",
   "current_stage": "G9-P54",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_G9_P54_ONE_QUESTION_PRECEDING_GROUP_EVIDENCE_COURT",
+  "status": "CLOSED_G9_P54_BOUNDED_PRECEDING_EVIDENCE_PASS_SEMANTIC_GOLD_AND_WRITER_CHOICE_HOLD",
   "canonical_notion_id": "3f3ef561-cf92-81ff-bf94-d12bc8785520",
   "parent_stage": "G9-P53",
-  "latest_closed_stage": "G9-P53",
+  "latest_closed_stage": "G9-P54",
   "latest_closed_artifact": {
-    "stage": "G9-P53",
-    "terminal_file": "artifacts/g9_p53_terminal_ruling.md",
-    "disposition": "CLOSED_BOUNDED_PASS_HUMAN_WRITER_EVIDENCE_HOLD",
-    "source_main_head": "55a11b72209162ac9f1245cd6c4ebd079889d56f"
+    "stage": "G9-P54",
+    "terminal_file": "artifacts/g9_p54_terminal_ruling.md",
+    "disposition": "CLOSED_BOUNDED_PASS_WITH_GOLD_AND_HUMAN_CHOICE_HOLD",
+    "main_parent": "3a6c5a253c24ef8109daad503271f36a1e79f793"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
   "current_artifact": "artifacts/g9_p54_preceding_source_contact.json",
@@ -54,11 +54,12 @@
     "partitive_context_v02": "PINNED_NIKL_2025_25_REAL_CONTEXTS_5_SURFACE_FORMS_0_KRC_V07_EXACT_PATTERN_HITS_PRIVATE_PROVISIONAL_19_PLAUSIBLE_6_HOLD_NO_GOLD",
     "p53_terminal": "CLOSED_BOUNDED_PASS_WITH_HUMAN_WRITER_EDIT_GOLD_AND_NATURALNESS_HOLD",
     "p53_latest_context_ci": "UNCONFIRMED_NO_CHECK_RUN_OBSERVED_LOCAL_FIVE_SYNTHETIC_PASS",
-    "p54": "A1_SOURCE_CUE_AND_DECLARED_QUOTE_REVIEW_ONLY_NOT_AUTOMATED_REFERENCE_RESOLUTION",
+    "p54": "CLOSED_A1_PRECEDING_GROUP_CUE_WITNESS_CONSERVATIVE_ABSTENTION_ONLY",
     "p54_independent_antecedent_gold": "NOT_OBSERVED",
     "p54_direct_writer_edit_preference": "NOT_OBSERVED",
-    "p54_synthetic_controls": "12_REMOTE_TESTS_PENDING",
-    "p54_real_context_contact": "25_PRIVATE_CONTEXTS_NO_RAW_PUBLICATION"
+    "p54_synthetic_controls": "LOCAL_17_OF_17_PASS_PUBLIC_12_CI_NOT_OBSERVED",
+    "p54_real_context_contact": "25_PRIVATE_NIKL_DOCUMENT_CONTEXTS_17_OF_25_CUE_LAST2_21_OF_25_CUE_LAST5",
+    "p54_ci": "UNCONFIRMED_NO_RUN_OR_CHECK_VISIBLE"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -89,7 +90,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "NONE",
-  "next_scientific_action": "Complete CI for P54 source cue resolver, then close P54 as bounded pass with unresolved independent antecedent and writer-choice gold explicitly held. Avoid expanding P54 into a new model/corpus project.",
+  "next_scientific_action": "P54 CLOSED. Separately define a new bounded stage only for independent Korean contextual antecedent annotation or actual writer editing choices; no automated gold promotion from P54 cues.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -109,7 +110,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "P54 bounded candidate evidence and abstention court",
+  "current_substage": "TERMINAL_P54_CLOSED_SMALL_BOUNDED_COURT",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -314,8 +315,8 @@
   "next_stage_proposal": {
     "stage": "G9-P54",
     "formal_name_proposed": "KSGT Generation IX G9-P54 — Context-Grounded Reference Realization, Antecedent Evidence & Writer-Choice Boundaries",
-    "canonical_name_status": "CONFIRMED_BY_USER",
-    "status": "OPEN",
+    "canonical_name_status": "CONFIRMED_BY_USER_AND_EXECUTED",
+    "status": "CLOSED",
     "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   }
 }
