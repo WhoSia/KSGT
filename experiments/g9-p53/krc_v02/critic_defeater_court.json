@@ -1,0 +1,49 @@
+{
+  "schema": "ksgt.g9.p53.krc-v02.critic-negative-controls.v1",
+  "status": "PROSPECTIVE_SYNTHETIC_ADVERSARIAL_PROBES_NO_MODEL_OUTCOME_USED",
+  "principle": "The independent critic uses lexical anchors, data shapes and a small list of suspicious expressions. It is not an entailment or contradiction oracle.",
+  "probes": [
+    {
+      "id": "NEGATION_FLIP",
+      "brief": "EX07",
+      "fact_id": "F5",
+      "candidate": {
+        "fact_id": "F5",
+        "sentence": "실내 온도 변화를 기록했다."
+      },
+      "source": "관찰 중 실내 온도 변화는 기록하지 않았다.",
+      "semantic_ground_truth": "CONTRADICTION",
+      "expected_current_critic": "MECHANICALLY_ADMISSIBLE_SEMANTICS_UNKNOWN",
+      "counterexample": "Both frozen lexical anchors 실내 and 기록 are present even though negation flips."
+    },
+    {
+      "id": "DIRECTION_FLIP",
+      "brief": "EX07",
+      "fact_id": "F4",
+      "candidate": {
+        "fact_id": "F4",
+        "sentence": "20분 뒤 감싼 병의 물 온도가 더 높았다."
+      },
+      "source": "20분 뒤 천으로 감싼 병의 물 온도가 다른 병보다 낮았다.",
+      "semantic_ground_truth": "CONTRADICTION",
+      "expected_current_critic": "MECHANICALLY_ADMISSIBLE_SEMANTICS_UNKNOWN",
+      "counterexample": "20분 preserved while comparison polarity reversed."
+    },
+    {
+      "id": "ACTION_POLARITY_FLIP",
+      "brief": "EX08",
+      "fact_id": "F4",
+      "candidate": {
+        "fact_id": "F4",
+        "sentence": "점원이 카운터의 조명을 켰다."
+      },
+      "source": "점원이 카운터의 조명을 껐다.",
+      "semantic_ground_truth": "CONTRADICTION",
+      "expected_current_critic": "MECHANICALLY_ADMISSIBLE_SEMANTICS_UNKNOWN",
+      "counterexample": "Agent and object anchors still match when the action reverses."
+    }
+  ],
+  "implication": "Do not use KRC v0.2 V acceptance as semantic correctness evidence. A separate NLI-grade evidence court and human checks are necessary; do not optimize a model against blind human ratings or fix this retrospectively on the same generated texts.",
+  "next_prospective_design": "Introduce typed predicate polarity and argument entailment checks based on source proposition decomposition, with explicit UNKNOWN and adversarial controls, before claiming factual soundness.",
+  "scientific_authority": "CRITIC_DEFEAT_DEMONSTRATIONS_ONLY"
+}
