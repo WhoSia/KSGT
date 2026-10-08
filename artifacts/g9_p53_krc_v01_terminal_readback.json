@@ -1,0 +1,128 @@
+{
+  "schema": "ksgt.g9.p53.krc-v01.terminal-readback.v1",
+  "phase": "G9-P53",
+  "substage": "KRC-v0.1",
+  "verdict": "CONTROLLED_GENERATION_EXECUTED_STRUCTURAL_PLANNER_PASS_NEURAL_SURFACE_REALIZATION_UNRELIABLE_NO_NATURALNESS_VERDICT",
+  "experiment_constitution": "experiments/g9-p53/krc_v01/constitution.json",
+  "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
+  "runtime": {
+    "model": "Qwen/Qwen3-0.6B-GGUF",
+    "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "llama_cpp_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f",
+    "generation": {
+      "temperature": 0.65,
+      "top_p": 0.9,
+      "max_tokens": 640,
+      "seeds": "one seed per brief shared by B A K",
+      "regenerations": 0
+    }
+  },
+  "experiment_runs": {
+    "typed_planner": {
+      "id": 37724020307,
+      "conclusion": "SUCCESS"
+    },
+    "controlled_generation": {
+      "id": 37724158567,
+      "conclusion": "SUCCESS",
+      "artifact_id": 11526713998,
+      "artifact_zip_sha256": "66d7166bab7dd07dc221cd18929a5fa6bd28f8b3f1b02039c6d81d8c2e8dcc06"
+    },
+    "pure_symbolic": {
+      "id": 37724465879,
+      "conclusion": "SUCCESS",
+      "artifact_id": 11526802079
+    },
+    "blind_reader_tests": {
+      "id": 37724321921,
+      "conclusion": "SUCCESS"
+    },
+    "postrun_derived": {
+      "id": 37724757175,
+      "conclusion": "SUCCESS",
+      "blind_artifact_id": 11527516247,
+      "syntactic_and_key_artifact_id": 11527331682
+    }
+  },
+  "plan_outcomes": {
+    "briefs": 6,
+    "primary_source_atoms": 30,
+    "typed_plan_validations": "PASS",
+    "symbolic_nonneural_documents": 6,
+    "source_fact_strings_conserved": 30,
+    "source_atoms_count": 30,
+    "semantic_meaning_theorem": "NO_AUTOMATIC_GUARANTEE"
+  },
+  "model_outputs": {
+    "total": 18,
+    "complete": 18,
+    "condition_n": {
+      "B_GENERIC": 6,
+      "A_SURFACE_ABLATION": 6,
+      "K_TYPED_PLAN": 6
+    },
+    "two_paragraph_outputs": {
+      "B_GENERIC": 1,
+      "A_SURFACE_ABLATION": 1,
+      "K_TYPED_PLAN": 0
+    },
+    "target_240_400_chars": {
+      "B_GENERIC": 4,
+      "A_SURFACE_ABLATION": 4,
+      "K_TYPED_PLAN": 3
+    },
+    "example_failures": [
+      "Meta response: title, list or instructions rather than ordinary two-paragraph prose",
+      "Unlicensed causal-confidence escalation possible in science output",
+      "Referent selection and register unnaturalness in scene text"
+    ],
+    "semantic_error_judgments": "NOT_INDEPENDENTLY_ADJUDICATED",
+    "reader_naturalness": "NOT_OBSERVED",
+    "relative_quality_claim": "NO_KRC_SUPERIORITY_OR_INFERIORITY_OF_KOREAN_QUALITY_PROVEN",
+    "generalization": "NOT_FROM_SIX_AUTHOR_CREATED_SOURCE_BRIEFS"
+  },
+  "reader_court": {
+    "three_balanced_forms": 3,
+    "pairwise_trials": 18,
+    "trial_material_ready": 18,
+    "actual_reader_ratings": 0,
+    "syntax_observations": 18,
+    "allocation_key_separate": true
+  },
+  "drive": {
+    "folder": "https://drive.google.com/drive/folders/13f5tV1fzGWr1w8H-nlvbwSDAy2E5RJhm",
+    "full_artifact_id": "1XGVG9ZTuFEhAnS7Ml4uuswfeC_5wumka",
+    "full_artifact_url": "https://drive.google.com/file/d/1XGVG9ZTuFEhAnS7Ml4uuswfeC_5wumka/view",
+    "report_file_id": "1Z2eqxVvWxVBRZwmTXbejQaH2X3rHWwJI",
+    "report_sha256": "2e6e6251cafcfcd8e320c288f66ee87f8da62f6858cce393191d42bfe68f5c6a",
+    "symbolic_archive_id": "1oYah_CEo9UIKMdNiFBAaC4Sx4VH0DakQ",
+    "blinded_packet_id": "1kCEkIrcRiVTExOfwVUKNdDyO8E_9xafD",
+    "internal_reader_key_id": "1ETl4n8GJ1DRdsEeDK8ZUTgnLnwEtIaW4",
+    "drive_readback_exact_sha256_passed_for": [
+      "full_artifact",
+      "markdown_report",
+      "blinded_reader_forms"
+    ],
+    "raw_synthetic_text_only": true
+  },
+  "theory_court": {
+    "premise": "Typed planning controls what a document is intended to say, not what an underpowered decoder actually utters.",
+    "defeater": "Compiler WellTyped does not entail faithful or natural generated text. Prompting a small decoder with typed IR can produce meta narrative instead of prose.",
+    "alternative_explanations": [
+      "Underlying Qwen3 0.6B model insufficient at long-form Korean composition",
+      "KRC prompt longer and contains JSON/plan structure",
+      "Prompt structure/genre instruction is poorly understood by same model",
+      "Even B/A meta-output shows general two-paragraph compliance failure"
+    ],
+    "not_identified": [
+      "Intrinsic quality of KRC versus baseline",
+      "Pure effect of typed graph independent of prompt length",
+      "Human perceptions of Korean naturalness",
+      "True semantic faithfulness of model drafts"
+    ],
+    "next_mechanism": "KRC v0.2: atomic-slot-local Korean clause realization, deterministic paragraph assembly, trace and proof obligation ledger; preserve original failed 18 outputs as locked reference, require new source briefs and equal-length untyped plan control."
+  },
+  "scientific_authority": "ENGINEERING_AND_MECHANICAL_BEHAVIOR_ONLY_ZERO_HUMAN_EVALUATION_NO_GAN_TRAINING",
+  "bot_commits_allowed": false
+}
