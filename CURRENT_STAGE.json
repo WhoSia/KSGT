@@ -2,11 +2,11 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "G9-P57",
+  "current_stage": "G9-P58",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "CLOSED_G9_P57_BOUNDED_NATIVE_ADJACENT_GOLD_AUTHORITY_PASS_EXPLICIT_PARTITIVE_GOLD_HOLD",
-  "canonical_notion_id": "3f3ef561-cf92-811a-a77c-c7f799f5301d",
-  "parent_stage": "G9-P56",
+  "status": "OPEN_G9_P58_PARTITIVE_SEMANTIC_TYPING_AND_REFERENTIAL_ECONOMY",
+  "canonical_notion_id": "3f3ef561-cf92-81d9-8679-febbcf5ae3b3",
+  "parent_stage": "G9-P57",
   "latest_closed_stage": "G9-P57",
   "latest_closed_artifact": {
     "stage": "G9-P57",
@@ -19,9 +19,9 @@
     "explicit_partitive_gold": 0
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "experiments/g9-p57/evidence_authority/data/source_registry.json",
+  "current_artifact": "experiments/g9-p58/literature_audit/BIBLIOGRAPHY_CUSTODY.md",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Which existing human-annotated Korean corpora provide independent explicit 그중 group antecedent gold, and what adjacent evidence cannot cross that authority boundary?",
+  "current_question": "Can a bounded source-contract distinguish anchored discrete referential partitives from kind-denoting quantities, mass measures and event parts before proposing overt Korean group references?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
@@ -87,7 +87,12 @@
     "p57_gold": "0_VERIFIED_DIRECT_EXPLICIT_PARTITIVE_GROUP_LABELS_IN_INSPECTED_SCOPE",
     "p57_humanize": "LITERATURE_GROUNDED_NATURALNESS_AXES_NOT_HUMAN_PREFERENCE_OR_GENERATOR_IMPROVEMENT",
     "p57_ci": "SUCCESS_37805524779_19_OF_19_AUTHORITY_TESTS",
-    "p57_paper_priority": "SHIN_2017_PARTITIVE_DESCRIPTIONS_SONG_2021_AMONG_DIAGNOSTICS"
+    "p57_paper_priority": "SHIN_2017_PARTITIVE_DESCRIPTIONS_SONG_2021_AMONG_DIAGNOSTICS",
+    "p58_literature": "48_PAPER_RECORDS_25_ALREADY_OWNED_5_NEW_OA_INTAKE_18_NO_INDEPENDENT_DRIVE_FILE_FOUND",
+    "p58_five_oa_zip": "PRIVATE_DRIVE_00_INTAKE_ID_1DO69U-BAu5enDzp7uMv6U4a4s7clSwLs",
+    "p58_semantics": "DECLARED_TYPE_SOURCE_WITNESS_ONLY_NOT_NATURAL_KOREAN_SEMANTIC_GOLD",
+    "p58_human_preference": "NOT_OBSERVED",
+    "p58_remote_ci": "PENDING"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -117,8 +122,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "Optionally approve P58 formal name; no new human collection or friend-server operations required.",
-  "next_scientific_action": "P57 CLOSED. P58 only if accepted: literature-grounded true/pseudo partitive semantic typing and genre-conditioned referential economy; preserve P55 strict count as specialized valid domain, not universal grammar.",
+  "next_human_action": "NONE",
+  "next_scientific_action": "Run 16 typed contrast controls and preserve original discourse-given reference. Close P58 promptly with separate holds on semantic parser and independent human naturalness evidence.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -138,7 +143,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "TERMINAL_G9_P57_CLOSED_AUTHORITY_AND_HUMAN_PROSE_RESEARCH",
+  "current_substage": "Typed true/pseudo/kind/measure/event partitive court",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -197,9 +202,10 @@
     "human_reader_rating": "NOT_COLLECTED"
   },
   "current_prototype": {
-    "path": "experiments/g9-p57/evidence_authority/authority.cjs",
-    "tests": "experiments/g9-p57/evidence_authority/tests/authority.test.cjs",
-    "literature": "experiments/g9-p57/evidence_authority/HUMAN_PROSE_RESEARCH.md"
+    "path": "experiments/g9-p58/semantic_type_court/semantic_gate.cjs",
+    "tests": "experiments/g9-p58/semantic_type_court/tests/semantic_gate.test.cjs",
+    "research": "experiments/g9-p58/semantic_type_court/README.md",
+    "paper_registry": "artifacts/g9_p58_literature_custody_register.json"
   },
   "latest_p0_capacity_probe": {
     "source": "artifacts/g9_p53_p0_qwen14b_b_baseline_readback.json",
@@ -342,9 +348,8 @@
   "next_stage_proposal": {
     "stage": "G9-P58",
     "formal_name_proposed": "KSGT Generation IX G9-P58 — Partitive Semantic Typing, Discourse-Given Set Recovery & Genre-Conditioned Referential Economy",
-    "status": "NOT_YET_OPENED",
-    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
-    "one_question": "How does Korean partitive vs pseudo-partitive / kind-level semantics alter reference realization and naturalness constraints?",
+    "canonical_name_status": "USER_INSTRUCTED_TO_PROCEED",
+    "status": "OPEN",
     "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   }
 }

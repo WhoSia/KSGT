@@ -1,0 +1,23 @@
+name: G9-P58 Semantic Partitive Types and Referential Economy Court
+on:
+  push:
+    paths:
+      - 'experiments/g9-p58/semantic_type_court/**'
+      - '.github/workflows/g9-p58-semantic-type-court.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  partitive-type-and-no-auto-edit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: True vs pseudo vs measure partitive and information-state gates
+        run: node --test experiments/g9-p58/semantic_type_court/tests/*.test.cjs
+      - name: Guard source-only scope against empirical linguistic claims
+        run: |
+          test ! -e NIKL_ZA_2025_v1.0.zip
+          node -e "const x=require('./artifacts/g9_p58_literature_custody_register.json'); if(x.entries.length!==48||x.summary.CONFIRMED_EXISTING_DRIVE_PDF!==25||x.summary.NEWLY_ACQUIRED_OPEN_ACCESS_IN_ZIP_00_INTAKE!==5)process.exit(1)"
