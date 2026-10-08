@@ -1,0 +1,33 @@
+{
+  "schema": "ksgt.g9.p51.current-state.v1",
+  "stage": "G9-P51",
+  "status": "OPEN_P51_DIRECT_CANDIDATE_SUPPORT_AND_MATCHED_GOVERNOR_COURT",
+  "notion_id": "3f3ef561-cf92-811f-a1cf-f2704cf7ff3a",
+  "formal_title": "KSGT Generation IX G9-P51 — Source-Conditioned Candidate-Support Admission, Fixed-Reservoir Governor Contrast, Hard-Cargo Preservation, Abstention Discipline & the First Executable Korean Revision Decision",
+  "lineage": {
+    "parent": "G9-P50",
+    "parent_verdict": "CLOSED_ENABLING_INFRASTRUCTURE_ONLY_SCIENTIFIC_TARGET_UNRESOLVED",
+    "parent_receipt": "artifacts/g9_p50_terminal_closure.json",
+    "parent_cold_archive": "https://drive.google.com/file/d/1KQ_EyKz0om7ZLgOLKYIOZIXBNqm1MCHC/view?usp=drivesdk",
+    "archived_source_commit": "9dfff80c2781a3e0e265b03cb47663f3c9e64716"
+  },
+  "program": {
+    "priority": "DIRECT_GOVERNOR_CONTRAST_AFTER_PIA",
+    "first_proposer": "RIVAL_EDIT_BOUNDED_SOURCE_CONDITIONED",
+    "slm_pretraining": "NOT_REOPENED_BY_DEFAULT",
+    "protected_packet_n": 24,
+    "source_id_authority": "ARCHIVED_P50_SOURCE_ONLY_24_ITEM_PACKET",
+    "PIA": "NOT_EXECUTED",
+    "governance_UK": "NOT_EXECUTED",
+    "human_burden": "HOLD",
+    "cross_architecture_transport": "HOLD"
+  },
+  "first_actions": [
+    "Replay ancestor S5/S7 operator/compiler surfaces from archived prior Git provenance, not hidden PIA gold.",
+    "Predeclare complete non-AR candidate-generation recipe and train/PIA role partition before inspecting any candidate outcomes.",
+    "Run one bounded 24-item PIA on frozen source packet. Keep nonresponse and hard-preservation veto.",
+    "If PIA PASS, compare frozen candidate-set identical U/K; otherwise close the inadequate-proposer branch without KSGT theory verdict."
+  ],
+  "archival_policy": "Historical P50 code is in verified Drive ZIP and immutable Git history; do not repopulate active main.",
+  "authority": "OPEN_PRESEAL_NO_PROPOSER_OR_GOVERNOR_EVIDENCE"
+}

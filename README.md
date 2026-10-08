@@ -46,3 +46,9 @@ Audit this at every stage transition. Prefer a clean current-state repository ov
 Do not commit large corpora, PDFs, copyrighted source texts, private material, API keys, provider credentials, or redundant historical exports.
 
 Store only compact identifiers, hashes, selection manifests, derived small tables, replay instructions, and stage-local evidence needed to reconstruct the current result. References to Notion/Drive are preferred over copying archival material into GitHub.
+
+## Current active generation handoff
+
+G9-P50 closed as **enabling infrastructure only**, without a PIA, trained SLM, or governor-effect verdict. Its retired 43-file source tree has been verified and stored in Drive under KSGT / 01_ARCHIVE_LEGACY / G9-P50. Git history retains source commit `9dfff80c2781a3e0e265b03cb47663f3c9e64716`.
+
+**Current stage: G9-P51**, returning to a finite source-conditioned Korean revision candidate-set / matched U-vs-K governor experiment. Only stage-local executable files live in `experiments/g9-p51/`.

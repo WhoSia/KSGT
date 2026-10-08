@@ -626,3 +626,24 @@ current_g9_p48:
   first_generation_preseal_commit: edddc1b83340e5d30b15a75f0369ddf5111c9acc
   first_generation_run_id: 37417945500
   current_gate: KOLLA_HIDDEN_GOLD_GENERATION_PILOT_RUNNING
+current_g9_p50:
+  status: CLOSED_ENABLING_INFRASTRUCTURE_ONLY_SCIENTIFIC_TARGET_UNRESOLVED
+  terminal_receipt: artifacts/g9_p50_terminal_closure.json
+  notion_id: 3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb
+  retired_source_drive_id: 1KQ_EyKz0om7ZLgOLKYIOZIXBNqm1MCHC
+  retired_snapshot_commit: 9dfff80c2781a3e0e265b03cb47663f3c9e64716
+  source_file_count: 43
+  proposer_training: NOT_EXECUTED
+  pia: NOT_EXECUTED
+  governance_comparison: NOT_EXECUTED
+  scientific_authority: NONE_BEYOND_ENABLING_CUSTODY
+
+current_g9_p51:
+  status: OPEN_DIRECT_CANDIDATE_SUPPORT_AND_MATCHED_GOVERNOR_COURT
+  constitution: experiments/g9-p51/constitution.json
+  current_state: artifacts/g9_p51_current_state.json
+  notion_id: 3f3ef561-cf92-811f-a1cf-f2704cf7ff3a
+  primary_proposer: RIVAL_EDIT_SOURCE_CONDITIONED_BOUNDED
+  slm_training_required: false
+  first_gate: PROSPECTIVE_CANDIDATE_RECIPE_AND_24_ITEM_PIA
+  governance_court_requires: PIA_PASS_PLUS_IDENTICAL_FROZEN_CANDIDATE_RESERVOIR
