@@ -1,0 +1,116 @@
+{
+  "schema": "ksgt.g9.p53.krc-v03.critical-readback.v1",
+  "date": "2026-10-08",
+  "state": "CLOSED_STRONGER_4B_DECODER_TRANSPORT_PASS_BASIC_KOREAN_SEMANTIC_FIDELITY_GATE_NOT_PASSED",
+  "runs": {
+    "generation": 37732682355,
+    "readback": 37733414010,
+    "initial_static_test_failed": 37732654190,
+    "static_test_fix_run": 37732682355
+  },
+  "checkpoint": {
+    "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+    "revision": "18727206c51467496bfba014368bd0a30e97f411",
+    "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+    "sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+    "weights_trained": false
+  },
+  "experiment": {
+    "new_source_briefs": [
+      "EX09 science",
+      "EX10 scene"
+    ],
+    "arms": [
+      "B_CLEAN",
+      "U_PLAIN_PLAN",
+      "K_TYPED_PLAN"
+    ],
+    "outputs": 6,
+    "completed": 6,
+    "model_inference_runs": 6,
+    "zero_posthoc_regeneration": true,
+    "source": "experiments/g9-p53/krc_v03/new_briefs.json"
+  },
+  "quality_observations": [
+    {
+      "brief": "EX09",
+      "arm": "B_CLEAN",
+      "failure": [
+        "WATER_EQUALITY_UNCERTAINTY_CONTRADICTS_SOURCE",
+        "INCOMPLETE_FINAL_SENTENCE"
+      ],
+      "witness": "Source says same water quantity; generated prose says whether water amounts were the same was not verified, and ends mid-sentence.",
+      "category": "FACT_INTEGRITY_AND_TRUNCATION"
+    },
+    {
+      "brief": "EX09",
+      "arm": "U_PLAIN_PLAN",
+      "failure": [
+        "UNLICENSED_SAME_CONDITIONS_GENERALIZATION",
+        "UNVERIFIED_RECORDING_STATUS"
+      ],
+      "witness": "Same water volume across boxes became same general growth conditions; actual germination counts were said to be unrecorded although source only lacks those data.",
+      "category": "EPISTEMIC_OVERREACH"
+    },
+    {
+      "brief": "EX09",
+      "arm": "K_TYPED_PLAN",
+      "failure": [
+        "PLAN_CITATION_LEAK",
+        "UNLICENSED_INITIAL_CONDITIONS_EQUIVALENCE"
+      ],
+      "witness": "자료 1에 따르면 / 자료 3에 따르면 appears inside intended science exposition; common seed type and water were taken to imply equivalent initial conditions.",
+      "category": "IR_LEAK_AND_UNGROUNDED_INFERENCE"
+    },
+    {
+      "brief": "EX10",
+      "arm": "B_CLEAN",
+      "failure": [
+        "INVENTED_CHARACTER_GESTURE",
+        "INVENTED_NARRATOR_INTERIORITY",
+        "INVENTED_ENVIRONMENT"
+      ],
+      "witness": "Source does not license trembling hands, blurred handwriting, wind, student's emotional state or narrator's figurative response.",
+      "category": "UNLICENSED_SCENE_CREATION"
+    },
+    {
+      "brief": "EX10",
+      "arm": "U_PLAIN_PLAN",
+      "failure": [
+        "INVENTED_OPENING_HOURS",
+        "INVENTED_UMBRELLA_REOPENING",
+        "INVENTED_SOUND_AND_MEMORY"
+      ],
+      "witness": "Wrote an opening-hours sign displaying 오후 4시까지 even though exact hours were unknown and unrelated to supplied facts; added several invented acts.",
+      "category": "HARD_UNGROUNDED_SCENE_FACT"
+    },
+    {
+      "brief": "EX10",
+      "arm": "K_TYPED_PLAN",
+      "failure": [
+        "INVENTED_NARRATOR_STOP",
+        "UNLICENSED_METAPHORICAL_MENTAL_STATE",
+        "UNWARRANTED_SIMULTANEITY"
+      ],
+      "witness": "Adds that narrator stopped and felt time stand still; observes contemporaneity of umbrella folding and bell not established by facts.",
+      "category": "DISCOURSE_AND_AFFECT_LICENSE"
+    }
+  ],
+  "automatic_screen": {
+    "run": 37733414010,
+    "baseline_mechanical_gate": "PRELIMINARY_FORMAT_PASS",
+    "limit": "A two-paragraph/no-headings regex passes B but does not detect event or causality errors. An unsourced digit warning on K EX09 is mostly 자료 1, not a genuinely invented measurement.",
+    "source_readback_authority": "Six unedited model raw passages in Action logs; separate human reader observations absent."
+  },
+  "scientific_conclusions": {
+    "transport": "4B model, exact file integrity, unchanged inference runner and six-output archive succeeded.",
+    "improvement_limited": "Visible Korean sentences are more fluent than some prior 0.6B failures, but different sources, prompts and decoding prohibit an isolated model-size causal estimate.",
+    "failure": "The competence floor is not met: source propositions and Korean discourse faithfulness are violated in multiple arms, and K explicitly leaks typed plan names.",
+    "mechanism": "Instruction cleanup can remove '제목/인사말' contamination, but stronger 4B plus simpler prompting does not enforce predicate–argument preservation or exclude invented scene facts.",
+    "qualifier": "This is an assistant source-grounded qualitative audit with explicit textual witnesses, not blinded independent human evaluation or a population-level metric.",
+    "verdict": "NO_KRC_BETTER_THAN_GENERAL_LLM_CLAIM; CANCEL_THE_OLD_HUMAN_SURVEY."
+  },
+  "next_action": "Return to Korean realization proper: formulate a typed predicate/argument and epistemic/contrast/scope calculus; construct nontrivial meaning-preserving operations with source-level proof obligations before requesting longer text. Compare against a genuinely competent general model only after a clean factual and prose gate.",
+  "user_action": "NONE_NO_HUMAN_RECRUITMENT",
+  "no_bot_commits": true
+}
