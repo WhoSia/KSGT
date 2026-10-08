@@ -1,0 +1,108 @@
+name: G9-P52 Grounded Contextual Edit-Span Court
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p52/contextual_span_preseal.json"
+      - "experiments/g9-p52/contextual_span.cjs"
+      - "experiments/g9-p52/tests/contextual_span.test.cjs"
+      - ".github/workflows/g9-p52-contextual-span.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  proposer-diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run span invariants without any heldout sources
+        run: node --test experiments/g9-p52/tests/contextual_span.test.cjs
+      - name: Build pinned C++ model runner
+        run: |
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Retrieve pinned Apache-2.0 model and hash exact weights
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          from huggingface_hub import HfApi,hf_hub_download
+          from hashlib import sha256
+          from pathlib import Path
+          import json
+          repo="Qwen/Qwen3-0.6B-GGUF"
+          sha=HfApi().model_info(repo,revision="23749fe").sha
+          assert sha.startswith("23749fe"),sha
+          path=hf_hub_download(repo_id=repo,filename="Qwen3-0.6B-Q8_0.gguf",revision=sha,local_dir="frozen-model")
+          h=sha256()
+          with open(path,"rb") as f:
+            for part in iter(lambda:f.read(4*1024*1024),b""): h.update(part)
+          data={"schema":"ksgt.g9.p52.model-integrity.v1","repo":repo,"revision":sha,
+           "file":"Qwen3-0.6B-Q8_0.gguf","file_bytes":Path(path).stat().st_size,"sha256":h.hexdigest(),
+           "llama_cpp_commit":"9c2e0e491a822adae1f0b1c831adb4160057d24f",
+           "train_PIA_overlap":"UNKNOWN"}
+          Path("model_integrity.json").write_text(json.dumps(data,indent=2)+"\n")
+          print(json.dumps(data))
+          PY
+      - name: Start local model and complete synthetic-only transport smoke
+        run: |
+          vendor-llama/build/bin/llama-server \
+            --model frozen-model/Qwen3-0.6B-Q8_0.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 \
+            --ctx-size 2048 --threads 4 --parallel 1 > /tmp/p52_server.log 2>&1 &
+          echo $! > /tmp/p52_pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8912/health > /dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/p52_pid)" 2>/dev/null; then echo "MODEL_SERVER_EXIT"; exit 1; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health > /dev/null
+          node experiments/g9-p52/contextual_span.cjs smoke
+      - name: Fetch original source-only heldout packet after engineering smoke
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p ephemeral-pia
+          gh run download 37576195589 \
+            --repo "${{ github.repository }}" \
+            --name g9-p50-pia-source-packet \
+            --dir ephemeral-pia
+          test -f ephemeral-pia/p50_pia_source_packet.jsonl
+      - name: Run one 24 by 4 contextual source-span diagnostic
+        run: |
+          mkdir -p results
+          node experiments/g9-p52/contextual_span.cjs pia \
+            ephemeral-pia/p50_pia_source_packet.jsonl \
+            results/p52_contextual_span_diagnostic_receipt.json
+      - name: Verify role and raw-text custody before uploading
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs'),c=JSON.parse(fs.readFileSync('results/p52_contextual_span_diagnostic_receipt.json'));
+          if(c.items!==24||c.attempts!==96||c.human_PIA!=='NOT_PERFORMED'||c.governor_UK!=='BLOCKED')throw Error('BAD_COURT_RECEIPT');
+          if(c.per_item.length!==24||c.per_item.some(r=>r.attempts.length!==4||'source' in r||'candidate' in r))throw Error('RAW_SOURCE_LEAK');
+          for(const i of c.per_item)for(const a of i.attempts){if('text' in a||'raw' in a)throw Error('RAW_CANDIDATE_LEAK');}
+          if(c.corpus_disjointness!=='UNKNOWN_PRETRAINING_MEMBERSHIP')throw Error('AUTHORITY_ESCALATION');
+          console.log(JSON.stringify({n:c.items,primary_changed:c.primary_changed,
+            by_family:c.families,status:c.status,semantic_PIA:c.human_PIA}));
+          JS
+          rm -rf ephemeral-pia frozen-model
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p52-contextual-span-diagnostic-receipts
+          path: |
+            results/p52_contextual_span_diagnostic_receipt.json
+            model_integrity.json
+          if-no-files-found: error
+          retention-days: 15
