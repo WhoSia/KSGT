@@ -1,0 +1,183 @@
+{
+  "schema": "ksgt.g9.p51.rival-edit-attempt-preseal.v1",
+  "status": "FROZEN_BEFORE_P51_PIA_SOURCE_CONTENT_REVEAL_OR_CANDIDATE_OUTCOME",
+  "phase": "G9-P51",
+  "instrument": "RIVAL_EDIT_V0_DETERMINISTIC_SOURCE_CONDITIONED_LEXICAL_ORTHOGRAPHIC_EDITOR",
+  "provenance": {
+    "s5": "G8-P1.3-R2bd-S5 State-Licensed Candidate-Set Compiler",
+    "s5_use": "GOVERNANCE_LATER; NOT_THE_GENERATOR",
+    "s7": "G8-P1.3-R2bd-S7 Human-Rewrite Operator Induction",
+    "s7_use": "NONEXHAUSTIVE_OPERATOR_INSPIRATION_NO_TRAINED_TRANSFER",
+    "train_corpus": "NONE",
+    "learned_parameters": 0,
+    "hidden_references_used": false
+  },
+  "fixed_packet": {
+    "source_artifact_id": 11463265816,
+    "run_id": 37576195589,
+    "packet_file": "p50_pia_source_packet.jsonl",
+    "exact_sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+    "composition": {
+      "KOLLA_K1_HARD_CARGO": 8,
+      "KOLLA_K2_GENERIC": 8,
+      "STYLEKQC_GENERIC": 8
+    },
+    "source_membership": "24 immutable item_id/source_sha256 pairs from historical preseal; no reference files loaded"
+  },
+  "candidate_budget": {
+    "attempts": 4,
+    "primary_candidate_index": 0,
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      5101,
+      5102,
+      5103,
+      5104
+    ],
+    "stochasticity": "NONE",
+    "source_set_order": "item_id lexicographic",
+    "duplicates": "KEEP_ALL_ATTEMPTS_WITH_INDEX; exact duplicate no replacement",
+    "empty_or_identity": "TYPED_NONRESPONSE_IN_DENOMINATOR"
+  },
+  "task_routing": {
+    "KOLLA_K1_HARD_CARGO": "minimal Korean correction",
+    "KOLLA_K2_GENERIC": "minimal Korean correction",
+    "STYLEKQC_GENERIC": "meaning-preserving Korean paraphrase"
+  },
+  "candidate_lanes": [
+    {
+      "i": 0,
+      "correction": "C0_ORTHOGRAPHY_ONLY",
+      "paraphrase": "P0_HIGH_CONFIDENCE_CONNECTIVE_SUBSTITUTION",
+      "primary": true
+    },
+    {
+      "i": 1,
+      "correction": "C1_ORTHOGRAPHY_PLUS_WHITESPACE",
+      "paraphrase": "P1_CONNECTIVE_PLUS_DEGREE_LEXICAL",
+      "primary": false
+    },
+    {
+      "i": 2,
+      "correction": "C2_ORTHOGRAPHY_PLUS_TERMINAL_PUNCTUATION",
+      "paraphrase": "P2_DISC_OR_ADVERB_SUBSTITUTION",
+      "primary": false
+    },
+    {
+      "i": 3,
+      "correction": "C3_ORTHOGRAPHY_PLUS_WHITESPACE_PLUS_PUNCTUATION",
+      "paraphrase": "P3_COMBINED_ALLOWED_SUBSTITUTIONS",
+      "primary": false
+    }
+  ],
+  "frozen_transform_map": {
+    "orthography": [
+      [
+        "됬",
+        "됐"
+      ],
+      [
+        "되요",
+        "돼요"
+      ],
+      [
+        "할께",
+        "할게"
+      ],
+      [
+        "몇일",
+        "며칠"
+      ],
+      [
+        "금새",
+        "금세"
+      ],
+      [
+        "않되",
+        "안 되"
+      ]
+    ],
+    "spacing": [
+      [
+        "할수",
+        "할 수"
+      ],
+      [
+        "갈수",
+        "갈 수"
+      ],
+      [
+        "될수",
+        "될 수"
+      ],
+      [
+        "할것",
+        "할 것"
+      ]
+    ],
+    "connective": [
+      [
+        "그러나",
+        "하지만"
+      ],
+      [
+        "하지만",
+        "그러나"
+      ],
+      [
+        "또한",
+        "아울러"
+      ]
+    ],
+    "degree": [
+      [
+        "매우",
+        "무척"
+      ],
+      [
+        "무척",
+        "매우"
+      ]
+    ],
+    "adverb": [
+      [
+        "정말",
+        "참"
+      ],
+      [
+        "지금",
+        "현재"
+      ]
+    ]
+  },
+  "precedence": "Scan entire original source once for each family in listed order, longest match first, no reapplication of replacement output, no backtracking and no test-outcome tuning.",
+  "protected_cargo": "If any packet protected URL/EMAIL/NUMBER/ASCII_TOKEN spelling and multiplicity is lost, preserve the raw proposal in the attempt record but mark CARGO_LEXICAL_LOSS and do not allow a protected preservation PASS. Automatic matching is one-sided only.",
+  "no_state_invention": "No overt pronoun/NP/honorific/directed-register edits without observed sufficient discourse or social state; S5 forbids hard blocking from incomplete state.",
+  "candidate_role": "Raw proposals and hashes only; lexical edits are not independently meaning-certified.",
+  "instrument_admission": {
+    "thresholds_inherit": "P50_FIXED_18_OF_24_WITH_MAX_4_GROSS_AND_NO_FAMILY_GROSS_MAJORITY_HARD_CARGO_VETO",
+    "before_human_adjudication": "Mechanically report candidate0 identity/nonresponse; if fewer than 18 candidate0 nonidentity proposals, the maximum possible task-responsive support is <18 so PIA cannot PASS under the declared task-response rule. Otherwise require blind human classification.",
+    "family_constraint": "Report original three families, no dropping any of 24 items.",
+    "no_rescue": "Secondary candidates 1..3 may measure coverage, cannot substitute for failed primary candidate0.",
+    "no_sequential_tuning": "This is one bounded attempt, not an open-ended rule search."
+  },
+  "governance_gate": "U/K has zero authority until PIA_PASS with independently reviewed meaning/preservation and identical hash-sealed candidate reservoir.",
+  "output_custody": {
+    "github_repo": "NO_RAW_PIA_SOURCES_OR_GENERATED_CANDIDATES",
+    "action_logs": "SUMMARY_COUNTS_AND_SHA_ONLY",
+    "artifact": "MANIFEST_AND_SUMMARY_ONLY_NO_SOURCE_TEXT",
+    "remote_source_packet": "USE_ARTIFACT_DOWNLOAD; IGNORE_HIDDEN_REFS_FILE",
+    "raw_text_publication": false
+  },
+  "terminal_options": [
+    "PIA_PASS_PROCEED_MATCHED_UK",
+    "PIA_INSTRUMENT_INADEQUATE_NO_GOVERNOR_VERDICT",
+    "PIA_INDETERMINATE_REQUIRES_HUMAN_ADJUDICATION"
+  ],
+  "authority": "PROSPECTIVE_INSTRUMENT_ONLY"
+}
