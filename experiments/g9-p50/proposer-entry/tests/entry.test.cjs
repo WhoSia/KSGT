@@ -2,7 +2,8 @@ const assert = require("node:assert/strict");
 const test = require("node:test");
 const {createHash} = require("node:crypto");
 const sha = (x) => createHash("sha256").update(x,"utf8").digest("hex");
-const contract = require("../../source_conditioned_entry_court.json");
+const canonicalContract = require("../../source_conditioned_entry_court.json");
+const contract = structuredClone(canonicalContract);
 const {prepareSourceEntry,sealCandidatePool,assertFrozenPairedArms} = require("../dist/entry.js");
 
 const source = {
@@ -14,6 +15,9 @@ const source = {
   permitsNoOp: false
 };
 const tokens = (s) => Array.from(s).length;
+// A synthetic unit fixture must never be accepted by the canonical 24-item registry.
+contract.serialized_primary_route.frozen_source_admission.source_sha256_by_id["P50-KOLLA_K1_HARD_CARGO-01"] = source.frozenSourceSha256;
+contract.serialized_primary_route.frozen_source_admission.source_sha256_by_id["P50-STYLEKQC_GENERIC-01"] = source.frozenSourceSha256;
 
 test("frozen prompt is exactly assembled and candidate policy is fixed", () => {
   const entry = prepareSourceEntry(contract,source,tokens,sha);
@@ -86,4 +90,10 @@ test("packet identity, lane and source integrity are enforced",()=>{
   assert.equal(prepareSourceEntry(contract,{...source,text:"바뀐 원문"},tokens,sha).reason,"SOURCE_CONTENT_HASH_MISMATCH");
   assert.equal(prepareSourceEntry(contract,{...source,permitsNoOp:true},tokens,sha).reason,"NOOP_PERMISSION_CONFLICT");
   assert.equal(prepareSourceEntry(contract,{...source,frozenTaskInstruction:"meaning-preserving Korean paraphrase"},tokens,sha).reason,"TASK_LANE_MISMATCH");
+});
+
+test("canonical registry rejects synthetic item text even with valid-looking ID", () => {
+  const r=prepareSourceEntry(canonicalContract,source,tokens,sha);
+  assert.equal(r.kind,"HOLD");
+  assert.equal(r.reason,"SOURCE_ID_HASH_BINDING_MISMATCH");
 });
