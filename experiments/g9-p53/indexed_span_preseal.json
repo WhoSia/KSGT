@@ -1,0 +1,92 @@
+{
+  "schema": "ksgt.g9.p53.indexed-span-protocol.v1",
+  "phase": "G9-P53",
+  "status": "PRECOMMITTED_BEFORE_ANY_P53_MODEL_OUTCOME",
+  "comparison": "P52 frozen free-form before-string anchor vs P53 externally indexed source segments; same Qwen3 weights, llama.cpp runtime, P52 historical 24 only as exploratory paired regression",
+  "model": {
+    "repo": "Qwen/Qwen3-0.6B-GGUF",
+    "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "file": "Qwen3-0.6B-Q8_0.gguf",
+    "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "runner": "ggml-org/llama.cpp",
+    "runner_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f",
+    "temperature_seed_same_as_P52": true
+  },
+  "segmentation": {
+    "algorithm": "Node.js 22 deterministic Unicode property regex /[\\p{L}\\p{M}\\p{N}]+|[^\\p{L}\\p{M}\\p{N}\\s]+|\\s+/gu; nonwhitespace tokens receive 1-based consecutive ids; whitespace preserved unnumbered",
+    "offset_unit": "UTF16 indices in untouched source; never normalize Unicode or replace whitespace",
+    "max_source_utf16_length": 1800,
+    "max_addressable_segments": 160,
+    "token_kinds": [
+      "ALPHANUMERIC_OR_HANGUL",
+      "PUNCTUATION"
+    ],
+    "segment_addresses": "1..N; exact source token text and offsets are immutable"
+  },
+  "generation": {
+    "candidate_budget": 4,
+    "primary_index": 0,
+    "seeds": [
+      5201,
+      5202,
+      5203,
+      5204
+    ],
+    "temperatures": [
+      0.15,
+      0.35,
+      0.55,
+      0.75
+    ],
+    "top_p": 0.9,
+    "max_output_tokens": 160,
+    "max_edit_operations": 3,
+    "retries_on_invalid": 0
+  },
+  "response": {
+    "json_format": "{\"edits\":[{\"id\":positive_integer,\"replacement\":\"nonempty unicode string\"}]}",
+    "invalid_codes": [
+      "BAD_JSON",
+      "BAD_SCHEMA",
+      "INDEX_OUT_OF_RANGE",
+      "DUPLICATE_INDEX",
+      "EMPTY_REPLACEMENT",
+      "IDENTITY",
+      "WHOLE_SOURCE_REPLACEMENT",
+      "MODEL_ERROR",
+      "CARGO_LEXICAL_LOSS"
+    ],
+    "max_replacement_utf16_length": 120,
+    "max_fraction_nonwhitespace_replaced": 0.85,
+    "strict_no_extraneous_properties": true,
+    "disjointness": "Distinct token indices, nonoverlap guaranteed by segmenter, applied from right to left",
+    "protection": "No insertion of new sensitive numerical, URL, email commitments; lexical protected-token recall is one-sided diagnostic not semantic certificate"
+  },
+  "role_firewall": {
+    "regression_packet": "Frozen P50 24 source-only rows artifact g9-p50-pia-source-packet run 37576195589, sha256 a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+    "regression_authority": "HISTORICAL_REUSED_DIAGNOSTIC_NOT_FRESH_PIA",
+    "fresh_PIA": "NEW_OUTCOME_UNSEEN_AND_RIGHTS_REVIEWED_PACKET_REQUIRED_FOR_CONFIRMATORY_CLAIMS",
+    "pretraining_overlap": "UNKNOWN",
+    "hidden_refs": "NO_LOADING_OR_USE"
+  },
+  "stop": {
+    "one_24x4_historical_regression": true,
+    "synthetic_unit_tests_first": true,
+    "synthetic_smoke": [
+      "그는 어제 학교에 갓다.",
+      "오늘 회의는 오전 9시에 시작합니다.",
+      "하지만 실험은 성공했습니다."
+    ],
+    "if_primary_nonidentity_below_18": "MECHANICAL_ADMISSION_UPPER_BOUND_FAIL_NO_GOVERNOR",
+    "if_at_least_18": "INDEPENDENT_SEMANTIC_PIA_STILL_REQUIRED",
+    "uk": "NO_EXECUTION_UNLESS_ADMISSIBLE_INDEPENDENT_PIA_AND_EXACT_SAME_CANDIDATE_POOL"
+  },
+  "custody": {
+    "action_artifact": "ONLY_OPAQUE_HASHES_TYPED_STATUS_AND_AGGREGATES",
+    "model_file": "EPHEMERAL",
+    "packet_text": "EPHEMERAL",
+    "no_raw_output_logs": true,
+    "private_candidate_escrow": "UNAVAILABLE_SEPARATE_GATE"
+  },
+  "authority": "PROTOCOL_COMPETENCE_REGRESSION_ONLY_NOT_CAUSAL_CAPACITY_NOT_GOVERNOR"
+}
