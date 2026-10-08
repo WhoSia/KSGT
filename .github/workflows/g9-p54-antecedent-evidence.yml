@@ -1,0 +1,28 @@
+name: G9-P54 Preceding-Sentence Source Evidence (No Private Corpora)
+on:
+  push:
+    paths:
+      - 'experiments/g9-p54/antecedent_evidence_v01/**'
+      - '.github/workflows/g9-p54-antecedent-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  group-evidence-with-abstention:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test contrastive Korean context, numeric contradictions, and writer authority
+        run: python3 -m unittest discover -s experiments/g9-p54/antecedent_evidence_v01/tests -v
+      - name: Forbid private NIKL raw or indexes in public runner
+        run: |
+          test ! -f NIKL_ZA_2025_v1.0.zip
+          test ! -f experiments/g9-p54/antecedent_evidence_v01/PRIVATE_index.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('artifacts/g9_p54_preceding_source_contact.json'))
+          assert d['scope']['rows_with_geujung']==25
+          assert d['science_authority']['public_raw_corpus']==False
+          assert d['science_authority']['independent_gold_antecedents']==0
+          print('P54_SOURCE_CUE_RECEIPT_WITHOUT_PRIVATE_RAW_PASS')
+          PY

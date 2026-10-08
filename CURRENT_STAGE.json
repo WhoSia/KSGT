@@ -2,11 +2,11 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "G9-P53",
+  "current_stage": "G9-P54",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "CLOSED_G9_P53_BOUNDED_SOURCE_WRITER_EVIDENCE_PASS_HUMAN_GOLD_AND_QUALITY_HOLD",
-  "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
-  "parent_stage": "G9-P52",
+  "status": "OPEN_G9_P54_ONE_QUESTION_PRECEDING_GROUP_EVIDENCE_COURT",
+  "canonical_notion_id": "3f3ef561-cf92-81ff-bf94-d12bc8785520",
+  "parent_stage": "G9-P53",
   "latest_closed_stage": "G9-P53",
   "latest_closed_artifact": {
     "stage": "G9-P53",
@@ -15,9 +15,9 @@
     "source_main_head": "55a11b72209162ac9f1245cd6c4ebd079889d56f"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "artifacts/g9_p53_current_state.json",
+  "current_artifact": "artifacts/g9_p54_preceding_source_contact.json",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Can a competent Korean writing model produce coherent fact-faithful paragraphs, and does a typed KRC information/discourse plan add any measurable value beyond an equally grounded plain plan?",
+  "current_question": "What observable preceding-sentence evidence warrants a group antecedent candidate for 그중, and where must the writer-facing resolver abstain?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
@@ -53,7 +53,12 @@
     "nikl2025_private_geujung": "PRIVATE_PINNED_REAL_BYTES_25_SOURCE_CANDIDATES_NO_PARTITIVE_GOLD_REMOTE_SYNTHETIC_CI_PASS",
     "partitive_context_v02": "PINNED_NIKL_2025_25_REAL_CONTEXTS_5_SURFACE_FORMS_0_KRC_V07_EXACT_PATTERN_HITS_PRIVATE_PROVISIONAL_19_PLAUSIBLE_6_HOLD_NO_GOLD",
     "p53_terminal": "CLOSED_BOUNDED_PASS_WITH_HUMAN_WRITER_EDIT_GOLD_AND_NATURALNESS_HOLD",
-    "p53_latest_context_ci": "UNCONFIRMED_NO_CHECK_RUN_OBSERVED_LOCAL_FIVE_SYNTHETIC_PASS"
+    "p53_latest_context_ci": "UNCONFIRMED_NO_CHECK_RUN_OBSERVED_LOCAL_FIVE_SYNTHETIC_PASS",
+    "p54": "A1_SOURCE_CUE_AND_DECLARED_QUOTE_REVIEW_ONLY_NOT_AUTOMATED_REFERENCE_RESOLUTION",
+    "p54_independent_antecedent_gold": "NOT_OBSERVED",
+    "p54_direct_writer_edit_preference": "NOT_OBSERVED",
+    "p54_synthetic_controls": "12_REMOTE_TESTS_PENDING",
+    "p54_real_context_contact": "25_PRIVATE_CONTEXTS_NO_RAW_PUBLICATION"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -83,8 +88,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "Optionally confirm or adjust the proposed G9-P54 formal stage name; no compute/data/server actions required.",
-  "next_scientific_action": "Propose G9-P54 scoped context-grounded reference realization and antecedent warrant; await exact name acceptance before opening P54. Do not reopen P53 to extend synthetic suites.",
+  "next_human_action": "NONE",
+  "next_scientific_action": "Complete CI for P54 source cue resolver, then close P54 as bounded pass with unresolved independent antecedent and writer-choice gold explicitly held. Avoid expanding P54 into a new model/corpus project.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -104,7 +109,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "TERMINAL_P53_CLOSED_BOUNDED_EVIDENCE_AND_IMPLEMENTATION_PASS_INDEPENDENT_WRITER_EFFECT_HOLD",
+  "current_substage": "P54 bounded candidate evidence and abstention court",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -163,12 +168,10 @@
     "human_reader_rating": "NOT_COLLECTED"
   },
   "current_prototype": {
-    "path": "experiments/g9-p53/krc_v07/intent_writer.cjs",
-    "test": "experiments/g9-p53/krc_v07/intent_writer.test.cjs",
-    "writer_comparison_contract": "experiments/g9-p53/p0_writing_competence/EXPERIMENT_CONTRACT.md",
-    "test_evidence": "9_OF_9_LOCAL_SYNTHETIC_PASS",
-    "real_model_outputs": 0,
-    "independent_native_quality": "NOT_MEASURED"
+    "path": "experiments/g9-p54/antecedent_evidence_v01/source_witness.py",
+    "tests": "experiments/g9-p54/antecedent_evidence_v01/tests/test_witness.py",
+    "source_contact": "artifacts/g9_p54_preceding_source_contact.json",
+    "outcome": "CUES_ONLY_ANTECEDENT_GOLD_NOT_OBSERVED"
   },
   "latest_p0_capacity_probe": {
     "source": "artifacts/g9_p53_p0_qwen14b_b_baseline_readback.json",
@@ -310,15 +313,9 @@
   },
   "next_stage_proposal": {
     "stage": "G9-P54",
-    "formal_name_proposed": "KSGT G9-P54 — Context-Grounded Reference Realization, Antecedent Evidence & Writer-Choice Boundaries",
-    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
-    "status": "NOT_YET_OPENED",
-    "next_scope": "Context-grounded partitive antecedent evidence and limited writer-choice admissibility",
-    "inherit_hold": [
-      "INDEPENDENT_ANTECEDENT_GOLD",
-      "HUMAN_KEEP_EDIT_ACTIONS",
-      "NATURAL_KOREAN_GENERATOR_ADVANTAGE"
-    ],
-    "short_stage_rule": "ONE_QUESTION_BOUNDED_RESEARCH_VERDICT"
+    "formal_name_proposed": "KSGT Generation IX G9-P54 — Context-Grounded Reference Realization, Antecedent Evidence & Writer-Choice Boundaries",
+    "canonical_name_status": "CONFIRMED_BY_USER",
+    "status": "OPEN",
+    "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   }
 }

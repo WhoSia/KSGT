@@ -1,0 +1,44 @@
+{
+  "schema": "ksgt.g9p54.preceding_context_evidence_v1",
+  "source": "NIKL_ZA_2025_EXISTING_PRIVATE",
+  "archive_sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+  "source_reproducibility": "PINNED_ARCHIVE_AND_TWO_INTERNAL_MEMBER_HASHES",
+  "scope": {
+    "rows_with_geujung": 25,
+    "split_NX": 9,
+    "split_SX": 16,
+    "window_2_cue": 17,
+    "window_5_cue": 21,
+    "window_2_numeric_cue": 7,
+    "window_5_numeric_cue": 9,
+    "same_sentence_cue": 3,
+    "potential_rightward_continuation": 11,
+    "strict_unique_numeric_count_compatible": 0
+  },
+  "conservative_labels": {
+    "GROUP_CUE_REVIEW_ONLY": 9,
+    "ABSTAIN_NO_VISIBLE_GROUP_CUE": 5,
+    "ABSTAIN_RIGHT_CONTEXT_REVIEW": 11
+  },
+  "experimental_controls": {
+    "compatible_5_teams_to_2": "REVIEW_NOT_PROVEN",
+    "incompatible_1_team_to_2": "REJECT_COUNT",
+    "competing_5_and_4_teams_to_2": "ABSTAIN",
+    "declared_unique_source_quote_and_CLARIFY": "PROPOSAL_ONLY_NOT_PREFERENCE",
+    "writer_KEEP": "VETO",
+    "writer_CONTEXTUAL": "ABSTAIN_FROM_AUTOMATIC_EDIT"
+  },
+  "science_authority": {
+    "independent_gold_antecedents": 0,
+    "observed_human_writing_decisions": 0,
+    "actual_automatic_edits": 0,
+    "neutral_no_op": "PRESERVED",
+    "counts_are": "HEURISTIC_DISCOVERY_NO_RESOLUTION_ACCURACY",
+    "public_raw_corpus": false
+  },
+  "private_local_tests": {
+    "count": 17,
+    "pass": 17
+  },
+  "public_workflow_tests": "PENDING"
+}
