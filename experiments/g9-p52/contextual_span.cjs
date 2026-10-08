@@ -36,7 +36,7 @@ function compileEdits(source,modelOutput,p=CONTRACT){
        typeof e.before!=="string"||typeof e.after!=="string"||!e.before.length||
        e.before===e.after||e.after.length>300)return {status:"INVALID_SPAN"};
     if(count(source,e.before)!==1)return {status:"SPAN_NOT_UNIQUE"};
-    if(e.before.length>Math.max(8,Math.floor(source.length*0.8)))return {status:"WHOLE_SOURCE_REPLACEMENT"};
+    if(e.before===source||e.before.length>Math.max(8,Math.floor(source.length*0.8)))return {status:"WHOLE_SOURCE_REPLACEMENT"};
     const at=source.indexOf(e.before);edits.push({start:at,end:at+e.before.length,after:e.after});
   }
   edits.sort((a,b)=>a.start-b.start);
