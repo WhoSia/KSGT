@@ -192,5 +192,31 @@ def main():
       "dev_sha256":dev_receipt["token_binary_sha256"]
     },indent=2),flush=True)
 
+    # Native extension finalization can abort after all scientific work is done.
+    # Persist and verify every deliverable before bypassing interpreter teardown.
+    for filename, expected_bytes, receipt in (
+        ("train.u16le", args.train_tokens * 2, train_receipt),
+        ("dev.u16le", args.dev_tokens * 2, dev_receipt),
+    ):
+        p = out / filename
+        if p.stat().st_size != expected_bytes:
+            raise RuntimeError(f"incorrect byte length for {filename}")
+        h = hashlib.sha256()
+        with p.open("rb") as fp:
+            while True:
+                chunk = fp.read(8 * 1024 * 1024)
+                if not chunk:
+                    break
+                h.update(chunk)
+        if h.hexdigest() != receipt["token_binary_sha256"]:
+            raise RuntimeError(f"re-read SHA mismatch for {filename}")
+    manifest_path = out / "manifest.json"
+    with manifest_path.open("rb") as fp:
+        os.fsync(fp.fileno())
+    print("MODEL_SLICE_DURABLE_RECHECK_PASS", flush=True)
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(0)
+
 if __name__=="__main__":
     main()
