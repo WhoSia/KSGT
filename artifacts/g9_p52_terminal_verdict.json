@@ -1,0 +1,108 @@
+{
+  "schema": "ksgt.g9.p52.terminal-contextual-interface-verdict.v1",
+  "stage": "G9-P52",
+  "verdict": "CLOSED_OPERATIONAL_MODEL_PASS_SPAN_INTERFACE_FAILURE_NO_GOVERNOR_INFERENCE",
+  "date": "2026-10-08",
+  "predecessor": "G9-P51_CLOSED_LITERAL_EDITOR_NO_NONIDENTITY_SUPPORT",
+  "implementation": "Qwen3-0.6B Q8 GGUF / pinned llama.cpp C++ / Node.js structured source-substring edits",
+  "prospective_preseal": "experiments/g9-p52/contextual_span_preseal.json",
+  "frozen_preseal_commit": "58ed2c62143189d1fd521968b6cf4f02041ea494",
+  "source_packet": {
+    "n": 24,
+    "attempts_per_item": 4,
+    "total_attempts": 96,
+    "source_sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+    "heldout_reuse_notice": "This 24-item P50/P51 packet is now adaptively revisited. No future prompt/protocol rescue on the same 24 may count as independent confirmatory PIA."
+  },
+  "run": {
+    "id": 37719544157,
+    "conclusion": "SUCCESS",
+    "url": "https://github.com/WhoSia/KSGT/actions/runs/37719544157",
+    "artifact_id": 11525490949,
+    "artifact_digest": "sha256:f87542ef556abc6f4213b117edea98591d14039db5c4fa744a01aadae9ea660c",
+    "artifact_receipt_sha256": "56fd385edf1f7caf8c25ae294881d7c2691fd6666a2a1d737551a00e7b98188d"
+  },
+  "model": {
+    "repo": "Qwen/Qwen3-0.6B-GGUF",
+    "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "file": "Qwen3-0.6B-Q8_0.gguf",
+    "bytes": 639446688,
+    "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "model_metadata_license": "apache-2.0",
+    "pretraining_disjointness": "UNKNOWN",
+    "llama_cpp_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+  },
+  "engineering": {
+    "unit_tests": 7,
+    "unit_tests_pass": true,
+    "cpp_build": true,
+    "pinned_model_download_and_sha": true,
+    "synthetic_smoke_completed": true,
+    "source_only_packet_integrity": true,
+    "real_24x4_generation_completed": true,
+    "summary_only_artifact": true,
+    "CI_conclusion": "SUCCESS"
+  },
+  "outcomes": {
+    "primary_changed": 0,
+    "primary_total": 24,
+    "any_changed_items": 2,
+    "any_changed_total": 24,
+    "total_attempts": 96,
+    "attempt_status_totals": {
+      "INVALID_SPAN": 43,
+      "SPAN_NOT_UNIQUE": 48,
+      "WHOLE_SOURCE_REPLACEMENT": 3,
+      "SPANS_APPLIED_SEMANTICS_UNKNOWN": 2
+    },
+    "primary_status_counts": {
+      "INVALID_SPAN": 13,
+      "SPAN_NOT_UNIQUE": 11
+    },
+    "secondary_applied": {
+      "index2": 1,
+      "index3": 1
+    },
+    "by_family": {
+      "KOLLA_K1_HARD_CARGO": {
+        "n": 8,
+        "primary_changed": 0,
+        "any_changed": 2
+      },
+      "KOLLA_K2_GENERIC": {
+        "n": 8,
+        "primary_changed": 0,
+        "any_changed": 0
+      },
+      "STYLEKQC_GENERIC": {
+        "n": 8,
+        "primary_changed": 0,
+        "any_changed": 0
+      }
+    },
+    "lexical_cargo_loss_detected": 0,
+    "lexical_cargo_semantic_preservation_cannot_be_inferred": true,
+    "PIA": "NOT_PERFORMED",
+    "entry_threshold": "MECHANICAL_PRIMARY_TASK_RESPONSE_FLOOR_NOT_REACHED",
+    "governor_UK": "NOT_RUN"
+  },
+  "scientific_interpretation": {
+    "positive": "One real model completed all 96 structured response attempts. Two valid nonidentity source-anchored edits appeared at secondary candidate indices, indicating some context-conditioned proposal support not present in P51 literal dictionaries.",
+    "failure": "The particular exact-unique-substring JSON edit interface and small model were jointly unable to provide even a single valid first proposal on this packet.",
+    "attribution_limit": "Cannot separate intrinsic model Korean-edit competence from response-schema/exact-quote-anchor burden; 43 INVALID_SPAN statuses lack subtype, 48 SPAN_NOT_UNIQUE statuses conflate absent and duplicated substrings.",
+    "not_claimed": [
+      "Model incapable of Korean editing in general",
+      "KSGT governance failure",
+      "PIA PASS",
+      "Meaning-preservation or hard-cargo semantic validation",
+      "Human revision benefit",
+      "Pretraining-evaluation disjointness"
+    ],
+    "mechanism_next": "Replace free-form quoted before-span with externally indexed source tokens/segments. Validator must identify distinct NOT_FOUND, MULTIPLE_OCCURRENCES, SCHEMA_ERROR and NONRESPONSE before any next PIA. Keep surface candidate plus provenance under rights-safe custody.",
+    "confirmation_next": "Use a NEW independently selected, outcome-unseen, rights-reviewed source-only PIA packet; P50 24 are diagnostics/regressions only for any adaptive P53 design.",
+    "governance_gate": "No U/K before independently admissible proposer and exact privately escrowed candidate reservoir.",
+    "no_rescue": "No revisions to the P52 frozen prompt, seeds, gate or model after observing this 24-item result."
+  },
+  "status": "CLOSED_ONE_BOUNDED_EXPLORATORY_INSTRUMENT_ATTEMPT",
+  "scientific_authority": "SPAN_INTERFACE_FEASIBILITY_NEGATIVE_ONLY"
+}
