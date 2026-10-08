@@ -1,0 +1,26 @@
+{
+  "schema": "ksgt.g9.p50.training-slice-attempt1-failure.v1",
+  "phase": "G9-P50",
+  "run_id": 37579616336,
+  "conclusion": "ENGINEERING_FAILURE_NO_CANONICAL_ARTIFACT",
+  "observed": {
+    "train_tokens": 100000000,
+    "dev_tokens": 2000000,
+    "train_records": 135475,
+    "dev_records": 2631,
+    "train_sha256": "537fe66996edccc2e1fc3b22981641c964966502cb635b1c19752bedc0bdc413",
+    "dev_sha256": "4ca1242e638083533c5bd3d9a778fda5d02b674088b0c88c262a257d0de4bf0d",
+    "tokenizer_artifact_verification": "PASS",
+    "process_error": "PyGILState_Release during Python runtime finalization",
+    "exit_code": 134,
+    "postrun_verification": "SKIPPED",
+    "artifact_upload": "SKIPPED"
+  },
+  "scientific_inference": "NONE",
+  "model_training_authorized": false,
+  "successor": {
+    "engineering_fix_commit": "d18a6b308296fa27b21a098e91c4b9ac409b22ec",
+    "retry_run_id": 37712642109,
+    "required": "successful artifact and verified manifest; no training authorization before receipt"
+  }
+}
