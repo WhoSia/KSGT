@@ -1,0 +1,82 @@
+{
+  "schema": "ksgt.g9.p50.terminal-closure.v1",
+  "stage": "G9-P50",
+  "status": "CLOSED_ENABLING_INFRASTRUCTURE_ONLY_SCIENTIFIC_TARGET_UNRESOLVED",
+  "closure_type": "SCOPED_STOP_NO_CONFIRMATORY_SUCCESS",
+  "date": "2026-10-08",
+  "stage_name": "Endogenous Proposal-Mechanism Reconstitution, Small-Language-Model Proposer Construction, Proposal–Governance Architectural Separation, Repairable-Support Identification, Capacity–Authority Decoupling, Cross-Proposer Transport & the Minimal Generative Competence Required for Governable Korean Realization",
+  "original_question": "What minimum proposer competence makes governance identifiable in actual Korean writing revisions?",
+  "achieved": [
+    "PIA source-only packet frozen 24 items: 8 KoLLA K1, 8 KoLLA K2, 8 StyleKQC; earlier-stage sources excluded by construction",
+    "Tokenizer frozen: SentencePiece Unigram 32768, source revision fb08250, model sha256 d99338c8e4e112fd2f9eef11e7a4a2b25435a452253bc7e5e653e74eca59b2c1",
+    "Training token stream successfully materialized: 100M train / 2M dev; byte lengths and SHA externally verified in Rust CI run 37717111359",
+    "SLM topology, four nominal/exact sizes, 100M equal-exposure regime presealed but not trained",
+    "Source-conditioned entry route, source-to-hash binding, task-family mapping, four-attempt reservoir and U/K identity guard implemented and TypeScript CI passed",
+    "Data contamination/rights limits explicitly recognized without false pass",
+    "Retired P50 source tree archived and re-read from Google Drive with per-member hashes"
+  ],
+  "not_achieved": {
+    "slm_weights": "NOT_TRAINED",
+    "proposer_instrument_adequacy": "NOT_EXECUTED",
+    "capacity_threshold": "NOT_IDENTIFIED",
+    "same_proposer_governance_effect": "NOT_AUTHORIZED_OR_EXECUTED",
+    "cross_proposer_transport": "NOT_EXECUTED",
+    "human_revision_burden": "HOLD",
+    "population_korean_writing_improvement": "NO_CLAIM",
+    "near_duplicate_and_historical_holdouts": "NOT_INDEPENDENTLY_CLEARED",
+    "web_token_rights": "UNDERLYING_TEXT_RIGHTS_NOT_BLANKET_CLEARED"
+  },
+  "scientific_disposition": "No negative verdict for KSGT governor may be inferred from absence of competent proposer. No positive verdict about PIA/governance/transport may be inferred from byte and CI PASS.",
+  "reason_to_stop": "Successive enabling contracts and code extensions displaced the core KSGT Korean revision/governance discriminator. An origin-return review favors a simpler direct candidate-set admission court over indefinitely training a generic micro-LM.",
+  "archive": {
+    "drive_folder_id": "1Z_8OPdKOZ4RRh9aWNvXOrdgl_0-AI4Xq",
+    "drive_file_id": "1KQ_EyKz0om7ZLgOLKYIOZIXBNqm1MCHC",
+    "drive_url": "https://drive.google.com/file/d/1KQ_EyKz0om7ZLgOLKYIOZIXBNqm1MCHC/view?usp=drivesdk",
+    "snapshot_commit": "9dfff80c2781a3e0e265b03cb47663f3c9e64716",
+    "archived_file_count": 43,
+    "archive_outer_zip_sha256": "18fe2999edd079901315794e52215bff1224b89cb3ae78f2a131c63178394763",
+    "archive_inner_zip_sha256": "66e158a67c9e5f6ace317c1eca6bb8c227146bbd1c1dcbd2120f2a1ade383d8a",
+    "all_member_sha256_verified_against_drive_readback": true,
+    "excludes_reversible_training_token_artifacts": true
+  },
+  "retirement": {
+    "archive_first_verified": true,
+    "retire_prefixes": [
+      "experiments/g9-p50/",
+      ".github/workflows/g9-p50-",
+      "artifacts/g9_p50_"
+    ],
+    "keep_live": [
+      "CURRENT_STAGE.json",
+      "artifacts/g9_p50_terminal_closure.json",
+      "experiments/g9-p51/"
+    ],
+    "historical_provenance": "GitHub immutable commit history + Drive snapshot + Notion P50 canonical"
+  },
+  "successor": {
+    "id": "G9-P51",
+    "formal_name": "KSGT Generation IX G9-P51 — Source-Conditioned Candidate-Support Admission, Fixed-Reservoir Governor Contrast, Hard-Cargo Preservation, Abstention Discipline & the First Executable Korean Revision Decision",
+    "fundamental_change": "Move from building a small LM to identifying the governor on a finite competent proposer candidate support with S5/S7 source-conditioned edit route as first permitted rival. No model pretraining prerequisite.",
+    "cannot_inherit_as_pass": [
+      "PIA_PASS",
+      "S0_S3_TRAINED",
+      "UNIVERSAL_CAPACITY_THRESHOLD",
+      "INDEPENDENT_CONTAMINATION_CLEARANCE",
+      "HUMAN_BURDEN_EFFECT"
+    ]
+  },
+  "ravel_receipt": {
+    "explanandum": "Korean source-preserving revision choices under explicit authority constraints",
+    "method_selected": [
+      "Origin Return Edge",
+      "Bridge Intent Is Not Bridge Closure",
+      "Observation Stack Audit",
+      "Cross-Level Authority Separation"
+    ],
+    "ravel_changing_attack": "A 100M-token Korean next-token LM still has never been shown to respond to source-specific correction/paraphrase; the P50 infrastructure cannot identify the target effect",
+    "authority_ceiling": "ENABLING_METHOD_AND_BYTE_CUSTODY_ONLY",
+    "milestone": "ENABLING_CLOSED",
+    "return_edge": "P51 executes first finite paired candidate-set governor decision on source-conditioned proposals",
+    "debt": "P50 enabling debt closed by discontinuing generic SLM route; contamination/rights and proposer adequacy remain explicit successor prerequisites"
+  }
+}
