@@ -42,7 +42,7 @@
     "human_revision_burden": "NOT_COLLECTED",
     "genre_authority_v01": "REMOTE_CI_SUCCESS_24_SYNTHETIC_CONTRACT_9_PRIOR_PARTITIVE_NO_REAL_WRITING_EFFECT",
     "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES",
-    "writer_review_v02": "OFFLINE_NON_DESTRUCTIVE_KOREAN_DRAFT_REVIEW_CANDIDATE_SELECTION_LOCAL_TESTS_PASS_15_PENDING_REMOTE"
+    "writer_review_v02": "REMOTE_GITHUB_CI_SUCCESS_15_NEW_PLUS_9_KRC_TESTS_NONDESTRUCTIVE_WRITER_CLI_NO_HUMAN_QUALITY"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -73,7 +73,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "G9-P53: Audit writer-selected alternate source/semantic faithfulness on natural Korean context; then integrate a competent pretrained model without discarding KEEP candidate, preserving explicit creative license and source evidence. Borrowed server not used.",
+  "next_scientific_action": "Use writer-facing no-op/alternate review on rights-cleared independent natural Korean passages, explicitly adjudicating source preservation and author permission before selective model generation. No borrowed server needed.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -205,6 +205,12 @@
     "local_tests": "15_OF_15",
     "independent_quality": "NOT_MEASURED",
     "model_outputs_this_run": 0,
-    "write_policy": "NEVER_OVERWRITE_AND_EXPLICIT_SELECTION_ONLY"
+    "write_policy": "NEVER_OVERWRITE_AND_EXPLICIT_SELECTION_ONLY",
+    "ci_run": 37788605780,
+    "ci_status": "SUCCESS",
+    "ci_new_tests": "15_OF_15",
+    "ci_existing_ref_tests": "9_OF_9",
+    "real_model_replay": "RETROSPECTIVE_8B_VS_14B_NAR02_TWO_CANDIDATES_NO_EVALUATION",
+    "real_model_replay_status": "NO_NEW_MODEL_CALLS_NO_WRITER_PREFERENCE"
   }
 }
