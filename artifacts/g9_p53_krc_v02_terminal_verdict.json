@@ -1,0 +1,123 @@
+{
+  "schema": "ksgt.g9.p53.krc-v02.terminal-verdict.v1",
+  "stage": "G9-P53",
+  "substage": "KRC-v0.2",
+  "verdict": "CLOSED_BOUNDED_GENERATOR_CRITIC_TRANSPORT_PASS_KOREAN_REALIZATION_AND_SEMANTIC_CRITIC_INADEQUATE",
+  "date": "2026-10-08",
+  "scientific_object": "Korean fact-, discourse- and genre-conditioned document realization; evaluator and generator are instruments, not a consensus/governance theory.",
+  "preseal": "experiments/g9-p53/krc_v02/constitution.json",
+  "formalism": "experiments/g9-p53/krc_v02/FORMAL_GAME.md",
+  "model": {
+    "repo": "Qwen/Qwen3-0.6B-GGUF",
+    "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "weights_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "llama_cpp_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f",
+    "weights_updated": false
+  },
+  "primary_run": {
+    "id": 37727690693,
+    "conclusion": "SUCCESS",
+    "artifact_id": 11528273884,
+    "artifact_sha256": "4a1047d371a97656780a33a3b7ee5f7b208765e31c9a2466544d429e8a6ea2ea",
+    "subjects": [
+      "EX07 science explainer",
+      "EX08 scene essay"
+    ],
+    "subjects_new_since_v01": true,
+    "source_facts": 10,
+    "emitted_documents": 2,
+    "model_requests": 10,
+    "model_accepted_clauses": 10,
+    "actual_feedback_repair_calls": 0,
+    "source_literal_fallbacks": 0,
+    "exact_literal_source_copies": 9,
+    "nonidentity_slots": 1,
+    "two_paragraph_compliance": "2/2",
+    "character_counts": [
+      148,
+      114
+    ],
+    "recommended_range": [
+      180,
+      360
+    ],
+    "within_length_range": "0/2",
+    "semantic_adjudication": "NOT_EXECUTED",
+    "human_naturalness": "NOT_COLLECTED",
+    "scope": "Typed clause and assembler interface were mechanically accepted. The modeled Korean prose was overwhelmingly a source-copy, with no triggered feedback and too little expressive transformation to demonstrate a KSGT writing advantage."
+  },
+  "synthetic_negative_control": {
+    "workflow_run_id": 37728066629,
+    "conclusion": "SUCCESS",
+    "cases": 3,
+    "contradictions_that_passed_mechanical_critic": [
+      "기록하지 않았다 → 기록했다",
+      "낮았다 → 높았다",
+      "조명을 껐다 → 조명을 켰다"
+    ],
+    "semantic_critic_soundness": "DISPROVEN_BY_EXPLICIT_FALSE_NEGATIVES",
+    "scope": "The critic checks lexical anchors and surface indications only; it fails to recognize some predicate-polarity, negation, comparison direction errors."
+  },
+  "witness_injection_stress": {
+    "run_id": 37728285311,
+    "conclusion": "SUCCESS",
+    "artifact_id": 11528369535,
+    "artifact_sha256": "877efe83985443bbd1269ec737ea3bee776c72bf703697c8de56b4255f98f9ad",
+    "preseal": "experiments/g9-p53/krc_stress/preseal.json",
+    "injected_initial_candidates": 3,
+    "injected_initial_candidates_are_model_outputs": false,
+    "actual_model_repair_requests": 3,
+    "mechanical_repair_accepts": 3,
+    "observed_repairs": [
+      {
+        "case": "NUMERIC_HALLUCINATION",
+        "feedback": "NOVEL_NUMERIC_LITERAL",
+        "result": "Model removed invented numerical value and restored original fact."
+      },
+      {
+        "case": "META_AND_ID",
+        "feedback": "FACT_ID_MISMATCH,META_OUTPUT_LEAK",
+        "result": "Model returned correct ID and ordinary clause but spelled 껐다 as 껤다; surface critic accepted the orthographic defect."
+      },
+      {
+        "case": "UNOBSERVED_EMOTION",
+        "feedback": "UNSUPPORTED_AFFECT_OR_PURCHASE_CUE",
+        "result": "Model deleted unlicensed emotion and matched source fact."
+      }
+    ],
+    "interpretation": "A genuine Qwen response to critic-provided witnesses can pass the current mechanical protocol on seeded invalid inputs. This does not estimate spontaneous model repair or actual Korean quality gain.",
+    "semantic_proof": "NONE",
+    "weight_updates": 0
+  },
+  "problem_court": {
+    "positive": [
+      "A finite Korean fact-slot G→V→(optional G)→V workflow can execute under prospective time and attempt budgets.",
+      "An independent deterministic assembler always produces two paragraphs for the prospective source slots.",
+      "Witness-only feedback can elicit model repairs when defects are artificially injected."
+    ],
+    "negative": [
+      "9/10 accepted clauses simply copied original facts, leaving the Korean naturalness objective untouched.",
+      "The real non-adversarial run had no repair cycles; GAN-like dynamic was not activated spontaneously.",
+      "3/3 known semantic contradictions were missed by the lexical critic.",
+      "A repaired clause with the orthographic form 껤다 passed, so mechanical acceptance does not certify idiomatic Korean.",
+      "Both documents fell below target length; two-paragraph format improvement is by construction and not a clean causal comparison to v0.1."
+    ],
+    "theoretical_failure": "COPY_SAFE_FIXED_POINT_AND_SEMANTIC_UNSOUND_CRITIC",
+    "corrective_research_direction": "A Korean construction calculus with typed predicate-argument structure, polarity, comparison direction, tense/aspect, discourse warrants, context-licensed topic/focus, ellipsis and register/cadence. Each operation must declare preconditions and defeaters; evaluation must handle UNKNOWN explicitly and human naturalness externally.",
+    "no_premature_fix": "Do not add generic ungrounded synonym-change reward to punish copies; would incentivize unsupported changes. Do not retune on v0.2 or its injected stress cases as confirmatory evidence.",
+    "future_comparison": "Prospectively compare no-repair local slots vs witness repair vs untyped equal-budget plan vs monolithic baseline on NEW briefs, keeping a frozen independent fact check and blinded human reader judgment.",
+    "human_reader_court": "ON_HOLD_USER_RECRUITING; previous KRC v0.1 3-form/18-pair blinded materials retained, no participant results in this stage."
+  },
+  "custody": {
+    "drive_folder": "https://drive.google.com/drive/folders/1Ro8EZajBr5clLdxHJosssPa0wwZqbTvE",
+    "primary_drive_file": "https://drive.google.com/file/d/12UtO1zp7y8mXe1d_5F_NxWsdkKuOGt6o/view",
+    "stress_drive_file": "https://drive.google.com/file/d/1msGikFzUyadqwAvqjyOVI20oi2auHTBo/view",
+    "primary_readback_sha256_verified": true,
+    "stress_readback_sha256_verified": true,
+    "reader_form_drive_file": "https://drive.google.com/file/d/141KddGIPYjWCMIEkRjnDLKrAYJ_vmfGt/view",
+    "reader_form_readback_sha256": "37e29f70140ef46369310ae913795e6336f3c89be8739e92681586dfb4e2031a",
+    "reader_form_contains_unblinding_key": false
+  },
+  "authority": "BOUNDED_INFERENCE_AND_MECHANICAL_EVIDENCE_ONLY_NO_TRUE_GAN_TRAINING_NO_HUMAN_SEMANTIC_OR_NATURALNESS_VERDICT",
+  "bot_authored_commits_forbidden": true
+}
