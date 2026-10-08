@@ -1,0 +1,22 @@
+# KSGT Generation IX G9-P56 — Terminal Ruling
+**Full formal title:** KSGT Generation IX G9-P56 — Contextual Antecedent Adjudication, Discourse Scope & Uncertainty Calibration
+
+**FINAL — 2026-10-09:** `CLOSED / BOUNDED HISTORICAL-RECOVERY AND TYPED SOURCE-SET PASS / ACTUAL REFERENCE GOLD AND NUMERIC CALIBRATION HOLD`.
+
+## Key surprise: this problem was in KSGT from the beginning
+Direct archives from July 2026, rather than a retrospective summary, already contain **0.2.7 SenseSetInvariant**, **0.2.8 ArgumentMemory**, **0.2.62 Reference Competition with Negation Scope**, and the original D05 referential cohesion axis. G8-P2.14 separated preserving competing interpretations from displaying them, and G9-P36-R2 required `antecedent_key/local_scope_key/attachment_key` to carry valid structural reference. P56 **inherits** these concepts, rather than presenting them as newly invented. The [direct-source crosswalk](https://github.com/WhoSia/KSGT/blob/main/experiments/g9-p56/antecedent_set_court/HISTORICAL_CROSSWALK.md) cites the user's six directly retrieved Drive chat archives by URL. Early stand-alone 0.2.7 report/package **not individually found by filename in current Drive search**; direct chat-export text is reliable evidence of the past discussion, not proof the original executable byte artifacts survived.
+
+## New bounded engineering contribution
+Versioned `adjudicator.cjs` derives `H(F)`, a **set of source-witnessed hypotheses in a *submitted* frame**, preserving distinct group identity across source-row duplicates and rejecting mismatch of declared discourse scope, source block, attachment, utterance order, quote uniqueness, unit and strict subset. `H(F)` is explicitly **not** the objectively true antecedent set. `0` candidates → abstain, `>1` → abstain from forced selection; `1` → review-only single candidate *relative to known frame*, not proof of discourse truth. KEEP rejects edits. CONTEXTUAL records missing writer choice. A caller-supplied label and author flag never count as independently authenticated truth.
+
+The design's necessary result about probability: the existing private NIKL ZA 2025 **25** `그중` candidate contexts contain **0** independently verified group antecedent labels. Accordingly ECE, empirical reference-resolution accuracy, Brier loss, any population calibration and numeric posterior cannot be identified from this evidence. `probabilities:null`, `NOT_CALIBRATED` and `UNIDENTIFIABLE_WITHOUT_INDEPENDENT_ANTECEDENT_GOLD` are implemented contract outputs, not failures to be covered by an invented confidence number. The 25 original raw rows remain private, not public GitHub. Different ZA/DP/SRL/WSD layers on the same Korean underlying text are not independent new sampling frames (historic P44 caution).
+
+## Test and authority ruling
+- [Human-authored implementation](https://github.com/WhoSia/KSGT/commit/214d5011d8e0f6ea9a05024bc76f838ef12b11e4), read-only [remote GitHub Actions run 37803344020](https://github.com/WhoSia/KSGT/actions/runs/37803344020) **SUCCESS 18/18 synthetic and counterexample tests**, local same 18/18. Covers competing groups, source-scope/block/attachment, counter and cardinality, source-order and quotation, human-claim spoofing, KEEP/CLARIFY and ambiguous frame completeness.
+- **PASS:** complete direct historical archaeology for selected six canonical Drive chat sources, typed bounded candidate-set/provenance interface, enforced no calibrated number without labels, source-private metadata discipline.
+- **HOLD:** independently adjudicated native Korean group antecedent truth, empirical numerical calibration, direct human KEEP/EDIT preferences, sentence-naturalness gains and end-to-end KSGT superiority.
+- **NEVER CLAIM:** 18 tests = 18 Korean-native annotations; 25 source rows = 25 gold answers; a singleton among supplied candidates = true unique antecedent; historic lexical/entity theory = new invention.
+
+No pretrained model or borrowed friend server/GPU/SSD/global Python/npm was used. P56 ends here under short P-stage governance.
+
+**Next proposed stage, not opened:** KSGT Generation IX G9-P57 — Existing-Source Antecedent Authority, Native Context Disagreement & Gold-Admissibility Boundaries. Its one question should be whether **already available rights-cleared sources** support any independently verified real referent labels and disagreement records; if not, record precise authority HOLD. Fresh human recruitment must not be mandated without separate authorization.
