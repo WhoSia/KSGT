@@ -1,0 +1,72 @@
+{
+  "schema": "ksgt.g9.p53.krc-v04.terminal-mechanism-readback.v1",
+  "stage": "G9-P53",
+  "substage": "KRC-v0.4",
+  "disposition": "CLOSED_FINITE_TYPED_KOREAN_CONSTRUCTION_MICROGRAMMAR_PASS_NATURALNESS_NOT_EVALUATED",
+  "date": "2026-10-08",
+  "scientific_question": "Can a source-grounded typed clause grammar realize nonidentical Korean sentence orders without changing the source semantic frame or inventing new predicates, and reject clearly forbidden polarity/causal/ellipsis moves?",
+  "artifact_paths": {
+    "constitution": "experiments/g9-p53/krc_v04/constitution.json",
+    "source": "experiments/g9-p53/krc_v04/fact_frames.json",
+    "compiler": "experiments/g9-p53/krc_v04/compiler.cjs",
+    "morphology": "experiments/g9-p53/krc_v04/morphology.cjs",
+    "method_note": "experiments/g9-p53/krc_v04/FORMAL_RESULT.md",
+    "tests": "experiments/g9-p53/krc_v04/tests/"
+  },
+  "execution": {
+    "runner": "Node.js 22, no model called",
+    "run_id": 37742686521,
+    "status": "SUCCESS",
+    "tests_total": 11,
+    "tests_passed": 11,
+    "tests_failed": 0,
+    "n_source_briefs": 2,
+    "n_source_atomic_propositions": 10,
+    "n_passages": 4,
+    "word_order_changed_fact_occurrences": 5,
+    "contrasting_document_pairs": 2,
+    "four_realizations": [
+      "EX11 canonical",
+      "EX11 reordered",
+      "EX12 canonical",
+      "EX12 reordered"
+    ],
+    "machine_guarantee": "Exact typed semantic record pointer reuse, preauthored constituent conservation and finite licensed ordering; exactly 2 paragraphs and 5 fact slots per document.",
+    "negative_tests": [
+      "POLARITY_PRESERVATION_VIOLATION",
+      "COMPARISON_DIRECTION_VIOLATION",
+      "UNLICENSED_CAUSAL_WARRANT",
+      "UNRECOVERABLE_ELLIPSIS",
+      "UNKNOWN_FACT_ID",
+      "ORDER_NOT_SOURCE_LICENSED",
+      "MORPHOLOGICAL_CASE_CUSTODY_MISMATCH",
+      "UNLICENSED_TOPIC_INFORMATION_STATE",
+      "UNLICENSED_CONTRASTIVE_TOPIC"
+    ]
+  },
+  "korean_constructions": [
+    "Constituent order based on fixed finite phrase permutations; Korean finite predicates remain last.",
+    "Case/particle selection for nominative, accusative, topic, instrumental with NFC Hangul last-syllable coda and ㄹ instrumental exception.",
+    "Information-given topic requires explicit discourse state; contrastive topic requires an independently declared warrant.",
+    "'다만' connective licensed only by source result→unmeasured limitation edge; no asserted cause induced."
+  ],
+  "scientific_limitations": [
+    "Original Korean segments were manually authored as a tiny closed-domain grammar, not learned by a model or independently verified by a linguist.",
+    "Structural hash equality does not prove natural-language truth conditional equivalence; topic and phrase order can shift pragmatic emphasis.",
+    "The created passages remain close to factual source wording, and 4 examples are insufficient to infer idiomatic stylistic advantage.",
+    "No LLM generation, no GAN weight training, no independent human naturalness ratings, no comparison against a capable generic baseline.",
+    "The prior 18-draft v0.1 human reader survey is RETIRED as unusable due to elementary source and prose failures."
+  ],
+  "drive": {
+    "folder": "https://drive.google.com/drive/folders/1R4f-_U4vFwR03XyX_LiT38OvNwqUn3Oa",
+    "original_artifact": "https://drive.google.com/file/d/1_cnLSYyqQfTLXZHMFRAkOKTACtdK7oDk/view",
+    "zip_actions_artifact_id": 11534187849,
+    "zip_actions_digest": "sha256:139452056e348285d974163d5380243d9bdfca353905f3b70bebb7dcdd355885",
+    "drive_name_size_readback": "PASS_3270_BYTES",
+    "sha_reverification_of_drive": "NOT_PERFORMED"
+  },
+  "next_research": "KRC v0.5 — Context-Licensed Korean Clause Combination, Recoverable Ellipsis, Morphological Predication & Meaning-Traceable Paragraph Formation",
+  "human_study": "CANCELLED_FOR_V01_NO_NEW_HUMAN_DATA",
+  "claim": "INTERNAL_CONSTRUCTION_MECHANISM_PASS_NOT_PROSE_QUALITY_PASS",
+  "authored_commit_policy": "NO_BOT_COMMITS"
+}
