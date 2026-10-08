@@ -1,0 +1,103 @@
+{
+  "schema": "ksgt.g9.p53.p0.qwen14b.bonly.canonical-readback.v1",
+  "current_stage": "G9-P53",
+  "status": "CLOSED_BONLY_DEVELOPMENT_READBACK_NO_COMPARATIVE_EFFECT",
+  "run": {
+    "id": 37782329888,
+    "conclusion": "success",
+    "commit": "4600eed5f24cfa83cff3f729cb1c9f544179d14b",
+    "artifact_id": 11553485999,
+    "artifact_zip_sha256": "aad15005ad97ec5b9211798d783efb49deca1646ab804ccc22f5e377d3a3ce72",
+    "drive_zip": "https://drive.google.com/file/d/1o1iThI6yZ73fwKQvtO4fJ06MmwTBRVJR/view"
+  },
+  "model": {
+    "repo": "Qwen/Qwen3-14B-GGUF",
+    "revision": "530227a7d994db8eca5ab5ced2fb692b614357fd",
+    "filename": "Qwen3-14B-Q4_K_M.gguf",
+    "sha256": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0"
+  },
+  "generated": 4,
+  "formal_two_paragraphs": 3,
+  "primary_development": [
+    "SCI02",
+    "NAR01"
+  ],
+  "exposed_8b_controls": [
+    "SCI01",
+    "NAR02"
+  ],
+  "observations": [
+    {
+      "id": "SCI02",
+      "cohort": "PRIMARY_DEVELOPMENT",
+      "completed": true,
+      "paragraphs": 2,
+      "mechanical_flags": [],
+      "latency_ms": 92948,
+      "completion_tokens": 196,
+      "output_sha256": "42f85ac40b0f3946887103a80c750e98abc1604a2c919f58e120d702343b64cf",
+      "internal_audit": [
+        "DESCRIBES_UNOBSERVED_STUDY_INTENT_AS_FACT",
+        "INFERRED_WINDOW_LIGHT_LEVEL_POSSIBLE_CAUSAL_ACCOUNT",
+        "OBSERVED_NO_SPROUTS_BECOMES_APPEARED_NOT_TO_GROW"
+      ],
+      "source_fidelity": "MANUAL_REVIEW_CAUTION"
+    },
+    {
+      "id": "NAR01",
+      "cohort": "PRIMARY_DEVELOPMENT",
+      "completed": true,
+      "paragraphs": 2,
+      "mechanical_flags": [],
+      "latency_ms": 70728,
+      "completion_tokens": 204,
+      "output_sha256": "9b8e8930e3271140027d180cc4fb0381c3a01aee680aa278bc57c6156d3b11b3",
+      "internal_audit": [
+        "INVENTED_WIND_AND_UMBRELLA_MOVEMENT",
+        "INVENTED_SEARCH_INTENTION_AND_HESITATION",
+        "INVENTED_FOOTSTEPS_AND_NEW_ACTIONS"
+      ],
+      "source_fidelity": "CREATIVE_LICENSE_UNSPECIFIED_SOURCE_CONFLICT_UNRESOLVED"
+    },
+    {
+      "id": "SCI01",
+      "cohort": "EXPOSED_8B_CONTROL",
+      "completed": true,
+      "paragraphs": 2,
+      "mechanical_flags": [],
+      "latency_ms": 66942,
+      "completion_tokens": 183,
+      "output_sha256": "886f62fad6f00224945025c1053584c3f301efe32587e46a25b4d8531cc1fe6f",
+      "internal_audit": [
+        "UNOBSERVED_HEAT_SOURCE_PROPOSED_AS_HYPOTHESIS_NOT_A_MEASUREMENT"
+      ],
+      "source_fidelity": "DISTINGUISH_QUALIFIED_HYPOTHESIS_FROM_STATED_CAUSAL_FACT"
+    },
+    {
+      "id": "NAR02",
+      "cohort": "EXPOSED_8B_CONTROL",
+      "completed": true,
+      "paragraphs": 1,
+      "mechanical_flags": [
+        "PARAGRAPH_COUNT_NOT_2"
+      ],
+      "latency_ms": 45078,
+      "completion_tokens": 104,
+      "output_sha256": "a04cf20f01b18cf41929c1c32f60dd4a93d38b8364f14dc80bb8ceedf4f33e58",
+      "internal_audit": [
+        "ONE_PARAGRAPH_FOR_TWO_REQUIRED",
+        "KOREAN_SPACING_ERROR_책세",
+        "INVENTED_SILENCE_AND_CHARACTER_ACTION"
+      ],
+      "source_fidelity": "FORMAT_FAIL_AND_CREATIVE_LICENSE_UNSPECIFIED"
+    }
+  ],
+  "instrumental_verdict": "INFRA_PASS_MODEL_BYTES_VERIFIED_4_OUTPUTS_NO_HUMAN_JUDGE_NO_KSGT_VS_BASELINE",
+  "next": "SOURCE_FACTS_HARD_CONSTRAINT_VS_AUTHOR_LICENSED_FICTIONAL_ADDITIONS_SEPARATE_PRESEAL_WITH_UNEXPOSED_SOURCES",
+  "forbid": [
+    "TREAT_ONE_SEED_4_OUTPUTS_AS_GENERAL_MODEL_QUALITY",
+    "INFER_KSGT_SUPERIORITY_WITHOUT_U_K",
+    "RECLASSIFY_ALL_FICTIONAL_ADDITIONS_AS_HALLUCINATIONS_WITHOUT_AUTHOR_LICENSE",
+    "MAKE_ASSERTED_CAUSE_FROM_SINGLE_OBSERVATION"
+  ]
+}

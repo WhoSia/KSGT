@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P53",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_P53_8B_B_SCREEN_HOLD_14B_B_ONLY_CAPACITY_PRESEALED",
+  "status": "OPEN_P53_14B_B_BASELINE_OUTPUTS_INSPECTED_GENRE_AUTHORITY_REPAIR_REQUIRED",
   "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "parent_stage": "G9-P52",
   "latest_closed_stage": "G9-P52",
@@ -37,7 +37,9 @@
     "krc_v07": "SOURCE_QUOTE_DECLARED_AUTHOR_INTENT_LOCAL_MECHANICAL_ONLY_NO_LLM_OR_HUMAN",
     "competent_baseline_comparison": "PRE_RUN_INSTRUMENT_NO_MODEL_OUTPUTS",
     "p0_8b_q4": "REAL_RUN_SUCCESS_2_OF_2_OUTPUTS_BUT_BASELINE_FORMAT_FAIL_NO_KSGT_EFFECT",
-    "p0_14b_q4": "PRESEALED_FROZEN_NO_OUTPUTS_YET"
+    "p0_14b_q4": "4_OF_4_B_COMPLETED_3_OF_4_TWO_PARAGRAPHS_SOURCE_LICENSED_CREATIVE_BOUNDARY_UNRESOLVED",
+    "p0_writer_improvement": "NOT_TESTED_NO_UK_OUTPUTS",
+    "human_revision_burden": "NOT_COLLECTED"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -68,7 +70,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "Validate Qwen3-14B frozen B-only capacity and source fidelity before attempting any KSGT B/U/K superiority comparison; keep partitives as actual writer interventions.",
+  "next_scientific_action": "P0: Reconstruct genre-conditioned source-fact preservation vs creative-description license (science strict; narrative designated authorizable invention), then independently validate a competent B before matched B/U/K. P1 partitives and small rights-aware source data remain active.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -155,7 +157,7 @@
     "independent_native_quality": "NOT_MEASURED"
   },
   "latest_p0_capacity_probe": {
-    "source": "artifacts/g9_p53_p0_qwen8b_b_baseline_readback.json",
+    "source": "artifacts/g9_p53_p0_qwen14b_b_baseline_readback.json",
     "next_model_contract": "experiments/g9-p53/p0_writing_competence/capacity_probe_14b/preseal.json",
     "next_runner": "experiments/g9-p53/p0_writing_competence/capacity_probe_14b/run.cjs",
     "primary_unexposed_dev": [
@@ -166,6 +168,12 @@
       "SCI01",
       "NAR02"
     ],
-    "KSGT_effect": "NOT_TESTED"
+    "KSGT_effect": "NOT_TESTED",
+    "run_id": 37782329888,
+    "model_weight_sha256": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0",
+    "generated": 4,
+    "format_two_paragraphs": 3,
+    "genre_authority_problem": "STRICT_SOURCE_FACTS_VS_FICTIONAL_LICENSE_MUST_BE_SEPARATED",
+    "originals_drive": "https://drive.google.com/drive/folders/1CHaD1YwJwv9QxHTX_nVFPn-J3m_KOGmQ"
   }
 }
