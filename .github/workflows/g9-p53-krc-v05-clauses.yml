@@ -1,0 +1,49 @@
+name: G9-P53 KRC v0.5 Korean Clause Composition Court
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v05/**"
+      - ".github/workflows/g9-p53-krc-v05-clauses.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-compose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Test discourse referents, conjunctive predicates and source semantics
+        run: node --test experiments/g9-p53/krc_v05/tests/*.test.cjs
+      - name: Materialize Korean original and composed passages
+        run: |
+          mkdir -p results
+          node experiments/g9-p53/krc_v05/composer.cjs results/krc_v05_four_korean_passages.json
+          node - <<'JS'
+          const fs=require("node:fs");
+          const z=JSON.parse(fs.readFileSync("results/krc_v05_four_korean_passages.json"));
+          if(z.outputs!==4||z.actual_join_operations!==2||z.actor_ellipsis_operations!==2||
+             !z.paired.every(p=>p.changed_surface&&p.same_source_event_hashes&&
+               p.canonical_sentences>p.composed_sentences)||
+             z.documents.some(d=>d.paragraphs!==2||d.source_event_count!==5)||
+             z.human_ratings!=="NONE"||z.model_calls!==0||z.full_korean_semantic_equivalence!=="UNPROVEN")
+             throw Error("CLAUSE_COURT_AUTHORITY_OR_COVERAGE");
+          console.log(JSON.stringify({output_documents:z.outputs,joins:z.actual_join_operations,
+            ellipses:z.actor_ellipsis_operations,semantic:"NOT_PROVEN",human:"NONE"}));
+          for(const d of z.documents){
+            console.log("--- "+d.brief_id+" "+d.variant+" ---");
+            console.log(d.text);
+          }
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v05-korean-clause-and-ellipsis-passages
+          path: results/krc_v05_four_korean_passages.json
+          retention-days: 30
+          if-no-files-found: error
