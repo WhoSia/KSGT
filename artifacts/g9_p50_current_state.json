@@ -2,7 +2,7 @@
   "schema": "ksgt.g9.p50.current-state.v1",
   "phase": "G9-P50",
   "generation": "IX",
-  "status": "OPEN_SLICE_RUNNING_SOURCE_CONDITIONING_AND_CONTAMINATION_AUDIT_HOLD",
+  "status": "OPEN_SLICE_BYTES_FROZEN_SOURCE_ENTRY_CI_PASS_CONTAMINATION_AND_CUSTODY_HOLD",
   "notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent": "G9-P49",
   "parent_disposition": "TERMINATED_NO_CONFIRMATORY_INFERENCE_SUCCESSOR_RECONSTITUTION_OPEN",
@@ -31,7 +31,16 @@
     "tokenizer_canonical_receipt_commit": "97a21c7c84a9af973ada88181608c3635788f4d1",
     "slm_training_regime_preseal_commit": "aedcbf7096652c390fdabc4668ca0d7bb23956f6",
     "model_training_slice_materializer_commit": "00ff32089c8467d92bb7b35f31c69d8af8840d69",
-    "model_training_slice_workflow_commit": "f99beac475126666b65e04ee7a1b24a4b373a50c"
+    "model_training_slice_workflow_commit": "f99beac475126666b65e04ee7a1b24a4b373a50c",
+    "training_slice_canonical_evidence_commit": "b6c8c5b88a856c05c7fdec35cc7d3646c5baab15",
+    "source_conditioned_entry_court_commit": "a98ccf19f03e60b355d49d758e181eefb1db513d",
+    "pia_source_id_sha_registry_commit": "bbd08d121ce9abcf25babdd1a8274fe1e331d4e5",
+    "proposer_entry_bridge_commit": "b48213a488a5d6c00d8f86bb351dc95e346f3a84",
+    "proposer_entry_tests_commit": "22ec2283b7edac114923d95175550722bcce5a41",
+    "next_token_sequence_semantics_commit": "bb96c55c53d6b8c962196e549b5a6d89ede8b42a",
+    "contamination_disjointness_court_commit": "752e98f37cedc8b993feb70ff3b33e017ef69cb0",
+    "public_token_artifact_upload_removed_commit": "1a3529c69f8ad2a99a87bcea5ae8572d083904b3",
+    "rust_real_artifact_verification_commit": "7bf6b5f790e2f71eb4f0dc3628aca0ddb1a6f8e7"
   },
   "inherited_p49": {
     "failure": "PROPOSAL_INSTRUMENT_ADEQUACY_FAILURE",
@@ -68,11 +77,11 @@
     "scope": "INSTRUMENT_ENTRY_ONLY_NOT_POPULATION_QUALITY"
   },
   "next_execution": [
-    "Read back slice retry 37712642109 and artifact hashes; no training authorization from queued/in-progress state.",
-    "Close source-conditioned proposer serialization and decoding contract before interpreting PIA competence.",
-    "Satisfy corpus preseal near-duplicate screen and independent record disjointness evidence, or explicitly narrow authority without claiming gate PASS.",
-    "Resolve EOS packing/reset objective semantics across train and dev.",
-    "Retain original token budget, frozen corpus revision, tokenizer, and PIA adjudication thresholds."
+    "Read independent Rust artifact verification CI 37717111359; distinguish byte proof from unverified record-set proof.",
+    "Materialize independently checkable C1/C2 record/text membership sets with frozen replay; audit heldout source containment C3 without hidden references or PIA outcomes.",
+    "Review the existing publicly downloadable reversible-token artifact under data-use/license custody; prevent further public token dataset uploads.",
+    "Implement and smoke-test S0 next-token training with 99,999,999 target positions under presealed window/EOS/optimizer semantics, without data-dependent hyperparameter tuning.",
+    "Do not open S0 training or PIA authority until contamination and custody gates are satisfied; RIVAL_EDIT remains material non-AR rival."
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale.",
@@ -193,9 +202,16 @@
     "optimizer_steps": 1526,
     "model_training_authorized": false,
     "slice_run_id": 37712642109,
-    "slice_status": "QUEUED_AT_LAST_READBACK",
+    "slice_status": "SUCCESS_BYTE_RECEIPT_FROZEN",
     "previous_attempt": "ENGINEERING_FAILURE_EXIT_134",
-    "previous_failure_receipt": "artifacts/g9_p50_training_slice_attempt1_failure.json"
+    "previous_failure_receipt": "artifacts/g9_p50_training_slice_attempt1_failure.json",
+    "train_tokens": 100000000,
+    "dev_tokens": 2000000,
+    "actual_loss_targets_train": 99999999,
+    "actual_loss_targets_dev": 1999999,
+    "training_slice_artifact_id": 11523419179,
+    "training_slice_zip_sha256": "b68ad5b12e906f8c8dcbaf7be5862b913cf804808b0fe7e55f1e3de492eccf29",
+    "canonical_evidence": "artifacts/g9_p50_training_slice_canonical_evidence.json"
   },
   "polyglot_toolchain": {
     "doctrine": "LANGUAGE_FOLLOWS_THE_BOTTLENECK_CAPABILITY_VISIBLE_POLYGLOT_WHEN_EARNED",
@@ -205,7 +221,12 @@
     "rust_ci_commit": "d30316759a68cc272435bd257e6020c78321f985",
     "rust_ci_status": "QUEUED_OR_UNVERIFIED",
     "migration": "NO_PYTHON_REWRITE",
-    "scientific_authority": "NONE_UNTIL_SUCCESSFUL_ARTIFACT_AND_VALIDATION"
+    "scientific_authority": "NONE_UNTIL_SUCCESSFUL_ARTIFACT_AND_VALIDATION",
+    "typescript": "Source-conditioned proposal entry, candidate attempt receipts, paired U/K identity invariants",
+    "typescript_ci_run": 37717053305,
+    "typescript_ci_conclusion": "success",
+    "rust_artifact_ci_run": 37717111359,
+    "rust_artifact_ci_status": "IN_PROGRESS_AT_READBACK"
   },
   "identifiability_risk_audit": {
     "receipt": "artifacts/g9_p50_identifiability_risk_audit.json",
@@ -217,5 +238,37 @@
       "EOS_PACKING_SEMANTICS_UNDECLARED"
     ],
     "authority": "AUDIT_ONLY_NO_MODEL_TRAINING_AUTHORIZATION"
+  },
+  "source_conditioning_court": {
+    "status": "FROZEN_CODE_TESTED",
+    "ci_run": 37717053305,
+    "ci_conclusion": "success",
+    "packet_count": 24,
+    "packet_sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+    "tasks": "16 KoLLA correction + 8 StyleKQC meaning-preserving paraphrase",
+    "frozen_input_src_context": 768,
+    "generated_output_budget": 256,
+    "candidates_per_source": 4,
+    "pia_primary_candidate_index": 0,
+    "source_bound_by_sha256": true,
+    "frozen_source_id_sha_registry": "experiments/g9-p50/pia_source_id_sha_registry.json",
+    "zero_pretraining_occurrences_of_control_markers": true,
+    "proposer_checkpoint_trained": false,
+    "pia_executed": false
+  },
+  "contamination_court": {
+    "status": "C0_PASS_C1_GENERATOR_ATTESTED_ONLY_C2_C5_PENDING",
+    "protocol": "experiments/g9-p50/contamination_disjointness_court.json",
+    "near_duplicate_exclusion_proven": false,
+    "record_overlap_independently_proven": false,
+    "p47_to_p49_full_protection_audited": false
+  },
+  "custody_and_rights": {
+    "status": "PUBLIC_TOKEN_STREAM_RECONSTRUCTIBILITY_RISK_OPEN",
+    "existing_public_artifact_id": 11523419179,
+    "token_stream_is_substantially_text_reconstructible": true,
+    "public_future_workflow": "MANIFEST_ONLY_DISPATCH_ONLY",
+    "source_text_rights_not_blanket_cleared": true,
+    "existing_artifact_deleted": false
   }
 }
