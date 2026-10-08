@@ -1,0 +1,65 @@
+{
+  "schema": "ksgt.g9.p53.krc-v01.critical-invalidity-court.v1",
+  "ruling": "CLOSED_INVALID_FOR_HUMAN_NATURALNESS_RANKING_PRESERVE_FOR_FAILURE_ANALYSIS_ONLY",
+  "trigger": "User directly inspected the original v0.1 six-brief eighteen-draft packet and identified gross semantic, format, and Korean-language failures; paired comparisons are not interpretable measures of natural prose.",
+  "scope": "The human recruitment previously proposed for KRC v0.1 is CANCELLED, not merely on hold. Earlier generated artifacts remain immutable; do not distribute the prior anonymous survey as an active study.",
+  "explicit_witnesses": [
+    {
+      "id": "EX01_B_TASK_LEAK",
+      "source": "EX01 B",
+      "witness": "제목 / 목록 / 인사말 / 인용부호 (no citation)",
+      "class": "RESPONSE_INSTRUCTIONS_REPRODUCED_INSTEAD_OF_DOCUMENT",
+      "effect": "Fails required genre and audience contract"
+    },
+    {
+      "id": "EX01_B_FALSE_CAUSE",
+      "source": "EX01 B",
+      "witness": "햇빛이 공기가 감소함으로 인해 물 온도가 상승",
+      "class": "UNLICENSED_CAUSAL_AND_SEMANTIC_CONTENT",
+      "effect": "Introduces incoherent causal account beyond observed two cups"
+    },
+    {
+      "id": "EX02_B_FALSE_NEGATION",
+      "source": "EX02 B",
+      "witness": "토양 수분과 식물 종류는 동일하지 않았다",
+      "class": "UNKNOWN_TO_FALSE_ASSERTION",
+      "effect": "Source merely said not checked whether identical; cannot assert they differed"
+    },
+    {
+      "id": "EX03_B_FALSE_SOURCE",
+      "source": "EX03 B",
+      "witness": "출발 위치를 표시하지 않았습니다",
+      "class": "EXPLICIT_FACT_CONTRADICTION",
+      "effect": "Source stated position was marked"
+    },
+    {
+      "id": "EX05_K_LEXICAL_BREAKDOWN",
+      "source": "EX05 K",
+      "witness": "대기하는 사람들에게 차례로 타격을 줄 수 있다",
+      "class": "KOREAN_LEXICAL_AND_EVENT_SEMANTIC_COLLAPSE",
+      "effect": "No meaningful description of passengers boarding bus"
+    }
+  ],
+  "experimental_design_defects": [
+    "Model is Qwen3-0.6B Q8, not representative of general-purpose frontier LLM writing competence.",
+    "All three B/A/K arms shared same 0.6B weakness; ranking between two obviously invalid outputs does not estimate useful naturalness.",
+    "System prompt explicitly listed forbidden output scaffold words, allowing possible negative-instruction priming; causality not isolated.",
+    "KRC prompt carried JSON-like symbols and longer instructions, not a clean typed-structure ablation.",
+    "Five factual sentences plus 240–400 character target can induce repetition, padding, and invention.",
+    "Automatic critic counted surface features and paragraphs but did not robustly establish source entailment, grammar or discourse quality."
+  ],
+  "corrected_protocol": {
+    "before_human": "Enforce a decoder competence floor (ordinary coherent Korean passage with correct factual relations) on new sources. If baseline fails, do not recruit readers or assign quality scores.",
+    "higher_capacity_pilot": "experiments/g9-p53/krc_v03/constitution.json",
+    "arms": [
+      "B_CLEAN",
+      "U_PLAIN_PLAN",
+      "K_TYPED_PLAN"
+    ],
+    "independent_semantics": "Must separately identify negation, agent/action, comparison direction, source uncertainty and illicit causal upgrades.",
+    "human_review": "CANCELLED_FOR_V01; no replacement until model demonstrates minimum aptitude and study can ask discriminating linguistic questions.",
+    "scientific_ceiling": "The invalidity court rejects v0.1 as a naturalness evaluation instrument; it does not imply all Korean writing hypotheses or the KRC concept are false."
+  },
+  "user_goals": "Produce logically faithful, context-appropriate Korean prose that is less stereotypically AI-like than a credible general model baseline. Quality means usable prose, not strings that escape detection.",
+  "authority": "QUALITATIVE_FAILURE_RULING_WITH_SOURCE_WITNESSES_NO_NUMERICAL_HUMAN_CLAIM"
+}
