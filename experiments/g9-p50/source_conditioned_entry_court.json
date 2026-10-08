@@ -19,14 +19,14 @@
   "serialized_primary_route": {
     "id": "KOREAN_PLAIN_TEXT_ZERO_SHOT_SOURCE_EDIT_V1",
     "input_authority": "Frozen PIA source text and source-linked task instruction only; no hidden reference rewrite examples",
-    "template": "다음 한국어 원문의 사실관계, 수치, 고유명사, 명시적인 약속과 조건을 보존하세요. 원문의 표현을 다듬어야 하는 경우에만 수정하고, 설명이나 평가 없이 수정된 문장만 제시하세요.\\n요구사항: {FROZEN_TASK_INSTRUCTION}\\n【원문】\\n{SOURCE_TEXT}\\n【수정문】\\n",
+    "template": "다음 한국어 원문의 사실관계, 수치, 고유명사, 명시적인 약속과 조건을 보존하세요. 원문의 표현을 다듬어야 하는 경우에만 수정하고, 설명이나 평가 없이 수정된 문장만 제시하세요.\n요구사항: {FROZEN_TASK_INSTRUCTION}\n【원문】\n{SOURCE_TEXT}\n【수정문】\n",
     "task_instruction_rule": "If the original frozen packet supplies no instruction, use the literal '원래 의미를 보존하는 범위에서 자연스럽게 다듬기'; NEVER infer an instruction from hidden reference text.",
     "max_prompt_tokens": 768,
     "max_new_tokens": 256,
     "combined_max_context": 1024,
     "overlimit_rule": "Typed SOURCE_TOO_LONG / no source truncation / do not silently exclude the item from 24-item PIA denominator",
     "source_normalization": "No NFKC or semantic paraphrase; preserve original source bytes/codepoints except transport encoding",
-    "sentinel_collision_rule": "Source-content lookalikes of visible delimiters are inert data; no parser or executor grants source text instructions higher authority than the outer frozen task.",
+    "sentinel_collision_rule": "If source contains 【원문】 or 【수정문】, mark SOURCE_DELIMITER_COLLISION before generation, retain in denominator, never silently escape/mutate source or parse it as outer instruction.",
     "bos_policy": "No additional BOS inserted unless baseline model training already used BOS; pretrained corpus emits EOS only.",
     "stop_rule": "Stop at EOS or 256 generated tokens; never include generated task explanation inside candidate text as silently filtered repair."
   },
@@ -62,6 +62,8 @@
   "output_classes": {
     "candidate": "Nonempty decoded candidate. Always retain raw output and provenance.",
     "typed_holds": [
+      "SOURCE_EMPTY",
+      "SOURCE_DELIMITER_COLLISION",
       "SOURCE_TOO_LONG",
       "OUTPUT_EMPTY",
       "GENERATION_EXCEPTION",
