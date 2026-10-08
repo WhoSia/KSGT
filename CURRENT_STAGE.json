@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P53",
   "stage_type": "INDEXED_SOURCE_SPAN_PROTOCOL_COURT",
-  "status": "OPEN_P53_KRC_V01_GENERATION_RUN_COMPLETE_HUMAN_NATURALNESS_HOLD",
+  "status": "OPEN_P53_KRC_V02_BOUNDED_COURT_CLOSED_RESEARCH_RETURN_TO_KOREAN_CONSTRUCTIONS",
   "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "parent_stage": "G9-P52",
   "latest_closed_stage": "G9-P52",
@@ -20,10 +20,18 @@
     "independent_semantic_fidelity": "NOT_ADJUDICATED",
     "blind_reader_naturalness": "NOT_COLLECTED",
     "KRC_better_than_baseline": "NO_CLAIM",
-    "governance_effect": "NOT_CURRENT_STUDY"
+    "governance_effect": "NOT_CURRENT_STUDY",
+    "generator_critic_transport": "EXECUTED_BOUNDED_TWO_DOCS",
+    "spontaneous_repair": "NONE",
+    "injected_error_repair": "3_OF_3_MECHANICAL_ONLY",
+    "korean_semantic_critic": "DISPROVEN_BY_THREE_ADVERSARIAL_CONTRADICTIONS",
+    "natural_korean_improvement": "NOT_IDENTIFIED",
+    "human_reader_naturalness": "ON_HOLD_NO_RATINGS",
+    "weight_updates": "NONE"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
+    "artifacts/g9_p53_krc_v02_terminal_verdict.json",
     "artifacts/g9_p53_krc_v01_terminal_readback.json",
     "artifacts/g9_p53_current_state.json",
     "artifacts/g9_p53_indexed_regression_evidence.json",
@@ -45,8 +53,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "OPTIONAL: Anonymous reading of the three blinded six-pair forms; no human data has been collected.",
-  "next_scientific_action": "Preserve KRC v0.1 outcomes. Move from a monolithic model-fed formal plan to source-atom-local realization plus deterministic Korean document composition on NEW writing briefs; evaluate separate factual licensing and blind idiomaticity, not grader reward.",
+  "next_human_action": "OPTIONAL_USER_READER_RECRUITMENT: blinded HTML three-form survey file; no actual responses submitted.",
+  "next_scientific_action": "Treat v0.2 G/V as bounded research outcome, not general-purpose quality solution. Define Korean construction calculus with typed semantic witnesses for negation, polarity, comparison and discourse then test genuinely changed (not copied) idiomatic prose on fresh briefs; leave human jury on hold.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -66,7 +74,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "KRC-v0.1 completed readback / KRC-v0.2 local clause realization design next",
+  "current_substage": "KRC v0.2 mechanical game executed; source-copy equilibrium and semantic critic false negatives isolated",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -79,6 +87,14 @@
     "paragraph_compliance": "B_1/6_A_1/6_K_0/6",
     "source_atom_preservation_symbolic": "30/30_LITERAL",
     "comparative_quality": "NOT_IDENTIFIED_NO_HUMAN_READERS",
-    "verified_drive": "https://drive.google.com/drive/folders/13f5tV1fzGWr1w8H-nlvbwSDAy2E5RJhm"
+    "verified_drive": "https://drive.google.com/drive/folders/13f5tV1fzGWr1w8H-nlvbwSDAy2E5RJhm",
+    "krc_v02_terminal": "artifacts/g9_p53_krc_v02_terminal_verdict.json",
+    "krc_v02_actual_run": 37727690693,
+    "krc_v02_stress_run": 37728285311,
+    "krc_v02_outputs": "2/2_TWOPARAGRAPHS_10/10_SLOTS_ACCEPTED_9/10_VERBATIM",
+    "krc_v02_actual_repair": "ZERO_ORDINARY_RUN_THREE_SUCCESSFUL_MECHANICAL_REPAIRS_ON_INJECTED_ERRORS",
+    "critic_semantic_soundness": "FALSE_NEGATION_DIRECTION_ACTION_POLARITY",
+    "human_naturalness": "NOT_PERFORMED",
+    "next_linguistic_mechanism": "KOREAN_PREDICATE_ARGUMENT_NEGATION_TOPIC_FOCUS_PROOF_OBLIGATIONS"
   }
 }
