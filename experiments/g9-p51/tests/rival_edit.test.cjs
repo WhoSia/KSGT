@@ -2,7 +2,7 @@
 const {test}=require("node:test");
 const assert=require("node:assert/strict");
 const {sha,assertPreseal,singlePass,applyRecipe,cargoLoss,emitCandidateSet,packetRun}=require("../rival_edit.cjs");
-const preseal=require("../../rival_edit_preseal.json");
+const preseal=require("../rival_edit_preseal.json");
 
 test("frozen operator budget is checked, no dependency on protected packet",()=>{
   assert.doesNotThrow(()=>assertPreseal());
