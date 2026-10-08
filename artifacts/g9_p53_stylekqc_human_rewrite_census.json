@@ -1,0 +1,49 @@
+{
+  "schema": "ksgt.g9p53.stylekqc_topic_test_census.v1",
+  "authority": "RETROSPECTIVE_DESCRIPTIVE_HUMAN_PARAPHRASES_NOT_WRITER_EDIT_CHOICES",
+  "source": {
+    "repo": "cynthia/stylekqc",
+    "path": "topic/test.tsv",
+    "commit": "f12bff2c26779969e1f8e54e1b98fcb8cfeeff77",
+    "git_blob": "27846d77675f45284873d45658efc31996396bbf",
+    "raw_bytes": 377633,
+    "repo_declared_license": "CC-BY-SA-4.0; published paper separately CC-BY-NC-4.0"
+  },
+  "rows": 4800,
+  "groups": 480,
+  "topic_distribution": {
+    "0": 800,
+    "1": 800,
+    "2": 800,
+    "3": 800,
+    "4": 800,
+    "5": 800
+  },
+  "unique_forms_per_group": {
+    "9": 3,
+    "10": 477
+  },
+  "full_ten_distinct_groups": 477,
+  "groups_with_duplicates": 3,
+  "cross_half_exact_match_groups": 0,
+  "within_half_duplicate_groups": 3,
+  "literal_substring_occurrences": {
+    "그중": 0,
+    "나머지": 1
+  },
+  "limitations": {
+    "independent_human_writing_quality": false,
+    "partitive_antecedent_gold": false,
+    "context_bearing_keep_edit_actions": false,
+    "prose_genre": "SHORT_DIRECTIVES_ONLY",
+    "sentence_bytes_in_receipt": false
+  },
+  "verification": {
+    "remote_github_actions_run": 37791591135,
+    "status": "SUCCESS",
+    "artifact_id": 11556950696,
+    "original_tsv_republished": false,
+    "source_verified_by_git_blob_sha": true,
+    "verdict": "DESCRIPTIVE_CENSUS_ONLY_NO_CAUSAL_WRITING_BENEFIT"
+  }
+}

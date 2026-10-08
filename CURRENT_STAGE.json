@@ -43,8 +43,8 @@
     "genre_authority_v01": "REMOTE_CI_SUCCESS_24_SYNTHETIC_CONTRACT_9_PRIOR_PARTITIVE_NO_REAL_WRITING_EFFECT",
     "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES",
     "writer_review_v02": "REMOTE_GITHUB_CI_SUCCESS_15_NEW_PLUS_9_KRC_TESTS_NONDESTRUCTIVE_WRITER_CLI_NO_HUMAN_QUALITY",
-    "writer_review_v03": "OFFLINE_POLICY_FIX_LOCAL_11_TESTS_PASS_GITHUB_CI_PENDING_NO_HUMAN_PREFERENCE",
-    "stylekqc_empirical_census": "RETROSPECTIVE_PINNED_PUBLIC_DATA_4800_ROWS_480_GROUPS_AGGREGATE_ONLY_CI_PENDING"
+    "writer_review_v03": "REMOTE_CI_SUCCESS_HIGH_LEVEL_CONTEXTUAL_INTENT_HOLD_11_NEW_TESTS_NO_AUTO_PREFERENCE",
+    "stylekqc_empirical_census": "PINNED_REAL_HUMAN_PARAPHRASE_4800_ROWS_480_GROUPS_477_TEN_DISTINCT_NO_PARTITIVE_GOLD"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -75,7 +75,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "Address v0.2 high-level writer CONTEXTUAL versus lower-level CLARIFY authority conflict; use descriptive real StyleKQC forms for candidate diversity, not KEEP/EDIT or partitive labels. Obtain source-disjoint direct Korean writer edit choices or legitimate context before auto preference.",
+  "next_scientific_action": "Keep source-only KEEP/EDIT authority on HOLD (G8 S11). Acquire independent same-context Korean human rewrite preference/edit actions and natural partitive antecedent context. Genre F/E/L/W and human paraphrase multi-candidate surface are available, but no human writer quality is established.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -231,8 +231,23 @@
     "evidence_level": "DESCRIPTIVE_STYLE_ONLY_NO_DIRECT_WRITER_PREFERENCE",
     "new_writer_authority_local_tests": 11,
     "new_census_synthetic_tests": 8,
-    "ci": "PENDING",
+    "ci": "SUCCESS",
     "model_calls": 0,
-    "borrowed_server_used": false
+    "borrowed_server_used": false,
+    "run_id": 37791591135,
+    "artifact_id": 11556950696,
+    "remote_test_groups": {
+      "v03_new": 11,
+      "v02_regression": 15,
+      "krc_v07_regression": 9,
+      "census_synthetic": 8
+    },
+    "pinned_source_verified": true,
+    "corpus_metadata_receipt": "artifacts/g9_p53_stylekqc_human_rewrite_census.json",
+    "license_scope": "OFFICIAL_SOURCE_REPO_CC_BY_SA_4_PROCEEDINGS_PAPER_CC_BY_NC_4_SEPARATE_ARTIFACTS",
+    "human_writer_edit_value": "NOT_COLLECTED",
+    "partitive_antecedent_gold": "NONE",
+    "new_llm_model_calls": 0,
+    "borrowed_server": "NOT_USED"
   }
 }
