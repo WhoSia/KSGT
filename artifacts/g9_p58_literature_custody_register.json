@@ -4,7 +4,7 @@
   "scope": "P53-P57 cited and proposed + P58 priority new syntax/pragmatics/discourse/generation evaluation",
   "caveat": "Drive filename, title and DOI searches are not mathematically exhaustive over all user folders; absence means not found in this audit, not proof of global non-possession.",
   "raw_public_oa_intake": "https://drive.google.com/file/d/1DO69U-BAu5enDzp7uMv6U4a4s7clSwLs/view",
-  "oa_pdf_sha256_archive": "1bf00a38602ec4da76e9ff4118cc6c67d6f07f90bc7cf9172d6b38531f13f21e",
+  "oa_pdf_sha256_archive": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef",
   "summary": {
     "CONFIRMED_EXISTING_DRIVE_PDF": 25,
     "NEWLY_ACQUIRED_OPEN_ACCESS_IN_ZIP_00_INTAKE": 5,
@@ -254,8 +254,7 @@
       "status": "NEWLY_ACQUIRED_OPEN_ACCESS_IN_ZIP_00_INTAKE",
       "evidence_url": "https://aclanthology.org/2024.lrec-main.1373/",
       "drive_url": "https://drive.google.com/file/d/1DO69U-BAu5enDzp7uMv6U4a4s7clSwLs/view",
-      "next_action": "CANONICAL_PDF_SPLIT_WITH_HASH_AUDIT",
-      "filename_note": "Original first author is Phil Ostheimer; interim intake bundle PDF member name reflects obsolete collector label, pending normalization."
+      "next_action": "CANONICAL_PDF_SPLIT_WITH_HASH_AUDIT"
     },
     {
       "author": "Shin 2017",
@@ -419,5 +418,7 @@
       "access_note": "BIBLIOGRAPHIC_LINK_CHECK_REQUIRED",
       "next_action": "RIGHTS_CHECKED_SOURCE_DOWNLOAD_OR_REQUEST"
     }
-  ]
+  ],
+  "oa_pdf_zip_bytes": 6287968,
+  "oa_intake_corrected_at": "2026-10-09"
 }

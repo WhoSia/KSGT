@@ -4,19 +4,21 @@
   "generation": "IX",
   "current_stage": "G9-P58",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_G9_P58_PARTITIVE_SEMANTIC_TYPING_AND_REFERENTIAL_ECONOMY",
+  "status": "CLOSED_G9_P58_BOUNDED_SEMANTIC_TYPE_PASS_REAL_KOREAN_GENRE_PREFERENCE_HOLD",
   "canonical_notion_id": "3f3ef561-cf92-81d9-8679-febbcf5ae3b3",
   "parent_stage": "G9-P57",
-  "latest_closed_stage": "G9-P57",
+  "latest_closed_stage": "G9-P58",
   "latest_closed_artifact": {
-    "stage": "G9-P57",
-    "terminal_file": "artifacts/g9_p57_terminal_ruling.md",
-    "disposition": "CLOSED_BOUNDED_EXISTING_SOURCE_AUDIT_PASS_TARGET_SPECIFIC_GOLD_AND_DISAGREEMENT_HOLD",
-    "ci_run": 37805524779,
-    "ci_tests": "19_OF_19",
-    "inspected_sources": 5,
-    "adjacent_native_human_gold": 2,
-    "explicit_partitive_gold": 0
+    "stage": "G9-P58",
+    "terminal_file": "artifacts/g9_p58_terminal_ruling.md",
+    "disposition": "CLOSED_BOUNDED_SEMANTIC_TYPE_GUARD_PASS_REAL_PREFERENCE_AND_GOLD_HOLD",
+    "ci_run": 37808239662,
+    "remote_tests": "16_OF_16_PASS",
+    "literature_total": 48,
+    "drive_present_papers": 25,
+    "new_oa_pdf_intake": 5,
+    "nonverified_originals": 18,
+    "corrected_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
   "current_artifact": "experiments/g9-p58/literature_audit/BIBLIOGRAPHY_CUSTODY.md",
@@ -88,11 +90,16 @@
     "p57_humanize": "LITERATURE_GROUNDED_NATURALNESS_AXES_NOT_HUMAN_PREFERENCE_OR_GENERATOR_IMPROVEMENT",
     "p57_ci": "SUCCESS_37805524779_19_OF_19_AUTHORITY_TESTS",
     "p57_paper_priority": "SHIN_2017_PARTITIVE_DESCRIPTIONS_SONG_2021_AMONG_DIAGNOSTICS",
-    "p58_literature": "48_PAPER_RECORDS_25_ALREADY_OWNED_5_NEW_OA_INTAKE_18_NO_INDEPENDENT_DRIVE_FILE_FOUND",
+    "p58_literature": "48_RECORDS_25_PRESENT_5_INTAKE_OA_18_NO_INDEPENDENT_DRIVE_FILE_FOUND",
     "p58_five_oa_zip": "PRIVATE_DRIVE_00_INTAKE_ID_1DO69U-BAu5enDzp7uMv6U4a4s7clSwLs",
     "p58_semantics": "DECLARED_TYPE_SOURCE_WITNESS_ONLY_NOT_NATURAL_KOREAN_SEMANTIC_GOLD",
     "p58_human_preference": "NOT_OBSERVED",
-    "p58_remote_ci": "PENDING"
+    "p58_remote_ci": "PENDING",
+    "p58": "CLOSED_TYPED_TRUE_PSEUDO_KIND_MASS_EVENT_PARTITIVE_SOURCE_REVIEW_ONLY",
+    "p58_ci": "SUCCESS_37808239662_16_OF_16_TYPED_SYNTHETIC",
+    "p58_partitive_gold": "NONE_INDEPENDENTLY_TYPED_IN_PRIVATE_25_GEJUNG_CONTEXTS",
+    "p58_reader_naturalness": "NOT_TESTED_DISCOURSE_GENRE_AND_WRITER_PREFERENCE_DECLARATIONS_NOT_AUTHORITATIVE",
+    "p58_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -122,8 +129,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE",
-  "next_scientific_action": "Run 16 typed contrast controls and preserve original discourse-given reference. Close P58 promptly with separate holds on semantic parser and independent human naturalness evidence.",
+  "next_human_action": "Optionally approve P59 formal name; no friend's server or new large downloads requested.",
+  "next_scientific_action": "P58 CLOSED. Retain 18 separately unlocated publication originals as acquisition queue with rights checked. Future P59 must not infer human Korean preference from style distributions or typed synthetic test pass.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -143,7 +150,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "Typed true/pseudo/kind/measure/event partitive court",
+  "current_substage": "TERMINAL_P58_CLOSED_SEMANTIC_TYPES_AND_LICENSED_PAPER_INTAKE",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -346,10 +353,11 @@
     "ci": "PENDING"
   },
   "next_stage_proposal": {
-    "stage": "G9-P58",
-    "formal_name_proposed": "KSGT Generation IX G9-P58 — Partitive Semantic Typing, Discourse-Given Set Recovery & Genre-Conditioned Referential Economy",
-    "canonical_name_status": "USER_INSTRUCTED_TO_PROCEED",
-    "status": "OPEN",
+    "stage": "G9-P59",
+    "formal_name_proposed": "KSGT Generation IX G9-P59 — Discourse-Given Reference Choice, Reader-State Alternatives & Human Preference Contact",
+    "status": "NOT_YET_OPENED",
+    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
+    "one_question": "Can existing source-disjoint native Korean writer/reader evidence support KEEP vs overt clarification preference conditional on discourse-given set and genre?",
     "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   }
 }

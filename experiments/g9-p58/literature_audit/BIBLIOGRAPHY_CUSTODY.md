@@ -4,7 +4,7 @@
 
 **Rule:** Title/DOI search misses DO NOT assert paper is absent from the entire Drive. Native Docs, combined proceedings, and contents buried in ZIPs may contain mentions; source access/redistribution rights remain separate from metadata discovery. Do not duplicate confirmed canonical files. **No upload of restricted copyrighted manuscripts.**
 
-**Verified new OA PDF bundle:** [five originals in 00_INTAKE](https://drive.google.com/file/d/1DO69U-BAu5enDzp7uMv6U4a4s7clSwLs/view), archive SHA-256 `1bf00a38602ec4da76e9ff4118cc6c67d6f07f90bc7cf9172d6b38531f13f21e`; 5 PDFs, 6,287,960 bytes ZIP, source URLs, SHA256SUMS and ACL post-2016 CC-BY-4.0 source register. **Not yet individually canonical 10_PAPERS.**
+**Verified new OA PDF bundle:** [five originals in 00_INTAKE](https://drive.google.com/file/d/1DO69U-BAu5enDzp7uMv6U4a4s7clSwLs/view), archive SHA-256 `ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef`; 5 PDFs, 6,287,968 bytes ZIP, source URLs, SHA256SUMS and ACL post-2016 CC-BY-4.0 source register. **Not yet individually canonical 10_PAPERS.**
 
 ## A. Existing original PDFs, NO DUPLICATE (25)
 1. [Choe 2021 — Interpretation and Processing of Null and Overt Pronouns in Korean](https://drive.google.com/file/d/1cKp51GEWKfzr99WDHUA7geX4fkbVNWBd/view) [syntax]
