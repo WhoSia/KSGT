@@ -1,0 +1,82 @@
+{
+  "schema": "ksgt.g9.p50.identifiability-and-admission-risk-audit.v1",
+  "phase": "G9-P50",
+  "status": "AUDIT_ONLY_NO_PRESEAL_RETROFIT_NO_AUTHORITY_PROMOTION",
+  "question": "Which failures can make a trained Korean next-token model scientifically inadequate as a source-conditioned writing proposer despite a successful token-stream receipt?",
+  "examined_before_model_loss_or_pia_outcomes": true,
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "CRITICAL",
+      "issue": "Proposal task mismatch: unsupervised FineWeb2 next-token training does not itself train source-conditioned rewriting or protected-cargo obedience",
+      "risk": "PIA failure may measure instruction-following or source-to-candidate interface failure, not an endogenous Korean language competence threshold",
+      "mandatory_action": "Freeze source-conditioning serialization (<src>/<ctx>/<cand>), candidate decoding policy, budget, and source-conditioned entry probe before checkpoint comparison; do not add task supervision after outcomes under the same confirmatory claim.",
+      "authority": "BLOCKS_PIA_CAUSAL_INTERPRETATION"
+    },
+    {
+      "id": "R2",
+      "severity": "HIGH",
+      "issue": "Exact record-ID/text hashes only protect sampled record identities; near-duplicate and paraphrase screening required by corpus-reservoir preseal is not materialized",
+      "risk": "PIA/heldout leakage and corpus train/dev semantic duplication remain possible even if recorded overlap equals zero",
+      "mandatory_action": "Treat near-duplicate exclusion as an unsatisfied presealed obligation; require source-surface near-duplicate certificate or explicitly downgrade adequacy inference and keep training authorization HOLD.",
+      "authority": "MODEL_TRAINING_GATE_HOLD_PENDING_NEAR_DUPLICATE_AUDIT"
+    },
+    {
+      "id": "R3",
+      "severity": "HIGH",
+      "issue": "Generator-attested zero overlap cannot be independently recomputed from binary token streams and summary-only manifest",
+      "risk": "Independent Rust validator checks byte identity and declarations, not set disjointness",
+      "mandatory_action": "Future artifact may include sorted SHA-256 record hash lists or a Merkle/sorted-set proof sufficient for direct disjointness audit without raw text; preserve exact preselected token stream and do not silently replace it.",
+      "authority": "INDEPENDENT_RECORD_DISJOINTNESS_NOT_PROVEN"
+    },
+    {
+      "id": "R4",
+      "severity": "HIGH",
+      "issue": "100M tokens per checkpoint keeps exposure fixed but FLOPs, steps-time, gradient noise and optimal LR/compute vary with parameter count",
+      "risk": "Any observed capacity gradient is conditional on presealed optimization regime; not universal minimum competence or compute-optimal capacity",
+      "mandatory_action": "Report nonembedding capacity, total parameters, exact exposure, estimated FLOPs, wall-time/hardware separately. Secondary compute-matched experiment requires fresh prospective lane.",
+      "authority": "FAMILY_LOCAL_EQUAL_TOKEN_ONLY"
+    },
+    {
+      "id": "R5",
+      "severity": "HIGH",
+      "issue": "Decoder-only packed next-token objective across EOS document separators allows context from preceding documents unless attention reset is implemented",
+      "risk": "Synthetic cross-document information changes the conditional distribution; train/dev loss can differ by packing implementation",
+      "mandatory_action": "Declare whether EOS is prediction-only boundary or attention-reset boundary; confirm train and dev implementation parity and forbid undocumented semantics swap.",
+      "authority": "IMPLEMENTATION_CONTRACT_MISSING"
+    },
+    {
+      "id": "R6",
+      "severity": "MEDIUM",
+      "issue": "Diagnostic tokenizer-only sample and model pretraining stream may share source reservoir and stylistic biases, although record-disjoint",
+      "risk": "In-domain tokenization performance cannot establish general Korean genre coverage",
+      "mandatory_action": "Report genre/register and host concentration; PIA task family is not population representativeness.",
+      "authority": "NO_POPULATION_GENERALIZATION"
+    },
+    {
+      "id": "R7",
+      "severity": "MEDIUM",
+      "issue": "PIA 24-task floor 18 repairable-or-acceptable with gross reject maximum 4 is a finite operational admission test",
+      "risk": "Measurement uncertainty and dependent cases limit precision; PIA_PASS is not evidence of human burden or broad quality",
+      "mandatory_action": "Keep task-family counts, confidence intervals, protected cargo veto and blind human adjudication; thresholds not retuned.",
+      "authority": "INSTRUMENT_ENTRY_ONLY"
+    },
+    {
+      "id": "R8",
+      "severity": "MEDIUM",
+      "issue": "Raw web text packaging license is not blanket underlying-text rights clearance",
+      "risk": "Redistribution and deployment could require independent rights review",
+      "mandatory_action": "Keep raw text out of repository/artifacts, record source provenance, defer commercial/deployment rights claims.",
+      "authority": "RIGHTS_REVIEW_REQUIRED"
+    }
+  ],
+  "immediate_verdict": "DATA_SLICE_ARTIFACT_PENDING; SCIENTIFIC_DESIGN_REQUIRES_SOURCE_CONDITIONING_AND_NEAR_DUPLICATE_COURTS_BEFORE_TRAINING_AUTHORIZATION",
+  "non_actions": [
+    "Do not change the frozen 100M/2M token allocation from audit alone.",
+    "Do not silently add supervised instruction data after PIA outcome.",
+    "Do not label engineering success as proposer adequacy.",
+    "Do not replace the existing canonical tokenizer or source packet."
+  ],
+  "next_scientific_step": "Get byte-level artifact receipt; separately resolve R1/R2/R3/R5 with prospective contracts and checks before interpreting model-vs-governance experiments.",
+  "core_return_edge": "P50 exists to identify governable Korean realization; building a generic LM without source-conditioned proposal evidence is enabling debt, not completion."
+}
