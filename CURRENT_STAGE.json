@@ -4,15 +4,17 @@
   "generation": "IX",
   "current_stage": "G9-P55",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_G9_P55_CONSTRUCTION_TRANSPORT_EVIDENCE_COURT",
+  "status": "CLOSED_G9_P55_BOUNDED_QUANTIFIER_TRANSPORT_PASS_WRITER_GOLD_AND_QUALITY_HOLD",
   "canonical_notion_id": "3f3ef561-cf92-8140-aaae-fbeaae1fb8b7",
   "parent_stage": "G9-P54",
-  "latest_closed_stage": "G9-P54",
+  "latest_closed_stage": "G9-P55",
   "latest_closed_artifact": {
-    "stage": "G9-P54",
-    "terminal_file": "artifacts/g9_p54_terminal_ruling.md",
-    "disposition": "CLOSED_BOUNDED_PASS_WITH_GOLD_AND_HUMAN_CHOICE_HOLD",
-    "main_parent": "3a6c5a253c24ef8109daad503271f36a1e79f793"
+    "stage": "G9-P55",
+    "terminal_file": "artifacts/g9_p55_terminal_ruling.md",
+    "disposition": "CLOSED_BOUNDED_PASS_HUMAN_WRITER_GOLD_AND_QUALITY_HOLD",
+    "ci_run": 37801340542,
+    "ci_new_tests": 23,
+    "ci_old_tests": 18
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
   "current_artifact": "artifacts/g9_p55_extended_target_ceiling.json",
@@ -62,10 +64,12 @@
     "p54_ci": "UNCONFIRMED_NO_RUN_OR_CHECK_VISIBLE",
     "p54_ci_postclosure": "TWO_LATER_REMOTE_RUNS_SUCCESS_37798004887_37798350587",
     "p55_preliminary": "PRESTAGE_ENGINEERING_18_LOCAL_PASS_FIVE_FORMS_REAL_TARGET_FLOOR_1_OF_25_NO_WRITER_ADVANTAGE",
-    "p55": "A1_QUOTE_TRANSPORT_ONLY_NO_INDEPENDENT_REFERENT_GOLD_NO_AUTOMATED_WRITER_PREFERENCE",
+    "p55": "CLOSED_A1_SOURCE_WITNESSED_SURFACE_CANDIDATES_3_OF_25_TARGET_SHAPES_ZERO_INDEPENDENTLY_LICENSED_REAL_EDITS",
     "p55_integer_half": "REQUIRES_DISCRETE_EVEN_SOURCE_COUNT",
     "p55_target_shape_ceiling": "SOURCE_25_EXPLICIT_COUNTER_1_PLUS_HANA_1_PLUS_HALF_1_EQUALS_3_OF_25_SHAPES_ONLY",
-    "p55_tests": "23_LOCAL_PASS_REMOTE_PENDING"
+    "p55_tests": "REMOTE_23_NEW_AND_18_REGRESSION_SUCCESS",
+    "p55_ci": "SUCCESS_RUN_37801340542",
+    "p55_syntax_vs_semantics": "FORMAL_TARGET_COVERAGE_ONLY_NOT_REFERENT_GOLD_OR_PROSE_PREFERENCE"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -95,8 +99,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE",
-  "next_scientific_action": "Execute 23 authored exact-half/one-unit counterexample probes remotely, preserve no-op, and close P55 with real 3/25 input shape bound and missing antecedent/writer gold explicit.",
+  "next_human_action": "NONE; P56 not opened",
+  "next_scientific_action": "P55 closed. Select a narrow evidence-authority path (independent antecedent adjudication or same-context human writer preferences) for a new short P-stage, not more superficial surface forms.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -116,7 +120,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "P55 exact selection-head transport and source-warrant audit",
+  "current_substage": "TERMINAL_P55_CLOSED_QUANTIFIER_SOURCE_TRANSPORT",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -319,17 +323,10 @@
     "ci": "PENDING"
   },
   "next_stage_proposal": {
-    "stage": "G9-P55",
-    "formal_name_proposed": "KSGT Generation IX G9-P55 — Construction-Aware Partitive Realization, Source-Witness Transport & Non-Destructive Writer Choice",
-    "canonical_name_status": "CONFIRMED_BY_USER",
-    "status": "OPEN",
-    "one_question": "Can five attested geujung constructions offer reviewable source-witnessed surface alternatives under strict classifier and subset warrant without auto-editing?",
-    "prelude_path": "experiments/g9-p55-prelude",
-    "test_receipt": "18_LOCAL_SYNTHTEST_PASS",
-    "real_private_target_count": "1_OF_25_FINITE_MORPHOLOGY_TARGET_ONLY",
-    "actual_licensed_rewrite_count": 0,
-    "real_antecedent_gold": 0,
-    "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD",
-    "schema": "G9-P55_ONE_QUESTION_BOUND"
+    "stage": "G9-P56",
+    "status": "NOT_YET_OPENED",
+    "canonical_name_status": "NOT_PROPOSED",
+    "next_question_candidate": "Independent contextual partitive antecedent evidence versus actual writer-choice preference on a small rights-cleared set",
+    "constraints": "ONE_QUESTION_PER_STAGE"
   }
 }
