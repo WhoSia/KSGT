@@ -86,6 +86,12 @@
               0,
               2
             ]
+          ],
+          "case_obligations": [
+            {
+              "word": "온도",
+              "role": "ACCUSATIVE"
+            }
           ]
         },
         {
@@ -115,6 +121,12 @@
               0,
               2
             ]
+          ],
+          "case_obligations": [
+            {
+              "word": "온도",
+              "role": "NOMINATIVE"
+            }
           ]
         },
         {
@@ -190,6 +202,15 @@
               2,
               3
             ]
+          ],
+          "case_obligations": [
+            {
+              "word": "나",
+              "role": "TOPIC",
+              "context": {
+                "given": true
+              }
+            }
           ]
         },
         {
@@ -218,6 +239,12 @@
               0,
               2
             ]
+          ],
+          "case_obligations": [
+            {
+              "word": "안내판",
+              "role": "NOMINATIVE"
+            }
           ]
         },
         {
@@ -270,6 +297,12 @@
               0,
               2
             ]
+          ],
+          "case_obligations": [
+            {
+              "word": "버스",
+              "role": "NOMINATIVE"
+            }
           ]
         },
         {
