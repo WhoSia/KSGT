@@ -1,0 +1,23 @@
+name: G9-P55 Proposed Partitive Writer Realizer — Offline Guard
+on:
+  push:
+    paths:
+      - 'experiments/g9-p55-prelude/**'
+      - '.github/workflows/g9-p55-partitive-prelude.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-witness-and-no-edit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test Korean construction generation and counterexamples
+        run: node --test experiments/g9-p55-prelude/partitive_realizer_v01/tests/*.test.cjs
+      - name: Verify source report is metadata only and stage not opened
+        run: |
+          node -e "const x=require('./artifacts/g9_p55_target_morphology_ceiling.json');if(x.counts.geujung_contexts!==25||x.counts.finite_integer_counter_target!==1||x.independent_antecedent_gold!==0||x.stage!=='G9-P55_PROPOSED_ONLY')process.exit(1);"
+          test ! -e NIKL_ZA_2025_v1.0.zip

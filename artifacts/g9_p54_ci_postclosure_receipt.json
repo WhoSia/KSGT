@@ -1,0 +1,15 @@
+{
+  "schema": "ksgt.g9p54.ci_postclosure_receipt.v1",
+  "terminal_state_at_closure": "UNCONFIRMED",
+  "later_observed_runs": [
+    {
+      "run_id": 37798004887,
+      "conclusion": "success"
+    },
+    {
+      "run_id": 37798350587,
+      "conclusion": "success"
+    }
+  ],
+  "interpretation": "LATER_VERIFIED_ENGINEERING_CI_ONLY_NO_SEMANTIC_GOLD_OR_REOPENING"
+}

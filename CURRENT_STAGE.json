@@ -59,7 +59,9 @@
     "p54_direct_writer_edit_preference": "NOT_OBSERVED",
     "p54_synthetic_controls": "LOCAL_17_OF_17_PASS_PUBLIC_12_CI_NOT_OBSERVED",
     "p54_real_context_contact": "25_PRIVATE_NIKL_DOCUMENT_CONTEXTS_17_OF_25_CUE_LAST2_21_OF_25_CUE_LAST5",
-    "p54_ci": "UNCONFIRMED_NO_RUN_OR_CHECK_VISIBLE"
+    "p54_ci": "UNCONFIRMED_NO_RUN_OR_CHECK_VISIBLE",
+    "p54_ci_postclosure": "TWO_LATER_RUNS_VERIFIED_SUCCESS_37798004887_37798350587_TERMINAL_AS_OBSERVED_UNCONFIRMED_PRESERVED",
+    "p55_preliminary": "PRESTAGE_ENGINEERING_18_LOCAL_PASS_FIVE_FORMS_REAL_TARGET_FLOOR_1_OF_25_NO_WRITER_ADVANTAGE"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -89,8 +91,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE",
-  "next_scientific_action": "P54 CLOSED. Separately define a new bounded stage only for independent Korean contextual antecedent annotation or actual writer editing choices; no automated gold promotion from P54 cues.",
+  "next_human_action": "Confirm or revise G9-P55 proposed formal title; no data or server work required.",
+  "next_scientific_action": "G9-P54 remains CLOSED. User to confirm G9-P55 name; provisional offline five-construction source-witnessed candidate engine built, but actual NIKL supported target grammar only 1 of 25 and no independently licensed antecedent/writer choice. Use short-stage boundary.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -313,10 +315,16 @@
     "ci": "PENDING"
   },
   "next_stage_proposal": {
-    "stage": "G9-P54",
-    "formal_name_proposed": "KSGT Generation IX G9-P54 — Context-Grounded Reference Realization, Antecedent Evidence & Writer-Choice Boundaries",
-    "canonical_name_status": "CONFIRMED_BY_USER_AND_EXECUTED",
-    "status": "CLOSED",
+    "stage": "G9-P55",
+    "formal_name_proposed": "KSGT Generation IX G9-P55 — Construction-Aware Partitive Realization, Source-Witness Transport & Non-Destructive Writer Choice",
+    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
+    "status": "NOT_YET_OPENED",
+    "one_question": "Can five attested geujung constructions offer reviewable source-witnessed surface alternatives under strict classifier and subset warrant without auto-editing?",
+    "prelude_path": "experiments/g9-p55-prelude",
+    "test_receipt": "18_LOCAL_SYNTHTEST_PASS",
+    "real_private_target_count": "1_OF_25_FINITE_MORPHOLOGY_TARGET_ONLY",
+    "actual_licensed_rewrite_count": 0,
+    "real_antecedent_gold": 0,
     "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   }
 }

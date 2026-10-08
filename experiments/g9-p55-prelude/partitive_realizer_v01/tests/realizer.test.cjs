@@ -1,0 +1,20 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');const {propose,occurrence}=require('../realizer.cjs');
+const row=(form='그중에서',n='한',u='장')=>({prior:['풍경 사진이 있는 엽서 두 장을 탁자에 놓았다.'],target:`${form} ${n} ${u}을 골랐다.`,claim:{group_id:'POSTCARDS',quote:'풍경 사진이 있는 엽서 두 장',source_index:-1},writer_policy:'CLARIFY'});
+for(const f of ['그중','그중에','그중에서','그중에서도','그중에선'])test('five construction forms offer KEEP plus source-witnessed candidate '+f,()=>{
+ const r=propose(row(f));assert.equal(r.status,'PROPOSAL_ONLY');assert.equal(r.candidates.length,2);assert(r.candidates[1].text.includes('풍경 사진이 있는 엽서 두 장 중'+f.slice(2)+' 한 장을'));
+ assert.equal(r.candidates[0].id,'KEEP_ORIGINAL');assert.equal(r.human_preference,'NOT_COLLECTED');
+});
+test('unique preceding source quote required',()=>{let a=row();a.prior=['다른 엽서를 놓았다.'];assert.equal(propose(a).reason,'GROUP_QUOTE_NOT_UNIQUE_IN_PRECEDING_CONTEXT');});
+test('duplicate quote across preceding rows rejected',()=>{let a=row();a.prior=[a.prior[0],a.prior[0]];assert.equal(propose(a).status,'HOLD');});
+test('different recognized classifier refuses silent conversion',()=>{let a=row('그중','한','개');assert.equal(propose(a).reason,'COUNTER_MISMATCH_NO_MORPHOLOGY_BRIDGE');});
+test('unverified lexical classifier 컵 refused',()=>{let a=row('그중','한','컵');assert.equal(propose(a).reason,'TARGET_SELECTION_NUMBER_OR_UNIT_UNSUPPORTED');});
+test('writer KEEP veto',()=>{let a=row();a.writer_policy='KEEP';assert.equal(propose(a).candidates.length,1);});
+test('CONTEXTUAL cannot pretend to know writer choice',()=>{let a=row();a.writer_policy='CONTEXTUAL';assert.equal(propose(a).reason,'WRITER_INTENT_NOT_CLARIFY');});
+test('source count cannot be less than selection count',()=>{let a=row('그중','세');assert.equal(propose(a).reason,'NOT_STRICT_SUBSET_OR_INVALID_COUNT');});
+test('same-size group not strict subset',()=>{let a=row('그중','두');assert.equal(propose(a).status,'HOLD');});
+test('percentage/rank is not integer classifier',()=>{let a=row();a.target='그중에서 92%가 답했다.';assert.equal(propose(a).reason,'TARGET_SELECTION_NUMBER_OR_UNIT_UNSUPPORTED');a.target='그중에서도 최고였다.';assert.equal(propose(a).status,'HOLD');});
+test('potential following sentence prevents change',()=>{let a=row();a.target='그중에서도 한 장은';a.following='아직 골라내지 않았다.';assert.equal(propose(a).reason,'POSSIBLE_RIGHT_CONTEXT_CONTINUATION');});
+test('two target references do not permit global rewrite',()=>{let a=row();a.target+=' 그중에서 한 장이다.';assert.equal(propose(a).reason,'MULTIPLE_TARGET_SPANS');});
+test('no mistaken substring of longer word',()=>{assert.equal(occurrence('이것은 그중에서도 중요하다.').length,1);assert.equal(occurrence('그중요한').length,0);});
+test('original protected and no automatic selection',()=>{let a=row();const r=propose(a);assert.equal(r.candidates[0].text,a.target);assert.notEqual(r.candidates[1].text,a.target);assert.equal(r.automatic_rewrite,false);});

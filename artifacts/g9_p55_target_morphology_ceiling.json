@@ -1,0 +1,27 @@
+{
+  "schema": "ksgt.g9p55.private_target_shape.v1",
+  "stage": "G9-P55_PROPOSED_ONLY",
+  "source": "PINNED_PRIVATE_NIKL_ZA_2025",
+  "source_sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+  "counts": {
+    "geujung_contexts": 25,
+    "finite_integer_counter_target": 1,
+    "percent_target": 1,
+    "nonclassifier_selection": 2,
+    "forms": {
+      "그중": 8,
+      "그중에": 6,
+      "그중에서": 6,
+      "그중에서도": 4,
+      "그중에선": 1
+    }
+  },
+  "independent_antecedent_gold": 0,
+  "confirmed_human_writer_choices": 0,
+  "licensed_real_sample_edits": 0,
+  "meaning": "MORPHOSYNTACTIC_SUPPORTED_TARGET_CEILING_NOT_ANTECEDENT_ACCURACY",
+  "local_counterexample_tests": "18_PASS_OF_18",
+  "model_calls": 0,
+  "friend_server_used": false,
+  "public_raw_text": false
+}
