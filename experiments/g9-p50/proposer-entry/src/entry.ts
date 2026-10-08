@@ -26,13 +26,19 @@ export type SourceHold =
   | "SOURCE_EMPTY"
   | "SOURCE_DELIMITER_COLLISION"
   | "SOURCE_TOO_LONG"
-  | "UNKNOWN_FROZEN_TASK";
+  | "UNKNOWN_FROZEN_TASK"
+  | "SOURCE_ID_OUT_OF_PACKET"
+  | "PACKET_HASH_MISMATCH"
+  | "SOURCE_CONTENT_HASH_MISMATCH"
+  | "TASK_LANE_MISMATCH"
+  | "NOOP_PERMISSION_CONFLICT";
 
 export interface FrozenSource {
   sourceId: string;
   text: string;
   frozenTaskInstruction?: string | null;
   frozenPacketSha256: string;
+  frozenSourceSha256: string;
   permitsNoOp: boolean;
 }
 
@@ -93,14 +99,20 @@ export function prepareSourceEntry(
   contract: FrozenEntryContract,
   source: FrozenSource,
   countTokens: (raw: string) => number,
+  hashSourceText: (raw: string) => string,
 ): EntryOutcome {
-  if (!source.sourceId || !source.frozenPacketSha256) {
-    throw new Error("Frozen PIA provenance required");
-  }
+  if (!/^P50-(KOLLA_K1_HARD_CARGO|KOLLA_K2_GENERIC|STYLEKQC_GENERIC)-0[1-8]$/.test(source.sourceId))
+    return {kind:"HOLD",reason:"SOURCE_ID_OUT_OF_PACKET",sourceId:source.sourceId};
+  if (source.frozenPacketSha256 !== "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7")
+    return {kind:"HOLD",reason:"PACKET_HASH_MISMATCH",sourceId:source.sourceId};
   if (source.text.trim().length === 0)
     return { kind: "HOLD", reason: "SOURCE_EMPTY", sourceId: source.sourceId };
   if (source.text.includes("【원문】") || source.text.includes("【수정문】"))
     return { kind: "HOLD", reason: "SOURCE_DELIMITER_COLLISION", sourceId: source.sourceId };
+  if (hashSourceText(source.text) !== source.frozenSourceSha256)
+    return {kind:"HOLD",reason:"SOURCE_CONTENT_HASH_MISMATCH",sourceId:source.sourceId};
+  if (source.permitsNoOp !== false)
+    return {kind:"HOLD",reason:"NOOP_PERMISSION_CONFLICT",sourceId:source.sourceId};
 
   const route = contract.serialized_primary_route;
   const spec = contract.candidate_generation;
@@ -126,6 +138,10 @@ export function prepareSourceEntry(
   if (taskCode !== "minimal Korean correction" &&
       taskCode !== "meaning-preserving Korean paraphrase")
     return {kind:"HOLD", reason:"UNKNOWN_FROZEN_TASK", sourceId:source.sourceId};
+  const expectedTask = source.sourceId.startsWith("P50-STYLEKQC_GENERIC-")
+    ? "meaning-preserving Korean paraphrase" : "minimal Korean correction";
+  if (taskCode !== expectedTask)
+    return {kind:"HOLD",reason:"TASK_LANE_MISMATCH",sourceId:source.sourceId};
   const instruction = taskMap[taskCode];
   const prompt = renderTemplate(route.template, instruction, source.text);
   const tokens = countTokens(prompt);
