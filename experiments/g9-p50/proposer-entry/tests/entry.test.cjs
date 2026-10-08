@@ -54,7 +54,9 @@ test("both frozen task families resolve to different Korean instructions", () =>
 });
 test("source placeholder-like text remains source data", () => {
   const raw="문장 {FROZEN_TASK_INSTRUCTION} {SOURCE_TEXT} 그대로";
-  const e=prepareSourceEntry(contract,{...source,text:raw,frozenSourceSha256:sha(raw)},tokens,sha);
+  const testContract=structuredClone(contract);
+  testContract.serialized_primary_route.frozen_source_admission.source_sha256_by_id[source.sourceId]=sha(raw);
+  const e=prepareSourceEntry(testContract,{...source,text:raw,frozenSourceSha256:sha(raw)},tokens,sha);
   assert.equal(e.kind,"READY");
   assert.ok(e.prompt.includes(raw));
 });
