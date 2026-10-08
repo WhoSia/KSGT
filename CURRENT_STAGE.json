@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P50",
   "stage_type": "RECONSTITUTION_EXPERIMENT",
-  "status": "OPEN_P50_TRAINING_REGIME_PRESEALED_SLICE_RUNNING",
+  "status": "OPEN_P50_SLICE_BYTES_FROZEN_SOURCE_ENTRY_CI_PASS_CONTAMINATION_HOLD",
   "canonical_notion_id": "3f2ef561-cf92-8138-8a28-f5b0cc9fc2cb",
   "parent_stage": "G9-P49",
   "latest_closed_stage": "G9-P48",
@@ -46,7 +46,13 @@
     "artifacts/g9_p50_tokenizer_canonical_receipt.json",
     "experiments/g9-p50/slm_training_regime_preseal.json",
     "experiments/g9-p50/materialize_model_training_slice.py",
-    ".github/workflows/g9-p50-training-slice.yml"
+    ".github/workflows/g9-p50-training-slice.yml",
+    "artifacts/g9_p50_training_slice_canonical_evidence.json",
+    "experiments/g9-p50/source_conditioned_entry_court.json",
+    "experiments/g9-p50/pia_source_id_sha_registry.json",
+    "experiments/g9-p50/proposer-entry/src/entry.ts",
+    "experiments/g9-p50/next_token_sequence_semantics.json",
+    "experiments/g9-p50/contamination_disjointness_court.json"
   ],
   "forbid": [
     "Treat parameter count as a universal cross-architecture competence scale",
@@ -59,6 +65,6 @@
     "Export private AI-Hub or R8 text without explicit authorization",
     "Create github-actions[bot]-authored or committer commits"
   ],
-  "next_human_action": "NONE",
-  "next_scientific_action": "Read back training-slice run 37579616336; require exact tokenizer-only reconstruction, 100M train/2M dev tokens, and zero role overlap before model-training authorization."
+  "next_human_action": "REVIEW_EXISTING_PUBLIC_TOKEN_ARTIFACT_CUSTODY_IF_PUBLIC_REDISTRIBUTION_IS_NOT_AUTHORIZED",
+  "next_scientific_action": "Complete independent role/text/near-duplicate contamination audit and token-stream data-custody review before opening the S0 training gate. Preserve frozen 24-item PIA and source-conditional entry contract."
 }
