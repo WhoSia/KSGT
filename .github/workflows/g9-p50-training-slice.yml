@@ -1,12 +1,6 @@
 name: G9-P50 Model Training Slice
 
 on:
-  push:
-    paths:
-      - "experiments/g9-p50/materialize_model_training_slice.py"
-      - "experiments/g9-p50/slm_training_regime_preseal.json"
-      - "experiments/g9-p50/protected_pia_fingerprints.json"
-      - ".github/workflows/g9-p50-training-slice.yml"
   workflow_dispatch:
 
 permissions:
@@ -84,10 +78,11 @@ jobs:
           },indent=2))
           PY
 
+      # Token IDs are reversibly decodable using the published tokenizer; do not distribute them through public artifacts.
       - uses: actions/upload-artifact@v4
         with:
-          name: g9-p50-model-training-slice
-          path: g9_p50_training_slice/
+          name: g9-p50-model-training-manifest-only
+          path: g9_p50_training_slice/manifest.json
           if-no-files-found: error
           compression-level: 1
-          retention-days: 30
+          retention-days: 7
