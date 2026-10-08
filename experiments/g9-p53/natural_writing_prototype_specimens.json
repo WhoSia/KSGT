@@ -5,26 +5,26 @@
   "drafts": [
     {
       "id": "EX01",
-      "text": "투명한 컵 두 개에 같은 양의 물을 담고, 처음 온도가 같은지 확인했다. 한 컵은 창가에 두고 다른 컵은 그늘로 옮겼다. 30분이 지나 다시 재 보니 창가에 둔 물의 온도가 더 높았다.\n\n햇빛을 받은 쪽이 더 따뜻해졌다는 관찰은 분명하다. 다만 두 컵이 햇빛 말고도 같은 조건에 있었는지는 확인하지 못했다. 이번 기록만으로 온도 차이의 원인을 하나로 확정할 수는 없다.",
+      "text": "투명한 컵 두 개에 같은 양의 물을 담았다. 시작할 때는 물의 온도가 같았다. 하나는 창가에, 다른 하나는 그늘에 두었다. 30분 뒤 두 컵을 비교하니 창가에 놓인 물이 더 따뜻했다.\n\n관찰한 것은 두 컵의 온도 차이다. 햇빛이 영향을 주었을 가능성은 있지만, 그 밖의 조건까지 완전히 같았는지는 확인하지 못했다. 이 결과를 설명하려면 어떤 조건을 더 점검해야 하는지부터 정해야 한다.",
       "language_notes": [
         "관찰 절차→결과→해석 한계 순서",
         "'따라서'를 자동 삽입하지 않고 주장 강도 조절",
         "문장 길이 균일화 금지"
       ],
-      "status": "DRAFT_FACT_AUDIT_PENDING"
+      "status": "AUTHOR_CONTROLLED_TEXT_NEEDS_INDEPENDENT_BLIND_ASSESSMENT"
     },
     {
       "id": "EX04",
-      "text": "비는 오후 다섯 시쯤 그쳤다. 약속보다 일찍 도서관에 도착했을 때, 입구에는 우산 몇 개가 놓여 있었다. 한 사람이 젖은 우산을 접더니 우산꽂이에 꽂았다. 물방울이 우산 끝에 잠시 매달려 있었다.\n\n안으로 들어서자 책장 넘기는 소리가 들렸다. 바깥에서는 아직 젖은 우산을 정리하고 있었고, 안쪽에서는 누군가 조용히 책을 읽고 있었다. 나는 조금 일찍 도착한 시간을 그대로 보내기로 했다.",
+      "text": "오후 다섯 시 무렵 비가 그쳤다. 약속보다 일찍 도착한 도서관 입구에는 우산 몇 개가 놓여 있었다. 한 사람이 젖은 우산을 접어 우산꽂이에 넣었다.\n\n도서관 안에서는 책장 넘기는 소리가 났다. 입구에서 본 짧은 움직임과 안쪽의 소리가 차례로 눈과 귀에 들어왔다. 나는 약속 시각보다 먼저 그곳에 와 있었다.",
       "language_notes": [
         "시각→행동→청각의 관찰 순서",
         "장면 자체에 과잉 의미를 부여하지 않음",
         "근거 없는 대조와 감정 추정은 피함"
       ],
-      "status": "DRAFT_FACT_AUDIT_PENDING"
+      "status": "AUTHOR_CONTROLLED_TEXT_NEEDS_INDEPENDENT_BLIND_ASSESSMENT"
     }
   ],
-  "audit_rule": "An expressive added detail that was not in the five factual atoms must be labeled as a new creative elaboration, not silently treated as source truth. EX01 instruments, EX04 water droplets and reader actions must be reviewed before fair controlled comparison.",
+  "audit_rule": "Every contentful claim must be traceable to source facts or neutral perceptual organization. No invented actor identity, emotional state, measurement apparatus, water droplets or motive. Independent fact audit remains required.",
   "limits": [
     "No proof these are better than generic AI",
     "No AI-authorship detection objective",
