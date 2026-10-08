@@ -1,0 +1,41 @@
+{
+  "schema": "ksgt.g9.p53.krc-v01.reader-court.v1",
+  "status": "FROZEN_EMPTY_HUMAN_PROTOCOL_NO_RATINGS",
+  "aim": "Does KRC typed planning improve Korean contextual naturalness and coherent, accurate expression over unchanged general LLM and surface-only anti-template instructions?",
+  "participant_protocol": {
+    "consent": "Voluntary reading/writing evaluation with no identifying details; readers may skip or abstain.",
+    "instruments": [
+      "Show one of three counterbalanced 6-pair forms, one brief per pair.",
+      "Read the same factual brief and two anonymized texts.",
+      "Check factual grounding independently of prose preference.",
+      "Choose left/right/tie/abstain for Korean naturalness in context.",
+      "Rate each passage 1-7 for clarity and discourse flow, or skip.",
+      "Add short linguistic reasons (syntax, referents, cadence, overclaimed cause, voice)."
+    ],
+    "allocation": "Three forms, 6 different source briefs per form, B/K B/A and K/A pairings balanced over forms.",
+    "important": "The forms use outputs from the same model but differ in prompt length/planning; reader judgments cannot establish pure typed-IR causal mediation.",
+    "privacy": "Do not collect real names, email, school affiliation or other identifying data; self-generated anonymous label optional.",
+    "semantic_firewall": "Readers who judge prose naturalness are not used as definitive semantic truth labels unless separately trained and blind to arms."
+  },
+  "statistical_precommit": {
+    "primary": "On each brief, paired K/B naturalness win=1, tie=0.5, loss=0; report counts and uncertainty not significance without independent readers.",
+    "secondary": [
+      "K/A and A/B pairwise contextual fit",
+      "within-genre comparison",
+      "reader explanations",
+      "literal unsupported fact reports"
+    ],
+    "unit": "Participant × pair, cluster by both participant and brief if inferential model later defined",
+    "missing": "No filled judgment is not a tie. Abstentions tracked as separate denominator.",
+    "winner": "NOT_SPECIFIED_NO_HUMAN_OBSERVATION"
+  },
+  "failure_conditions": [
+    "Any arm label visible in reader packet",
+    "Missing raw text erroneously filled with fake text",
+    "Reader form changes after ratings",
+    "Critic heuristic treated as objective semantic quality",
+    "Identifying participant details collected",
+    "A sample output treated as a human-authored reference"
+  ],
+  "authority": "READER_PROTOCOL_DESIGN_ONLY"
+}
