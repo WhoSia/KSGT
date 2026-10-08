@@ -1,0 +1,49 @@
+{
+  "schema": "ksgt.g9.p53.krc.v06.constitution.v1",
+  "name": "KRC v0.6 — Cardinality-Aware Korean Partitive Reference, Restricted Productive -고 Conjunction & Corpus-Grounded Omission Audit",
+  "status": "FROZEN_BEFORE_V06_OUTPUTS",
+  "parent": "artifacts/g9_p53_krc_v05_terminal_readback.json",
+  "scientific_target": "Build meaning-conditioned Korean writing operations with externally auditable discourse referents, not another proposer/critic approval loop.",
+  "data_grounding": "Existing NIKL ZA 2020/2025 used for observed omitted arguments and antecedent multiplicity; not as a gold source for 그중 partitive expressions. External Korean coref corpora held separate.",
+  "core_objects": [
+    "Typed plural discourse group with cardinality and nominal kind",
+    "Partitive selection of k from n without pretending to identify which exact individual",
+    "Complementary remainder with cardinality n-k and provenance",
+    "Finite Korean predicate lemma with source-listed tense/polarity and restricted -고 connective",
+    "Event chain facts and explicit sequential edge"
+  ],
+  "experiment": {
+    "new_cases": [
+      "EX17 laboratory pair of containers",
+      "EX18 three books in a reading room"
+    ],
+    "n_source_cases": 2,
+    "permitted_surface_operations": [
+      "EXISTENTIAL_PARTITIVE_SELECTION",
+      "GROUP_COMPLEMENT_FOR_2_MINUS_1",
+      "LEMMA_STEM_TO_GO_FOR_RESTRICTED_LEXICON",
+      "SOURCE_LICENSED_TWO_EVENT_LINK"
+    ],
+    "negative_controls": [
+      "NO_GROUP",
+      "SAME_KIND_TWO_GROUP_AMBIGUITY",
+      "WRONG_KIND",
+      "SELECT_MORE_THAN_GROUP",
+      "UNIQUE_INDIVIDUAL_ASSERTED_WITHOUT_EVIDENCE",
+      "DIFFERENT_ACTOR",
+      "CROSS_PARAGRAPH_ELLIPSIS",
+      "MIXED_TENSE",
+      "MIXED_POLARITY",
+      "UNLICENSED_CAUSE",
+      "BAD_VERB_STEM"
+    ],
+    "deliverables": [
+      "Data ledger and hash-only NIKL corpus receipts",
+      "At least two source-grounded Korean composed micro-passages",
+      "Synthetic positive and adversarial tests",
+      "Corpus import/redistribution separation"
+    ]
+  },
+  "authority": "SOURCE_LEVEL_CARDINALITY_AND_PROVENANCE_ONLY_NOT_THEOREM_OF_KOREAN_NATURALNESS",
+  "negative_result_clause": "If the only available real corpus does not label partitives, record NOT_IDENTIFIED. Do not manufacture gold from zero-anaphora annotation."
+}
