@@ -27,7 +27,8 @@ function adjudicateSource(input) {
  if(!input.verifiedExactTargetGold)grounds.push('NO_DIRECT_GEJUNG_ANTECEDENT_WITNESS');
  return {id:input.id,verdict,grounds,direct_partitive_gold:direct,independent_disagreement_gold:disagreement,
   usable_for_native_adjacent_probe:hasGold&&input.custody==='MATERIALIZED',
-  independent_accuracy_estimation_authorized:direct&&Boolean(input.goldFrameDenominator)&&input.goldFrameDenominator>0,
+  independent_accuracy_estimation_authorized:false, // raw label eligibility alone is never scored prediction evidence
+  accuracy_estimation_blocker:'NO_FROZEN_OUT_OF_SAMPLE_PREDICTIONS_AND_AUDITED_GOLD_ALIGNMENT',
   probabilistic_calibration_authorized:false, // no scored outcomes / frozen independent calibration set
   does_not_prove:'WRITER_PREF_OR_EXPLICIT_PARTITIVE_TRUTH_FROM_OTHER_ONTOLOGY'};
 }

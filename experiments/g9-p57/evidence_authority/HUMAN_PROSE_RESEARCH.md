@@ -23,3 +23,15 @@
 
 ## Next *narrow* empirical design, without new human recruitment
 A source-disjoint Korean text collection with original context, author-intended factual constraints, matched KEEP vs source-bounded clarification candidate, and *existing authorized independent* human choice or documented editor actions. Compare **meaning admissibility, reference consistency, information structure, redundance and actual writer preference** separately. A2/A3 quality claims remain HOLD. In P57 the question is evidence **admissibility**, not improving humanized prose. No AI detection goal.
+
+## Priority new Korean syntax/discourse literature — two direct partitive-structure neighbors
+
+**A. HIGH: Shin, Keun Young (2017), *Partitive descriptions in Korean*, Glossa 2(1):5, DOI [10.5334/gjgl.143](https://doi.org/10.5334/gjgl.143), CC BY 4.0.** Official publication abstract argues that Korean nominal–quantifier order matters and postnominal/floating-quantifier partitive-looking structures may include **true partitive** and **pseudo-partitive / quantitative** readings, sometimes with kind-denoting DPs. This does **not** directly give a labeled `그중` corpus, but it directly challenges treating P55's `source_count > selected_count` type-safe subset rule as a universal theory of Korean partitives. Future parser must distinguish discrete subset from pseudo-partitive/kind/group readings, and leave unsupported classification under review. Drive title search did not locate a separate article original; recommend rights-checked DOI landing.
+
+**B. HIGH: Song, Sanghoun (2021), *Different Types of Internally Headed Relative Clauses in Korean: A Corpus-based Analysis*, Studies in Linguistics 60:89–114, DOI [10.17002/sil..60.202107.89](https://doi.org/10.17002/sil..60.202107.89).** Research analyzes Korean Sejong spoken corpus internal-headed relative `것` and uses nominal replacement and `가운데`-cooccurrence tests to discriminate subset readings from other nominal/event statuses. **Different syntactic construction**; the diagnostics are hypotheses for `그중`, not validated labels or automatic equivalences. No original PDF separately identified in current Drive title search.
+
+**C. SECONDARY: Kim Gwanghui (2011), *대용 표현*, DOI [10.15811/jkl.2011..60.013](https://doi.org/10.15811/jkl.2011..60.013).** Korean pronominal and zero-anaphoric expression/binding syntax; concept bridge to KSGT 0.2.7–0.2.8.
+
+**D. SECONDARY: Kang Chang-seok (2016), *지시어 ‘이, 그, 저’의 용법과 의미*, DOI [10.18855/lisoko.2016.41.2.001](https://doi.org/10.18855/lisoko.2016.41.2.001).** Korean discourse-context-sensitive demonstratives and honorific system; not automatically a `그중` partitive analysis.
+
+**Acquisition boundary:** No paper PDF or copyrighted page was mirrored as part of P57; existing Drive Choe/Roh/Ham/Park/Zhao papers take priority for full-text native Korean naturalness study. DOI webpages establish bibliographic/abstract claims only, not line-by-line full paper read.
