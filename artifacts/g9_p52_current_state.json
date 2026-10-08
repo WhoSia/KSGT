@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p52.current-state.v1",
   "stage": "G9-P52",
-  "status": "OPEN_P52_CONTEXTUAL_EDIT_SPAN_PROPOSER_SEARCH",
+  "status": "OPEN_P52_QWEN3_LLAMA_CPP_PROPOSER_EXPLORATORY_RUNNING",
   "notion_id": "3f3ef561-cf92-8162-ba16-cc00637188a9",
   "question": "Can contextual edit-span discovery and evidence-grounded Korean replacements provide an adequate proposer for a first non-vacuous same-reservoir KSGT governor experiment?",
   "predecessor": {
@@ -16,7 +16,8 @@
     "Tool/ecosystem survey for Korean edit-span + grounded candidate replacement.",
     "Establish public or authorized, training/evaluation-disjoint paired-data custody before any indexing, model training or supervision.",
     "Freeze algorithm, reproducible model/tool identity, candidate counts, source-only 24-item PIA identity and no-rescue logic before outcomes.",
-    "PIA PASS needed before KSGT U/K on identical frozen candidate reservoir."
+    "PIA PASS needed before KSGT U/K on identical frozen candidate reservoir.",
+    "Do not claim nonidentity as PIA PASS. For eventual U/K, a rights-safe exact candidate set escrow must be established, not only hash receipts."
   ],
   "not_executed": [
     "P52 proposer",
@@ -24,6 +25,30 @@
     "P52 U-versus-K contrast",
     "human evaluation"
   ],
-  "next": "Capability discovery and data rights before prospective selection.",
-  "authority": "OPEN_DESIGN_NO_EMPIRICAL_RESULT"
+  "next": "Read run 37719544157; classify environment/format/no-span/task-response outcomes without any post-outcome retuning. Keep KSGT governor HOLD.",
+  "authority": "OPEN_DESIGN_NO_EMPIRICAL_RESULT",
+  "prospective_attempt": {
+    "model": "Qwen/Qwen3-0.6B-GGUF Q8_0",
+    "model_revision_prefix": "23749fe",
+    "runtime_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f",
+    "runtime_languages": [
+      "C++",
+      "JavaScript",
+      "Python only for pinned HF model file download"
+    ],
+    "preseal": "experiments/g9-p52/contextual_span_preseal.json",
+    "preseal_commit": "58ed2c62143189d1fd521968b6cf4f02041ea494",
+    "controller": "experiments/g9-p52/contextual_span.cjs",
+    "tests": "experiments/g9-p52/tests/contextual_span.test.cjs",
+    "workflow": ".github/workflows/g9-p52-contextual-span.yml",
+    "github_actions_run_id": 37719544157,
+    "github_actions_status": "BUILDING_CPP_RUNNER_LAST_CHECK",
+    "synthetic_unit_tests": "PASS",
+    "packet_status": "NOT_YET_READ_IN_THIS_RUN",
+    "plan": "3 synthetic smoke examples then one original 24x4 source-only diagnostic, no raw source/candidate artifact",
+    "authority": "EXPLORATORY_ONLY_OPAQUE_PRETRAINING_MEMBERSHIP",
+    "governance": "BLOCKED_NOT_RUN",
+    "model_semantic_PIA": "NOT_RUN",
+    "candidate_pool_future_UK": "RAW_CANDIDATE_CUSTODY_NOT_YET_AVAILABLE"
+  }
 }
