@@ -6,6 +6,7 @@ export interface FrozenEntryContract {
     max_prompt_tokens: number;
     max_new_tokens: number;
     combined_max_context: number;
+    frozen_task_map: Record<string, string>;
   };
   candidate_generation: {
     budget_per_source: number;
@@ -24,7 +25,8 @@ export interface FrozenEntryContract {
 export type SourceHold =
   | "SOURCE_EMPTY"
   | "SOURCE_DELIMITER_COLLISION"
-  | "SOURCE_TOO_LONG";
+  | "SOURCE_TOO_LONG"
+  | "UNKNOWN_FROZEN_TASK";
 
 export interface FrozenSource {
   sourceId: string;
@@ -74,9 +76,6 @@ export interface FrozenCandidatePool {
   authority: "TRANSPORT_ONLY_NOT_PIA_CLASSIFICATION";
 }
 
-export const DEFAULT_TASK_INSTRUCTION =
-  "원래 의미를 보존하는 범위에서 자연스럽게 다듬기";
-
 function renderTemplate(
   template: string,
   instruction: string,
@@ -118,7 +117,16 @@ export function prepareSourceEntry(
       spec.sampling.frequency_penalty !== 0)
     throw new Error("Sampling policy departed from preseal");
 
-  const instruction = source.frozenTaskInstruction ?? DEFAULT_TASK_INSTRUCTION;
+  const taskCode = source.frozenTaskInstruction ?? "";
+  const taskMap = route.frozen_task_map;
+  if (Object.keys(taskMap).length !== 2 ||
+      taskMap["minimal Korean correction"] !== "오탈자와 문법 오류만 필요한 만큼 최소한으로 교정하세요." ||
+      taskMap["meaning-preserving Korean paraphrase"] !== "의미를 보존하면서 원문과 표현이 다른 한국어 문장을 제시하세요.")
+    throw new Error("Frozen task translation map has changed");
+  if (taskCode !== "minimal Korean correction" &&
+      taskCode !== "meaning-preserving Korean paraphrase")
+    return {kind:"HOLD", reason:"UNKNOWN_FROZEN_TASK", sourceId:source.sourceId};
+  const instruction = taskMap[taskCode];
   const prompt = renderTemplate(route.template, instruction, source.text);
   const tokens = countTokens(prompt);
   if (!Number.isSafeInteger(tokens) || tokens < 0)
