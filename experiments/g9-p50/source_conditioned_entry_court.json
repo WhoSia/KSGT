@@ -19,8 +19,8 @@
   "serialized_primary_route": {
     "id": "KOREAN_PLAIN_TEXT_ZERO_SHOT_SOURCE_EDIT_V1",
     "input_authority": "Frozen PIA source text and source-linked task instruction only; no hidden reference rewrite examples",
-    "template": "다음 한국어 원문의 사실관계, 수치, 고유명사, 명시적인 약속과 조건을 보존하세요. 원문의 표현을 다듬어야 하는 경우에만 수정하고, 설명이나 평가 없이 수정된 문장만 제시하세요.\n요구사항: {FROZEN_TASK_INSTRUCTION}\n【원문】\n{SOURCE_TEXT}\n【수정문】\n",
-    "task_instruction_rule": "If the original frozen packet supplies no instruction, use the literal '원래 의미를 보존하는 범위에서 자연스럽게 다듬기'; NEVER infer an instruction from hidden reference text.",
+    "template": "다음 한국어 원문에 대해 요구사항을 수행하세요. 사실관계, 수치, 고유명사, 명시적 약속과 조건을 보존하세요. 설명이나 평가 없이 결과 문장만 제시하세요.\n요구사항: {FROZEN_TASK_INSTRUCTION}\n【원문】\n{SOURCE_TEXT}\n【수정문】\n",
+    "task_instruction_rule": "Translate only the source-packet task code via the frozen two-row Korean map below. All 24 packet rows require a nonidentity task response; never use hidden references, style targets or PIA outcomes to create instructions. Unknown task codes are a hard hold.",
     "max_prompt_tokens": 768,
     "max_new_tokens": 256,
     "combined_max_context": 1024,
@@ -28,7 +28,11 @@
     "source_normalization": "No NFKC or semantic paraphrase; preserve original source bytes/codepoints except transport encoding",
     "sentinel_collision_rule": "If source contains 【원문】 or 【수정문】, mark SOURCE_DELIMITER_COLLISION before generation, retain in denominator, never silently escape/mutate source or parse it as outer instruction.",
     "bos_policy": "No additional BOS inserted unless baseline model training already used BOS; pretrained corpus emits EOS only.",
-    "stop_rule": "Stop at EOS or 256 generated tokens; never include generated task explanation inside candidate text as silently filtered repair."
+    "stop_rule": "Stop at EOS or 256 generated tokens; never include generated task explanation inside candidate text as silently filtered repair.",
+    "frozen_task_map": {
+      "minimal Korean correction": "오탈자와 문법 오류만 필요한 만큼 최소한으로 교정하세요.",
+      "meaning-preserving Korean paraphrase": "의미를 보존하면서 원문과 표현이 다른 한국어 문장을 제시하세요."
+    }
   },
   "candidate_generation": {
     "budget_per_source": 4,
@@ -69,9 +73,10 @@
       "GENERATION_EXCEPTION",
       "TOKENIZER_MISMATCH",
       "DECODER_EXCEPTION",
-      "CHECKPOINT_MISMATCH"
+      "CHECKPOINT_MISMATCH",
+      "UNKNOWN_FROZEN_TASK"
     ],
-    "no_op_policy": "If source task requires nontrivial revision, unchanged or trivially whitespace-only candidate is TASK_NONRESPONSE, not automatic ACCEPTABLE_AS_IS. If no-op is permitted, permission must be inherited explicitly from frozen task context.",
+    "no_op_policy": "All 24 frozen PIA tasks require a task response (KoLLA correction or StyleKQC paraphrase); mechanically flag unchanged or whitespace-only output as candidate0 TASK_NONRESPONSE evidence for adjudicator. Do not automatically award source-copy PASS.",
     "gross_reject_gate": "Use frozen 24-item PIA thresholds unchanged. Typed absence of a candidate is assessed as task nonresponse or malformed output, not silently dropped.",
     "hard_cargo": "Preservation is independently adjudicated; automatic lexical equality cannot overrule semantic contradiction or fabrication."
   },
