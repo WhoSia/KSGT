@@ -1,0 +1,38 @@
+{
+  "schema": "ksgt.g9.p53.p0.qwen8b.bonly.canonical_observation.v1",
+  "run_id": 37778703943,
+  "artifact_id": 11550359836,
+  "artifact_zip_sha256": "57a7af352b9328f1ad5682e7fae3a893b5ef2948bfcc01e41437558ed0348951",
+  "head_sha": "1287e41675fb50a8a2ee1cc028a78a96a73b6b41",
+  "workflow": "SUCCESS",
+  "model_bytes_sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+  "generated": 2,
+  "expected": 2,
+  "observations": [
+    {
+      "id": "SCI01",
+      "chars": 225,
+      "paragraphs": 2,
+      "mechanical_flags": [],
+      "source_review": "INFERENTIAL_OVERREACH_REVIEW: ENDPOINT_DIFFERENCE_IS_NOT_RATE_MEASUREMENT",
+      "latency_ms": 39266,
+      "prompt_sha256": "9c75ea83928a2cd621a107677f5260a271785f0e5338d125fb7f414be8aceb1c",
+      "output_sha256": "d1c0697033355687c13d35d803b9e309af3a9d74a27dd6e82f3c65bd579a00e6"
+    },
+    {
+      "id": "NAR02",
+      "chars": 114,
+      "paragraphs": 1,
+      "mechanical_flags": [
+        "PARAGRAPH_COUNT_NOT_2"
+      ],
+      "source_review": "BOOK_CARDINALITY_SURVIVES_BUT_SOURCE_SENTENCES_COPIED_NO_DISCERNIBLE_PROSE_REALIZATION",
+      "latency_ms": 18205,
+      "prompt_sha256": "55e3baddff71544a18c4694c38386a51aba16b3ffd97a8e33f021afb88fbcc4d",
+      "output_sha256": "9352b114bcfca5f83ea7c29b71fe5ff772ea17ace25e707bdff7bf3f4d6de76f"
+    }
+  ],
+  "verdict": "INFRA_PASS_B_BASELINE_FORMAT_FAIL_NO_KSGT_COMPARISON_NO_HUMAN_NATURALNESS",
+  "limitations": "Two assistant-authored development stimuli; inferences about all 8B models or KSGT value prohibited.",
+  "next": "Independent new 14B B-only capacity study precommitted on fresh development topics."
+}

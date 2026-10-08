@@ -1,0 +1,84 @@
+name: G9-P53 P0 Frozen Qwen3-14B B-Only Capacity Gate
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/p0_writing_competence/capacity_probe_14b/**'
+      - '.github/workflows/g9-p53-p0-14b-capacity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  model-capacity-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify frozen B-only primary and exposed controls
+        run: |
+          node --test experiments/g9-p53/p0_writing_competence/model_gate.test.cjs
+          node --test experiments/g9-p53/p0_writing_competence/capacity_probe_14b/run.test.cjs
+      - name: Build exact same llama.cpp CPU backend as 8B test
+        run: |
+          df -h .
+          free -m
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = '9c2e0e491a822adae1f0b1c831adb4160057d24f'
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Download pinned official 14B model and verify full SHA-256
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from huggingface_hub import hf_hub_download
+          spec=json.loads(Path('experiments/g9-p53/p0_writing_competence/capacity_probe_14b/preseal.json').read_text())
+          m=spec['model']
+          p=Path(hf_hub_download(repo_id=m['repo'],revision=m['revision'],filename=m['filename'],local_dir='frozen-model'))
+          h=hashlib.sha256()
+          with p.open('rb') as inp:
+              for block in iter(lambda:inp.read(4*1024*1024),b''):h.update(block)
+          assert h.hexdigest()==m['sha256'],f'WEIGHT_SHA256_MISMATCH: {h.hexdigest()}'
+          Path('checkpoint.json').write_text(json.dumps({'repo':m['repo'],'revision':m['revision'],'sha256':m['sha256'],'bytes':p.stat().st_size},indent=2)+'\n')
+          print('QWEN_14B_OFFICIAL_BYTES_VERIFIED')
+          PY
+      - name: Boot CPU model at frozen settings
+        run: |
+          vendor-llama/build/bin/llama-server --model frozen-model/Qwen3-14B-Q4_K_M.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 \
+            --ctx-size 3072 --threads 4 --parallel 1 > /tmp/ksgt_p53_14b.log 2>&1 &
+          echo $! > /tmp/ksgt_p53_14b.pid
+          for i in $(seq 1 180); do
+            if curl -fsS http://127.0.0.1:8912/health >/dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/ksgt_p53_14b.pid)" 2>/dev/null; then tail -100 /tmp/ksgt_p53_14b.log; exit 1; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health >/dev/null
+      - name: Execute B-only predeclared new and exposed development briefs
+        run: |
+          mkdir -p outcomes
+          node experiments/g9-p53/p0_writing_competence/capacity_probe_14b/run.cjs outcomes/qwen14b_bonly.json
+      - name: Assert no U or K comparisons and clear model weights
+        if: always()
+        run: |
+          if test -f outcomes/qwen14b_bonly.json; then
+            node -e "const x=require('./outcomes/qwen14b_bonly.json');if(x.rows.length!==4||x.rows.some(r=>r.arm!=='B')||x.KSGT_vs_B!=='NOT_PERFORMED'||x.writer_superiority!=='NOT_ESTABLISHED')process.exit(1);console.log('B_ONLY_14B_NO_PREMATURE_SUPERIORITY');"
+          fi
+          rm -rf frozen-model
+      - name: Archive checkpoint and writing outputs without any model weights
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: g9-p53-p0-qwen3-14b-bonly-capacity
+          path: |
+            checkpoint.json
+            outcomes/qwen14b_bonly.json
+          retention-days: 30
+          if-no-files-found: ignore

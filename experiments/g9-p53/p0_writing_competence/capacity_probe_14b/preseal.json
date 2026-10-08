@@ -1,0 +1,45 @@
+{
+  "schema": "ksgt.g9.p53.p0.qwen14b.capability.v1",
+  "state": "FROZEN_BEFORE_14B_INFERENCE",
+  "protocol_parent": "experiments/g9-p53/p0_writing_competence/model_gate.json",
+  "prior_8b_run": 37778703943,
+  "prior_8b_disposition": "INFRA_PASS_BASELINE_PROSE_GATE_HOLD",
+  "model": {
+    "repo": "Qwen/Qwen3-14B-GGUF",
+    "revision": "530227a7d994db8eca5ab5ced2fb692b614357fd",
+    "filename": "Qwen3-14B-Q4_K_M.gguf",
+    "sha256": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0",
+    "backend_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f",
+    "approx_weight_bytes": 9000000000
+  },
+  "primary_unexposed_dev": [
+    "SCI02",
+    "NAR01"
+  ],
+  "exposed_controls": [
+    "SCI01",
+    "NAR02"
+  ],
+  "inference_order": [
+    "SCI02",
+    "NAR01",
+    "SCI01",
+    "NAR02"
+  ],
+  "arm": "B",
+  "generation": {
+    "seed": 123005,
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_tokens": 700,
+    "ctx_size": 3072
+  },
+  "limits": {
+    "max_request_ms": 600000,
+    "stage": "G9-P53",
+    "mean_quality": "NOT_ADJUDICATED",
+    "comparison": "NO_U_OR_K",
+    "human_survey": "NOT_AUTHORIZED",
+    "after_failing": "MODEL_FLOOR_HOLD"
+  }
+}

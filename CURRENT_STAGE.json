@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P53",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "OPEN_P53_KRC_V07_INTENT_BRIDGE_SYNTHETIC_NOT_NATURALNESS_PASS",
+  "status": "OPEN_P53_8B_B_SCREEN_HOLD_14B_B_ONLY_CAPACITY_PRESEALED",
   "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "parent_stage": "G9-P52",
   "latest_closed_stage": "G9-P52",
@@ -35,7 +35,9 @@
     "krc_v06": "FINITE_PARTITIVE_GROUP_CARDINALITY_GUARDS_AND_CONJUNCTIVE_PASS",
     "independent_partitive_gold": "NONE_EXISTING_NIKL_IS_ZERO_ANAPHORA_NOT_PARTITIVE_GOLD",
     "krc_v07": "SOURCE_QUOTE_DECLARED_AUTHOR_INTENT_LOCAL_MECHANICAL_ONLY_NO_LLM_OR_HUMAN",
-    "competent_baseline_comparison": "PRE_RUN_INSTRUMENT_NO_MODEL_OUTPUTS"
+    "competent_baseline_comparison": "PRE_RUN_INSTRUMENT_NO_MODEL_OUTPUTS",
+    "p0_8b_q4": "REAL_RUN_SUCCESS_2_OF_2_OUTPUTS_BUT_BASELINE_FORMAT_FAIL_NO_KSGT_EFFECT",
+    "p0_14b_q4": "PRESEALED_FROZEN_NO_OUTPUTS_YET"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -66,7 +68,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "Pin capable same-model baseline; test prose competence before B/U/K writer ablation, and collect independent rights-cleared Korean partitive evidence without confusing NIKL zero-anaphora with partitive gold",
+  "next_scientific_action": "Validate Qwen3-14B frozen B-only capacity and source fidelity before attempting any KSGT B/U/K superiority comparison; keep partitives as actual writer interventions.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -151,5 +153,19 @@
     "test_evidence": "9_OF_9_LOCAL_SYNTHETIC_PASS",
     "real_model_outputs": 0,
     "independent_native_quality": "NOT_MEASURED"
+  },
+  "latest_p0_capacity_probe": {
+    "source": "artifacts/g9_p53_p0_qwen8b_b_baseline_readback.json",
+    "next_model_contract": "experiments/g9-p53/p0_writing_competence/capacity_probe_14b/preseal.json",
+    "next_runner": "experiments/g9-p53/p0_writing_competence/capacity_probe_14b/run.cjs",
+    "primary_unexposed_dev": [
+      "SCI02",
+      "NAR01"
+    ],
+    "exposed_controls": [
+      "SCI01",
+      "NAR02"
+    ],
+    "KSGT_effect": "NOT_TESTED"
   }
 }
