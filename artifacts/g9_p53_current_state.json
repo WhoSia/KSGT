@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "G9_P53_KRC_V01_CONTROLLED_18_WRITTEN_TYPED_PLAN_PASS_SURFACE_BRIDGE_FORMAT_FAIL",
+  "status": "P53_KRC_V02_BOUNDED_GAME_COMPLETE_COPYING_EQUILIBRIUM_SEMANTIC_CRITIC_DEFEATED",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -28,11 +28,11 @@
     "exact_candidate_escrow": "NOT_AVAILABLE_HASH_RECEIPT_ONLY"
   },
   "next": [
-    "KRC v0.1: preserve 18 original drafts without prompt tuning on same 6 briefs.",
-    "Design a proof-carrying slot-level Korean realization protocol with deterministic paragraph assembly; use new briefs before any confirmatory quality claim.",
-    "Separately audit factuality; run blind readers on 3 balanced forms only with voluntary and anonymous consent.",
-    "Compare B/A/K on adequate baseline models and match prompt information budget in a separate prospective ablation.",
-    "Do not turn KSGT into a grader optimization or generic proposer/governor loop."
+    "KRC v0.2 source+outcome preserved without retuning its naturalness claim.",
+    "Form a Korean construction type system for predicate-argument polarity, negation, comparison direction, tense/aspect, topic/focus, discourse relations, referent-licensed ellipsis and genre/ending stance.",
+    "Identify how a nontrivial Korean surface change can be proof-obligated and evaluated without encouraging unsupported invention or mere source copying.",
+    "Use NEW briefs and equal-information controls to separate symbolic assembly from actual G/V feedback effect.",
+    "Keep independent real-reader naturalness court ON_HOLD until recruited voluntarily; distribute only anonymous packets, no unblinding key."
   ],
   "authority": "OPEN_PROSPECTIVE_NOT_EMPIRICAL",
   "historical_regression": {
@@ -155,5 +155,37 @@
     "source_custody": "https://drive.google.com/drive/folders/13f5tV1fzGWr1w8H-nlvbwSDAy2E5RJhm",
     "data_sha_verified": "EXACT_DRIVE_READBACK_FOR_THREE_KEY_FILES",
     "next_architecture": "LOCAL_SOURCE_ATOM_REALIZATION_WITH_DETERMINISTIC_DOCUMENT_ASSEMBLY_NEW_BRIEFS"
+  },
+  "krc_v02_readback": {
+    "status": "CLOSED_SUBSTAGE_KOREAN_REALIZATION_NOT_ESTABLISHED",
+    "terminal_receipt": "artifacts/g9_p53_krc_v02_terminal_verdict.json",
+    "constitution": "experiments/g9-p53/krc_v02/constitution.json",
+    "formal_game": "experiments/g9-p53/krc_v02/FORMAL_GAME.md",
+    "generator": "experiments/g9-p53/krc_v02/generator.cjs",
+    "critic": "experiments/g9-p53/krc_v02/critic.cjs",
+    "actual_run": 37727690693,
+    "engineering": "PASS",
+    "documents": 2,
+    "source_slots": 10,
+    "model_calls": 10,
+    "mechanical_accept": 10,
+    "actual_repair_calls": 0,
+    "source_exact_copies": 9,
+    "changed_source_clauses": 1,
+    "two_paragraph_docs": 2,
+    "length_envelope": "0/2",
+    "contradiction_false_negative_test": 37728066629,
+    "false_negative_cases": 3,
+    "forced_witness_stress": 37728285311,
+    "real_stress_repairs": 3,
+    "stress_mechanical_accepts": 3,
+    "stress_injected_artifacts_are_model_generated": false,
+    "observed_orthography_failure": "Repaired 껤다 instead of 껐다, yet critic allowed.",
+    "reader_human": "NOT_COLLECTED_ON_HOLD_USER_RECRUITMENT",
+    "GAN_gradient_training": false,
+    "corpus": "TWO_NEW_FICTIONAL_BRIEFS_NO_PIA_OR_PERSONAL_DATA",
+    "drive_archive": "https://drive.google.com/drive/folders/1Ro8EZajBr5clLdxHJosssPa0wwZqbTvE",
+    "reviewer_form": "https://drive.google.com/file/d/141KddGIPYjWCMIEkRjnDLKrAYJ_vmfGt/view",
+    "comparative_naturalness": "NOT_ESTABLISHED"
   }
 }
