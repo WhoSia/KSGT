@@ -1,0 +1,41 @@
+name: G9-P53 KRC Independent Critic
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_formal_architecture.json"
+      - "experiments/g9-p53/krc_six_demonstration_passages.json"
+      - "experiments/g9-p53/natural_writing_pilot_briefs.json"
+      - "experiments/g9-p53/krc_independent_critic.cjs"
+      - ".github/workflows/g9-p53-krc-critic.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run independent deterministic evidence critic
+        run: |
+          mkdir -p receipts
+          node experiments/g9-p53/krc_independent_critic.cjs receipts/krc_mechanical_critique.json
+      - name: Confirm no invented semantic/human outcome claims
+        run: |
+          node - <<'JS'
+          const fs=require("node:fs");
+          const r=JSON.parse(fs.readFileSync("receipts/krc_mechanical_critique.json"));
+          if(r.records.length!==6||r.semantic_judgment!=="NOT_PERFORMED"||r.blind_readers!=="NONE"||r.ksgt_beats_baseline!=="UNTESTED")throw Error("AUTHORITY_LEAK");
+          if(r.records.some(x=>x.fact_semantic_status!=="NOT_ADJUDICATED"||x.naturalness_status!=="NOT_ADJUDICATED"))throw Error("UNLICENSED_SCORE");
+          console.log("KRC_CUSTODY_AND_AUTHORITY_PASS");
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-mechanical-critic
+          path: receipts/krc_mechanical_critique.json
+          retention-days: 15
