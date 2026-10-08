@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "OPEN_P53_INDEXED_KOREAN_SEGMENT_PROTOCOL_PRESEAL",
+  "status": "OPEN_P53_INDEXED_PROTOCOL_REGRESSION_PASS_PRIMARY_GATE_FAIL_FRESH_PIA_PENDING",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -22,15 +22,48 @@
     "pin_model_revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
     "model_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
     "historical_P50_24": "DIAGNOSTIC_ONLY_CANNOT_REUSE_AS_FRESH_PIA",
-    "fresh_source_only_PIA": "NOT_YET_COMPILED",
-    "governor": "HOLD",
-    "model_pretraining_overlap": "UNKNOWN"
+    "fresh_source_only_PIA": "NOT_SELECTED_NO_CONFIRMATORY_PIA",
+    "governor": "HOLD_PRIMARY_10_LT_18_AND_PIA_UNDONE",
+    "model_pretraining_overlap": "UNKNOWN",
+    "exact_candidate_escrow": "NOT_AVAILABLE_HASH_RECEIPT_ONLY"
   },
   "next": [
-    "Select and freeze segment numbering with Unicode-safe offsets and observable source annotations.",
-    "Separate INDEX_OUT_OF_RANGE, BAD_SCHEMA, NO_CHANGE, UNSUPPORTED_SEGMENT, PROTECTED_CARGO_LOSS without guesswork.",
-    "Use new fresh and rights-reviewed heldout source packet before primary PIA; P50 legacy only regression.",
-    "Do not upload raw evaluation text or editable candidates publicly; prepare private custody before U/K."
+    "Hold P53 preseal unchanged after first full regression, record one protected-cargo secondary loss.",
+    "Build independent historical-exclusion membership proof and rights review for fresh source-only 8+8+8 PIA before any fresh-model candidate outcome.",
+    "Prepare rights-safe exact raw candidate escrow; hash receipts cannot support same-pool U/K comparison.",
+    "Require human/independently licensed meaning/preservation PIA and primary >=18/24 before governor.",
+    "No governor execution or population/human-burden claim from P53 regression."
   ],
-  "authority": "OPEN_PROSPECTIVE_NOT_EMPIRICAL"
+  "authority": "OPEN_PROSPECTIVE_NOT_EMPIRICAL",
+  "historical_regression": {
+    "status": "COMPLETED_MECHANICAL_DIAGNOSTIC",
+    "run_id": 37720969811,
+    "conclusion": "success",
+    "artifact_id": 11526440921,
+    "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
+    "evidence_commit": "b44b70ff6e3ba983744e16855aa06cd3abdf406e",
+    "model_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "unit_tests": "9_OF_9_PASS",
+    "p52": {
+      "primary_changed": 0,
+      "any_changed": 2,
+      "valid_attempts": 2
+    },
+    "p53": {
+      "primary_changed": 10,
+      "any_changed": 20,
+      "valid_attempts": 47,
+      "total_attempts": 96,
+      "identity_attempts": 40,
+      "bad_json": 3,
+      "bad_schema": 6,
+      "lexical_cargo_loss_attempts": 1
+    },
+    "task_family_primary": {
+      "KOLLA_K1_HARD_CARGO": 4,
+      "KOLLA_K2_GENERIC": 3,
+      "STYLEKQC_GENERIC": 3
+    },
+    "interpretation": "JOINT_INDEXED_SEGMENT_PROMPT_AND_DECODER_INSTRUMENT_GAIN_NOT_ISOLATED_NUMBERING_EFFECT"
+  }
 }
