@@ -1,0 +1,63 @@
+{
+  "schema": "ksgt.g9.p53.krc-v01.prior-art-and-rival-court.v1",
+  "date": "2026-10-08",
+  "status": "LITERATURE_GROUNDED_THEORETICAL_POSITION_NOT_EMPIRICAL_NOVELTY_CLAIM",
+  "prior_art": [
+    {
+      "title": "Step-by-Step: Separating Planning from Realization in Neural Data-to-Text Generation",
+      "year": 2019,
+      "url": "https://aclanthology.org/N19-1236/",
+      "implication": "Symbolic content planning followed by neural surface realization is established prior art. KRC cannot claim novelty solely because P and G are split."
+    },
+    {
+      "title": "Sentence-Level Content Planning and Style Specification for Neural Text Generation",
+      "year": 2019,
+      "url": "https://aclanthology.org/D19-1055/",
+      "implication": "Sentence-level plan plus style control predates KRC; distinguish whether Korean pragmatic role typing and hard fact provenance add identifiable value."
+    },
+    {
+      "title": "Data-to-text Generation with Macro Planning",
+      "year": 2021,
+      "url": "https://doi.org/10.1162/tacl_a_00381",
+      "implication": "Document-level macro plans and reader improvements have evidence. Our small six-brief pilot does not outperform or supersede these findings."
+    },
+    {
+      "title": "Text Generation from Discourse Representation Structures",
+      "year": 2021,
+      "url": "https://aclanthology.org/2021.naacl-main.35/",
+      "implication": "Graph-level semantics, presupposition, coreference and realization already studied; KRC should test Korean-specific informational structure and discourse/genre realization constraints."
+    },
+    {
+      "title": "Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge",
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.ijcnlp-long.18/",
+      "implication": "LLM critic scores are susceptible to positioning bias; use randomized blind human panels and separate mechanical factual witness roles."
+    },
+    {
+      "title": "Correlated Errors in Large Language Models",
+      "year": 2025,
+      "url": "https://proceedings.mlr.press/v267/kim25e.html",
+      "implication": "Different language models can share correlated failure modes. Independent critic should not be called ground truth simply because it is a separate LLM."
+    }
+  ],
+  "specific_KRC_hypotheses": [
+    "Korean pragmatic realizers depend on typed speaker/addressee relation, referent recoverability and topic-focus information state in ways not captured by surface blacklist edits.",
+    "The writer may exhibit content-faithful Korean asymmetry (cadence, sentence skeleton variation, unsaid recoverable material), while a surface-template ablation accounts for only a portion of any perceived improvement.",
+    "Hard semantic/source warrants plus partially ordered reader effects provide a more honest generator feedback object than a scalar 'humanlike' discriminator."
+  ],
+  "strongest_competitors": [
+    "Generic checkpoint with equal facts and no KRC",
+    "Same checkpoint with only word-pattern blacklist",
+    "Same checkpoint with equally long free-text planning instruction, no typed compiler — not included in v0.1 and therefore needed for pure type-system attribution",
+    "Alternative fact-chain or rhetorical plan with same token budget — future ablation, not v0.1"
+  ],
+  "defeat_conditions": [
+    "If surface-only A matches K in blinded reader quality, the typed formalism has not earned additional complexity.",
+    "If K writes more unsupported facts or weakens clarity, evidence firewalls fail their intended purpose.",
+    "If K differs only because of extra prompt length or a hidden human-authored source-order advantage, do not attribute results to graph typing.",
+    "If blind readers disagree significantly or ask different genre-specific standards, do not collapse to one universal naturalness score.",
+    "If independent checks are only keyword scanners, do not claim actual semantic guarantees over generated surface text."
+  ],
+  "next_theory_test": "After v0.1 fixed 18 outputs, examine mechanism confounds and design one equal-token-length plan ablation on new briefs only if results warrant it.",
+  "authority": "PRIOR_ART_AUDIT_AND_RESEARCH_HYPOTHESES_ONLY"
+}
