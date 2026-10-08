@@ -1,0 +1,111 @@
+{
+  "schema": "ksgt.g9.p53.korean-writing-origin-return-court.v1",
+  "stage": "G9-P53",
+  "status": "RESEARCH_ORIGIN_RESTORED_NO_NEW_MODEL_RUN",
+  "central_explanandum": "How Korean writers realize meaning, stance, information structure, register and discourse continuity through alternative linguistic forms, rather than how an approval/governance system votes on revision proposals.",
+  "boundary": {
+    "language_phenomenon": "PRIMARY_SCIENTIFIC_OBJECT",
+    "candidate_model": "MEASUREMENT_INSTRUMENT_NOT_THEORY_OBJECT",
+    "governor": "SECONDARY_CONSTRAINT_DIAGNOSTIC_ONLY_WHEN_NEEDED",
+    "agreement_or_review": "NOT_A_STANDALONE_KSGT_RESEARCH_TRAJECTORY",
+    "continuing_proposer_improvement": "STOP_UNLESS_AN_EXPLICIT_LINGUISTIC_ESTIMAND_IS_BLOCKED"
+  },
+  "current_evidence": {
+    "p53_first_valid": "10/24",
+    "p53_any_valid": "20/24",
+    "p53_valid_attempts": "47/96",
+    "protected_cargo_warning": 1,
+    "status": "MECHANICAL_REUSED_PACKET_ONLY",
+    "what_it_shows": "Indexed addressing improves usable edit transport for this frozen model-plus-prompt setup",
+    "what_it_does_not_show": "How Korean forms realize context, whether edits preserve meaning, or how discourse/stylistic constraints determine preferences"
+  },
+  "linguistic_axes": [
+    {
+      "id": "L1",
+      "name": "Information structure",
+      "observables": [
+        "topic/contrast markers 은/는 vs 이/가",
+        "focus-bearing constituent ordering",
+        "given/new marking"
+      ],
+      "contrast": "preserve referent and proposition while varying focus/topic packaging",
+      "cautions": "particle substitution may change presupposition, emphasis or argument structure"
+    },
+    {
+      "id": "L2",
+      "name": "Sentence ending and stance",
+      "observables": [
+        "-다/-요/-습니다",
+        "epistemic endings and modality",
+        "speech-act packaging"
+      ],
+      "contrast": "same propositional content under different speaker-audience and evidential conditions",
+      "cautions": "relationship and situation are latent; do not infer from sentence alone"
+    },
+    {
+      "id": "L3",
+      "name": "Discourse connection",
+      "observables": [
+        "그런데/하지만/그래서/또한",
+        "causal versus contrastive relations",
+        "ellipsis and cohesion"
+      ],
+      "contrast": "similar local clauses with different discourse commitments",
+      "cautions": "connectives are not unrestricted synonyms"
+    },
+    {
+      "id": "L4",
+      "name": "Lexical and syntactic realization",
+      "observables": [
+        "nominalization vs verbal predication",
+        "word order and constituent grouping",
+        "lexical register and collocations"
+      ],
+      "contrast": "form alternatives conditioned on genre, rhythm and lexical conventionality",
+      "cautions": "lexical synonymy does not guarantee identical information or naturalness"
+    },
+    {
+      "id": "L5",
+      "name": "Preservation and plural solutions",
+      "observables": [
+        "hard numeric/name/reference cargo",
+        "multiple well-formed formulations",
+        "context-dependent underdetermination"
+      ],
+      "contrast": "identify legitimate alternative realizations rather than one teacher-corrected sentence",
+      "cautions": "plurality is a linguistic observation, not agreement or preference optimization"
+    }
+  ],
+  "design_rules": {
+    "unit": "Korean source + explicitly observed context + contrastive realizations; not proposer approval vote",
+    "minimum_three_way_record": [
+      "source-and-context facts",
+      "two or more candidate realizations",
+      "explicit linguistic variable expected to change"
+    ],
+    "controls": [
+      "semantic proposition held where meaningful",
+      "genre and speaker/listener context explicit or unknown",
+      "hard cargo separately tracked",
+      "no implicit social role guesses"
+    ],
+    "outcomes": [
+      "form contrast",
+      "semantic entailment/meaning change",
+      "pragmatic felicity under given context",
+      "naturalness/salience with uncertainty",
+      "discourse contribution"
+    ],
+    "negative_cases": "Counterexamples, acceptability disagreements, and underdetermination retained; do not collapse into numeric scalar improvement.",
+    "authority": "Hypothesis taxonomy only; human linguistic judgements and population generalization not yet evidenced."
+  },
+  "p53_disposition": "Bounded indexed transport experiment complete as enabling evidence. No further candidate selection or fresh PIA solely to move 10/24 toward 18/24 without a named linguistic question and bounded value-of-information case.",
+  "next_decision": "Open a prospective Korean realization contrast experiment first; pick one of L1-L4 under controlled context and construct minimal counterfactual sets with source rights and meaning-preservation adjudication. Governor only appears if it clarifies a language-theoretical underdetermination.",
+  "stop_rule": "If more than one subsequent stage is spent on proposer competence, data escrow, reviewer agreement or candidate budget without a direct Korean expression/form/context finding, return to linguistic phenomenon and close tooling lane.",
+  "claims_not_granted": [
+    "P53 protocol gain is a Korean writing theory success",
+    "P53 primary edit rate gives linguistic naturalness",
+    "governor can certify meaning",
+    "stylistic choice can be reduced to consensus"
+  ]
+}
