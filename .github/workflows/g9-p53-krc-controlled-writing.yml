@@ -1,0 +1,110 @@
+name: G9-P53 KRC Controlled Korean Writing Court
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v01/constitution.json"
+      - "experiments/g9-p53/krc_v01/planner.cjs"
+      - "experiments/g9-p53/krc_v01/generate.cjs"
+      - "experiments/g9-p53/krc_v01/critic.cjs"
+      - "experiments/g9-p53/krc_v01/tests/**"
+      - ".github/workflows/g9-p53-krc-controlled-writing.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  generate-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate typed plans and test independent generator critic
+        run: |
+          node --test experiments/g9-p53/krc_v01/tests/*.test.cjs
+          node experiments/g9-p53/krc_v01/planner.cjs > /tmp/ksgt_krc_plan_receipt.json
+      - name: Compile pinned C++ llama.cpp model runner
+        run: |
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Retrieve the unchanged Qwen3 checkpoint with SHA256 validation
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          from huggingface_hub import hf_hub_download
+          repo="Qwen/Qwen3-0.6B-GGUF"
+          revision="23749fefcc72300e3a2ad315e1317431b06b590a"
+          file="Qwen3-0.6B-Q8_0.gguf"
+          p=hf_hub_download(repo_id=repo,revision=revision,filename=file,local_dir="frozen-model")
+          h=hashlib.sha256()
+          with open(p,"rb") as f:
+            for chunk in iter(lambda:f.read(4*1024*1024),b""):h.update(chunk)
+          expected="9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031"
+          if h.hexdigest()!=expected:raise RuntimeError("MODEL_SHA256_MISMATCH")
+          data={"schema":"ksgt.krc.v0.1.checkpoint-custody.v1","repo":repo,"revision":revision,
+            "file":file,"sha256":expected,"bytes":Path(p).stat().st_size,
+            "runtime_commit":"9c2e0e491a822adae1f0b1c831adb4160057d24f"}
+          Path("model_integrity.json").write_text(json.dumps(data,indent=2)+"\n")
+          print(json.dumps(data))
+          PY
+      - name: Boot model and check transport health
+        run: |
+          vendor-llama/build/bin/llama-server \
+            --model frozen-model/Qwen3-0.6B-Q8_0.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 \
+            --ctx-size 4096 --threads 4 --parallel 1 > /tmp/krc_server.log 2>&1 &
+          echo $! > /tmp/krc_pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8912/health > /dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/krc_pid)" 2>/dev/null; then echo "MODEL_SERVER_EARLY_EXIT";exit 1;fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health > /dev/null
+      - name: Generate all eighteen B A K drafts without critic feedback
+        run: |
+          mkdir -p results
+          node experiments/g9-p53/krc_v01/generate.cjs \
+            results/krc_18_raw_drafts.json \
+            results/krc_18_blinded_reader_packet.json
+      - name: Apply independent descriptive evidence critic
+        run: |
+          node experiments/g9-p53/krc_v01/critic.cjs \
+            results/krc_18_raw_drafts.json results/krc_18_mechanical_critic.json
+      - name: Check outcome custody and authority limits
+        run: |
+          node - <<'JS'
+          const fs=require("node:fs");
+          const d=JSON.parse(fs.readFileSync("results/krc_18_raw_drafts.json"));
+          const b=JSON.parse(fs.readFileSync("results/krc_18_blinded_reader_packet.json"));
+          const c=JSON.parse(fs.readFileSync("results/krc_18_mechanical_critic.json"));
+          if(d.documents.length!==18||b.documents.length!==18||c.observations.length!==18)throw Error("COUNT_DRIFT");
+          if(d.scientific_claim!=="NO_HUMAN_NATURALNESS_OR_KSGT_SUPERIORITY_EVIDENCE"||
+             c.K_beats_B!=="NOT_DETERMINED"||c.natural_korean_readers!=="NOT_COLLECTED")throw Error("UNLICENSED_CLAIM");
+          if(b.documents.some(x=>Object.hasOwn(x,"arm")||Object.hasOwn(x,"plan")))throw Error("BLIND_PACKET_LEAK");
+          if(new Set(d.documents.map(x=>x.brief+"|"+x.arm)).size!==18)throw Error("ARM_MATRIX_DRIFT");
+          console.log(JSON.stringify({status:"KRC_BOUNDED_OUTPUT_COMPLETE",n:d.documents.length,
+            completed:d.n_completed,by_arm:c.summary_by_arm,human:"NONE",meaning:"NOT_ADJUDICATED"}));
+          JS
+          rm -rf frozen-model
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v01-eighteen-controlled-korean-drafts
+          path: |
+            model_integrity.json
+            results/krc_18_raw_drafts.json
+            results/krc_18_blinded_reader_packet.json
+            results/krc_18_mechanical_critic.json
+          if-no-files-found: error
+          retention-days: 30
