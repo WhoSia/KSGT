@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P53",
   "stage_type": "INDEXED_SOURCE_SPAN_PROTOCOL_COURT",
-  "status": "OPEN_P53_INDEXED_KOREAN_SEGMENT_PROTOCOL_PRESEAL",
+  "status": "OPEN_P53_INDEXED_MECHANICAL_GAIN_FRESH_PIA_NOT_PERFORMED",
   "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "parent_stage": "G9-P52",
   "latest_closed_stage": "G9-P52",
@@ -24,6 +24,7 @@
   "resume_reads": [
     "CURRENT_STAGE.json",
     "artifacts/g9_p53_current_state.json",
+    "artifacts/g9_p53_indexed_regression_evidence.json",
     "experiments/g9-p53/constitution.json",
     "artifacts/g9_p52_terminal_verdict.json",
     "ARCHIVE_INDEX.json",
@@ -42,8 +43,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE_NOW_DATA_USE_RIGHTS_REVIEW_REQUIRED_BEFORE_NEW_EVALUATION_CUSTODY",
-  "next_scientific_action": "Freeze deterministic Korean source segmentation/index mapping and typed errors first; validate on synthetic fixtures, then compile NEW evaluation-disjoint source packet before confirmatory PIA.",
+  "next_human_action": "OPTIONAL_LICENSING_REVIEW_FOR_NEW_KOLLA_V2_SOURCE_ONLY_HOLDOUT; NO_IMMEDIATE_ACTION",
+  "next_scientific_action": "Do not retune P53 regression instrument. Reconstitute rights-reviewed, historical-exclusion-proven fresh PIA and exact private candidate-pool escrow before any adequate governor contrast; P53 first candidate still <18/24.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -51,5 +52,16 @@
     "source_file_count": 471,
     "member_sha256_verified": true,
     "active_repo_file_policy": "EIGHT_FILES_ONLY"
+  },
+  "latest_experiment": {
+    "stage": "G9-P53",
+    "run_id": 37720969811,
+    "engineering": "SUCCESS_9_TESTS_PINNED_CPP_MODEL",
+    "primary_changed": "10/24",
+    "any_changed": "20/24",
+    "valid_attempts": "47/96",
+    "comparator": "P52_PRIMARY_0_OF_24_ANY_2_OF_24",
+    "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
+    "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   }
 }
