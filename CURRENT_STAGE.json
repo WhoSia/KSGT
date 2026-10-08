@@ -2,11 +2,11 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "G9-P54",
+  "current_stage": "G9-P55",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "CLOSED_G9_P54_BOUNDED_PRECEDING_EVIDENCE_PASS_SEMANTIC_GOLD_AND_WRITER_CHOICE_HOLD",
-  "canonical_notion_id": "3f3ef561-cf92-81ff-bf94-d12bc8785520",
-  "parent_stage": "G9-P53",
+  "status": "OPEN_G9_P55_CONSTRUCTION_TRANSPORT_EVIDENCE_COURT",
+  "canonical_notion_id": "3f3ef561-cf92-8140-aaae-fbeaae1fb8b7",
+  "parent_stage": "G9-P54",
   "latest_closed_stage": "G9-P54",
   "latest_closed_artifact": {
     "stage": "G9-P54",
@@ -15,9 +15,9 @@
     "main_parent": "3a6c5a253c24ef8109daad503271f36a1e79f793"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "artifacts/g9_p54_preceding_source_contact.json",
+  "current_artifact": "artifacts/g9_p55_extended_target_ceiling.json",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "What observable preceding-sentence evidence warrants a group antecedent candidate for 그중, and where must the writer-facing resolver abstain?",
+  "current_question": "Can explicitly sourced Korean 그중 하나/절반 produce non-destructive surface candidates under a strict integer and writer-declared evidence contract?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
@@ -60,8 +60,12 @@
     "p54_synthetic_controls": "LOCAL_17_OF_17_PASS_PUBLIC_12_CI_NOT_OBSERVED",
     "p54_real_context_contact": "25_PRIVATE_NIKL_DOCUMENT_CONTEXTS_17_OF_25_CUE_LAST2_21_OF_25_CUE_LAST5",
     "p54_ci": "UNCONFIRMED_NO_RUN_OR_CHECK_VISIBLE",
-    "p54_ci_postclosure": "TWO_LATER_RUNS_VERIFIED_SUCCESS_37798004887_37798350587_TERMINAL_AS_OBSERVED_UNCONFIRMED_PRESERVED",
-    "p55_preliminary": "PRESTAGE_ENGINEERING_18_LOCAL_PASS_FIVE_FORMS_REAL_TARGET_FLOOR_1_OF_25_NO_WRITER_ADVANTAGE"
+    "p54_ci_postclosure": "TWO_LATER_REMOTE_RUNS_SUCCESS_37798004887_37798350587",
+    "p55_preliminary": "PRESTAGE_ENGINEERING_18_LOCAL_PASS_FIVE_FORMS_REAL_TARGET_FLOOR_1_OF_25_NO_WRITER_ADVANTAGE",
+    "p55": "A1_QUOTE_TRANSPORT_ONLY_NO_INDEPENDENT_REFERENT_GOLD_NO_AUTOMATED_WRITER_PREFERENCE",
+    "p55_integer_half": "REQUIRES_DISCRETE_EVEN_SOURCE_COUNT",
+    "p55_target_shape_ceiling": "SOURCE_25_EXPLICIT_COUNTER_1_PLUS_HANA_1_PLUS_HALF_1_EQUALS_3_OF_25_SHAPES_ONLY",
+    "p55_tests": "23_LOCAL_PASS_REMOTE_PENDING"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -91,8 +95,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "Confirm or revise G9-P55 proposed formal title; no data or server work required.",
-  "next_scientific_action": "G9-P54 remains CLOSED. User to confirm G9-P55 name; provisional offline five-construction source-witnessed candidate engine built, but actual NIKL supported target grammar only 1 of 25 and no independently licensed antecedent/writer choice. Use short-stage boundary.",
+  "next_human_action": "NONE",
+  "next_scientific_action": "Execute 23 authored exact-half/one-unit counterexample probes remotely, preserve no-op, and close P55 with real 3/25 input shape bound and missing antecedent/writer gold explicit.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -112,7 +116,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "TERMINAL_P54_CLOSED_SMALL_BOUNDED_COURT",
+  "current_substage": "P55 exact selection-head transport and source-warrant audit",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -171,10 +175,10 @@
     "human_reader_rating": "NOT_COLLECTED"
   },
   "current_prototype": {
-    "path": "experiments/g9-p54/antecedent_evidence_v01/source_witness.py",
-    "tests": "experiments/g9-p54/antecedent_evidence_v01/tests/test_witness.py",
-    "source_contact": "artifacts/g9_p54_preceding_source_contact.json",
-    "outcome": "CUES_ONLY_ANTECEDENT_GOLD_NOT_OBSERVED"
+    "path": "experiments/g9-p55/quantifier_extension_v01/realizer.cjs",
+    "tests": "experiments/g9-p55/quantifier_extension_v01/test/realizer.test.cjs",
+    "source": "experiments/g9-p55-prelude/partitive_realizer_v01/realizer.cjs",
+    "independent_writer_quality": "NOT_ESTABLISHED"
   },
   "latest_p0_capacity_probe": {
     "source": "artifacts/g9_p53_p0_qwen14b_b_baseline_readback.json",
@@ -317,14 +321,15 @@
   "next_stage_proposal": {
     "stage": "G9-P55",
     "formal_name_proposed": "KSGT Generation IX G9-P55 — Construction-Aware Partitive Realization, Source-Witness Transport & Non-Destructive Writer Choice",
-    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
-    "status": "NOT_YET_OPENED",
+    "canonical_name_status": "CONFIRMED_BY_USER",
+    "status": "OPEN",
     "one_question": "Can five attested geujung constructions offer reviewable source-witnessed surface alternatives under strict classifier and subset warrant without auto-editing?",
     "prelude_path": "experiments/g9-p55-prelude",
     "test_receipt": "18_LOCAL_SYNTHTEST_PASS",
     "real_private_target_count": "1_OF_25_FINITE_MORPHOLOGY_TARGET_ONLY",
     "actual_licensed_rewrite_count": 0,
     "real_antecedent_gold": 0,
-    "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
+    "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD",
+    "schema": "G9-P55_ONE_QUESTION_BOUND"
   }
 }

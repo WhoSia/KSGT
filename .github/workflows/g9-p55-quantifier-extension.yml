@@ -1,0 +1,25 @@
+name: G9-P55 Exact Partitive Heads and Non-Destructive Writer Choice
+on:
+  push:
+    paths:
+      - 'experiments/g9-p55/quantifier_extension_v01/**'
+      - '.github/workflows/g9-p55-quantifier-extension.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discrete-half-and-hana-source-witness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: New untyped quantifiers with inherited evidence and edit guards
+        run: node --test experiments/g9-p55/quantifier_extension_v01/test/realizer.test.cjs
+      - name: Regression tests for five old construction forms
+        run: node --test experiments/g9-p55-prelude/partitive_realizer_v01/tests/realizer.test.cjs
+      - name: Assert private source not uploaded and semantic limits preserved
+        run: |
+          node -e "const x=require('./artifacts/g9_p55_extended_target_ceiling.json');if(x.supported_target_form_ceiling!==3||x.independent_antecedent_gold!==0||x.actually_source_and_author_licensed_real_rewrites!==0||x.source_text_published!==false)process.exit(1);"
+          test ! -e NIKL_ZA_2025_v1.0.zip

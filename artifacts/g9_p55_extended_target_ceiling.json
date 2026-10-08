@@ -1,0 +1,35 @@
+{
+  "schema": "ksgt.g9p55.quantifier_extension_court.v1",
+  "stage": "G9-P55",
+  "source": {
+    "archive_sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+    "custody": "PRIVATE_NIKL_ZA_2025_EXISTING"
+  },
+  "total_geujung_contexts": 25,
+  "source_target_shapes": {
+    "typed_integer_and_counter": 1,
+    "single_untyped_hana": 1,
+    "exact_half_untyped_jeolban": 1,
+    "percent_not_supported": 1,
+    "other_forms_not_covered": 21
+  },
+  "construction_form_counts": {
+    "그중": 8,
+    "그중에": 6,
+    "그중에서": 6,
+    "그중에서도": 4,
+    "그중에선": 1
+  },
+  "supported_target_form_ceiling": 3,
+  "previous_target_form_ceiling": 1,
+  "upper_bound_only": true,
+  "actually_source_and_author_licensed_real_rewrites": 0,
+  "independent_antecedent_gold": 0,
+  "human_writer_preference_cases": 0,
+  "local_test_count": 23,
+  "local_test_pass": 23,
+  "automatic_rewrites": 0,
+  "source_text_published": false,
+  "remote_ci_status": "PENDING",
+  "conclusion": "SYNTACTIC_SUPPORT_COVERAGE_NOT_REAL_ACCURACY_OR_KOREAN_NATURALNESS"
+}

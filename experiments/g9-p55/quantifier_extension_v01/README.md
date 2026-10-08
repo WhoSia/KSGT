@@ -1,0 +1,13 @@
+# G9-P55 — Construction-Aware Partitive Realization
+
+**Formal name:** KSGT Generation IX G9-P55 — Construction-Aware Partitive Realization, Source-Witness Transport & Non-Destructive Writer Choice
+
+**Single bound:** Source-witnessed display alternatives for Korean `그중` + count, `하나` or exact discrete `절반`, without inventing referent identity or author preference. G9-P54 is closed. This executable module delegates the older five-form number-and-classifier source checks to the existing G9-P55 prelude and adds only two untyped exact selection heads. User-confirmed formal title; **stage remains open until actual remote test readback and terminal receipt**.
+
+Method: `realizer.cjs` first calls original finite-partitive engine; it accepts the old explicit integer-and-counter case untouched, recognizes `하나` as exactly one and `절반` only when **a declared discrete source count is even**. An internal normalized integer+counter representation passes through the *same* source-quote uniqueness, strict subset, writer CLARIFY and possible rightward-continuation checks. The normalized string is NEVER shown to readers. Only the original draft and an optional overt-group phrase are exposed. Any odd source for exact half, approximate fraction, percent, ambiguous source, bad counter, unrecognized affix or unknown writer policy returns KEEP/HOLD with no rewrite. `그중 92%` is deliberately unsupported, not assumed equivalent to an integral number of people.
+
+**Private original-source whole-corpus ceiling (source SHA-256 pinned):** 25 literal `그중` NIKL ZA 2025 contexts: previously typed numeral+counter 1, newly target-shaped `하나` 1 and `절반` 1, percentage 1 and remaining other morphologies 21. Thus this finite syntax rule now **could examine at most 3/25 target heads** instead of 1/25. This is NOT three correctly resolved referents, NOT actual licensed rewriting; **source+writer+antecedent certified real edits remain 0**, and neither group antecedents nor human KEEP-vs-EDIT choices were independently annotated. No original private source sentences or row keys are committed to GitHub.
+
+**Test:** `node --test experiments/g9-p55/quantifier_extension_v01/test/realizer.test.cjs` (23 authored source/negative tests). Local Node 22 23/23 PASS before commit. CI, when it completes, tests the same module with no corpus download. It does not establish human-quality improvement.
+
+**Stopping rule:** close P55 promptly as BOUNDED_PASS/HOLD if test and source-contact receipt are verified, retaining the human semantic and quality debts for a distinct future P-stage. No friend's HDD/SSD/Python/npm, no model inference, no new huge corpus.
