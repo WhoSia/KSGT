@@ -1,0 +1,27 @@
+name: G9-P50 Rust Slice Verifier CI
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p50/rust-slice-verify/**"
+      - ".github/workflows/g9-p50-rust-slice-verify.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: experiments/g9-p50/rust-slice-verify
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Verify Rust compiler and tests
+        run: |
+          cargo fmt --all -- --check
+          cargo test
+          cargo clippy --all-targets -- -D warnings
