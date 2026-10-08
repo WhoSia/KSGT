@@ -1,0 +1,23 @@
+name: G9-P53 Private NIKL Partitive Radar Logic (Synthetic CI Only)
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/empirical_nikl_partitives_v01/**'
+      - '.github/workflows/g9-p53-nikl-partitive-radar.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate-radar-safe-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test corpus-radar parser using authored synthetic rows only
+        run: |
+          python3 -m unittest discover \
+            -s experiments/g9-p53/empirical_nikl_partitives_v01/tests \
+            -p 'test*.py' -v
+      - name: Verify restricted real corpus never enters CI
+        run: |
+          test ! -e NIKL_ZA_2025_v1.0.zip
+          test ! -e experiments/g9-p53/empirical_nikl_partitives_v01/PRIVATE_candidate_manifest.json

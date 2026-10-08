@@ -44,7 +44,8 @@
     "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES",
     "writer_review_v02": "REMOTE_GITHUB_CI_SUCCESS_15_NEW_PLUS_9_KRC_TESTS_NONDESTRUCTIVE_WRITER_CLI_NO_HUMAN_QUALITY",
     "writer_review_v03": "REMOTE_CI_SUCCESS_HIGH_LEVEL_CONTEXTUAL_INTENT_HOLD_11_NEW_TESTS_NO_AUTO_PREFERENCE",
-    "stylekqc_empirical_census": "PINNED_REAL_HUMAN_PARAPHRASE_4800_ROWS_480_GROUPS_477_TEN_DISTINCT_NO_PARTITIVE_GOLD"
+    "stylekqc_empirical_census": "PINNED_REAL_HUMAN_PARAPHRASE_4800_ROWS_480_GROUPS_477_TEN_DISTINCT_NO_PARTITIVE_GOLD",
+    "nikl2025_private_geujung": "PRIVATE_REAL_BYTE_SCAN_25_LEXICAL_CONTEXT_CANDIDATES_NOT_PARTITIVE_ANTECEDENT_GOLD"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -75,7 +76,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "Keep source-only KEEP/EDIT authority on HOLD (G8 S11). Acquire independent same-context Korean human rewrite preference/edit actions and natural partitive antecedent context. Genre F/E/L/W and human paraphrase multi-candidate surface are available, but no human writer quality is established.",
+  "next_scientific_action": "With existing private NIKL 2025 raw and StyleKQC metadata, select and independently adjudicate true Korean partitive antecedents within context (25 lexical candidate rows, not gold). Keep A0-A3 no auto edit, test source meaning and writer preference before promoting KSGT.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -249,5 +250,24 @@
     "partitive_antecedent_gold": "NONE",
     "new_llm_model_calls": 0,
     "borrowed_server": "NOT_USED"
+  },
+  "latest_private_partitive_corpus_audit": {
+    "source_drive": "https://drive.google.com/file/d/1hnPT6CztaxtFukrM6uAMLHIFGgZmoDM2/view",
+    "source_archive_sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+    "aggregate_receipt": "artifacts/g9_p53_nikl2025_geujung_candidate_census.json",
+    "code": "experiments/g9-p53/empirical_nikl_partitives_v01/nikl_partitive_radar.py",
+    "sentences": 30346,
+    "documents": 1102,
+    "zero_anaphora_rows": 50247,
+    "geujung_candidates": 25,
+    "naemaji_occurrences": 25,
+    "candidate_has_prev_sentence": 25,
+    "candidate_with_ZA_rows": 17,
+    "independent_partitive_gold": 0,
+    "public_raw_text_copy": false,
+    "private_hashed_index": "SANDBOX_ONLY_NOT_GITHUB",
+    "local_python_tests": "4_OF_4_PASS",
+    "github_ci": "PENDING",
+    "borrowed_friend_server": "NOT_USED"
   }
 }

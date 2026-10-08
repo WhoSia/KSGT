@@ -1,0 +1,67 @@
+{
+  "schema": "ksgt.g9p53.nikl2025_geujung_candidate_radar.v1",
+  "source": {
+    "archive_sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+    "membership_sha256": {
+      "NXZA2502512313.json": "b3aaefd241ae351c4c252cc493161d9be02232779a47bd7735195d0de87e8f86",
+      "SXZA2502512312.json": "717fbe35db08b91bd62fdfb2a29cdef8a2d91aa85d099f256e82802e8122e0cc"
+    },
+    "custody": "EXISTING_PRIVATE_USER_DRIVE",
+    "rights": "NO_RAW_PUBLICATION"
+  },
+  "by_split": {
+    "NXZA2502512313.json": {
+      "documents": 1027,
+      "sentences": 13907,
+      "za_annotation_rows": 31712,
+      "geujung_sentences": 9,
+      "geujung_literals": 9,
+      "naemaji_sentences": 12,
+      "naemaji_literals": 12,
+      "geujung_has_prior_sentence": 9,
+      "geujung_has_za_annotation": 7,
+      "geujung_form_original_diff": 5
+    },
+    "SXZA2502512312.json": {
+      "documents": 75,
+      "sentences": 16439,
+      "za_annotation_rows": 18535,
+      "geujung_sentences": 16,
+      "geujung_literals": 16,
+      "naemaji_sentences": 13,
+      "naemaji_literals": 13,
+      "geujung_has_prior_sentence": 16,
+      "geujung_has_za_annotation": 10,
+      "geujung_form_original_diff": 5
+    }
+  },
+  "total": {
+    "documents": 1102,
+    "sentences": 30346,
+    "za_annotation_rows": 50247,
+    "geujung_sentences": 25,
+    "geujung_literals": 25,
+    "naemaji_sentences": 25,
+    "naemaji_literals": 25,
+    "geujung_has_prior_sentence": 25,
+    "geujung_has_za_annotation": 17,
+    "geujung_form_original_diff": 10,
+    "candidate_count": 25
+  },
+  "authority": {
+    "independent_partitive_antecedent_gold": false,
+    "automated_group_resolution": false,
+    "licensed_prose_quality": false,
+    "geujung_is_zero_anaphora_truth": false,
+    "candidate_status": "LEXICAL_FILTER_FOR_PRIVATE_MANUAL_REVIEW_ONLY"
+  },
+  "audit_receipt": {
+    "method": "PRIVATE_LOCAL_EXACT_BYTE_SCAN",
+    "new_download_from_user": false,
+    "private_raw_in_public_repo": false,
+    "source_text_in_receipt": false,
+    "manifest": "PRIVATE_LOCAL_HASH_ONLY_NOT_UPLOADED",
+    "local_synthetic_test_results": "4_OF_4_PASS",
+    "writer_preference": "NOT_OBSERVED"
+  }
+}
