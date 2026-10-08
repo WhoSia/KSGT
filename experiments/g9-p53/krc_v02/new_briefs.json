@@ -1,0 +1,170 @@
+{
+  "schema": "ksgt.g9.p53.krc-v02.new-briefs.v1",
+  "status": "FROZEN_SOURCE_FACTS_BEFORE_GENERATION",
+  "source_rights": "New assistant-authored fictional source facts with no hidden PIA, real participant or third-party text.",
+  "not_used_in_v01": true,
+  "briefs": [
+    {
+      "id": "EX07",
+      "genre": "science_explainer",
+      "audience": "고등학생",
+      "objective": "관찰·가능한 설명·미확인 조건을 구별하는 두 문단",
+      "setting": "교실에서 수행한 간단한 비교 관찰, 원인 단정 금지",
+      "facts": [
+        {
+          "id": "F1",
+          "text": "교실에 투명한 병 두 개를 놓고 같은 양의 물을 담았다.",
+          "anchors": [
+            "병",
+            "물"
+          ],
+          "paragraph": 1,
+          "role": "SETUP",
+          "relation": "START"
+        },
+        {
+          "id": "F2",
+          "text": "한 병은 얇은 천으로 감쌌고 다른 병은 그대로 두었다.",
+          "anchors": [
+            "천",
+            "다른"
+          ],
+          "paragraph": 1,
+          "role": "METHOD",
+          "relation": "SEQUENCE"
+        },
+        {
+          "id": "F3",
+          "text": "실험을 시작할 때 두 병의 물 온도는 같았다.",
+          "anchors": [
+            "시작",
+            "온도"
+          ],
+          "paragraph": 1,
+          "role": "BASELINE",
+          "relation": "SEQUENCE"
+        },
+        {
+          "id": "F4",
+          "text": "20분 뒤 천으로 감싼 병의 물 온도가 다른 병보다 낮았다.",
+          "anchors": [
+            "20분",
+            "낮"
+          ],
+          "paragraph": 2,
+          "role": "RESULT",
+          "relation": "OBSERVATION"
+        },
+        {
+          "id": "F5",
+          "text": "관찰 중 실내 온도 변화는 기록하지 않았다.",
+          "anchors": [
+            "실내",
+            "기록"
+          ],
+          "paragraph": 2,
+          "role": "LIMITATION",
+          "relation": "EPISTEMIC_LIMIT"
+        }
+      ],
+      "unknowns": [
+        "실내 온도 변화의 실제 값",
+        "온도계 측정 오차",
+        "온도 차이의 확정된 원인",
+        "병의 재질 차이"
+      ],
+      "prohibited_assertions": [
+        "천 때문에 반드시 온도가 낮았다",
+        "병의 재질이 서로 달랐다"
+      ],
+      "narrator": "비개인적 설명 문체",
+      "register": "평서체 -다",
+      "target_chars": [
+        180,
+        360
+      ]
+    },
+    {
+      "id": "EX08",
+      "genre": "scene_essay",
+      "audience": "일반 독자",
+      "objective": "관찰된 행위와 주변 소리를 따라가는 자연스러운 짧은 산문",
+      "setting": "저녁 서점 풍경, 감정이나 동기를 새로 설정하지 않음",
+      "facts": [
+        {
+          "id": "F1",
+          "text": "저녁 여섯 시 무렵 서점 문이 닫히기 직전이었다.",
+          "anchors": [
+            "여섯",
+            "서점"
+          ],
+          "paragraph": 1,
+          "role": "SCENE",
+          "relation": "START"
+        },
+        {
+          "id": "F2",
+          "text": "유리창 안쪽에는 책 몇 권이 펼쳐져 있었다.",
+          "anchors": [
+            "유리창",
+            "책"
+          ],
+          "paragraph": 1,
+          "role": "SETTING",
+          "relation": "ELABORATION"
+        },
+        {
+          "id": "F3",
+          "text": "한 손님이 종이 봉투를 손에 들고 있었다.",
+          "anchors": [
+            "손님",
+            "봉투"
+          ],
+          "paragraph": 1,
+          "role": "ACTION",
+          "relation": "CO_OCCURRENCE"
+        },
+        {
+          "id": "F4",
+          "text": "점원이 카운터의 조명을 껐다.",
+          "anchors": [
+            "점원",
+            "조명"
+          ],
+          "paragraph": 2,
+          "role": "ACTION",
+          "relation": "SEQUENCE"
+        },
+        {
+          "id": "F5",
+          "text": "화자는 서점 문 밖 인도에 서 있었다.",
+          "anchors": [
+            "문 밖",
+            "인도"
+          ],
+          "paragraph": 2,
+          "role": "VIEWPOINT",
+          "relation": "CO_OCCURRENCE"
+        }
+      ],
+      "unknowns": [
+        "손님이 구매한 책의 종류",
+        "점원이 불을 끈 이유",
+        "화자의 감정",
+        "손님의 신원이나 이동 경로"
+      ],
+      "prohibited_assertions": [
+        "화자는 아쉬운 마음이 들었다",
+        "손님은 책을 샀다"
+      ],
+      "narrator": "관찰자 중심의 제한된 시점",
+      "register": "평서체 -다",
+      "target_chars": [
+        180,
+        360
+      ]
+    }
+  ],
+  "facts_are_not_model_instructions": true,
+  "interpretation": "No independent human judgments yet. Even exact anchors may be semantically distorted by a small model."
+}
