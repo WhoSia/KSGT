@@ -2,7 +2,7 @@
 // P51 corpus-free deterministic S7-inspired edit instrument; S5 is downstream governance.
 const fs = require("node:fs");
 const crypto = require("node:crypto");
-const p = require("../rival_edit_preseal.json");
+const p = require("./rival_edit_preseal.json");
 const sha = x => crypto.createHash("sha256").update(x).digest("hex");
 const same = (a,b) => JSON.stringify(a)===JSON.stringify(b);
 const LANES = ["KOLLA_K1_HARD_CARGO","KOLLA_K2_GENERIC","STYLEKQC_GENERIC"];
