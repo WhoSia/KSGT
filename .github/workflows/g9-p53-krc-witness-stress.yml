@@ -1,0 +1,88 @@
+name: G9-P53 KRC Witness-Conditioned Repair Stress
+
+on:
+  push:
+    paths:
+      - ".github/workflows/g9-p53-krc-witness-stress.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repair-stress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify independent critic detects all three injected defects
+        run: |
+          node - <<'JS'
+          const assert=require('node:assert/strict');
+          const pre=require('./experiments/g9-p53/krc_stress/preseal.json');
+          const V=require('./experiments/g9-p53/krc_v02/critic.cjs');
+          for(const t of pre.cases){
+            const result=V.inspect(t.brief_id,t.fact_id,JSON.stringify(t.injected_candidate));
+            assert.equal(result.status,'REJECT_WITH_WITNESSES');
+            assert(result.witnesses.some(w=>w.code===t.required_witness));
+          }
+          console.log('ALL_THREE_INJECTED_DEFECTS_WITNESSED');
+          JS
+      - name: Build pinned unchanged C++ runner
+        run: |
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Download and hash frozen model bytes
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          from huggingface_hub import hf_hub_download
+          import hashlib
+          p=hf_hub_download(repo_id="Qwen/Qwen3-0.6B-GGUF",revision="23749fefcc72300e3a2ad315e1317431b06b590a",
+                            filename="Qwen3-0.6B-Q8_0.gguf",local_dir="frozen-model")
+          h=hashlib.sha256()
+          with open(p,"rb") as f:
+            for chunk in iter(lambda:f.read(4*1024*1024),b""):h.update(chunk)
+          assert h.hexdigest()=="9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031"
+          print("PINNED_MODEL_SHA_VERIFIED")
+          PY
+      - name: Start single local inference endpoint
+        run: |
+          vendor-llama/build/bin/llama-server --model frozen-model/Qwen3-0.6B-Q8_0.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 --ctx-size 3072 \
+            --threads 4 --parallel 1 > /tmp/krc_stress_server.log 2>&1 &
+          echo $! > /tmp/krc_stress_pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8912/health >/dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/krc_stress_pid)" 2>/dev/null; then exit 1; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health >/dev/null
+      - name: Execute three witnessed repair challenges without retraining
+        run: |
+          mkdir -p outcome
+          node experiments/g9-p53/krc_stress/stress.cjs outcome/witness_stress.json
+      - name: Verify injected provenance and zero semantic authority claims
+        run: |
+          node - <<'JS'
+          const fs=require('fs'),x=JSON.parse(fs.readFileSync('outcome/witness_stress.json'));
+          if(x.cases.length!==3||x.real_model_repair_requests!==3||x.weight_updates!==0)throw Error('STRESS_COUNT');
+          if(x.cases.some(c=>c.injected_is_model_output||c.semantic_preservation!=='NOT_PROVEN'))throw Error('PROVENANCE_OR_AUTHORITY');
+          console.log(JSON.stringify({repairs:x.real_model_repair_requests,
+            passed_mechanical:x.mechanically_admitted,semantic_proof:x.semantic_proof}));
+          JS
+          rm -rf frozen-model
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v02-injected-witness-repair-results
+          path: outcome/witness_stress.json
+          retention-days: 30
