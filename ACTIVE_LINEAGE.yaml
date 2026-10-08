@@ -1,7 +1,7 @@
 schema: ksgt.active-lineage.v6
 current_stage: G9-P53
 current_live_focus: KOREAN_NATURAL_WRITING_AND_TYPED_REALIZATION
-current_krc_locus: KRC_v0.2_BOUNDED_CLOSED_NEXT_KOREAN_CONSTRUCTION_CALCULUS
+current_krc_locus: KRC_v0.3_4B_DECODER_EXECUTED_SEMANTIC_INADEQUACY_NEXT_KOREAN_CONSTRUCTION_CALCULUS
 notion_current: 3f3ef561-cf92-8144-aafe-c65a5556170c
 current_stage_constitution: experiments/g9-p53/constitution.json
 current_state: artifacts/g9_p53_current_state.json
@@ -14,10 +14,14 @@ krc_v02_main_run: 37727690693
 krc_v02_semantic_defeater_run: 37728066629
 krc_v02_real_feedback_stress_run: 37728285311
 krc_v02_caution: NINE_OF_TEN_COPIES_AND_THREE_KNOWN_CRITIC_SEMANTIC_FALSE_NEGATIVES
-human_reader_status: ON_HOLD_NO_RATINGS
+human_reader_status: V01_SURVEY_CANCELLED_INVALID_COMPARATORS
 anonymous_reader_survey_drive_id: 141KddGIPYjWCMIEkRjnDLKrAYJ_vmfGt
 general_ai_naturalness_comparison: NOT_ESTABLISHED
 next_mechanism: KOREAN_PREDICATE_ARGUMENT_POLARITY_DISCOURSE_AND_SYNTACTIC_OPERATION_CALCULUS
+krc_v03_decoder_run: 37732682355
+krc_v03_readback_run: 37733414010
+krc_v03_verdict: artifacts/g9_p53_krc_v03_decoder_gate_verdict.json
+v01_reader_survey_retired: artifacts/g9_p53_krc_v01_invalidity_ruling.json
 pia_and_governor: RETAIN_HISTORICAL_EVIDENCE_NOT_MAIN_RESEARCH_OBJECT
 historical_archive: ARCHIVE_INDEX.json
 latest_closed_stage: G9-P52
