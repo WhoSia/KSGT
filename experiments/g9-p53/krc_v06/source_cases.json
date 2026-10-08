@@ -1,0 +1,189 @@
+{
+  "schema": "ksgt.g9.p53.krc.v06.new-disourse-sources.v1",
+  "status": "FROZEN_HAND_AUTHORED_EXAMPLES_NOT_CORPUS_GOLD",
+  "cases": [
+    {
+      "id": "EX17",
+      "genre": "science_explainer",
+      "groups": [
+        {
+          "id": "CUPS_A",
+          "kind": "CUP",
+          "cardinality": 2,
+          "homogeneous": true,
+          "introduced_at": "F1",
+          "paragraph": 1,
+          "accessible_until": "F4"
+        }
+      ],
+      "events": [
+        {
+          "id": "F1",
+          "paragraph": 1,
+          "agent": "MINJI",
+          "predicate": "PLACE",
+          "polarity": "POS",
+          "group_introduced": "CUPS_A",
+          "finite": "민지는 투명한 컵 두 개를 실험대에 놓았다.",
+          "head_without_ending": "민지는 투명한 컵 두 개를 실험대에",
+          "verb_lemma": "놓다",
+          "finite_ending": "놓았다"
+        },
+        {
+          "id": "F2",
+          "paragraph": 1,
+          "agent": "MINJI",
+          "predicate": "POUR",
+          "polarity": "POS",
+          "finite": "두 컵에 같은 양의 물을 부었다.",
+          "verb_lemma": "붓다",
+          "finite_ending": "부었다"
+        },
+        {
+          "id": "F3",
+          "paragraph": 1,
+          "agent": "MINJI",
+          "predicate": "MOVE",
+          "polarity": "POS",
+          "finite": "그중 한 컵을 창가로 옮겼다.",
+          "partitive": {
+            "group_kind": "CUP",
+            "count": 1,
+            "reference": "CUPS_A",
+            "surface": "그중 한 컵"
+          },
+          "verb_lemma": "옮기다",
+          "finite_ending": "옮겼다"
+        },
+        {
+          "id": "F4",
+          "paragraph": 2,
+          "agent": null,
+          "predicate": "COMPARATIVE_HIGHER",
+          "polarity": "POS",
+          "finite": "20분 뒤 창가에 둔 컵의 물 온도가 다른 컵보다 높았다.",
+          "comparison": {
+            "group_ref": "CUPS_A",
+            "target": "PARTITIVE_F3",
+            "complement_count": 1,
+            "direction": "HIGHER"
+          }
+        },
+        {
+          "id": "F5",
+          "paragraph": 2,
+          "agent": null,
+          "predicate": "NOT_MEASURED",
+          "polarity": "NEG",
+          "finite": "두 컵 주변의 공기 온도는 측정하지 않았다.",
+          "uncertain_measured_variable": "AIR_TEMPERATURE"
+        }
+      ],
+      "links": [
+        {
+          "from": "F1",
+          "to": "F2",
+          "relation": "SEQUENCE",
+          "agent": "MINJI",
+          "can_join": true
+        },
+        {
+          "from": "F4",
+          "to": "F5",
+          "relation": "EPISTEMIC_LIMIT",
+          "connective": "다만"
+        }
+      ]
+    },
+    {
+      "id": "EX18",
+      "genre": "scene_essay",
+      "groups": [
+        {
+          "id": "BOOKS_B",
+          "kind": "BOOK",
+          "cardinality": 3,
+          "homogeneous": true,
+          "introduced_at": "F1",
+          "paragraph": 1,
+          "accessible_until": "F3"
+        }
+      ],
+      "events": [
+        {
+          "id": "F1",
+          "paragraph": 1,
+          "agent": "LIBRARIAN",
+          "predicate": "PLACE",
+          "polarity": "POS",
+          "group_introduced": "BOOKS_B",
+          "finite": "사서는 책 세 권을 책장에 올려놓았다.",
+          "head_without_ending": "사서는 책 세 권을 책장에",
+          "verb_lemma": "올려놓다",
+          "finite_ending": "올려놓았다"
+        },
+        {
+          "id": "F2",
+          "paragraph": 1,
+          "agent": "LIBRARIAN",
+          "predicate": "MOVE",
+          "polarity": "POS",
+          "finite": "그중 한 권을 책상으로 옮겼다.",
+          "partitive": {
+            "group_kind": "BOOK",
+            "count": 1,
+            "reference": "BOOKS_B",
+            "surface": "그중 한 권"
+          },
+          "verb_lemma": "옮기다",
+          "finite_ending": "옮겼다"
+        },
+        {
+          "id": "F3",
+          "paragraph": 1,
+          "agent": null,
+          "predicate": "REMAIN",
+          "polarity": "POS",
+          "finite": "나머지 두 권은 책장에 남아 있었다.",
+          "remainder": {
+            "group_ref": "BOOKS_B",
+            "exclude": "PARTITIVE_F2",
+            "count": 2
+          }
+        },
+        {
+          "id": "F4",
+          "paragraph": 2,
+          "agent": "LIBRARIAN",
+          "predicate": "READ",
+          "polarity": "POS",
+          "finite": "사서는 책상 위의 안내문을 읽었다.",
+          "verb_lemma": "읽다",
+          "finite_ending": "읽었다"
+        },
+        {
+          "id": "F5",
+          "paragraph": 2,
+          "agent": null,
+          "predicate": "EXIST",
+          "polarity": "POS",
+          "finite": "창가에는 의자 하나가 놓여 있었다."
+        }
+      ],
+      "links": [
+        {
+          "from": "F1",
+          "to": "F2",
+          "relation": "SEQUENCE",
+          "agent": "LIBRARIAN",
+          "can_join": true
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "third_party_writing_used": false,
+    "source_annotator": "Assistant authored controlled semantic facts",
+    "not_a_genuine_nikl_gold_slice": true
+  }
+}
