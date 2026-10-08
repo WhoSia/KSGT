@@ -1,7 +1,7 @@
 schema: ksgt.active-lineage.v6
 current_stage: G9-P53
 current_live_focus: KOREAN_NATURAL_WRITING_AND_TYPED_REALIZATION
-current_krc_locus: KRC_v0.5_TYPED_KOREAN_CLAUSE_JOIN_AND_ELLIPSIS_PASS_NEXT_PARTITIVE_REFERENCE
+current_krc_locus: KRC_v0.6_SOURCE_GROUP_PARTITIVES_PASS_NEXT_INDEPENDENT_CORPUS_REFERENCE_GOLD
 notion_current: 3f3ef561-cf92-8144-aafe-c65a5556170c
 current_stage_constitution: experiments/g9-p53/constitution.json
 current_state: artifacts/g9_p53_current_state.json
@@ -17,7 +17,11 @@ krc_v02_caution: NINE_OF_TEN_COPIES_AND_THREE_KNOWN_CRITIC_SEMANTIC_FALSE_NEGATI
 human_reader_status: V01_SURVEY_CANCELLED_INVALID_COMPARATORS
 anonymous_reader_survey_drive_id: 141KddGIPYjWCMIEkRjnDLKrAYJ_vmfGt
 general_ai_naturalness_comparison: NOT_ESTABLISHED
-next_mechanism: KOREAN_PARTITIVE_ANTECEDENT_RESOLUTION_AND_PRODUCTIVE_VERB_CONJUGATION
+next_mechanism: KOREAN_NATURAL_TEXT_PARTITIVE_ANTECEDENT_GROUP_GOLD_AND_DISCOURSE_ACCESSIBILITY
+krc_v06_run: 37748138188
+krc_v06_verdict: artifacts/g9_p53_krc_v06_terminal_readback.json
+krc_v06_corpus_registry: experiments/g9-p53/krc_v06/DATA_SOURCE_REGISTER.json
+krc_v06_drive: https://drive.google.com/drive/folders/12Q0LeK0n0HsuxQBfGyTuehULoBn70hs6
 krc_v05_ci_run: 37745597095
 krc_v05_verdict: artifacts/g9_p53_krc_v05_terminal_readback.json
 krc_v05_drive: https://drive.google.com/drive/folders/1K7BX-p0S3AXP6yUwK12Jt3L1lmrkVEBC
