@@ -32,6 +32,14 @@
     "frozen_task_map": {
       "minimal Korean correction": "오탈자와 문법 오류만 필요한 만큼 최소한으로 교정하세요.",
       "meaning-preserving Korean paraphrase": "의미를 보존하면서 원문과 표현이 다른 한국어 문장을 제시하세요."
+    },
+    "frozen_source_admission": {
+      "canonical_source_packet_sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+      "item_id_pattern": "^P50-(KOLLA_K1_HARD_CARGO|KOLLA_K2_GENERIC|STYLEKQC_GENERIC)-0[1-8]$",
+      "source_content_sha256": "Compare original source text SHA256 against its frozen packet source_sha256 on every entry. It must be bound to the original item_id by the packet loader.",
+      "task_family_mapping": "KOLLA_* must map to 'minimal Korean correction'; STYLEKQC_GENERIC must map to 'meaning-preserving Korean paraphrase'",
+      "no_op_permission": "false for the current fixed 24-item entry court; raw identity remains visible and is not automatically PASS",
+      "any_integrity_failure": "Typed hold retained in 24-item denominator, not a silent skip"
     }
   },
   "candidate_generation": {
@@ -74,7 +82,12 @@
       "TOKENIZER_MISMATCH",
       "DECODER_EXCEPTION",
       "CHECKPOINT_MISMATCH",
-      "UNKNOWN_FROZEN_TASK"
+      "UNKNOWN_FROZEN_TASK",
+      "SOURCE_ID_OUT_OF_PACKET",
+      "PACKET_HASH_MISMATCH",
+      "SOURCE_CONTENT_HASH_MISMATCH",
+      "TASK_LANE_MISMATCH",
+      "NOOP_PERMISSION_CONFLICT"
     ],
     "no_op_policy": "All 24 frozen PIA tasks require a task response (KoLLA correction or StyleKQC paraphrase); mechanically flag unchanged or whitespace-only output as candidate0 TASK_NONRESPONSE evidence for adjudicator. Do not automatically award source-copy PASS.",
     "gross_reject_gate": "Use frozen 24-item PIA thresholds unchanged. Typed absence of a candidate is assessed as task nonresponse or malformed output, not silently dropped.",
