@@ -1,0 +1,45 @@
+name: G9-P51 Cold Source Archive
+
+on:
+  push:
+    paths:
+      - ".github/workflows/g9-p51-cold-archive.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package P51 evidence and implementation
+        env:
+          ARCHIVE_SOURCE_COMMIT: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,subprocess,zipfile
+          from pathlib import Path
+          files=sorted(p for p in subprocess.check_output(["git","ls-files","-z"]).decode().split("\0") if p and (p.startswith("experiments/g9-p51/") or p.startswith("artifacts/g9_p51_") or p.startswith(".github/workflows/g9-p51-")))
+          if len(files)<6:raise RuntimeError("P51 source incomplete")
+          m={"schema":"ksgt.g9.p51.cold-archive.v1","source_commit":os.environ["ARCHIVE_SOURCE_COMMIT"],"file_count":len(files),"no_pia_raw_sources":True,
+            "files":[{"path":p,"bytes":Path(p).stat().st_size,"sha256":hashlib.sha256(Path(p).read_bytes()).hexdigest()} for p in files]}
+          target="KSGT_G9-P51_RETIRED_SOURCE.zip"
+          with zipfile.ZipFile(target,"w",compression=zipfile.ZIP_DEFLATED) as z:
+            for p in files:z.write(p)
+            z.writestr("ARCHIVE_MANIFEST.json",json.dumps(m,indent=2)+"\n")
+          with zipfile.ZipFile(target) as z:
+            for item in m["files"]: assert hashlib.sha256(z.read(item["path"])).hexdigest()==item["sha256"]
+          rec={"schema":"ksgt.g9.p51.cold-archive-receipt.v1","source_commit":os.environ["ARCHIVE_SOURCE_COMMIT"],"inner_zip_sha256":hashlib.sha256(Path(target).read_bytes()).hexdigest(),"file_count":len(files)}
+          Path("G9-P51_ARCHIVE_RECEIPT.json").write_text(json.dumps(rec,indent=2)+"\n")
+          print(json.dumps(rec))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p51-cold-archive
+          path: |
+            KSGT_G9-P51_RETIRED_SOURCE.zip
+            G9-P51_ARCHIVE_RECEIPT.json
+          if-no-files-found: error
+          retention-days: 30
