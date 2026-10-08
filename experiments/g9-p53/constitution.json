@@ -1,0 +1,56 @@
+{
+  "schema": "ksgt.g9.p53.constitution.v1",
+  "phase": "G9-P53",
+  "status": "OPEN_PROSPECTIVE_INDEXED_SOURCE_SPAN_COURT",
+  "title": "KSGT Generation IX G9-P53 — Indexed Korean Edit-Span Addressing, Protocol–Competence Attribution, Fresh Holdout Reconstitution & a Recoverable Fixed Candidate Reservoir",
+  "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
+  "parent": "G9-P52",
+  "parent_verdict": "CLOSED_OPERATIONAL_MODEL_PASS_SPAN_INTERFACE_FAILURE_NO_GOVERNOR_INFERENCE",
+  "question": "Will source-indexed Korean edit segments remedy the free-form exact-anchor failure without changing proposer weights or treating model output as semantic gold?",
+  "inherited_weight": {
+    "repo": "Qwen/Qwen3-0.6B-GGUF",
+    "revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "llama_cpp_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f",
+    "reason": "hold constant across protocol comparison"
+  },
+  "mechanism_change": {
+    "from": "MODEL_GUESSES_EXACT_UNIQUE_QUOTED_SOURCE_SUBSTRING",
+    "to": "SOURCE_PRESEGMENTED_WITH_NUMBERED_KOREAN_SOURCE_CHUNKS; MODEL_SELECTS_VALID_INDICES_AND_REPLACEMENTS",
+    "implementation": "Node.js Intl.Segmenter or fixed regex, then C++ llama.cpp model inference",
+    "precise_algorithm": "MUST_FREEZE_BEFORE_ANY_MODEL_OUTPUT"
+  },
+  "source_role": {
+    "historical_24": "REGRESSION_ONLY_NOT_FRESH_PIA",
+    "new_pia": "NEW_RIGHTS_REVIEWED_OUTCOME_UNSEEN_SOURCE_PACKET_REQUIRED",
+    "pretrained_overlap": "UNKNOWN_CANNOT_ASSERT_ABSENT",
+    "hidden_refs": "NEVER_FOR_PROMPT_OR_TUNING"
+  },
+  "candidate_budget": {
+    "total_per_item": 4,
+    "primary_index": 0,
+    "abort_if_no_fresh_confirmatory_packet": "CUSTODY_HOLD_NOT_PIA"
+  },
+  "decision_gates": [
+    "Model response typed validity and index integrity.",
+    "Nonidentity and lexical cargo flags are mechanical only.",
+    "Human or licensed independent semantic-preservation PIA.",
+    "Same exact privately held candidate reservoir for U/K; unchanged original corpus and rights policy."
+  ],
+  "fail_states": [
+    "INDEX_PROTOCOL_FAILURE",
+    "PROPOSER_CANNOT_EDIT",
+    "PRESERVATION_FAILURE",
+    "HOLD_FRESH_HOLDOUT_CUSTODY",
+    "PIA_PASS_ELIGIBLE_FOR_UK"
+  ],
+  "limits": [
+    "Do not retune P52 frozen result after observing primary 0/24.",
+    "Do not call original 24 fresh again.",
+    "Do not conclude model competence from 2 secondary edits.",
+    "Do not infer governance benefit or failure before independently adequate proposer.",
+    "No public raw candidate/source archive."
+  ],
+  "origin": "Return quickly to concrete Korean revision candidate support under explicit authority, not open-ended SLM training.",
+  "authority": "CONSTITUTION_ONLY_NO_P53_EMPIRICAL_RESULT"
+}
