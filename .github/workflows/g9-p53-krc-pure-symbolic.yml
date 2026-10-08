@@ -1,0 +1,32 @@
+name: G9-P53 KRC Non-Neural Realization Proof
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v01/pure_symbolic.cjs"
+      - "experiments/g9-p53/krc_v01/symbolic_tests/**"
+      - ".github/workflows/g9-p53-krc-pure-symbolic.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify type-checked source atom conservation
+        run: |
+          node --test experiments/g9-p53/krc_v01/symbolic_tests/*.test.cjs
+          mkdir -p results
+          node experiments/g9-p53/krc_v01/pure_symbolic.cjs results/pure_symbolic_six_passages.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-six-llm-free-symbolic-passages
+          path: results/pure_symbolic_six_passages.json
+          retention-days: 30
