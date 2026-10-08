@@ -1,9 +1,5 @@
 name: G9-P53 P0 Frozen Qwen3-8B Baseline Gate
 on:
-  push:
-    paths:
-      - 'experiments/g9-p53/p0_writing_competence/**'
-      - '.github/workflows/g9-p53-p0-qwen8b-gate.yml'
   workflow_dispatch:
 permissions:
   contents: read
