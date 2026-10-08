@@ -1,0 +1,82 @@
+name: G9-P53 P0 Frozen Qwen3-8B Baseline Gate
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/p0_writing_competence/**'
+      - '.github/workflows/g9-p53-p0-qwen8b-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frozen-baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test presealed B-only instrument and partitive writer
+        run: |
+          node --test experiments/g9-p53/p0_writing_competence/model_gate.test.cjs
+          node --test experiments/g9-p53/krc_v07/intent_writer.test.cjs
+      - name: Build pinned llama.cpp CPU inference server
+        run: |
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = '9c2e0e491a822adae1f0b1c831adb4160057d24f'
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Download pinned official Qwen3-8B GGUF and verify actual SHA-256
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          from huggingface_hub import hf_hub_download
+          cfg=json.loads(Path('experiments/g9-p53/p0_writing_competence/model_gate.json').read_text())
+          m=cfg['model']
+          p=Path(hf_hub_download(repo_id=m['repo'],revision=m['revision'],filename=m['filename'],local_dir='frozen-model'))
+          h=hashlib.sha256()
+          with p.open('rb') as inp:
+              for chunk in iter(lambda:inp.read(4*1024*1024),b''):h.update(chunk)
+          assert h.hexdigest()==m['sha256'],f'WRONG_MODEL_BYTES: {h.hexdigest()}'
+          Path('checkpoint.json').write_text(json.dumps({'repo':m['repo'],'revision':m['revision'],'sha256':m['sha256'],'bytes':p.stat().st_size},indent=2)+'\n')
+          print('PINNED_8B_MODEL_VERIFIED')
+          PY
+      - name: Start frozen Korean CPU inference
+        run: |
+          vendor-llama/build/bin/llama-server --model frozen-model/Qwen3-8B-Q4_K_M.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 \
+            --ctx-size 3072 --threads 4 --parallel 1 > /tmp/p53_qwen8b.log 2>&1 &
+          echo $! > /tmp/p53_qwen8b.pid
+          for i in $(seq 1 180); do
+            if curl -fsS http://127.0.0.1:8912/health >/dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/p53_qwen8b.pid)" 2>/dev/null; then tail -100 /tmp/p53_qwen8b.log; exit 1; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health >/dev/null
+      - name: Generate exactly two baseline Korean passages (B only)
+        run: |
+          mkdir -p outcomes
+          node experiments/g9-p53/p0_writing_competence/run_baseline_gate.cjs outcomes/b_only.json
+      - name: Prevent unearned KSGT superiority and clear large weights
+        if: always()
+        run: |
+          if test -f outcomes/b_only.json; then
+            node -e "const f=require('./outcomes/b_only.json');if(f.results.length!==2||f.results.some(x=>x.arm!=='B')||f.writer_superiority!=='NOT_ESTABLISHED'||f.krc_comparison!=='NOT_PERFORMED')process.exit(1); console.log('NO_COMPARATIVE_CLAIM');"
+          fi
+          rm -rf frozen-model
+      - name: Upload model-free output and checkpoint only
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: g9-p53-p0-qwen3-8b-b-only-dev
+          path: |
+            checkpoint.json
+            outcomes/b_only.json
+          retention-days: 30
+          if-no-files-found: ignore

@@ -1,0 +1,36 @@
+{
+  "schema": "ksgt.g9.p53.p0.capable-baseline-preflight.v1",
+  "stage": "G9-P53",
+  "status": "PRESEALED_PRIOR_TO_QWEN3_8B_COMPLETION",
+  "developer_source": "HAND_AUTHORED_DEVELOPMENT_ONLY",
+  "model": {
+    "repo": "Qwen/Qwen3-8B-GGUF",
+    "revision": "6a569868d07d3bd59e8b97fb001bf8c0b254bb20",
+    "filename": "Qwen3-8B-Q4_K_M.gguf",
+    "sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+    "license": "Apache-2.0",
+    "llama_cpp_commit": "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+  },
+  "subset": [
+    "SCI01",
+    "NAR02"
+  ],
+  "only_arm": "B",
+  "decoding": {
+    "seed": 123005,
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_tokens": 700,
+    "ctx_size": 3072,
+    "request_timeout_ms": 600000
+  },
+  "decision_contract": {
+    "hard_gate": "MODEL_FLOOR_ONLY_NO_KSGT_ADVANTAGE",
+    "evaluator": "MECHANICAL_WARNING_FLAGS_ONLY",
+    "semantic_correctness": "INDEPENDENT_SOURCE_GROUNDED_REVIEW_PENDING",
+    "writer_improvement": "NOT_ESTABLISHED",
+    "new_human_recruitment": false,
+    "post_hoc_model_switch": false,
+    "model_weights_must_never_be_uploaded_to_GITHUB": true
+  }
+}
