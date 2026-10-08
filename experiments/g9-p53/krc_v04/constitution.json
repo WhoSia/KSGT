@@ -1,0 +1,96 @@
+{
+  "schema": "ksgt.g9.p53.krc.v04.constitution.v1",
+  "status": "FROZEN_BEFORE_V04_TESTS",
+  "date": "2026-10-08",
+  "name": "KRC v0.4 — Typed Korean Construction Microgrammar, Presupposition-Sensitive Linearization & Source-Traceable Prose",
+  "scientific_question": "Can a small source-grounded realization calculus produce more than one grammatically plausible Korean surface order while conserving asserted role-bearing chunks and refusing forbidden semantic transformations?",
+  "research_object": "Korean sentence formation, not consensus/approval nor a 'human-written detection' score.",
+  "prior_failures": [
+    "v0.1 0.6B basic prose/logic failure, withdrawn reader survey",
+    "v0.2 9/10 literal copies and lexical critic false negatives",
+    "v0.3 4B sentences improved superficially but 6/6 outputs had source or pragmatic concerns, and typed plan identifiers leaked"
+  ],
+  "scope": {
+    "source": "Two newly authored fictional Korean micro-documents EX11 EX12 with five propositions each",
+    "kind": "Small closed-domain grammar with case-marked phrase movement, not a universal Korean grammar or pretrained LLM.",
+    "operations": [
+      {
+        "name": "ADJUNCT_FRONT",
+        "requires": [
+          "overt adjunct and fixed predicate role",
+          "canonical slot supports front position"
+        ],
+        "post": "conserve all source clause tokens/semantic frame with adjunct fronted"
+      },
+      {
+        "name": "TOPIC_FIRST",
+        "requires": [
+          "explicit case-marked subject, adjunct, predicate",
+          "no unlicensed emphasis claims"
+        ],
+        "post": "conserve source fragments; optional discourse pragmatic effect remains UNKNOWN"
+      },
+      {
+        "name": "EPISTEMIC_LIMIT_LINK",
+        "requires": [
+          "immediately preceding RESULT and next NOT_MEASURED",
+          "source has explicit unmeasured condition"
+        ],
+        "post": "insert limited connective 다만 to mark caveat, not a cause"
+      },
+      {
+        "name": "NO_UNLICENSED_CAUSE",
+        "requires": [
+          "independent source causal warrant"
+        ],
+        "post": "fail closed if no source warrant"
+      },
+      {
+        "name": "NO_UNLICENSED_NEGATION_CHANGE",
+        "requires": [
+          "explicitly validated source predicate polarity"
+        ],
+        "post": "fail closed if requested polarity differs"
+      },
+      {
+        "name": "NO_UNLICENSED_COMPARISON_REVERSAL",
+        "requires": [
+          "explicit source comparison direction"
+        ],
+        "post": "fail closed on opposite comparator"
+      },
+      {
+        "name": "NO_UNLICENSED_NARRATOR_ELLIPSIS",
+        "requires": [
+          "one unambiguous active antecedent"
+        ],
+        "post": "fail closed if antecedent not unique"
+      }
+    ]
+  },
+  "invariants": [
+    "same semantic record pointers before/after permitted ordering operations",
+    "each source fact represented exactly once per passage",
+    "no novel predicate/number/entity/negation from realizer",
+    "generated sentence contains only source-licensed Korean fragments plus declared discourse connective",
+    "two real paragraphs, no heading/list/instructions",
+    "reject unsupported predicate-polarity reversals and invented causal edges",
+    "do not claim valid Korean grammar from token multiset conservation alone"
+  ],
+  "formal_limit": "Structural preservation and provenance are machine-checkable; truth-conditional and pragmatic equivalence of different Korean word orders requires independent linguistic validation. Token movement can change emphasis/contrast.",
+  "test_plan": {
+    "positive": "two genres × 2 deterministic surface arrangements = 4 tangible passages, at least four truly reordered sentences and no added fact predicates",
+    "negative": [
+      "NEGATION_FLIP",
+      "COMPARISON_FLIP",
+      "UNLICENSED_CAUSE",
+      "AMBIGUOUS_ELLIPSIS",
+      "UNKNOWN_FACT_REFERENCE",
+      "UNLICENSED_DISCOURSE_EDGE"
+    ],
+    "execution": "Node.js 22 pure deterministic microgrammar and built-in unit tests, no model weights or external API",
+    "human_evaluation": "CANCELLED_OLD_18_OUTPUTS; no new human recruitment",
+    "source_status": "assistant-authored controlled examples; not a confirmatory writing corpus"
+  },
+  "exit": "Stop after concrete tests, record failures. Next expansion must involve Korean clause morphology and discourse context, not another generic evaluator architecture."
+}
