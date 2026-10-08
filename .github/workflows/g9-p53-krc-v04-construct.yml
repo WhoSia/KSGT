@@ -1,0 +1,46 @@
+name: G9-P53 KRC v0.4 Korean Construction Court
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v04/**"
+      - ".github/workflows/g9-p53-krc-v04-construct.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-passages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run positive/negative Korean construction tests
+        run: node --test experiments/g9-p53/krc_v04/tests/*.test.cjs
+      - name: Materialize both genres and two Korean word orders
+        run: |
+          mkdir -p results
+          node experiments/g9-p53/krc_v04/compiler.cjs results/krc_v04_four_prose_realizations.json
+          node - <<'JS'
+          const fs=require('node:fs');
+          const r=JSON.parse(fs.readFileSync('results/krc_v04_four_prose_realizations.json'));
+          if(r.documents.length!==4||r.documents.some(x=>x.paragraphs!==2||x.atomic_fact_coverage!==5)||
+             r.nonidentical_pairs.some(x=>!x.different||!x.equal_semantic_frame_hashes)||
+             r.human_reader_quality!=='NOT_MEASURED'||r.model_called!==false)
+            throw Error('UNAUTHORIZED_OR_INVALID_REALIZATION');
+          console.log('FOUR_SOURCE_GROUNDED_KOREAN_PASSAGES');
+          for(const d of r.documents){
+            console.log('--- '+d.brief_id+' '+d.variant+' ---');
+            console.log(d.text);
+          }
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v04-four-typed-korean-passages
+          path: results/krc_v04_four_prose_realizations.json
+          retention-days: 30
+          if-no-files-found: error
