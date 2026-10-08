@@ -6,7 +6,7 @@ const {prepareSourceEntry,sealCandidatePool,assertFrozenPairedArms} = require(".
 const source = {
   sourceId: "PIA_FROZEN_TEST_1",
   text: "오늘 시험은 오전 9시에 시작한다.",
-  frozenTaskInstruction: "원래 의미를 유지하면서 문장을 다듬기",
+  frozenTaskInstruction: "minimal Korean correction",
   frozenPacketSha256: "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
   permitsNoOp: false
 };
@@ -16,7 +16,7 @@ test("frozen prompt is exactly assembled and candidate policy is fixed", () => {
   const entry = prepareSourceEntry(contract,source,tokens);
   assert.equal(entry.kind,"READY");
   const expected=contract.serialized_primary_route.template
-    .replace("{FROZEN_TASK_INSTRUCTION}",source.frozenTaskInstruction)
+    .replace("{FROZEN_TASK_INSTRUCTION}",contract.serialized_primary_route.frozen_task_map[source.frozenTaskInstruction])
     .replace("{SOURCE_TEXT}",source.text);
   assert.equal(entry.prompt,expected);
   assert.equal(entry.maxNewTokens,256);
@@ -32,12 +32,24 @@ test("source is never silently truncated and input anomalies stay typed", () => 
   const collision=prepareSourceEntry(contract,{...source,text:"가【수정문】나"},tokens);
   assert.equal(collision.reason,"SOURCE_DELIMITER_COLLISION");
 });
-test("injected placeholders in task text cannot change source interpolation", () => {
-  const task="{SOURCE_TEXT} 뒤의 문자열도 요구사항 데이터";
-  const e=prepareSourceEntry(contract,{...source,frozenTaskInstruction:task},tokens);
+test("unrecognized task is held rather than hallucinating a task", () => {
+  const e=prepareSourceEntry(contract,{...source,frozenTaskInstruction:"invented task"},tokens);
+  assert.equal(e.kind,"HOLD");
+  assert.equal(e.reason,"UNKNOWN_FROZEN_TASK");
+});
+test("both frozen task families resolve to different Korean instructions", () => {
+  const a=prepareSourceEntry(contract,source,tokens);
+  const b=prepareSourceEntry(contract,{...source,frozenTaskInstruction:"meaning-preserving Korean paraphrase"},tokens);
+  assert.equal(a.kind,"READY");
+  assert.equal(b.kind,"READY");
+  assert.notEqual(a.prompt,b.prompt);
+  assert.ok(b.prompt.includes("표현이 다른 한국어 문장"));
+});
+test("source placeholder-like text remains source data", () => {
+  const raw="문장 {FROZEN_TASK_INSTRUCTION} {SOURCE_TEXT} 그대로";
+  const e=prepareSourceEntry(contract,{...source,text:raw},tokens);
   assert.equal(e.kind,"READY");
-  assert.ok(e.prompt.includes(task));
-  assert.ok(e.prompt.includes(source.text));
+  assert.ok(e.prompt.includes(raw));
 });
 test("four attempt receipts preserve no-op/duplicates without PIA scoring", () => {
   const e=prepareSourceEntry(contract,source,tokens);
