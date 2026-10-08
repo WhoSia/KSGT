@@ -1,0 +1,52 @@
+{
+  "schema": "ksgt.g9.p53.korean-writing-quality-floor.v1",
+  "status": "ADOPTED_AFTER_INVALID_V01_WITHOUT_RETROACTIVE_QUALITY_SCORE",
+  "priority": "Syntactic and propositional validity BEFORE naturalness ranking or stylistic innovation.",
+  "decision": {
+    "hard_invalidators": [
+      {
+        "dimension": "TASK_CONTRACT",
+        "failure": "assistant describes the prompt instead of writing requested Korean passage (meta headers, lists, apologies)"
+      },
+      {
+        "dimension": "PROPOSITIONAL_FIDELITY",
+        "failure": "contradicts a source event, agent/action, negation, comparison direction or stated numerical fact"
+      },
+      {
+        "dimension": "EPISTEMIC_STRENGTH",
+        "failure": "turns unknown into observed, hypothesis into proved cause or unstated mental state into claimed fact"
+      },
+      {
+        "dimension": "KOREAN_SENTENCE_WELL_FORMEDNESS",
+        "failure": "sentence becomes ungrammatical or semantically incoherent so readers cannot interpret it as intended prose"
+      },
+      {
+        "dimension": "GENRE_PRAGMATIC_FIT",
+        "failure": "writing fails intended audience/narrator/genre at whole-document level"
+      }
+    ],
+    "meaning_first": "A draft failing any decisive hard invalidator is not eligible for subtle AI-typical style preference ranking. This is a conditional inclusion criterion, not a training reward.",
+    "soft_phenomena": [
+      "licensed topic/focus particles",
+      "recoverable Korean ellipsis",
+      "contextually valid connective",
+      "clausal rhythm and discourse segmentation",
+      "lexical/register conventionality",
+      "legitimate antithesis and parallelism"
+    ],
+    "retirement": "Older KRC v0.1 samples and HTML survey retired. No human reader recruitment or preference estimand on those materials.",
+    "baseline": "Use competent general purpose Korean writing model under frozen clean prompt, not a 0.6B toy model and not an AI-authorship detector",
+    "mechanical_limit": "Regex can identify a suspicious meta label; it cannot certify semantic entailment, grammar or human idiomaticity",
+    "criterion_for_restart": "Pass task and source-fidelity floor on independent new prompts, THEN collect reader differences if meaningful.",
+    "counterfactual_rivals": [
+      "strong-model clean prompt baseline",
+      "equally fact-rich plain plan",
+      "typed KRC semantic/discourse plan",
+      "surface ban only, if still scientifically relevant"
+    ],
+    "anti_drift": "Study Korean writing rather than approval consensus or endless evaluator optimization.",
+    "next_active": "experiments/g9-p53/krc_v03/constitution.json",
+    "human_study": "NOT_RUNNING_NO_PARTICIPANTS"
+  },
+  "authority": "METHODOLOGICAL_RULING_NOT_NUMERIC_PERFORMANCE_ESTIMATE"
+}
