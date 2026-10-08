@@ -1,0 +1,40 @@
+name: G9-P53 KRC Critic Semantic Counterexamples
+
+on:
+  push:
+    paths:
+      - ".github/workflows/g9-p53-krc-critic-counterexamples.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  negative-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Demonstrate intentionally undetected semantic contradictions
+        run: |
+          node - <<'JS'
+          const assert=require('node:assert/strict');
+          const x=require('./experiments/g9-p53/krc_v02/critic_defeater_court.json');
+          const V=require('./experiments/g9-p53/krc_v02/critic.cjs');
+          assert.equal(x.probes.length,3);
+          const result=[];
+          for(const p of x.probes){
+            const r=V.inspect(p.brief,p.fact_id,JSON.stringify(p.candidate));
+            assert.equal(p.semantic_ground_truth,'CONTRADICTION');
+            assert.equal(r.status,p.expected_current_critic);
+            result.push({id:p.id,observed:r.status,
+              semantic_ground_truth:p.semantic_ground_truth,
+              false_negative:true});
+          }
+          console.log(JSON.stringify({status:'CRITIC_SEMANTIC_UNSOUNDNESS_DEMONSTRATED',
+            count:result.length,
+            message:'Mechanical acceptance is not semantic entailment',probes:result}));
+          JS
