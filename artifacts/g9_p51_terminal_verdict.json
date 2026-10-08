@@ -1,0 +1,64 @@
+{
+  "schema": "ksgt.g9.p51.terminal-instrument-verdict.v1",
+  "stage": "G9-P51",
+  "verdict": "CLOSED_BOUNDED_RIVAL_EDIT_V0_INSTRUMENT_INADEQUATE_NO_GOVERNOR_VERDICT",
+  "verdict_scope": "ONE_PRESEALED_ZERO_TRAINING_S7_INSPIRED_LITERAL_EDITOR_ON_FROZEN_24_SOURCE_PIA_PACKET",
+  "source_preseal_commit": "4e4e9e362302b73c8bca757f116c5556da8a6af9",
+  "execution_run_id": 37718495026,
+  "execution_run_url": "https://github.com/WhoSia/KSGT/actions/runs/37718495026",
+  "exact_execution_head": "7543d398ced11bb68c6ddc10c0ac48bd957bd214",
+  "engineering_ci": "SUCCESS",
+  "engineering_steps": [
+    "synthetic invariant tests PASS",
+    "immutable PIA source-only packet downloaded",
+    "24 sources processed, 4 indexed attempts/source",
+    "no raw sources, hidden references or generated candidate text in uploaded receipt"
+  ],
+  "execution_artifact": {
+    "id": 11524003977,
+    "name": "g9-p51-rival-edit-mechanical-receipt",
+    "sha256": "d66dbec66e82df683f9a92ea4c333125ab404dc7d1a21b28e10234e74e48c8fa",
+    "bytes": 2366
+  },
+  "source_packet": {
+    "n": 24,
+    "lane_counts": {
+      "KOLLA_K1_HARD_CARGO": 8,
+      "KOLLA_K2_GENERIC": 8,
+      "STYLEKQC_GENERIC": 8
+    },
+    "sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7"
+  },
+  "observations": {
+    "candidate_attempts": 96,
+    "candidate0_changed_source": 0,
+    "any_candidate_changed_source": 0,
+    "family_primary_changes": {
+      "KOLLA_K1_HARD_CARGO": 0,
+      "KOLLA_K2_GENERIC": 0,
+      "STYLEKQC_GENERIC": 0
+    },
+    "primary_identity": 24,
+    "first_candidate_task_responsiveness_upper_bound": 0,
+    "required_minimum_task_responsive_or_repairable": 18,
+    "mechanical_upper_bound_gate": "FAIL",
+    "human_pia_adjudication": "NOT_EXECUTED_UNNECESSARY_FOR_THIS_NECESSARY-CONDITION_FAILURE",
+    "ksgt_governor_u_vs_k": "NOT_EXECUTED_AND_NOT_IDENTIFIED"
+  },
+  "scientific_inference": {
+    "positive": "Sixteen KoLLA and eight StyleKQC PIA source strings lacked all triggers for this frozen short surface-replacement repertoire. Neither 4 attempts nor increasing candidate budget within this unchanged repertoire would create a distinct output on this packet.",
+    "negative": "No inference about general Korean edit distribution, learnable Korean operators, the full historic S7 approach, or KSGT governor correctness. A finite lexical rule-set coverage failure is not a general falsification of non-autoregressive proposing.",
+    "comparison": "U-versus-K is VACUOUS when all proposals equal source. Treat attempted U/K as design violation rather than a quality-neutral tie.",
+    "model_alternatives": "Failure is the absence of edit-location discovery/context-grounded substitute generation, not demonstrated inability of trained proposer architectures."
+  },
+  "authority": {
+    "candidate_set_support": "REJECT_THIS_INSTRUMENT",
+    "pia_classification": "NOT_PERFORMED",
+    "governance_effect": "HOLD_NO_COMPETENT_PROPOSER",
+    "human_revision_burden": "HOLD",
+    "architecture_transport": "HOLD"
+  },
+  "stopping_rule": "Frozen P51 one-bounded-attempt stop respected. No post-hoc rule expansion, threshold change, candidate resampling or use of hidden reference to rescue this result.",
+  "next_scientific_object": "P52—discover edit spans/contextually grounded replacements from source-authorized non-heldout evidence, not hand-written literal substitutions; predeclare candidate and stop policies before new PIA.",
+  "origin_return": "P51 isolates a necessary pre-governance adequacy failure in the proposer; the next intervention must change candidate support rather than the KSGT governor."
+}
