@@ -96,12 +96,12 @@
             "predicate": "HIGHER_THAN",
             "polarity": "POS",
             "theme": "햇빛에 둔 종이띠의 표면 온도",
-            "comparator": "다른 종이띠",
+            "comparator": "다른 종이띠의 표면 온도",
             "direction": "HIGHER"
           },
           "segments": [
             "햇빛에 둔 종이띠의 표면 온도가",
-            "다른 종이띠보다",
+            "다른 종이띠의 표면 온도보다",
             "높았다"
           ],
           "orders": [
