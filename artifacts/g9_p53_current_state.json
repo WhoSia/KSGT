@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g9.p53.current-state.v1",
   "stage": "G9-P53",
-  "status": "OPEN_P53_INDEXED_PROTOCOL_REGRESSION_PASS_PRIMARY_GATE_FAIL_FRESH_PIA_PENDING",
+  "status": "P53_INDEXED_REGRESSION_COMPLETE_KOREAN_WRITING_ORIGIN_RETURN",
   "notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "scientific_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
   "P52_evidence": {
@@ -65,5 +65,21 @@
       "STYLEKQC_GENERIC": 3
     },
     "interpretation": "JOINT_INDEXED_SEGMENT_PROMPT_AND_DECODER_INSTRUMENT_GAIN_NOT_ISOLATED_NUMBERING_EFFECT"
+  },
+  "origin_return": {
+    "status": "PRIMARY_KOREAN_WRITING_EXPLANANDUM_REASSERTED",
+    "court": "experiments/g9-p53/korean_writing_origin_return_court.json",
+    "research_priority": [
+      "information structure",
+      "sentence endings and stance",
+      "discourse connection",
+      "lexical/syntactic realization",
+      "legitimate plural realizations"
+    ],
+    "proposer": "INSTRUMENT_ONLY",
+    "governor": "SECONDARY_DIAGNOSTIC_ONLY",
+    "fresh_pia": "NOT_AUTOMATIC_NEXT_OBJECTIVE",
+    "next": "Define one controlled Korean linguistic contrast and explicitly state its semantic, pragmatic and discourse question before any new generator run.",
+    "tooling_stop_rule": "No further >1 stage proposer/governance work without directly observed Korean form/context result"
   }
 }
