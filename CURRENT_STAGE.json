@@ -2,11 +2,11 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "G9-P55",
+  "current_stage": "G9-P56",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "CLOSED_G9_P55_BOUNDED_QUANTIFIER_TRANSPORT_PASS_WRITER_GOLD_AND_QUALITY_HOLD",
-  "canonical_notion_id": "3f3ef561-cf92-8140-aaae-fbeaae1fb8b7",
-  "parent_stage": "G9-P54",
+  "status": "OPEN_G9_P56_ANTECEDENT_SET_PROVENANCE_AND_CALIBRATION_ELIGIBILITY",
+  "canonical_notion_id": "3f3ef561-cf92-8154-b538-ef8553099cd7",
+  "parent_stage": "G9-P55",
   "latest_closed_stage": "G9-P55",
   "latest_closed_artifact": {
     "stage": "G9-P55",
@@ -17,9 +17,9 @@
     "ci_old_tests": 18
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "artifacts/g9_p55_extended_target_ceiling.json",
+  "current_artifact": "artifacts/g9_p56_precommit_source_receipt.json",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Can explicitly sourced Korean 그중 하나/절반 produce non-destructive surface candidates under a strict integer and writer-declared evidence contract?",
+  "current_question": "Which historically inherited evidence can narrow the candidate antecedent set for 그중, and is probabilistic uncertainty calibration identifiable without independent antecedent labels?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
@@ -69,7 +69,11 @@
     "p55_target_shape_ceiling": "SOURCE_25_EXPLICIT_COUNTER_1_PLUS_HANA_1_PLUS_HALF_1_EQUALS_3_OF_25_SHAPES_ONLY",
     "p55_tests": "REMOTE_23_NEW_AND_18_REGRESSION_SUCCESS",
     "p55_ci": "SUCCESS_RUN_37801340542",
-    "p55_syntax_vs_semantics": "FORMAL_TARGET_COVERAGE_ONLY_NOT_REFERENT_GOLD_OR_PROSE_PREFERENCE"
+    "p55_syntax_vs_semantics": "FORMAL_TARGET_COVERAGE_ONLY_NOT_REFERENT_GOLD_OR_PROSE_PREFERENCE",
+    "p56": "A1_DECLARED_LOCAL_SOURCE_AND_SCOPE_CANDIDATE_SET_ONLY_NO_INDEPENDENT_ANTECEDENT_GOLD",
+    "p56_calibration": "UNIDENTIFIABLE_WITHOUT_INDEPENDENT_ANTECEDENT_GOLD_NO_NUMERIC_POSTERIOR",
+    "p56_legacy_restore": "JULY_2026_SENSESET_ARGUMENT_MEMORY_ANTECEDENT_COMPETITION_G8_SELECT_G9_PROVENANCE",
+    "p56_local_tests": "18_OF_18_PASS_REMOTE_PENDING"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -99,8 +103,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "NONE; P56 not opened",
-  "next_scientific_action": "P55 closed. Select a narrow evidence-authority path (independent antecedent adjudication or same-context human writer preferences) for a new short P-stage, not more superficial surface forms.",
+  "next_human_action": "NONE",
+  "next_scientific_action": "Run P56 typed candidate-source/scope counterexamples, archive direct historical crosswalk, verify no calibration claim without independently reviewed native antecedent labels, and close bounded P56.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -120,7 +124,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "TERMINAL_P55_CLOSED_QUANTIFIER_SOURCE_TRANSPORT",
+  "current_substage": "G9-P56 historical source court and typed candidate-set adjudication",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -179,10 +183,9 @@
     "human_reader_rating": "NOT_COLLECTED"
   },
   "current_prototype": {
-    "path": "experiments/g9-p55/quantifier_extension_v01/realizer.cjs",
-    "tests": "experiments/g9-p55/quantifier_extension_v01/test/realizer.test.cjs",
-    "source": "experiments/g9-p55-prelude/partitive_realizer_v01/realizer.cjs",
-    "independent_writer_quality": "NOT_ESTABLISHED"
+    "path": "experiments/g9-p56/antecedent_set_court/adjudicator.cjs",
+    "tests": "experiments/g9-p56/antecedent_set_court/tests/adjudicator.test.cjs",
+    "historical_crosswalk": "experiments/g9-p56/antecedent_set_court/HISTORICAL_CROSSWALK.md"
   },
   "latest_p0_capacity_probe": {
     "source": "artifacts/g9_p53_p0_qwen14b_b_baseline_readback.json",
@@ -324,9 +327,9 @@
   },
   "next_stage_proposal": {
     "stage": "G9-P56",
-    "status": "NOT_YET_OPENED",
-    "canonical_name_status": "NOT_PROPOSED",
-    "next_question_candidate": "Independent contextual partitive antecedent evidence versus actual writer-choice preference on a small rights-cleared set",
-    "constraints": "ONE_QUESTION_PER_STAGE"
+    "formal_name_proposed": "KSGT Generation IX G9-P56 — Contextual Antecedent Adjudication, Discourse Scope & Uncertainty Calibration",
+    "canonical_name_status": "CONFIRMED_BY_USER",
+    "status": "OPEN",
+    "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   }
 }

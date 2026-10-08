@@ -1,0 +1,29 @@
+{
+  "schema": "ksgt.g9p56.antecedent-set-court.v1",
+  "stage": "G9-P56",
+  "direct_archive_count": 6,
+  "earliest_source": "KSGT 1.md (2026-07-15)",
+  "legacy_principles": [
+    "SenseSetInvariant",
+    "ArgumentMemory",
+    "Reference Competition with Negation Scope",
+    "G8 ONE_SELECT_CLARIFY",
+    "G9 local_scope_key/antecedent_key/attachment_key",
+    "G9 P44 surface-state falsification"
+  ],
+  "private_nikl_2025": {
+    "lexical_candidates": 25,
+    "independent_antecedent_gold": 0,
+    "public_raw": false
+  },
+  "experiment": {
+    "local_test_count": 18,
+    "local_test_pass": 18,
+    "remote_ci": "PENDING",
+    "semantics": "DECLARED_PROVENANCE_CANDIDATES_NOT_TRUE_RESOLUTION"
+  },
+  "posterior": "NOT_CALIBRATED",
+  "calibration": "UNIDENTIFIABLE_WITHOUT_INDEPENDENT_ANTECEDENT_GOLD",
+  "independent_writer_choice": 0,
+  "friend_server_used": false
+}

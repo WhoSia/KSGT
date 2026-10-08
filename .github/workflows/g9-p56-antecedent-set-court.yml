@@ -1,0 +1,23 @@
+name: G9-P56 Historic Antecedent Set and Calibration-Authority Gate
+on:
+  push:
+    paths:
+      - 'experiments/g9-p56/antecedent_set_court/**'
+      - '.github/workflows/g9-p56-antecedent-set-court.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  provenance-set-court:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source scope group identity and calibration abstention
+        run: node --test experiments/g9-p56/antecedent_set_court/tests/*.test.cjs
+      - name: No private raw corpus or fabricated gold
+        run: |
+          node -e "const x=require('./artifacts/g9_p56_legacy_antecedent_set_court.json');if(x.private_nikl_2025.independent_antecedent_gold!==0||x.private_nikl_2025.public_raw!==false||x.calibration!=='UNIDENTIFIABLE_WITHOUT_INDEPENDENT_ANTECEDENT_GOLD')process.exit(1)"
+          test ! -e NIKL_ZA_2025_v1.0.zip
