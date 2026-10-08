@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   check:
@@ -24,3 +25,10 @@ jobs:
         run: |
           cargo test
           cargo clippy --all-targets -- -D warnings
+      - name: Fetch immutable frozen token artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 37712642109 --repo "${{ github.repository }}" --name g9-p50-model-training-slice --dir /tmp/g9-p50-frozen-slice
+      - name: Independently audit archived token bytes
+        run: cargo run --release -- /tmp/g9-p50-frozen-slice
