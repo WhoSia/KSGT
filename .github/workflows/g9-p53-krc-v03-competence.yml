@@ -1,0 +1,86 @@
+name: G9-P53 KRC v0.3 Competent Decoder Gate
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v03/**"
+      - ".github/workflows/g9-p53-krc-v03-competence.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  baseline-competence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate preregistered control and mock generation
+        run: node --test experiments/g9-p53/krc_v03/tests/competence.test.cjs
+      - name: Build frozen llama.cpp inference runner
+        run: |
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Download exact Qwen3 4B model revision and hash
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          from huggingface_hub import hf_hub_download
+          from pathlib import Path
+          import hashlib,json
+          rev="18727206c51467496bfba014368bd0a30e97f411"
+          p=hf_hub_download(repo_id="unsloth/Qwen3-4B-Instruct-2507-GGUF",revision=rev,filename="Qwen3-4B-Instruct-2507-Q4_K_M.gguf",local_dir="frozen-model")
+          h=hashlib.sha256()
+          with open(p,"rb") as f:
+            for chunk in iter(lambda:f.read(4*1024*1024),b""):h.update(chunk)
+          expected="3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597"
+          assert h.hexdigest()==expected,(h.hexdigest(),expected)
+          Path("checkpoint.json").write_text(json.dumps({"revision":rev,"sha256":expected,"bytes":Path(p).stat().st_size},indent=2)+"\n")
+          print("PINNED_QWEN3_4B_MODEL_VERIFIED")
+          PY
+      - name: Boot clean non-thinking Qwen3 4B inference service
+        run: |
+          vendor-llama/build/bin/llama-server --model frozen-model/Qwen3-4B-Instruct-2507-Q4_K_M.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 \
+            --ctx-size 3072 --threads 4 --parallel 1 > /tmp/krc_v03_server.log 2>&1 &
+          echo $! > /tmp/krc_v03_pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8912/health >/dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/krc_v03_pid)" 2>/dev/null; then echo "SERVER_EXIT";exit 1; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health >/dev/null
+      - name: Generate six Korean B U K passages without post-hoc edits
+        run: |
+          mkdir -p outcomes
+          node experiments/g9-p53/krc_v03/generate.cjs outcomes/krc_v03_six_drafts.json
+      - name: Check provenance and block automatic winner declaration
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs');
+          const r=JSON.parse(fs.readFileSync('outcomes/krc_v03_six_drafts.json'));
+          if(r.documents.length!==6||r.semantic_verdict!=='NOT_ADJUDICATED'||
+             r.comparative_krc_result!=='NOT_ADJUDICATED'||
+             r.human_reader_verdict!=='CANCELLED_INSUFFICIENT_BASELINE')throw Error('PREMATURE_VERDICT');
+          console.log(JSON.stringify({n:r.documents.length,completed:r.completed,
+            semantic:r.semantic_verdict,reader:'CANCELLED',winner:'UNKNOWN'}));
+          JS
+          rm -rf frozen-model
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v03-4b-six-korean-drafts
+          path: |
+            checkpoint.json
+            outcomes/krc_v03_six_drafts.json
+          retention-days: 30
+          if-no-files-found: error
