@@ -1,0 +1,66 @@
+{
+  "schema": "ksgt.g9.p51.constitution.v1",
+  "stage": "G9-P51",
+  "generation": "IX",
+  "status": "OPEN_DIRECT_GOVERNOR_IDENTIFICATION",
+  "formal_title": "KSGT Generation IX G9-P51 — Source-Conditioned Candidate-Support Admission, Fixed-Reservoir Governor Contrast, Hard-Cargo Preservation, Abstention Discipline & the First Executable Korean Revision Decision",
+  "notion_id": "3f3ef561-cf92-811f-a1cf-f2704cf7ff3a",
+  "parent": "G9-P50",
+  "predecessor_disposition": "P50_CLOSED_ENABLING_ONLY_NO_PIA_NO_TRAINED_SLM_NO_GOVERNANCE_INFERENCE",
+  "origin": "Improve Korean source-sensitive revision decisions, not accumulate language-model infrastructure.",
+  "primary_question": "Once a source-conditioned proposer enters repairable support, does applying frozen KSGT hard-preservation and set-valued authority materially change choices or abstention on the identical proposal reservoir?",
+  "instrument_first": "RIVAL_EDIT_SOURCE_CONDITIONED_BOUNDED_TYPED_EDITOR_FROM_S5_S7_ANCESTOR",
+  "instrument_authority": "FROZEN_TRAIN_AUTHORIZED_POOL_ONLY; S5/S7 operator labels are non-exhaustive and not global editorial gold",
+  "slm_role": "ARCHIVED_SECONDARY_NOT_BLOCKING_P51",
+  "pia_source_packet": {
+    "source_artifact_id": 11463265816,
+    "source_sha256": "a060600028c0726ca67d368ec37aed38c39b6961f29d0653a5ef71b10b341fa7",
+    "composition": "8_KOLLA_K1 + 8_KOLLA_K2 + 8_STYLEKQC",
+    "hidden_references": "DO_NOT_USE_FOR_PROMPT_OR_PROPOSER_SELECTION",
+    "adjudication_thresholds": "INHERIT_FROZEN_P50_NO_RETUNING"
+  },
+  "preregister_before_first_PIA": {
+    "candidate_budget": "EXACT_VALUE_TO_FREEZE_BEFORE_EXECUTION_NOT_INFER_FROM_OUTCOMES",
+    "primary_candidate": "INDEX_0_UNLESS_A_NEW_PROSPECTIVE_INDEPENDENT_INSTRUMENT_RULING",
+    "operator_schedule": "PREDECLARE_AND_BIND_TO_FROZEN_SOURCE_TRAIN_SPLIT",
+    "same_pools_U_K": "IDENTICAL_BY_CANONICAL_CANDIDATE_SET_HASH",
+    "failure_codes": "PRESERVE_NO_OP_EMPTY_OUT_OF_SCOPE_UNPARSEABLE_HARD_CARGO_FAIL",
+    "denominator": "ALL_24_ITEMS_NO_POSTOUTCOME_DROPS"
+  },
+  "separate_estimands": {
+    "instrument": "FIRST_CANDIDATE_PIA_PLUS_ANY_CANDIDATE_SET_COVERAGE_DISTINCT",
+    "governance": "WITHIN_SAME_SOURCE_CHECKPOINT_CANDIDATE_SET_U_VERSUS_K",
+    "transport": "HOLD_UNTIL_TWO_MATERIALLY_DIFFERENT_COMPETENT_FAMILIES",
+    "capacity": "NOT_P51_TARGET",
+    "human_repair_burden": "HOLD",
+    "population_quality": "HOLD"
+  },
+  "forbidden": [
+    "Treat RIVAL_EDIT operator labels as an exhaustive ontology",
+    "Convert evaluation or human heldout source into training without prospective role split",
+    "Infer governance failure from inadequate proposer",
+    "Retune PIA after viewing candidate adequacy",
+    "Switch proposer/reservoir between U and K",
+    "Collapse legal plurality to learned argmax",
+    "Count abstention as zero editing cost",
+    "Claim public corpus packaging licenses authorize all underlying text",
+    "Resume generic 100M SLM pretraining without an explicit information-value decision",
+    "Create github-actions[bot]-authored commits"
+  ],
+  "exit_policy": {
+    "unit": "ONE_BOUNDED_SOURCE_CONDITIONED_PROPOSER_ATTEMPT_AND_PIA",
+    "first_terminal_options": [
+      "PIA_PASS_OPEN_UK",
+      "PIA_FAIL_PROPOSER_NOT_GOVERNOR",
+      "INDETERMINATE_HOLD_CUSTODY"
+    ],
+    "governor_court_option": "Within same stage if PIA succeeds and frozen paired reservoir is valid; no ceremonial separate P0"
+  },
+  "inheritance": {
+    "p50_terminal_artifact": "artifacts/g9_p50_terminal_closure.json",
+    "p50_archive_drive_url": "https://drive.google.com/file/d/1KQ_EyKz0om7ZLgOLKYIOZIXBNqm1MCHC/view?usp=drivesdk",
+    "p50_archived_commit": "9dfff80c2781a3e0e265b03cb47663f3c9e64716",
+    "direct_predecessor": "P49_NEGATIVE_INSTRUMENT_FAILURE"
+  },
+  "authority": "PRESEALED_ORIGIN_RETURN_NO_NEW_EMPIRICAL_GOVERNOR_CLAIM"
+}
