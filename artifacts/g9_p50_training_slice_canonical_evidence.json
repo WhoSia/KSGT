@@ -1,0 +1,94 @@
+{
+  "schema": "ksgt.g9.p50.model-training-slice-canonical-evidence.v1",
+  "phase": "G9-P50",
+  "verdict": "PASS_BYTE_CUSTODY_AND_GENERATOR_ATTESTATION_NOT_MODEL_TRAINING_AUTHORIZATION",
+  "actions": {
+    "run_id": 37712642109,
+    "run_conclusion": "success",
+    "artifact_id": 11523419179,
+    "artifact_name": "g9-p50-model-training-slice",
+    "zip_digest": "sha256:b68ad5b12e906f8c8dcbaf7be5862b913cf804808b0fe7e55f1e3de492eccf29",
+    "zip_bytes": 145287787
+  },
+  "source": {
+    "dataset": "HuggingFaceFW/fineweb-2",
+    "config": "kor_Hang",
+    "revision": "fb08250",
+    "split": "train"
+  },
+  "tokenizer": {
+    "model_sha256": "d99338c8e4e112fd2f9eef11e7a4a2b25435a452253bc7e5e653e74eca59b2c1",
+    "piece_size": 32768
+  },
+  "tokenizer_only": {
+    "documents": 60326,
+    "characters": 100002865,
+    "ordered_record_aggregate_sha256": "2e2fde1a21e01740db3322d078b6d2c05f26b0f5ef864614bcfc2a59a6aa70f3",
+    "record_set_sha256": "3d7801f977b4236d3601ec32f3050f85134a00fa17ca75f91c552e39bec429c0"
+  },
+  "train": {
+    "tokens": 100000000,
+    "bytes": 200000000,
+    "documents_selected": 135475,
+    "full_documents": 135474,
+    "sha256": "537fe66996edccc2e1fc3b22981641c964966502cb635b1c19752bedc0bdc413",
+    "record_set_sha256": "bb741c760516e321e0f94d3a54ca326cffa8380feac29205450a47147b14781c",
+    "eos_token_count": 135474,
+    "unk_token_count": 0,
+    "pad_token_count": 0,
+    "special_control_token_counts": {
+      "src": 0,
+      "ctx": 0,
+      "cand": 0
+    },
+    "max_token_id": 32767
+  },
+  "dev": {
+    "tokens": 2000000,
+    "bytes": 4000000,
+    "documents_selected": 2631,
+    "full_documents": 2630,
+    "sha256": "4ca1242e638083533c5bd3d9a778fda5d02b674088b0c88c262a257d0de4bf0d",
+    "record_set_sha256": "0095771be200253aae81f0623dca11e3d5928a6eb61c80a398a142fc7b0e444c",
+    "eos_token_count": 2630,
+    "unk_token_count": 0,
+    "pad_token_count": 0,
+    "special_control_token_counts": {
+      "src": 0,
+      "ctx": 0,
+      "cand": 0
+    },
+    "max_token_id": 32766
+  },
+  "evidence_basis": "Downloaded the named ZIP and independently streamed every train/dev token byte for lengths, SHA256, token ids and EOS/special marker counts; action-side manifest further attests exact tokenizer-only sample reconstruction.",
+  "attested_overlap_zero": {
+    "tokenizer_train": 0,
+    "tokenizer_dev": 0,
+    "train_dev": 0
+  },
+  "independently_proven_overlap_zero": false,
+  "semantic_near_duplicate_exclusion_proven": false,
+  "source_conditioned_rewrite_task_learned": false,
+  "engineering_verifier": {
+    "rust_ci_run_id": 37713815868,
+    "conclusion": "success",
+    "scope": "compilation/tests only; CI did not execute against this artifact"
+  },
+  "rights": {
+    "raw_text_in_artifact": false,
+    "underlying_text_blanket_rights_clearance": false
+  },
+  "further_gates": [
+    "Source-conditioned entry route must be frozen prior to PIA",
+    "Character/word MinHash or equivalent near-duplicate obligation unresolved",
+    "Independent record/text/near-duplicate set evidence unresolved",
+    "Document packing and EOS/attention semantics unresolved"
+  ],
+  "authority": {
+    "token_bytes_frozen": true,
+    "model_training_authorized": false,
+    "pia_authorized": false,
+    "governance_comparison_authorized": false,
+    "human_quality_authorized": false
+  }
+}
