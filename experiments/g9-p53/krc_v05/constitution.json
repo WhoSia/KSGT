@@ -1,0 +1,58 @@
+{
+  "schema": "ksgt.g9.p53.krc.v05.constitution.v1",
+  "date": "2026-10-08",
+  "status": "FROZEN_BEFORE_V05_OUTCOMES",
+  "name": "KRC v0.5 — Context-Licensed Korean Clause Combination, Recoverable Ellipsis, and Event-Traceable Paragraphs",
+  "inheritance": "artifacts/g9_p53_krc_v04_terminal_readback.json",
+  "research_question": "Can a bounded Korean realizer combine two source-licensed sequential events and omit a repeated overt actor while retaining fixed event reference and referent identity across a two-paragraph passage?",
+  "science_target": "Actual Korean prose construction. No proposal voting, GAN score, or humanlike detector.",
+  "bounded_source": "Two new assistant-authored controlled contexts EX13 laboratory and EX14 library with five fact records each and manually attested finite/coordinate Korean surfaces.",
+  "positive_operations": [
+    {
+      "op": "SAME_ACTOR_SEQUENTIAL_GO",
+      "requirements": "Immediately adjacent within same paragraph, both POS events, same explicitly declared actor, source SEQUENCE link, finite verb in first clause replaced with its prelicensed -고 form",
+      "result": "One linked clause with two separately traced source events"
+    },
+    {
+      "op": "RECOVERABLE_ACTOR_ELLIPSIS",
+      "requirements": "Immediately prior discourse anchor has exactly one salient actor, current atom source actor agrees, one explicit antecedent, same paragraph, explicit ELLIPSIS_ALLOW link",
+      "result": "Drop only source-licensed actor string; trace the omitted subject to original actor id"
+    },
+    {
+      "op": "EPISTEMIC_CAVEAT",
+      "requirements": "Result followed by separately sourced NOT_MEASURED fact and EPISTEMIC_LIMIT link",
+      "result": "Licensed 다만 connective before intact second observation"
+    }
+  ],
+  "prohibitions": [
+    "Silently change event agent, argument, polarity, comparison direction, time or epistemic certainty",
+    "Join events without explicit temporal license as sequential",
+    "Perform subject omission after a third-party actor or impersonal event breaks the accessible antecedent chain",
+    "Permit cross-paragraph subject ellipsis",
+    "Claim that a compiled surface proposition is semantically equivalent to the source solely because of event ID equality",
+    "Introduce any new physical, affective or numeric facts",
+    "Claim general Korean fluency or better-than-LLM prose on manually authored microgrammar output"
+  ],
+  "prospective_metrics": {
+    "new_briefs": 2,
+    "facts_per_brief": 5,
+    "canonical_documents": 2,
+    "constructed_documents": 2,
+    "required_join_operations": 2,
+    "required_ellipsis_operations": 2,
+    "minimum_accepted_nonidentity_phrases": 4,
+    "negative_tests": [
+      "different actor",
+      "ambiguous antecedent",
+      "cross paragraph",
+      "lack sequence evidence",
+      "negation flip",
+      "comparison reversal",
+      "unsupported cause",
+      "actor-change",
+      "source event omission"
+    ],
+    "outcome": "Actual four two-paragraph passages plus full source-event trace, mechanically tested, no LLM generator or independent reader involvement"
+  },
+  "authority": "FINITE_AUTHOR_ATTESTED_KOREAN_CONSTRUCTION_PROTOTYPE_NOT_COMPLETE_SEMANTIC_PROOF"
+}
