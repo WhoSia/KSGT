@@ -18,7 +18,9 @@
             "polarity": "POS",
             "sequence": 1,
             "theme": "투명한 컵 두 개",
-            "location": "실험대 위"
+            "location": "실험대 위",
+            "predicate_witness": "놓았다.",
+            "conjunctive_witness": "놓고"
           },
           "surfaces": {
             "full": "민지는 실험대 위에 투명한 컵 두 개를 놓았다.",
@@ -35,7 +37,8 @@
             "polarity": "POS",
             "sequence": 2,
             "theme": "같은 양의 물",
-            "destination": "두 컵"
+            "destination": "두 컵",
+            "predicate_witness": "부었다."
           },
           "surfaces": {
             "full": "민지는 두 컵에 같은 양의 물을 부었다.",
@@ -51,7 +54,8 @@
             "polarity": "POS",
             "sequence": 3,
             "theme": "컵 하나",
-            "destination": "창가"
+            "destination": "창가",
+            "predicate_witness": "옮겼다."
           },
           "surfaces": {
             "full": "민지는 그중 한 컵을 창가로 옮겼다.",
@@ -69,7 +73,8 @@
             "comparison": "HIGHER",
             "theme": "창가 컵의 물 온도",
             "comparator": "다른 컵",
-            "time": "20분 뒤"
+            "time": "20분 뒤",
+            "predicate_witness": "높았다."
           },
           "surfaces": {
             "full": "20분 뒤 창가에 둔 컵의 물 온도가 다른 컵보다 높았다."
@@ -84,7 +89,8 @@
             "polarity": "NEG",
             "epistemic": "NOT_MEASURED",
             "sequence": 5,
-            "theme": "두 컵 주변의 공기 온도"
+            "theme": "두 컵 주변의 공기 온도",
+            "predicate_witness": "측정하지 않았다."
           },
           "surfaces": {
             "full": "민지는 두 컵 주변의 공기 온도를 측정하지 않았다."
@@ -133,7 +139,8 @@
             "polarity": "POS",
             "sequence": 1,
             "time": "늦은 오후",
-            "location": "도서관 앞"
+            "location": "도서관 앞",
+            "predicate_witness": "도착했다."
           },
           "surfaces": {
             "full": "서윤은 늦은 오후에 도서관 앞에 도착했다."
@@ -148,7 +155,9 @@
             "polarity": "POS",
             "sequence": 2,
             "theme": "우산",
-            "location": "입구 옆"
+            "location": "입구 옆",
+            "predicate_witness": "세워 두었다.",
+            "conjunctive_witness": "두고"
           },
           "surfaces": {
             "full": "서윤은 입구 옆에 우산을 세워 두었다.",
@@ -165,7 +174,8 @@
             "predicate": "OPEN_DOOR",
             "polarity": "POS",
             "sequence": 3,
-            "theme": "유리문"
+            "theme": "유리문",
+            "predicate_witness": "열었다."
           },
           "surfaces": {
             "full": "서윤은 유리문을 열었다.",
@@ -181,7 +191,8 @@
             "polarity": "POS",
             "sequence": 4,
             "location": "도서관 안쪽",
-            "theme": "책장 넘기는 소리"
+            "theme": "책장 넘기는 소리",
+            "predicate_witness": "들렸다."
           },
           "surfaces": {
             "full": "안쪽에서 책장을 넘기는 소리가 들렸다."
@@ -195,7 +206,8 @@
             "predicate": "READ_NOTICE",
             "polarity": "POS",
             "sequence": 5,
-            "theme": "안내판"
+            "theme": "안내판",
+            "predicate_witness": "읽었다."
           },
           "surfaces": {
             "full": "서윤은 안내판을 읽었다."
