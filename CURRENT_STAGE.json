@@ -45,7 +45,7 @@
     "writer_review_v02": "REMOTE_GITHUB_CI_SUCCESS_15_NEW_PLUS_9_KRC_TESTS_NONDESTRUCTIVE_WRITER_CLI_NO_HUMAN_QUALITY",
     "writer_review_v03": "REMOTE_CI_SUCCESS_HIGH_LEVEL_CONTEXTUAL_INTENT_HOLD_11_NEW_TESTS_NO_AUTO_PREFERENCE",
     "stylekqc_empirical_census": "PINNED_REAL_HUMAN_PARAPHRASE_4800_ROWS_480_GROUPS_477_TEN_DISTINCT_NO_PARTITIVE_GOLD",
-    "nikl2025_private_geujung": "PRIVATE_REAL_BYTE_SCAN_25_LEXICAL_CONTEXT_CANDIDATES_NOT_PARTITIVE_ANTECEDENT_GOLD"
+    "nikl2025_private_geujung": "PRIVATE_PINNED_REAL_BYTES_25_SOURCE_CANDIDATES_NO_PARTITIVE_GOLD_REMOTE_SYNTHETIC_CI_PASS"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -267,7 +267,12 @@
     "public_raw_text_copy": false,
     "private_hashed_index": "SANDBOX_ONLY_NOT_GITHUB",
     "local_python_tests": "4_OF_4_PASS",
-    "github_ci": "PENDING",
-    "borrowed_friend_server": "NOT_USED"
+    "github_ci": "SUCCESS",
+    "borrowed_friend_server": "NOT_USED",
+    "ci_run": 37792974429,
+    "ci_tests": "4_OF_4_SYNTHETIC_PASS",
+    "actual_private_corpus_scanned_locally": true,
+    "actual_private_corpus_in_ci": false,
+    "human_partitive_gold": "NOT_COLLECTED"
   }
 }
