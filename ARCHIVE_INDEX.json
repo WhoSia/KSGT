@@ -1,0 +1,40 @@
+{
+  "schema": "ksgt.archive-index.v1",
+  "current_stage": "G9-P51",
+  "research_operational_policy": "MAIN_WORKTREE_ONLY_CURRENT_STAGE__HISTORY_IN_DRIVE_NOTION_AND_GIT_OBJECTS",
+  "full_pre_p51": {
+    "description": "Verified byte-for-byte cold archive of the full 471-file pre-cleanup main tree",
+    "source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
+    "tracked_files": 471,
+    "tracked_bytes": 156645961,
+    "google_drive_id": "1PBX_bY_a1Dkw1At24p8UU2JAybDJ6yBj",
+    "google_drive_url": "https://drive.google.com/file/d/1PBX_bY_a1Dkw1At24p8UU2JAybDJ6yBj/view?usp=drivesdk",
+    "google_drive_folder": "https://drive.google.com/drive/folders/1mgiZu-zSHmIWcvS_LNYfFi-BtM7mRED0",
+    "outer_zip_sha256": "a78b21e76ca98894bf51418422c7ed55d55b1b4c2271a6f54ee6615a5b003b85",
+    "inner_zip_sha256": "d2891c2ff21974cc961b6e5f722c54009e0de58a90f9bdb5b5aa806e5f85936e",
+    "per_file_sha256_mismatches_after_drive_readback": 0,
+    "note": "Full archive includes historical raw generated evidence already tracked in public Git; private Drive upload does not erase public Git history"
+  },
+  "p50": {
+    "closure": "artifacts/g9_p50_terminal_closure.json",
+    "terminal_status": "CLOSED_ENABLING_INFRASTRUCTURE_ONLY_SCIENTIFIC_TARGET_UNRESOLVED",
+    "source_snapshot_commit": "9dfff80c2781a3e0e265b03cb47663f3c9e64716",
+    "source_files": 43,
+    "drive_file_url": "https://drive.google.com/file/d/1KQ_EyKz0om7ZLgOLKYIOZIXBNqm1MCHC/view?usp=drivesdk",
+    "outer_zip_sha256": "18fe2999edd079901315794e52215bff1224b89cb3ae78f2a131c63178394763"
+  },
+  "p51": {
+    "status": "OPEN_DIRECT_GOVERNOR_COURT",
+    "notion": "https://app.notion.com/p/3f3ef561cf92811fa1cff2704cf7ff3a",
+    "constitution": "experiments/g9-p51/constitution.json",
+    "current_state": "artifacts/g9_p51_current_state.json"
+  },
+  "cleanup_scope": {
+    "files_removed_from_main": 464,
+    "files_retained_before_index": 7,
+    "files_after_index": 8,
+    "git_history_rewrite": false,
+    "github_actions_bot_commits": false,
+    "model_training_artifact_11523419179": "SEPARATE_ACCESS_RETENTION_REVIEW_NOT_INCLUDED_IN_COLD_SOURCE_ARCHIVE"
+  }
+}

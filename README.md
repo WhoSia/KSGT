@@ -1,54 +1,27 @@
 # KSGT
 
-KSGT (Korean Stylistic Generation Theory) studies meaning-preserving, context-sensitive, set-valued expressive Korean generation.
+KSGT (Korean Stylistic Generation Theory) studies Korean writing realization under preservation constraints, context and legitimately set-valued choices.
 
-## Repository role
+## Current live research
 
-This repository is the **executable evidence layer** for KSGT. It is not the historical archive.
+**G9-P51** — Source-Conditioned Candidate-Support Admission, Fixed-Reservoir Governor Contrast, Hard-Cargo Preservation, Abstention Discipline & the First Executable Korean Revision Decision.
 
-- **Notion** is the canonical research narrative, adjudication record, and lineage history.
-- **Google Drive** stores papers, corpora, large source files, and historical research artifacts.
-- **GitHub** stores only the compact artifacts needed to execute, verify, or replay the **current research lineage**.
+- Entry: `CURRENT_STAGE.json`
+- Constitution: `experiments/g9-p51/constitution.json`
+- Live state: `artifacts/g9_p51_current_state.json`
+- Predecessor termination: `artifacts/g9_p50_terminal_closure.json`
+- Historical source and legacy byte archives: `ARCHIVE_INDEX.json`
 
-Typical repository content:
+## Repository custody policy
 
-- `experiments/` — current prospective preseals and stage-local executable packets
-- `manifests/` — compact selections, hashes, and reconstruction metadata when needed
-- `receipts/` — current execution and verdict receipts
-- `scripts/` — replay, selection, hashing, and metric code when code is actually needed
+This GitHub `main` tree contains only active, load-bearing research artifacts. Retired prior-stage scripts, workflows, evidence and receipts reside in **verified Google Drive cold snapshots, Notion and immutable Git commit history**. Do not restore old phase trees merely to preserve history. Keep `main` small and update `ARCHIVE_INDEX.json` for new retirement handoffs.
 
-Directories should exist only when they contain something useful. Do not create empty structure for appearance.
+Git history is **not rewritten** by this cleanup; archived large old blobs remain historically accessible through old Git commits. An archive move is not a license, privacy or publication clearance.
 
-## Main-first workflow
+## Current scientific ceiling
 
-`main` is the canonical working branch. Routine research updates go directly to `main`.
+P50 closed **enabling-only** with no trained SLM, no proposal adequacy test, no governance-effect identification, and no population writing improvement. P51 first tests a finite source-conditioned non-autoregressive candidate mechanism. PIA is a gate, not human-quality gold. Compare KSGT and native selection only on **identical frozen candidate sets**, preserve plurality and abstention, and never turn proposer preference into semantic authority.
 
-Create a temporary branch only when the work is genuinely risky: a substantial refactor, destructive schema change, or experiment that should not touch the current executable state until it passes. Merge or discard that branch promptly. Do **not** create one branch per stage, generation, court, snapshot, or historical checkpoint.
+## Git workflow
 
-Scientific freezes are identified by commit SHA and, when useful, a tag. Branches are not archival snapshots.
-
-## Repository hygiene — keep the live lineage, not the museum
-
-**Continuously clean this repository. Keep only experiments and supporting artifacts that remain part of the current executable genealogy or are directly required to replay it.**
-
-When an experiment, receipt, manifest, or script has been superseded and is no longer needed by the current lineage, remove it from `main`. Do not preserve obsolete stage trees merely because they are historically interesting or because they once supported a result.
-
-Historical continuity is already preserved in **Notion + Google Drive**. Git commit history and tags may identify important executable freezes, but the working tree itself should stay small, legible, and current.
-
-Practical rule:
-
-> If deleting an old artifact would not prevent reproduction or interpretation of the current active lineage, it probably should not remain in the repository.
-
-Audit this at every stage transition. Prefer a clean current-state repository over an accumulating genealogy dump.
-
-## Data policy
-
-Do not commit large corpora, PDFs, copyrighted source texts, private material, API keys, provider credentials, or redundant historical exports.
-
-Store only compact identifiers, hashes, selection manifests, derived small tables, replay instructions, and stage-local evidence needed to reconstruct the current result. References to Notion/Drive are preferred over copying archival material into GitHub.
-
-## Current active generation handoff
-
-G9-P50 closed as **enabling infrastructure only**, without a PIA, trained SLM, or governor-effect verdict. Its retired 43-file source tree has been verified and stored in Drive under KSGT / 01_ARCHIVE_LEGACY / G9-P50. Git history retains source commit `9dfff80c2781a3e0e265b03cb47663f3c9e64716`.
-
-**Current stage: G9-P51**, returning to a finite source-conditioned Korean revision candidate-set / matched U-vs-K governor experiment. Only stage-local executable files live in `experiments/g9-p51/`.
+Use main-first author-attributed commits. Automated CI jobs must never author repository commits. Choose languages/runtimes by tested bottlenecks, not fashion.

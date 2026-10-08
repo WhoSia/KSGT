@@ -1,9 +1,0 @@
-{
-  "schema": "ksgt.g9.p47.execution-authority.v1",
-  "frozen_encoder_canonical_run": 37389716969,
-  "canonical_head": "ac3ab931b3e142260b619e78ca8383694e4879c0",
-  "later_frozen_runs": "NONAUTHORITATIVE_DUPLICATE_TRIGGER_RUNS_REGARDLESS_OF_OUTCOME",
-  "surface_control_canonical_run": 37390646062,
-  "rule": "First prospectively triggered frozen encoder run is authority. Later duplicate runs caused by broad path triggers cannot replace it.",
-  "reason": "Anti-candidate-shopping and outcome independence."
-}
