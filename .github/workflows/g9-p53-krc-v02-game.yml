@@ -1,0 +1,93 @@
+name: G9-P53 KRC v0.2 Bounded Generator Critic Game
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/krc_v02/**"
+      - ".github/workflows/g9-p53-krc-v02-game.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-game:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Test typed independent critic and bounded repair without source outcomes
+        run: node --test experiments/g9-p53/krc_v02/tests/*.test.cjs
+      - name: Build unchanged pinned C++ model runner
+        run: |
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Retrieve frozen weights and verify actual bytes
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          from huggingface_hub import hf_hub_download
+          import hashlib
+          p=hf_hub_download(repo_id="Qwen/Qwen3-0.6B-GGUF",revision="23749fefcc72300e3a2ad315e1317431b06b590a",
+                            filename="Qwen3-0.6B-Q8_0.gguf",local_dir="frozen-model")
+          h=hashlib.sha256()
+          with open(p,"rb") as f:
+            for chunk in iter(lambda:f.read(4*1024*1024),b""):h.update(chunk)
+          actual=h.hexdigest()
+          expected="9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031"
+          assert actual==expected,(actual,expected)
+          print("MODEL_SHA256_VERIFIED",actual)
+          PY
+      - name: Boot single-instance model without exposing raw prompts
+        run: |
+          vendor-llama/build/bin/llama-server --model frozen-model/Qwen3-0.6B-Q8_0.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 --ctx-size 3072 \
+            --threads 4 --parallel 1 > /tmp/krc_v02_server.log 2>&1 &
+          echo $! > /tmp/krc_v02_pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8912/health >/dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/krc_v02_pid)" 2>/dev/null; then echo "SERVER_EXIT";exit 1; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health >/dev/null
+      - name: Execute bounded G V repair on two new Korean writing tasks
+        run: |
+          mkdir -p outcomes
+          node experiments/g9-p53/krc_v02/generator.cjs outcomes/krc_v02_generation.json
+      - name: Audit critic witnesses without generating more text
+        run: |
+          node experiments/g9-p53/krc_v02/audit.cjs outcomes/krc_v02_generation.json outcomes/krc_v02_audit.json
+          node - <<'JS'
+          const fs=require("node:fs");
+          const r=JSON.parse(fs.readFileSync("outcomes/krc_v02_generation.json"));
+          const a=JSON.parse(fs.readFileSync("outcomes/krc_v02_audit.json"));
+          if(r.emitted_docs!==2||r.expected_slots!==10||r.attempts>20||
+             r.documents.some(d=>d.paragraphs!==2||d.source_fact_coverage!==5)||
+             r.human_semantic_adjudication!=="NOT_PERFORMED"||
+             a.meaning_fidelity!=="NOT_HUMAN_ADJUDICATED"||
+             r.GAN_training!=="NOT_PERFORMED_NO_WEIGHTS_UPDATED")throw Error("BOUNDARY_FAILED");
+          console.log(JSON.stringify({docs:r.emitted_docs,slots:r.expected_slots,
+            requests:r.attempts,admitted:r.model_admitted_slots,
+            literal_fallback:r.source_literal_fallbacks,
+            repaired_slots:r.revised_slots,semantic:r.human_semantic_adjudication,
+            weights_updated:false}));
+          JS
+      - name: Remove local weight cache
+        run: rm -rf frozen-model
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v02-bounded-generator-critic-execution
+          path: |
+            outcomes/krc_v02_generation.json
+            outcomes/krc_v02_audit.json
+          retention-days: 30
+          if-no-files-found: error
