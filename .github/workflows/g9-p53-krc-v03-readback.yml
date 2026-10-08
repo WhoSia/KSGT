@@ -1,0 +1,53 @@
+name: G9-P53 KRC v0.3 Frozen Prose Readback
+
+on:
+  push:
+    paths:
+      - ".github/workflows/g9-p53-krc-v03-readback.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Fetch immutable six-writing generation artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p original
+          gh run download 37732682355 --repo "${{ github.repository }}" \
+            --name g9-p53-krc-v03-4b-six-korean-drafts --dir original
+          test -f original/outcomes/krc_v03_six_drafts.json
+      - name: Inspect Korean text and flag mechanical errors without rewriting it
+        run: |
+          mkdir -p derived
+          node experiments/g9-p53/krc_v03/competence_screen.cjs \
+            original/outcomes/krc_v03_six_drafts.json derived/krc_v03_screen.json
+          node - <<'JS'
+          const fs=require('node:fs');
+          const r=JSON.parse(fs.readFileSync('original/outcomes/krc_v03_six_drafts.json'));
+          const a=JSON.parse(fs.readFileSync('derived/krc_v03_screen.json'));
+          if(r.documents.length!==6||a.observations.length!==6||
+             r.semantic_verdict!=='NOT_ADJUDICATED'||a.KRC_superiority!=='NOT_ESTABLISHED')
+            throw Error('UNAUTHORIZED_QUALITY_CLAIM');
+          for(const d of r.documents.slice().sort((a,b)=>a.brief.localeCompare(b.brief)||a.arm.localeCompare(b.arm))){
+            const v=a.observations.find(x=>x.brief===d.brief&&x.arm===d.arm);
+            console.log('\n=== FROZEN_KOREAN '+d.brief+' '+d.arm+' ===');
+            console.log('STATUS '+d.status+'; CHARS '+(d.output?.length??0)+'; FLAGS '+JSON.stringify(v.flags));
+            console.log(d.output??'[NO_OUTPUT]');
+          }
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v03-readback-mechanical-screen
+          path: derived/krc_v03_screen.json
+          retention-days: 30
