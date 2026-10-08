@@ -1,0 +1,46 @@
+{
+  "schema": "ksgt.g9.p53.krc-v01.linguistic-observation-preseal.v1",
+  "status": "DEFINED_BEFORE_CONTROLLED_MODEL_OUTPUT_READBACK",
+  "purpose": "Study early KSGT syntax signatures of generated prose at paragraph level without equating anti-template frequency with Korean naturalness.",
+  "unit": "Entire Korean two-paragraph writing response (not individual replacement and not AI detector label).",
+  "proxies": [
+    {
+      "id": "CADENCE",
+      "method": "Sentence Unicode-length mean/variance, paragraph count and per-paragraph sentence counts",
+      "semantic_limit": "Sentence length is not rhythm perception."
+    },
+    {
+      "id": "CONNECTIVES",
+      "method": "Exact listed connective surface counts: 그러나 그렇지만 따라서 이러한 결국 또한 다만 특히",
+      "semantic_limit": "A connective token is not a proof of discourse misuse."
+    },
+    {
+      "id": "ANTITHESIS",
+      "method": "Regex-only candidate A가 아니라 B / 단순히 A를 넘어서 B, list exact hit offsets for review",
+      "semantic_limit": "Contrast is often legitimate; must inspect actual prior proposition and relation."
+    },
+    {
+      "id": "ENDING_PROFILE",
+      "method": "Surface sentence terminal suffix histogram 다 / 요 / 습니다 / punctuation / other",
+      "semantic_limit": "Cannot infer stance or politeness from isolated ending without discourse/social relation."
+    },
+    {
+      "id": "LEXICAL_TEXTURE",
+      "method": "Word-form diversity and abstract-term candidate counts using tiny frozen vocabulary",
+      "semantic_limit": "Token variety/abstraction not intrinsically better."
+    },
+    {
+      "id": "STRUCTURAL_REPEAT",
+      "method": "Count consecutive sentence openings with first 3 visible whitespace tokens identical",
+      "semantic_limit": "Repetition may be rhetorically motivated, no negative score."
+    }
+  ],
+  "permitted_comparisons": "Descriptive by brief and genre for B/A/K; no p-value or humanlike index.",
+  "prohibited": [
+    "Call any proxy naturalness gold",
+    "Develop ad hoc blacklist after seeing K output",
+    "Optimize generation prompts based on same six sources",
+    "Infer language production ontology from six hand-authored briefs"
+  ],
+  "authority": "EXPLORATORY_MECHANICAL_FEATURES_ONLY"
+}
