@@ -1,0 +1,49 @@
+{
+  "schema": "ksgt.g9.p53.krc-v02.witness-challenge-preseal.v1",
+  "status": "EXPLORATORY_PROSPECTIVE_STRESS_TEST_NOT_NATURALNESS_EVALUATION",
+  "purpose": "Verify that an actually observed V witness can condition a real G replacement request after KRC v0.2's spontaneous first 10 outputs triggered zero repairs.",
+  "model": "Same frozen Qwen3-0.6B Q8 GGUF and llama.cpp commit as KRC v0.2",
+  "injection_policy": "Each first invalid candidate is supplied by the stress harness, NOT claimed as model-generated. Critic must independently detect its declared defect. One actual Qwen request per injected case receives only source context and V-produced defect codes.",
+  "cases": [
+    {
+      "id": "NUMERIC_HALLUCINATION",
+      "brief_id": "EX07",
+      "fact_id": "F4",
+      "injected_candidate": {
+        "fact_id": "F4",
+        "sentence": "20분 뒤 감싼 병의 물 온도가 7도 낮았다."
+      },
+      "required_witness": "NOVEL_NUMERIC_LITERAL"
+    },
+    {
+      "id": "META_AND_ID",
+      "brief_id": "EX08",
+      "fact_id": "F4",
+      "injected_candidate": {
+        "fact_id": "F9",
+        "sentence": "제목: 점원이 카운터의 조명을 껐다."
+      },
+      "required_witness": "FACT_ID_MISMATCH"
+    },
+    {
+      "id": "UNOBSERVED_EMOTION",
+      "brief_id": "EX08",
+      "fact_id": "F5",
+      "injected_candidate": {
+        "fact_id": "F5",
+        "sentence": "화자는 아쉬운 마음으로 서점 문 밖 인도에 서 있었다."
+      },
+      "required_witness": "UNSUPPORTED_AFFECT_OR_PURCHASE_CUE"
+    }
+  ],
+  "budget": {
+    "injected_candidates": 3,
+    "real_model_repairs_max": 3,
+    "repairs_per_case": 1,
+    "model_seed_base": 53900
+  },
+  "success_definition": "For each case, original injected candidate is mechanically rejected with required witness and one subsequent real model output is evaluated as pass/fail independently. A pass does not establish semantic equivalence.",
+  "comparison": "Not comparable to unsolicited error frequency or naturalness effect in KRC v0.1/v0.2. Controlled injected errors are not a random sample of model errors.",
+  "human_readers": "ON_HOLD_USER_RECRUITS_SEPARATELY",
+  "authority": "CLOSED_LOOP_REPAIR_TRANSPORT_ONLY"
+}
