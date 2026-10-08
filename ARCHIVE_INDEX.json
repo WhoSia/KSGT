@@ -1,6 +1,6 @@
 {
   "schema": "ksgt.archive-index.v1",
-  "current_stage": "G9-P51",
+  "current_stage": "G9-P52",
   "research_operational_policy": "MAIN_WORKTREE_ONLY_CURRENT_STAGE__HISTORY_IN_DRIVE_NOTION_AND_GIT_OBJECTS",
   "full_pre_p51": {
     "description": "Verified byte-for-byte cold archive of the full 471-file pre-cleanup main tree",
@@ -24,10 +24,18 @@
     "outer_zip_sha256": "18fe2999edd079901315794e52215bff1224b89cb3ae78f2a131c63178394763"
   },
   "p51": {
-    "status": "OPEN_DIRECT_GOVERNOR_COURT",
-    "notion": "https://app.notion.com/p/3f3ef561cf92811fa1cff2704cf7ff3a",
-    "constitution": "experiments/g9-p51/constitution.json",
-    "current_state": "artifacts/g9_p51_current_state.json"
+    "status": "CLOSED_BOUNDED_RIVAL_EDIT_V0_INSTRUMENT_INADEQUATE_NO_GOVERNOR_VERDICT",
+    "terminal_receipt": "artifacts/g9_p51_terminal_verdict.json",
+    "source_commit": "1a6d161533583f19467c4bd3dd1534f60022e427",
+    "source_file_count": 8,
+    "drive_file_id": "1zYsQfeTzNXump252be7Bw86Ak7SzqxKY",
+    "drive_url": "https://drive.google.com/file/d/1zYsQfeTzNXump252be7Bw86Ak7SzqxKY/view?usp=drivesdk",
+    "archive_outer_zip_sha256": "64b61e2d2daaad8671b99e8f617cff7c2c21097fcb346b522c44a97a0612d37f",
+    "archive_inner_zip_sha256": "cf0d0276f564b97af3e2300be980a6f90cfb50fadc85e4a9a45b4fd256f3e91a",
+    "sha256_member_mismatch_count": 0,
+    "run_id": 37718495026,
+    "instrument_24_nonidentity": 0,
+    "empirical_authority": "LITERAL_RULE_SET_COVERAGE_FAIL_ONLY"
   },
   "cleanup_scope": {
     "files_removed_from_main": 464,
@@ -35,6 +43,14 @@
     "files_after_index": 8,
     "git_history_rewrite": false,
     "github_actions_bot_commits": false,
-    "model_training_artifact_11523419179": "SEPARATE_ACCESS_RETENTION_REVIEW_NOT_INCLUDED_IN_COLD_SOURCE_ARCHIVE"
+    "model_training_artifact_11523419179": "SEPARATE_ACCESS_RETENTION_REVIEW_NOT_INCLUDED_IN_COLD_SOURCE_ARCHIVE",
+    "p51_retired_files_removed_from_main": 7,
+    "p51_source_archive_verified": true
+  },
+  "p52": {
+    "status": "OPEN_CONTEXTUAL_EDIT_SPAN_DISCOVERY",
+    "notion": "https://app.notion.com/p/3f3ef561cf928162ba16cc00637188a9",
+    "constitution": "experiments/g9-p52/constitution.json",
+    "current_state": "artifacts/g9_p52_current_state.json"
   }
 }

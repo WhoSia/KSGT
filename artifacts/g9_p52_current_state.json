@@ -1,0 +1,29 @@
+{
+  "schema": "ksgt.g9.p52.current-state.v1",
+  "stage": "G9-P52",
+  "status": "OPEN_P52_CONTEXTUAL_EDIT_SPAN_PROPOSER_SEARCH",
+  "notion_id": "3f3ef561-cf92-8162-ba16-cc00637188a9",
+  "question": "Can contextual edit-span discovery and evidence-grounded Korean replacements provide an adequate proposer for a first non-vacuous same-reservoir KSGT governor experiment?",
+  "predecessor": {
+    "p51_verdict": "artifacts/g9_p51_terminal_verdict.json",
+    "run_id": 37718495026,
+    "first_candidate_nonidentity": "0/24",
+    "any_candidate_nonidentity": "0/24",
+    "governor": "NOT_TESTED",
+    "archived_drive_file": "https://drive.google.com/file/d/1zYsQfeTzNXump252be7Bw86Ak7SzqxKY/view?usp=drivesdk"
+  },
+  "active_requirements": [
+    "Tool/ecosystem survey for Korean edit-span + grounded candidate replacement.",
+    "Establish public or authorized, training/evaluation-disjoint paired-data custody before any indexing, model training or supervision.",
+    "Freeze algorithm, reproducible model/tool identity, candidate counts, source-only 24-item PIA identity and no-rescue logic before outcomes.",
+    "PIA PASS needed before KSGT U/K on identical frozen candidate reservoir."
+  ],
+  "not_executed": [
+    "P52 proposer",
+    "P52 PIA",
+    "P52 U-versus-K contrast",
+    "human evaluation"
+  ],
+  "next": "Capability discovery and data rights before prospective selection.",
+  "authority": "OPEN_DESIGN_NO_EMPIRICAL_RESULT"
+}
