@@ -1,0 +1,28 @@
+name: G9-P57 Native Source Gold and Human-Prose Authority Court
+on:
+  push:
+    paths:
+      - 'experiments/g9-p57/evidence_authority/**'
+      - '.github/workflows/g9-p57-evidence-authority.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  existing-korean-gold-admissibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check gold ontology licenses partial audits and fake evidence
+        run: node --test experiments/g9-p57/evidence_authority/tests/authority.test.cjs
+      - name: Recompute actual source-admissibility ledger without data downloads
+        run: |
+          node experiments/g9-p57/evidence_authority/audit.cjs > /tmp/p57_admissibility.json
+          node - <<'JS'
+          const x=require('/tmp/p57_admissibility.json');
+          if(x.directly_admissible_partitive_gold!==0||x.materialized_adjacent_native_gold!==2||x.independent_disagreement_gold!==0) process.exit(1);
+          console.log('P57_REAL_SOURCE_METADATA_CONTRACT_PASS');
+          JS
+          test ! -e NIKL_ZA_2025_v1.0.zip

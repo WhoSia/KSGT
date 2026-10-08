@@ -2,11 +2,11 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "G9-P56",
+  "current_stage": "G9-P57",
   "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "CLOSED_G9_P56_BOUNDED_ANTECEDENT_SET_PROVENANCE_PASS_CALIBRATION_GOLD_HOLD",
-  "canonical_notion_id": "3f3ef561-cf92-8154-b538-ef8553099cd7",
-  "parent_stage": "G9-P55",
+  "status": "OPEN_G9_P57_NATIVE_GOLD_ADMISSIBILITY_AND_HUMAN_PROSE_LITERATURE",
+  "canonical_notion_id": "3f3ef561-cf92-811a-a77c-c7f799f5301d",
+  "parent_stage": "G9-P56",
   "latest_closed_stage": "G9-P56",
   "latest_closed_artifact": {
     "stage": "G9-P56",
@@ -17,9 +17,9 @@
     "archive_sources": 6
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "artifacts/g9_p56_precommit_source_receipt.json",
+  "current_artifact": "experiments/g9-p57/evidence_authority/data/source_registry.json",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Which historically inherited evidence can narrow the candidate antecedent set for 그중, and is probabilistic uncertainty calibration identifiable without independent antecedent labels?",
+  "current_question": "Which existing human-annotated Korean corpora provide independent explicit 그중 group antecedent gold, and what adjacent evidence cannot cross that authority boundary?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
@@ -75,7 +75,11 @@
     "p56_legacy_restore": "JULY_2026_SENSESET_ARGUMENT_MEMORY_ANTECEDENT_COMPETITION_G8_SELECT_G9_PROVENANCE",
     "p56_local_tests": "18_OF_18_PASS_REMOTE_PENDING",
     "p56_ci": "SUCCESS_37803344020_18_OF_18_SYNTHETIC",
-    "p56_history": "EARLY_JULY_2026_SENSE_SET_AND_ARGUMENT_MEMORY_CONFIRMED_BY_DIRECT_DRIVE_CHAT_EXPORT"
+    "p56_history": "EARLY_JULY_2026_SENSE_SET_AND_ARGUMENT_MEMORY_CONFIRMED_BY_DIRECT_DRIVE_CHAT_EXPORT",
+    "p57": "MATERIALIZED_KOREAN_CHARACTER_COREFERENCE_ADJACENT_GOLD_EXISTS_DIRECT_PARTITIVE_GOLD_NOT_VERIFIED",
+    "p57_source_contact": "KOCO_JSONL_10_ROWS_GOLEM_KO_DEV_TEST_ZERO_LITERAL_GEJUNG_GOLEM_TRAIN_NOT_INSPECTED",
+    "p57_calibration": "NOT_ADMISSIBLE_WITHOUT_EXPLICIT_GROUP_GOLD_AND_SCORED_OUTCOMES",
+    "p57_remote_ci": "PENDING_18_AUTHORITY_TESTS"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -105,8 +109,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "Optionally approve proposed P57 formal name; no new corpus or borrowed server task required.",
-  "next_scientific_action": "P56 CLOSED. Do not reopen absent-label calibration; verify availability/licensing/independent annotation of existing Korean partitive contexts only in a separately approved bounded P57.",
+  "next_human_action": "NONE",
+  "next_scientific_action": "Complete P57 source authority gate, remote test, report verified limits and adjacent gold contact, then close quickly. Later pursue genre-sensitive Korean referential economy with actual human writer actions only when legitimate.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -126,7 +130,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "TERMINAL_G9_P56_CLOSED_LEGACY_ANTECEDENT_SET_COURT",
+  "current_substage": "Direct native Korean coreference gold task-mismatch and source-rights court",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -185,9 +189,9 @@
     "human_reader_rating": "NOT_COLLECTED"
   },
   "current_prototype": {
-    "path": "experiments/g9-p56/antecedent_set_court/adjudicator.cjs",
-    "tests": "experiments/g9-p56/antecedent_set_court/tests/adjudicator.test.cjs",
-    "historical_crosswalk": "experiments/g9-p56/antecedent_set_court/HISTORICAL_CROSSWALK.md"
+    "path": "experiments/g9-p57/evidence_authority/authority.cjs",
+    "tests": "experiments/g9-p57/evidence_authority/tests/authority.test.cjs",
+    "literature": "experiments/g9-p57/evidence_authority/HUMAN_PROSE_RESEARCH.md"
   },
   "latest_p0_capacity_probe": {
     "source": "artifacts/g9_p53_p0_qwen14b_b_baseline_readback.json",
@@ -330,9 +334,8 @@
   "next_stage_proposal": {
     "stage": "G9-P57",
     "formal_name_proposed": "KSGT Generation IX G9-P57 — Existing-Source Antecedent Authority, Native Context Disagreement & Gold-Admissibility Boundaries",
-    "status": "NOT_YET_OPENED",
-    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
-    "one_question": "Can existing rights-cleared Korean sources yield independently verified antecedent labels and disagreement authority rather than repeating synthetic regex tests?",
-    "short_stage_rule": "ONE_QUESTION_CLOSED_PASS_HOLD"
+    "status": "OPEN",
+    "canonical_name_status": "CONFIRMED_BY_USER",
+    "one_question": "Existing lawful independent target labels and source-task mismatch, not more syntax surface regex."
   }
 }
