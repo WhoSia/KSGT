@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P53",
   "stage_type": "INDEXED_SOURCE_SPAN_PROTOCOL_COURT",
-  "status": "OPEN_P53_INDEXED_MECHANICAL_GAIN_FRESH_PIA_NOT_PERFORMED",
+  "status": "OPEN_P53_KRC_V01_GENERATION_RUN_COMPLETE_HUMAN_NATURALNESS_HOLD",
   "canonical_notion_id": "3f3ef561-cf92-8144-aafe-c65a5556170c",
   "parent_stage": "G9-P52",
   "latest_closed_stage": "G9-P52",
@@ -12,17 +12,19 @@
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
   "current_artifact": "artifacts/g9_p53_current_state.json",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Does source-indexed segment addressing remedy exact-quote span failures with fixed model weights and a fresh outcome-unseen PIA?",
+  "current_question": "Can a typed Korean meaning/discourse planning calculus yield more natural, factually faithful full passages than a generic model or surface-template-only ablation, and what breaks when plan is realized?",
   "current_authority": {
-    "contextual_proposer": "P52_PRIMARY_VALID_0_OF_24",
-    "protocol_comparison": "NOT_EXECUTED_P53",
-    "fresh_pia": "NOT_COMPILED",
-    "governance_effect": "HOLD_INSTRUMENT_ADMISSION",
-    "human_revision_burden": "HOLD",
-    "population_claim": "NONE"
+    "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
+    "symbolic_source_literal_preservation": "30_OF_30_PASS",
+    "neural_surfacing": "18_OF_18_OUTPUTS_BUT_RELIABLE_PROSE_FORMAT_FAIL",
+    "independent_semantic_fidelity": "NOT_ADJUDICATED",
+    "blind_reader_naturalness": "NOT_COLLECTED",
+    "KRC_better_than_baseline": "NO_CLAIM",
+    "governance_effect": "NOT_CURRENT_STUDY"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
+    "artifacts/g9_p53_krc_v01_terminal_readback.json",
     "artifacts/g9_p53_current_state.json",
     "artifacts/g9_p53_indexed_regression_evidence.json",
     "experiments/g9-p53/constitution.json",
@@ -43,8 +45,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "OPTIONAL_LICENSING_REVIEW_FOR_NEW_KOLLA_V2_SOURCE_ONLY_HOLDOUT; NO_IMMEDIATE_ACTION",
-  "next_scientific_action": "Do not retune P53 regression instrument. Reconstitute rights-reviewed, historical-exclusion-proven fresh PIA and exact private candidate-pool escrow before any adequate governor contrast; P53 first candidate still <18/24.",
+  "next_human_action": "OPTIONAL: Anonymous reading of the three blinded six-pair forms; no human data has been collected.",
+  "next_scientific_action": "Preserve KRC v0.1 outcomes. Move from a monolithic model-fed formal plan to source-atom-local realization plus deterministic Korean document composition on NEW writing briefs; evaluate separate factual licensing and blind idiomaticity, not grader reward.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -63,5 +65,20 @@
     "comparator": "P52_PRIMARY_0_OF_24_ANY_2_OF_24",
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
+  },
+  "current_substage": "KRC-v0.1 completed readback / KRC-v0.2 local clause realization design next",
+  "latest_writing_result": {
+    "preseal": "experiments/g9-p53/krc_v01/constitution.json",
+    "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
+    "terminal_receipt": "artifacts/g9_p53_krc_v01_terminal_readback.json",
+    "generator_run": 37724158567,
+    "typed_planner_run": 37724020307,
+    "pure_symbolic_run": 37724465879,
+    "reader_forms_run": 37724757175,
+    "outputs": 18,
+    "paragraph_compliance": "B_1/6_A_1/6_K_0/6",
+    "source_atom_preservation_symbolic": "30/30_LITERAL",
+    "comparative_quality": "NOT_IDENTIFIED_NO_HUMAN_READERS",
+    "verified_drive": "https://drive.google.com/drive/folders/13f5tV1fzGWr1w8H-nlvbwSDAy2E5RJhm"
   }
 }
