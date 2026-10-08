@@ -1,0 +1,54 @@
+{
+  "schema": "ksgt.g9.p53.krc.v03.preseal",
+  "status": "FROZEN_BEFORE_MODEL_OUTPUT",
+  "title": "Competent Decoder Gate, Clean Prompt and Korean Passage Realization",
+  "ruling": "Retire KRC v0.1 blind human survey as unsuitable for stylistic evaluation; preserve only as failure evidence.",
+  "observed": [
+    "0.6B output leaked labels 제목/목록/인사말/인용부호",
+    "0.6B altered factual and causal claims",
+    "KRC v0.2 reused 9/10 fact sentences verbatim",
+    "Current lexical critic accepts polarity reversals"
+  ],
+  "hypotheses_not_yet_proven": [
+    "weak 0.6B instruction following",
+    "negative instructions priming forbidden labels",
+    "typed plan metatext leaking into prose",
+    "artificial length targets encouraging filler"
+  ],
+  "model": {
+    "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+    "revision": "18727206c51467496bfba014368bd0a30e97f411",
+    "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+    "expected_sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+    "base": "Qwen/Qwen3-4B-Instruct-2507",
+    "license": "Apache-2.0",
+    "llama_cpp": "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+  },
+  "design": {
+    "briefs": [
+      "EX09",
+      "EX10"
+    ],
+    "arms": [
+      "B_CLEAN",
+      "U_PLAIN_PLAN",
+      "K_TYPED_PLAN"
+    ],
+    "n_outputs": 6,
+    "temperature": 0.35,
+    "top_p": 0.9,
+    "max_tokens": 400,
+    "seed_base": 54000,
+    "retries": 0,
+    "target": "two short natural Korean prose paragraphs, no invented facts; no forced length or negative list of headings",
+    "no_feedback_regeneration": true
+  },
+  "gate": {
+    "mechanical": "no meta headings, list-format, assistant protocol declarations; output prose",
+    "semantic": "human independent source entailment needed; unautomated",
+    "stop": "If clean baseline is semantically or grammatically defective, do not claim K win and mark decoder inadequate"
+  },
+  "interpretation": "Different arm prompt content and length; exploratory attribution only",
+  "reader_status": "OLD_V01_SURVEY_CANCELLED",
+  "weights_updated": false
+}
