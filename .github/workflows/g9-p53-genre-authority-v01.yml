@@ -1,0 +1,21 @@
+name: G9-P53 Offline Genre Authority and Corpus Provenance
+on:
+  push:
+    paths:
+      - 'experiments/g9-p53/genre_authority_v01/**'
+      - '.github/workflows/g9-p53-genre-authority-v01.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  genre-contract-and-source-provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify offline F/E/L/W and evidence authority guards
+        run: |
+          node --test experiments/g9-p53/genre_authority_v01/test/*.test.cjs
+          node --test experiments/g9-p53/krc_v07/intent_writer.test.cjs

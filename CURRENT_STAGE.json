@@ -39,7 +39,9 @@
     "p0_8b_q4": "REAL_RUN_SUCCESS_2_OF_2_OUTPUTS_BUT_BASELINE_FORMAT_FAIL_NO_KSGT_EFFECT",
     "p0_14b_q4": "4_OF_4_B_COMPLETED_3_OF_4_TWO_PARAGRAPHS_SOURCE_LICENSED_CREATIVE_BOUNDARY_UNRESOLVED",
     "p0_writer_improvement": "NOT_TESTED_NO_UK_OUTPUTS",
-    "human_revision_burden": "NOT_COLLECTED"
+    "human_revision_burden": "NOT_COLLECTED",
+    "genre_authority_v01": "OFFLINE_F_E_L_W_SYNTHETIC_PRESEAL_24_TESTS_LOCAL_NO_GENERATOR_GAIN",
+    "borrowed_server": "NOT_USED_NO_SYSTEM_ENVIRONMENT_CHANGES"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -70,7 +72,7 @@
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
   "next_human_action": "Optional acquisition: external GOLEMcoref/KoCoNovel/UD_Korean_KSL source repo URLs in DATA_SOURCE_REGISTER; no human writing survey.",
-  "next_scientific_action": "P0: Reconstruct genre-conditioned source-fact preservation vs creative-description license (science strict; narrative designated authorizable invention), then independently validate a competent B before matched B/U/K. P1 partitives and small rights-aware source data remain active.",
+  "next_scientific_action": "Review F/E/L/W author-warrant and natural source fidelity in small corpus; obtain independent writer-facing validation before running B/U/K. No friend-server use while substantial no-compute work remains.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -175,5 +177,16 @@
     "format_two_paragraphs": 3,
     "genre_authority_problem": "STRICT_SOURCE_FACTS_VS_FICTIONAL_LICENSE_MUST_BE_SEPARATED",
     "originals_drive": "https://drive.google.com/drive/folders/1CHaD1YwJwv9QxHTX_nVFPn-J3m_KOGmQ"
+  },
+  "latest_offline_writer_instrument": {
+    "path": "experiments/g9-p53/genre_authority_v01",
+    "source_facts_and_permissions": "SAME_F_E_L_W_ON_ALL_THREE_ARMS",
+    "plan_comparison": "U_K_PLAN_ATOMS_MATCH_B_NO_EXTRA_PLAN",
+    "developer_briefs": 6,
+    "prompt_arms": 18,
+    "local_tests": 24,
+    "independent_writing_benefit": "NOT_EVALUATED",
+    "existing_partitive": "REUSED_NOT_RESEALED",
+    "data": "METADATA_ONLY_NO_NEW_RAW_CORPORA"
   }
 }

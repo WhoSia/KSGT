@@ -1,0 +1,15 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const {validate}=require('../src/evidence_intake.cjs');const {make}=require('../src/audit_template.cjs');
+const ledger=require('../fixtures/evidence_ledger.json'),briefs=require('../fixtures/briefs.json');
+const change=(fn)=>{let x=structuredClone(ledger);fn(x);return x;};
+test('five inspected metadata sources have no fabricated partitive gold or public raw',()=>{let a=validate(ledger);assert.equal(a.source_count,5);assert.equal(a.independent_partitive_gold,0);});
+test('restricted or pending data cannot be publicly mirrored',()=>{assert.throws(()=>validate(change(x=>x[0].public_raw=true)),/UNLICENSED/);assert.throws(()=>validate(change(x=>x[2].public_raw=true)),/UNLICENSED/);});
+test('zero anaphora or character coref cannot become partitive gold by renaming field',()=>{assert.throws(()=>validate(change(x=>x[0].independent_partitive_gold=true)),/FALSE_PARTITIVE/);});
+test('independent partitive annotation requires independent_adjudication and proper class',()=>{assert.throws(()=>validate(change(x=>x[4].independent_partitive_gold=true)),/FALSE_PARTITIVE/);});
+test('edit-conditioned corpus cannot identify no-op prevalence',()=>{assert.throws(()=>validate(change(x=>x[3].estimate_no_edit_rate=true)),/SELECTION_BIAS/);});
+test('editor action cannot be promoted to same-writer evidence',()=>{assert.throws(()=>validate(change(x=>x[3].authority='SAME_WRITER')),/FALSE_SAME_WRITER/);});
+test('metadata-only Github manifests reject raw text',()=>{assert.throws(()=>validate(change(x=>x[0].source_sentence='restricted example')),/RAW_TEXT/);});
+test('duplicate data IDs are rejected',()=>{assert.throws(()=>validate(change(x=>x.push({...x[0]}))),/DUPLICATE/);});
+test('audit template discloses every protected fact, unknown and zero human ratings',()=>{let a=make(briefs[2]);assert.equal(a.facts.length,5);assert.equal(a.epistemic.length,2);assert.equal(a.creative.mode,'AMBIENCE_ONLY');assert.equal(a.editorial_burden.observed_human_edits,null);assert(a.facts.every(x=>x.answer==='UNADJUDICATED'));});
+test('science audit explicitly holds causal and missing measurements',()=>{let a=make(briefs[0]);assert.equal(a.epistemic.length,2);assert.equal(a.creative.answer,'UNADJUDICATED');assert.equal(a.derived_verdict,'NO_MODEL_OUTPUT_EVALUATED');});

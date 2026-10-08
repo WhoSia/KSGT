@@ -1,0 +1,49 @@
+[
+  {
+    "source_id": "NIKL_ZA_2020_2025",
+    "class": "ZERO_ANAPHORA",
+    "license_status": "RESTRICTED",
+    "authority": "ANNOTATOR",
+    "independent_partitive_gold": false,
+    "public_raw": false,
+    "custody": "EXISTING_PRIVATE_DRIVE"
+  },
+  {
+    "source_id": "KOLLA_V2",
+    "class": "LEARNER_CORRECTION",
+    "license_status": "VERIFIED",
+    "authority": "EDITOR",
+    "independent_partitive_gold": false,
+    "public_raw": false,
+    "custody": "EXISTING_PRIVATE_DRIVE"
+  },
+  {
+    "source_id": "STYLEKQC",
+    "class": "STYLE_PARAPHRASES",
+    "license_status": "PENDING",
+    "authority": "HUMAN_PARAPHRASE",
+    "independent_partitive_gold": false,
+    "public_raw": false,
+    "custody": "SOURCE_METADATA_ONLY"
+  },
+  {
+    "source_id": "NIKL_PUBLIC_LANGUAGE_EDIT_PAIRS_2023",
+    "class": "EDITOR_PAIRS",
+    "license_status": "PENDING",
+    "authority": "EDITOR",
+    "independent_partitive_gold": false,
+    "public_raw": false,
+    "custody": "NEW_PENDING",
+    "edit_conditioned": true,
+    "estimate_no_edit_rate": false
+  },
+  {
+    "source_id": "FRESH_KOREAN_PARTITIVE_HUMAN_GOLD",
+    "class": "PARTITIVE_GOLD",
+    "license_status": "PENDING",
+    "authority": "ANNOTATOR",
+    "independent_partitive_gold": false,
+    "public_raw": false,
+    "custody": "NEW_PENDING"
+  }
+]
