@@ -1,0 +1,106 @@
+{
+  "schema": "ksgt.g9.p53.realization-architecture.v1",
+  "status": "PROSPECTIVE_FORMAL_STRUCTURE_AND_NONBLIND_DEMONSTRATION",
+  "name": "Korean Realization Calculus (KRC) — Typed Discourse IR, Constraint-Preserving Realizer & Independent Evidence Critic",
+  "core_distinction": "Not merely LLM prompt recipes and GAN-discriminator score. Explicit typed semantic/discourse representation mediates writer; separate critic inspects invariants and multi-dimensional contextual consequences.",
+  "types": {
+    "FactAtom": {
+      "id": "unique",
+      "claim": "licensed proposition",
+      "source": "brief.fact_id",
+      "modality": "observed|reported|uncertain"
+    },
+    "Unknown": {
+      "id": "unique",
+      "scope": "cannot be claimed as observed"
+    },
+    "DiscourseEdge": {
+      "from": "atom_or_sentence_id",
+      "to": "atom_or_sentence_id",
+      "relation": "temporal|elaboration|causal_hypothesis|contrast|evidence|concession",
+      "warrant": "evidence_id|null"
+    },
+    "InformationState": {
+      "topic": "known referent",
+      "focus": "informational novelty",
+      "given": [
+        "entity_id"
+      ],
+      "new": [
+        "entity_id"
+      ],
+      "genre": "science_explainer|scene_essay",
+      "audience": "declared"
+    },
+    "RealizationDecision": {
+      "atom_ids": [
+        "fact ids"
+      ],
+      "syntactic_frame": "finite_clause|subordinate_clause|ellipsis|nominalization",
+      "particle_policy": "topic|nominative|contextual",
+      "connective": "licensed relation only or none",
+      "cadence_role": "setup|observation|caveat|transition|closure",
+      "stance": "observed|hypothesized|unknown"
+    },
+    "Draft": {
+      "text": "Korean prose",
+      "trace": "sentence/span to licensed fact atoms and discourse edges"
+    },
+    "CriticFinding": {
+      "severity": "HARD_FAIL|UNCERTAIN|PREFERENCE",
+      "dimension": "fidelity|logic|reference|genre|cadence|idiom",
+      "witness": "evidence pointer and text span",
+      "rule": "declared invariant"
+    }
+  },
+  "stages": [
+    {
+      "id": "P",
+      "role": "Meaning and discourse planner",
+      "input": "facts, unknowns, purpose, genre, reader",
+      "output": "FactAtom graph+DiscourseEdge+InformationState; select ordering and permissible statements",
+      "restriction": "Does not write final Korean sentences or invent observations"
+    },
+    {
+      "id": "G",
+      "role": "Generator or Korean Realizer",
+      "input": "typed plan plus local language resources",
+      "output": "prose+atom-alignment trace",
+      "restriction": "Do not change fact authority; LLM can suggest phrasings but does not certify facts"
+    },
+    {
+      "id": "V",
+      "role": "Independent evidence critic",
+      "input": "immutable brief and finished draft; no generator self-rationale or generated scores",
+      "output": "hard-fail witnesses and uncertainty flags",
+      "restriction": "Reject unsupported new assertions and false relations; lexical match alone is not semantic proof"
+    },
+    {
+      "id": "R",
+      "role": "Human reader court",
+      "input": "blinded finished prose and same brief",
+      "output": "contextual naturalness, coherence, authorial voice, genre suitability and reasons",
+      "restriction": "No optimizer updates from heldout judges"
+    }
+  ],
+  "objective": "Find Pareto-admissible realizations under inviolable semantic constraints and context-sensitive reader quality, not maximize one scalar adversarial discriminator.",
+  "formal_constraints": {
+    "hard": "Every asserted event must be licensed by F; invented observation, numeric/person fact or false causal entailment invalidates draft.",
+    "discourse": "Every explicit logical connective must have a warranted relation or be reported UNCERTAIN.",
+    "reference": "Ellipsis/pronouns require recoverable antecedents or a contextually deliberate ambiguity.",
+    "soft": "Sentence cadence, information order, lexical texture, paragraph structure, genre fit remain partially ordered; do not reduce to a blacklist."
+  },
+  "training_design": {
+    "GAN_analogy": "G produces, V provides critical evidence, but V is not an uncalibrated real-vs-fake classifier.",
+    "anti_reward_hacking": "Separate V hard factual claims from human taste; monitor grader exploitation; freeze blind reader samples; disallow repeated public test feedback.",
+    "experimental_arms": [
+      "B fixed general AI",
+      "A surface-template-only ablation",
+      "K typed-plan KRC-guided realization"
+    ],
+    "control": "Same model, facts, length and decoding; model/version frozen before actual formal benchmark. Do not equate assistant-authored demos with controlled models.",
+    "human_outcome": "Pairwise reader judgments, ties permitted, plus independent fact audit; no detector-evasion goals."
+  },
+  "minimal_prototype": "Two authored briefs EX01 and EX04, three methodological demonstration texts each, annotated source trace, unscored evaluator contract.",
+  "authority": "FORMAL_DESIGN_AND_ILLUSTRATIVE_OUTPUTS_ONLY_NO_GAN_TRAINING_NO_HUMAN_PREFERENCE_OR_GENERAL_AI_SUPERIORITY"
+}
