@@ -1,0 +1,146 @@
+{
+  "schema": "ksgt.g9.p53.information-structure-contrast-preseal.v1",
+  "status": "PROSPECTIVE_STIMULI_CONTRACT_NOT_LINGUISTIC_RESULT",
+  "date": "2026-10-08",
+  "question": "For identical truth-conditional target proposition and explicit discourse context, how do Korean NOM-(n)un versus NOM-i/ka utterances differ in contextual felicity, contrast inference and perceived discourse continuity?",
+  "theoretical_competition": [
+    {
+      "id": "H_TOPIC_FOCUS",
+      "claim": "The topic-versus-focus distinction predicts systematically higher -(n)un fit in continuing-about contexts and higher -i/ka fit in subject-answer contexts.",
+      "status": "TESTABLE_HYPOTHESIS_NOT_ASSUMED"
+    },
+    {
+      "id": "H_SALIENCE",
+      "claim": "Discourse-reference salience rather than categorical focus marking predicts some -(n)un preference; sufficient contextual continuity may admit both variants.",
+      "status": "TESTABLE_HYPOTHESIS_NOT_ASSUMED"
+    },
+    {
+      "id": "H_CONTEXT_DEPENDENT",
+      "claim": "Particle alone underdetermines focus; prosody, alternative set and reference-point discourse affect ratings.",
+      "status": "TESTABLE_HYPOTHESIS_NOT_ASSUMED"
+    }
+  ],
+  "source_policy": "All 12 stimulus prompts and target sentences are newly authored fictional test materials. No outside learner corpus or archived PIA/hidden references. Separate lexical counterbalancing needed before population claims.",
+  "design": {
+    "contexts": 6,
+    "variants_per_context": 2,
+    "total_stimulus_trials": 12,
+    "units": "pair of same target clause and discourse-setting with particle alternation",
+    "target_meaning": "neutral activity/state fact; context-specific alternative implicatures may change, must not be incorrectly called equivalent full pragmatic meaning",
+    "main_contrast": "within-context -(n)un vs -i/ka",
+    "controls": [
+      "identical nouns and verbs per pair",
+      "two syllable-final and nonfinal subject stems as balancing",
+      "no automatic item scoring",
+      "preserve punctuation and written speech style",
+      "explicit antecedent utterance or question",
+      "audio/prosody not studied"
+    ],
+    "limits": [
+      "One token replacement can alter information structure, presuppositions or contrast implications.",
+      "Written stimuli cannot identify spoken prosodic focus.",
+      "These contexts are small handcrafted examples, not a representative Korean population sample.",
+      "Do not fit participant effects until actual independent judgments exist."
+    ]
+  },
+  "stimuli": [
+    {
+      "id": "C1",
+      "kind": "WHO_ANSWER",
+      "antecedent": "누가 창문을 열었어?",
+      "stem": "민지",
+      "predicate": "창문을 열었어.",
+      "variants": {
+        "topic": "민지는 창문을 열었어.",
+        "nominative": "민지가 창문을 열었어."
+      },
+      "target_question": "Identify subject answering a who-question",
+      "subject_morphology": "vowel_final"
+    },
+    {
+      "id": "C2",
+      "kind": "ABOUTNESS_CONTINUATION",
+      "antecedent": "민지 이야기를 해 보자. 민지는 오늘 뭘 했어?",
+      "stem": "민지",
+      "predicate": "창문을 열었어.",
+      "variants": {
+        "topic": "민지는 창문을 열었어.",
+        "nominative": "민지가 창문을 열었어."
+      },
+      "target_question": "Continue an established discourse referent",
+      "subject_morphology": "vowel_final"
+    },
+    {
+      "id": "C3",
+      "kind": "ALTERNATIVE_CONTRAST",
+      "antecedent": "민지와 수아가 각각 무엇을 했는지 비교해 보자. 수아는 책을 읽었어. 민지는?",
+      "stem": "민지",
+      "predicate": "창문을 열었어.",
+      "variants": {
+        "topic": "민지는 창문을 열었어.",
+        "nominative": "민지가 창문을 열었어."
+      },
+      "target_question": "Compare alternatives in discourse",
+      "subject_morphology": "vowel_final"
+    },
+    {
+      "id": "C4",
+      "kind": "WHO_ANSWER",
+      "antecedent": "누가 보고서를 제출했어?",
+      "stem": "준혁",
+      "predicate": "보고서를 제출했어.",
+      "variants": {
+        "topic": "준혁은 보고서를 제출했어.",
+        "nominative": "준혁이 보고서를 제출했어."
+      },
+      "target_question": "Identify subject answering a who-question",
+      "subject_morphology": "consonant_final"
+    },
+    {
+      "id": "C5",
+      "kind": "ABOUTNESS_CONTINUATION",
+      "antecedent": "준혁의 근황을 이야기하자. 준혁은 오늘 무엇을 했어?",
+      "stem": "준혁",
+      "predicate": "보고서를 제출했어.",
+      "variants": {
+        "topic": "준혁은 보고서를 제출했어.",
+        "nominative": "준혁이 보고서를 제출했어."
+      },
+      "target_question": "Continue an established discourse referent",
+      "subject_morphology": "consonant_final"
+    },
+    {
+      "id": "C6",
+      "kind": "ALTERNATIVE_CONTRAST",
+      "antecedent": "준혁과 영준의 일을 비교하자. 영준은 실험을 정리했어. 준혁은?",
+      "stem": "준혁",
+      "predicate": "보고서를 제출했어.",
+      "variants": {
+        "topic": "준혁은 보고서를 제출했어.",
+        "nominative": "준혁이 보고서를 제출했어."
+      },
+      "target_question": "Compare alternatives in discourse",
+      "subject_morphology": "consonant_final"
+    }
+  ],
+  "measurement": {
+    "participant_tasks": [
+      "Rate naturalness of continuation in this written context (1-7).",
+      "Rate whether utterance identifies a previously unresolved person (1-7).",
+      "Rate whether utterance suggests comparison with an unmentioned alternative (1-7).",
+      "Free-text alternate reading / discomfort; accept neither/both as genuine option."
+    ],
+    "primary_outcome": "Within-context paired difference in naturalness ratings, topic minus nominative; report per-context first, no pooling until design expansion.",
+    "secondary_outcomes": [
+      "unresolved-referent-answer reading",
+      "alternative-comparison inference",
+      "open-ended qualitative explanations"
+    ],
+    "missingness": "Never replace absent ratings with automatic model preference; no zero-cost abstentions.",
+    "analysis_if_data": "Descriptive item-wise paired ratings; with participant sample use participant+lexical-item random effects and ordinal outcomes, predeclare model before data, no p-value from authored predictions.",
+    "blinding": "Present two variants in counterbalanced left/right order, do not display context condition labels or H1/H2/H3.",
+    "pilot_first": "Cognitive interview for context ambiguity and participant comprehension, then independently collected judgments. Pilot feedback may prompt a new version but never retroactively confirm this preseal."
+  },
+  "stop_rule": "No new proposer model, candidate generation budget or governor court required for this linguistic experiment. Only move to infrastructure if the target linguistic variable itself cannot be observed.",
+  "evidence_authority": "PREREGISTERED_ILLUSTRATIVE_STIMULI_ONLY_NO_HUMAN_OBSERVATION_NO_LINGUISTIC_VERDICT"
+}
