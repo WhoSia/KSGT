@@ -1,0 +1,83 @@
+{
+  "schema": "ksgt.g9.p53.krc-v02.next-linguistic-mechanism.v1",
+  "status": "DESIGN_ONLY_NOT_EXECUTED_NO_RESCUE_OF_V01",
+  "scope": "One bounded Korean realization mechanism experiment, not prolonged generator/evaluator optimization.",
+  "formal_name": "KRC v0.2 — Proof-Carrying Korean Clause Realization, Source-Atom Locality, Deterministic Discourse Assembly & Pragmatic Construction Licensing",
+  "p53_v01_observed_defeater": {
+    "typed_plan": "PASS",
+    "symbolic_fact_atom_custody": "30/30 verbatim",
+    "neural_full_document_outputs": "18/18",
+    "two_paragraphs": {
+      "B": "1/6",
+      "A": "1/6",
+      "K": "0/6"
+    },
+    "empirical_antecedent": "The monolithic 0.6B LLM often treated instructions as output meta-commentary or titles/lists, even for B and A; typed planner success did not transfer to surface output.",
+    "restriction": "Do not re-prompt or re-generate the six v0.1 briefs and call it a clean improvement."
+  },
+  "new_computation": {
+    "step1": "Construct typed licensed-fact graph and Korean discourse-state trajectory; explicit information packaging, reference and stance.",
+    "step2": "Compile each rhetorical slot into a local Korean clause obligation (1-2 fact atoms, known speaker/register and a licensed connective relation).",
+    "step3": "Let a surface realizer propose only this clause, returning surface bytes + fact IDs + locality witness. This is NOT a guarantee of semantic entailment.",
+    "step4": "Check identifier/range, forbidden new numeric/person spans and simple verbatim controls. If no licensable clause is available, record typed failure and emit explicitly labeled source-exact fallback, never a quality PASS.",
+    "step5": "Assemble paragraphs deterministically from accepted local clauses and KRC discourse graph; no LLM-authored meta title or summary headings can enter the assembly.",
+    "step6": "Independently examine semantic fidelity and Korean naturalness of the *assembled passage*, not only clauses."
+  },
+  "korean_surface_operation_algebra": [
+    {
+      "id": "TOPIC_FOCUS",
+      "input": "known/given/new and an explicit antecedent",
+      "output": "licensed topic/nominative marking candidate",
+      "risk": "Topic, contrast and presupposition change; optional, not a free synonym"
+    },
+    {
+      "id": "ELLIPSIS",
+      "input": "recoverable referent chain",
+      "output": "omit recoverable arguments under register/genre",
+      "risk": "Loss of recoverability"
+    },
+    {
+      "id": "CLAUSE_JOIN",
+      "input": "warranted temporal/evidential/contrastive discourse edge",
+      "output": "joining or separation with a valid connective",
+      "risk": "False causal or contrastive assertion"
+    },
+    {
+      "id": "ENDING_STANCE",
+      "input": "observed narrator/addressee/genre",
+      "output": "consistent finite ending and register",
+      "risk": "Interactional stance or speech act shift"
+    },
+    {
+      "id": "CADENCE",
+      "input": "rhetorical span roles",
+      "output": "bounded long/short clause distribution; allowed repetition",
+      "risk": "Arbitrary noise disguised as human style"
+    },
+    {
+      "id": "LEXICAL_TEXTURE",
+      "input": "same licensed event and genre",
+      "output": "Korean conventional collocation and limited register choice",
+      "risk": "Semantic strengthening, evaluative or emotional additions"
+    }
+  ],
+  "formal_target": "A total document composer for finite licensed slot sequences, with an auditable source-to-clause witness. The totality theorem is about assembling validated typed/failed slots with visible fallbacks, not about guaranteeing Korean fluency or semantic equivalence of model proposals.",
+  "defeat_conditions": [
+    "Local clause generation still regularly invents meanings or fails basic idiomatic Korean: stronger linguistic realization model or language-specific grammar is necessary.",
+    "Natural readers prefer generic output after controlling semantic fidelity and format: no KRC advantage established.",
+    "Only sentence-splitting makes outputs look better while document discourse weakens: architecture not sufficient.",
+    "A longer prompt or a labeled source fallback explains any performance differences: need equal-token untyped planning and non-neural controls."
+  ],
+  "fresh_evaluation": {
+    "sources": "Newly authored, outcome-unseen Korean two-genre briefs; do not treat EX01-EX06 as new confirmatory data.",
+    "arms": [
+      "B identical checkpoint general writing",
+      "A surface-only bans",
+      "K KRC clause-local composer",
+      "U same-token-budget untyped local plan for structural attribution"
+    ],
+    "reader": "Blind paired preference and separate source factuality review. No LLM-as-judge quality gold.",
+    "anti_drift": "At most one mechanism step without a direct Korean full-passage linguistic finding."
+  },
+  "authority": "PROSPECTIVE_DESIGN_ONLY_NO_V02_OUTPUTS"
+}
