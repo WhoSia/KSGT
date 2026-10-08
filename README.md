@@ -1,15 +1,16 @@
 # KSGT
 
-Korean Stylistic Generation Theory studies meaning-preserving Korean realization, set-valued authority and truthful abstention.
+KSGT (Korean Stylistic Generation Theory) studies constrained Korean source realization and set-valued authority.
 
-## Current stage: G9-P52
-**Contextual Edit-Span Discovery, Evaluation-Disjoint Revision Evidence, Source-Grounded Proposal Competence & the First Non-Vacuous Fixed-Reservoir Governor Contrast.**
+## Current stage: G9-P53
+**Indexed Korean Edit-Span Addressing, Protocol–Competence Attribution, Fresh Holdout Reconstitution & a Recoverable Fixed Candidate Reservoir.**
 
-Entry: `CURRENT_STAGE.json`. Live constitution: `experiments/g9-p52/constitution.json`. Live state: `artifacts/g9_p52_current_state.json`.
+Read `CURRENT_STAGE.json`, `experiments/g9-p53/constitution.json` and `artifacts/g9_p53_current_state.json` before acting.
 
-G9-P51 closed after one frozen 24-item trial of a bounded lexical proposer, whose first candidate and all four candidates were unchanged on every item. This is an **instrument coverage failure**, not a KSGT governor or general Korean writing failure. See `artifacts/g9_p51_terminal_verdict.json`. P50 also closed enabling-only without PIA or trained SLM.
+G9-P52 **did run a real model**: pinned Qwen3-0.6B Q8 GGUF with C++ llama.cpp inference, 96 structured edit attempts across 24 original PIA items. C++ and data integrity succeeded, but free-form exact-quote span addressing yielded **0/24 valid primary edits**, with 43 invalid structures, 48 nonunique-or-missing spans, 3 whole-source attempts and 2 valid secondary edits. This is **a proposal interface failure**, not a negative verdict on KSGT governance. Human PIA and U/K were not executed. Its canonical terminal receipt is `artifacts/g9_p52_terminal_verdict.json`.
 
-## Research and archive policy
-Only active executable stage files and minimal terminal evidence belong on main. Old files are in verified Drive archives and Git historical commits; the authoritative historical map is `ARCHIVE_INDEX.json`. Git history was not force-rewritten. Preserved tokenizer sequences or other public corpora require independent rights review.
+## Research controls
+G9-P53 must freeze an indexed source segmentation and an explicit typed edit decoder **before** new outcome observation. The earlier P50/P51/P52 24-item packet is contaminated by repeated local adaptive design decisions and is historical regression only. A **fresh, independently selected, rights-reviewed** PIA and sound raw-candidate custody are prerequisites to new confirmatory governance claims; even a fresh packet cannot certify the opaque pretraining history of the reused model.
 
-No broad claims about semantic safety, human burden or writing improvement from format checks, source-copy proposals or learned scores. Never allow a governor to change the candidate pool used by the ungoverned arm. Prefer Polyglot capability discovery by actual technical bottleneck. CI is read-only; never author github-actions[bot] commits.
+## History and Git policy
+Retired executable trees are in verified Google Drive archives indexed by `ARCHIVE_INDEX.json` and retained in historical Git commits. No forced history rewrite. Current main holds only active-stage materials and small terminal receipts. CI is read-only, no github-actions[bot] commit authoring. Choose languages by their demonstrated technical bottleneck.

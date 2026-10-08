@@ -1,6 +1,6 @@
 {
   "schema": "ksgt.archive-index.v1",
-  "current_stage": "G9-P52",
+  "current_stage": "G9-P53",
   "research_operational_policy": "MAIN_WORKTREE_ONLY_CURRENT_STAGE__HISTORY_IN_DRIVE_NOTION_AND_GIT_OBJECTS",
   "full_pre_p51": {
     "description": "Verified byte-for-byte cold archive of the full 471-file pre-cleanup main tree",
@@ -45,12 +45,27 @@
     "github_actions_bot_commits": false,
     "model_training_artifact_11523419179": "SEPARATE_ACCESS_RETENTION_REVIEW_NOT_INCLUDED_IN_COLD_SOURCE_ARCHIVE",
     "p51_retired_files_removed_from_main": 7,
-    "p51_source_archive_verified": true
+    "p51_source_archive_verified": true,
+    "p52_retired_files": 8
   },
   "p52": {
-    "status": "OPEN_CONTEXTUAL_EDIT_SPAN_DISCOVERY",
-    "notion": "https://app.notion.com/p/3f3ef561cf928162ba16cc00637188a9",
-    "constitution": "experiments/g9-p52/constitution.json",
-    "current_state": "artifacts/g9_p52_current_state.json"
+    "status": "CLOSED_OPERATIONAL_MODEL_PASS_SPAN_INTERFACE_FAILURE_NO_GOVERNOR_INFERENCE",
+    "source_commit": "fe5e0cf4aac6b9a667abfdfff21df69d854fe6bd",
+    "source_file_count": 9,
+    "drive_file_id": "15ncJZyH3-ho0N9K_gstQwLMy8Q5oqfE4",
+    "drive_url": "https://drive.google.com/file/d/15ncJZyH3-ho0N9K_gstQwLMy8Q5oqfE4/view?usp=drivesdk",
+    "outer_zip_sha256": "fa44d3c560073b99a8cfa052d5b0ac816b43dd684cbd485d68694412ba627930",
+    "inner_zip_sha256": "5b04d0ae2f5cfdeae8d48030170ede72449e6d3b6409ec4b85aa9709228368c3",
+    "mismatches": 0,
+    "runtime_run_id": 37719544157,
+    "first_candidates_valid_changes": 0,
+    "any_valid_changes_items": 2,
+    "evidence": "artifacts/g9_p52_terminal_verdict.json"
+  },
+  "p53": {
+    "status": "OPEN_P53_INDEXED_KOREAN_SEGMENT_PROTOCOL_PRESEAL",
+    "constitution": "experiments/g9-p53/constitution.json",
+    "state": "artifacts/g9_p53_current_state.json",
+    "notion": "https://app.notion.com/p/3f3ef561cf928144aafec65a5556170c"
   }
 }
