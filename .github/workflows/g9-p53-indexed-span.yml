@@ -1,0 +1,110 @@
+name: G9-P53 Indexed Korean Edit-Span Regression
+
+on:
+  push:
+    paths:
+      - "experiments/g9-p53/indexed_span_preseal.json"
+      - "experiments/g9-p53/indexed_span.cjs"
+      - "experiments/g9-p53/tests/indexed_span.test.cjs"
+      - ".github/workflows/g9-p53-indexed-span.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  bounded-protocol-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run synthetic indexed-span invariants
+        run: node --test experiments/g9-p53/tests/indexed_span.test.cjs
+      - name: Build exact P52 C++ llama.cpp runtime
+        run: |
+          mkdir -p vendor-llama
+          git -C vendor-llama init -q
+          git -C vendor-llama remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C vendor-llama fetch -q --depth 1 origin 9c2e0e491a822adae1f0b1c831adb4160057d24f
+          git -C vendor-llama checkout -q FETCH_HEAD
+          test "$(git -C vendor-llama rev-parse HEAD)" = "9c2e0e491a822adae1f0b1c831adb4160057d24f"
+          cmake -S vendor-llama -B vendor-llama/build -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=ON -DLLAMA_CURL=OFF
+          cmake --build vendor-llama/build --config Release -j 4 --target llama-server
+      - name: Fetch verified unchanged Qwen3 model
+        run: |
+          python -m pip install -q 'huggingface_hub==0.36.0'
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          from huggingface_hub import hf_hub_download
+          revision="23749fefcc72300e3a2ad315e1317431b06b590a"
+          p=hf_hub_download(repo_id="Qwen/Qwen3-0.6B-GGUF",revision=revision,
+             filename="Qwen3-0.6B-Q8_0.gguf",local_dir="frozen-model")
+          h=hashlib.sha256()
+          with open(p,"rb") as f:
+            for chunk in iter(lambda:f.read(4*1024*1024),b""):h.update(chunk)
+          expected="9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031"
+          assert h.hexdigest()==expected,(h.hexdigest(),expected)
+          receipt={"model":"Qwen/Qwen3-0.6B-GGUF","revision":revision,"sha256":expected,
+                   "bytes":Path(p).stat().st_size,
+                   "runtime_commit":"9c2e0e491a822adae1f0b1c831adb4160057d24f"}
+          Path("model_integrity.json").write_text(json.dumps(receipt,indent=2)+"\n")
+          print(json.dumps(receipt))
+          PY
+      - name: Boot model and run synthetic transport
+        run: |
+          vendor-llama/build/bin/llama-server --model frozen-model/Qwen3-0.6B-Q8_0.gguf \
+            --alias local-frozen --host 127.0.0.1 --port 8912 --ctx-size 2048 \
+            --threads 4 --parallel 1 > /tmp/p53_llama_server.log 2>&1 &
+          echo $! > /tmp/p53_pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8912/health >/dev/null 2>&1; then break; fi
+            if ! kill -0 "$(cat /tmp/p53_pid)" 2>/dev/null; then echo "MODEL_SERVER_EXIT";exit 1;fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8912/health >/dev/null
+          node experiments/g9-p53/indexed_span.cjs smoke
+      - name: Fetch historical 24-item source packet as regression only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p ephemeral-regression
+          gh run download 37576195589 \
+            --repo "${{ github.repository }}" \
+            --name g9-p50-pia-source-packet \
+            --dir ephemeral-regression
+          test -f ephemeral-regression/p50_pia_source_packet.jsonl
+      - name: Execute bounded historical 24-by-4 indexed experiment
+        run: |
+          mkdir -p results
+          node experiments/g9-p53/indexed_span.cjs regression \
+            ephemeral-regression/p50_pia_source_packet.jsonl \
+            results/g9_p53_indexed_span_regression.json
+      - name: Check receipt authority and strip ephemeral inputs
+        run: |
+          node - <<'JS'
+          const fs=require("node:fs");
+          const r=JSON.parse(fs.readFileSync("results/g9_p53_indexed_span_regression.json"));
+          if(r.authority!=="HISTORICAL_REUSED_PACKET_ONLY_NO_FRESH_PIA" ||
+             r.items!==24||r.attempts!==96||r.PIA!=="NOT_EXECUTED" ||
+             r.governor!=="NOT_AUTHORIZED" ||r.per_item.length!==24)throw Error("AUTHORITY_OR_COUNT_MISMATCH");
+          for(const row of r.per_item){
+            if(row.attempts.length!==4||"source" in row||"text" in row||"candidate" in row)throw Error("RAW_TEXT_IN_RECEIPT");
+            for(const a of row.attempts)if("raw" in a||"text" in a||"candidate" in a)throw Error("RAW_CANDIDATE_IN_RECEIPT");
+          }
+          console.log(JSON.stringify({authority:r.authority,primary_changed:r.primary_changed,
+            any_changed:r.any_changed,statuses:r.attempt_statuses,PIA:r.PIA}));
+          JS
+          rm -rf ephemeral-regression frozen-model
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-historical-regression-opaque-receipt
+          path: |
+            model_integrity.json
+            results/g9_p53_indexed_span_regression.json
+          retention-days: 15
+          if-no-files-found: error
