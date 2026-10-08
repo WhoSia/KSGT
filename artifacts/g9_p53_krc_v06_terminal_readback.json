@@ -1,0 +1,107 @@
+{
+  "schema": "ksgt.g9.p53.krc.v06.terminal-readback.v1",
+  "stage": "G9-P53",
+  "substage": "KRC-v0.6",
+  "date": "2026-10-08",
+  "status": "CLOSED_BOUNDED_PARTITIVE_REFERENCE_MORPHOLOGY_AND_PRIVATE_CORPUS_AUDIT_PASS",
+  "scope": "Korean written discourse construction and data collection, not generic judge optimization or human naturalness certification",
+  "implementation": {
+    "constitution": "experiments/g9-p53/krc_v06/constitution.json",
+    "new_source_cases": "experiments/g9-p53/krc_v06/source_cases.json",
+    "realizer": "experiments/g9-p53/krc_v06/realizer.cjs",
+    "private_nikl_audit": "experiments/g9-p53/krc_v06/audit_nikl_2025.py",
+    "data_source_register": "experiments/g9-p53/krc_v06/DATA_SOURCE_REGISTER.json",
+    "formal_result": "experiments/g9-p53/krc_v06/FORMAL_RESULT.md",
+    "test_node": "experiments/g9-p53/krc_v06/tests/reference.test.cjs",
+    "test_python": "experiments/g9-p53/krc_v06/tests/test_nikl_2025.py"
+  },
+  "execution": {
+    "workflow": 37748138188,
+    "conclusion": "SUCCESS",
+    "node_tests": 10,
+    "node_passes": 10,
+    "python_synthetic_tests": 2,
+    "python_passes": 2,
+    "total_tests": 12,
+    "new_cases": 2,
+    "source_fact_events": 10,
+    "output_passages": 4,
+    "licensed_group_partitive_instances_composed": 2,
+    "conjunctive_links_composed": 2,
+    "human_ratings": 0,
+    "model_calls": 0,
+    "github_actions_artifact_id": 11537200783,
+    "artifact_zip_sha256": "486bd76cc036b90323069fb2e78048664dd43931de86004fc333860dc8fb7dc8",
+    "semantic_gate": "CARDINALITY_REFERENCE_TYPES_ONLY_NATURAL_LANGUAGE_ENTAILMENT_NOT_ESTABLISHED"
+  },
+  "observations": [
+    "An existential singleton selected from 2 cups has an identifiable source group but not a known individual physical identity.",
+    "The 'other cup' as complement of 1 chosen from 2 has cardinality 1 but still no physically identified member.",
+    "Selecting 1 from 3 books leaves 2 others; these are a set complement, not one unique book.",
+    "Two simultaneously accessible groups of the same Korean nominal kind make unqualified 그중 ambiguous and are rejected.",
+    "Finite-to-고 generation is restricted to source-attested small dictionary; no general Korean morphological model."
+  ],
+  "data_provenance": {
+    "old_legacy_research": "KSGT G9-P36-R10 NIKL ZA source and ontology census already exists: no false claim of first collection.",
+    "nikl2020": {
+      "drive_file_id": "1uJfzGphk2JpT2lg7kuuyUY2HpZyFVTix",
+      "sha256": "c8179e1bce2eaed22ae6d7afdf764034aac1e2ccdffe54b7f261ede2ad717610",
+      "annotated_subject_object_slots": 493333
+    },
+    "nikl2025": {
+      "drive_file_id": "1hnPT6CztaxtFukrM6uAMLHIFGgZmoDM2",
+      "sha256": "c0d65205de493dca86d98cef02cf1742844a3b9259caf0ec3dc7e48ddd62d05d",
+      "sentences": 30346,
+      "zero_anaphora_slots": 62831,
+      "multi_antecedent_slots": 11675,
+      "lexical_geujung_sentences": 25,
+      "zero_anaphora_slots_in_geujung_sentences": 45
+    },
+    "basis": "Original authenticated Drive archive analyzed in local runtime; corpus raw bytes not committed to public GitHub. 2025 ontology is not directly partitive coreference gold.",
+    "statistical_report": "/mnt/data/KSGT_G9P53_KRC_v06_NIKL2025_safe_census.json",
+    "private_data_limitations": "NIKL rights must be respected; not republished as training gold or open GitHub plaintext."
+  },
+  "external_sources": [
+    {
+      "name": "KoCoNovel",
+      "link": "https://github.com/storidient/KoCoNovel",
+      "status": "LINK_ONLY_LICENSE_CC_BY_SA_4"
+    },
+    {
+      "name": "GOLEMcoref",
+      "link": "https://github.com/GOLEM-lab/GOLEMcoref",
+      "status": "LINK_ONLY_CC_BY_NC_4_AND_THIRD_PARTY_STORY_RIGHTS"
+    },
+    {
+      "name": "UD_Korean_KSL",
+      "link": "https://github.com/UniversalDependencies/UD_Korean-KSL",
+      "status": "LINK_ONLY_CC_BY_SA_4_LEARNER_TEXTS"
+    },
+    {
+      "name": "KoSEnd",
+      "link": "https://github.com/seungukyu/KoSEnd",
+      "status": "LINK_ONLY_CORPUS_LICENSE_NOT_YET_ESTABLISHED"
+    },
+    {
+      "name": "NIKL officially requested corpora",
+      "link": "https://kli.korean.go.kr/corpus/main/requestMain.do?lang=en",
+      "status": "OFFICIAL_PORTAL_NOT_SILENTLY_DOWNLOADED"
+    }
+  ],
+  "custody": {
+    "drive_folder": "https://drive.google.com/drive/folders/12Q0LeK0n0HsuxQBfGyTuehULoBn70hs6",
+    "generated_passages_archive": "https://drive.google.com/file/d/1-4O90EgdN-SnoGVz1pbLhSOzIW0qWnTS/view",
+    "drive_uploaded_bytes_readback": 2006,
+    "drive_sha_equality_check": "NOT_PERFORMED"
+  },
+  "scientific_limits": [
+    "Controlled sources were authored by the assistant and not independent native-writing samples.",
+    "Zero-anaphora corpus annotates omitted arguments, not partitive anaphora antecedents.",
+    "Preserved internal source roles and counts do not prove natural prose quality.",
+    "External corpora discovery does not equal authorized raw data acquisition; imported original NIKL data already existed in user Drive.",
+    "Past KRC v0.1 human preference samples remain withdrawn as invalid."
+  ],
+  "next_stage": "KRC v0.7 prospective: sample independent naturally written Korean partitives with antecedent/group span labels and test competing candidate groups and discourse accessibility, optionally compare with public KoCoNovel/GOLEM only for annotated relations they actually carry.",
+  "human_readers": "HOLD_NO_VALID_SAMPLE",
+  "bot_authored_commits": "FORBIDDEN"
+}
