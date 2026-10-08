@@ -1,0 +1,66 @@
+name: G9-P53 KRC Post-Generation Linguistic and Reader Packet
+
+on:
+  push:
+    paths:
+      - ".github/workflows/g9-p53-krc-postrun.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  postrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Read frozen 18 outputs from specific completed execution
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p frozen-run
+          gh run download 37724158567 --repo "${{ github.repository }}" \
+            --name g9-p53-krc-v01-eighteen-controlled-korean-drafts --dir frozen-run
+          test -f frozen-run/results/krc_18_raw_drafts.json
+      - name: Validate blind human allocation on synthetic fixtures
+        run: node --test experiments/g9-p53/krc_v01/reader_tests/*.test.cjs
+      - name: Derive blind forms and independent Korean syntax observations
+        run: |
+          mkdir -p derived
+          node experiments/g9-p53/krc_v01/reader_forms.cjs \
+            frozen-run/results/krc_18_raw_drafts.json \
+            derived/krc_3_blind_reader_forms.json \
+            derived/krc_internal_unblinding_key.json
+          node experiments/g9-p53/krc_v01/syntax_observables.cjs \
+            frozen-run/results/krc_18_raw_drafts.json \
+            derived/krc_18_syntax_observables.json
+      - name: Verify source provenance and prohibit fabricated human rankings
+        run: |
+          node - <<'JS'
+          const fs=require("node:fs");
+          const a=JSON.parse(fs.readFileSync("derived/krc_3_blind_reader_forms.json"));
+          const b=JSON.parse(fs.readFileSync("derived/krc_18_syntax_observables.json"));
+          if(a.forms.length!==3||a.forms.some(f=>f.trials.length!==6))throw Error("BAD_BLIND_FORMS");
+          if(a.forms.flatMap(f=>f.trials).some(t=>t.left_arm||t.right_arm||
+            t.empty_response_schema.preference!==null))throw Error("BLINDNESS_FAILURE");
+          if(b.documents.length!==18||b.human_naturalness!=="NOT_OBSERVED"||b.authority!=="DESCRIPTIVE_HISTORICAL_KSGT_SYNTAX_ONLY")throw Error("UNLICENSED_OUTCOME");
+          console.log(JSON.stringify({forms:3,trials:18,observations:18,
+            reader_ratings:"NONE",semantic_truth:"NOT_ADJUDICATED"}));
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v01-blinded-reader-material-only
+          path: derived/krc_3_blind_reader_forms.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g9-p53-krc-v01-internal-key-and-syntax-observations
+          path: |
+            derived/krc_internal_unblinding_key.json
+            derived/krc_18_syntax_observables.json
+          retention-days: 30
