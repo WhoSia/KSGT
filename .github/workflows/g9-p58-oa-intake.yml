@@ -22,7 +22,7 @@ jobs:
           Briakou_et_al_2021_Review_of_Human_Evaluation_for_Style_Transfer.pdf	https://aclanthology.org/2021.gem-1.6.pdf	CC-BY-4.0
           Mir_et_al_2019_Evaluating_Style_Transfer_for_Text.pdf	https://aclanthology.org/N19-1049.pdf	CC-BY-4.0
           Mukherjee_et_al_2025_Evaluating_Text_Style_Transfer_Evaluation.pdf	https://aclanthology.org/2025.naacl-srw.41.pdf	CC-BY-4.0
-          Fellenz_et_al_2024_Text_Style_Transfer_Evaluation_Using_LLMs.pdf	https://aclanthology.org/2024.lrec-main.1373.pdf	CC-BY-4.0
+          Ostheimer_et_al_2024_Text_Style_Transfer_Evaluation_Using_LLMs.pdf	https://aclanthology.org/2024.lrec-main.1373.pdf	CC-BY-4.0
           EOF
           tail -n +2 papers/SOURCE_MANIFEST.tsv | while IFS=$'\t' read -r file url license; do
             curl --fail --location --retry 2 --connect-timeout 15 --max-time 120 \
