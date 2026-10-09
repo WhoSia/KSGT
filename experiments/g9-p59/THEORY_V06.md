@@ -496,3 +496,73 @@ For matched source passages \(s\), track \`A_s\` = independently witnessed factu
 
 ### F. Status and next gate
 **P59 §v1.2**: past Work-mode corpus analysis RECONCILED; CP5 manifest ACTUALLY INSPECTED; screenshot 13 ZIP names USER-VISIBLE ONLY; formal dataset adapter PROTOTYPE TESTED; original KoSEnd row schema / Korean GOLEM annotation sample / real writing preference **HOLD**. Next: verify raw sample schema under rights, inspect existing P53 saved source-output bundles without re-training, and assemble a document-disjoint minimal Korean revision test with author/writer-correctness witnesses. No friend's computer used.
+
+## P59 internal §v1.3 — Actual P53 output lineage, KoSEnd/GOLEM original rows, contamination graph and paragraph-edit ledger
+
+**Authority boundary:** This section remains in G9-P59. The requested G9-P54 number was already used and has [its own canonical historical Notion page](https://app.notion.com/p/3f3ef561cf9281ffbf94d12bc8785520): *Context-Grounded Reference Realization, Antecedent Evidence & Writer-Choice Boundaries*. P54 is not available for a new title. A subsequent new official stage should use **G9-P60**, without retroactively renaming or re-closing P54/P55/P56/P57/P58. No official stage promotion occurs merely by drafting a candidate title.
+
+### A. Original P53 documents audited, not reconstructed from anecdotes
+
+**Three original Google Drive ZIP files were actually read and SHA-256 checked in a separate Python container run:**
+- [Qwen3-4B six passage outputs](https://drive.google.com/file/d/1vDGd3R_32J9EwbSK_ZyuvOBMossq8wu4/view): ZIP SHA-256 \`e103185725bbc328dbb13ad90fafa83d9cc4089c8829ad1a78e211045e047d46\`. Six *model generations* under B_CLEAN/U_PLAIN_PLAN/K_TYPED_PLAN on source brief IDs \`EX09\` and \`EX10\`. Source hash in these records is **packet scoped**, not a per-source independent fact annotation. Human reader study previously cancelled.
+- [Qwen3-8B B-only](https://drive.google.com/file/d/1pqDMGMt8drbz0pG3LiXbGMudiXi9gGCb/view): ZIP SHA-256 \`57a7af352b9328f1ad5682e7fae3a893b5ef2948bfcc01e41437558ed0348951\`. Two B outputs on \`SCI01\`, \`NAR02\`; preflight instrument, no K comparison or native reader scores.
+- [Qwen3-14B B-only](https://drive.google.com/file/d/1o1iThI6yZ73fwKQvtO4fJ06MmwTBRVJR/view): ZIP SHA-256 \`aad15005ad97ec5b9211798d783efb49deca1646ab804ccc22f5e377d3a3ce72\`. Four B outputs: \`SCI02\`, \`NAR01\` as \`PRIMARY_UNEXPOSED_DEV\`; \`SCI01\`, \`NAR02\` explicitly recorded as \`EXPOSED_8B_CONTROL\`. The two exposed cases have *identical row source SHA-256 across 8B and 14B*; they are intentional cross-model repeat stimuli, not separate source texts.
+
+**Actual identity audit:** 12 different model-generated outputs, all 12 stored text hashes reproduced from bytes, *zero exact text duplicates*, **six unique source brief families**: \`EX09\` 3, \`EX10\` 3, \`SCI01\` 2, \`NAR02\` 2, \`SCI02\` 1, \`NAR01\` 1. These outputs are **not** 12 independently selected writing topics, **not 12 edits by humans**, and **not a qualified confirmatory test set**. The frozen metadata-only [P53 per-candidate ledger](../../artifacts/g9_p59_v13_p53_generation_ledger.json) records SHA/source-arm/cohort; it intentionally excludes raw paragraph text. [Offline re-auditor](./original_records_v13.py) can repeat the actual archive verification on authorized local copies.
+
+This directly tests a key distinction: \`ACTUAL_NEURAL_OUTPUTS\` does not entail \`INDEPENDENT_NATIVE_REVISION_GOLD\`.
+
+### B. Actual original KoSEnd JSON annotations, beyond paper/README description
+
+The connected GitHub API's ordinary \`fetch_file\` omits large file contents, but Git blob fetch by **exact SHA** succeeded. All three original files were parsed as JSON (UTF-8 BOM removed):
+- \`KoSEnd/easy.json\`: blob \`afec52a9d441b2d05e8cafd38e669f6c69538d98\`; 15,000 rows; 155 repeated sentence-option records;
+- \`KoSEnd/intermediate.json\`: blob \`36e548942213f0b8960dd3b906a707c8fe224d63\`; 15,000 rows; 2,737 repeated sentence-option records;
+- \`KoSEnd/hard.json\`: blob \`5cb1b2f9e744125b15496a291fe2114f8c2ac3ac\`; 15,000 rows; 2,336 repeated sentence-option records.
+
+**Exact five fields per original row:** \`usage_type\` (string), \`sentence_options\` (list), \`sentence_answer\` (list), \`usage_options\` (list), \`usage_answer\` (list). No \`annotator_id\`, \`human_gold\`, \`label_origin\` or \`humanEvidenceId\` field exists in the read rows. All **45,000 rows** share this field signature. Some valid answers are multi-choice arrays; an \`N\` token appears in **11,558 sentence_answer lists** (4,469 easy, 3,153 intermediate, 3,936 hard). **Two rows** have empty \`sentence_answer\` arrays (easy 1, hard 1). No answer letters were found outside each row's offered A/B/C/D option labels, allowing the sentinel \`N\`. \`N\` requires interpreting the upstream schema, not treating it as a normal answer-letter index or automatically human gold.
+
+There are also exact \`sentence_options\` repeats *between* difficulty files: easy/intermediate 555 intermediate rows, easy/hard 390 hard rows, intermediate/hard 390 hard rows (pairwise membership counts, **not** unique cross-file identities). Crucially, **this identity is at the option-list grain**. It is not evidence of duplicated source works at higher annotation grain; a stable source-family crosswalk is still needed.
+
+**Consequences:** Never random-split these 45k rows and call them independent human-rated prose. Construct a source/group graph from identical option lists, source text normalization **without erasing contrasts**, and any original source IDs available in ancillary records; split by connected component if contaminating source/group links are known. Preserve difficulty and both question types. Since row-level human versus LLM label origins are unobservable in the released JSON, all observed labels must have provenance \`MIXED_UNKNOWN_PER_ROW\`; there is **no inferable subset of independently human-labelled rows**. The literature's small human pilot exists in the paper but the released per-row mapping to it is unavailable here.
+
+### C. Actual original GOLEMcoref Korean CorefUD files
+
+The [original authors' repository](https://github.com/GOLEM-lab/GOLEMcoref) exposes \`data/gold_annotations/korean/conllu/{train,dev,test}.conllu\`, independently fetched from the GitHub blobs. The actual 10-column fields are \`ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC\`. Annotations in \`MISC\` include \`Entity=(e...) \`, continued multi-token mention spans and closure markers. The files also include \`# newdoc id\` boundaries and \`# global.Entity = eid\` headers.
+
+| Corpus split | Original Git blob SHA | Source works (\`# newdoc\`) | Syntactic token/empty-node rows | Rows with \`Entity=\` |
+|---|---|---:|---:|---:|
+| train | \`5076532c2f4b304867f3276f25c03b1b62d9fad6\` | 24 | 76,440 | 9,355 |
+| dev | \`cfc77ba3a8e9c4070e99fe2ac0e9f6e555405c67\` | 3 | 6,449 | 801 |
+| test | \`f73a4fdaac3977a53db6112dcdf1104fdc7723b8\` | 3 | 7,142 | 911 |
+
+The **90,031 token/empty-node rows**, **11,067 entity-tag-bearing rows**, and **30 source works** are original-file **format census statistics**. Entity-marked token rows are **not** a count of gold entities, coreference chains, or independent antecedent judgments. Original dataset documents are human annotated for character coreference, but those gold relations are **not** preferred writer realization or polished Korean prose. CorefUD and CoNLL-2012 views of one story remain one SourceWork and must not cross data partitions. Source fanfiction rights and CC BY-NC 4.0 noncommercial limits remain scoped license questions; raw fiction prose was NOT copied into KSGT GitHub.
+
+### D. Canonical paragraph-edit ledger: contrast without laundering authorship
+
+The unit of inference is a *SourceWork* \(s\), containing an authorized source-text version \(x_s\), frozen factual/epistemic/genre/writer constraints \((F,E,L,W)_s\), a known named failure \(d_s\), an original model candidate \(b_s\) (when stored), and revision candidate \(y_{s,a}\) indexed by action and model. Each version has a separate source SHA and surface SHA:
+\[
+\mathrm{EditRecord}=(s,\mathrm{version},\mathrm{arm},\mathrm{provenance},\mathrm{sourceHash},\mathrm{outputHash},\mathrm{witnesses}).
+\]
+Authority for source fidelity, actual repair, third-party comprehension and native preference are independent. An existing model output with no attributable human revision must have \`edit_kind=MODEL_DRAFT\`, \`human_revision_gold=false\`, and \`human_preference_gold=false\`. If a valid original-to-revision pair does not exist, mark \`PAIR_UNAVAILABLE\`; do not invent an AI-to-human before/after comparison.
+
+**Data-split construction:** build a contamination graph \(G=(V,E)\) over all candidate records with edges for same SourceWork, same original source SHA, exact option-list duplication, revision ancestry, CoNLL/CorefUD duplicate representations, or observed source/author family. Each **connected component**, not each generated paragraph, is assigned to only one evaluation split. False positive edges cost sample size; missing real edges leak training information. Report candidate n, source-work n, and component n separately.
+
+### E. Causal question only after semantic admission
+
+For candidate \(y\), first estimate noncompensatory admissibility \(\mathrm{Adm}(y\mid F,E,L,W)\), and distinguish **PASS / REJECT / HOLD** using independent evidence. For human-observed outcomes, let \(R(y,D)\) be correct referent recovery, \(U(y)\) the resolution of a preregistered defect, and \(P(y)\) blinded natural-Korean writing preference. There is no justified scalarizing away a **meaning violation** with high fluency.
+
+Given source-disjoint matched pairs, analyze \(R\), \(U\), \(P\) separately, cluster by source component, and report missing human outcomes and reject rates. For example, a proposed preference effect
+\[
+\tau_P=\mathbb E[P(Y_{\mathrm{plan}})-P(Y_{\mathrm{baseline}})\mid \mathrm{source\ supported},\mathrm{genre},\mathrm{reader\ context}]
+\]
+requires the matched interventions, *measured* human preferences, equal candidate budgets, reader assignment and no hidden source exposure. None is supplied by the original 12 P53 model texts or synthetic guard PASS.
+
+The scientific prize of the no-GPU phase is **measurement identification** and a properly reused source-disjoint native evaluation packet, not a larger synthetic leaderboard.
+
+### F. Existing P54 and suggested future official progression
+
+G9-P54's historical title and previous A1 witness-only results remain intact. P59 can continue internally through §§v1.4+ without a special closure ritual. If a **new** mainline official stage is desired after the current G9-P59, propose:
+
+**KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification**
+
+This is a **name proposal, not an opened stage**. It should not be registered as \`current_stage\` until the user accepts the new name and its empirical question; do not infer G9-P54 is vacant.
