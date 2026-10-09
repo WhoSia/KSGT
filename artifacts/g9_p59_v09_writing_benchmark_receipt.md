@@ -40,3 +40,8 @@ The cumulative [THEORY_V06.md §v0.9](../experiments/g9-p59/THEORY_V06.md) index
 4. For any neural claim, compare truly trained, information-matched Transformer, selective SSM, hybrid and entity-memory policies and measure all real memory/compute side channels.
 
 **P59 OPEN. P58 latest CLOSED. GitHub Actions read-only workflow committed; remotely successful run not confirmed by status endpoint.**
+
+## Independent quality-order guard (2026-10-09)
+- [evidence_order_v09.cjs](../experiments/g9-p59/evidence_order_v09.cjs), exact Git blob SHA-1 `47ec9f4b0248be427c09dde42ff83a2f297e195c`, locally reproduced in Node.js 22.16.0.
+- Real local output: `PASS`, interval examples=5, judge-order canaries=2. Robust coordinatewise partial dominance and demonstrable tradeoffs are distinguished from overlapping/missing evidence; reversing judge candidate order exposes a positional choice flip, but even a stable LLM judge is **NOT_IDENTIFIED** as human preference.
+- The first tradeoff example failed due to equality at a strict interval boundary. The fixture was repaired (`[0.5,1.5]` rather than `[1,2]`) and re-executed. No actual human score intervals were collected; test data are **mathematical canaries only**, not measurements.
