@@ -566,3 +566,6 @@ G9-P54's historical title and previous A1 witness-only results remain intact. P5
 **KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification**
 
 This is a **name proposal, not an opened stage**. It should not be registered as \`current_stage\` until the user accepts the new name and its empirical question; do not infer G9-P54 is vacant.
+
+### Postscript — G9-P60 officially opened (2026-10-09)
+The previously proposed G9-P60 name has now been **explicitly accepted** by the user and registered as the new mainline stage in [CURRENT_STAGE.json](../../CURRENT_STAGE.json) and [the official P60 research program](../g9-p60/RESEARCH_PROGRAM.md). Preserve this historical P59 theoretical record and its internal subsections; do not reinterpret the already existing G9-P54. P59's reference-choice, query-blind memory, P42/P53 F/E/L/W and source-honesty limits are operational constraints inherited by P60's independent paragraph-revision and writing-quality evaluation. The P60 opening does **not** prove a native Korean writing-quality gain and does not invoke a separate P59 termination ritual.
