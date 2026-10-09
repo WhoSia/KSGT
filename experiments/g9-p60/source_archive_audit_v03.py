@@ -16,7 +16,7 @@ EDIT_FILE = HERE / 'provisional_edits_v01.json'
 BRIEF_SHA = '722403f11ecdc621c8966e3285184a62e9a945a4263797c9ca107d4d7d948ead'
 ZIP_SHA = 'e103185725bbc328dbb13ad90fafa83d9cc4089c8829ad1a78e211045e047d46'
 BASE = 'a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596'
-LABEL = re.compile(r'자료\\s+\\d+에\\s+따르면,?\\s*')
+LABEL = re.compile(r'자료\s+\d+에\s+따르면,?\s*')
 
 def sha(data):
     return hashlib.sha256(data if isinstance(data, bytes) else data.encode('utf8')).hexdigest()
@@ -48,7 +48,7 @@ def archive_check(archive, edits):
     if len(docs) != 6 or len({(d['brief'], d['arm']) for d in docs}) != 6 or any(sha(d['output']) != d['text_sha256'] for d in docs):
         raise ValueError('ORIGINAL_OUTPUT_SHA_MISMATCH')
     full = next(d['output'] for d in docs if d['brief'] == 'EX09' and d['arm'] == 'K_TYPED_PLAN')
-    paragraph = full.split('\\n\\n')[0]
+    paragraph = full.split('\n\n')[0]
     if sha(full) != 'ec903a7fb499b7e53c16ddaa1491174e6651f8f2446af6460f268e0f06e712d2' or sha(paragraph) != BASE:
         raise ValueError('BASE_DRAFT_SHA_MISMATCH')
     if len(LABEL.findall(paragraph)) != 4:
