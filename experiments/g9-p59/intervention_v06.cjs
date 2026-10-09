@@ -55,8 +55,8 @@ function test() {
   assert.equal(targetAlignedOracle({a:0.2,b:0.8},'b',cost).choice,rHigh.choice);
   // Adding an impossible distractor does not change the aligned decision.
   assert.equal(targetAlignedOracle({a:0.8,b:0.2,c:0},'a',cost).choice,rHigh.choice);
-  const packet={source:'두 동아리가 발표회에 참가했다.',meaning:{targetId:'a',subsetCount:4},
-                candidates:{KEEP:'그중 4명은 발표했다.',EXPLICIT:'가 동아리 4명은 발표했다.'}};
+  const packet={source:'과학 동아리 학생 12명과 수학 동아리 학생 8명이 발표회에 참가했다.',meaning:{targetId:'a',subsetCount:4},
+                candidates:{KEEP:'그중 4명은 발표했다.',EXPLICIT:'과학 동아리 학생 12명 중 4명은 발표했다.'}};
   const h=interveneBelief(packet,pHigh),l=interveneBelief(packet,pLow);
   assert.ok(intendedMessageInvariant(h,l));
   assert.deepEqual(h.meaning,l.meaning);
