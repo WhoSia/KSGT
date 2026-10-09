@@ -91,3 +91,7 @@ Five frozen source facts and three protected uncertainties of **one historically
 
 
 **P60-P2 v04 native CI receipt (2026-10-10 KST):** [run 37976604421](https://github.com/WhoSia/KSGT/actions/runs/37976604421), job 113976380840, tested commit `6cea0f629559e679a208ef05d22f8cd622d44d0e`, completed `success`. Public source-claim and cross-language audits PASS. The runner does **not** possess the private P53 ZIP or independently human-rated Korean writing. Human meaning and preference both HOLD.
+
+### P60-P2 v05 — Two historically exposed sources and one-reader protocol (2026-10-10)
+
+[EX10 original-source expansion and eight-claim public contract](experiments/g9-p60/solo_ex09_ex10_ledger_v05.json) complements EX09; [source-relative two-world U2 non-entailment audit](experiments/g9-p60/solo_claim_court_v05.py) and [single-reader policy-masked protocol](experiments/g9-p60/solo_reader_protocol_v05.md) are now available. Both original briefs are in the same historical P53 batch, not a new independent holdout. A solo reader can produce bounded qualitative evidence; **no scores or independent human semantic rulings exist yet**, and lengths differ across policy arms. Public CI excludes all private candidate text and blind keys.

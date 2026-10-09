@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P60",
   "stage_type": "SOURCE_DISJOINT_KOREAN_REVISION_EVALUATION",
-  "status": "OPEN_P60_P2_V04_PUBLIC_CI_PASS_REAL_HUMAN_AND_INDEPENDENT_SEMANTICS_HOLD",
+  "status": "OPEN_P60_P2_V05_EX09_U2_LOGICAL_NONENTAILMENT_EX10_SOURCE_CASE_SOLO_READER_READY_REMOTE_CI_PENDING_HUMAN_HOLD",
   "canonical_notion_id": "3f4ef561-cf92-81b8-8111-d47fe9df0fac",
   "parent_stage": "G9-P59",
   "latest_closed_stage": "G9-P58",
@@ -116,7 +116,8 @@
     "p60_p1": "TWO_PROVISIONAL_SOURCE_LINKED_REVISIONS;TRANSITIVE_SPLIT_GUARDS;8_NEGATIVE_CONTROLS;SEMANTIC_AND_NATIVE_HUMAN_PREFERENCE_NOT_VERIFIED",
     "p60_p2": "EX09_FROZEN_AUTHORED_SOURCE_TWO_BOXES_PRIVATE_ARCHIVE_HASH_TWO_CANDIDATES_MATCH_COUNT_DRIFT_FAIL_HUMAN_HOLD",
     "p60_p2_python": "INDEPENDENT_STDLIB_ARCHIVE_AUDITOR_LOCAL_PRIVATE_ZIP_PASS_6_ADVERSARIAL_CONTROLS_PUBLIC_CI_METADATA_ONLY",
-    "p60_v04_claims": "EX09_8_CLAIMS_4_POLICIES_32_AUTHOR_ANNOTATED_CELLS_27_LOCAL_PRIVATE_SPAN_HASHES_ZERO_INDEPENDENT_SEMANTIC_OR_HUMAN_GOLD"
+    "p60_v04_claims": "EX09_8_CLAIMS_4_POLICIES_32_AUTHOR_ANNOTATED_CELLS_27_LOCAL_PRIVATE_SPAN_HASHES_ZERO_INDEPENDENT_SEMANTIC_OR_HUMAN_GOLD",
+    "p60_v05": "EX09_U2_TWO_SOURCE_CONSISTENT_MODELS_STRICT_EQUALITY_NOT_ENTAILED;EX10_EIGHT_CLAIMS_FOUR_REAL_POLICIES_SOLO_READER_MASKED_NOT_EXTERNAL_GOLD"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -146,8 +147,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "Only future voluntary blinded Korean reader ratings or new access permission; no immediate user action for P2 code/CI.",
-  "next_scientific_action": "P60-P2: obtain independent EX09 U2 epistemic adjudication, collect human blinded Korean reader preferences on matched four candidates, then design rights-reviewed source-disjoint fresh pool.",
+  "next_human_action": "Fill private 1st-pass style packet, seal it, then private 2nd-pass source-meaning packet. No friend recruitment needed.",
+  "next_scientific_action": "After policy-masked one-person style ratings and source-based EX09/EX10 meaning judgments are returned, seal responses and hashes prior to decoding; track N=1 and unequal lengths; seek genuinely independent source corpus after this pilot.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -167,7 +168,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "P60-P2_CLAIM_UNIT_V04",
+  "current_substage": "P60-P2_V05_SOLO_READER_PROTOCOL_AND_SECOND_HISTORICAL_SOURCE",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -460,6 +461,27 @@
         "tested_sha": "6cea0f629559e679a208ef05d22f8cd622d44d0e",
         "scope": "PUBLIC_NODE_AND_PYTHON_METADATA_ONLY_NO_PRIVATE_SOURCE"
       }
+    },
+    "p2_v05": {
+      "historicalSourceWorkCount": 2,
+      "originalHistoricallyExposedDocs": [
+        "P53_BRIEF:EX09",
+        "P53_BRIEF:EX10"
+      ],
+      "newAssistantAuthoredSourceWorks": 0,
+      "newExternallyIndependentHoldouts": 0,
+      "ex10SourceFacts": 5,
+      "ex10Uncertainties": 3,
+      "ex10MatchedPolicyCandidates": 4,
+      "ex09MatchedPolicyCandidates": 4,
+      "sourceRelativeNonEntailmentCountermodels": 2,
+      "humanReaderCount": 0,
+      "humanRatings": 0,
+      "independentHumanSemanticRulings": 0,
+      "soloReaderMaterials": "PRIVATE_MASKED_FIRST_PASS_THEN_SOURCE_SEMANTICS_SECOND_PASS",
+      "ethics": "SINGLE_PARTICIPANT_PROJECT_INVOLVED_NOT_FULLY_BLIND",
+      "lengthBudgetMatched": false,
+      "ci": "PENDING"
     }
   }
 }

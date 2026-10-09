@@ -32,6 +32,9 @@ jobs:
         run: |
           node experiments/g9-p60/claim_alignment_court_v04.cjs
           python3 experiments/g9-p60/private_claim_audit_v04.py --self-test
+      - name: P2 v05 EX09 U2 logical countermodels and EX10 source-disjointness audit
+        run: |
+          python3 experiments/g9-p60/solo_claim_court_v05.py --self-test
       - name: Verify ledger invariants without requiring private P53 source archives
         run: |
           node experiments/g9-p60/revision_evaluation_v01.cjs --emit-ledger > "$RUNNER_TEMP/p60-ledger.json"

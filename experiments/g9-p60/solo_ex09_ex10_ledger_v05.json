@@ -1,0 +1,153 @@
+{
+  "schema": "ksgt.p60.p2.solo-ex09-ex10-public-ledger.v05",
+  "stage": "G9-P60",
+  "internalSubstage": "P60-P2",
+  "sourceBriefSha256": "722403f11ecdc621c8966e3285184a62e9a945a4263797c9ca107d4d7d948ead",
+  "priorEX09Claims": 8,
+  "sourceUnits": [
+    "P53_BRIEF:EX09",
+    "P53_BRIEF:EX10"
+  ],
+  "sourcePairHistory": "BOTH_P53_SAME_FROZEN_AUTHOR_BRIEF_FILE_AND_MODEL_BATCH_NOT_FRESH_EXTERNAL_HOLDOUT",
+  "originalModel": "Qwen3-4B",
+  "policyProvenance": "NO_EDIT_REAL_P53_MODEL_DRAFT_OTHER_POLICIES_ASSISTANT_AUTHORED_POSTHOC",
+  "EX10BaseFullDraftSha256": "911e2a1db70d86001ac7c4c85892cf685c79772f2f8d23657df0bff96c80bbd1",
+  "EX10BaseKnownNonSourcePropositions": [
+    "IMPLIED_TIME_STOPPING_NARRATOR_FEELING",
+    "NARRATOR_STOPS_TEMPORARILY",
+    "EX10_ORIGINAL_OMITS_ROAD_CROSSING"
+  ],
+  "EX10SourceClaims": [
+    {
+      "id": "F1",
+      "kind": "FACT",
+      "sha256": "83aa85aaa07cef3008e0bf7b910a78daf77641688eb15f7a1d26fd36836091b1",
+      "pointer": "/briefs/1/facts/0"
+    },
+    {
+      "id": "F2",
+      "kind": "FACT",
+      "sha256": "b2d6292e0f1d7c3fb98333638b9eb8488b7277610924fd9708206ff6d55efec2",
+      "pointer": "/briefs/1/facts/1"
+    },
+    {
+      "id": "F3",
+      "kind": "FACT",
+      "sha256": "89789103400e798acdd5e10cef10ff1fad813093156336dac94b669dfcd39463",
+      "pointer": "/briefs/1/facts/2"
+    },
+    {
+      "id": "F4",
+      "kind": "FACT",
+      "sha256": "e806eabc8859ede378bf200493e536bdfcd881afa90c289506de10d00135d123",
+      "pointer": "/briefs/1/facts/3"
+    },
+    {
+      "id": "F5",
+      "kind": "FACT",
+      "sha256": "a3c986de05d9cc4a33a0d3f5079171eaff2dedcce5d84ef3967eeb40487b86f2",
+      "pointer": "/briefs/1/facts/4"
+    },
+    {
+      "id": "U1",
+      "kind": "UNCERTAINTY",
+      "sha256": "fc13a77367e0ae1ac7bdedd7b7600bceecbef74cdb2b9dfc715aec349627183e",
+      "pointer": "/briefs/1/uncertainties/0"
+    },
+    {
+      "id": "U2",
+      "kind": "UNCERTAINTY",
+      "sha256": "3cde429e93767693de45c91ba292ca261411defe87a68ec139db1f28d80df0c6",
+      "pointer": "/briefs/1/uncertainties/1"
+    },
+    {
+      "id": "U3",
+      "kind": "UNCERTAINTY",
+      "sha256": "dd81711d5243b95ef153006e76fbc0fd56533ad48689a8b65b0a210480d8c9f9",
+      "pointer": "/briefs/1/uncertainties/2"
+    }
+  ],
+  "EX10Policies": [
+    {
+      "policy": "NO_EDIT",
+      "sha256": "911e2a1db70d86001ac7c4c85892cf685c79772f2f8d23657df0bff96c80bbd1",
+      "lengthCodepoints": 206,
+      "sourceWork": "P53_BRIEF:EX10",
+      "origin": "REAL_P53_MODEL_DRAFT",
+      "independentMeaning": "NOT_OBSERVED",
+      "readerPreference": "NOT_OBSERVED"
+    },
+    {
+      "policy": "MINIMAL_REPAIR",
+      "sha256": "dfd7386e2087f8b1cc444e8bed5228a0034b6c0a98b5047d64a7017a12a50653",
+      "lengthCodepoints": 143,
+      "sourceWork": "P53_BRIEF:EX10",
+      "origin": "ASSISTANT_PROVISIONAL_EDIT",
+      "independentMeaning": "NOT_OBSERVED",
+      "readerPreference": "NOT_OBSERVED"
+    },
+    {
+      "policy": "ORDINARY_SMOOTH",
+      "sha256": "a9ad4188339601c1c3223b67a7bea10d764badf6c583d6c5f16586a1534cb0ee",
+      "lengthCodepoints": 121,
+      "sourceWork": "P53_BRIEF:EX10",
+      "origin": "ASSISTANT_PROVISIONAL_EDIT",
+      "independentMeaning": "NOT_OBSERVED",
+      "readerPreference": "NOT_OBSERVED"
+    },
+    {
+      "policy": "P59_DISCOURSE",
+      "sha256": "866c9fca3f36505e79379878db8ccc1c6a8e9d60e679fb128f33f24889de1007",
+      "lengthCodepoints": 145,
+      "sourceWork": "P53_BRIEF:EX10",
+      "origin": "ASSISTANT_PROVISIONAL_EDIT",
+      "independentMeaning": "NOT_OBSERVED",
+      "readerPreference": "NOT_OBSERVED"
+    }
+  ],
+  "EX09U2CountermodelContract": {
+    "proposition": "Equal box size + seed type + water entails equality of other initial conditions",
+    "entails": false,
+    "witnessModels": [
+      {
+        "id": "W_EQUAL_UNMEASURED",
+        "sizeEqual": true,
+        "seedTypeEqual": true,
+        "waterEqual": true,
+        "windowPlacementDifferent": true,
+        "sproutsMoreAtWindow": true,
+        "measuredLight": false,
+        "measuredTemp": false,
+        "soilEqual": true,
+        "actualTempEqual": true,
+        "actualLightEqual": true
+      },
+      {
+        "id": "W_UNEQUAL_UNMEASURED",
+        "sizeEqual": true,
+        "seedTypeEqual": true,
+        "waterEqual": true,
+        "windowPlacementDifferent": true,
+        "sproutsMoreAtWindow": true,
+        "measuredLight": false,
+        "measuredTemp": false,
+        "soilEqual": false,
+        "actualTempEqual": false,
+        "actualLightEqual": false
+      }
+    ],
+    "verdict": "STRICT_EQUALITY_NOT_ENTAILED_AMBIGUOUS_MODAL_EXPECTATION_HOLD",
+    "authority": "LOGICAL_COUNTERMODEL_NOT_INDEPENDENT_KOREAN_READER_GOLD"
+  },
+  "evaluation": {
+    "sourceComponents": 2,
+    "assistantProvisionalPolicyTexts": 6,
+    "humanReaders": 0,
+    "independentSemanticGold": 0,
+    "subjectiveHumanRatings": 0,
+    "prospectivelyFreshExternalSourceWorks": 0,
+    "blinding": "POLICY_NAME_MASKED_SINGLE_RESEARCH_PARTICIPANT_ALREADY_INVOLVED",
+    "charLengthConfound": true,
+    "labelsAndTextsPrivate": true
+  }
+}
