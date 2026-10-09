@@ -110,3 +110,13 @@ The symbolic history has one tagged anchor target, followed by 0, 1, 2, 4, 8, 16
 The test compares constant guessing (no memory), last-observation overwrite, target-tag gated storage, and rolling windows of 1, 4 or 33 event slots. With eight target IDs, a symbolic event slot is charged four payload bits (three ID bits plus a tag bit). Larger windows are therefore **not** matched-memory comparisons, and extra pointer/runtime state is not included in these lower-bound accounting figures.
 
 An initial draft leaked target identity into the distractor IDs. The implementation was corrected so distractors depend only on their positions, and an explicit independence regression was added.
+
+### C. Results and non-implications
+The actual local Node 22 test enumerated eight targets, three pre-anchor positions and seven post-anchor lengths: **168 symbolic histories**. Constant guess was correct 21/168; overwrite 42/168; one-slot window 24/168; gated target memory 168/168; four-slot window 72/168; 33-slot window 168/168. Overwrite's 18 additional successes beyond the zero-distractor cases are chance identity matches, not genuine reconstruction of the anchor.
+
+**Do not interpret this as a Transformer versus SSM result.** A Transformer receiving the same role tag can implement gating; a selective SSM can also preserve the target. The overwrite and window programs are deliberately impoverished analytic controls. A full-context attention model using 132 symbolic payload bits is not memory-matched to a gated model charged four bits. Runtime, clock state, pointer bits, KV-cache precision, learning budget and parameters remain unmeasured.
+
+### D. Fair neural competition contract
+Freeze source access, tokenization or controlled equivalent, target-label access, task instructions, train/validation/test corpus genealogy, context length, and selection criterion. Report activation/KV memory, recurrence-state bytes, model parameters, training/inference FLOPs and latency separately. Precommit interference schedules, unseen source families and native Korean meaning assessment. Contrast a real Transformer, a real selective state-space model, a matched hybrid and an explicit entity-memory variant. All arms must receive the same target-bearing evidence; an extra hand-coded anchor tag or belief vector cannot be privileged to one arm.
+
+**Disposition:** toy identity-capacity theorem and scripted nuisance invariance locally verified; neural architecture advantage, reader-state realism, natural Korean writing quality and human preference **HOLD**.
