@@ -177,3 +177,51 @@ Competing implementations should include (i) an actual attention-based network, 
 ### D. Evidence ceiling and path back to KSGT
 
 The theorem assumes two independent uniform discrete referents, a uniform delayed query, a finite discrete memory state, and exact-match retrieval loss. It does **not** prove a universal memory inequality for nonlinear real-valued neural networks, nonuniform source distributions, semantic similarity loss, natural Korean generation or actual human pragmatics. The four synthetic P59 v0.5 source families remain one shared construction template. P59 stays OPEN; no superiority or human-world contact claim is promoted.
+
+
+## P59 internal §v0.9 — From discourse-memory theory to a Korean writing-quality benchmark
+
+**This is an internal subsection of the existing G9-P59, not a new P-stage or a new official name.** The objective is high-quality Korean writing that helps readers understand intended meaning, not detector evasion or imitation of an alleged unique human style. No model, judge or human writer is claimed to be measured here.
+
+### 1. Return-to-origin bridge: what information theory does and does not prove
+
+Sections v0.7 and v0.8 established conditional information limits for query-blind finite-state referent recovery. They supply a **necessary information-preservation condition** only under their explicit no-side-channel assumptions. They do not imply:
+(1) that a referent-correct sentence is readable, pleasant, well paced or genre-appropriate;
+(2) that a Transformer cannot represent a discourse state;
+(3) that higher memory accuracy translates into better Korean prose; or
+(4) that the model's alleged reader-belief distribution is calibrated against actual readers.
+
+Let \(S\) be licensed source claims, \(M\) writer-intended propositional and referential content, \(D\) discourse history, \(G\) genre, \(W\) writer constraints, and \(Y\) the produced passage. A reader \(r\) extracts \(\hat M_r(Y,D)\). Define a **hypothetical** communication distortion:
+\[
+d_r(M,Y,D)=w_{\mathrm{ref}}\,\mathbf1[\hat R_r\ne R^\*]
++w_{\mathrm{prop}}\,d_{\mathrm{meaning}}(M,\hat M_r)
++w_{\mathrm{coh}}\,d_{\mathrm{discourse}}(D,Y).
+\]
+The weights and distortions are *not observed or identified*; this is a decomposition of future empirical targets, not an operational single quality score. Stylistic acceptability, redundancy, rhythm and genre are additional dimensions, not automatically functions of referent accuracy.
+
+### 2. Admissibility before aesthetic preference
+
+A source-grounded writing candidate may be **admitted for stylistic comparison** only when the following claims are supported by appropriate, independently admissible evidence:
+- source-derived facts are maintained, unsupported facts are not added;
+- required referents, quantities, polarity and causal/temporal relationships are preserved;
+- task-specific format/genre constraints are not violated.
+
+Write \(\mathcal A(S,M,G)\) for source-licensed candidates. If a necessary fact is missing, false or externally unverified, use FAIL or HOLD depending on what is actually established, **never force PASS**. Then judge a passage among admissible alternatives using a vector:
+\[
+\mathbf q(Y)=(\text{coherence},\text{reader comprehension},\text{Korean naturalness},
+\text{genre/register fit},\text{redundancy economy},\text{revision utility}).
+\]
+A candidate \(Y_1\) dominates \(Y_2\) only if it is not worse on every measured axis and better on at least one, **with the evidence available for those axes**. Incomparable passages and unknown human axes are allowed. No universal scalar "humanlikeness" is inferred.
+
+For paired writing revisions, the scientific estimand is conditional:
+\[
+\Delta_j=\mathbb E\big[q_j(Y_{\mathrm{revision}})-q_j(Y_{\mathrm{baseline}})
+\mid S,M,D,G,\ \mathrm{both\ admitted}\big].
+\]
+Unmeasured \(q_j\) cannot be imputed from a hard-constraint pass or from a generator-critic agreement. The sample unit is a source document or writer task, **not each paraphrase of the same scene**.
+
+### 3. Central falsifier: the correct but worse-writing counterexample
+
+The earlier v0.5 always-EXPLICIT policy obtained 32/32 *closed-template passes* and always-KEEP obtained only 16/32 due to referential ambiguity. This does not support 32/32 versus 16/32 on writing quality. Repeating fully specified nouns can be redundant; keeping an unresolved \`그중\` can confuse readers; a natural restructuring might outperform both.
+
+Thus **typed correctness is a gate or diagnostic, not a preference reward**. Optimizing the number of exact-template passes can incentivize repeated lexical material. Likewise, a fluid but false rewrite cannot win by superficial fluency. This is why KSGT must measure a *vector of writing capabilities* and independently validate any human-derived ordering.
