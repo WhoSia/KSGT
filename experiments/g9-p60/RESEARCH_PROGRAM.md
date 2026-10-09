@@ -150,3 +150,26 @@ The polished-but-fact-changed cell exposes failure of surface-only judging. **Th
 The JS P1 regression was executed in a V8 harness using the exact GitHub file bodies, original JSON ledger and explicit test stubs for Node built-ins; this **verifies logical regressions but is NOT a native Node/Actions execution receipt**. A separate Python stdlib validator checks the JSON source/parent/authority invariants when CI executes it. No private P53 archive was re-downloaded in this iteration. No new human gold, no true independent holdout, no friends' compute. Remote Actions workflow and exact Node PASS require an authentic CI/job receipt; workflow existence is not sufficient.
 
 **P60-P1 OPEN implementation; P60 remains official live stage; latest formally closed is G9-P58.**
+
+
+### 12. P60-P1 selection trap: source-safe quality is not the same estimand as quality among survivors
+
+The [native Node negative-control experiment](./selection_trap_v02.cjs) formalizes a common unfair Korean-writing leaderboard: filter out source-unfaithful paragraphs and compare the average style scores of whatever remains. Let \(A_{s,a}=1\) if arm \(a\)'s revision of source work \(s\) is independently admitted, and let \(q_{s,a}\in[0,1]\) be a separately measured quality only when that candidate is admitted. On a **fixed, predeclared** source-work set \(S\), distinguish
+\[
+Q_a^{\mathrm{conditional}}=
+  \frac{\sum_{s\in S}A_{s,a}q_{s,a}}{\sum_{s\in S}A_{s,a}}
+\quad\text{versus}\quad
+Q_a^{\mathrm{qualified}}=
+  \frac{1}{|S|}\sum_{s\in S}A_{s,a}q_{s,a}.
+\]
+The second quantity is a *qualified-success objective* by definition: a rejected candidate contributes zero qualified success, **not** a claim that the rejected prose had zero subjective style quality. The first quantity summarizes surviving outputs, **not** an all-source system ability ranking. Neither number should be reported without the eligibility denominator and the fraction HOLD.
+
+A constructed two-work proof-of-risk:
+- System A is admitted on both works, with artificial quality \(0.7,0.2\): \(Q_A^{conditional}=Q_A^{qualified}=0.45\).
+- System B is admitted only on the easy work, with artificial quality \(0.8\), and fails source admissibility on the other: \(Q_B^{conditional}=0.8\) but \(Q_B^{qualified}=0.4\).
+
+Thus the ranking reverses when the denominator is properly aligned with the scientific question. This is **a deliberately authored mathematical counterexample**, not actual Korean quality annotations, and it does not imply that qualified-success is the single correct measure for every deployment. The experiment also checks five invalid-quality/duplicate-work/missingness conditions. The Node 22 local execution **PASS** is reproducible with GitHub Git blob SHA-1 \`7789a1b68904b7c1318e03bd8e06927b131fbced\`.
+
+When an outcome is HOLD rather than an established FAIL, do not assign a made-up zero: instead report interval bounds for the qualified objective. If an arm has total verified qualified quality \(K_a\) on \(n\) source works, with \(u\) unresolved admissibility/quality outcomes each known only to lie in \([0,1]\), report \([K_a/n,(K_a+u)/n]\). Even with human annotations, any population inference must account for source-document clustering and how source works were sampled; this finite-item range is **not** a confidence interval.
+
+**Implementation conclusion:** report all three (i) source-admissibility rate, (ii) preference/naturalness conditional on matched admissible pairs and (iii) fixed-source qualified performance with HOLD bounds. Do not optimize (ii) alone; it can reward a style-polishing arm that drops hard inputs. In P60 today the true human \(q\) is entirely NOT_OBSERVED, so none of these empirical style metrics is estimable. The synthetic selection canary is only an evaluation-protocol refutation.
