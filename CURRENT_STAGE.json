@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P59",
   "stage_type": "HUMAN_REFERENCE_CHOICE_EXPERIMENTAL_DESIGN",
-  "status": "OPEN_G9_P59_V05_LOCAL_DATA_SPLIT_AND_COMPARATOR_PASS_REMOTE_CI_PENDING_HUMAN_CONTACT_HOLD",
+  "status": "OPEN_G9_P59_V06_TARGET_ALIGNED_TOY_LOCAL_PASS_ARCHITECTURE_AND_HUMAN_HOLD",
   "canonical_notion_id": "3f4ef561-cf92-8163-a7a8-c13d6481855e",
   "parent_stage": "G9-P58",
   "latest_closed_stage": "G9-P58",
