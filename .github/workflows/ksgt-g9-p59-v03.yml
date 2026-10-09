@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Contracts v0.3-v0.7
+name: KSGT G9-P59 Synthetic Contracts v0.3-v0.8
 on:
   workflow_dispatch:
   push:
@@ -39,3 +39,6 @@ jobs:
           node experiments/g9-p59/memory_v07.cjs
           node experiments/g9-p59/memory_v07.cjs --emit-histories | python3 experiments/g9-p59/memory_audit_v07.py
           node experiments/g9-p59/delayed_query_v07.cjs
+      - name: P59 internal v0.8 exact delayed-query rate-distortion bound
+        run: |
+          node experiments/g9-p59/rate_distortion_v08.cjs
