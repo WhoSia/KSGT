@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Contracts v0.3-v1.1
+name: KSGT G9-P59 Synthetic Contracts v0.3-v1.2
 on:
   workflow_dispatch:
   push:
@@ -53,3 +53,6 @@ jobs:
         run: |
           node experiments/g9-p59/corpus_contract_v11.cjs
           node experiments/g9-p59/corpus_contract_v11.cjs --emit-metadata | python3 experiments/g9-p59/corpus_audit_v11.py
+      - name: P59 internal v1.2 synthetic annotation and F-E-L-W paragraph-revision guard
+        run: |
+          python3 experiments/g9-p59/annotation_revision_v12.py
