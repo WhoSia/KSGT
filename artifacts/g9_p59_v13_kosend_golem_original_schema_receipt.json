@@ -1,0 +1,128 @@
+{
+  "schema": "ksgt.p59.v13.original-annotation-receipt",
+  "audit": "GITHUB_BLOB_ORIGINAL_CONTENT_PARSED",
+  "date": "2026-10-09",
+  "kosend": {
+    "repo": "seungukyu/KoSEnd",
+    "filePath": "KoSEnd/{split}.json",
+    "fields": [
+      "usage_type",
+      "sentence_options",
+      "sentence_answer",
+      "usage_options",
+      "usage_answer"
+    ],
+    "files": [
+      {
+        "split": "easy",
+        "sha": "afec52a9d441b2d05e8cafd38e669f6c69538d98",
+        "rows": 15000,
+        "repeat": 155,
+        "N": 4469,
+        "empty": 1,
+        "usageN": 4827
+      },
+      {
+        "split": "intermediate",
+        "sha": "36e548942213f0b8960dd3b906a707c8fe224d63",
+        "rows": 15000,
+        "repeat": 2737,
+        "N": 3153,
+        "empty": 0,
+        "usageN": 3334
+      },
+      {
+        "split": "hard",
+        "sha": "5cb1b2f9e744125b15496a291fe2114f8c2ac3ac",
+        "rows": 15000,
+        "repeat": 2336,
+        "N": 3936,
+        "empty": 1,
+        "usageN": 4343
+      }
+    ],
+    "observedAnswerModes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "N",
+      "multi-select",
+      "empty-list"
+    ],
+    "crossDifficultySentenceOptionMembership": [
+      {
+        "pair": "easy/intermediate",
+        "rows": 555
+      },
+      {
+        "pair": "easy/hard",
+        "rows": 390
+      },
+      {
+        "pair": "intermediate/hard",
+        "rows": 390
+      }
+    ],
+    "rowLevelAnnotatorEvidence": "NOT_PRESENT",
+    "humanGoldPromotion": "PROHIBITED",
+    "originalSemanticTask": "MIXED_SENTENCE_AND_USAGE_OPTION_CHOICE_NOT_NATIVE_PROSE_PREFERENCE",
+    "noOutOfOptionAnswersObserved": true
+  },
+  "golem": {
+    "repo": "GOLEM-lab/GOLEMcoref",
+    "filePath": "data/gold_annotations/korean/conllu/{split}.conllu",
+    "columns": [
+      "ID",
+      "FORM",
+      "LEMMA",
+      "UPOS",
+      "XPOS",
+      "FEATS",
+      "HEAD",
+      "DEPREL",
+      "DEPS",
+      "MISC"
+    ],
+    "sourceWorkSplitRespect": "train=24,dev=3,test=3",
+    "files": [
+      {
+        "split": "train",
+        "sha": "5076532c2f4b304867f3276f25c03b1b62d9fad6",
+        "documents": 24,
+        "tokenRows": 76440,
+        "emptyNodes": 39,
+        "entityTaggedRows": 9355,
+        "splitAnteRows": 170
+      },
+      {
+        "split": "dev",
+        "sha": "cfc77ba3a8e9c4070e99fe2ac0e9f6e555405c67",
+        "documents": 3,
+        "tokenRows": 6449,
+        "emptyNodes": 0,
+        "entityTaggedRows": 801,
+        "splitAnteRows": 27
+      },
+      {
+        "split": "test",
+        "sha": "f73a4fdaac3977a53db6112dcdf1104fdc7723b8",
+        "documents": 3,
+        "tokenRows": 7142,
+        "emptyNodes": 0,
+        "entityTaggedRows": 911,
+        "splitAnteRows": 19
+      }
+    ],
+    "license": "CC BY-NC 4.0 repository (underlying fiction-source rights require separate review)",
+    "coreferenceChainsCounted": false,
+    "writerPreferenceObserved": false,
+    "fullRawTextRepublished": false
+  },
+  "status": {
+    "syntaxCensus": "ACTUAL_ORIGINAL_BLOBS_VERIFIED",
+    "independentNaturalnessGold": "NOT_OBSERVED",
+    "splitLeakage": "KOSEND_REPEATS_PRESENT_GUARD_REQUIRED",
+    "llmModelBenchmarks": "NOT_EXECUTED"
+  }
+}
