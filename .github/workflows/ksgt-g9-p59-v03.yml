@@ -1,0 +1,23 @@
+name: KSGT G9-P59 Synthetic Pipeline v0.3
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'experiments/g9-p59/**'
+      - '.github/workflows/ksgt-g9-p59-v03.yml'
+permissions:
+  contents: read
+jobs:
+  synthetic-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run reproducible contract tests
+        run: |
+          node experiments/g9-p59/reader_choice_probe.cjs > /dev/null
+          node experiments/g9-p59/reader_state_v02.cjs > /dev/null
+          node experiments/g9-p59/pipeline_v03.cjs
