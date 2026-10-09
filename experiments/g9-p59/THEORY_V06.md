@@ -447,3 +447,52 @@ The cheapest scientifically useful order is:
 - **Verified now:** Original NIKL ZIP's Drive metadata, prior P53 census artifact, GOLEM repository split CSV's Korean story counts (24/3/3), GoLEM repository's CC BY-NC 4.0 license text, public KoSEnd filenames and previous paper-described mixed annotation design.
 - **Not verified:** \`C:\\KSGT\` current local dataset bytes/tree; individual KoSEnd JSON schema and license; GOLEM rights for each fanfiction story; raw GOLEM/NIKL sample reprocessing; any measured Korean prose preference or neural model advantage.
 - **Evidence level:** READ-ONLY_SOURCE_INSPECTION + LOCAL_SYNTHETIC_METADATA_CONTRACT_TEST. P59 OPEN / official P58 latest CLOSED.
+
+## P59 internal §v1.2 — Past-work recovery, annotation-schema gates & useful paragraph revision
+
+**One subsection of the existing G9-P59; no new official stage or independent research title.** The current user's screenshot shows thirteen ZIP files under \`C:\KSGT\`, including yearly Korean newspaper packages from 2020–2025, merged newspaper CSV/JSON and written-language CSV/JSON. These are reported *file-presence visual evidence*, not a fresh byte/hash or internal schema inspection. ZIP package, original source work, format variant and document are different identity levels.
+
+### A. Reopen the actual earlier KSGT lineage before new data collection
+[KSGT 14.md archive](https://drive.google.com/file/d/12f5QO-qfbUjq5uOxq7KsTLtQUPeHAc8p/view) records P45 Work-mode/Chat handoffs that **already streamed thirteen NIKL ZIPs**. The [actual Drive CP5 multipart manifest](https://drive.google.com/file/d/1yBMfcJvDvXs_XSTzvkcyjN-wRbYKuMhY/view) was read again: schema \`ksgt.g9.p45.cp5.document-stats-multipart.v1\`, **12,352,778 rows**, **ten parts**, 857,083,889 compressed bytes, SHA-256 \`9f9baa781c56241de1b1b84cac2bed6080f12c71350d6bda1d30cd4100a0aa76\`, \`raw_text_present=false\`. The prior \`RAW_CORPUS_RETIREMENT\` was restricted to *already encoded CP5 variables*: no further raw reread needed for those same analyses, original ZIPs retained unchanged. CP5's EDF/publisher/topic statistics are NOT paragraphs, source-edit pairs, source identities or human writing-preference gold. Existing per-archive hashes must be reused rather than recomputed unless a new scientific question needs new features and access is lawful.
+
+[KSGT 17.md archive](https://drive.google.com/file/d/1xY3vO7uHkZjzg2GZ4zdAJ73Q-slqhX5B/view) and [P53 canonical note](https://app.notion.com/p/3f3ef561cf928144aafec65a5556170c) show earlier **actual Qwen3 model writing experiments** and a structured genre-generation contract \`F/E/L/W\`: protected facts (F), epistemic status of each claim (E), genre-dependent invention license (L), writer intention (W). P53's B/U/K experiment recorded source-fact contradictions, unsupported time claims and source-label leakage into natural prose. These are important *historical model failure observations*, not newly generated P59 samples, native writer judgments or a fair large-model architectural advantage. KSGT already had Write/Edit/Judge axes and a Korean Human Revision Atlas proposal; do not present them as new inventions.
+
+G9-P22/23's selective edit method and [P42 Harvest](https://app.notion.com/p/3eaef561cf92814bbbefef4ad7f9f091) identified collateral edits and uniform-polish flattening risk. The earlier PPG guard can **detect** damage but has no authority to invent roughness or stylized noise. This is the correct ancestor of the v1.2 editor-critic, rather than ad-hoc de-AI phrase deletion.
+
+### B. A precise barrier: aggregate corpus statistics cannot adjudicate local edits
+
+Let \`T(X)\` denote the existing CP5 feature extractor from source passage \`X\`, and \`R(X)\` an edit-critical property (truth preservation, local antecedent recoverability, connective licensing). If \`T(x_1)=T(x_2)\` but \`R(x_1)\ne R(x_2)\`, then no function \`g(T(X))\` can correctly decide \`R\` for both passages. It receives identical sufficient-statistic inputs for two required different answers. This elementary **task-specific non-sufficiency witness** is not a critique of CP5's original diachronic goals; it forbids claiming that its counts encode unavailable passage-level semantics. Re-read selected raw documents only if a new P59 property can demonstrably not be derived from the sealed CP5 tables, source access is authorized, and read cost/rights are controlled.
+
+CSV/JSON variants and merged/yearly packaging cannot be independent confirmation without **SourceWork/SourceEdition** crosswalks and content hashes. The 2021 CSV↔JSON two-character discrepancy in the archive is a reason to keep both original formats until representation-level reconciliation, not evidence that two text samples are independent.
+
+### C. Actual annotation-format access: a conservative verdict
+
+- [GOLEMcoref README](https://github.com/GOLEM-lab/GOLEMcoref) describes Korean CoNLL and CorefUD CoNLL-U forms; the [official split CSV](https://github.com/GOLEM-lab/GOLEMcoref/blob/main/data/splits/splits.csv) confirms **24 train / 3 dev / 3 test Korean source stories**, shared between representation views, with repository CC BY-NC 4.0 and underlying story-rights caveats. Standard CoNLL-U uses ten tab-separated fields. **No actual annotated Korean token sample was ingested in this run; a ten-column parser is syntax-only until real schema/label review.**
+- [KoSEnd](https://github.com/seungukyu/KoSEnd) releases \`easy.json\`, \`intermediate.json\`, \`hard.json\`. The browser lists \`easy.json\` as **7.32 MB** and declines preview; the connected GitHub API returned an empty body. Hence **actual JSON field names, per-row label provenance and raw reuse conditions remain HOLD**. A supposed parser must accept an audited field mapping, not guess \`humanGold=true\`.
+- NIKL Zero-Anaphora P53 restoration slots are not partitive-antecedent or writer preference labels. KoGEM grammar and KoSEnd ending selection are valuable separate diagnostics but not multi-paragraph writing-quality gold.
+
+The executable [v1.2 inspect-only adapter](./annotation_revision_v12.py) can scan local ZIP central directories *without extracting text*, validate synthetic ten-column CoNLL-U syntax, hold KoSEnd rows until fields/provenance are mapped, and enforce evidence-backed F/E/L/W revision gates. Its self-tests use only tiny **fabricated** ZIP/syntax/witness examples, never real dataset observations.
+
+### D. Repair the right defect while preserving meaning
+
+For source paragraph \`x\`, candidate revision \`y\), genre \`g\`, discourse \`D\), and writer authority \`W=(F,E,L,I)\` define admissible revisions
+\[
+{\cal A}(x,W,D)=\{y : \operatorname{PreserveFacts}(F,x,y)\wedge\operatorname{PreserveEpistemic}(E,x,y)\wedge\operatorname{AuthorizedAdditions}(L,x,y)\wedge\operatorname{RespectIntent}(I,D,y)\}.
+\]
+A field marked **independentWitness** records an external *claim about* those constraints; the checker does not magically validate real Korean entailment. Unknown witness gives HOLD. A negative independent witness gives REJECT. A complete witness gives \`WITNESSED_GATE_ONLY\`, *not* a naturalness PASS.
+
+Among actually admissible candidates, a future human-calibrated policy may minimize
+\[
+\arg\min_{y\in{\cal A}}\quad
+\mathbb E_{r}[\ell_{\rm comprehension}(y,D_r)]
++\lambda\ell_{\rm collateral}(x,y;W)+\mu\ell_{\rm edit\,burden}(x,y),
+\]
+while retaining \`NO_EDIT\` when the alleged flaw is unverified. These weights, losses and reader distribution are **not identified from current data**. More edit distance is not automatically better revision, and fewer words need not be more natural. Different genres authorize different creativity: a grounded report cannot invent facts that might be acceptable fictional details in a story. In the presence of a P53-like contradiction, lexical polish cannot compensate for violation of a protected fact.
+
+**Critical experimental falsifier:** on the same facts, audience and candidate budget, compare historical B/U/K prompts, a minimal-edit baseline and a discourse-planning alternative. Ask both *whether the named defect was repaired* and *whether other constraints were harmed*. Log rejection, HOLD, conditional human preference and source-family denominators separately; if source-aware ordinary editing equals proposed explicit-memory planning on independent Korean comprehension and source-grounded preference, the claimed architecture-specific writing advantage fails.
+
+### E. Cheap but honest human-comparison estimands
+For matched source passages \(s\), track \`A_s\` = independently witnessed factual admissibility, \`R_s\` = reader referent recovery, \`D_s\` = independently verified repair of a stated problem, and \`P_s\` = blinded native-Korean writing preference. The vector \((A,R,D,P)\) has *four distinct authority sources*; none can be filled with synthetic program PASS. A paired mean \(\sum_s(P_{after}-P_{before})/n\) is descriptive until experimental assumptions are justified, must cluster repeated variants by source work and must not conceal differential candidate HOLD or REJECT rates. Work with the existing P45/53 artifacts first; obtain new independent human labels only when permitted and necessary.
+
+### F. Status and next gate
+**P59 §v1.2**: past Work-mode corpus analysis RECONCILED; CP5 manifest ACTUALLY INSPECTED; screenshot 13 ZIP names USER-VISIBLE ONLY; formal dataset adapter PROTOTYPE TESTED; original KoSEnd row schema / Korean GOLEM annotation sample / real writing preference **HOLD**. Next: verify raw sample schema under rights, inspect existing P53 saved source-output bundles without re-training, and assemble a document-disjoint minimal Korean revision test with author/writer-correctness witnesses. No friend's computer used.
