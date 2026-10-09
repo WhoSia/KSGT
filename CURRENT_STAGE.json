@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P60",
   "stage_type": "SOURCE_DISJOINT_KOREAN_REVISION_EVALUATION",
-  "status": "OPEN_P60_REAL_P53_OUTPUT_HASHES_12_COMPONENTS_6_PARAGRAPHS_22_ACTUAL_REVISIONS_0_HUMAN_PREFERENCE_HOLD",
+  "status": "OPEN_P60_P1_SOURCE_DISJOINT_REVISION_EVIDENCE_COURT_PROXY_TEST_PASS_REMOTE_CI_PENDING_HUMAN_HOLD",
   "canonical_notion_id": "3f4ef561-cf92-81b8-8111-d47fe9df0fac",
   "parent_stage": "G9-P59",
   "latest_closed_stage": "G9-P58",
@@ -106,13 +106,14 @@
     "p59_v13_original_source_audit": "P53_12_OF_12_OUTPUT_SHA_VERIFIED;6_SOURCE_BRIEFS;KOSEND_45K_JSON_ROWS_GOLEM_30_KOREAN_STORIES",
     "p59_v13_human_prose": "NONE;ZERO_ORIGINAL_HUMAN_REVISION_PAIRS",
     "p59_v13_ci": "WORKFLOW_EDIT_UNAPPLIED_REMOTE_RUN_NOT_VERIFIED",
-    "p60": "TITLE_PROPOSAL_ONLY_NO_STAGE_OPEN",
+    "p60": "OFFICIALLY_OPEN_P60_P1_SOURCE_LEDGER_AND_EVIDENCE_GATE_ENGINEERING_ONLY",
     "p60_source_hash": "THREE_DRIVE_ARCHIVES_LOCAL_OUTPUT_SHA12_OF12_PASS",
     "p60_split": "SIX_P53_BRIEF_COMPONENTS_RETROSPECTIVE_ONLY_NOT_UNSEEN",
     "p60_paragraphs": "22_HASHED_ORIGINAL_DRAFT_PARAGRAPHS_ZERO_VERIFIED_REVISIONS",
     "p60_quality": "SOURCE_FACT_AND_SURFACE_PROXY_ORTHOGONAL_TOY_ONLY_HUMAN_NOT_OBSERVED",
-    "p60_ci": "WORKFLOW_COMMITTED_REMOTE_RUN_NOT_CONFIRMED",
-    "p60_provisional_edit_candidate_status": "TWO_REAL_P53_ANCHORED_ASSISTANT_EDITS_EX09_P1_ONE_COUNT_DRIFT_CONTROL_SEMANTICS_AND_HUMAN_HOLD"
+    "p60_ci": "READ_ONLY_WORKFLOW_UPDATED_REMOTE_SUCCESS_NOT_CONFIRMED",
+    "p60_provisional_edit_candidate_status": "TWO_REAL_P53_ANCHORED_ASSISTANT_EDITS_EX09_P1_ONE_COUNT_DRIFT_CONTROL_SEMANTICS_AND_HUMAN_HOLD",
+    "p60_p1": "TWO_PROVISIONAL_SOURCE_LINKED_REVISIONS;TRANSITIVE_SPLIT_GUARDS;8_NEGATIVE_CONTROLS;SEMANTIC_AND_NATIVE_HUMAN_PREFERENCE_NOT_VERIFIED"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -401,7 +402,7 @@
       "P58",
       "P59"
     ],
-    "current_subsection": "P60-P0",
+    "current_subsection": "P60-P1",
     "source_components": 6,
     "original_model_outputs": 12,
     "paragraph_metadata": 22,
@@ -414,6 +415,15 @@
     "human_preference_annotations": 0,
     "verified_revision_pairs": 0,
     "provisional_assistant_edits": 2,
-    "validated_semantic_edits": 0
+    "validated_semantic_edits": 0,
+    "p1_evidence_court": {
+      "transitive_source_split_guard": "IMPLEMENTED",
+      "independent_python_receipt": "COMMITTED_LOCAL_NATIVE_EXECUTION_NOT_YET_CONFIRMED",
+      "actual_revisions": 0,
+      "provisional_assistant_edits": 2,
+      "independent_human_preference": 0,
+      "human_evidence_status": "NONE",
+      "genuinely_fresh_holdout": false
+    }
   }
 }
