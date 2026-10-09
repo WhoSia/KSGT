@@ -32,7 +32,6 @@ function run(n=N){
  });
  return results;
 }
-function exhaustive(n,k){if(n>12||k>n)throw Error("SCOPE");let best=0;for(let e=0;e<k**n;e++){let v=e,s=new Set();for(let i=0;i<n;i++){s.add(v%k);v=Math.floor(v/k)}best=Math.max(best,s.size/n)}return best}
 function exhaustive(n,k){
  if(n>10||n<2||k<1||k>n)throw Error("ENUMERATION_SCOPE");
  let best=0;
