@@ -5,9 +5,9 @@ function bound(n,m){if(n<2||m<0||!Number.isInteger(n)||!Number.isInteger(m))thro
 function history(target,before,after,n=N){
  if(target<0||target>=n)throw Error("TARGET");
  const events=[];
- for(let i=0;i<before;i++)events.push({id:(target+1+i%(n-1))%n,tag:0});
+ for(let i=0;i<before;i++)events.push({id:(i+1)%n,tag:0});
  events.push({id:target,tag:1});
- for(let i=0;i<after;i++)events.push({id:(target+1+(i+before)%(n-1))%n,tag:0});
+ for(let i=0;i<after;i++)events.push({id:(i+before+1)%n,tag:0});
  return {target,events,before,after,query:"recover tagged group; target not provided in query"};
 }
 function read(h,method,window=1){
@@ -36,7 +36,7 @@ function exhaustive(n,k){if(n>12||k>n)throw Error("SCOPE");let best=0;for(let e=
 function test(){
  const r=run(),by=Object.fromEntries(r.map(x=>[x.policy,x]));
  assert.equal(by.gated.correct,168);
- assert.equal(by.overwrite.correct,24);
+ assert.equal(by.overwrite.correct,42);
  assert.equal(by.window1.correct,24);
  assert.equal(by.window4.correct,72);
  assert.equal(by.window33.correct,168);
@@ -46,6 +46,8 @@ function test(){
  assert.ok(by.window33.budgetBits>by.gated.budgetBits);
  assert.equal(bound(8,2),.5);assert.equal(bound(8,3),1);
  assert.equal(exhaustive(5,2),.4);
+ const decoys=h=>h.events.filter(x=>!x.tag).map(x=>x.id);
+ assert.deepEqual(decoys(history(0,2,8)),decoys(history(1,2,8)),"TARGET_LEAK_IN_NOISE");
  assert.deepEqual(run(),r);
  console.log(JSON.stringify({test:"PASS",subsection:"P59/v0.7",histories:168,boundN8M2:bound(8,2),policyFixtures:r,authority:"SYNTHETIC_SYMBOLIC_ONLY_NOT_NEURAL_MODELS"}));
 }
