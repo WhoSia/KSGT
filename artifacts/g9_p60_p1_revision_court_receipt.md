@@ -28,3 +28,15 @@ Proposed future target for every genuinely independent source work is the joint 
 Do not present the original draft alternatives B/U/K as human-edited before/after pairs. No group-level comparison with six retrospective, previously exposed sources can establish native Korean public preference. First collect source-rights-verified new documents *and a factual/epistemic witness*, then compare `NO_EDIT`, minimal source-aware edit, ordinary polish and P59 discourse-state guided edit with same source/compute constraints and blinded reader judgments. Measure source admissibility and conditional reader preference **separately**, including undecided outcomes and source-document cluster effects.
 
 **Disposition:** P60 P1 IMPLEMENTATION + LOCAL LOGIC TEST PASS; GITHUB REMOTE CI/HUMAN CALIBRATION/REAL REPAIR SUCCESS HOLD. G9-P58 remains last formally closed research stage; G9-P59 is inherited without cosmetic closure.
+
+## Additional actual native-Node regression: survivor-selection reversal
+
+The [standalone P1 selection canary](../experiments/g9-p60/selection_trap_v02.cjs) was written in the container and **actually run under Node.js v22.16.0**. Output: `test=PASS`, `negativeControls=5`, two fabricated independent source works, zero Korean human writing observations. GitHub file blob SHA-1 `7789a1b68904b7c1318e03bd8e06927b131fbced` matched exactly the local file SHA-1 after commit.
+
+On fabricated `easy` and `hard` sources:
+- Arm A: both eligible; invented qualified style values 0.7 and 0.2 -> conditional 0.45 and fixed-source qualified 0.45.
+- Arm B: only easy eligible; invented quality 0.8 -> conditional 0.8 but fixed-source qualified 0.4.
+- Thus conditioning on each arm's survivors can reverse an apparent winner relative to a fixed-source qualified-success objective; `FAIL` does **not** mean a subjective style score of zero, only zero *qualified success* by definition. HOLD outcomes are bounded, not silently set to zero.
+- The source-work duplication, rejected-quality injection, HOLD-quality injection, out-of-range score and empty-universe negative controls were rejected in actual Node.
+
+This is a **mathematical evaluation diagnostic** and is not evidence that any actual Korean paragraph was preferred or factually admitted. The read-only P60 workflow includes this additional native Node step but remote CI completion still requires a run receipt.
