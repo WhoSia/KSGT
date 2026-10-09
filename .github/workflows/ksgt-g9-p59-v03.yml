@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Contracts v0.3-v0.5
+name: KSGT G9-P59 Synthetic Contracts v0.3-v0.6
 on:
   workflow_dispatch:
   push:
@@ -30,3 +30,7 @@ jobs:
           node experiments/g9-p59/dataset_v05.cjs
           node experiments/g9-p59/model_compare_v05.cjs
           node experiments/g9-p59/dataset_v05.cjs --emit | python3 experiments/g9-p59/leakage_audit_v05.py
+      - name: V0.6 belief-state counterfactual invariance and theory oracle
+        run: |
+          node experiments/g9-p59/intervention_v06.cjs
+          node experiments/g9-p59/intervention_bridge_v06.cjs
