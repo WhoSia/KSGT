@@ -371,3 +371,79 @@ The original authors' public repository READMEs were independently consulted:
 - [WritingBench](https://github.com/X-PLUG/WritingBench): public queries/criteria, critic and generator infrastructure; model-specific judge scores remain method-level observations, not Korean-reader labels.
 
 **Resource-constrained choice:** calibrate specific Korean phenomenon-level critics against properly licensed original labels, and separately calibrate preference/acceptability on whatever native Korean paired writing becomes available. A single overall score calibrated on KoGEM grammar MCQs, KoSEnd mostly-LLM ending annotations and GOLEM human coreference would mix incompatible constructs, rather than solve the under-resourced evaluation problem.
+
+
+## P59 internal §v1.1 — Corpus federation, label provenance and discourse-conditioned writing outcomes
+
+**Single-stage rule:** §v1.1 is an internal subsection of G9-P59, not a new research stage or a standalone formal name. All downstream stages remain unchanged; P59 stays OPEN. No friend's server, local Windows files, or third-party raw corpus was accessed or modified in this subsection.
+
+### A. Recovering an existing local-data lineage without pretending to read a local disk
+
+An earlier user's *G9-P53* research audit, \`KSGT_G9P53_KRC_v06_NIKL2025_safe_census.json\`, identifies the original Drive archive [NIKL_ZA_2025_v1.0.zip](https://drive.google.com/file/d/1hnPT6CztaxtFukrM6uAMLHIFGgZmoDM2/view). The archive's Drive metadata was verified to exist. The **prior audit**, not fresh reprocessing, reports:
+- \`NXZA2502512313.json\`: 1,027 documents, 13,907 sentences, 37,960 zero-argument/ellipsis slots, 9,059 multi-antecedent slots, nine \`그중\` sentences.
+- \`SXZA2502512312.json\`: 75 documents, 16,439 sentences, 24,871 slots, 2,616 multi-antecedent slots, 16 \`그중\` sentences.
+- Combined: 1,102 documents, 30,346 sentences, 62,831 slots, 11,675 multi-antecedent slots and 25 sentences with \`그중\` (from a previous lexical audit).
+
+**Measurement separation:** The NIKL task is restoration of omitted sentence arguments; neither a multi-antecedent slot nor a lexical occurrence of \`그중\` certifies an independently annotated partitive antecedent or preferred KEEP/EXPLICIT realization. The G9-P53 census contains no original source text, and the present executor cannot inspect the user's \`C:\\KSGT\` disk; local file presence, byte-hash identity and Windows folder structure therefore remain *USER_REPORTED / UNVERIFIED*. The earlier \`ksgt-corpus\` plan also names Korean literature, permitted criticism/columns, scientific reporting, parallel translations, explicit writing-failure cases and minimal contrast pairs. Those are candidate data *families*, not a currently inspected inventory or license grant. A historical "Shadow Corpus" concept permits statistics and failure-type analysis under appropriate rights, not copying unlicensed entire passages or using them as fine-tuning gold.
+
+### B. Inspecting actual released dataset structures
+
+The public [KoSEnd repository](https://github.com/seungukyu/KoSEnd/tree/main/KoSEnd) lists three files \`easy.json\`, \`intermediate.json\`, \`hard.json\`; its author paper reports 3,000 Korean sentences × 15 ending candidates. The connected GitHub file API returned file hashes but **empty body content for these large JSON files**, so sample-level schema, license and human-vs-LLM annotation markers were **not** verified. Do not infer that all three files are independently human-labeled. The original paper's human-pilot/LLM-remainder caveat remains controlling.
+
+The public [GOLEMcoref repository](https://github.com/GOLEM-lab/GOLEMcoref) contains human-curated Korean fiction coreference in \`data/gold_annotations/korean\` with distinct CoNLL-2012 and CorefUD representations. [The original split CSV](https://github.com/GOLEM-lab/GOLEMcoref/blob/main/data/splits/splits.csv) was read: 30 Korean stories, split **24 train / 3 dev / 3 test**. CorefUD zero-anaphora/inclusion relation is a different representation of the *same* work, not a second independent sample. Its repository \`LICENSE\` and README declare **CC BY-NC 4.0**; since the corpus includes stories sourced from publishing/fanfiction platforms, rights for source material, derivatives and redistribution still need a separate scoped check, even if private noncommercial analysis is permitted under applicable terms. No GOLEM corpus bytes were imported.
+
+### C. Four distinct validation constructs, not a synthetic single quality label
+
+Treat these as different measured quantities:
+1. \(q_{\mathrm{ellipsis}}\): argument omission/restoration success (NIKL);
+2. \(q_{\mathrm{coref}}\): referent identity, chain consistency and long-range recovery (GOLEMcoref);
+3. \(q_{\mathrm{ending}}\): sentence-ending fit, with explicit human/LLM label provenance (KoSEnd);
+4. \(q_{\mathrm{writing}}\): actual native-Korean author/reader judgments on a source-preserving revision or generated paragraph (**currently unobserved**).
+
+KoGEM MCQ can add grammar-knowledge diagnostics; English ParaReval can teach *annotation format* for revision correctness, acceptability and human preference, but supplies **no Korean writer preference observation**. There is no identified universal function
+\[
+q_{\mathrm{writing}}=f(q_{\mathrm{ellipsis}},q_{\mathrm{coref}},q_{\mathrm{ending}},q_{\mathrm{grammar}})
+\]
+without independently validated linking evidence. Two candidate writing systems may match every separate component score while reversing actual human prose preference. Thus the components are potential mediators and diagnostics, not a surrogate leaderboard.
+
+### D. Interaction estimand: when does explicit reference actually help?
+
+Freeze source work \(S\), intended referent and proposition \(M\), writer genre \(G\), and allowed candidate content. Cross two writer realization policies \(A\in\{\mathrm{KEEP},\mathrm{EXPLICIT}\}\) with two **assigned reader-information conditions** \(C\in\{\mathrm{clear},\mathrm{competing}\}\). The intended target must be invariant across the crossing. Define \(p_{a,c}\) as the *independently measured* probability that a reader selects the intended referent after receiving candidate \(a\) under condition \(c\). A useful interaction is
+\[
+\Delta_{\mathrm{ref}}
+=(p_{E,\mathrm{competing}}-p_{K,\mathrm{competing}})
+-(p_{E,\mathrm{clear}}-p_{K,\mathrm{clear}}).
+\]
+
+**Hypothesis, not finding:** if overt reference is most useful when antecedents compete, \(\Delta_{\mathrm{ref}}>0\). This contrast distinguishes *context-sensitive clarification* from a blanket preference for verbosity. It is not a universal preference theorem: successful reference recovery can coexist with unwanted repetition or stylistic awkwardness. Collect a separate, blinded \(p_{\mathrm{preferred}}\) or genre-adjusted reader-comfort outcome among candidates that preserve source meaning.
+
+Without randomized context assignments, stable reader instructions, no target leaks and a genuine human comprehension outcome, \(\Delta_{\mathrm{ref}}\) is descriptive at best. Under the current synthetic v0.5 cases it is **NOT_OBSERVED**. A toy demonstration with \((p_{K,clear},p_{E,clear},p_{K,competing},p_{E,competing})=(.9,.9,.5,.85)\) gives \(\Delta=.35\) by arithmetic only; **these numbers are invented program canaries, not user or reader data**.
+
+The 2×2 factorial structure also allows RESTRUCTURE as a third action, separate from explicitness, when enough admissible native Korean passages become available.
+
+### E. A rigorous boundary on mixed-label calibration
+
+For a fixed, finite diagnostic sample of \(n\) cases, suppose \(h\) decisions are confirmed correct against *actual independently witnessed human labels*, \(e\) confirmed incorrect, and \(u\) have no adequate witness, with \(h+e+u=n\). The true population-of-these-n accuracy is only partially identified:
+\[
+\boxed{h/n\ \le A\ \le(h+u)/n.}
+\]
+This is a sharp logical identification interval if all unknown cases might be right or wrong. **It is not a sampling confidence interval or an estimate of Korean population agreement.** If no case has inspectable independent-human labels, the bound is [0,1] and the quality claim is uninformative. To narrow it requires legitimate new annotation or independently calibrated error information. A KoSEnd pilot selected by difficulty and not randomly representative cannot silently calibrate the whole LLM-labeled remainder.
+
+Likewise, original dataset release, rights, raw-file custody, label task type and human annotation source are distinct authorities. The corresponding executable [v1.1 Node metadata contract](./corpus_contract_v11.cjs) and [independent Python audit](./corpus_audit_v11.py) enforce these boundaries. They validate authored metadata fixtures and known release/split counts, **not the unseen raw corpus**.
+
+### F. Low-resource research and eventually a fair writing benchmark
+
+The cheapest scientifically useful order is:
+1. Keep a registry with immutable ContentBlob SHA-256, SourceWork, SourceEdition, AssetRecord (semantic role/provenance) and AssetLocation (Windows/Drive/HDD reference). A path alone is not content identity; separate file versions and author/work duplication.
+2. Stage *only* metadata and license receipts first. For each actual dataset, inspect a small, rights-compliant sample, original annotations and available label provenance. Preserve public GOLEM work-level train/dev/test grouping across both CoNLL/CorefUD views.
+3. Calibrate phenomenon-specific critics against genuine annotations: NIKL ellipsis, GOLEM coreference, KoSEnd ending naturalness stratified by verified human/LLM label source. Report unknown provenance separately, and never transfer a zero-anaphora or coreference label to partitive-writing-choice gold.
+4. Use minimal source-preserving KEEP/EXPLICIT/RESTRUCTURE candidates across actual different source documents, not near-duplicates of one authored template. Sample independent human readers only when available, with assigned knowledge and randomized candidate order. Distinguish target recovery, factual conservation and writing preference in the analysis.
+5. Compare a simple lexical or current-LLM baseline, source-aware editor and proposed discourse-state architecture on the same tasks and input permissions. Do not spend a large GPU budget until the simple baselines and proxy-vs-human validity checks uncover a real discriminating failure mode.
+6. If next week's friend server is granted: use a user-authorized HDD-only private work area; no SSD-heavy staging, no global software changes, no access to others' files, and yield to the RITHM compute priority. Dataset ingest must remain explicitly permissioned and separate from GPU work.
+
+**Falsification:** If a source-aware baseline performs as well as the explicit-state model on matched native Korean comprehension *and* source-admissible writing preference, the distinctive architectural claim fails, regardless of synthetic memory-bottleneck proofs. Conversely, even a critic with perfect source-fact rule scores cannot demonstrate preferred Korean prose without a human validity anchor.
+
+### G. Status after §v1.1
+- **Verified now:** Original NIKL ZIP's Drive metadata, prior P53 census artifact, GOLEM repository split CSV's Korean story counts (24/3/3), GoLEM repository's CC BY-NC 4.0 license text, public KoSEnd filenames and previous paper-described mixed annotation design.
+- **Not verified:** \`C:\\KSGT\` current local dataset bytes/tree; individual KoSEnd JSON schema and license; GOLEM rights for each fanfiction story; raw GOLEM/NIKL sample reprocessing; any measured Korean prose preference or neural model advantage.
+- **Evidence level:** READ-ONLY_SOURCE_INSPECTION + LOCAL_SYNTHETIC_METADATA_CONTRACT_TEST. P59 OPEN / official P58 latest CLOSED.
