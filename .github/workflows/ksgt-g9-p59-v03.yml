@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Pipeline v0.3
+name: KSGT G9-P59 Synthetic Contracts v0.3-v0.4
 on:
   workflow_dispatch:
   push:
@@ -21,3 +21,7 @@ jobs:
           node experiments/g9-p59/reader_choice_probe.cjs > /dev/null
           node experiments/g9-p59/reader_state_v02.cjs > /dev/null
           node experiments/g9-p59/pipeline_v03.cjs
+      - name: Typed reference critic and cross-language SQLite leakage audit
+        run: |
+          node experiments/g9-p59/semantic_critic_v04.cjs
+          node experiments/g9-p59/semantic_critic_v04.cjs --emit-dataset | python3 experiments/g9-p59/split_audit_v04.py
