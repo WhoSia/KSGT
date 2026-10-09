@@ -33,6 +33,22 @@ function run(n=N){
  return results;
 }
 function exhaustive(n,k){if(n>12||k>n)throw Error("SCOPE");let best=0;for(let e=0;e<k**n;e++){let v=e,s=new Set();for(let i=0;i<n;i++){s.add(v%k);v=Math.floor(v/k)}best=Math.max(best,s.size/n)}return best}
+function exhaustive(n,k){
+ if(n>10||n<2||k<1||k>n)throw Error("ENUMERATION_SCOPE");
+ let best=0;
+ for(let enc=0;enc<k**n;enc++){
+  let x=enc,codes=new Set();
+  for(let j=0;j<n;j++){codes.add(x%k);x=Math.floor(x/k)}
+  best=Math.max(best,codes.size/n);
+ }
+ return best;
+}
+function histories(){
+ const out=[];
+ for(let target=0;target<N;target++)for(const before of P)for(const after of D)
+  out.push(history(target,before,after));
+ return out;
+}
 function test(){
  const r=run(),by=Object.fromEntries(r.map(x=>[x.policy,x]));
  assert.equal(by.gated.correct,168);
@@ -45,11 +61,12 @@ function test(){
  assert.equal(by.gated.budgetBits,by.window1.budgetBits);
  assert.ok(by.window33.budgetBits>by.gated.budgetBits);
  assert.equal(bound(8,2),.5);assert.equal(bound(8,3),1);
+ assert.equal(exhaustive(5,2),bound(5,1));
  assert.equal(exhaustive(5,2),.4);
  const decoys=h=>h.events.filter(x=>!x.tag).map(x=>x.id);
  assert.deepEqual(decoys(history(0,2,8)),decoys(history(1,2,8)),"TARGET_LEAK_IN_NOISE");
  assert.deepEqual(run(),r);
  console.log(JSON.stringify({test:"PASS",subsection:"P59/v0.7",histories:168,boundN8M2:bound(8,2),policyFixtures:r,authority:"SYNTHETIC_SYMBOLIC_ONLY_NOT_NEURAL_MODELS"}));
 }
-if(require.main===module)test();
-module.exports={bound,history,read,bits,run,exhaustive,test};
+if(require.main===module){if(process.argv.includes("--emit-histories"))console.log(JSON.stringify({schema:"ksgt.p59.symbolic-histories.v07",histories:histories(),authority:"SYNTHETIC_ONLY"}));else test()}
+module.exports={bound,history,read,bits,run,exhaustive,histories,test};
