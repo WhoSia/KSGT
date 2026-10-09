@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Contracts v0.3-v0.9
+name: KSGT G9-P59 Synthetic Contracts v0.3-v1.0
 on:
   workflow_dispatch:
   push:
@@ -46,3 +46,6 @@ jobs:
         run: |
           node experiments/g9-p59/writing_benchmark_v09.cjs
           node experiments/g9-p59/evidence_order_v09.cjs
+      - name: P59 internal v1.0 original-paper annotation and rights authority audit
+        run: |
+          node experiments/g9-p59/literature_authority_v10.cjs
