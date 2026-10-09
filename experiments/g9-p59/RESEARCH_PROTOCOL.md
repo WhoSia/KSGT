@@ -38,3 +38,8 @@ Two genres (report/narrative) x unique/competing antecedent. [reader_choice_prob
 ## P59 current ruling
 BOUNDED IMPLEMENTATION PRESENT / EMPIRICAL IDENTIFICATION HOLD.
 Only transition to HUMAN_CONTACT_PASS after traceable consented Korean reader/writer observations and source-licensed matched items exist.
+
+## 2026-10-09 v0.2 counterbalanced fixture upgrade
+[reader_state_v02.cjs](./reader_state_v02.cjs) adds eight authored cells = 2 source targets x 2 group orderings x 2 reader-knowledge briefings. Full group facts, numeric cardinalities and the target expression remain stable within each full/limited briefing pair. This removes the earlier unique-group versus two-group *source-facts* imbalance inside those pairs. It does **not** by itself causally identify a reader-knowledge mechanism: briefings differ lexically and the limited condition admits unresolved reference. Authored target IDs are not independently recovered gold. A future preregistration must control briefing length/lexical effects and distinguish source-grounded intended target from reader-inferred referent.
+
+No training or server use authorized until after RITHM and owner availability, currently tentatively next week. Offline code development, synthetic tests and CI read-only computation are permitted. Borrowed host must not be touched beforehand; future host uses confirmed HDD-only work directory, not /home/sean/coding/oozoon, which was found to be on SSD.
