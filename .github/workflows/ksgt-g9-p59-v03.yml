@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Contracts v0.3-v0.4
+name: KSGT G9-P59 Synthetic Contracts v0.3-v0.5
 on:
   workflow_dispatch:
   push:
@@ -25,3 +25,8 @@ jobs:
         run: |
           node experiments/g9-p59/semantic_critic_v04.cjs
           node experiments/g9-p59/semantic_critic_v04.cjs --emit-dataset | python3 experiments/g9-p59/split_audit_v04.py
+      - name: V0.5 family split, same-packet models and independent SQLite audit
+        run: |
+          node experiments/g9-p59/dataset_v05.cjs
+          node experiments/g9-p59/model_compare_v05.cjs
+          node experiments/g9-p59/dataset_v05.cjs --emit | python3 experiments/g9-p59/leakage_audit_v05.py
