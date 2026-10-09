@@ -60,6 +60,7 @@ def audit_kosend(path):
         repeat+=key in seen;seen.add(key)
         none+="N" in r["sentence_answer"]
         empty+=not r["sentence_answer"]
+    if bad: raise ValueError("KOSEND_ANSWER_OUTSIDE_OPTIONS")
     return {"authority":"ANNOTATION_SCHEMA_READ_NO_HUMAN_WITNESS",
       "rows":len(doc),"fields":sorted(KOSEND_FIELDS),"optionRepeatRows":repeat,
       "sentenceNoCandidateN":none,"sentenceEmptyAnswers":empty,
@@ -95,7 +96,7 @@ def self_test():
         assert x["optionRepeatRows"]==1 and x["sentenceNoCandidateN"]==2
         p.write_text(json.dumps([dict(sample,sentence_answer=["B"])]))
         try: audit_kosend(p)
-        except ValueError as e: assert str(e)=="KOSEND_REAL_SCHEMA_MISMATCH" or str(e)=="KOSEND_LIST_EXPECTED" or not e
+        except ValueError as e: assert str(e)=="KOSEND_ANSWER_OUTSIDE_OPTIONS"
         else: raise AssertionError("BAD_ANSWER_ACCEPTED")
         q=root/"test.conllu";q.write_text("# newdoc id = synthetic\n1\t형태\t형태\tNOUN\t_\t_\t0\troot\t_\tEntity=(e1)\n")
         y=audit_golem(q)
