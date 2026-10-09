@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P60",
   "stage_type": "SOURCE_DISJOINT_KOREAN_REVISION_EVALUATION",
-  "status": "OPEN_P60_P1_SOURCE_DISJOINT_REVISION_EVIDENCE_COURT_PROXY_TEST_PASS_REMOTE_CI_PENDING_HUMAN_HOLD",
+  "status": "OPEN_P60_P2_FROZEN_SOURCE_BRIEF_COUNT_CONTRADICTION_LOCAL_BYTE_AUDIT_PASS_REMOTE_P2_CI_PENDING_HUMAN_HOLD",
   "canonical_notion_id": "3f4ef561-cf92-81b8-8111-d47fe9df0fac",
   "parent_stage": "G9-P59",
   "latest_closed_stage": "G9-P58",
@@ -106,14 +106,15 @@
     "p59_v13_original_source_audit": "P53_12_OF_12_OUTPUT_SHA_VERIFIED;6_SOURCE_BRIEFS;KOSEND_45K_JSON_ROWS_GOLEM_30_KOREAN_STORIES",
     "p59_v13_human_prose": "NONE;ZERO_ORIGINAL_HUMAN_REVISION_PAIRS",
     "p59_v13_ci": "WORKFLOW_EDIT_UNAPPLIED_REMOTE_RUN_NOT_VERIFIED",
-    "p60": "OFFICIALLY_OPEN_P60_P1_SOURCE_LEDGER_AND_EVIDENCE_GATE_ENGINEERING_ONLY",
+    "p60": "OFFICIALLY_OPEN_P60_P2_SOURCE_BRIEF_FACT_WITNESS_AND_FOUR_POLICY_METADATA_ENGINEERING",
     "p60_source_hash": "THREE_DRIVE_ARCHIVES_LOCAL_OUTPUT_SHA12_OF12_PASS",
     "p60_split": "SIX_P53_BRIEF_COMPONENTS_RETROSPECTIVE_ONLY_NOT_UNSEEN",
     "p60_paragraphs": "22_HASHED_ORIGINAL_DRAFT_PARAGRAPHS_ZERO_VERIFIED_REVISIONS",
     "p60_quality": "SOURCE_FACT_AND_SURFACE_PROXY_ORTHOGONAL_TOY_ONLY_HUMAN_NOT_OBSERVED",
-    "p60_ci": "READ_ONLY_WORKFLOW_UPDATED_REMOTE_SUCCESS_NOT_CONFIRMED",
+    "p60_ci": "P1_REMOTE_CI_SUCCESS_RUN_37945220158_COMMIT_aa875115_P2_CI_PENDING",
     "p60_provisional_edit_candidate_status": "TWO_REAL_P53_ANCHORED_ASSISTANT_EDITS_EX09_P1_ONE_COUNT_DRIFT_CONTROL_SEMANTICS_AND_HUMAN_HOLD",
-    "p60_p1": "TWO_PROVISIONAL_SOURCE_LINKED_REVISIONS;TRANSITIVE_SPLIT_GUARDS;8_NEGATIVE_CONTROLS;SEMANTIC_AND_NATIVE_HUMAN_PREFERENCE_NOT_VERIFIED"
+    "p60_p1": "TWO_PROVISIONAL_SOURCE_LINKED_REVISIONS;TRANSITIVE_SPLIT_GUARDS;8_NEGATIVE_CONTROLS;SEMANTIC_AND_NATIVE_HUMAN_PREFERENCE_NOT_VERIFIED",
+    "p60_p2": "EX09_FROZEN_AUTHORED_SOURCE_TWO_BOXES_PRIVATE_ARCHIVE_HASH_TWO_CANDIDATES_MATCH_COUNT_DRIFT_FAIL_HUMAN_HOLD"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -143,8 +144,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "Optionally approve P59 formal name; no friend's server or new large downloads requested.",
-  "next_scientific_action": "P58 CLOSED. Retain 18 separately unlocated publication originals as acquisition queue with rights checked. Future P59 must not infer human Korean preference from style distributions or typed synthetic test pass.",
+  "next_human_action": "No action now; future independent Korean human ratings and new source rights require explicit confirmation.",
+  "next_scientific_action": "P60-P2: independent semantic adjudication for EX09 attribution-removal, four-policy matched-brief evaluation and genuinely unexposed authorized Korean source-work pool.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -402,7 +403,7 @@
       "P58",
       "P59"
     ],
-    "current_subsection": "P60-P1",
+    "current_subsection": "P60-P2",
     "source_components": 6,
     "original_model_outputs": 12,
     "paragraph_metadata": 22,
@@ -424,6 +425,16 @@
       "independent_human_preference": 0,
       "human_evidence_status": "NONE",
       "genuinely_fresh_holdout": false
+    },
+    "p2_source_witness": {
+      "source_brief_path": "experiments/g9-p53/krc_v03/new_briefs.json",
+      "source_sha256": "722403f11ecdc621c8966e3285184a62e9a945a4263797c9ca107d4d7d948ead",
+      "original_zip_sha256": "e103185725bbc328dbb13ad90fafa83d9cc4089c8829ad1a78e211045e047d46",
+      "provisional_candidate_hashes_matched": 2,
+      "source_brief_count_drift": "FAIL",
+      "four_provisional_policy_pairs": 4,
+      "independent_native_preference": 0,
+      "private_archive_ci_replayed": false
     }
   }
 }

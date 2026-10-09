@@ -80,3 +80,7 @@ The next substantive target is a **Korean construction calculus**: source-ground
 Historical P50–P53 PIA/candidate-governor work is kept as an *instrument lineage* with its original frozen thresholds and evidence limits. The repeatedly used 24-item packet is **not** a fresh confirmatory evaluation pool. Prior executable trees live in Drive cold archives, referenced via `ARCHIVE_INDEX.json`; do not silently copy them back to main.
 
 CI is read-only and must never create github-actions[bot] authored commits. Preserve human-authored commit identity; never rewrite history without explicit user authorization.
+
+### P60-P2 original EX09 source adjudication
+
+The frozen P53 authored EX09 brief is now linked to the original K_TYPED_PLAN paragraph and two hash-reconstructed provisional edits. The deliberately changed **two → three boxes** candidate contradicts the frozen authored source; attribution removal and actual human prose preference remain **HOLD**. Four hash-only matched provisional revision policies and the public Node authority court are in `experiments/g9-p60/`. Earlier P1 [GitHub Actions run 37945220158](https://github.com/WhoSia/KSGT/actions/runs/37945220158) completed successfully; P2 CI requires its own run receipt. No friend's server, new human labels or fresh holdout.

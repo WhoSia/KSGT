@@ -1,0 +1,63 @@
+{
+  "schema": "ksgt.p60.p2.policy-pairs.v03",
+  "sourceBrief": "P53_BRIEF:EX09",
+  "sourceBriefJsonSha256": "722403f11ecdc621c8966e3285184a62e9a945a4263797c9ca107d4d7d948ead",
+  "freshHoldout": false,
+  "privateTextInRepository": false,
+  "pairs": [
+    {
+      "policy": "NO_EDIT",
+      "sha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "sourceWorkId": "P53_BRIEF:EX09",
+      "split": "pilot_train",
+      "writerAuthority": "ASSISTANT_PROVISIONAL_NOT_HUMAN",
+      "axes": {
+        "admissibility": "HOLD",
+        "defectRepair": "HOLD",
+        "collateralIntegrity": "HOLD",
+        "readerPreference": "NOT_OBSERVED"
+      }
+    },
+    {
+      "policy": "MINIMAL_ATTRIBUTION",
+      "sha256": "09a33a898b0f49afa26c4f15e01a4db3f7dd1cc02bbea0d4d50ad0f81a681d00",
+      "sourceWorkId": "P53_BRIEF:EX09",
+      "split": "pilot_train",
+      "writerAuthority": "ASSISTANT_PROVISIONAL_NOT_HUMAN",
+      "axes": {
+        "admissibility": "HOLD",
+        "defectRepair": "HOLD",
+        "collateralIntegrity": "HOLD",
+        "readerPreference": "NOT_OBSERVED"
+      }
+    },
+    {
+      "policy": "ORDINARY_SMOOTH",
+      "sha256": "ea817bdbf530babdbc8d5b852a1d7faebe469c971dad6e3a2762c3f507b71584",
+      "sourceWorkId": "P53_BRIEF:EX09",
+      "split": "pilot_train",
+      "writerAuthority": "ASSISTANT_PROVISIONAL_NOT_HUMAN",
+      "axes": {
+        "admissibility": "HOLD",
+        "defectRepair": "HOLD",
+        "collateralIntegrity": "HOLD",
+        "readerPreference": "NOT_OBSERVED"
+      }
+    },
+    {
+      "policy": "P59_DISCOURSE",
+      "sha256": "f03e59a21c15e234ced93e7199acdca55919c84550e02e01e21633da59d696a9",
+      "sourceWorkId": "P53_BRIEF:EX09",
+      "split": "pilot_train",
+      "writerAuthority": "ASSISTANT_PROVISIONAL_NOT_HUMAN",
+      "axes": {
+        "admissibility": "HOLD",
+        "defectRepair": "HOLD",
+        "collateralIntegrity": "HOLD",
+        "readerPreference": "NOT_OBSERVED"
+      }
+    }
+  ],
+  "humanPreferenceCount": 0,
+  "privateArchiveProof": "LOCAL_BYTE_CHECKED_NOT_CI_REPLAYED"
+}
