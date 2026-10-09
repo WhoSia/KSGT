@@ -45,3 +45,4 @@ jobs:
       - name: P59 internal v0.9 source-grounded writing benchmark contract
         run: |
           node experiments/g9-p59/writing_benchmark_v09.cjs
+          node experiments/g9-p59/evidence_order_v09.cjs
