@@ -27,8 +27,8 @@ function inspect(item,pred){
    result("STRUCTURAL_PASS",["AUTHOR_CUE_ONLY"]):
    result("HOLD",["UNRESOLVED_REFERENCE"]);
  }
- const original=/^(.* 명 중 )(\d+)(명은 .+\.)$/u.exec(item.candidates.EXPLICIT);
- const proposed=/^(.* 명 중 )(\d+)(명은 .+\.)$/u.exec(pred.text);
+ const original=/^(.*명 중 )(\d+)(명은 .+\.)$/u.exec(item.candidates.EXPLICIT);
+ const proposed=/^(.*명 중 )(\d+)(명은 .+\.)$/u.exec(pred.text);
  if(pred.action==="EXPLICIT"&&original&&proposed&&original[1]===proposed[1]&&original[3]===proposed[3]&&original[2]!==proposed[2])
   return result("REJECT",["COUNT_CHANGED_IN_CLOSED_TEMPLATE"]);
  return result("HOLD",["OUTSIDE_CLOSED_TEMPLATE"]);
