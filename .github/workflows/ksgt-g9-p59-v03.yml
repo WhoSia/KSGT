@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Contracts v0.3-v0.8
+name: KSGT G9-P59 Synthetic Contracts v0.3-v0.9
 on:
   workflow_dispatch:
   push:
@@ -42,3 +42,6 @@ jobs:
       - name: P59 internal v0.8 exact delayed-query rate-distortion bound
         run: |
           node experiments/g9-p59/rate_distortion_v08.cjs
+      - name: P59 internal v0.9 source-grounded writing benchmark contract
+        run: |
+          node experiments/g9-p59/writing_benchmark_v09.cjs
