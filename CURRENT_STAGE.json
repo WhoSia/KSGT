@@ -2,11 +2,11 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "G9-P59",
-  "stage_type": "HUMAN_REFERENCE_CHOICE_EXPERIMENTAL_DESIGN",
-  "status": "OPEN_G9_P59_INTERNAL_V13_P53_12_OUTPUT_6_FAMILIES_KOSEND_45K_GOLEM_30_ORIGINAL_AUDITS_HUMAN_HOLD",
-  "canonical_notion_id": "3f4ef561-cf92-8163-a7a8-c13d6481855e",
-  "parent_stage": "G9-P58",
+  "current_stage": "G9-P60",
+  "stage_type": "SOURCE_DISJOINT_KOREAN_REVISION_EVALUATION",
+  "status": "OPEN_P60_REAL_P53_OUTPUT_HASHES_12_COMPONENTS_6_PARAGRAPHS_22_ACTUAL_REVISIONS_0_HUMAN_PREFERENCE_HOLD",
+  "canonical_notion_id": "3f4ef561-cf92-81b8-8111-d47fe9df0fac",
+  "parent_stage": "G9-P59",
   "latest_closed_stage": "G9-P58",
   "latest_closed_artifact": {
     "stage": "G9-P58",
@@ -21,9 +21,9 @@
     "corrected_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "experiments/g9-p59/THEORY_V06.md",
+  "current_artifact": "experiments/g9-p60/RESEARCH_PROGRAM.md",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Can source-grounded discourse-sensitive reference choices improve actual Korean writing quality, separating reader understanding, source fidelity, coherence, genre-naturalness and useful revisions from closed-template accuracy?",
+  "current_question": "Can source-disjoint, protected-fact Korean paragraph revisions improve reader-calibrated writing preference without semantic loss relative to matched NO_EDIT, ordinary edit and P59 discourse-guided candidates?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
@@ -106,7 +106,12 @@
     "p59_v13_original_source_audit": "P53_12_OF_12_OUTPUT_SHA_VERIFIED;6_SOURCE_BRIEFS;KOSEND_45K_JSON_ROWS_GOLEM_30_KOREAN_STORIES",
     "p59_v13_human_prose": "NONE;ZERO_ORIGINAL_HUMAN_REVISION_PAIRS",
     "p59_v13_ci": "WORKFLOW_EDIT_UNAPPLIED_REMOTE_RUN_NOT_VERIFIED",
-    "p60": "TITLE_PROPOSAL_ONLY_NO_STAGE_OPEN"
+    "p60": "TITLE_PROPOSAL_ONLY_NO_STAGE_OPEN",
+    "p60_source_hash": "THREE_DRIVE_ARCHIVES_LOCAL_OUTPUT_SHA12_OF12_PASS",
+    "p60_split": "SIX_P53_BRIEF_COMPONENTS_RETROSPECTIVE_ONLY_NOT_UNSEEN",
+    "p60_paragraphs": "22_HASHED_ORIGINAL_DRAFT_PARAGRAPHS_ZERO_VERIFIED_REVISIONS",
+    "p60_quality": "SOURCE_FACT_AND_SURFACE_PROXY_ORTHOGONAL_TOY_ONLY_HUMAN_NOT_OBSERVED",
+    "p60_ci": "WORKFLOW_COMMITTED_REMOTE_RUN_NOT_CONFIRMED"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -381,5 +386,31 @@
     "v1.1": "INTERNAL_P59_NIKL_P53_CENSUS_GOLEM_KOREAN_SPLITS_24_3_3_KOSEND_MIXED_LABEL_NODE_PY_METADATA_LOCAL_PASS_NO_RAW_INGEST",
     "v1.2": "INTERNAL_P59_P45_CP5_12352778_DERIVED_ROWS_REUSED_P53_FELW_REVIEWED_LOCAL_SCHEMA_PROTOTYPE_PASS_REAL_LABELS_AND_REMOTE_CI_HOLD",
     "v1.3": "INTERNAL_P59_P53_12_REAL_OUTPUT_HASHES_SIX_SOURCE_FAMILIES_KOSEND_45K_REAL_JSON_GOLEM_30_CONLLU_SOURCE_AUDIT_NO_HUMAN_PREFERENCE_CI_HOLD"
+  },
+  "previous_stage": "G9-P59",
+  "p60_official_name": "KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification",
+  "p60_research_lineage": {
+    "predecessor": "G9-P59",
+    "prior_stage_retained": "OPEN_HISTORICAL_NO_TERMINAL_RITUAL",
+    "source_inheritance": [
+      "P42",
+      "P45",
+      "P53",
+      "P54",
+      "P58",
+      "P59"
+    ],
+    "current_subsection": "P60-P0",
+    "source_components": 6,
+    "original_model_outputs": 12,
+    "paragraph_metadata": 22,
+    "retrospective_partitions": {
+      "pilot_train": 3,
+      "pilot_dev": 2,
+      "reserved_reaudit": 1
+    },
+    "genuinely_fresh_holdout": false,
+    "human_preference_annotations": 0,
+    "verified_revision_pairs": 0
   }
 }
