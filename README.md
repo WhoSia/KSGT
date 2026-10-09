@@ -4,7 +4,7 @@ KSGT studies **how context, information structure, discourse, syntax, register, 
 
 ## Current live stage: Generation IX G9-P59 — Reference Choice and Reader-State Alternatives
 
-**As of 2026-10-09: OPEN / v0.5 source-family split, reader-state ablation, model comparison interface locally exercised / independent Korean semantic judgement and human preference HOLD.** [Canonical Notion stage](https://app.notion.com/p/3f4ef561cf928163a7a8c13d6481855e) and [live authority](CURRENT_STAGE.json). G9-P58 remains the latest CLOSED stage; its [terminal ruling](artifacts/g9_p58_terminal_ruling.md) is not reopened.
+**As of 2026-10-09: OPEN / v0.6 target-aligned reader-belief toy oracle locally tested / neural and human evaluation HOLD.** [Canonical Notion stage](https://app.notion.com/p/3f4ef561cf928163a7a8c13d6481855e) and [live authority](CURRENT_STAGE.json). G9-P58 remains the latest CLOSED stage; its [terminal ruling](artifacts/g9_p58_terminal_ruling.md) is not reopened.
 
 Research target: explain when writers maintain discourse-given Korean reference (`그중`), make a group explicit, or restructure a passage. This is **not AI-detector evasion** and a synthetic generator–critic does **not** stand in for human naturalness.
 
