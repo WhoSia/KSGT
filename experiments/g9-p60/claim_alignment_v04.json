@@ -1,0 +1,387 @@
+{
+  "schema": "ksgt.p60.p2.claim-alignment.v04",
+  "stage": "G9-P60",
+  "phase": "P60-P2",
+  "sourceWorkId": "P53_BRIEF:EX09",
+  "sourceBriefJsonSha256": "722403f11ecdc621c8966e3285184a62e9a945a4263797c9ca107d4d7d948ead",
+  "privateArchiveSha256": "e103185725bbc328dbb13ad90fafa83d9cc4089c8829ad1a78e211045e047d46",
+  "baseDraftId": "P53:4B:EX09:K_TYPED_PLAN",
+  "baseParagraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+  "historicallyExposed": true,
+  "freshHoldout": false,
+  "sourceComponentId": "P53_WORK:EX09",
+  "split": "pilot_train",
+  "genre": "science_explainer",
+  "audience": "고등학생",
+  "writerIntent": "DISTINGUISH_OBSERVED_SPROUT_COUNT_FROM_UNCERTAIN_CAUSE",
+  "licenseToInventFacts": "NONE_UNDER_P53_GENERATION_PROMPT",
+  "sourceAuthority": "PREGEN_AUTHORED_CONTROLLED_SCENARIO",
+  "sourceClaims": [
+    {
+      "claimId": "F1",
+      "jsonPointer": "/briefs/0/facts/0",
+      "kind": "FROZEN_FACT",
+      "contentSha256": "52785b840d8b00be1b21fbcac7887fea473fc08c1ec4147f65948428b72f8a48",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    },
+    {
+      "claimId": "F2",
+      "jsonPointer": "/briefs/0/facts/1",
+      "kind": "FROZEN_FACT",
+      "contentSha256": "5ca4c826f95aa71032570ab3b7d4baace98d44b7ee8855cd97f6c8d3904e835f",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    },
+    {
+      "claimId": "F3",
+      "jsonPointer": "/briefs/0/facts/2",
+      "kind": "FROZEN_FACT",
+      "contentSha256": "edab57ad7dcffcc81e763b57da401eea75891b2fff72ffccef6d5355e5e4c42d",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    },
+    {
+      "claimId": "F4",
+      "jsonPointer": "/briefs/0/facts/3",
+      "kind": "FROZEN_FACT",
+      "contentSha256": "9509616a951f0e25ada4a3ad6a7658056407bf64f3f30fa472aed2fb692979f2",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    },
+    {
+      "claimId": "F5",
+      "jsonPointer": "/briefs/0/facts/4",
+      "kind": "FROZEN_FACT",
+      "contentSha256": "88184e88bbd6c8cce785581d81e0340b65513a0770a55dc4c8b68d220b9cb0d5",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    },
+    {
+      "claimId": "U1",
+      "jsonPointer": "/briefs/0/uncertainties/0",
+      "kind": "FROZEN_UNCERTAINTY",
+      "contentSha256": "65ccfc31af99f1438e69621770a0f5511b425528a4be41452399c03a277db609",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    },
+    {
+      "claimId": "U2",
+      "jsonPointer": "/briefs/0/uncertainties/1",
+      "kind": "FROZEN_UNCERTAINTY",
+      "contentSha256": "75b8ec40603cb8c2c2df5ef9fd85310e02dde3b07da8ebdcb276694417adb687",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    },
+    {
+      "claimId": "U3",
+      "jsonPointer": "/briefs/0/uncertainties/2",
+      "kind": "FROZEN_UNCERTAINTY",
+      "contentSha256": "f93b0424318018ee50f4328ab36c893d192eace267e8248ea9b436308917ec7b",
+      "claimAuthority": "P53_PREGEN_AUTHORED_SCENARIO_NOT_WORLD_OBSERVATION"
+    }
+  ],
+  "policyRecords": [
+    {
+      "policy": "NO_EDIT",
+      "policyOrigin": "ASSISTANT_PROVISIONAL_EDIT_OF_ONE_P53_DRAFT",
+      "paragraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "parentParagraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "componentId": "P53_WORK:EX09",
+      "split": "pilot_train",
+      "alignmentWitnessSha256": "14fb1ea37dd8d2000c696daed0db233f5a23bee427cbb069c9d311825ba8a06e",
+      "alignment": [
+        {
+          "claimId": "F1",
+          "analystInterpretation": "PARTIAL",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F2",
+          "analystInterpretation": "PARTIAL",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F3",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F4",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F5",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U1",
+          "analystInterpretation": "GUARDED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U2",
+          "analystInterpretation": "POTENTIAL_OVERSTATEMENT",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U3",
+          "analystInterpretation": "NOT_MENTIONED",
+          "spanCount": 0,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        }
+      ],
+      "targetDefect": "VISIBLE_INTERNAL_SOURCE_NUMBER_LABELS",
+      "mechanicalSignals": {
+        "labelCount": 4,
+        "targetSurfaceRepair": "FAIL",
+        "explicitGlobalAttribution": false
+      },
+      "axes": {
+        "sourceAdmissibility": "HOLD_INCOMPLETE_INDEPENDENT_SEMANTIC_REVIEW",
+        "namedDefectRepair": "FAIL",
+        "collateralIntegrity": "HOLD",
+        "nativeReaderPreference": "NOT_OBSERVED"
+      }
+    },
+    {
+      "policy": "MINIMAL_ATTRIBUTION",
+      "policyOrigin": "ASSISTANT_PROVISIONAL_EDIT_OF_ONE_P53_DRAFT",
+      "paragraphSha256": "2a69570cb42f29af9bb20ef9c240496bc1f20ad6408282b64c269e2685e1d3e8",
+      "parentParagraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "componentId": "P53_WORK:EX09",
+      "split": "pilot_train",
+      "alignmentWitnessSha256": "23ab3416cd26801eee7b62d74b33a0a981991b5079ab241e6e8efbd613c4a970",
+      "alignment": [
+        {
+          "claimId": "F1",
+          "analystInterpretation": "PARTIAL",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F2",
+          "analystInterpretation": "PARTIAL",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F3",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F4",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F5",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U1",
+          "analystInterpretation": "GUARDED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U2",
+          "analystInterpretation": "POTENTIAL_OVERSTATEMENT",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U3",
+          "analystInterpretation": "NOT_MENTIONED",
+          "spanCount": 0,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        }
+      ],
+      "targetDefect": "VISIBLE_INTERNAL_SOURCE_NUMBER_LABELS",
+      "mechanicalSignals": {
+        "labelCount": 0,
+        "targetSurfaceRepair": "MECHANICAL_PASS",
+        "explicitGlobalAttribution": true
+      },
+      "axes": {
+        "sourceAdmissibility": "HOLD_INCOMPLETE_INDEPENDENT_SEMANTIC_REVIEW",
+        "namedDefectRepair": "MECHANICAL_ONLY",
+        "collateralIntegrity": "HOLD",
+        "nativeReaderPreference": "NOT_OBSERVED"
+      }
+    },
+    {
+      "policy": "ORDINARY_SMOOTH",
+      "policyOrigin": "ASSISTANT_PROVISIONAL_EDIT_OF_ONE_P53_DRAFT",
+      "paragraphSha256": "52d5e662d8bbc75757542c561021f32ce822e92137f7a09243ab02761e1eb767",
+      "parentParagraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "componentId": "P53_WORK:EX09",
+      "split": "pilot_train",
+      "alignmentWitnessSha256": "4580ac25de61f2bde8c287d8e231419e5960f9de48f3c796e3f0069d44a89b31",
+      "alignment": [
+        {
+          "claimId": "F1",
+          "analystInterpretation": "PARTIAL",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F2",
+          "analystInterpretation": "PARTIAL",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F3",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F4",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F5",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U1",
+          "analystInterpretation": "GUARDED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U2",
+          "analystInterpretation": "NOT_MENTIONED",
+          "spanCount": 0,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U3",
+          "analystInterpretation": "NOT_MENTIONED",
+          "spanCount": 0,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        }
+      ],
+      "targetDefect": "VISIBLE_INTERNAL_SOURCE_NUMBER_LABELS",
+      "mechanicalSignals": {
+        "labelCount": 0,
+        "targetSurfaceRepair": "MECHANICAL_PASS",
+        "explicitGlobalAttribution": false
+      },
+      "axes": {
+        "sourceAdmissibility": "HOLD_INCOMPLETE_INDEPENDENT_SEMANTIC_REVIEW",
+        "namedDefectRepair": "MECHANICAL_ONLY",
+        "collateralIntegrity": "HOLD",
+        "nativeReaderPreference": "NOT_OBSERVED"
+      }
+    },
+    {
+      "policy": "P59_DISCOURSE",
+      "policyOrigin": "ASSISTANT_PROVISIONAL_EDIT_OF_ONE_P53_DRAFT",
+      "paragraphSha256": "c3eafe0a79b1aa91f8329abffb65c7b8ae2c4048437f201aff7cfc817bf84335",
+      "parentParagraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "componentId": "P53_WORK:EX09",
+      "split": "pilot_train",
+      "alignmentWitnessSha256": "fc6e2b7a5d424b8f772ad67491c8430a1d928a229b809583fbbfa1d517b66e45",
+      "alignment": [
+        {
+          "claimId": "F1",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F2",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F3",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F4",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "F5",
+          "analystInterpretation": "SUPPORTED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U1",
+          "analystInterpretation": "GUARDED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U2",
+          "analystInterpretation": "GUARDED",
+          "spanCount": 1,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        },
+        {
+          "claimId": "U3",
+          "analystInterpretation": "NOT_MENTIONED",
+          "spanCount": 0,
+          "judgmentAuthority": "AUTHOR_ANNOTATION_NOT_INDEPENDENT_GOLD"
+        }
+      ],
+      "targetDefect": "VISIBLE_INTERNAL_SOURCE_NUMBER_LABELS",
+      "mechanicalSignals": {
+        "labelCount": 0,
+        "targetSurfaceRepair": "MECHANICAL_PASS",
+        "explicitGlobalAttribution": false
+      },
+      "axes": {
+        "sourceAdmissibility": "HOLD_INCOMPLETE_INDEPENDENT_SEMANTIC_REVIEW",
+        "namedDefectRepair": "MECHANICAL_ONLY",
+        "collateralIntegrity": "HOLD",
+        "nativeReaderPreference": "NOT_OBSERVED"
+      }
+    }
+  ],
+  "measurementAuthority": {
+    "mechanicalTextEvidence": "SHA256_AND_SPAN_HASH_ONLY",
+    "claimMeaningAnnotations": "ASSISTANT_ANALYST_HYPOTHESES_NOT_GOLD",
+    "independentSemanticAcceptanceCount": 0,
+    "independentKoreanReaderRatings": 0,
+    "validatedPolicySuperiority": false,
+    "independentRevisionSourceWorks": 1
+  },
+  "contradictionControls": [
+    {
+      "id": "BOX_COUNT_THREE",
+      "frozenClaimId": "F1",
+      "operator": "TWO_TO_THREE_BOXES",
+      "testKind": "SOURCE_RELATIVE_MUTATION",
+      "expected": "FAIL_SOURCE_FACT"
+    },
+    {
+      "id": "UNLICENSED_CAUSE_CERTAINTY",
+      "frozenClaimId": "U1",
+      "operator": "ASSERT_OBSERVED_CAUSAL_PROOF",
+      "testKind": "SOURCE_UNCERTAINTY_OVERRIDE",
+      "expected": "FAIL_EPISTEMIC_CONTRACT"
+    }
+  ]
+}

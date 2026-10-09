@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P60",
   "stage_type": "SOURCE_DISJOINT_KOREAN_REVISION_EVALUATION",
-  "status": "OPEN_P60_P2_FROZEN_SOURCE_BRIEF_COUNT_CONTRADICTION_LOCAL_BYTE_AUDIT_PASS_REMOTE_P2_CI_PENDING_HUMAN_HOLD",
+  "status": "OPEN_P60_P2_V04_CLAIM_ALIGNMENT_REMOTE_CI_PENDING_HUMAN_SEMANTIC_HOLD",
   "canonical_notion_id": "3f4ef561-cf92-81b8-8111-d47fe9df0fac",
   "parent_stage": "G9-P59",
   "latest_closed_stage": "G9-P58",
@@ -111,11 +111,12 @@
     "p60_split": "SIX_P53_BRIEF_COMPONENTS_RETROSPECTIVE_ONLY_NOT_UNSEEN",
     "p60_paragraphs": "22_HASHED_ORIGINAL_DRAFT_PARAGRAPHS_ZERO_VERIFIED_REVISIONS",
     "p60_quality": "SOURCE_FACT_AND_SURFACE_PROXY_ORTHOGONAL_TOY_ONLY_HUMAN_NOT_OBSERVED",
-    "p60_ci": "P1_REMOTE_CI_SUCCESS_RUN_37945220158_COMMIT_aa875115_P2_CI_PENDING",
+    "p60_ci": "P2_V03_REMOTE_SUCCESS_RUN_37949866939_COMMIT_5529a18_V04_REMOTE_PENDING",
     "p60_provisional_edit_candidate_status": "TWO_REAL_P53_ANCHORED_ASSISTANT_EDITS_EX09_P1_ONE_COUNT_DRIFT_CONTROL_SEMANTICS_AND_HUMAN_HOLD",
     "p60_p1": "TWO_PROVISIONAL_SOURCE_LINKED_REVISIONS;TRANSITIVE_SPLIT_GUARDS;8_NEGATIVE_CONTROLS;SEMANTIC_AND_NATIVE_HUMAN_PREFERENCE_NOT_VERIFIED",
     "p60_p2": "EX09_FROZEN_AUTHORED_SOURCE_TWO_BOXES_PRIVATE_ARCHIVE_HASH_TWO_CANDIDATES_MATCH_COUNT_DRIFT_FAIL_HUMAN_HOLD",
-    "p60_p2_python": "INDEPENDENT_STDLIB_ARCHIVE_AUDITOR_LOCAL_PRIVATE_ZIP_PASS_6_ADVERSARIAL_CONTROLS_PUBLIC_CI_METADATA_ONLY"
+    "p60_p2_python": "INDEPENDENT_STDLIB_ARCHIVE_AUDITOR_LOCAL_PRIVATE_ZIP_PASS_6_ADVERSARIAL_CONTROLS_PUBLIC_CI_METADATA_ONLY",
+    "p60_v04_claims": "EX09_5_FACTS_3_UNCERTAINTIES_FOUR_ASSISTANT_POLICIES_32_ANALYST_CELLS_27_PRIVATE_SPANS_SEMANTIC_HOLD"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -145,8 +146,8 @@
     "Do not treat P50's byte-custody PASS as proposer adequacy.",
     "Do not restore G9-P50 executable trees onto main as general research history."
   ],
-  "next_human_action": "No action now; future independent Korean human ratings and new source rights require explicit confirmation.",
-  "next_scientific_action": "P60-P2: independent semantic adjudication for EX09 attribution-removal, four-policy matched-brief evaluation and genuinely unexposed authorized Korean source-work pool.",
+  "next_human_action": "Only future voluntary blinded Korean reader ratings or new access permission; no immediate user action for P2 code/CI.",
+  "next_scientific_action": "P60-P2: obtain independent EX09 U2 epistemic adjudication, collect human blinded Korean reader preferences on matched four candidates, then design rights-reviewed source-disjoint fresh pool.",
   "cold_archive_index": "ARCHIVE_INDEX.json",
   "archive_custody": {
     "full_repository_source_commit": "beda03111c60b854c703e59a4f9b07eae12c929a",
@@ -166,7 +167,7 @@
     "evidence": "artifacts/g9_p53_indexed_regression_evidence.json",
     "scientific_ceiling": "HISTORICAL_REGRESSION_ONLY_NO_CONFIRMATORY_PIA"
   },
-  "current_substage": "P60-P2_FROZEN_SOURCE_CLAIM_COURT",
+  "current_substage": "P60-P2_CLAIM_UNIT_V04",
   "latest_writing_result": {
     "preseal": "experiments/g9-p53/krc_v01/constitution.json",
     "formal_mechanism": "experiments/g9-p53/krc_v01/FORMAL_MECHANISM.md",
@@ -436,6 +437,22 @@
       "four_provisional_policy_pairs": 4,
       "independent_native_preference": 0,
       "private_archive_ci_replayed": false
+    },
+    "p2_v04": {
+      "sourceWork": "P53_BRIEF:EX09",
+      "sourceComponents": 1,
+      "originalModelOutputs": 1,
+      "authorProvisionalPolicyVariants": 4,
+      "sourceFactClaims": 5,
+      "sourceUncertaintyClaims": 3,
+      "claimAlignmentCells": 32,
+      "privateSpanWitnesses": 27,
+      "semanticGold": 0,
+      "humanPreferenceRatings": 0,
+      "independentSourceDisjointHoldout": false,
+      "publicCIIncludesPrivateSource": false,
+      "sourceFile": "experiments/g9-p53/krc_v03/new_briefs.json",
+      "evidenceArtifact": "artifacts/g9_p60_p2_claim_alignment_v04_receipt.md"
     }
   }
 }
