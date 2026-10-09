@@ -225,3 +225,46 @@ Unmeasured \(q_j\) cannot be imputed from a hard-constraint pass or from a gener
 The earlier v0.5 always-EXPLICIT policy obtained 32/32 *closed-template passes* and always-KEEP obtained only 16/32 due to referential ambiguity. This does not support 32/32 versus 16/32 on writing quality. Repeating fully specified nouns can be redundant; keeping an unresolved \`그중\` can confuse readers; a natural restructuring might outperform both.
 
 Thus **typed correctness is a gate or diagnostic, not a preference reward**. Optimizing the number of exact-template passes can incentivize repeated lexical material. Likewise, a fluid but false rewrite cannot win by superficial fluency. This is why KSGT must measure a *vector of writing capabilities* and independently validate any human-derived ordering.
+
+### 4. Literature-to-test transport ledger (metadata only; no datasets imported)
+
+| Verified publication / linked source | Reusable methodological device | Transport boundary for KSGT |
+|---|---|---|
+| [WritingBench, NeurIPS 2025](https://proceedings.neurips.cc/paper_files/paper/2025/hash/4aedf0cba303537fcb6cf948bb41b2df-Abstract-Datasets_and_Benchmarks_Track.html) | Broad writing tasks, query-specific criteria, separate style/format/length requirements | Its rubric-critic/leaderboard is not Korean human preference ground truth. Treat judge scores as **proxies requiring calibration** |
+| [SummEval, TACL 2021](https://aclanthology.org/2021.tacl-1.24/) | Coherence, factual consistency, fluency and relevance measured separately with expert/crowd annotations | English news summarization, not direct natural Korean passage judgments |
+| [ACES, WMT 2023](https://aclanthology.org/2023.wmt-1.57/) | Adversarial controlled error classes and per-phenomenon profiles | Translation metric diagnostics; surface overlap is not source faithfulness or native writing quality |
+| [EditEval, CoNLL 2024](https://aclanthology.org/2024.conll-1.7/) | Evaluating *improvements to existing text*, not only next-token writing | Primarily English editing and task-specific reference sets |
+| [Scientific Text Revision Metrics, ACL 2025](https://aclanthology.org/2025.acl-long.335/) | Separate instruction-following, revision correctness and other metrics; hybrid judge limitations | Their finding that LLM judges struggle with correctness is a warning, not a universal rate transferable to Korean |
+| [RARR, ACL 2023](https://aclanthology.org/2023.acl-long.910/) | Evidence-grounded revision while preserving unaffected material | Attribution and local revision do not themselves measure native Korean genre or style |
+| [G-Eval, EMNLP 2023](https://aclanthology.org/2023.emnlp-main.153/) | Criteria-aware LLM evaluation and comparison with human annotations | Correlation in an English summarization setting; authors raise risk of favoring model-produced text |
+| [MT-Bench / Chatbot Arena, 2023](https://arxiv.org/abs/2306.05685) | Position/order and verbosity bias as negative controls for LLM-as-judge | Dialogue assistant comparison is not a Korean writing quality oracle |
+| [KoSEnd, ACL SRW 2025](https://aclanthology.org/2025.acl-srw.29/) | Korean sentence-ending naturalness judgments: 3,000 sentences with judgments for 15 ending forms | Valuable **local Korean naturalness subtest**, not discourse-level writing gold; licensing/raw access unverified here |
+| [KoGEM, ACL 2025](https://aclanthology.org/2025.acl-long.492/) | Korean grammatical linguistic-competence adversarial tests, 1.5k QA pairs | Discrete grammar Q&A cannot be transported as essay naturalness labels |
+| [GOLEMcoref public repository](https://github.com/GOLEM-lab/GOLEMcoref) | Human-annotated Korean fiction coreference and zero-anaphora spans | Character coreference is not writer expression preference; source data has CC BY-NC 4.0 terms, redistribution/derivative rights require audit |
+| [KLUE, 2021](https://arxiv.org/abs/2105.09680) | Korean NLI, parsing, relation extraction and related linguistic probes | Korean understanding tasks are diagnostic support, not passage generation preference gold |
+
+**Evidence-admission levels.** L0: mathematics, synthetic authored counterexamples, and internal implementation tests; L1: directly inspected third-party original annotations under compliant custody, preserving task/genre/language of those labels; L2: externally validated Korean reader/writer measurements on source-disjoint native texts. Source discovery alone is not data ingestion. A high-quality English benchmark can justify a **method**, not import its numerical claims into Korean writing. Data copyright/license and split lineage are hard gates.
+
+### 5. Proposed economical benchmark: tests of *writing improvements*, not provenance detection
+
+Proposed task families (only the first has v0.5 authored fixture coverage):
+- **R — referential economy:** maintain \`그중\` when a group is genuinely recoverable; clarify or restructure when context supports competing readings; independently separate referent correctness from repetition preference.
+- **C — compositional coherence:** compose multi-paragraph material with information order and dependency relations; test forward/backward references and connective licensing, not only adjacent-sentence grammar.
+- **V — source-grounded revision:** repair awkward or ambiguous Korean while maintaining factual commitments; compare to original and test whether an edit materially improved a specified problem without adding invented details.
+- **G — genre and register:** preserve the same meaning across legitimate formal/informal or report/narrative realizations, including Korean endings, particles, rhythm and pragmatics. Genre-conditioned differences are not automatically errors.
+
+Each task requires a source snapshot and rights receipt, a writer-intent contract, negative controls, candidate genealogy, genre/reader condition, explicit admissibility claims, and separately recorded evidence for every evaluated axis. Never call a synthetic text 'human reference' or a fluent sample 'source-faithful' without proof.
+
+### 6. Low-cost evaluators and the human-world boundary
+
+**Free/cheap engineering gate:** symbolic source witnesses, typed cardinalities, referent ambiguity conditions, mechanical anti-leak checks, assertion-generated minimal pairs, role/genre metadata, and bounded counterfactuals. This can *refute* known errors and diagnose failure families; it cannot certify idiomatic Korean.
+
+**External annotation reuse:** after rights and protocol inspection, use released Korean ending judgments, independently human-annotated Korean coreference and benchmark labels only for the phenomenon they actually measure. They can validate *judges/critics* on specific error types with no new GPU training. They cannot jointly manufacture a universal gold 'better writing' score.
+
+**Future bounded human anchor:** if eligible readers become available, prefer blind paired comparisons on *qualified admissible passages* with item-level disagreement, randomized order and genre stratification, instead of a long survey or forced composite score. Keep confidence intervals and item/source-family clustering; never label a tiny pilot a general Korean public preference. If no readers are available, leave writing-quality identification **HOLD** and publish only diagnostic findings.
+
+**Failure modes:** repetition gaming; template-copy 'success'; a judge favoring longer/own-model outputs; preference-label laundering; leaked variants across splits; biased selection of only passages with valid metrics; preference-model overfitting to judge; genre-agnostic scalar utility; conflating Korean grammar questions with polished writing; inferring architectural superiority from a formal-memory toy bound.
+
+### 7. Strict conclusion
+
+KSGT can make a rigorous contribution before having a large GPU cluster by providing: (i) falsifiable memory-to-referent hypotheses, (ii) source-licensed Korean construction and revision tests, (iii) adversarial diagnostics of candidate critics, (iv) a transparent human-evidence boundary, and (v) a resource-normalized future model comparison. It **cannot** yet claim a model that writes better than a Transformer, or that its written outputs are preferred by Korean readers. P59 remains OPEN; all v numbers remain internal subsections.
