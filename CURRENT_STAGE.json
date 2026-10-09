@@ -355,11 +355,11 @@
     "friend_server_used": false,
     "ci": "PENDING"
   },
-  "next_stage_proposal": {
+  "p58_to_p59_historical_proposal": {
     "stage": "G9-P59",
     "formal_name_proposed": "KSGT Generation IX G9-P59 — Discourse-Given Reference Choice, Reader-State Alternatives & Human Preference Contact",
-    "status": "NOT_YET_OPENED",
-    "canonical_name_status": "PENDING_USER_ACCEPTANCE",
+    "status": "OPENED_AS_G9_P59",
+    "canonical_name_status": "ACCEPTED",
     "one_question": "Can existing source-disjoint native Korean writer/reader evidence support KEEP vs overt clarification preference conditional on discourse-given set and genre?",
     "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
   },
