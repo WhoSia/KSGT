@@ -23,7 +23,7 @@
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
   "current_artifact": "experiments/g9-p59/THEORY_V06.md",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Can discourse-given reference and alternative reader knowledge be experimentally separated from mere lexical/length effects in Korean KEEP/EXPLICIT/RESTRUCTURE choices?",
+  "current_question": "Can source-grounded discourse-sensitive reference choices improve actual Korean writing quality, separating reader understanding, source fidelity, coherence, genre-naturalness and useful revisions from closed-template accuracy?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
