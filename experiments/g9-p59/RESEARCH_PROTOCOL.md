@@ -69,3 +69,12 @@ Memory question: for N uniformly drawn target identities with only m stored bits
 [Node memory policy experiment](./memory_v07.cjs): 168 target-position-distractor histories, position-only nuisance identities, four-bit one-slot comparisons plus independently reported larger-window payloads. [Python audit](./memory_audit_v07.py): independently recomputes policy outcomes, checks independence from target labels, and rejects a deliberate injected nuisance leak. [Delayed-query test](./delayed_query_v07.cjs): a future-unknown query over two independent eight-way targets requires at least six bits for guaranteed perfect reconstruction of both.
 
 These results benchmark symbolic memory-update *policies*, not actual Transformer, selective SSM or entity-memory neural networks. Any architecture claim requires equal information/role labels, model and activation-memory accounting, matched training data/compute, document-disjoint native Korean evidence and independent meaning/style adjudication. Remote CI and human superiority are not implied by local PASS.
+
+## P59 internal §v0.8 — exact delayed-query average-recovery ceiling
+This is a subsection of the existing P59 protocol. The finite-state two-referent delayed-query setting has an exact optimally achievable average retrieval rate, not just the zero-error floor. See [cumulative theory](./THEORY_V06.md) and [executable bounded enumeration](./rate_distortion_v08.cjs).
+
+- Two independent uniform N-way targets; encoder cannot see a future uniform a/b query; decoder has only K finite memory states and the query, not source text.
+- Maximum accuracy is K(2N-K+1)/(2N²) for K<=N; (N²+K)/(2N²) for N<=K<=N².
+- A three-bit first-only witness at N=8 is already optimal in this toy setting (72/128). Failure to exceed it is not evidence that memory architecture innovations are useless for different distributions, longer sequences, or natural language.
+- A future neural comparison must **not** apply finite-bit bounds to unquantized continuous states. Account for precision, cache, context rereads and all target-bearing side channels. Frozen query timing, data budget, training resources and source genealogy are mandatory.
+- A trained Transformer, SSM, hybrid or entity memory has still not been evaluated. Native Korean source semantics and human preferences remain unobserved. No independent new P-stage is opened.
