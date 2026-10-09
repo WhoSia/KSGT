@@ -30,6 +30,9 @@ jobs:
           assert len(r['connectedSourceWorks'])==6
           assert r['actualRevisions']==0 and r['humanPreferenceObservations']==0
           assert r['freshHoldout'] is False
-          assert all(x['revisionCandidateIds']==[] and x['nativeHumanPreference']=='NOT_OBSERVED' for x in r['records'])
+          assert sum(len(x['revisionCandidateIds']) for x in r['records'])==2
+          assert sum(bool(x['revisionCandidateIds']) for x in r['records'])==1
+          assert r['provisionalEdits']==2
+          assert all(x['nativeHumanPreference']=='NOT_OBSERVED' for x in r['records'])
           print('P60_LEDGER_CONTRACT_PASS')
           PY
