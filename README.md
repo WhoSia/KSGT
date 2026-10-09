@@ -95,3 +95,6 @@ Five frozen source facts and three protected uncertainties of **one historically
 ### P60-P2 v05 — Two historically exposed sources and one-reader protocol (2026-10-10)
 
 [EX10 original-source expansion and eight-claim public contract](experiments/g9-p60/solo_ex09_ex10_ledger_v05.json) complements EX09; [source-relative two-world U2 non-entailment audit](experiments/g9-p60/solo_claim_court_v05.py) and [single-reader policy-masked protocol](experiments/g9-p60/solo_reader_protocol_v05.md) are now available. Both original briefs are in the same historical P53 batch, not a new independent holdout. A solo reader can produce bounded qualitative evidence; **no scores or independent human semantic rulings exist yet**, and lengths differ across policy arms. Public CI excludes all private candidate text and blind keys.
+
+
+**Verified native v05 GitHub Actions CI (2026-10-10 KST):** [run 37978758452](https://github.com/WhoSia/KSGT/actions/runs/37978758452), job 113983617120, **completed SUCCESS**, tested SHA `c951966d16440e33aed463c26a409681ffb1d369`. v05 EX09 U2 two-world countermodel and EX10 frozen-source court PASS, together with historical regressions. GitHub runners did not see private participant labels, response forms, candidate text, or independent human semantic judgments. Human reader pilot is PREPARED/NOT YET RUN.

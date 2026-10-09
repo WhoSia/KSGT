@@ -6,3 +6,6 @@
 * EX10: 5 source facts, 3 uncertainties, 4 private matched policy texts (NO_EDIT original, 3 assistant-authored revisions). Public candidate hashes, lengths and source claims: `experiments/g9-p60/solo_ex09_ex10_ledger_v05.json`. Both EX09 and EX10 from one historically exposed P53 batch; independent future holdout 0.
 * Local initial Python independent court passed 10 injected perturbations. **Remote CI must be checked by commit SHA and run ID before marking it successful.** Earlier v04 public run 37976604421 remains PASS.
 * Private randomly assigned candidate-ID ↔ policy key and two stages of solo Korean human evaluation are intentionally excluded from GitHub. No rating reported. Even after one-person completion results are N=1 single reader, not external multi-rater independence. Length matching not achieved (EX10: 121–206 codepoints).
+
+
+**Verified native v05 GitHub Actions CI (2026-10-10 KST):** [run 37978758452](https://github.com/WhoSia/KSGT/actions/runs/37978758452), job 113983617120, **completed SUCCESS**, tested SHA `c951966d16440e33aed463c26a409681ffb1d369`. v05 EX09 U2 two-world countermodel and EX10 frozen-source court PASS, together with historical regressions. GitHub runners did not see private participant labels, response forms, candidate text, or independent human semantic judgments. Human reader pilot is PREPARED/NOT YET RUN.
