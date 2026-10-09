@@ -1,4 +1,4 @@
-name: KSGT G9-P59 Synthetic Contracts v0.3-v0.6
+name: KSGT G9-P59 Synthetic Contracts v0.3-v0.7
 on:
   workflow_dispatch:
   push:
@@ -34,3 +34,7 @@ jobs:
         run: |
           node experiments/g9-p59/intervention_v06.cjs
           node experiments/g9-p59/intervention_bridge_v06.cjs
+      - name: P59 internal v0.7 exact finite-state bound and independent noise audit
+        run: |
+          node experiments/g9-p59/memory_v07.cjs
+          node experiments/g9-p59/memory_v07.cjs --emit-histories | python3 experiments/g9-p59/memory_audit_v07.py
