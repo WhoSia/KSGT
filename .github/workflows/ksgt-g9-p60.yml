@@ -1,0 +1,35 @@
+name: KSGT G9-P60 Source-Disjoint Revision Court
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'experiments/g9-p60/**'
+      - '.github/workflows/ksgt-g9-p60.yml'
+permissions:
+  contents: read
+jobs:
+  source-ledger-contrast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run historical output-hash, component and two-axis regression
+        run: |
+          node experiments/g9-p60/revision_evaluation_v01.cjs
+      - name: Verify ledger invariants without requiring private P53 source archives
+        run: |
+          node experiments/g9-p60/revision_evaluation_v01.cjs --emit-ledger > "$RUNNER_TEMP/p60-ledger.json"
+          python3 - "$RUNNER_TEMP/p60-ledger.json" <<'PY'
+          import json,sys
+          r=json.load(open(sys.argv[1],encoding='utf8'))
+          assert r['stage']=='G9-P60'
+          assert len(r['records'])==22
+          assert len(r['connectedSourceWorks'])==6
+          assert r['actualRevisions']==0 and r['humanPreferenceObservations']==0
+          assert r['freshHoldout'] is False
+          assert all(x['revisionCandidateIds']==[] and x['nativeHumanPreference']=='NOT_OBSERVED' for x in r['records'])
+          print('P60_LEDGER_CONTRACT_PASS')
+          PY
