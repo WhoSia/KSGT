@@ -111,7 +111,8 @@
     "p60_split": "SIX_P53_BRIEF_COMPONENTS_RETROSPECTIVE_ONLY_NOT_UNSEEN",
     "p60_paragraphs": "22_HASHED_ORIGINAL_DRAFT_PARAGRAPHS_ZERO_VERIFIED_REVISIONS",
     "p60_quality": "SOURCE_FACT_AND_SURFACE_PROXY_ORTHOGONAL_TOY_ONLY_HUMAN_NOT_OBSERVED",
-    "p60_ci": "WORKFLOW_COMMITTED_REMOTE_RUN_NOT_CONFIRMED"
+    "p60_ci": "WORKFLOW_COMMITTED_REMOTE_RUN_NOT_CONFIRMED",
+    "p60_provisional_edit_candidate_status": "TWO_REAL_P53_ANCHORED_ASSISTANT_EDITS_EX09_P1_ONE_COUNT_DRIFT_CONTROL_SEMANTICS_AND_HUMAN_HOLD"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -411,6 +412,8 @@
     },
     "genuinely_fresh_holdout": false,
     "human_preference_annotations": 0,
-    "verified_revision_pairs": 0
+    "verified_revision_pairs": 0,
+    "provisional_assistant_edits": 2,
+    "validated_semantic_edits": 0
   }
 }
