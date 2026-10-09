@@ -2,9 +2,26 @@
 
 KSGT studies **how context, information structure, discourse, syntax, register, and factual commitments become natural Korean prose**. The research objective is a passage-level Korean-writing system that can be judged for naturalness and factual integrity against a generic LLM baseline—not AI detector evasion, not a string-blacklist, and not a general proposer/approval/governance theory.
 
-## Current live stage: Generation IX G9-P53 — Korean Realization Calculus
+## Current live stage: Generation IX G9-P59 — Reference Choice and Reader-State Alternatives
 
-Start here:
+**As of 2026-10-09: OPEN / v0.4 local synthetic typed-contract PASS / independent Korean semantic judgement and human preference HOLD.** [Canonical Notion stage](https://app.notion.com/p/3f4ef561cf928163a7a8c13d6481855e) and [live authority](CURRENT_STAGE.json). G9-P58 remains the latest CLOSED stage; its [terminal ruling](artifacts/g9_p58_terminal_ruling.md) is not reopened.
+
+Research target: explain when writers maintain discourse-given Korean reference (`그중`), make a group explicit, or restructure a passage. This is **not AI-detector evasion** and a synthetic generator–critic does **not** stand in for human naturalness.
+
+- [P59 experimental protocol](experiments/g9-p59/RESEARCH_PROTOCOL.md) — rival hypotheses, evidence limits and human-world-contact requirements.
+- [v0.2 reader-state fixtures](experiments/g9-p59/reader_state_v02.cjs) — eight authored combinations of referent target, antecedent order and provided reader context.
+- [v0.3 dataset / generator / critic / adversary](experiments/g9-p59/pipeline_v03.cjs) — actual Node.js 22 local PASS: eight fixtures, 48 synthetic cases, 24 deliberately rejected/held adversarial candidates. Original Git blobs checked for byte equality.
+- [v0.4 typed closed-construction semantic critic](experiments/g9-p59/semantic_critic_v04.cjs) — actual local PASS for 8 rows/48 cases: 12 typed-contract passes, 4 ambiguous-reader holds and 32 bounded rejects. Closed-template authority only; no general Korean semantic understanding.
+- [v0.4 independent Python/SQLite audit](experiments/g9-p59/split_audit_v04.py) — actual local PASS: 8 development rows, **one** underlying source scene, zero legitimate held-out scene or human gold; rejects fake heldout/scene leakage. Stdlib only.
+- [read-only CI workflow](.github/workflows/ksgt-g9-p59-v03.yml) — Node and Python tests. The workflow **cannot commit**, tag or push (permissions `contents: read`); actual remote CI confirmation is separately required.
+- **Polyglot routing:** JavaScript handles the current closed surface-construction contract; Python with SQL checks cross-row provenance and leakage independently. Add logic/proof languages such as Datalog, Prolog, SMT-LIB or Lean only once an identified expressivity/verification bottleneck justifies them, and test boundaries explicitly.
+- **Compute deferral:** no friend's server before RITHM and the owner's usage finish. Next-week use is tentative, not authorized automatically. On that Ubuntu host, the apparent `/home/sean/coding/oozoon` path is on SSD; any later substantial computation must use the separately confirmed HDD area only.
+
+**Stage lineage:** v0.1 experimental contrasts → v0.2 counterbalanced fixtures → v0.3 reproducible generator–critic–adversary → v0.4 typed semantic/referent guard and SQL provenance audit. New versions must reduce a genuine scientific uncertainty; mere test inflation is not progress.
+
+## Historical engineering reference: Generation IX G9-P53 — Korean Realization Calculus
+
+Historical G9-P53 entrypoints (for present authority use the G9-P59 section above):
 - `CURRENT_STAGE.json` — current authority, exit and next scientific decision
 - `artifacts/g9_p53_current_state.json` — current KRC experiment readback
 - `artifacts/g9_p53_krc_v02_terminal_verdict.json` — latest bounded generation–critic trial
