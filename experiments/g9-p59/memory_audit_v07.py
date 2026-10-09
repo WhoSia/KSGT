@@ -45,7 +45,8 @@ def validate(doc):
 def test(doc):
     outcome=validate(doc)
     corrupt=copy.deepcopy(doc)
-    corrupt["histories"][0]["events"][-1]["id"]=(corrupt["histories"][0]["events"][-1]["id"]+1)%8
+    row=next(h for h in corrupt["histories"] if h["target"]==0 and h["before"]==0 and h["after"]==1)
+    row["events"][-1]["id"]=(row["events"][-1]["id"]+1)%8
     try:validate(corrupt)
     except ValueError:pass
     else:raise AssertionError("NEGATIVE_CONTROL_NOT_DETECTED")
