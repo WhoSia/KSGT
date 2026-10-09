@@ -139,3 +139,41 @@ For literally discrete \(m\)-bit states, \(I(H;Z_T)\leq m\log2\) automatically; 
 An explicit entity-memory implementation could update slots \(z_{i,t+1}=g_{i,t}z_{i,t}+(1-g_{i,t})u_\theta(z_{i,t},O_{t+1})\), with salience-based allocation and later query-conditioned retrieval. **This is an architecture proposal**, not a new expressivity theorem: Transformer attention and selective recurrent blocks can approximate analogous conditional updates.
 
 Natural Korean generation adds an expression decision head only **after** a meaning-preservation gate. No source fidelity or human style reward can be learned merely from synthetic exact-string tests. When independent reader and writer data exist, separately estimate reader belief calibration, correct antecedent recovery, source entailment, and KEEP/EXPLICIT/RESTRUCTURE preference instead of a single 'humanlike' scalar.
+
+
+## P59 internal §v0.8 — Exact delayed-query rate–distortion and neural-comparison prerequisites
+
+**Placement:** This is an internal *paragraph/subsection of G9-P59*, not a new stage, new official version title or separate Notion page. The earlier §v0.7 derived a *zero-error* memory floor. Here we determine the *optimal average accuracy below that floor* under sharper assumptions.
+
+### A. Exact finite-state delayed-query theorem
+
+Let \(R_a,R_b\) be independent uniform variables over \([N]=\{1,\dots,N\}\). An encoder observing the ordered pair \((R_a,R_b)\) but **not** the later query \(Q\in\{a,b\}\) produces one of at most \(K\) discrete memory states. After encoding, \(Q\) is sampled uniformly and independently. A decoder receives only the memory state and \(Q\), then predicts \(R_Q\); there is no additional target-bearing side channel.
+
+The maximum achievable probability of correct retrieval, optimizing over all deterministic encoders and decoders, is
+\[
+A^*(N,K)=
+\begin{cases}
+\frac{K(2N-K+1)}{2N^2}, &1\le K\le N,\\
+\frac{N^2+K}{2N^2}, &N\le K\le N^2.
+\end{cases}
+\]
+
+**Proof.** A decoder assigns a pair \((x_z,y_z)\) to each memory state \(z\): its predicted answers for queries \(a\) and \(b\). For each source pair \((a,b)\), the encoder selects the decoder pair maximizing \(\mathbf 1[a=x_z]+\mathbf 1[b=y_z]\). Thus an exact matching decoder pair gains 2 points, a pair sharing exactly one coordinate gains 1, and a pair sharing neither gains 0. Among \(K\) distinct decoder pairs, let \(u\) be the number of distinct first coordinates and \(v\) the number of distinct second coordinates. Exactly \(uN+vN-uv\) source pairs share at least one coordinate with some decoder pair; the \(K\) decoder pairs themselves each gain one additional point. Total optimal reward is \(uN+vN-uv+K\), divided by \(2N^2\). For \(K\le N\), \(u,v\le K\) and the reward is maximized at \(u=v=K\), achievable by \(K\) disjoint diagonal pairs. For \(N\le K\le N^2\), choose \(N\) diagonal pairs and any \(K-N\) further distinct pairs, so \(u=v=N\), attaining \(N^2+K\). No greater value is possible because there are only \(N^2\) source pairs and \(K\) exact matches. QED.
+
+This includes the earlier zero-error boundary \(K=N^2\) (or \(m\ge\lceil2\log_2N\rceil\) for memory of at most \(m\) bits), and quantifies the nonzero-error region.
+
+For \(N=8\), \(K=1,2,4,8,16,32,64\) permits exact average accuracies \(12.5\%,23.4375\%,40.625\%,56.25\%,62.5\%,75\%,100\%\). At \(K=N=8\), the first-only 3-bit witness is actually **optimal under these assumptions**, even though it appears unsophisticated.
+
+### B. Reproducible falsification checks
+
+The [v0.8 exact theorem oracle and exhaustive witnesses](./rate_distortion_v08.cjs) checks all possible codebooks for \(N=2,3,4\) and \(K=1,2,3\), within a bounded enumeration, and confirms equality with the closed form. It also verifies \(N=8,K=8\) against the §v0.7 delayed-query witness \(72/128\), and \(N=8,K=64\) against perfect recovery \(128/128\). These are mathematical tests, not learned-network results.
+
+### C. What this changes for fair architecture competition
+
+**A benchmark above the finite-state optimum is evidence of an unequal comparison, a side channel, an invalid effective bit budget, or an incorrect theorem assumption**, not a Transformer breakthrough. For continuous activations, the number of coordinates is not the number of effective bits: specify numerical precision, quantization, key-value cache, external context readback, query timing, hidden state, and search history. A model allowed to re-read source text after \(Q\) has an entirely different information budget. If the query can be anticipated during encoding, the delayed-query theorem does not apply.
+
+Competing implementations should include (i) an actual attention-based network, (ii) an actual selective recurrent/SSM network, (iii) a hybrid, and (iv) an explicit referent-memory network. All receive the same evidence with the same privacy/licensing scope; no manually supplied target label or reader-belief vector goes only to the proposed model. Compare each on zero-error floor, accuracy relative to the appropriate finite-state ceiling, extrapolation under distractor distance, memory and compute, *and only separately* independent human reference-choice and Korean naturalness outcomes.
+
+### D. Evidence ceiling and path back to KSGT
+
+The theorem assumes two independent uniform discrete referents, a uniform delayed query, a finite discrete memory state, and exact-match retrieval loss. It does **not** prove a universal memory inequality for nonlinear real-valued neural networks, nonuniform source distributions, semantic similarity loss, natural Korean generation or actual human pragmatics. The four synthetic P59 v0.5 source families remain one shared construction template. P59 stays OPEN; no superiority or human-world contact claim is promoted.
