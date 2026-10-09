@@ -2,11 +2,11 @@
   "schema": "ksgt.current-stage.v2",
   "lab": "KSGT",
   "generation": "IX",
-  "current_stage": "G9-P58",
-  "stage_type": "KOREAN_NATURAL_PROSE_REALIZATION_COURT",
-  "status": "CLOSED_G9_P58_BOUNDED_SEMANTIC_TYPE_PASS_REAL_KOREAN_GENRE_PREFERENCE_HOLD",
-  "canonical_notion_id": "3f3ef561-cf92-81d9-8679-febbcf5ae3b3",
-  "parent_stage": "G9-P57",
+  "current_stage": "G9-P59",
+  "stage_type": "HUMAN_REFERENCE_CHOICE_EXPERIMENTAL_DESIGN",
+  "status": "OPEN_G9_P59_V03_SYNTHETIC_PIPELINE_COMMITTED_CI_UNCONFIRMED_HUMAN_CONTACT_HOLD",
+  "canonical_notion_id": null,
+  "parent_stage": "G9-P58",
   "latest_closed_stage": "G9-P58",
   "latest_closed_artifact": {
     "stage": "G9-P58",
@@ -21,9 +21,9 @@
     "corrected_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "experiments/g9-p58/literature_audit/BIBLIOGRAPHY_CUSTODY.md",
+  "current_artifact": "experiments/g9-p59/pipeline_v03.cjs",
   "current_constitution": "experiments/g9-p53/constitution.json",
-  "current_question": "Can a bounded source-contract distinguish anchored discrete referential partitives from kind-denoting quantities, mass measures and event parts before proposing overt Korean group references?",
+  "current_question": "Can discourse-given reference and alternative reader knowledge be experimentally separated from mere lexical/length effects in Korean KEEP/EXPLICIT/RESTRUCTURE choices?",
   "current_authority": {
     "typed_korean_plan": "FORMAL_SOURCE_REFERENCES_AND_GRAPH_INVARIANTS_PASS",
     "symbolic_source_literal_preservation": "30_OF_30_PASS",
@@ -99,7 +99,10 @@
     "p58_ci": "SUCCESS_37808239662_16_OF_16_TYPED_SYNTHETIC",
     "p58_partitive_gold": "NONE_INDEPENDENTLY_TYPED_IN_PRIVATE_25_GEJUNG_CONTEXTS",
     "p58_reader_naturalness": "NOT_TESTED_DISCOURSE_GENRE_AND_WRITER_PREFERENCE_DECLARATIONS_NOT_AUTHORITATIVE",
-    "p58_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef"
+    "p58_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef",
+    "p59": "OPEN_SYNTHETIC_ONLY_NO_HUMAN_GOLD_OR_SEMANTIC_ACCURACY",
+    "p59_ci": "WORKFLOW_COMMITTED_CHECK_NOT_CONFIRMED",
+    "p59_human_preference": "NOT_COLLECTED"
   },
   "resume_reads": [
     "CURRENT_STAGE.json",
@@ -359,5 +362,10 @@
     "canonical_name_status": "PENDING_USER_ACCEPTANCE",
     "one_question": "Can existing source-disjoint native Korean writer/reader evidence support KEEP vs overt clarification preference conditional on discourse-given set and genre?",
     "short_stage_rule": "ONE_QUESTION_BOUNDED_PASS_HOLD"
+  },
+  "p59_version_lineage": {
+    "v0.1": "FOUR_AUTHORED_STIMULI_AND_PROTOCOL",
+    "v0.2": "EIGHT_COUNTERBALANCED_AUTHOR_INTENTION_FIXTURES",
+    "v0.3": "DETERMINISTIC_DATASET_GENERATOR_CRITIC_ADVERSARY_AND_READONLY_CI"
   }
 }
