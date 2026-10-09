@@ -27,6 +27,7 @@ jobs:
       - name: P2 frozen authored-source and matched revision-policy authority court
         run: |
           node experiments/g9-p60/source_claim_court_v03.cjs
+          python3 experiments/g9-p60/source_archive_audit_v03.py --self-test
       - name: Verify ledger invariants without requiring private P53 source archives
         run: |
           node experiments/g9-p60/revision_evaluation_v01.cjs --emit-ledger > "$RUNNER_TEMP/p60-ledger.json"
