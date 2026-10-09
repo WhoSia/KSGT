@@ -38,7 +38,7 @@ function test(){
  const axes=["fidelity","readability"];
  const a={fidelity:[4,5],readability:[4,5]},b={fidelity:[2,3],readability:[2,3]};
  assert.equal(partialOrder(a,b,axes).disposition,"ROBUST_DOMINANCE_ON_MEASURED_AXES");
- const opposing={fidelity:[1,2],readability:[5,6]};
+ const opposing={fidelity:[0.5,1.5],readability:[5,6]};
  assert.equal(partialOrder(opposing,b,axes).disposition,"DEMONSTRATED_TRADEOFF");
  assert.equal(partialOrder({fidelity:[4,5]},b,axes).disposition,"HOLD_MISSING_EVIDENCE");
  assert.equal(partialOrder({fidelity:[2.5,4],readability:[2.5,4]},b,axes).disposition,"INCOMPARABLE_OR_WEAK");
