@@ -4,7 +4,7 @@
   "generation": "IX",
   "current_stage": "G9-P59",
   "stage_type": "HUMAN_REFERENCE_CHOICE_EXPERIMENTAL_DESIGN",
-  "status": "OPEN_G9_P59_V04_LOCAL_CONTRACT_PASS_REMOTE_CI_PENDING_HUMAN_CONTACT_HOLD",
+  "status": "OPEN_G9_P59_V05_LOCAL_DATA_SPLIT_AND_COMPARATOR_PASS_REMOTE_CI_PENDING_HUMAN_CONTACT_HOLD",
   "canonical_notion_id": "3f4ef561-cf92-8163-a7a8-c13d6481855e",
   "parent_stage": "G9-P58",
   "latest_closed_stage": "G9-P58",
@@ -21,7 +21,7 @@
     "corrected_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "experiments/g9-p59/semantic_critic_v04.cjs",
+  "current_artifact": "experiments/g9-p59/dataset_v05.cjs",
   "current_constitution": "experiments/g9-p53/constitution.json",
   "current_question": "Can discourse-given reference and alternative reader knowledge be experimentally separated from mere lexical/length effects in Korean KEEP/EXPLICIT/RESTRUCTURE choices?",
   "current_authority": {
@@ -367,6 +367,7 @@
     "v0.1": "FOUR_AUTHORED_STIMULI_AND_PROTOCOL",
     "v0.2": "EIGHT_COUNTERBALANCED_AUTHOR_INTENTION_FIXTURES",
     "v0.3": "DETERMINISTIC_DATASET_GENERATOR_CRITIC_ADVERSARY_AND_READONLY_CI",
-    "v0.4": "NODE_TYPED_REFERENT_AND_PYTHON_SQL_SCENE_AUDIT_LOCAL_PASS_NO_HUMAN_GOLD"
+    "v0.4": "NODE_TYPED_REFERENT_AND_PYTHON_SQL_SCENE_AUDIT_LOCAL_PASS_NO_HUMAN_GOLD",
+    "v0.5": "FOUR_SYNTHETIC_SOURCE_FAMILIES_32_ROWS_NODE_MATCHED_INPUT_COMPARATOR_AND_SQL_LEAKAGE_AUDIT_LOCAL_PASS_NO_NATIVE_GOLD"
   }
 }
