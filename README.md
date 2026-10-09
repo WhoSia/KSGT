@@ -2,9 +2,19 @@
 
 KSGT studies **how context, information structure, discourse, syntax, register, and factual commitments become natural Korean prose**. The research objective is a passage-level Korean-writing system that can be judged for naturalness and factual integrity against a generic LLM baseline—not AI detector evasion, not a string-blacklist, and not a general proposer/approval/governance theory.
 
-## Current live stage: Generation IX G9-P59 — Reference Choice and Reader-State Alternatives
+## Current live stage: Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation
 
-**As of 2026-10-09: OPEN / P59 internal §v1.3 original P53 12-output / six-family hash audit, original KoSEnd 45k-row schema and GOLEM Korean 30-work CorefUD census / Korean human writing preference HOLD.** [Canonical Notion stage](https://app.notion.com/p/3f4ef561cf928163a7a8c13d6481855e) and [live authority](CURRENT_STAGE.json). G9-P58 remains the latest CLOSED stage; its [terminal ruling](artifacts/g9_p58_terminal_ruling.md) is not reopened.
+**OPEN / 2026-10-09.** Official full name: **KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification**.
+
+This stage inherits **all P59 theory and annotated-data constraints** rather than treating memory or typed reference as a substitute for better writing. The [official P60 program](experiments/g9-p60/RESEARCH_PROGRAM.md) and [GitHub executable P53 output/source/paragraph court](experiments/g9-p60/revision_evaluation_v01.cjs) establish **twelve verified historical generated drafts over six source-brief components, 22 hashed paragraph instances, and a source-connected 3/2/1 retrospective partition**. Eight- versus 14-billion-parameter experiments reuse SCI01/NAR02 and were previously exposed, hence **no genuinely new independent holdout**.
+
+A four-cell **authored toy** demonstrates that removing a repeated connective (surface diagnostic) can coexist with changing an obligatory subset number (factual damage). Source admissibility is **independent** from native reader naturalness and preference; all actual original P53 revisions **0**, native preference evaluations **0**, new trained models **0**. [Read-only P60 CI](.github/workflows/ksgt-g9-p60.yml) is committed; remotely successful execution is **not yet verified**. [P60 Notion mainline page](https://app.notion.com/p/3f4ef561cf9281b88111d47fe9df0fac) · [CURRENT_STAGE.json](CURRENT_STAGE.json).
+
+G9-P59 is preserved as the preceding still-documented research stage; its internal §v0.3–§v1.3 studies remain citable. The latest formally CLOSED stage stays G9-P58; opening P60 does not demand a cosmetic P59 termination or renumbering of historical P54.
+
+## Previous research stage: Generation IX G9-P59 — Reference Choice and Reader-State Alternatives
+
+**P59 preserved prior-stage authority (internal §v1.3): 12 historic P53 outputs across six briefs, KoSEnd 45k-row published original schema, and GOLEM Korean 30-work source census; Korean human writing preference remains HOLD.** [Canonical Notion stage](https://app.notion.com/p/3f4ef561cf928163a7a8c13d6481855e) and [live authority](CURRENT_STAGE.json). G9-P58 remains the latest CLOSED stage; its [terminal ruling](artifacts/g9_p58_terminal_ruling.md) is not reopened.
 
 Research target: explain when writers maintain discourse-given Korean reference (`그중`), make a group explicit, or restructure a passage. This is **not AI-detector evasion** and a synthetic generator–critic does **not** stand in for human naturalness.
 
