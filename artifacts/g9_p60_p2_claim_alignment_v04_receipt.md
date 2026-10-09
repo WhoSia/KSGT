@@ -15,3 +15,6 @@
 
 ## CI and reproducibility
 Last verified prior P2 v03 native GitHub CI: [run #37949866939](https://github.com/WhoSia/KSGT/actions/runs/37949866939) PASS at `5529a18b38ba6cce5cb5d03d2135990bd125949a`. The *new v04 HEAD* requires its own Actions run/commit/job results before any promotion. Friend's server not used. Source of implementation: locally audited P2 v04 public-patch ZIP, with exact hash commitments retained.
+
+
+**P60-P2 v04 native CI receipt (2026-10-10 KST):** [run 37976604421](https://github.com/WhoSia/KSGT/actions/runs/37976604421), job 113976380840, tested commit `6cea0f629559e679a208ef05d22f8cd622d44d0e`, completed `success`. Public source-claim and cross-language audits PASS. The runner does **not** possess the private P53 ZIP or independently human-rated Korean writing. Human meaning and preference both HOLD.
