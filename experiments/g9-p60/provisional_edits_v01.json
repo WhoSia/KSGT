@@ -1,0 +1,45 @@
+{
+  "schema": "ksgt.p60.provisional-revision-metadata.v1",
+  "baseRole": "REAL_P53_MODEL_DRAFT",
+  "candidateCount": 2,
+  "independentSemanticAcceptances": 0,
+  "independentHumanPreferences": 0,
+  "candidates": [
+    {
+      "candidateId": "G9P60:EX09:K_TYPED_PLAN:P1:SOURCE_LABEL_REMOVAL",
+      "originSourceId": "P53_BRIEF:EX09",
+      "originModel": "Qwen3-4B",
+      "componentId": "P53_WORK:EX09",
+      "inheritedSplit": "pilot_train",
+      "baseDraftId": "P53:4B:EX09:K_TYPED_PLAN",
+      "baseParagraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "revisionParagraphSha256": "925f378c6f3dbdac0cd66434fe3c93a23cebce4d8a97163bd92e9094a8284709",
+      "editOperator": "SOURCE_LABEL_REMOVAL",
+      "targetedDefect": "internal evidence labels exposed in prose",
+      "protectedFactCountChangedRelativeToDraft": false,
+      "attributionRemoved": true,
+      "sourceLicenseAndMeaning": "NOT_ADJUDICATED",
+      "epistemicPreservation": "HOLD",
+      "humanPreference": "NOT_OBSERVED",
+      "authority": "ASSISTANT_AUTHORED_TRANSFORMATION_OF_REAL_P53_DRAFT_NOT_HUMAN_EDIT"
+    },
+    {
+      "candidateId": "G9P60:EX09:K_TYPED_PLAN:P1:SOURCE_LABEL_REMOVAL_PLUS_COUNT_DRIFT",
+      "originSourceId": "P53_BRIEF:EX09",
+      "originModel": "Qwen3-4B",
+      "componentId": "P53_WORK:EX09",
+      "inheritedSplit": "pilot_train",
+      "baseDraftId": "P53:4B:EX09:K_TYPED_PLAN",
+      "baseParagraphSha256": "a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596",
+      "revisionParagraphSha256": "365ba48d2003328b93db628dce779d92bc66778af7b43c31cfc7503516875453",
+      "editOperator": "SOURCE_LABEL_REMOVAL_PLUS_COUNT_DRIFT",
+      "targetedDefect": "explicit negative control: 2 -> 3 boxes",
+      "protectedFactCountChangedRelativeToDraft": true,
+      "attributionRemoved": true,
+      "sourceLicenseAndMeaning": "NOT_ADJUDICATED",
+      "epistemicPreservation": "HOLD",
+      "humanPreference": "NOT_OBSERVED",
+      "authority": "ASSISTANT_AUTHORED_TRANSFORMATION_OF_REAL_P53_DRAFT_NOT_HUMAN_EDIT"
+    }
+  ]
+}
