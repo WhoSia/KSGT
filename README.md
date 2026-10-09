@@ -4,7 +4,7 @@ KSGT studies **how context, information structure, discourse, syntax, register, 
 
 ## Current live stage: Generation IX G9-P59 — Reference Choice and Reader-State Alternatives
 
-**As of 2026-10-09: OPEN / v0.4 local synthetic typed-contract PASS / independent Korean semantic judgement and human preference HOLD.** [Canonical Notion stage](https://app.notion.com/p/3f4ef561cf928163a7a8c13d6481855e) and [live authority](CURRENT_STAGE.json). G9-P58 remains the latest CLOSED stage; its [terminal ruling](artifacts/g9_p58_terminal_ruling.md) is not reopened.
+**As of 2026-10-09: OPEN / v0.5 source-family split, reader-state ablation, model comparison interface locally exercised / independent Korean semantic judgement and human preference HOLD.** [Canonical Notion stage](https://app.notion.com/p/3f4ef561cf928163a7a8c13d6481855e) and [live authority](CURRENT_STAGE.json). G9-P58 remains the latest CLOSED stage; its [terminal ruling](artifacts/g9_p58_terminal_ruling.md) is not reopened.
 
 Research target: explain when writers maintain discourse-given Korean reference (`그중`), make a group explicit, or restructure a passage. This is **not AI-detector evasion** and a synthetic generator–critic does **not** stand in for human naturalness.
 
@@ -14,11 +14,14 @@ Research target: explain when writers maintain discourse-given Korean reference 
 - [v0.4 typed closed-construction semantic critic](experiments/g9-p59/semantic_critic_v04.cjs) — actual local PASS for 8 rows/48 cases: 12 typed-contract passes, 4 ambiguous-reader holds and 32 bounded rejects. Closed-template authority only; no general Korean semantic understanding.
 - [v0.4 independent Python/SQLite audit](experiments/g9-p59/split_audit_v04.py) — actual local PASS: 8 development rows, **one** underlying source scene, zero legitimate held-out scene or human gold; rejects fake heldout/scene leakage. Stdlib only.
 - [exact v0.4 local verification receipt](artifacts/g9_p59_v04_local_verification.md) — Git blob identities, Node 22 and Python 3.13 results, one-scene holdout warning, and remote-CI evidence limit.
+- [v0.5 source-family data engine](experiments/g9-p59/dataset_v05.cjs) — 4 authored scenes × 2 targets × 2 orderings × 2 declared reader-accessibility scopes = 32 synthetic rows; 16 development / 8 validation / 8 synthetic-holdout rows. **All four families share one construction template**, so this is not an independently sampled Korean benchmark.
+- [v0.5 Python/SQLite leakage audit](experiments/g9-p59/leakage_audit_v05.py) — independently rehashes JS-generated rows; checks family/scene/normalized source-fact split overlap and detects renamed-source-family aliases.
+- [v0.5 matched model-input and comparator](experiments/g9-p59/model_compare_v05.cjs) — same inputs/dataset SHA, full prediction coverage and structural PASS/HOLD/ABSTAIN receipts. KEEP/EXPLICIT/ABSTAIN are **three deterministic policy fixtures, not fitted models**; never rank naturalness from these results.
 - [read-only CI workflow](.github/workflows/ksgt-g9-p59-v03.yml) — Node and Python tests. The workflow **cannot commit**, tag or push (permissions `contents: read`); actual remote CI confirmation is separately required.
 - **Polyglot routing:** JavaScript handles the current closed surface-construction contract; Python with SQL checks cross-row provenance and leakage independently. Add logic/proof languages such as Datalog, Prolog, SMT-LIB or Lean only once an identified expressivity/verification bottleneck justifies them, and test boundaries explicitly.
 - **Compute deferral:** no friend's server before RITHM and the owner's usage finish. Next-week use is tentative, not authorized automatically. On that Ubuntu host, the apparent `/home/sean/coding/oozoon` path is on SSD; any later substantial computation must use the separately confirmed HDD area only.
 
-**Stage lineage:** v0.1 experimental contrasts → v0.2 counterbalanced fixtures → v0.3 reproducible generator–critic–adversary → v0.4 typed semantic/referent guard and SQL provenance audit. New versions must reduce a genuine scientific uncertainty; mere test inflation is not progress.
+**Stage lineage:** v0.1 experimental contrasts → v0.2 counterbalanced fixtures → v0.3 reproducible generator–critic–adversary → v0.4 typed semantic/referent guard and SQL provenance audit → v0.5 source-family/reader-state/model comparator contracts. New versions must reduce a genuine scientific uncertainty; mere test inflation is not progress.
 
 ## Historical engineering reference: Generation IX G9-P53 — Korean Realization Calculus
 
