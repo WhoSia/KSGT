@@ -80,3 +80,73 @@ These two candidates must **not** be counted as two independent source documents
 ### 10. P60 engineering authority after opening
 
 `CURRENT_STAGE.json` now records current_stage=G9-P60, parent_stage=G9-P59, latest formally CLOSED stage G9-P58, official P60 Notion ID, and P59 history retained without creating a cosmetic terminal ritual. The new CI workflow runs the exact repository Node code and checks the ledger and two provisional candidate links, but its remote success is **not presumed** by merely committing the workflow. A separate local Python ZIP auditor actually read and verified the three original private P53 archives; this does not certify the separately implemented GitHub Node regression unless that code is executed independently.
+
+
+### 11. P60-P1 — Evidence-bound paragraph revision court, not a new P-stage
+
+**Predecessor correction:** Existing P59 P0–§v1.3 is retained as a scientific theory and diagnostic lineage. P60 is formally OPEN under the user-accepted official title; there is no retrospective P59 terminal ritual or invented P54 reuse. Stage labels P60-P1/P2 are engineering phases **inside P60**, not distinct official stage names.
+
+The current [P1 source-linked court](./revision_court_v02.cjs) imports the independently earlier P53 [historical 22-paragraph ledger](./revision_evaluation_v01.cjs) and its [two provisional edits](./provisional_edits_v01.json). These are **12 actual model drafts, six source-brief connected components, 22 hashed draft paragraphs, two assistant-authored candidate modifications of ONE original paragraph, zero human quality measurements, and zero independently verified semantic repairs**. No text from source archives is reprinted in GitHub.
+
+#### 11.1 Source-disjointness as an evidence graph—not an arbitrary random split
+
+Let \(V\) contain source works, source editions, generator briefs, model-output paragraphs, proposed revisions and any near-duplicate/copy evidence. The contamination graph carries links only under a documented source-identity witness: common frozen brief, actual content hash, parent-to-revision relation, or independently verified same-source/near-duplicate relation. Entire connected components must receive the same split:
+\[
+\forall (u,v)\in E_{\mathrm{verified}},\quad \mathrm{split}(u)=\mathrm{split}(v).
+\]
+**Counterfactual link test:** adding a verified edge between historical \`EX09\` (\`pilot_train\`) and \`EX10\` (\`pilot_dev\`) correctly invalidates the split. An unknown lexical similarity is **not** a verified contamination edge; lack of a recorded edge does not certify actual independence. In particular, the existing P53 \`reserved_reaudit\` partition is historically exposed and may never be marketed as a fresh test set.
+
+A revision's sourceWork, sourceComponent, parent paragraph hash and inherited split must agree simultaneously; a different work ID with a coincidentally matching paragraph SHA is a forgery to reject. The completed split is retrospective only: any independent confirmatory claim requires new source works admitted **before** prompting, model selection, evaluator calibration or judging.
+
+#### 11.2 A four-axis, proof-carrying revision record
+
+For every candidate \((s,x,y)\) record independent dimensions:
+1. **Semantic admissibility** \(A(y\mid s,W)\in\{\mathrm{PASS},\mathrm{FAIL},\mathrm{HOLD}\}\), where \(W=(F,E,L,I)\) includes protected facts, epistemic attribution, licensed additions and writer intent.
+2. **Named-defect repair** \(D(y;x,d)\) with a *specified, independently witnessed* defect \(d\), so that merely making more changes is not success.
+3. **Collateral preservation** \(C(y;x,W)\), recognizing that removing a citation label can also remove a necessary attribution even when the new prose looks smoother.
+4. **Reader outcomes** \(Q(y)\): blinded Korean referent comprehension and separate writing preference, each with a source/work-anchored measurement record.
+
+No single criterion may be filled from another's score. The P1 \`evidenceReceipt\` validator requires candidate, source component, evidence axis, reviewer identity, protocol identity, witness ID, reviewer independence attestation and blinded candidate order for reader assessments. **Schema completeness is not proof the external evidence is genuine**. The current program deliberately does not promote it to semantic PASS or human preference; independent witness verification needs a trusted ingestion and assessment layer, not merely an arbitrary client-supplied ID.
+
+For the two actual historically anchored edit candidates:
+- \`SOURCE_LABEL_REMOVAL\`: base-to-revision cardinality mutation not observed, **but** attribution necessity and epistemic force HOLD. Do not call this a validated improvement.
+- \`SOURCE_LABEL_REMOVAL_PLUS_COUNT_DRIFT\`: deliberately changes one source-draft count \`두 상자\` to \`세 상자\`. This is **a draft-relative controlled mutation**, not independent proof of external factual truth or falsehood. It is an adversarial failure witness for any judge that ignores protected numbers.
+
+Both edits inherit the **same** P53 EX09 source component and \`pilot_train\`; no one-to-two inflation of independent source observations.
+
+#### 11.3 How to measure quality without post-treatment selection laundering
+
+An admissibility gate can make conditioning on passing edit outputs highly selective. Define independent events for source-work \(s\), model arm \(a\): \(A_{s,a}=1\) (source admissible), \(D_{s,a}=1\) (named defect fixed), \(C_{s,a}=1\) (no collateral damage), and \(H_{s,a}=1\) (blinded native Korean reader prefers candidate over matched comparator). One comprehensive target would be
+\[
+J_a=P(A_{s,a}=1\ \wedge D_{s,a}=1\ \wedge C_{s,a}=1\ \wedge H_{s,a}=1)
+\]
+with each event *independently evidenced*. This is a proposed construct, **not** observed in P53/P60 today.
+
+If among \(n\) source works exactly \(w\) joint events are independently verified to hold and \(l\) verified not to hold, while \(u=n-w-l\) are unresolved, the finite-set rate is only identifiable within:
+\[
+\boxed{\frac{w}{n}\le J_a^{(\mathrm{these\ works})}\le\frac{w+u}{n}}.
+\]
+This is a sharp missing-outcome identification range, *not a confidence interval or a population estimate*. Currently \(w=l=0\) for six historical work components; interval [0,1]. A style-only closed-template diagnostic cannot narrow it.
+
+For valid paired comparisons, report both *unconditional eligibility rates* (how often each model's outputs remain source-safe) and the conditional preference among works where both competing candidates pass. The conditional comparison alone can be misleading because the sets of eligible source works differ between candidate arms. Repeat variants are clustered by source work, not scored as independent panel subjects.
+
+#### 11.4 Precommitted adversarial contrast and falsification
+
+The earlier P60 two-axis synthetic \(2\times2\) crosses:
+- nominal source count preserved versus deliberately changed;
+- duplicated-connective surface proxy retained versus removed.
+
+The polished-but-fact-changed cell exposes failure of surface-only judging. **There are no native Korean preference labels in the four cells**. Extend the future panel with \`NO_EDIT\`, minimal attribution-preserving revision, naive style polishing, and P59 discourse-state planning under equal evidence and token/computation budgets. Test:
+- source number/polarity/causal and epistemic changes with independently verified original facts;
+- an authored citation-removal counterexample where source attribution is compulsory;
+- duplicate-source transitive leakage after the benchmark split has been frozen;
+- evaluator reverse-order and verbosity-bias controls;
+- clear versus competing referent contexts where writer meaning is identical.
+
+**Reject the distinctive KSGT writing advantage** if matched ordinary source-aware editing equals or exceeds the discourse-guided candidate on independent eligible source works and genuine blinded Korean preference. Strong synthetic graph invariants are engineering evidence, not proof that the system writes better.
+
+#### 11.5 Execution status / hard limitations
+
+The JS P1 regression was executed in a V8 harness using the exact GitHub file bodies, original JSON ledger and explicit test stubs for Node built-ins; this **verifies logical regressions but is NOT a native Node/Actions execution receipt**. A separate Python stdlib validator checks the JSON source/parent/authority invariants when CI executes it. No private P53 archive was re-downloaded in this iteration. No new human gold, no true independent holdout, no friends' compute. Remote Actions workflow and exact Node PASS require an authentic CI/job receipt; workflow existence is not sufficient.
+
+**P60-P1 OPEN implementation; P60 remains official live stage; latest formally closed is G9-P58.**
