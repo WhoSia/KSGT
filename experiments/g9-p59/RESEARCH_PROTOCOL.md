@@ -92,3 +92,19 @@ The primary future target is a source-admissible improvement in actual Korean wr
 **Evaluation gates:** source rights and scene-disjointness -> semantic/factual admissibility (FAIL/PASS/HOLD) -> calibrated human or independent annotation evidence on separate quality axes -> tentative within-genre paired comparison. If human labels are not available, report NOT_OBSERVED instead of inventing a winner. Use source-family/document clustering and order-swap negative controls for eventual judges; unmeasured style axes cannot be scored.
 
 **Stop condition:** no Korean writing-quality or Transformer superiority claim based on synthetic oracle tests, near-copying, judge self-agreement, AI detection rates or translated English evaluation scores. For the future resource-limited study, prioritize existing **human-annotated Korean phenomenon-specific corpora and eval critic calibration**, then small blind source-admissible paired revisions if volunteers are available.
+
+## P59 internal §v1.0 — source-confirmed paper custody and annotation authority audit (2026-10-09)
+
+**Same G9-P59 stage; no new P-stage or paper title.** Twelve primary paper PDFs were read (title/author/abstract verified) and metadata-renamed/moved with unchanged IDs from Drive [00 Literature Radar](https://drive.google.com/drive/folders/1MLtYh0pv8QUZDReYzRqjDrOjRkSJAD16) to [10_PAPERS Canonical Literature Commons](https://drive.google.com/drive/folders/1D2M4LHcejREhlyp6vTd71xxLLx-6ldUP). All 12 move destination memberships were independently read back, and title-level canonical duplicate discovery found no same-title file in 10_PAPERS. **Byte-wise duplicate comparison across all Drive assets remains unperformed.** Exact 12 file IDs and study-specific evidence transport constraints appear under [cumulative THEORY_V06.md §v1.0](./THEORY_V06.md).
+
+**Correction:** KoSEnd (Yu et al. 2025) is NOT a homogeneous fully-human-labeled benchmark. Section 3.3 describes human pilot annotation of a limited sample, followed by **LLM annotation of cases not manually judged**; paper limitations explicitly mention this risk. Retire all prior shorthand that calls the entire dataset 'human annotated naturalness'. The human pilot cannot be identified in our system per row until the **original released annotations** and label provenance are inspected. No raw external dataset is currently in canonical custody just because a PDF is saved.
+
+**Korean quality validation contracts:**
+- KoSEnd: naturalness of sentence-final forms, with per-label authority and calibration status; no whole-passage prose ranking.
+- KoGEM: 1,524 grammar multiple-choice items, only grammar competence.
+- GOLEMcoref: 2026 full paper has fiction-coreference descriptions across seven languages; Korean raw sample and **rights** must be examined before any evaluation run. Article ≠ raw annotated stories ≠ preferred reference expression.
+- EditEval, WritingBench and Jourdan revision evaluation: use the methods for paired writing/editing evaluation; do not transport English genre scores, model-judge accuracy or user preference to Korean.
+- SummEval, ACES, RARR and G-Eval: source fidelity, adversarial semantic mistakes and judge bias are diagnostics rather than evidence of Korean prose quality.
+- Original 2023 Zheng et al. MT-Bench paper is still not verified in Drive. The two extra uploaded PDFs are distinct 2024 papers: MT-Bench-101 and Chatbot Arena.
+
+**Stop rule:** keep actual Korean writing quality **HOLD** until source-disjoint native material, rights-verified original labels, and independent reader/writer evaluation exist. External paper claims remain citable with precise task/annotation provenance but cannot silently become new primary experimental outcomes.
