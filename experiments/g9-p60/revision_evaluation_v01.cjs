@@ -4,6 +4,7 @@
    Re-read original archives for an independent byte-for-byte audit. */
 const assert=require("node:assert/strict");
 const crypto=require("node:crypto");
+const provisional=require("./provisional_edits_v01.json");
 const HEX=/^[a-f0-9]{64}$/;
 const arch={
  "4B":"e103185725bbc328dbb13ad90fafa83d9cc4089c8829ad1a78e211045e047d46",
@@ -62,14 +63,14 @@ function ledger(records=models){
   paragraphId:r.id+":P"+(i+1),baseDraftId:r.id,sourceWorkId:"P53_BRIEF:"+r.brief,
   sourceComponentId:"P53_WORK:"+r.brief,split:r.split,model:r.model,
   baseParagraphSha256:hash,sourceArchiveSha256:r.archiveHash,
-  role:"ORIGINAL_GENERATED_PARAGRAPH_NOT_EDIT",revisionCandidateIds:[],
+  role:"ORIGINAL_GENERATED_PARAGRAPH_NOT_EDIT",revisionCandidateIds:provisional.candidates.filter(x=>x.baseDraftId===r.id&&x.baseParagraphSha256===hash&&x.componentId==="P53_WORK:"+r.brief).map(x=>x.candidateId),
   protectedFacts:"NOT_YET_MAPPED",writerIntent:"NOT_YET_MAPPED",
   revisionVerdict:"NOT_EVALUATED",nativeHumanPreference:"NOT_OBSERVED",
   humanEvidenceIds:[],historicalExposure:"PRIOR_P53_GENERATION"
  })));
  return {schema:"ksgt.g9.p60.paragraph-ledger.v1",stage:"G9-P60",
   sourceArchiveCount:3,records:items,connectedSourceWorks:graph.items,
-  actualRevisions:0,humanPreferenceObservations:0,freshHoldout:false};
+  actualRevisions:0,provisionalEdits:provisional.candidateCount,humanPreferenceObservations:0,freshHoldout:false};
 }
 function audit(r=models){
  assert.equal(r.length,12);
@@ -85,10 +86,19 @@ function audit(r=models){
   assert.equal(x.kind,"GENERATED_DRAFT_NOT_REVISION");
   assert.equal(x.semanticAdmissibility,"NOT_ADJUDICATED");assert.equal(x.humanPreference,"NOT_OBSERVED");
  }
- for(const x of l.records)assert.equal(x.revisionCandidateIds.length,0);
+ assert.equal(provisional.candidates.length,2);
+ assert.equal(l.records.filter(x=>x.revisionCandidateIds.length>0).length,1);
+ assert.equal(l.records.reduce((n,x)=>n+x.revisionCandidateIds.length,0),2);
+ for(const x of provisional.candidates){
+  assert.ok(HEX.test(x.revisionParagraphSha256));
+  assert.equal(x.sourceLicenseAndMeaning,"NOT_ADJUDICATED");
+  assert.equal(x.humanPreference,"NOT_OBSERVED");
+  assert.equal(x.epistemicPreservation,"HOLD");
+ }
+ assert.ok(provisional.candidates.some(x=>x.protectedFactCountChangedRelativeToDraft===true));
  return {stage:"G9-P60",test:"PASS",outputs:r.length,paragraphs:l.records.length,
   components:graph.items.length,sourceSplitCounts:{pilot_train:3,pilot_dev:2,reserved_reaudit:1},
-  exactOutputDuplicateCount:0,actualRevisions:0,humanPreferenceObservations:0};
+  exactOutputDuplicateCount:0,actualRevisions:0,provisionalEdits:2,humanPreferenceObservations:0};
 }
 function validateCandidate(c,base){
  if(!base||c.baseParagraphSha256!==base.baseParagraphSha256 ||
