@@ -124,7 +124,7 @@ function tests(){
  assert.throws(()=>validateCandidate({...c,sourceComponentId:"WRONG"},original),/UNMATCHED/);
  assert.throws(()=>validateCandidate({...c,semanticAdmissibility:"PASS"},original),/UNWITNESSED_SEMANTIC/);
  assert.throws(()=>validateCandidate({...c,nativeHumanPreference:"PREFERRED"},original),/UNWITNESSED_HUMAN/);
- const damaged=models.map(x=>({...x}));damaged[0].split="pilot_dev";
+ const damaged=models.map(x=>({...x}));damaged[1].split="pilot_train";
  assert.throws(()=>components(damaged),/CONTAMINATION/);
  const x=contrast();assert.equal(x.length,4);
  assert.equal(x.filter(v=>v.typedFactPreservation).length,2);
