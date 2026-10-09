@@ -21,7 +21,7 @@
     "corrected_zip_sha256": "ad069321ecc89d8d968407298c2b9436d66d05402935a249a66643f0450159ef"
   },
   "predecessor_disposition": "P52_BOUND_MODEL_OPERATIONAL_BUT_SPAN_INTERFACE_FAILED_0_OF_24_PRIMARY",
-  "current_artifact": "experiments/g9-p59/dataset_v05.cjs",
+  "current_artifact": "experiments/g9-p59/intervention_v06.cjs",
   "current_constitution": "experiments/g9-p53/constitution.json",
   "current_question": "Can discourse-given reference and alternative reader knowledge be experimentally separated from mere lexical/length effects in Korean KEEP/EXPLICIT/RESTRUCTURE choices?",
   "current_authority": {
