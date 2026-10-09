@@ -38,3 +38,4 @@ jobs:
         run: |
           node experiments/g9-p59/memory_v07.cjs
           node experiments/g9-p59/memory_v07.cjs --emit-histories | python3 experiments/g9-p59/memory_audit_v07.py
+          node experiments/g9-p59/delayed_query_v07.cjs
