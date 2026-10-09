@@ -19,6 +19,10 @@ jobs:
       - name: Run historical output-hash, component and two-axis regression
         run: |
           node experiments/g9-p60/revision_evaluation_v01.cjs
+      - name: P1 proof-carrying revision court and contamination controls
+        run: |
+          node experiments/g9-p60/revision_court_v02.cjs
+          node experiments/g9-p60/revision_court_v02.cjs --emit-revisions | python3 experiments/g9-p60/revision_audit_v02.py
       - name: Verify ledger invariants without requiring private P53 source archives
         run: |
           node experiments/g9-p60/revision_evaluation_v01.cjs --emit-ledger > "$RUNNER_TEMP/p60-ledger.json"
