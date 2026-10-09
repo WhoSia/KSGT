@@ -65,3 +65,18 @@ GOLEMcoref provides a separate Korean fiction coreference authority with officia
 On genuinely disjoint newly sourced Korean passages, compare (i) `NO_EDIT`, (ii) minimal source-aware edit, (iii) unconstrained style polish, (iv) P59 discourse-state-guided realization, under equal candidate access and compute budgets. Log factual admissibility, named-defect repair, unintended collateral changes, reader referent recovery, blinded preference, observed uncertainty and source-component cluster. Any system that preserves sources but does not improve measured readers' writing judgments **does not establish KSGT's proposed writing advantage**.
 
 **Current disposition:** P60 OPEN / actual historical metadata and 22 paragraph hashes independently locally audited / controlled formal contrast constructed / real semantic and human editing gold HOLD / fresh document-disjoint writing superiority and neural advantage NOT_IDENTIFIED. Friend server unused.
+
+### 9. Actual P53-anchored provisional edits, with semantic hold
+
+The initial 22-hash ledger has now been extended with **two genuinely constructed *candidate revisions* of one actual prior P53 model paragraph**. The base is Qwen3-4B, EX09, K_TYPED_PLAN, paragraph 1, base SHA-256 `a6edd668bdaa2f35cf38504b27177374d8eb0b95d13d45c92cc2503b40059596`. The private local text is not added to the repo.
+
+- `SOURCE_LABEL_REMOVAL` removes four `자료 n에 따르면` labels that were exposed in the prose. Candidate SHA-256 `925f378c6f3dbdac0cd66434fe3c93a23cebce4d8a97163bd92e9094a8284709`. This might improve flow, but might remove necessary attribution, so **epistemic and semantic admissibility HOLD**, native Korean human preference NOT_OBSERVED.
+- `SOURCE_LABEL_REMOVAL_PLUS_COUNT_DRIFT` makes the same surface change and deliberately changes one `두 상자` occurrence to `세 상자`. Candidate SHA-256 `365ba48d2003328b93db628dce779d92bc66778af7b43c31cfc7503516875453`. This is an **authored deliberate factual-drift negative control relative to the original paragraph**, not an LLM-generated independent failure or source-grounded truth adjudication.
+
+The [public metadata ledger](./provisional_edits_v01.json) records exact parent hashes, source component, revision type, edited text hash and unmeasured authorities without publishing the original text. The [P60 execution contract](./revision_evaluation_v01.cjs) links both candidates to the **one** matching ledger paragraph. Thus the evidence counts are **12 actual prior model drafts / 22 actual draft paragraphs / 2 provisional assistant-derived revision candidates / 0 independently validated correct revisions / 0 measured human writing preferences**.
+
+These two candidates must **not** be counted as two independent source documents or as two demonstrated improvements. The fact-changing control is a designed challenge to a style-only editor; changing surface markers itself is not human-calibrated style improvement. Future source-aware F/E/L/W adjudication must decide whether citations were originally required.
+
+### 10. P60 engineering authority after opening
+
+`CURRENT_STAGE.json` now records current_stage=G9-P60, parent_stage=G9-P59, latest formally CLOSED stage G9-P58, official P60 Notion ID, and P59 history retained without creating a cosmetic terminal ritual. The new CI workflow runs the exact repository Node code and checks the ledger and two provisional candidate links, but its remote success is **not presumed** by merely committing the workflow. A separate local Python ZIP auditor actually read and verified the three original private P53 archives; this does not certify the separately implemented GitHub Node regression unless that code is executed independently.
