@@ -59,7 +59,7 @@ function graphAudit(originals,revisionRows,extraLinks=[]){
   if(!SHA.test(r.baseParagraphSha256)||!SHA.test(r.revisionParagraphSha256))throw Error("INVALID_EDIT_HASH");
   const original=originals.find(p=>p.paragraphId===r.baseParagraphId);
   if(!original||original.baseParagraphSha256!==r.baseParagraphSha256)throw Error("UNMATCHED_PARENT");
-  if(original.sourceComponentId!==r.sourceComponentId||original.split!==r.sourceSplit)throw Error("REVISION_SPLIT_LEAK");
+  if(original.sourceComponentId!==r.sourceComponentId||original.sourceWorkId!==r.sourceWorkId||original.split!==r.sourceSplit)throw Error("REVISION_SPLIT_LEAK");
   union("work:"+r.sourceWorkId,"paragraph:"+r.revisionParagraphSha256);
   union("paragraph:"+r.baseParagraphSha256,"paragraph:"+r.revisionParagraphSha256);
  }
@@ -142,10 +142,11 @@ function audit(){
   ()=>candidateGate({...provisional.records[0],independentHumanPreference:"PREFERRED"}),
   ()=>candidateGate(provisional.records[0],[{candidateId:provisional.records[0].id,sourceComponentId:"WRONG",level:"MODEL_SELF",axis:"style",verdict:"PASS"}]),
   ()=>evidenceReceipt({candidateId:"x",sourceComponentId:"c",axis:"fidelity",level:"EXTERNAL_SOURCE",verdict:"PASS"}),
-  ()=>interval(0,0,0)
+  ()=>interval(0,0,0),
+  ()=>graphAudit(draft.records,[{...provisional.records[0],sourceWorkId:"P53_BRIEF:EX10"},provisional.records[1]])
  ];
  const expected=["REVISION_SPLIT_LEAK","TRANSITIVE_SOURCE_SPLIT_LEAK","UNSUPPORTED_AUTHORITY_PROMOTION",
- "UNSUPPORTED_AUTHORITY_PROMOTION","MISBOUND_SOURCE_EVIDENCE","UNVERIFIED_WITNESS","INVALID_OUTCOME_DENOMINATOR"];
+ "UNSUPPORTED_AUTHORITY_PROMOTION","MISBOUND_SOURCE_EVIDENCE","UNVERIFIED_WITNESS","INVALID_OUTCOME_DENOMINATOR","REVISION_SPLIT_LEAK"];
  negative.forEach((fn,i)=>assert.throws(fn,new RegExp(expected[i])));
  const toy=revisionAxesToy(),bounded=interval(6,0,0);
  assert.deepEqual([bounded.lower,bounded.upper,bounded.unknown],[0,1,6]);
