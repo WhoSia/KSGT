@@ -127,3 +127,15 @@ The earlier tagged-target task identifies *which* entity should be stored during
 For **zero-error recovery under every future query**, \(Z\) must distinguish all \(N^2\) ordered pairs; otherwise two pairs collide and differ in at least one slot, which a future query can select. Hence \(m\geq\lceil2\log_2N\rceil\). At \(N=8\), the zero-error floor is **six bits**. This does not bound optimal average query accuracy of every three-bit encoder; it bounds simultaneous perfect recovery.
 
 The [delayed query regression](./delayed_query_v07.cjs) enumerates 64 independent pairs and both queries: an authored three-bit first-only memory achieves 72/128 correct; a three-bit last-only memory achieves 72/128; a six-bit two-slot memory achieves 128/128. These are engineered witness policies, not trained neural performance measurements. The test reinforces that a future-unknown query may require preserving more than one referent. Future experiments should expand to relations among referents and discourse updates before asserting a real Korean-writing advantage.
+
+### F. A proposed learnable architecture, not yet a model result
+Let \(H=(O_1,\ldots,O_T)\) be a discourse stream and \(Q\) an unknown future reference query. A model forms memory \(Z_T=F_\theta(H)\) **before** observing \(Q\). The retrieval head estimates \(p_\phi(R_Q\mid Z_T,Q)\). If future queries have a specified distribution, a natural theoretical bottleneck objective is
+\[
+\min_{\theta,\phi}\mathbb E[-\log p_\phi(R_Q\mid Z_T,Q)]
+\quad\mathrm{subject\ to}\quad I(H;Z_T)\leq m\log2.
+\]
+For literally discrete \(m\)-bit states, \(I(H;Z_T)\leq m\log2\) automatically; with continuous learned activations, dimensionality is not bit count and precision/compression must be declared separately. Randomizing future queries forces memory selection to balance multiple potentially relevant referents instead of exploiting a known single target.
+
+An explicit entity-memory implementation could update slots \(z_{i,t+1}=g_{i,t}z_{i,t}+(1-g_{i,t})u_\theta(z_{i,t},O_{t+1})\), with salience-based allocation and later query-conditioned retrieval. **This is an architecture proposal**, not a new expressivity theorem: Transformer attention and selective recurrent blocks can approximate analogous conditional updates.
+
+Natural Korean generation adds an expression decision head only **after** a meaning-preservation gate. No source fidelity or human style reward can be learned merely from synthetic exact-string tests. When independent reader and writer data exist, separately estimate reader belief calibration, correct antecedent recovery, source entailment, and KEEP/EXPLICIT/RESTRUCTURE preference instead of a single 'humanlike' scalar.
