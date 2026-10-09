@@ -292,3 +292,71 @@ KSGT can make a rigorous contribution before having a large GPU cluster by provi
 If human annotations are scarce, do not draw uniformly from thousands of near-identical synthetic transformations. Build a *predeclared disagreement matrix* among eligible model or critic policies, grouped by genuine source-document families and linguistic phenomena (partitive recovery, source contradiction, connective coherence, register and revision). Select a limited, diverse **diagnostic** set covering distinct predicted failure signatures, while reserving completely unseen documents for independent evaluation. This is a methodological proposal for reducing annotation waste, not an estimator of population-level writing superiority. Report selection-induced bias, missing coverage and uncertainty; do not turn the chosen hard cases into a representative leaderboard.
 
 Together these propositions connect the v0.7–v0.8 information-theoretic memory results to a refutable human-writing benchmark without inventing native Korean annotations, pretending English summarization scores transfer numerically, or training an expensive frontier model.
+
+
+## P59 internal §v1.0 — Original-paper admission, label provenance and resource-constrained Korean writing validation
+
+**Status:** research-design extension **inside G9-P59**, with 12 newly admitted original research PDFs in the canonical Drive literature commons. This subsection does not create a new P-stage, model, public leaderboard, or empirical human-preference result.
+
+### A. Verified source receipt and correction
+
+On 2026-10-09, 12 original PDFs were opened and their author/title/abstract matched, then renamed and moved **in place** from Drive \`00_INTAKE — Literature Radar\` to \`10_PAPERS — Canonical Literature Commons\`. Their existing Drive file IDs were preserved; move receipts and final parent membership were verified. Ten are the initially missing paper topics; two further papers are **MT-Bench-101 (Bai et al., 2024)** and **Chatbot Arena (Chiang et al., 2024)**, neither of which is the originally cited **Zheng et al. 2023 MT-Bench / LLM-as-a-Judge paper (arXiv:2306.05685)**. KLUE (Park et al., 2021) had already been held. **PDF availability does not imply raw dataset custody, annotation permissions, or dataset-split verification.**
+
+Direct original-file receipts:
+- [Wu et al. 2025, WritingBench](https://drive.google.com/file/d/1IbUF4RhNkMM8336txCx5-gw-lr9c-j6W/view)
+- [Dwivedi-Yu et al. 2024, EditEval](https://drive.google.com/file/d/1A2NcyWeUo8BAMqp8FWATIBz-QxSECTN0/view)
+- [Yu et al. 2025, KoSEnd](https://drive.google.com/file/d/14tiEgX0NDXHU7CSm0jef5drhB4Js6qCc/view)
+- [Kim et al. 2025, KoGEM](https://drive.google.com/file/d/1PgpbciMydfSObDbNxZhnqS2ndHC2A-0S/view)
+- [Fabbri et al. 2021, SummEval](https://drive.google.com/file/d/11AVNzeVzwFRhlRnkMek-nPi2oPwrsDhx/view)
+- [Jourdan et al. 2025, Scientific Text Revision](https://drive.google.com/file/d/1q3M8fC7XJp1tAw4YYzp0jtI5AumN0Oqn/view)
+- [Amrhein, Moghe & Guillou 2023, ACES](https://drive.google.com/file/d/1HbgkW62Nu2Ypua_kBkunEsnpF8feNMfW/view)
+- [Gao et al. 2023, RARR](https://drive.google.com/file/d/181Lpp8DFqUaEJIbNzDvzwcQej8n94zgH/view)
+- [Liu et al. 2023, G-Eval](https://drive.google.com/file/d/1uYKz-fsd64r8DeTCx7K6WJ1awcZ04aLA/view)
+- [van Cranenburgh et al. 2026, GOLEMcoref](https://drive.google.com/file/d/1hHUWG90ImTBhXnX_sTihPaCMraBk-1lb/view)
+- [Bai et al. 2024, MT-Bench-101](https://drive.google.com/file/d/1YoGbd4djCHXwGANLBN4DimUAGEXT3QGq/view)
+- [Chiang et al. 2024, Chatbot Arena](https://drive.google.com/file/d/1x_Wslejz-YKKlpMWAT93kbQ21vWk0uE6/view)
+
+**Critical correction to §v0.9:** KoSEnd is NOT a homogeneous independent-human-rated corpus. Its source paper describes 3,000 sentences and 15 candidate ending forms; subsection 3.3 reports limited **native-human annotation** for a small pilot (20 sentences and 300 ending instances per difficulty level), followed by **LLM annotation for non-human-annotated cases**, with model agreement calibrated against human majority votes. The authors explicitly acknowledge LLM-label risks in Limitations. The raw dataset has not yet been imported and we cannot assign per-row human authority until original labels and provenance fields are inspected. Thus **KoSEnd_ALL != HUMAN_GOLD**.
+
+### B. Direct results that transport—and ones that do not
+
+| Original evidence | What the paper actually observes | Authorized use inside KSGT | Forbidden transfer |
+|---|---|---|---|
+| WritingBench (Wu et al., 2025) | Six writing domains, 100 subdomains, query-conditioned criteria, trained critic, own-study human alignment checks | Per-task rubric construction and judge-bias experiments | Treat reported alignment percentage or trained critic as Korean human ground truth |
+| EditEval (Dwivedi-Yu et al., 2024) | Multiple English editing operations; metric/task dependence | Distinguish revision competence from drafting; intervention-relation tests | Treat English reference edits as native Korean idiomatic preference |
+| KoSEnd (Yu et al., 2025) | Korean ending naturalness with mixed human/LLM labels | **Human-pilot-only** potential calibration after label audit; LLM labels require separate uncertainty status | Promote all 3k x 15 variants to independently human-validated writing gold |
+| KoGEM (Kim et al., 2025) | 1,524 Korean grammar MCQs across five linguistic categories | Grammar correctness/competence diagnostics | Infer a smooth Korean essay or reader preference from correct MCQs |
+| SummEval (Fabbri et al., 2021) | 14 metric comparisons, expert/crowd annotated summaries, 23 summarizers | Multidimensional human vs auto-evaluator validation protocol | Transfer English news-summary correlations numerically to Korean writing |
+| ACES (Amrhein et al., 2023) | Approx. 36k translation diagnostic items, 68 phenomena, 146 language pairs | Controlled semantic perturbations and per-error-family profiles | Treat MT challenge-set accuracy as general writing quality |
+| Scientific Revision (Jourdan et al., 2025) | ParaRev 258 revised paragraph pairs, 516 instruction points, expert study with 10 annotators; LLM judge more reliable on instruction adherence than correctness | Separate revision instruction, correctness and preferred final text; design judge abstention | Assume a reference similarity metric always judges useful revisions |
+| RARR (Gao et al., 2023) | Attribution/evidence search with evidence-conserving correction | A source-grounded revision architecture baseline | Infer naturalness or reader preference from attribution alone |
+| G-Eval (Liu et al., 2023) | LLM evaluation of summary/dialogue, with documented own-model bias concerns | Criterion-based judge, swap-order/self-preference audit | Substitute LLM preference for human Korean writing gold |
+| GOLEMcoref (van Cranenburgh et al., 2026) | 827k-token multilingual fiction coreference over 7 languages including Korean | Document-scale referent/zero-anaphora recovery test **if raw rights/annotations pass** | Equate coreference labels to author choice among KEEP/EXPLICIT/RESTRUCTURE |
+| Chatbot Arena (Chiang et al., 2024) | Real pairwise crowdsourced chatbot preference methodology | Human pairwise order randomization and sample-family controls | Claim chatbot preference measurements identify Korean polished-prose quality |
+| MT-Bench-101 (Bai et al., 2024) | Fine-grained long-dialogue task taxonomy | Context tracking/task decomposition ideas | Imply it replaces the original MT-Bench paper or supplies prose gold |
+
+### C. Three distinct claims and an annotation-transport obstruction
+
+For each source \(j\), distinguish **document available** \(P_j\), **released original dataset obtained under verified license** \(D_j\), and **independent-human label on the precise desired variable** \(H_{j,k}\). These are logically different statements:
+\[
+P_j \not\Rightarrow D_j,\qquad D_j\not\Rightarrow H_{j,\text{Korean prose quality}}.
+\]
+A label measuring coreference accuracy cannot stand in for an unobserved Korean writer's stylistic preference. A human annotation on a subset does not elevate AI-annotated remainder to independently human-annotated status. This is *authority nontransport*, not an objection to using helpful proxy tasks.
+
+Let \(X\) be source context and \(Q_k\) a target construct such as reader recovery or naturalness. To transport an observed metric from source evaluation domain \(s\) to target Korean-writing domain \(t\) one would need a calibrated measurement relationship and sufficient overlap, e.g. an evidence-based condition on \(P_s(O\mid Q_k,X)\) versus \(P_t(O\mid Q_k,X)\). **No such general domain-invariance result has been established here.** Accordingly, externally published English correlation coefficients and model leaderboard placements are **methodological comparators, not transported Korean scores**.
+
+### D. Resource-efficient writing benchmark, without pretending to have an LLM cluster
+
+Keep the previous six axes, but split admissible observation sources into different tasks:
+1. **Korean sentence-ending appropriateness:** the released KoSEnd human subcohort, if label provenance/rights are verified; remaining LLM labels stay independent-proxy tier. Test register, particle/ending interactions and reorderings rather than grading whole essays.
+2. **Long-range reader referent reconstruction:** Korean fiction within GOLEMcoref, subject to actual dataset custody, splits by complete story and license verification. Match reference recovery and language-specific zero-anaphora phenomena; this measures discourse competence, not stylistic choice.
+3. **Source-grounded revision utility:** controlled edits with independent source facts; inspect source preservation and task instruction separately, use the Jourdan and EditEval studies to guide study design, not to supply Korean labels.
+4. **Passage-level Korean prose quality:** document/genre-level native writing with blinded human comparisons on *semantically admitted* candidates. No such labeled corpus has been collected here; keep this axis \`NOT_OBSERVED\`.
+
+These four gates cannot be summed automatically. Use a vector-valued outcome and comparisons with missing values explicitly recorded. A cheap structural critic can reject deliberate quantity, polarity, referent and unsupported-fact mutations; it cannot certify a Korean paragraph is fluent. For future limited human time, group items by source/story, balance genres and perturbation families, predeclare a small non-leaked subset, randomize presentation order, and state sampling uncertainty rather than reporting a fake population leaderboard.
+
+### E. Research stopping rule / falsification priority
+
+Stop any claim of "human-level writing" or "architecture advantage" whenever: (i) data/annotation provenance is unverified; (ii) only synthetic toy scripts pass; (iii) a judge was calibrated only on its own model's text; (iv) semantic admissibility remains HOLD; (v) one synthetic scene/template is reused across splits; or (vi) a claimed Korean-native score is derived from imported non-Korean labels. The valuable contribution can be a **calibrated failure diagnostic and independently audited benchmark design** even without building a new frontier LLM.
+
+Next inside this same P59 file: exact provenance field inspection for released KoSEnd and GOLEMcoref raw labels; construct an open, license-compliant Korean multi-phenomenon *diagnostic* baseline; only later pursue a small blinded human Korean-writing evaluation. Raw dataset source rights are checked at ingestion, not assumed because the corresponding article is stored in 10_PAPERS.
