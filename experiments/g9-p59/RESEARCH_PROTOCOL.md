@@ -60,3 +60,12 @@ No training or server use authorized until after RITHM and owner availability, c
 - Compare surface-constant, entropy-only, target-aware and neural/discourse-memory hypotheses with equal evidence access; **do not** give an explicit-state architecture a privileged reader-state vector withheld from baseline Transformers.
 - Required tests: message invariance, referent-label equivariance, zero-probability distractor invariance, equal-entropy mirror witness, probability validation and causal-input isolation. No architecture superiority inferred from passing toy tests.
 - Prior `v0.5` scene-disjoint split remains synthetic only, with a single shared construction template. Reader-choice gold and genuine long-context memory competition remain HOLD.
+
+## P59 internal §v0.7 — finite-memory and delayed-query comparison
+This is one subsection of **the existing P59 stage**, not an independent versioned research page or a new official title. The cumulative mathematical manuscript remains [THEORY_V06.md](./THEORY_V06.md).
+
+Memory question: for N uniformly drawn target identities with only m stored bits and no target-bearing decoder side channel, correct identification cannot exceed min(1,2^m/N). The 5-identity/2-code exhaustive enumeration verifies the bound. All alternatives observe the same symbolic event/role stream.
+
+[Node memory policy experiment](./memory_v07.cjs): 168 target-position-distractor histories, position-only nuisance identities, four-bit one-slot comparisons plus independently reported larger-window payloads. [Python audit](./memory_audit_v07.py): independently recomputes policy outcomes, checks independence from target labels, and rejects a deliberate injected nuisance leak. [Delayed-query test](./delayed_query_v07.cjs): a future-unknown query over two independent eight-way targets requires at least six bits for guaranteed perfect reconstruction of both.
+
+These results benchmark symbolic memory-update *policies*, not actual Transformer, selective SSM or entity-memory neural networks. Any architecture claim requires equal information/role labels, model and activation-memory accounting, matched training data/compute, document-disjoint native Korean evidence and independent meaning/style adjudication. Remote CI and human superiority are not implied by local PASS.
