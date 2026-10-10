@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.14'
+      - name: Install analysis test dependency
+        run: python -m pip install numpy==2.3.5
       - name: Synthetic parser, source-policy and context leakage tests
         run: python -m unittest discover -s infrastructure/personal_server_corpus -p 'test_*.py' -v
       - name: Exact distant-window control regression
