@@ -77,3 +77,5 @@ truncation, escaped strings, trailing bytes, boundary variants, changed-text and
 markup negative controls, and source-custody offsets. Private verify_restart.py
 performs a separate bounded real-data interruption test. G9-P59/P60 remain open.
 
+
+The optional `context_surfaces_bounded.py` uses indexed metadata lookups instead of an all-document Python dictionary and writes separate `_BOUNDED` reports and annotations. Its measurement definitions are unchanged. Final registry status and checkpoint hashes are checked by the receipt integration regression. A local continuation controller may orchestrate verified cohort expansion; consult actual local phase receipts before treating any planned expansion as executed.

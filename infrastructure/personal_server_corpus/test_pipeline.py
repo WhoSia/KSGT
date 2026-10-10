@@ -172,6 +172,7 @@ class ReceiptTests(unittest.TestCase):
                 receipt=json.loads((out/"RUN_RECEIPT.json").read_text())
                 self.assertEqual(receipt["output_hashes"]["CHECKPOINT.json"]["sha256"],p.file_sha(out/"CHECKPOINT.json"))
                 self.assertEqual(json.loads((out/"CHECKPOINT.json").read_text())["status"],"EXECUTED")
+                self.assertEqual(json.loads((out/"CORPUS_SOURCE_REGISTRY.json").read_text())["status"],"EXECUTED")
             finally:
                 db.close()
 

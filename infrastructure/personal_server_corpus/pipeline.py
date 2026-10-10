@@ -404,6 +404,10 @@ def run(root, out, fraction, cap):
     db.close()
 
 def summarize(db, out, registry, started, wall, cap, fraction):
+    atomic(out / "CORPUS_SOURCE_REGISTRY.json", {"status": "EXECUTED",
+        "rights": "OWNER_CONFIRMED_APPROVED_PRIVATE_KSGT_USE_2026_10_11",
+        "approval_record": "User explicitly confirmed approval in current conversation",
+        "signed_agreement_independently_read": False, "sources": registry})
     total = db.execute("SELECT COUNT(*) FROM occurrences").fetchone()[0]
     canonical, paragraphs = db.execute("SELECT COUNT(*),COALESCE(SUM(paragraphs),0) FROM canonical").fetchone()
     conflicts = db.execute("SELECT COUNT(*) FROM (SELECT doc_id FROM occurrences GROUP BY doc_id HAVING COUNT(DISTINCT flat)>1)").fetchone()[0]
