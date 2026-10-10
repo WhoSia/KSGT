@@ -157,6 +157,26 @@ class ContextTests(unittest.TestCase):
             self.assertEqual(r["counts"]["targets_with_prior2_cue"],1)
             self.assertEqual(r["counts"]["targets_with_prior5_cue"],1)
 
+class AtomicRetryTests(unittest.TestCase):
+    def test_transient_replace_permission_failure_recovers(self):
+        from unittest.mock import patch
+        from pathlib import Path
+        import tempfile
+        with tempfile.TemporaryDirectory(dir=".") as directory:
+            target=Path(directory)/"checkpoint.json"
+            target.write_text('{"status":"RUNNING"}',encoding="utf-8")
+            real_replace=p.os.replace
+            calls=[]
+            def replacement(source,destination):
+                calls.append(1)
+                if len(calls)==1:
+                    raise PermissionError("Synthetic transient sharing conflict")
+                return real_replace(source,destination)
+            with patch.object(p.os,"replace",side_effect=replacement),patch.object(p.time,"sleep"):
+                p.atomic(target,{"status":"EXECUTED"})
+            self.assertEqual(len(calls),2)
+            self.assertEqual(json.loads(target.read_text())["status"],"EXECUTED")
+
 class ReceiptTests(unittest.TestCase):
     def test_final_checkpoint_matches_receipt_hash(self):
         import tempfile

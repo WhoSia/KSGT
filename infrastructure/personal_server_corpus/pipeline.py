@@ -45,7 +45,14 @@ def atomic(path, obj):
         f.write("\n")
         f.flush()
         os.fsync(f.fileno())
-    os.replace(tmp, path)
+    for attempt in range(20):
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError:
+            if attempt == 19:
+                raise
+            time.sleep(0.1)
 
 class Stream:
     """Incrementally decode genuine JSON values, bounded by one source document."""
