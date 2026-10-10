@@ -68,6 +68,22 @@ class FalsificationTests(unittest.TestCase):
         self.assertEqual(r["difference_pp"],-25.)
         self.assertEqual(r["cluster_bootstrap_95_pp"],[-25.,-25.])
         self.assertLess(r["valid_draws"],100)
+    def test_source_key_companion_preserves_weak_collision_only(self):
+        import tempfile,sqlite3,json
+        from pathlib import Path
+        from types import SimpleNamespace
+        from source_key_sensitivity import analyze
+        with tempfile.TemporaryDirectory(dir=".") as directory:
+            root=Path(directory);p=root/"fixture.sqlite";db=sqlite3.connect(p)
+            db.executescript("CREATE TABLE variants(id,units,characters,targets,features); CREATE TABLE components(variant,cluster); CREATE TABLE rows(rid,variant,release,year,format,topic,category,collection,development_overlap); CREATE TABLE exclusions(variant,reason);")
+            for i in (1,2,3):
+                db.execute("INSERT INTO variants VALUES(?,5,10,0,NULL)",(i,));db.execute("INSERT INTO components VALUES(?,?)",(i,i))
+                db.execute("INSERT INTO rows VALUES(?,?,'Fixture','2000','json','Fixture','Fixture','NEWSPAPER',0)",(i,i))
+            db.executemany("INSERT INTO exclusions VALUES(?,?)",[(1,"WEAK_METADATA_DIFFERENT_STRUCTURES"),(2,"DEVELOPMENT_KEY_OVERLAP"),(3,"ID_TEXT_CONFLICT")]);db.commit();db.close()
+            out=root/"result.json";analyze(SimpleNamespace(db=p,out=out));r=json.loads(out.read_text())
+            self.assertEqual(r["groups"]["ALL"]["representation_rows"],1)
+            self.assertEqual(r["groups"]["ALL"]["zero_target_rows"],1)
+            self.assertEqual(r["globally_independent_work_identity"],"HOLD")
     def test_cluster_bootstrap_is_deterministic(self):
         v=np.zeros(len(f.METRICS)*3);v[:3]=[2,1,.5]
         self.assertEqual(f.interval({"a":v},3,42,50),f.interval({"a":v},3,42,50))
