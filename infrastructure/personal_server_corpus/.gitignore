@@ -1,0 +1,8 @@
+__pycache__/
+synthetic_scratch/
+*.sqlite*
+*.jsonl
+*.jsonl.gz
+*.log
+RUN_RECEIPT.json
+FROZEN_CONFIG.json

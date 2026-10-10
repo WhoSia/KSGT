@@ -1,0 +1,23 @@
+name: KSGT personal corpus infrastructure
+on:
+  push:
+    paths:
+      - 'infrastructure/personal_server_corpus/**'
+      - '.github/workflows/ksgt-personal-corpus.yml'
+  pull_request:
+    paths:
+      - 'infrastructure/personal_server_corpus/**'
+      - '.github/workflows/ksgt-personal-corpus.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Synthetic parser, source-policy and context leakage tests
+        run: python -m unittest discover -s infrastructure/personal_server_corpus -p 'test_*.py' -v
