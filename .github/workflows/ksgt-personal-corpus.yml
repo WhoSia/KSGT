@@ -21,3 +21,5 @@ jobs:
           python-version: '3.14'
       - name: Synthetic parser, source-policy and context leakage tests
         run: python -m unittest discover -s infrastructure/personal_server_corpus -p 'test_*.py' -v
+      - name: Exact distant-window control regression
+        run: python infrastructure/personal_server_corpus/distant_window_control.py --test
