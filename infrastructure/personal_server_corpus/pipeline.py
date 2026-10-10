@@ -455,6 +455,7 @@ def summarize(db, out, registry, started, wall, cap, fraction):
     with (out / "SHARD_HASH_MANIFEST.jsonl").open("w",encoding="utf-8") as f:
         for row in db.execute("SELECT member,kind,path,bytes,sha256 FROM shards ORDER BY member,kind"):
             f.write(json.dumps(dict(zip(["member","kind","path","bytes","sha256"],row)))+"\n")
+    atomic(out / "CHECKPOINT.json", {"status": "EXECUTED", "members": len(members), "documents":total})
     outputs = {p.name: {"bytes":p.stat().st_size,"sha256":file_sha(p)}
                for p in out.glob("*") if p.is_file() and p.suffix != ".sqlite" and "sqlite-" not in p.name and p.name != "RUN_RECEIPT.json"}
     atomic(out / "RUN_RECEIPT.json", {"status": "EXECUTED", "started_utc": started, "ended_utc": now(),

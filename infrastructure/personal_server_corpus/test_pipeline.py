@@ -157,6 +157,24 @@ class ContextTests(unittest.TestCase):
             self.assertEqual(r["counts"]["targets_with_prior2_cue"],1)
             self.assertEqual(r["counts"]["targets_with_prior5_cue"],1)
 
+class ReceiptTests(unittest.TestCase):
+    def test_final_checkpoint_matches_receipt_hash(self):
+        import tempfile
+        import sqlite3
+        from pathlib import Path
+        with tempfile.TemporaryDirectory(dir=".") as directory:
+            out=Path(directory)
+            db=sqlite3.connect(out/"corpus.sqlite")
+            try:
+                p.init_db(db)
+                p.atomic(out/"CHECKPOINT.json", {"status":"RUNNING"})
+                p.summarize(db,out,[],p.now(),0,0,.01)
+                receipt=json.loads((out/"RUN_RECEIPT.json").read_text())
+                self.assertEqual(receipt["output_hashes"]["CHECKPOINT.json"]["sha256"],p.file_sha(out/"CHECKPOINT.json"))
+                self.assertEqual(json.loads((out/"CHECKPOINT.json").read_text())["status"],"EXECUTED")
+            finally:
+                db.close()
+
 if __name__=="__main__":
     unittest.main(verbosity=2)
 
