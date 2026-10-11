@@ -87,3 +87,10 @@ The optional `context_surfaces_bounded.py` uses indexed metadata lookups instead
 The primary two/five-unit past-minus-equidistant-future estimand averages target differences within each eligible document, then gives each document equal weight. Numeric cue presence, counter-compatible candidate proxies, lexical persistence, topic-balanced and central-position views, and non-target pseudoanchors remain distinct diagnostics. Cluster bootstrap uncertainty moves linked source versions together. Rule-generated candidate packets contain source offsets and null ground truth; independently adjudicated semantic accuracy remains unavailable.
 
 `p61_segmentation.py` implements a separately declared, bounded paired source/orthographic-proxy sensitivity. `test_p61_directional.py` covers synthetic positive, reversed and negative controls, exact document weighting, source normalization, conditional denominators, null gold and interrupted checkpoint continuation. P61 is proposed; CURRENT_STAGE.json remains P60 and no stage closure or independent human validation is implied.
+
+## Proposed P62 span grounding
+
+P62 adds systematic frozen-source lineage audit, precise candidate spans, a private prediction-blind A/B review instrument and predeclared document-equal directional diagnostics. See [P62_METHOD.md](P62_METHOD.md). Use p62_annotation.py for strict reviewer admission; self-attestation never establishes independent human gold. Inferred omissions have no observed span. All actual semantic validation remains HOLD until independently evidenced judgments exist.
+
+The private execution exposed circular compatibility controls: the post-target quantity defining a counter can also become its own future cue. Anchor exclusion and particle-boundary sensitivities preserve these falsifiers rather than promoting another proxy. Original P61/P62 outcomes remain separate. CURRENT_STAGE remains P60 and PR #1 remains Draft.
+
