@@ -1,5 +1,8 @@
 """Synthetic tests for particle boundaries and circular counter controls."""
 import unittest
+from unittest.mock import patch
+import p62_reference as ref
+import p62_particle
 from p62_counterfactual import measure
 from p62_particle import STRICT,PARTICLE
 from p62_reference import TARGET
@@ -11,6 +14,13 @@ class P62CounterfactualTests(unittest.TestCase):
         f,t=self.fixture();v=measure(f,t,STRICT);self.assertTrue(v["self_hit"]);self.assertEqual(v["masked"]-v["raw"],1)
     def test_other_future_preserved(self):
         f,t=self.fixture(True);v=measure(f,t,STRICT);self.assertTrue(v["self_hit"]);self.assertFalse(v["changed"])
+    def test_particle_mode_restored_after_parser_failure(self):
+        previous=ref.COUNT
+        f,t=self.fixture()
+        with patch.object(ref,"summary",side_effect=[([],{}),RuntimeError("synthetic parser failure")]):
+            with self.assertRaisesRegex(RuntimeError,"synthetic parser failure"):
+                p62_particle.compare(f,t)
+        self.assertIs(ref.COUNT,previous)
     def test_particle_admission(self):self.assertIsNotNone(PARTICLE.search("세 명이 모였다."))
     def test_not_lexical_counter_prefix(self):self.assertIsNone(PARTICLE.search("세 개발자가 모였다."))
     def test_boundary_context_exclusion(self):
