@@ -94,3 +94,8 @@ P62 adds systematic frozen-source lineage audit, precise candidate spans, a priv
 
 The private execution exposed circular compatibility controls: the post-target quantity defining a counter can also become its own future cue. Anchor exclusion and particle-boundary sensitivities preserve these falsifiers rather than promoting another proxy. Original P61/P62 outcomes remain separate. CURRENT_STAGE remains P60 and PR #1 remains Draft.
 
+
+
+## P62-R2 independence and annotation readiness
+
+See [P62_R2_METHOD.md](P62_R2_METHOD.md) for the exhaustive outside-graph CSV audit, duplicate-target contract, revised pseudoanchor admission, sealed source-work review split and private 64-work pilot. Human-ground-truth fields remain null; independently qualified semantic validation is HOLD. Use p62_r2_response.py with an exact frozen packet binding, and retain all earlier P62 falsifications. Read the repository root AGENTS.md for the permanent human-only Git author/committer rule.

@@ -4,7 +4,7 @@ from p62_reference import validate_judgment,reliability,digest
 
 def reviewer_verified(reviewer,registry):
     r=registry.get(reviewer,{})
-    return r.get("qualified") is True and r.get("independence_verified") is True and bool(r.get("verification_evidence")) and bool(r.get("verified_by"))
+    return r.get("qualified") is True and r.get("independence_verified") is True and bool(r.get("verification_evidence")) and bool(r.get("verified_by")) and r.get("verified_by") != reviewer
 
 def admit(items,responses,registry=None):
     registry=registry or {}
