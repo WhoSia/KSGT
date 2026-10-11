@@ -79,3 +79,11 @@ performs a separate bounded real-data interruption test. G9-P59/P60 remain open.
 
 
 The optional `context_surfaces_bounded.py` uses indexed metadata lookups instead of an all-document Python dictionary and writes separate `_BOUNDED` reports and annotations. Its measurement definitions are unchanged. Final registry status and checkpoint hashes are checked by the receipt integration regression. A local continuation controller may orchestrate verified cohort expansion; consult actual local phase receipts before treating any planned expansion as executed.
+
+## Proposed P61 directional evidence
+
+`p61_directional.py` requires a private predeclaration and frozen completed-cohort SQLite inputs. It checkpoints paragraph shards in a separate private run and verifies their SHA-256 on continuation. It preserves exact source structures and adds NFC/whitespace-normalized SHA-256, SHA-512 and byte-length lineage diagnostics. Conservative linked-source components prevent known-key split leakage; repeated titles never establish identity. Content equality is not certification of a real-world source work.
+
+The primary two/five-unit past-minus-equidistant-future estimand averages target differences within each eligible document, then gives each document equal weight. Numeric cue presence, counter-compatible candidate proxies, lexical persistence, topic-balanced and central-position views, and non-target pseudoanchors remain distinct diagnostics. Cluster bootstrap uncertainty moves linked source versions together. Rule-generated candidate packets contain source offsets and null ground truth; independently adjudicated semantic accuracy remains unavailable.
+
+`p61_segmentation.py` implements a separately declared, bounded paired source/orthographic-proxy sensitivity. `test_p61_directional.py` covers synthetic positive, reversed and negative controls, exact document weighting, source normalization, conditional denominators, null gold and interrupted checkpoint continuation. P61 is proposed; CURRENT_STAGE.json remains P60 and no stage closure or independent human validation is implied.
