@@ -5,10 +5,16 @@ from p62_reference import key,digest,bootstrap
 STRICT=ref.COUNT
 PARTICLE=re.compile(STRICT.pattern.replace("(?![가-힣])",r"(?=(?:(?:에서도|에게|에서|으로|에는|은|는|이|가|을|를|의|에|도|만|와|과|로)(?![가-힣])|[^가-힣]|$))"))
 def compare(forms,t):
-    ref.COUNT=STRICT;a,sa=ref.summary(forms,t)
-    ref.COUNT=PARTICLE;b,sb=ref.summary(forms,t)
-    ref.COUNT=STRICT
-    return a,sa,b,sb
+    # Restore the caller's regex even if a parser or summary raises.
+    previous=ref.COUNT
+    try:
+        ref.COUNT=STRICT
+        a,sa=ref.summary(forms,t)
+        ref.COUNT=PARTICLE
+        b,sb=ref.summary(forms,t)
+        return a,sa,b,sb
+    finally:
+        ref.COUNT=previous
 def run(root,out):
     root=pathlib.Path(root);out=pathlib.Path(out);start=time.monotonic()
     seal=json.loads((out/"PARTICLE_SENSITIVITY_PREDECLARATION.json").read_text(encoding="utf-8"))
@@ -41,8 +47,13 @@ def run(root,out):
             counts["zero_target_structures"]+=alltargets==0
             for k,(n,v) in totals.items():result[k].append((work,current,v/n));targets[k]+=n
             for x in packets.get(current,[]):
-                target=x["target"];ref.COUNT=PARTICLE
-                cs=ref.candidates(forms,target);ref.COUNT=STRICT
+                target=x["target"]
+                previous=ref.COUNT
+                try:
+                    ref.COUNT=PARTICLE
+                    cs=ref.candidates(forms,target)
+                finally:
+                    ref.COUNT=previous
                 x["previous_item_hash"]=x["packet_hash"];x["candidate_regime"]="P62_PARTICLE_SENSITIVITY_V2";x["candidates"]=cs
                 x["machine_predictions"]={"authority":"PROVISIONAL_SPAN_PROPOSALS_ONLY","previous_regime":"P62_STRICT_V1"}
                 x["packet_hash"]=key([json.dumps({**x,"packet_hash":None},sort_keys=True,ensure_ascii=False)],"P62-item-particle-v2")
