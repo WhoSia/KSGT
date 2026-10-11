@@ -77,4 +77,25 @@ class P61Tests(unittest.TestCase):
             observed=db.execute("SELECT variant,lineage,known_new FROM documents ORDER BY variant").fetchall();db.close()
             clean=root/"clean";clean.mkdir();db,other=p.extract(SimpleNamespace(source=source,features=feat,out=clean))
             self.assertEqual(observed,db.execute("SELECT variant,lineage,known_new FROM documents ORDER BY variant").fetchall());db.close()
+    def test_paired_locality_uses_same_symmetric_targets(self):
+        from p61_paired_locality import paired
+        forms=["두 명","문장","그중 한 명","문장","문장","문장","문장"]
+        r=paired(forms)["metrics"]
+        self.assertEqual(r["2/PAST_MINUS_FUTURE"]["eligible_targets"],r["2/PAST_MINUS_DISTANT"]["eligible_targets"])
+        self.assertEqual(r["2/PAST_MINUS_FUTURE"]["mean_difference"],1)
+    def test_fragment_observed_coverage_is_not_complete_work_authority(self):
+        from p61_identity import fragment_ranges
+        r=fragment_ranges([["source.3","source.4"],["source.1","source.2"]])
+        self.assertTrue(r["covers_one_through_observed_max"])
+        self.assertFalse(r["full_original_document_certified"])
+        with self.assertRaises(ValueError):fragment_ranges([["source.1"],["source.1"]])
+        with self.assertRaises(ValueError):fragment_ranges([["source.1"],["other.2"]])
+    def test_framed_source_key_prevents_delimiter_collisions(self):
+        from p61_identity import source_key
+        self.assertNotEqual(source_key("r","ab","c","p","d"),source_key("r","a","bc","p","d"))
+    def test_lineage_signature_is_order_invariant(self):
+        from p61_identity import lineage_signature
+        self.assertEqual(lineage_signature(["a","b","a"]),lineage_signature(["b","a"]))
+        self.assertNotEqual(lineage_signature(["a"]),lineage_signature(["a","b"]))
 if __name__=="__main__":unittest.main()
+
