@@ -18,7 +18,7 @@ class P62AnnotationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=pathlib.Path(tmp);packet=root/"packet.jsonl.gz";response=root/"responses.json";out=root/"import.json"
             with gzip.open(packet,"wt",encoding="utf-8") as f:
-                f.write(json.dumps(item,ensure_ascii=False)+"\\n")
+                f.write(json.dumps(item,ensure_ascii=False)+"\n")
             response.write_text(json.dumps([a,b],ensure_ascii=False),encoding="utf-8")
             import_ledger(packet,response,out)
             record=json.loads(out.read_text(encoding="utf-8"))
