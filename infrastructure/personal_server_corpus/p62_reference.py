@@ -233,7 +233,10 @@ def import_ledger(packet,response,out):
     judgments=json.loads(Path(response).read_text(encoding="utf-8"))
     for j in judgments:validate_judgment(items[j["item_id"]],j)
     result={"status":"EXECUTED","qualification_verification":"SELF_ATTESTED_NOT_INDEPENDENTLY_CERTIFIED",
-            "human_ground_truth_promoted":False,"responses":judgments,"reliability":reliability(items,judgments)}
+            "human_ground_truth_promoted":False,"responses":judgments,
+            "self_attested_response_count":len(judgments),
+            "reliability":{"status":"HOLD","independent_labels":0,"paired_items":0,"kappa":None,
+                           "reason":"No independently verified reviewer registry in this import path; use p62_annotation.admit with evidence-backed reviewer registry"}}
     Path(out).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
 
 if __name__=="__main__":
