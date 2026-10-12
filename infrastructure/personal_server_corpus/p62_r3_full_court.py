@@ -5,6 +5,7 @@ semantic judgments. A local operator must verify free disk and controller state.
 """
 import argparse
 import collections
+import contextlib
 import datetime
 import gzip
 import hashlib
@@ -187,55 +188,55 @@ def run(root,out,resume=False,max_new_shards=None):
         declaration=_seal(root)
         out.mkdir(parents=True)
         lock.write_text(json.dumps(declaration,indent=2)+"\n",encoding="utf-8")
-    src=_connect_ro(root/"70_RUNS/context_falsification_20261011/REPLICATION_SOURCE.sqlite")
-    p62=_connect_ro(root/"80_EXPORT/p62_referential_grounding_20261011/P62_PRIVATE.sqlite")
-    db=sqlite3.connect(out/"R3_CHECKPOINT.private.sqlite")
-    _init_checkpoint(db)
-    shards=[x[0] for x in src.execute("select path from shards where kind='paragraphs' order by path")]
-    new=0
-    for ordinal,path in enumerate(shards):
-        done=db.execute("select path,sha256 from completed_shards where ordinal=?",(ordinal,)).fetchone()
-        if done:
-            if done[0]!=path or ref.digest(path)!=done[1]:
-                raise RuntimeError("Committed shard changed; refuse restart")
-            continue
-        if max_new_shards is not None and new>=max_new_shards:break
-        if shutil.disk_usage(root).free<60*1024**3:
-            raise RuntimeError("HOLD_DISK_RESERVE_UNDER_60_GIB")
-        shard_sha=ref.digest(path)
-        counts,rows=_scan_shard(path,p62)
-        with db:
-            for i,row in enumerate(rows):
-                db.execute("insert into document_means values(?,?,?,?,?,?,?,?)",
-                   (ordinal,i,row["strict"],row["work"],row["family"],row["year"],
-                    row["paragraphs"],row["targets"],json.dumps(row["metrics"])))
-            db.execute("insert into completed_shards values(?,?,?,?,?,?)",
-                       (ordinal,path,shard_sha,counts["structures"],counts["paragraphs"],counts["targets"]))
-        new+=1
-        print(json.dumps({"phase":"R3_FROZEN_FULL_COHORT","committed_shard":ordinal,
-                          "new_shards":new,"structures":counts["structures"],
-                          "targets":counts["targets"]}),flush=True)
-    completed=db.execute("select count(*) from completed_shards").fetchone()[0]
-    if completed==len(shards):
-        result=_aggregate(db)
-        if (result["frozen_structures"],result["frozen_paragraphs"],
-            result["literal_targets"])!=CENSUS:
-            raise RuntimeError("Full P62 frozen-cohort census mismatch")
-        result["status"]="EXECUTED_FULL_FROZEN_MACHINE_COURT"
-        result["source_sha256"]=json.loads(lock.read_text(encoding="utf-8"))["source_db_sha256"]
-        result["utc"]=datetime.datetime.now(datetime.timezone.utc).isoformat()
-        output=out/"R3_FULL_FROZEN_MACHINE_RESULTS.json"
-        output.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
-        receipt={"version":VERSION,"status":result["status"],
-                 "result_sha256":ref.digest(output),
-                 "R3_INPUT_SEAL_SHA256":ref.digest(lock),
-                 "human_ground_truth":None,"source_databases_modified":False}
-        (out/"R3_FINAL_SHA256_RECEIPT.json").write_text(json.dumps(receipt,indent=2)+"\n",encoding="utf-8")
-    else:
-        result={"status":"PARTIAL_RESUMABLE","completed_shards":completed,
-                "total_shards":len(shards),"human_labels":0}
-    db.close();src.close();p62.close()
-    return result
+    with contextlib.ExitStack() as stack:
+        src=stack.enter_context(contextlib.closing(_connect_ro(root/"70_RUNS/context_falsification_20261011/REPLICATION_SOURCE.sqlite")))
+        p62=stack.enter_context(contextlib.closing(_connect_ro(root/"80_EXPORT/p62_referential_grounding_20261011/P62_PRIVATE.sqlite")))
+        db=stack.enter_context(contextlib.closing(sqlite3.connect(out/"R3_CHECKPOINT.private.sqlite")))
+        _init_checkpoint(db)
+        shards=[x[0] for x in src.execute("select path from shards where kind='paragraphs' order by path")]
+        new=0
+        for ordinal,path in enumerate(shards):
+            done=db.execute("select path,sha256 from completed_shards where ordinal=?",(ordinal,)).fetchone()
+            if done:
+                if done[0]!=path or ref.digest(path)!=done[1]:
+                    raise RuntimeError("Committed shard changed; refuse restart")
+                continue
+            if max_new_shards is not None and new>=max_new_shards:break
+            if shutil.disk_usage(root).free<60*1024**3:
+                raise RuntimeError("HOLD_DISK_RESERVE_UNDER_60_GIB")
+            shard_sha=ref.digest(path)
+            counts,rows=_scan_shard(path,p62)
+            with db:
+                for i,row in enumerate(rows):
+                    db.execute("insert into document_means values(?,?,?,?,?,?,?,?,?)",
+                       (ordinal,i,row["strict"],row["work"],row["family"],row["year"],
+                        row["paragraphs"],row["targets"],json.dumps(row["metrics"])))
+                db.execute("insert into completed_shards values(?,?,?,?,?,?)",
+                           (ordinal,path,shard_sha,counts["structures"],counts["paragraphs"],counts["targets"]))
+            new+=1
+            print(json.dumps({"phase":"R3_FROZEN_FULL_COHORT","committed_shard":ordinal,
+                              "new_shards":new,"structures":counts["structures"],
+                              "targets":counts["targets"]}),flush=True)
+        completed=db.execute("select count(*) from completed_shards").fetchone()[0]
+        if completed==len(shards):
+            result=_aggregate(db)
+            if (result["frozen_structures"],result["frozen_paragraphs"],
+                result["literal_targets"])!=CENSUS:
+                raise RuntimeError("Full P62 frozen-cohort census mismatch")
+            result["status"]="EXECUTED_FULL_FROZEN_MACHINE_COURT"
+            result["source_sha256"]=json.loads(lock.read_text(encoding="utf-8"))["source_db_sha256"]
+            result["utc"]=datetime.datetime.now(datetime.timezone.utc).isoformat()
+            output=out/"R3_FULL_FROZEN_MACHINE_RESULTS.json"
+            output.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+            receipt={"version":VERSION,"status":result["status"],
+                     "result_sha256":ref.digest(output),
+                     "R3_INPUT_SEAL_SHA256":ref.digest(lock),
+                     "human_ground_truth":None,"source_databases_modified":False}
+            (out/"R3_FINAL_SHA256_RECEIPT.json").write_text(json.dumps(receipt,indent=2)+"\n",encoding="utf-8")
+        else:
+            result={"status":"PARTIAL_RESUMABLE","completed_shards":completed,
+                    "total_shards":len(shards),"human_labels":0}
+        return result
 
 
 if __name__=="__main__":
