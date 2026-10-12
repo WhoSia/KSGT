@@ -99,3 +99,10 @@ The private execution exposed circular compatibility controls: the post-target q
 ## P62-R2 independence and annotation readiness
 
 See [P62_R2_METHOD.md](P62_R2_METHOD.md) for the exhaustive outside-graph CSV audit, duplicate-target contract, revised pseudoanchor admission, sealed source-work review split and private 64-work pilot. Human-ground-truth fields remain null; independently qualified semantic validation is HOLD. Use p62_r2_response.py with an exact frozen packet binding, and retain all earlier P62 falsifications. Read the repository root AGENTS.md for the permanent human-only Git author/committer rule.
+
+
+## P62-R3 typed provenance and large-cohort machine falsification
+
+Read [P62_R3_METHOD.md](P62_R3_METHOD.md) and [P62_R3_FULL_METHOD.md](P62_R3_FULL_METHOD.md). Source-only components include p62_r3_identity.py (typed exact-text relations, unique Unicode span transport and conservative split-exclusion), p62_r3_inference.py (three suffix-blind pre-target candidate policies), p62_r3_machine_court.py (sealed 2,254-item R2 development-packet diagnostic), and p62_r3_full_court.py (read-only, resumable 886,879-structure / 10,698,118-paragraph / 19,255-literal-target frozen cohort court).
+
+New original synthetic tests test Unicode, boundary and repeated-subset failure, post-target noninterference, inherited-policy leakage, source-graph non-equivalence, private packet custody and the single-document full-cohort measurement kernel. Passing GitHub CI does not execute the private full cohort: local private input SHA-256 checks, controller and disk checks, and the final R3 machine receipt are required. All actual semantic recovery and independent human validation remain HOLD. Final human evaluation is intentionally reserved for a much later frozen confirmatory phase. CURRENT_STAGE stays G9-P60; PR #1 remains Draft; follow root AGENTS.md for permanent human-only Git authorship.
