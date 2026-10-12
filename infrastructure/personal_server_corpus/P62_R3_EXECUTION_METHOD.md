@@ -29,3 +29,14 @@ r3_census.py independently reads the completed ingestion metadata and freshly ha
 Run unittest discovery using the existing installed dependency runtime. Synthetic disk fixtures mock available space; a separate regression tests reserve rejection. Production courts retain the real 60 GiB minimum. No global installation is required.
 
 Follow root AGENTS.md: audit both author and committer across complete reachable active-branch history and each new commit. github-actions[bot] may compute CI only, never author, commit, push, tag or merge. Preserve human history and report bot history without automatic rewriting. Keep licensed prose, source identifiers, databases and review packets private. No main merge or stage transition.
+## Executed private R3 evidence and source-span admission
+
+The personal-server R3 court, character-coordinate court and typed constraint court each completed the exact frozen census of 886,879 structures, 10,698,118 paragraphs and 19,255 targets. The bounded shard and real restart executed before full continuation. These are machine-only, development-exposed results.
+
+Inherited structural choices changed for 182 targets and lexical choices for 2,806 targets under eight suffix attacks; prefix construction stayed invariant. Target-local requirements may legitimately affect a typed proposal, but they never become source antecedent candidates. The typed architecture changed 1,197 proposals against the first stream model: 512 gains, 543 losses and 142 different selections. No accuracy gain follows.
+
+Both new models selected one concatenated numeric fragment crossing original source units. The original results are preserved. p62_r3_span_admission.py separately requires a complete unchanged numeric witness in one original unit, rejects forward or malformed spans and quarantines cross-unit or window-truncated fragments. Full audit leaves 5,382 admitted source-fragment proposals from 5,383 raw typed proposals; one cross-unit witness is HOLD. A valid source fragment is explicitly not licensed reference.
+
+The complete ingestion independently verifies 15,889,340 representations, 9,018,434 canonical JSON structures and 100,317,246 paragraphs. Fresh hashes cover all 32,001 committed shards and all 14 unchanged archives. These larger ingestion totals are separate from the frozen R3 population.
+
+Run r3_mechanism_followup.py, r3_postanalysis.py and r3_span_audit.py only on the approved frozen private source paths. Their output remains private. Preserve the initial broad quote/negation over-abstention, prior circular-anchor reversals, uncertain locality results, seven normalized-only quarantines and global source-work independence HOLD. Actual human adjudication remains later-stage and is not a gate to further machine-only research.
