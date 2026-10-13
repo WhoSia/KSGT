@@ -39,7 +39,8 @@ class OriginalGroupCompositionTests(unittest.TestCase):
         r=infer(forms,target(forms),use_target_constraints=True)
         self.assertEqual(len(r["unions"]),1)
         self.assertIsNone(r["unions"][0]["total_cardinality"])
-        self.assertEqual(r["status"],"ABSTAIN_NO_ADMISSIBLE_GROUP")
+        self.assertEqual(r["status"],"HOLD_UNRESOLVED_COORDINATED_UNION_ONLY")
+        self.assertEqual(r["union_diagnostics"][0]["verdict"],"UNRESOLVED_OVERLAP_MAY_MATTER")
         self.assertIsNone(r["selected"])
         self.assertTrue(verify_graph(forms,r))
 

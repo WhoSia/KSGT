@@ -27,3 +27,14 @@ No new private corpus evidence has been collected by this source-only theory not
 ## Relationship to P63
 
 CEGA is a **candidate formal object** that could support a later theory of typed uncertainty propagation in Korean discourse, but a P63 transition is premature if it merely renames this prototype. Require new empirical transfer failures, independent competing models and a boundary with scope-sensitive group/reference choices that goes beyond a trivial finite-set identity. No semantic accuracy, writing-benefit or human-preference claim is authorized by interval correctness.
+
+
+## R4-R1 follow-up: overlap-dependent union-only HOLD
+
+An original authored counterexample revealed a second representation failure: with observed component quantities 3 and 2 and a target-local requirement 4, each individual component fails an individual-group cardinality constraint, yet their potential union may satisfy the requirement under some (unknown) overlap structures. The earlier prototype concluded ABSTAIN_NO_ADMISSIBLE_GROUP solely because both individual group proposals were blocked. This was an overstrong machine assertion about its own candidate space.
+
+The revised court preserves a separately typed possible-union lane. It reports HOLD_UNRESOLVED_COORDINATED_UNION_ONLY when the union remains *conditionally* possible while individual components do not. At a target-local requirement 6, conditional set upper bound 5 rules the union out under finite-set assumptions; the court reports the conditional refutation but never semantic falsehood. A union whose source components are trapped in unverified quote, hypothetical or existential-negation scopes must not be promoted via a cardinality bound.
+
+The source-prefix state SHA-256 is now deliberately computed only from source-prefix evidence and its graph events. Optional target-local constraints affect a separate decision SHA-256. This supports a meaningful noninterference test: after-target edits change some constraint decisions without changing what prefix evidence was observed. This distinction repairs the earlier mixing of prefix-state identity and post-target decision state.
+
+Original regression pairs contrast quantities four versus six, record the union-specific refusal and refutation distinctions, and attack quote-scope promotion and suffix-state contamination. These are authored formal examples, NOT verified natural Korean antecedent judgments or evidence of greater empirical coverage. The failure remains visible in the preceding Git source version and tests.

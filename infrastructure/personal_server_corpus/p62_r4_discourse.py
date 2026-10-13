@@ -9,7 +9,7 @@ import re
 
 from p62_reference import TARGET, NUMBERS
 from p62_r3_stream_inference import COUNT, stream_coordinates
-from p62_r4_group_algebra import union_bounds
+from p62_r4_group_algebra import union_bounds, target_test
 
 VERSION = "P62-R4-discourse-state-v1"
 
@@ -261,10 +261,36 @@ def infer(forms, target, window=1024, use_target_constraints=False):
             else:
                 retained.append(node)
         eligible=retained
-    # A surfaced coordination union competes with its constituents, but has
-    # no proven disjointness or total cardinality. It is a reason to abstain.
-    candidate_ids={n["id"] for n in eligible}
-    competing_unions=[u for u in unions if any(i in candidate_ids for i in u["component_ids"])]
+    # A component blocked for individual-group cardinality can still be part
+    # of a conditionally possible union. Model that case explicitly rather
+    # than silently calling it "no admissible group".
+    evidence_by_id={n["id"]:n for n in nodes}
+    blocked_reasons={x["node_id"]:x["reasons"] for x in blocked}
+    scope_reasons={"DIFFERENT_OR_UNKNOWN_QUOTATION_SCOPE",
+                   "UNTRANSPORTED_HYPOTHETICAL_SCOPE",
+                   "EXISTENTIAL_ASSERTION_NOT_ENTITY_PRESENCE",
+                   "UNKNOWN_GROUP_CARDINALITY",
+                   "NONPLURAL_GROUP"}
+    union_diagnostics=[]
+    possible_unions=[]
+    for union in unions:
+        members=[evidence_by_id[x] for x in union["component_ids"]]
+        if any(set(blocked_reasons.get(m["id"],[])) & scope_reasons for m in members):
+            verdict="HOLD_UNION_UNVERIFIED_ASSERTION_SCOPE"
+        elif constraint is not None and constraint.get("status")=="UNPARSED_TARGET_QUANTITY_HOLD":
+            verdict="HOLD_UNPARSED_TARGET_REQUIREMENT"
+        elif constraint is not None and constraint["counter"]!=union["counter"]:
+            verdict="CONDITIONALLY_REFUTED_COUNTER_TYPE"
+        elif constraint is not None:
+            verdict=target_test(union["conditional_set_bounds"],constraint["cardinality"])
+        else:
+            verdict="POSSIBLE_UNDER_SET_ASSUMPTIONS_NOT_SEMANTIC_GOLD"
+        union_diagnostics.append({"union_id":union["id"],"verdict":verdict,
+                                  "semantic_reference_admitted":False})
+        if verdict in ("POSSIBLE_UNDER_SET_ASSUMPTIONS_NOT_SEMANTIC_GOLD",
+                       "NOT_REFUTED_NOT_VALIDATED",
+                       "UNRESOLVED_OVERLAP_MAY_MATTER"):
+            possible_unions.append(union)
     eligible.sort(key=lambda n:(target_start-n["witness"]["global_end"],n["id"]))
     near=([n for n in eligible if
            (target_start-n["witness"]["global_end"])-
@@ -273,8 +299,10 @@ def infer(forms, target, window=1024, use_target_constraints=False):
     selected=None
     if constraint is not None and constraint.get("status")=="UNPARSED_TARGET_QUANTITY_HOLD":
         status="HOLD_UNPARSED_TARGET_REQUIREMENT"
-    elif competing_unions:
+    elif possible_unions and near:
         status="HOLD_COORDINATED_COMPOSITION_AMBIGUOUS"
+    elif possible_unions:
+        status="HOLD_UNRESOLVED_COORDINATED_UNION_ONLY"
     elif len(near)>1:
         status="ABSTAIN_COMPETING_GROUPS"
     elif not near:
@@ -282,21 +310,30 @@ def infer(forms, target, window=1024, use_target_constraints=False):
     else:
         selected=near[0]
         status="PROVISIONAL_SINGLE_GROUP_SOURCE_FRAGMENT"
-    state={"version":VERSION,"window":window,
-           "prefix_sha256":hashlib.sha256(prefix.encode("utf-8")).hexdigest(),
-           "target_global_start":target_start,
-           "node_ids":[x["id"] for x in nodes],
-           "union_ids":[x["id"] for x in unions],
-           "events":events,
-           "blocked":blocked,
-           "eligible_ids":[x["id"] for x in eligible],
-           "competing_union_ids":[x["id"] for x in competing_unions]}
-    state_digest=_id("R4_STATE",state)
+    # A prefix-state hash must NOT incorporate optional post-target constraints.
+    prefix_state={"version":VERSION,"window":window,
+                  "prefix_sha256":hashlib.sha256(prefix.encode("utf-8")).hexdigest(),
+                  "target_global_start":target_start,
+                  "node_ids":[x["id"] for x in nodes],
+                  "union_ids":[x["id"] for x in unions],
+                  "events":events}
+    state_digest=_id("R4_PREFIX_STATE",prefix_state)
+    decision_digest=_id("R4_DECISION",{
+        "prefix_state_sha256":state_digest,
+        "blocked":blocked,
+        "eligible_ids":[n["id"] for n in eligible],
+        "possible_union_ids":[u["id"] for u in possible_unions],
+        "union_diagnostics":union_diagnostics,
+        "target_local_constraint":constraint,
+        "status":status,
+        "selected_id":selected["id"] if selected else None})
     return {"status":status,"selected":selected,
             "nodes":nodes,"unions":unions,"blocked":blocked,
-            "eligible_ids":state["eligible_ids"],"competing_union_ids":state["competing_union_ids"],
+            "eligible_ids":[n["id"] for n in eligible],
+            "competing_union_ids":[u["id"] for u in possible_unions],
+            "union_diagnostics":union_diagnostics,"decision_sha256":decision_digest,
             "target_local_constraint":constraint,"state_sha256":state_digest,
-            "prefix_sha256":state["prefix_sha256"],"events":events,
+            "prefix_sha256":prefix_state["prefix_sha256"],"events":events,
             "source_custody":"STRICT_UNIT_WITNESSES_VERIFIED",
             "human_ground_truth":None,"semantic_accuracy":None,
             "scope_authority":"SURFACE_SCOPE_PROPOSALS_NOT_TRUTH"}
