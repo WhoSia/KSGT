@@ -16,7 +16,7 @@ R3 stream and typed proposals number 285 and 289; frozen R4 unconstrained and co
 
 Frozen R4 retained five coordinated-union occurrences, three ambiguous-composition target statuses and no union-only recovery. Four union hypotheses were conditionally possible and one lacked admissible assertion/scope premises. One existential-negation observation and zero event-negation observations do not support a broad natural-language negation result.
 
-The unchanged legacy kernel found 18 structural and 133 lexical choice changes across 6,952 suffix perturbations; all three prefix policies stayed invariant. Frozen R4's 1,738 compound suffix/future controls also preserved prefix state. Source-unit joining changed zero proposal/status outcomes here; earlier segmentation falsifications remain preserved, so this is not universal segmentation invariance.
+The unchanged legacy kernel found 18 structural and 133 lexical choice changes across 6,952 suffix perturbations; all three prefix policies stayed invariant. Frozen R4's 1,738 compound suffix/future controls also preserved prefix state. Source-unit joining changed zero proposal-presence or status outcomes here; source-span identity under the artificial joined view was not the estimand. earlier segmentation falsifications remain preserved, so this is not universal segmentation invariance.
 
 ## Architecture revisions, including their failures
 
