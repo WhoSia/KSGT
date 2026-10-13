@@ -11,6 +11,19 @@ from p62_reference import TARGET, NUMBERS
 from p62_r3_stream_inference import COUNT, stream_coordinates
 
 VERSION = "P62-R4-discourse-state-v1"
+
+# Enlarged transparent numeral inventory; unseen quantities must HOLD, not
+# silently turn the target-local compatibility test off.
+R4_NUMBERS = {**NUMBERS, "다섯":5, "여섯":6, "일곱":7, "여덟":8,
+              "아홉":9, "열":10}
+R4_COUNT = re.compile(
+    r"(?P<number>\d+|하나|한|둘|두|셋|세|넷|네|다섯|여섯|일곱|여덟|아홉|열|몇|여러)"
+    r"\s*(?P<counter>가지|마리|차례|명|개|곳|건|팀|편|번|회)"
+    r"(?=(?:에게서|으로|에서|에게|은|는|이|가|을|를|의|에|와|과|도|만)?(?:[^가-힣]|$))")
+UNPARSED_QUANTITY = re.compile(
+    r"^\s*(?P<surface>[가-힣]{1,12}|\d+)\s*(?P<counter>가지|마리|차례|명|개|곳|건|팀|편|번|회)"
+    r"(?=(?:은|는|이|가|을|를|의|와|과)?(?:[^가-힣]|$))")
+
 COORDINATOR = re.compile(
     r"^(?P<left>\s*)(?P<marker>와|과|및|그리고)"
     r"(?P<right>\s+(?:[가-힣]{1,16}\s*)?|\s*)$")
@@ -105,11 +118,16 @@ def _target_local(forms, target, use):
         return None
     suffix=forms[target["unit"]][target["end"]:target["end"]+80]
     prefix=re.match(r"\s*",suffix).end()
-    m=COUNT.match(suffix,prefix)
+    m=R4_COUNT.match(suffix,prefix)
+    if m is None:
+        unknown=UNPARSED_QUANTITY.match(suffix)
+        if unknown is not None:
+            return {"status":"UNPARSED_TARGET_QUANTITY_HOLD", "surface_sha256":hashlib.sha256(unknown.group().encode("utf-8")).hexdigest(),
+                    "authority":"TARGET_LOCAL_SURFACE_ONLY_NOT_ANTECEDENT"}
     if m is None:
         return None
     number=m.group("number")
-    cardinality=int(number) if number.isdigit() else NUMBERS.get(number)
+    cardinality=int(number) if number.isdigit() else R4_NUMBERS.get(number)
     return {"counter":m.group("counter"),"cardinality":cardinality,
             "authority":"OBSERVED_TARGET_LOCAL_CONSTRAINT_NOT_ANTECEDENT"}
 
@@ -140,7 +158,7 @@ def infer(forms, target, window=1024, use_target_constraints=False):
             break
         limit = min(len(source), max(0,target_start-offsets[j]))
         visible=source[:limit]
-        for m in COUNT.finditer(visible):
+        for m in R4_COUNT.finditer(visible):
             a=offsets[j]+m.start()
             b=offsets[j]+m.end()
             if a<lower:
@@ -149,7 +167,7 @@ def infer(forms, target, window=1024, use_target_constraints=False):
             if witness is None or not verify_witness(forms,witness):
                 raise AssertionError("Evidence from original unit must be exact")
             raw=m.group("number")
-            cardinality=int(raw) if raw.isdigit() else NUMBERS.get(raw)
+            cardinality=int(raw) if raw.isdigit() else R4_NUMBERS.get(raw)
             scope=_quote_scope(prefix,a)
             fragment=_clause_before(visible,m.start())
             hypothetical=bool(HYPOTHETICAL.search(fragment))
@@ -224,7 +242,9 @@ def infer(forms, target, window=1024, use_target_constraints=False):
         else:
             eligible.append(node)
     constraint=_target_local(forms,target,use_target_constraints)
-    if constraint is not None:
+    if constraint is not None and constraint.get("status")=="UNPARSED_TARGET_QUANTITY_HOLD":
+        eligible=[]
+    elif constraint is not None:
         retained=[]
         for node in eligible:
             reasons=[]
@@ -247,7 +267,9 @@ def infer(forms, target, window=1024, use_target_constraints=False):
            (target_start-eligible[0]["witness"]["global_end"])<=AMBIGUITY_DISTANCE]
           if eligible else [])
     selected=None
-    if competing_unions:
+    if constraint is not None and constraint.get("status")=="UNPARSED_TARGET_QUANTITY_HOLD":
+        status="HOLD_UNPARSED_TARGET_REQUIREMENT"
+    elif competing_unions:
         status="HOLD_COORDINATED_COMPOSITION_AMBIGUOUS"
     elif len(near)>1:
         status="ABSTAIN_COMPETING_GROUPS"
