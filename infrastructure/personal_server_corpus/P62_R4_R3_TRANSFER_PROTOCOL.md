@@ -1,0 +1,35 @@
+# G9-P62-R4-R3 — Frozen Guarded-v3 Transfer, Source-Dependence Exclusion, and P63 Readiness
+
+Status: SOURCE-ONLY PROTOCOL. A new private R4-R3 cross-container/year experiment has NOT been run. CURRENT_STAGE=G9-P60. GitHub PR #1 remains Draft and unmerged.
+
+## What R4-R2 actually established
+
+The earlier R4-R2 evaluation took 107,730 candidate structures from four frozen source shards. It excluded 18,306 prior-exposed candidates and 1,774 additional structures with directly observed shared long source units. The resulting eligible census was 87,650 original structures, 783,743 paragraphs, and 869 literal targets in 842 target-positive structures; 86,808 structures contained no target. The results were limited to two source containers and observed document publication year 2024, even though the archive release name referenced 2025. A source container is NOT a verified independent intellectual work.
+
+Matched target proposal counts: unchanged R3 typed 289; frozen R4 constrained 264; post-inspection guarded v3 240. Earlier guarded versions v1=227 and v2=228 are retained. The v3-versus-frozen-R4 document-equal rate changed by -2.613 percentage points with descriptive two-container interval [-3.503,0.000]. Do NOT infer reduced or improved semantic reference accuracy. Eight gains, 32 losses, and 44 changed selections are instrument decisions; source admission and 12,672 original synthetic stress frames do NOT supply human semantic gold. Real R4-R2 corpus findings included overrestrictive coordinator-span admission, attached numeral restrictions, truncated number parsing and source-occurrence ID collision risks. Failure revisions and their original receipts remain immutable.
+
+Private delivery: C:/KSGT_SERVER/80_EXPORT/p62_referential_grounding_20261011/R4_R2_20261013. Historical completion receipts list 150 correctly hashed evidence files and approximately 150.4 GiB available disk. Current live process and disk state must be inspected before new execution. Preserve the earlier P62 circular-anchor reversals, R3 uncertainty, segmentation counterexamples and seven normalized-only holds.
+
+## First objective: a legitimately NEW frozen evaluation population
+
+Audit ALL prior machine exposure, including P59/P61/P62/R2/R3/R4-R2, and the complete indexed reservoir before claiming any source-work-disjoint split. Work from immutable original source-unit fingerprint and independently verified occurrence/container records. Exclude conservatively exact ordered structures, contiguous-unit subsets, code-point-equal resegmentations, verified long-unit shared passages and verified cross-ID aliases. Explicitly quarantine normalized-only matches, possible rewritten works and unverified links. Titles, archive years and approximate lexical similarity never constitute proof of same intellectual work; conversely absence of observed shared text does not prove semantic work independence.
+
+Implement reproducible source-dependence-component split allocation, and seal input source hashes, auditing code hashes, exclusion edges, sample construction algorithm, metrics, split IDs and representation versions BEFORE observing results. Keep an untouched reserved-late pool. Do not leak later evaluation data into repeated model revisions.
+
+The pure reference module p62_r4_r3_transfer_gate.py operates on an already private-indexed small manifest of opaque source tokens, verified-edge assertions, exposure flags and document-metadata years. It is NOT a full-corpus string join or an independent original-source attestation. Its caller-provided witness_verified and lineage_complete booleans MUST be justified by a separate private auditor that actually checks original bytes/units and archived source hashes. A hash token is not inherently non-identifying. Run it only with private files; share original authored synthetic tests and generic methodology, not actual hashed source IDs or licensed text. The 70/20/10 split and 3-container/2-metadata-year coverage thresholds are predeclared operational screens, NOT independent semantic work certification.
+
+A minimally diverse frozen-transfer cohort should include at least three independently observed source containers and two distinct verified DOCUMENT-METADATA publication years, with nontrivial target-positive sample sizes per reported stratum. If the completed reservoir does not support these dimensions, HOLD the externality claim and run a restricted exploratory stratum analysis. Never invent publication years from ZIP filenames. No number of file containers proves globally independent works; cluster-robust population statements require more than raw container count.
+
+## Experimental court
+
+Freeze the v3 lexer and source-guard code as it exists BEFORE any new data outcomes. Run unchanged R3 stream, R3 typed, original frozen R4 and v3 on exactly paired target contexts. Report target and structure denominators, zero-target structures separately, proposals, abstentions, admission failures, source-witness compatibility, union-only holds, guarded negative/quote/hypothetical controls, target-local constraint effects, distinct source containers/years, runtime and memory. Compare with at least one simpler flat/R3 mechanism and retain the actual negative results. Document-equal / observed-work-component clustered descriptive uncertainty requires explicit cluster counts and sampling scope.
+
+Attack genuine source and interpretation boundaries: disjunction versus conjunction, group overlap, discontinuous coordination, unseen Korean numeral clipping, unrelated and scoped negation, reused document-local node IDs, resegmentation and unobserved cross-ID revised works. Formal conditional set bounds are valid only under their stated finite-set premises. They do not show that a Korean coordinated source mention denotes the mathematical union or that a proposed fragment is its true antecedent.
+
+If new data reveals defects in frozen v3, REPORT and preserve the original frozen transfer result first. Any v4 correction belongs in a new declared development lane; compare it on a separate still-unexposed work-disjoint evaluation sample. Never retroactively turn exploratory corrections into a predeclared independent result.
+
+## Promotion gate
+
+P62 closure may be proposed only if source-custody theory, typed group scope, residual countermodels, independent new-cohort selection, formal surviving invariants and competing-mechanism comparisons are documented together and the study yields a genuinely new scientific question beyond guard refactoring. A failed diverse-cohort search means P62 continues; it does not authorize synthetic claims. Semantic antecedent correctness and actual writing benefit remain unmeasured until later independent human confirmation. Stage remains G9-P60; Draft PR #1 is not to be merged or promoted automatically.
+
+Verify WhoSia Git author and committer on every future change, prohibit github-actions[bot] authorship/commit/push/tag/merge, preserve history and prior null findings, keep corpus prose and private source/receipt identifiers local, and verify Notion readback after each completed evidence stage.
