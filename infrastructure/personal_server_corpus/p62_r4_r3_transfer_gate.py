@@ -10,13 +10,14 @@ import hashlib
 import json
 import re
 
-VERSION = "P62-R4-R3-transfer-gate-v1"
+VERSION = "P62-R4-R3-transfer-gate-v2"
 SHA = re.compile(r"^[0-9a-f]{64}$")
 HARD = frozenset((
     "EXACT_STRUCTURE",
     "EXACT_CONTIGUOUS_UNIT_SUBSET",
     "EXACT_CODEPOINT_RESEGMENTATION",
     "VERIFIED_SHARED_LONG_UNIT",
+    "VERIFIED_SHARED_LONG_PASSAGE",
     "VERIFIED_CROSS_ID_ALIAS",
 ))
 UNCERTAIN = frozenset((
@@ -222,3 +223,4 @@ def verify_manifest(manifest):
     expected=manifest.get("manifest_sha256")
     return _sha(expected) and digest({k:v for k,v in manifest.items()
                                      if k!="manifest_sha256"})==expected
+

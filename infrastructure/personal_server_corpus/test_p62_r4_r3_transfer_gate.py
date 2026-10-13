@@ -39,6 +39,10 @@ def split_of(manifest,rec):
 
 
 class TransferGateTests(unittest.TestCase):
+    def test_verified_passage_across_unit_boundaries_is_dependency(self):
+        a,b=[record(x) for x in ('left','right')]
+        m=audit_transfer_split([a,b],[evidence(a,b,'VERIFIED_SHARED_LONG_PASSAGE')])
+        self.assertEqual(m['components'],1);self.assertEqual(split_of(m,a),split_of(m,b))
     def test_exposed_exact_alias_excludes_whole_component(self):
         a=record("previous",exposed=True)
         b=record("candidate")
@@ -179,3 +183,4 @@ class TransferGateTests(unittest.TestCase):
 
 if __name__=="__main__":
     unittest.main()
+

@@ -1,6 +1,6 @@
 # G9-P62-R4-R3 — Frozen Guarded-v3 Transfer, Source-Dependence Exclusion, and P63 Readiness
 
-Status: SOURCE-ONLY PROTOCOL. A new private R4-R3 cross-container/year experiment has NOT been run. CURRENT_STAGE=G9-P60. GitHub PR #1 remains Draft and unmerged.
+Status: PROSPECTIVE PROTOCOL WITH EXECUTED PRIVATE TRANSFER. See P62_R4_R3_EXECUTION.md for actual results; the historical preparation statements below are not current execution status. CURRENT_STAGE=G9-P60. GitHub PR #1 remains Draft and unmerged.
 
 ## What R4-R2 actually established
 
@@ -33,3 +33,8 @@ If new data reveals defects in frozen v3, REPORT and preserve the original froze
 P62 closure may be proposed only if source-custody theory, typed group scope, residual countermodels, independent new-cohort selection, formal surviving invariants and competing-mechanism comparisons are documented together and the study yields a genuinely new scientific question beyond guard refactoring. A failed diverse-cohort search means P62 continues; it does not authorize synthetic claims. Semantic antecedent correctness and actual writing benefit remain unmeasured until later independent human confirmation. Stage remains G9-P60; Draft PR #1 is not to be merged or promoted automatically.
 
 Verify WhoSia Git author and committer on every future change, prohibit github-actions[bot] authorship/commit/push/tag/merge, preserve history and prior null findings, keep corpus prose and private source/receipt identifiers local, and verify Notion readback after each completed evidence stage.
+
+
+## Executed custody implementation addendum
+
+The v2 selector admits an independently verified shared-long-passage relation across original unit boundaries, in addition to unchanged long-unit sharing. The upstream private auditor verifies actual strings, occurrences, original archive/member hashes and calendar-valid document metadata; witness booleans are not treated as their own evidence. The code-point passage threshold is 80. Candidate anchors of length 40 at stride 40 are searched at every other-stream position and extended against exact source text. This is conservative observed dependence, not semantic work identity. The 70/20/10 policy and 3-container/2-year operational screen are unchanged. The actual execution and limitations, including the narrower explicit pre-outcome code-seal scope, are preserved in the execution report.
