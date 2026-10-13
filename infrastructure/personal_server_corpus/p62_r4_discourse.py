@@ -9,6 +9,7 @@ import re
 
 from p62_reference import TARGET, NUMBERS
 from p62_r3_stream_inference import COUNT, stream_coordinates
+from p62_r4_group_algebra import union_bounds
 
 VERSION = "P62-R4-discourse-state-v1"
 
@@ -214,6 +215,9 @@ def infer(forms, target, window=1024, use_target_constraints=False):
                "coordinator_witness":marker,
                "counter":left["counter"],
                "total_cardinality":None,
+               "conditional_set_bounds":union_bounds(
+                   [left["cardinality"],right["cardinality"]],
+                   same_counter=left["counter"]==right["counter"]),
                "total_cardinality_reason":"MEMBERSHIP_OVERLAP_NOT_ESTABLISHED",
                "quote_scope":left["quote_scope"],
                "hypothetical":left["hypothetical"],
@@ -318,5 +322,10 @@ def verify_graph(forms, result):
         if not verify_witness(forms,union["coordinator_witness"]):
             return False
         if union["total_cardinality"] is not None or union["reference_licensed"] is not False:
+            return False
+        expected=union_bounds(
+            [id_to_node[i]["cardinality"] for i in ids],
+            same_counter=id_to_node[ids[0]]["counter"]==id_to_node[ids[1]]["counter"])
+        if union.get("conditional_set_bounds")!=expected:
             return False
     return True
