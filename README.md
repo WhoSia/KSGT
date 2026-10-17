@@ -2,6 +2,10 @@
 
 KSGT studies **how context, information structure, discourse, syntax, register, and factual commitments become natural Korean prose**. The research objective is a passage-level Korean-writing system that can be judged for naturalness and factual integrity against a generic LLM baseline—not AI detector evasion, not a string-blacklist, and not a general proposer/approval/governance theory.
 
+## Personal-server corpus infrastructure
+
+[Streaming ingestion and descriptive experiments](infrastructure/personal_server_corpus/README.md) parse NIKL JSON documents and CSV source units, retain source variants, hash complete members and private output shards, and support bounded checkpoint recovery. Source-policy and paragraph-context measurements are descriptive; they provide no human preference or antecedent gold. Licensed text, private IDs, metadata and execution receipts remain on the personal server. [Read-only synthetic CI](.github/workflows/ksgt-personal-corpus.yml) exercises parser, duplicate-policy and context-leakage controls. This infrastructure does not close G9-P59/P60.
+
 ## Current live stage: Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation
 
 **OPEN / 2026-10-09.** Official full name: **KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification**.

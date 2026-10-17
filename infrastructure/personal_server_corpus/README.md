@@ -1,0 +1,192 @@
+# KSGT personal-server corpus infrastructure
+
+This directory contains private-data streaming tools for the owner-authorized
+Windows research server. Public repository contents are source code and synthetic
+tests only. Never commit corpus prose, document IDs, metadata, local receipts,
+SQLite files or corpus shards.
+
+## Run and storage
+
+Use the existing interpreter. No global installation is required.
+
+```powershell
+python pipeline.py --root C:/KSGT_SERVER --out C:/KSGT_SERVER/70_RUNS/NEW_RUN --fraction .01
+python pipeline.py --root C:/KSGT_SERVER --out C:/KSGT_SERVER/70_RUNS/NEW_RUN --fraction .1
+python source_dependence.py --run C:/KSGT_SERVER/70_RUNS/NEW_RUN
+```
+
+The first run requires the fresh archive hash ledger produced by audit.py in
+70_RUNS/corpus_sprint_20261011_integrity. Review corpus rights before invoking
+text ingestion. The owner confirmed approved private KSGT use in this sprint;
+this is not an independently read signed agreement or redistribution permission.
+
+Outputs reside under 40_CORPUS/documents, paragraphs and sentences, segregated by
+run. JSON forms are preserved unchanged once per strict text structure in each
+run. Documents contain metadata and all original unit IDs. Sentence shards retain
+Unicode-codepoint offsets for JSON and source sentence IDs for CSV. Orthographic
+segmentation is a proxy, not linguistic or source sentence gold. CSV text is not
+duplicated in sentence shards.
+
+SQLite records occurrences, source variants, complete-member checksums and shard
+checksums. 70_RUNS holds private manifests, logs, checkpoints and descriptive
+experiments. Larger fractions may extend a completed cohort with unchanged code,
+inputs and limits; committed members are skipped. Interrupted uncommitted members
+are replayed. Do not change configuration or source inputs within a run.
+
+## Safety and reproducibility
+
+Original ZIPs are opened read-only; there is no full archive extraction or cleanup.
+Processing uses one worker, 64 KiB parsing reads, 16 MiB source-object limits and a
+60 GiB system-volume reserve. The reserve is provisional. Output shard sizes follow
+members; small written-source members create many small shards, a known packaging
+limitation. The small real pilot verified forced process interruption and logical
+restart equality; power-loss and reboot durability are not demonstrated.
+
+The full archive SHA-256 ledger is fresh. Restart checks file size and mtime against
+that ledger; it does not rehash every source archive on each invocation. Complete
+members reach ZIP EOF and validate CRC, with SHA-256 over decompressed bytes.
+Partial capped pilots do not claim full member integrity.
+
+Strict identity hashes the unchanged list of forms, preserving source boundaries.
+A separate cross-format diagnostic applies NFC, removes Unicode whitespace and
+concatenates units while retaining HTML and punctuation. This diagnostic can merge
+different boundary structures and must never be called semantic equivalence.
+Same-ID variants remain available; metadata-only similarity never licenses merge.
+
+## Measurement limits
+
+The source-dependence experiment compares literal reference surfaces and
+orthographic endings under four duplication policies. Selection uses smallest
+members first within each release. Fractions refer to declared data-member bytes;
+complete members can exceed the requested fraction. These are nonrandom engineering
+cohorts, not population estimates.
+
+Use actual document date metadata, preserve partial dates, and never substitute a
+filename year. HTML removal is an explicit feature view; original forms remain
+unchanged. No antecedent gold, recoverability score, human preference, writing
+model, causal AI effect or evaluation holdout is created.
+
+## Tests
+
+```text
+python -m unittest discover -s infrastructure/personal_server_corpus -p "test_*.py" -v
+```
+
+Synthetic tests cover genuine incremental JSON objects, CSV grouping, missing IDs,
+truncation, escaped strings, trailing bytes, boundary variants, changed-text and
+markup negative controls, and source-custody offsets. Private verify_restart.py
+performs a separate bounded real-data interruption test. G9-P59/P60 remain open.
+
+
+The optional `context_surfaces_bounded.py` uses indexed metadata lookups instead of an all-document Python dictionary and writes separate `_BOUNDED` reports and annotations. Its measurement definitions are unchanged. Final registry status and checkpoint hashes are checked by the receipt integration regression. A local continuation controller may orchestrate verified cohort expansion; consult actual local phase receipts before treating any planned expansion as executed.
+
+## Proposed P61 directional evidence
+
+`p61_directional.py` requires a private predeclaration and frozen completed-cohort SQLite inputs. It checkpoints paragraph shards in a separate private run and verifies their SHA-256 on continuation. It preserves exact source structures and adds NFC/whitespace-normalized SHA-256, SHA-512 and byte-length lineage diagnostics. Conservative linked-source components prevent known-key split leakage; repeated titles never establish identity. Content equality is not certification of a real-world source work.
+
+The primary two/five-unit past-minus-equidistant-future estimand averages target differences within each eligible document, then gives each document equal weight. Numeric cue presence, counter-compatible candidate proxies, lexical persistence, topic-balanced and central-position views, and non-target pseudoanchors remain distinct diagnostics. Cluster bootstrap uncertainty moves linked source versions together. Rule-generated candidate packets contain source offsets and null ground truth; independently adjudicated semantic accuracy remains unavailable.
+
+`p61_segmentation.py` implements a separately declared, bounded paired source/orthographic-proxy sensitivity. `test_p61_directional.py` covers synthetic positive, reversed and negative controls, exact document weighting, source normalization, conditional denominators, null gold and interrupted checkpoint continuation. P61 is proposed; CURRENT_STAGE.json remains P60 and no stage closure or independent human validation is implied.
+
+## Proposed P62 span grounding
+
+P62 adds systematic frozen-source lineage audit, precise candidate spans, a private prediction-blind A/B review instrument and predeclared document-equal directional diagnostics. See [P62_METHOD.md](P62_METHOD.md). Use p62_annotation.py for strict reviewer admission; self-attestation never establishes independent human gold. Inferred omissions have no observed span. All actual semantic validation remains HOLD until independently evidenced judgments exist.
+
+The private execution exposed circular compatibility controls: the post-target quantity defining a counter can also become its own future cue. Anchor exclusion and particle-boundary sensitivities preserve these falsifiers rather than promoting another proxy. Original P61/P62 outcomes remain separate. CURRENT_STAGE remains P60 and PR #1 remains Draft.
+
+
+
+## P62-R2 independence and annotation readiness
+
+See [P62_R2_METHOD.md](P62_R2_METHOD.md) for the exhaustive outside-graph CSV audit, duplicate-target contract, revised pseudoanchor admission, sealed source-work review split and private 64-work pilot. Human-ground-truth fields remain null; independently qualified semantic validation is HOLD. Use p62_r2_response.py with an exact frozen packet binding, and retain all earlier P62 falsifications. Read the repository root AGENTS.md for the permanent human-only Git author/committer rule.
+
+
+## P62-R3 typed provenance and large-cohort machine falsification
+
+Read [P62_R3_METHOD.md](P62_R3_METHOD.md) and [P62_R3_FULL_METHOD.md](P62_R3_FULL_METHOD.md). Source-only components include p62_r3_identity.py (typed exact-text relations, unique Unicode span transport and conservative split-exclusion), p62_r3_inference.py (three suffix-blind pre-target candidate policies), p62_r3_machine_court.py (sealed 2,254-item R2 development-packet diagnostic), and p62_r3_full_court.py (read-only, resumable 886,879-structure / 10,698,118-paragraph / 19,255-literal-target frozen cohort court).
+
+New original synthetic tests test Unicode, boundary and repeated-subset failure, post-target noninterference, inherited-policy leakage, source-graph non-equivalence, private packet custody and the single-document full-cohort measurement kernel. Passing GitHub CI does not execute the private full cohort: local private input SHA-256 checks, controller and disk checks, and the final R3 machine receipt are required. All actual semantic recovery and independent human validation remain HOLD. Final human evaluation is intentionally reserved for a much later frozen confirmatory phase. CURRENT_STAGE stays G9-P60; PR #1 remains Draft; follow root AGENTS.md for permanent human-only Git authorship.
+
+
+## Executed P62-R3 machine courts
+
+See [P62_R3_EXECUTION_METHOD.md](P62_R3_EXECUTION_METHOD.md) for the verified full frozen-corpus execution, character-coordinate proposals, typed target-local constraints, source-span admission, preserved counterexamples and independent finished-ingestion census. Machine construction and source-fragment verification do not establish semantic reference. CURRENT_STAGE remains G9-P60; PR #1 remains Draft and human evaluation stays later-stage.
+
+
+## Proposed P62-R4 source-grounded discourse composition
+
+See [P62_R4_METHOD.md](P62_R4_METHOD.md). The source-only prototype [p62_r4_discourse.py](p62_r4_discourse.py) records individual Korean numeral-group witnesses, guarded hypotheses of explicit same-unit coordinated unions, distinct tentative local existential/event-negation assertions, quotation/conditional scopes, prefix-state digests, and source-fragment identity checks. A proposed union retains two unchanged component witnesses and its explicit coordinator as separate spans; its cardinality and semantic reference remain unverified. Near competing groups and unknown target requirements produce abstention or explicit HOLD rather than forced antecedents. The added original synthetic tests in test_p62_r4_discourse.py and test_p62_r4_numerals.py exercise adversarial coordination, disjunction, cross-unit boundaries, unrelated negation, quotation, hypothetical scope, future suffix invariance, and the parsed-versus-unparsed Korean numeral boundary.
+
+The first exact-commit synthetic CI exposed an inherited numeral-vocabulary bypass using the unparsed target-local form for five; this failure is preserved in Git history and fixed by explicit extended numeral recognition and conservative HOLD for unknown target counts. R4 source-only CI passes are not a new-corpus transfer or independent referential-accuracy experiment. This paragraph records the initial proposal; subsequently executed R4-R2/R3 and bounded R4-R4 courts are documented below. User-authorized late-stage independent human semantic/writing evaluation remains postponed. CURRENT_STAGE=G9-P60, PR #1 Draft, and human-only Git author/committer governance remain unchanged.
+
+
+## P62-R4 conditional group algebra and union-only countermodels
+
+See [P62_R4_GROUP_ALGEBRA.md](P62_R4_GROUP_ALGEBRA.md), [p62_r4_group_algebra.py](p62_r4_group_algebra.py), and [test_p62_r4_union_feasibility.py](test_p62_r4_union_feasibility.py). The conditional group algebra records overlap-agnostic finite-set union bounds, with all semantic set-denotation premises explicit and unverified. Authored mathematical counterexamples demonstrate that a two-component (3,2) union may conditionally support a target requirement of four although neither component alone qualifies; the revised R4 machine must report a union-only HOLD, not a false no-group conclusion. A requirement of six is conditionally refuted by the upper bound five under those premises only. All union nodes retain distinct unchanged original-unit component/coordinator witnesses; exact cardinality and true reference remain null.
+
+The prefix-state digest is now distinct from the optionally target-suffix-conditioned decision digest. Synthetic regression tests verify suffix edits leave the former invariant while changing conditional decisions. Root CI covers group-bound source tampering, quote-scope counterexamples, unparsed target numerals and source segmentation; none measures actual Korean antecedent accuracy. The R4 proposal and these additional source-only courts remain development-exposed and need a separately frozen work-separated private corpus transfer before P62 closure or P63 promotion can be considered. CURRENT_STAGE=G9-P60, Draft PR #1 and human-only Git authorship remain unchanged.
+
+
+## Executed P62-R4-R2 fresh-cohort mechanistic falsification
+
+See [P62_R4_R2_EXECUTION.md](P62_R4_R2_EXECUTION.md). All 87,650 eligible structures / 783,743 paragraphs / 869 targets were processed after bounded R3/R4 restart verification and independent source-exclusion audit. Frozen R4 produced 264 constrained proposals versus 289 unchanged R3 typed proposals; final guarded v3 produced 240. Neither proposal coverage nor semantic accuracy improved. Only two source containers and one actual publication year limit inference.
+
+The source-only admission and guarded modules preserve v1/v2 failures, repair source-attribute self-attestation, numeral clipping, unsupported quantity-boundary bypasses, coordinator/modifier topology and cross-occurrence node-ID pooling. Every version's 12,672 authored adversarial constructions is a formal control, not human semantic gold. Private inputs, IDs, text, receipts and checkpoints stay off GitHub. Earlier nulls, reversals and segmentation sensitivity remain intact. CURRENT_STAGE=G9-P60, Draft PR #1 and human-only Git author/committer governance remain unchanged.
+
+
+## Proposed P62-R4-R3 prospective transfer gate
+
+Read [P62_R4_R3_TRANSFER_PROTOCOL.md](P62_R4_R3_TRANSFER_PROTOCOL.md). The new source-only [p62_r4_r3_transfer_gate.py](p62_r4_r3_transfer_gate.py) and original synthetic [test_p62_r4_r3_transfer_gate.py](test_p62_r4_r3_transfer_gate.py) implement a conservative pre-outcome split and custody gate. It receives a PRIVATE already indexed manifest rather than raw corpus data, quarantines prior machine exposure and unverified cross-ID revisions, never equates metadata resemblance to semantic work identity, and keeps conservative exact-surface dependency components in the same seeded split. The gate requires explicit original document metadata publication years, opaque source-container tokens, prior exposure and upstream lineage-completeness witnesses. Exact text/share flags must be INDEPENDENTLY audited against actual source bytes upstream; the selector cannot prove them or global source-work independence by itself.
+
+R4-R2 finished on 87,650 structures and 869 targets but its two observed source containers and 2024-only publication year cannot support cross-container/year generalization. At the time this protocol was proposed, R4-R3 was not executed; its subsequently completed results appear below. The original instruction was to freeze guarded v3 and all unchanged baselines before private new-cohort comparison, with an operational coverage screen of at least three observed source containers and two distinct original-metadata publication years in the frozen transfer subset. Those numbers do not certify statistical independence or semantic same-work identity. Preserve a reserved-late unexposed pool, source/work exclusions and all 150 prior R4-R2 delivery receipts unchanged. Source-only synthetic CI passing does not imply empirical transfer execution or semantic reference accuracy. CURRENT_STAGE stays G9-P60, PR #1 remains Draft and all Git writes remain human-WhoSia authored.
+
+
+## Executed P62-R4-R3 multi-year machine transfer
+
+See [P62_R4_R3_EXECUTION.md](P62_R4_R3_EXECUTION.md). The sealed transfer court executed 615 structures / 634 targets in ten source containers and original document-metadata years 2019–2023. Frozen guarded v3 produced 184 proposals versus 198 original R4 and 212 unchanged R3 typed. Its document-equal raw-proposal change versus R4 is -2.033 percentage points, observed-component descriptive interval [-3.279,-0.968]. Applying a common full-graph admission gate reverses the comparison; this is an admission-policy effect, never semantic accuracy.
+
+Actual raw occurrence and cross-unit passage witnesses support the private source selector; unresolved cross-ID and normalized-only relationships remain quarantined. The new [source witness helpers](p62_r4_r3_source_witness.py) and transfer-gate passage relation are source-only improvements. Authored segmentation regressions reproduce three observed counterfactual reversals. A separate [conditional component-bound prototype](p62_r4_r3_component_bounds.py) addresses shared-symbol and higher-order formal countermodels, without becoming a reference decoder or certifying source custody. A development-only corpus audit finds eight pair components and zero detected higher-order components in 2,154 structures / 2,216 targets. Reserved-late inference remains zero.
+
+P62 closure and P63 promotion remain unsupported. All licensed prose, actual source IDs/hashes, private records and checkpoints remain local. Keep PR #1 Draft/unmerged, CURRENT_STAGE=G9-P60 and both Git identities on the authenticated WhoSia account. Passing synthetic CI does not establish Korean reference correctness.
+
+## Executed P62-R4-R4 singleton mechanism court
+
+See [P62_R4_R4_MECHANISM_EXECUTION.md](P62_R4_R4_MECHANISM_EXECUTION.md). A new three-member census found 159 singleton coordination witnesses but only four observed partitive targets. Exhaustive prior-source screening excluded one, leaving three targets in two containers: unchanged R3 stream/typed proposed zero fragments, while R4 and guarded v3 each proposed two. The separate conditional-diagnostics prototype changes no frozen reference decisions. A predeclared 316-probe source-derived synthetic court found 155 focal pairs with overlap-dependent sum capacity versus impossible sum-plus-one capacity; three pairs reached target-quantity HOLD. V3 selected background groups in 51/40 cases, which is competition evidence without semantic correctness labels.
+
+Ten new authored regressions cover quotation-status masking and conditional quantity bounds, source-occurrence and policy binding, self-attestation and future suffix controls. Original negative results and failed focal-mapping assumptions remain preserved. The tiny observed-target court does not meet the three-container transfer screen or justify P62 closure. Private original prose, actual IDs/hashes and all source/evaluation records remain local. CURRENT_STAGE=G9-P60, Draft PR #1 and WhoSia-only author/committer governance remain unchanged.
+
+
+## Permanent concurrent KSGT research operating model
+
+The [root AGENTS.md](../../AGENTS.md) is the governing doctrine. Personal-server compute and theory/linguistics are **simultaneous research lanes**, not a sequence of jobs in which no intellectual progress is made before the latest server report.
+
+**Theory and Korean linguistics — always active.** Read original literature on Korean partitives, discourse reference, information structure, coordination, quantification, ellipsis, scoped negation and quotation; formulate competing analyses, explicit minimal pairs, formal semantics, proofs and counterexamples. Record source provenance and distinguish actual linguistic evidence from invented examples. Theoretical investigation should progress even when the server is running or cannot produce a new transfer cohort.
+
+**Algorithmic/formal work — always active.** Develop typed source-grounded discourse states, inference contracts, group/role/descriptor mechanisms, uncertainty propagation and new adversarial regression tests. Keep prospective hypotheses separate from post-exposure repairs; do not tune a frozen court. Include prior-art comparisons and a reason for each change beyond better superficial coverage.
+
+**Empirical/server work — asynchronously active.** Use completed private ingestion for independently sealed source-work custody, targeted falsification and controlled transfer with immutable source/code hashes. A running Work Mode job is evidence collection, not the authority deciding what KSGT should study next. Distinguish directly checked source-only CI from private-server receipts and actual human judgments.
+
+**Every substantial research checkpoint:** report three separate states — LINGUISTIC/THEORY, FORMAL/ALGORITHM, EMPIRICAL/SERVER — plus cross-lane contradictions that need testing. Update the canonical P62 Notion research record with actual substantive theoretical contributions, not simply acknowledgements of server checkpoints. Continue the non-server lanes without waiting for exports. Maintain CURRENT_STAGE=G9-P60, Draft PR #1, permanent WhoSia-only Git authorship/committer, and private corpus exclusions. No automatic P63 advancement and no premature human evaluation.
+
+
+## R4-R5 independent linguistic/formal analysis — parallel lane L1
+
+The canonical P62 Notion record now contains an independent L1 theory note on role/descriptor competition, Korean information structure and a conditional feature-identifiability obstruction. This is **not** a new corpus result. A deterministic policy consuming only a fixed flat numeric/recency feature representation cannot distinguish two constructed contexts whose entire input projections are equal; whether actual Korean antecedents differ in those contexts is unmeasured. Any purported role-sensitive advantage requires independently witnessed role cues, exact alignment of candidate identities, and a separate frozen comparison. Surface topic particles are not automatic topic or reference gold. A proposed Warranted Discourse State separates original source witnessing, role hypotheses, quotation/negation causes, candidate proposals and later admission statuses, preserving multiple causal HOLDs rather than overwriting an earlier root reason. See the canonical P62 Notion R4-R5-L1 section for explicit assumptions, constructed examples and bibliographic sources. These theory and linguistic investigations continue while private Work Mode experiments run. No new private server execution or semantic improvement is claimed here.
+
+
+## Executed P62-R4-R5 descriptor/role and scoped-assertion court
+
+The [execution report](P62_R4_R5_EXECUTION.md), [pre-frozen method](P62_R4_R5_METHOD.md), and [formal countermodels](P62_R4_R5_FORMAL_NOTE.md) record the new three-lane checkpoint. **Empirical/server:** five new original JSON members contained 181,248 structures and 1,717 literal targets; independent prior-source custody left 273 frozen-transfer structures/281 targets across five containers and metadata years 2019–2023. Corrected admitted proposals were R3 typed 101, R4 73, guarded v3 82, exact descriptor M1 0, particle proxy M2 14, combined M3 0, and stage-separated M4 82. The first R3 adapter field error is preserved and corrected by separate unchanged-baseline replay. A post-transfer development-only union guard changed one of 32 M2 proposals to HOLD; reserved late remains unexposed. The private delivery has 73 verified hashes and all fourteen raw ZIPs passed a fresh integrity check.
+
+**Formal/algorithmic:** a source-custody invariant holds only for selections from the independently admitted original graph. Subset filters can gain proposals by breaking ambiguity and lose proposals by removing the only candidate; a particle-matched singleton cannot resolve an unresolved union. M4 preserved all frozen v3 source choices but retained all six previously masked quotation root causes in a separate exposed diagnostic replay. **Korean-linguistic:** authored subject/object role-swap and descriptor-omission minimal pairs challenge equality filters; they are hypotheses, not human evidence. Prior Korean coreference work already used grouping, case and recency heuristics, so no theoretical novelty or semantic accuracy is claimed. Exact descriptors had zero eligible matches in the frozen corpus, a prominent negative finding. Source-work independence remains incomplete, P62 closure is unsupported, PR #1 stays Draft, and `CURRENT_STAGE=G9-P60`.
+
+
+## R4-R5-L3 independent source-bound role cues (parallel theory lane)
+
+Read [P62_R4_R5_ROLE_WITNESSES.md](P62_R4_R5_ROLE_WITNESSES.md). The source-only experimental module [p62_r4_r5_role_cues.py](p62_r4_r5_role_cues.py) emits original-unit source-numeric and directly following particle witness coordinates/digests, typed observed particle surface cues, quotation delimiter uncertainty and independently checked admission requirements. It **never** labels AGENT, PATIENT, true topic, semantic coreference or human antecedent gold. In particular Korean -은/-는 is conservatively recorded as TOPIC_OR_CONTRAST_CUE rather than a definite topic. Nearby -이/-가 versus -을/-를 remains morphosyntactic evidence, not an established event-participant role. Cross-original-unit particle reconstruction, unknown lexical attachment and source/quotation uncertainty are held rather than coerced into matches.
+
+The independent authored unit court [test_p62_r4_r5_role_cues.py](test_p62_r4_r5_role_cues.py) tests surface cue contrasts, quotation scope, future-only invariance, original offsets and upstream source-graph admission. Existing R4-R5 v1/v2 baselines and completed private courts remain immutable; new cue features are a developmental research lane awaiting new presealed real-corpus falsification. This contribution is source-only code and linguistic/formal analysis, not a new server execution. Continue non-server literature and theory in parallel with server Work Mode. CURRENT_STAGE=G9-P60; PR #1 stays Draft, Git authorship remains human-only.
+
+## Executed fresh source-witnessed NP/event surface court
+
+See [P62_EVENT_ROLE_EXECUTION.md](P62_EVENT_ROLE_EXECUTION.md), [the frozen method](P62_EVENT_ROLE_METHOD.md), and [the formal note](P62_EVENT_ROLE_FORMAL_NOTE.md). Five previously unused JSON members supplied 151,391 structures and 1,424 literal targets. After original-source alias and shared-passage custody screening, the frozen court evaluated 253 structures/261 targets across five source containers and metadata publication years 2019–2023. Proposal counts were exact descriptor A 2, proximity B 96, particle/group C 8, source-witnessed NP/event D 12, and frozen guarded v3 94. D's conservative parse alternatives and scope constraints sharply reduce coverage relative to proximity and v3, without measuring semantic accuracy. An authored role swap leaves D's decision unchanged, and an adverb-order change triggers a false NP-boundary abstention. Year and selected container are confounded. Reserved-late inference remains zero; global intellectual-work independence is HOLD. The private receipt and source identities remain on the personal server. CURRENT_STAGE=G9-P60 and Draft PR #1 remain unchanged.
