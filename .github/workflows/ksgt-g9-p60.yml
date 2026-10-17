@@ -35,6 +35,9 @@ jobs:
       - name: P2 v05 EX09 U2 logical countermodels and EX10 source-disjointness audit
         run: |
           python3 experiments/g9-p60/solo_claim_court_v05.py --self-test
+      - name: P9 bounded referential authority and provenance negative controls
+        run: |
+          node experiments/g9-p60/p9_authority_gate_v01.cjs
       - name: Verify ledger invariants without requiring private P53 source archives
         run: |
           node experiments/g9-p60/revision_evaluation_v01.cjs --emit-ledger > "$RUNNER_TEMP/p60-ledger.json"
