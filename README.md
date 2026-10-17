@@ -4,7 +4,7 @@ KSGT studies **how context, information structure, discourse, syntax, register, 
 
 ## Exploratory research bridge — Korean referential realization (P9-P34)
 
-[Primary-paper and evidence-authority audit](experiments/g9-p60/P9_NATIVE_REALIZATION_EVIDENCE.md) records directly read Choe (2021, 2022) and Kwon & Lee (2026) findings, the distinct antecedent-interpretation / processing / naturalness / writing-choice outcome types, and post-treatment selection limitations. The separate P26 Windows Work Mode harness **reports** 25/25 repaired tests; its code has **not** been imported or independently executed here. No native human preference gains or formal P9/P64/Generation promotion are claimed. The official GitHub stage remains **G9-P60**.
+[Primary-paper and evidence-authority audit](experiments/g9-p60/P9_NATIVE_REALIZATION_EVIDENCE.md) and [bounded Node authority gate](experiments/g9-p60/p9_authority_gate_v01.cjs) records directly read Choe (2021, 2022) and Kwon & Lee (2026) findings, the distinct antecedent-interpretation / processing / naturalness / writing-choice outcome types, and post-treatment selection limitations. The separate P26 Windows Work Mode harness **reports** 25/25 repaired tests; its code has **not** been imported or independently executed here. No native human preference gains or formal P9/P64/Generation promotion are claimed. The official GitHub stage remains **G9-P60**.
 
 ## Current live stage: Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation
 
