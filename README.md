@@ -2,6 +2,10 @@
 
 KSGT studies **how context, information structure, discourse, syntax, register, and factual commitments become natural Korean prose**. The research objective is a passage-level Korean-writing system that can be judged for naturalness and factual integrity against a generic LLM baseline—not AI detector evasion, not a string-blacklist, and not a general proposer/approval/governance theory.
 
+## Exploratory research bridge — Korean referential realization (P9-P34)
+
+[Primary-paper and evidence-authority audit](experiments/g9-p60/P9_NATIVE_REALIZATION_EVIDENCE.md) records directly read Choe (2021, 2022) and Kwon & Lee (2026) findings, the distinct antecedent-interpretation / processing / naturalness / writing-choice outcome types, and post-treatment selection limitations. The separate P26 Windows Work Mode harness **reports** 25/25 repaired tests; its code has **not** been imported or independently executed here. No native human preference gains or formal P9/P64/Generation promotion are claimed. The official GitHub stage remains **G9-P60**.
+
 ## Current live stage: Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation
 
 **OPEN / 2026-10-09.** Official full name: **KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification**.
