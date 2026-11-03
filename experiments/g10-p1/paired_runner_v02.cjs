@@ -5,7 +5,7 @@
 const fs=require("node:fs");
 const path=require("node:path");
 const crypto=require("node:crypto");
-const {performance}=require("node:perf_hooks");
+const {chat}=require("./provider_client_v01.cjs");
 const {makeMessages,validateTask}=require("./compare.cjs");
 const {build,compactPromptPlan,validate}=require("./discourse_plan_v02.cjs");
 const {realize,brief}=require("./korean_realization_v03.cjs");
@@ -60,33 +60,24 @@ function validateCohort(cohort){
 function promptHash(messages){
  return crypto.createHash("sha256").update(JSON.stringify(messages)).digest("hex");
 }
-async function request(messages,model,temperature,maxTokens){
- const key=process.env.OPENAI_API_KEY;
- if(!key)throw Error("API_KEY_REQUIRED");
- const base=(process.env.OPENAI_BASE_URL||"https://api.openai.com/v1").replace(/\/$/,"");
- if(!(base.startsWith("https://")||/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?(\/|$)/.test(base)))
-  throw Error("UNTRUSTED_ENDPOINT");
- const started=performance.now();
- const resp=await fetch(base+"/chat/completions",{
-  method:"POST",headers:{authorization:"Bearer "+key,"content-type":"application/json"},
-  body:JSON.stringify({model,messages,temperature,max_tokens:maxTokens})
- });
- if(!resp.ok)throw Error("PROVIDER_HTTP_"+resp.status);
- const data=await resp.json();
- const text=data?.choices?.[0]?.message?.content;
- if(typeof text!=="string"||!text.trim())throw Error("EMPTY_GENERATION");
- return {text,usage:data.usage||null,finishReason:data.choices[0]?.finish_reason||null,
-  latencyMs:Math.round(performance.now()-started)};
+async function request(messages,model,temperature,maxTokens,provider){
+ return chat({provider,model,messages,temperature,maxTokens});
 }
+
 async function run(cohort,options,call=request){
  const counts=validateCohort(cohort);
  if(!Number.isInteger(options.maxTokens)||options.maxTokens<1)throw Error("INVALID_MAX_TOKENS");
  if(!Number.isFinite(options.temperature)||options.temperature<0||options.temperature>2)throw Error("INVALID_TEMPERATURE");
  const runLive=options.mode==="run";
- if(runLive&&(!options.model||!process.env.OPENAI_API_KEY&&!options.injected))throw Error("MODEL_AND_KEY_REQUIRED");
+ if(runLive&&!options.injected){
+  if(!options.model||!options.provider)throw Error("MODEL_AND_PROVIDER_REQUIRED");
+  const envName=options.provider==="groq"?"GROQ_API_KEY":options.provider==="openai"?"OPENAI_API_KEY":null;
+  if(!envName)throw Error("UNSUPPORTED_PROVIDER");
+  if(!process.env[envName])throw Error(envName+"_REQUIRED");
+ }
  if(!runLive&&options.mode!=="dry-run")throw Error("EXPLICIT_MODE_REQUIRED");
  const output={schema:"ksgt.g10.p1.paired-generation.v02",status:runLive?"MODEL_REQUESTS_ATTEMPTED":"DRY_RUN_NO_MODEL_CALLS",
-  model:options.model||null,temperature:options.temperature,maxTokens:options.maxTokens,
+  model:options.model||null,provider:options.provider||"INJECTED_OR_DRY_RUN",temperature:options.temperature,maxTokens:options.maxTokens,
   sourceTaskCount:counts.tasks,distinctSourceWorks:counts.sourceWorks,rows:[]};
  for(const task of cohort.tasks){
   const order=seededOrder(ARMS,String(options.seed||0)+":"+task.id);
@@ -98,7 +89,7 @@ async function run(cohort,options,call=request){
     planSchema:arm==="KOREAN_REALIZATION_V03"?realize(task).schema:arm==="LICENSED_PLAN_V02"?build(task).schema:arm==="DISCOURSE_GUIDED"?"ksgt.g10.p1.plan.v01":null};
    if(runLive){
     try{
-     const result=await call(ms,options.model,options.temperature,options.maxTokens);
+     const result=await call(ms,options.model,options.temperature,options.maxTokens,options.provider);
      Object.assign(row,result,{outcome:"GENERATED"});
     }catch(err){row.outcome="FAILED";row.failureClass=String(err.message||err).replace(/[^A-Z0-9_]/gi,"_").slice(0,80);}
    }else row.outcome="NOT_EXECUTED";
@@ -108,19 +99,20 @@ async function run(cohort,options,call=request){
  return output;
 }
 function args(argv){
- const cfg={mode:null,input:null,output:null,model:null,temperature:0,maxTokens:420,seed:"0"};
+ const cfg={mode:null,input:null,output:null,provider:null,model:null,temperature:0,maxTokens:420,seed:"0"};
  for(let i=0;i<argv.length;i++){
   let a=argv[i];
   if(a==="--run"||a==="--dry-run"){if(cfg.mode)throw Error("ONE_MODE_ONLY");cfg.mode=a.slice(2)}
-  else if(["--input","--output","--model","--temperature","--max-tokens","--seed"].includes(a)){
-   const key={"--input":"input","--output":"output","--model":"model","--temperature":"temperature",
+  else if(["--input","--output","--provider","--model","--temperature","--max-tokens","--seed"].includes(a)){
+   const key={"--input":"input","--output":"output","--provider":"provider","--model":"model","--temperature":"temperature",
       "--max-tokens":"maxTokens","--seed":"seed"}[a];
    if(i+1>=argv.length)throw Error("MISSING_"+a);const v=argv[++i];
    cfg[key]=key==="temperature"||key==="maxTokens"?Number(v):v;
   }else throw Error("UNKNOWN_"+a);
  }
  if(!cfg.mode||!cfg.input)throw Error("EXPLICIT_MODE_AND_INPUT_REQUIRED");
- if(cfg.mode==="run"&&(!cfg.model||!cfg.output))throw Error("LIVE_REQUIRES_MODEL_OUTPUT");
+ if(cfg.mode==="run"&&(!cfg.model||!cfg.output||!cfg.provider))throw Error("LIVE_REQUIRES_MODEL_OUTPUT_AND_PROVIDER");
+ if(cfg.provider!==null&&!["groq","openai"].includes(cfg.provider))throw Error("INVALID_PROVIDER");
  return cfg;
 }
 async function main(){
