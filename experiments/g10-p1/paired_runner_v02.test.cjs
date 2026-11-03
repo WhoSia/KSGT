@@ -67,3 +67,23 @@ test("v0.3 arm adds possible Korean realization decisions but uses the same sour
  for(const f of task.facts)assert.ok(p.includes(f));
  for(const a of task.factAnnotations)assert.ok(p.includes(a.move+" / "+a.evidence));
 });
+
+test("Groq live path uses provider-specific key; no accidental OpenAI credential fallback",async()=>{
+ const task=cohort.tasks[0];const save=process.env.GROQ_API_KEY;
+ try{
+  delete process.env.GROQ_API_KEY;
+  await assert.rejects(
+   run({tasks:[task]},{mode:"run",provider:"groq",model:"openai/gpt-oss-20b",maxTokens:480,temperature:0}),
+   /GROQ_API_KEY_REQUIRED/
+  );
+ }finally{
+  if(save===undefined)delete process.env.GROQ_API_KEY;
+  else process.env.GROQ_API_KEY=save;
+ }
+});
+test("explicit CLI Groq selection is required for live run",()=>{
+ const a=args(["--run","--provider","groq","--model","openai/gpt-oss-20b","--input","cohort.json","--output","private.json"]);
+ assert.equal(a.provider,"groq");
+ assert.throws(()=>args(["--run","--model","openai/gpt-oss-20b","--input","cohort.json","--output","private.json"]),/LIVE_REQUIRES_MODEL_OUTPUT_AND_PROVIDER/);
+ assert.throws(()=>args(["--dry-run","--provider","unknown","--input","cohort.json"]),/INVALID_PROVIDER/);
+});
