@@ -520,5 +520,28 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "Implement matched Korean paragraph generation and compare actual outputs using new source-disjoint blind human evaluation"
+  "next_scientific_action": "Implement matched Korean paragraph generation and compare actual outputs using new source-disjoint blind human evaluation",
+  "current_substage": "G10-P1-v0.2 SOURCE_LICENSED_DISCOURSE_PLANNER_AND_FOUR_ARM_PAIRED_HARNESS",
+  "latest_experiment": {
+    "identifier": "G10-P1-v0.2",
+    "type": "ENGINEERING_AND_FALSIFICATION_INSTRUMENT",
+    "status": "PUBLIC_NODE_CI_PASS_LIVE_MODEL_NOT_RUN",
+    "sourceGroups": 3,
+    "sourceGroupAuthority": "AUTHOR_SYNTHETIC_DEVELOPMENT_ONLY",
+    "arms": [
+      "DIRECT",
+      "RICH_PROMPT",
+      "DISCOURSE_GUIDED",
+      "LICENSED_PLAN_V02"
+    ],
+    "planAuthority": "EXPLICIT_AUTHOR_PROVIDED_RELATIONS_ONLY_NOT_AUTOMATIC_KOREAN_PARSING",
+    "allArmsSameLicensedSourceAnnotations": true,
+    "humanReaderRatings": 0,
+    "independentNovelSourceWorks": 0,
+    "sourceFidelitySuperiority": "NOT_MEASURED",
+    "realProseQualitySuperiority": "NOT_MEASURED",
+    "costSuperiority": "NOT_MEASURED",
+    "testPath": "experiments/g10-p1/paired_runner_v02.test.cjs",
+    "protocol": "experiments/g10-p1/paper/PILOT_PROTOCOL_V02.md"
+  }
 }
