@@ -543,5 +543,17 @@
     "paperProtocol": "experiments/g10-p1/paper/REALIZATION_STUDY_V03.md",
     "actualWritingImprovement": "NOT_MEASURED",
     "nextExperiment": "RUN_ALLOWED_SAME_MODEL_ON_3_SOURCE_X_5_ARM_PILOT_AND_INDEPENDENT_NATIVE_EVALUATION"
+  },
+  "provider_connectivity": {
+    "codeStatus": "GROQ_ADAPTER_AND_LOCAL_RUNNER_INTEGRATED_TESTED",
+    "provider": "groq",
+    "baseUrl": "https://api.groq.com/openai/v1",
+    "credentialPolicy": "USER_LOCAL_ENV_GROQ_API_KEY_NEVER_COMMIT_OR_CHAT",
+    "actualAuthenticatedGroqCalls": 0,
+    "liveModelOutputs": 0,
+    "userAction": "Create own GroqCloud key, verify model and quota, run private one-source five-arm smoke locally",
+    "instructions": "experiments/g10-p1/GROQ_LOCAL_SETUP_20261103.md",
+    "confidence": "MOCK_AND_READ_ONLY_CI_ONLY_NO_REAL_INFERENCE",
+    "importedIntoNotionOrGitHubSecrets": false
   }
 }
