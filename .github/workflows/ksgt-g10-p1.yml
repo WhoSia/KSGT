@@ -1,0 +1,30 @@
+name: KSGT G10-P1 Read-Only Generation Harness
+
+on:
+  push:
+    paths:
+      - 'experiments/g10-p1/**'
+      - '.github/workflows/ksgt-g10-p1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (read-only)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Pure local tests (no model calls)
+        run: node --test experiments/g10-p1/compare.test.cjs
+      - name: Prompt-only smoke (no LLM invocation)
+        run: node experiments/g10-p1/compare.cjs --dry-run --input experiments/g10-p1/fixtures/author_original_demo.json > /dev/null
+
+# No write tokens, no push/merge/tag, no model credentials, no artifact uploads.
