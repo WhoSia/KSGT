@@ -10,7 +10,7 @@ User directed closing all G9 tracks and shifting the official active work to Gen
 - G9-P58: latest historically formally closed G9 stage; its original bounded terminal evidence stays intact.
 - G9-P59: historical OPEN, now superseded and **PROGRAM_CLOSED_WITH_UNRESOLVED_QUESTIONS**; no terminal human or semantic success invented.
 - G9-P60: previous active OPEN, now **PROGRAM_CLOSED_TRANSFERRED_TO_G10**; source work / semantic / reader-quality problems retained explicitly.
-- G9-P64 and P64-P9 exploratory/Notion lineage: archived as historically proposed and HOLD-bearing; no unsupported P64-P65 or P9-P10 promotion; no spurious reconstruction as GitHub's current named P64 stage.
+- G9-P61, G9-P62 and G9-P63: Notion archival research branches and existing evidence/counterexamples preserved under Generation IX parent-level program closure; no independent claims of final scientific PASS or fresh Korean human validation.\n- G9-P64 and P64-P9 exploratory/Notion lineage: archived as historically proposed and HOLD-bearing; no unsupported P64-P65 or P9-P10 promotion; no spurious reconstruction as GitHub's current named P64 stage.
 - Existing draft PR and old branches are retained for audit, not silently merged, deleted, or marked scientifically accepted.
 - Every previously audited negative result, counterexample, insufficient baseline or unresolved test remains in force.
 
