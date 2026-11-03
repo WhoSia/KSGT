@@ -49,3 +49,14 @@ test("schema rejects invalid cli flags and nonexplicit mode",()=>{
  assert.throws(()=>args(["--run","--input","x.json"]),/LIVE_REQUIRES_MODEL_OUTPUT/);
  assert.throws(()=>args(["--dry-run","--input","x.json","--nothing"]),/UNKNOWN/);
 });
+
+test("annotated discourse information is available to all arms, never only KSGT",()=>{
+ for(const task of cohort.tasks){
+  const all=ARMS.map(arm=>messages(arm,task)[1].content);
+  for(const content of all){
+   assert.ok(content.includes("원천에서 명시한 메타정보"));
+   for(const rel of task.relations)assert.ok(content.includes("F"+rel.from+" "+rel.type+" F"+rel.to));
+   for(const a of task.factAnnotations)assert.ok(content.includes(a.move+" / "+a.evidence));
+  }
+ }
+});
