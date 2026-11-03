@@ -8,7 +8,8 @@ const crypto=require("node:crypto");
 const {performance}=require("node:perf_hooks");
 const {makeMessages,validateTask}=require("./compare.cjs");
 const {build,compactPromptPlan,validate}=require("./discourse_plan_v02.cjs");
-const ARMS=Object.freeze(["DIRECT","RICH_PROMPT","DISCOURSE_GUIDED","LICENSED_PLAN_V02"]);
+const {realize,brief}=require("./korean_realization_v03.cjs");
+const ARMS=Object.freeze(["DIRECT","RICH_PROMPT","DISCOURSE_GUIDED","LICENSED_PLAN_V02","KOREAN_REALIZATION_V03"]);
 function sourceAnnotations(task){
  if(!task.factAnnotations && !task.relations)return "";
  const a=(task.factAnnotations||[]).map((x,i)=>
@@ -22,13 +23,13 @@ function messages(arm,task){
  validate(task);
  const annotations=sourceAnnotations(task);
  let ms;
- if(arm==="LICENSED_PLAN_V02"){
+ if(arm==="LICENSED_PLAN_V02"||arm==="KOREAN_REALIZATION_V03"){
    const baseline=makeMessages("DIRECT",task);
    ms=[
     baseline[0],
     {role:"user",content:
       "다음 원천만 사용해 한국어 문단 본문을 작성하세요. 먼저 주어진 담화 관계와 정보 상태를 반영하세요. 근거가 없는 인과·비교·지시 대상·감정은 만들지 마세요. 정보구조에 맞는 조사와 생략을 선택하되, 구성 항목을 기계적으로 문장에 나열하지 마세요.\n"+
-       compactPromptPlan(task)+"\n\n"+baseline[1].content}
+       (arm==="LICENSED_PLAN_V02"?compactPromptPlan(task):"출처 근거 담화 계획:\n"+compactPromptPlan(task)+"\n선택 가능한 한국어 정보구조 실현 단서(지침이 아니라 진단 가설):\n"+brief(task))+"\n\n"+baseline[1].content}
    ];
  } else ms=makeMessages(arm,task);
  // Give all rivals the SAME author-supplied facts, discourse relations and
@@ -94,7 +95,7 @@ async function run(cohort,options,call=request){
    const row={taskId:task.id,sourceWork:task.sourceWork,arm,
     promptSha256:promptHash(ms),promptChars:JSON.stringify(ms).length,
     sourceFacts:task.facts.length,uncertainties:task.uncertainties.length,
-    planSchema:arm==="LICENSED_PLAN_V02"?build(task).schema:arm==="DISCOURSE_GUIDED"?"ksgt.g10.p1.plan.v01":null};
+    planSchema:arm==="KOREAN_REALIZATION_V03"?realize(task).schema:arm==="LICENSED_PLAN_V02"?build(task).schema:arm==="DISCOURSE_GUIDED"?"ksgt.g10.p1.plan.v01":null};
    if(runLive){
     try{
      const result=await call(ms,options.model,options.temperature,options.maxTokens);
