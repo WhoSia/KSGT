@@ -1,0 +1,210 @@
+{
+  "schema": "ksgt.g10.p1.authored-development-cohort.v02",
+  "authority": "AUTHOR_AUTHORED_SYNTHETIC_DEVELOPMENT_ONLY_NOT_HUMAN_TEST",
+  "tasks": [
+    {
+      "id": "SCI_DEMO_01",
+      "sourceWork": "AUTHOR_SIMULATED_SCIENCE_01",
+      "genre": "science_explainer",
+      "audience": "고등학생",
+      "purpose": "관찰과 원인 추정을 구분하는 산문",
+      "facts": [
+        "같은 종류의 씨앗을 두 개의 화분에 심었다.",
+        "한 화분은 창가에, 다른 화분은 실내 안쪽에 두었다.",
+        "일주일 동안 같은 양의 물을 주었다.",
+        "일주일 뒤 창가 화분에서 싹이 더 많이 관찰되었다.",
+        "화분 주변의 조도와 온도는 측정하지 않았다."
+      ],
+      "uncertainties": [
+        "빛이 발아 차이를 일으킨 인과 여부",
+        "정확한 발아 수",
+        "흙과 온도 등 다른 환경이 같았는지"
+      ],
+      "factAnnotations": [
+        {
+          "move": "SETUP",
+          "evidence": "GIVEN",
+          "entity": "씨앗"
+        },
+        {
+          "move": "SETUP",
+          "evidence": "GIVEN",
+          "entity": "두 화분"
+        },
+        {
+          "move": "EVENT",
+          "evidence": "GIVEN",
+          "entity": "두 화분"
+        },
+        {
+          "move": "OBSERVATION",
+          "evidence": "OBSERVED",
+          "entity": "창가 화분"
+        },
+        {
+          "move": "LIMITATION",
+          "evidence": "OBSERVED",
+          "entity": "측정하지 않은 조도와 온도"
+        }
+      ],
+      "relations": [
+        {
+          "from": 1,
+          "to": 2,
+          "type": "BACKGROUND"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 5,
+          "to": 4,
+          "type": "LIMITATION"
+        }
+      ]
+    },
+    {
+      "id": "NARR_DEMO_01",
+      "sourceWork": "AUTHOR_SIMULATED_SCENE_01",
+      "genre": "scene_essay",
+      "audience": "일반 독자",
+      "purpose": "관찰된 장면을 자연스럽게 이어가는 짧은 산문",
+      "facts": [
+        "늦은 오후에 한 사람이 골목의 문구점 앞을 지나갔다.",
+        "문구점 창문에는 손글씨 영업시간 안내가 붙어 있었다.",
+        "한 학생이 문 앞에서 우산을 접었다.",
+        "가게 안쪽에서 계산대 종소리가 났다.",
+        "그 사람은 길을 건너 버스 정류장으로 걸어갔다."
+      ],
+      "uncertainties": [
+        "학생의 이름과 마음",
+        "가게 안 사람의 정체",
+        "지나가는 사람의 숨은 사연"
+      ],
+      "factAnnotations": [
+        {
+          "move": "SETUP",
+          "evidence": "GIVEN",
+          "entity": "지나가는 사람"
+        },
+        {
+          "move": "OBSERVATION",
+          "evidence": "GIVEN",
+          "entity": "문구점"
+        },
+        {
+          "move": "EVENT",
+          "evidence": "GIVEN",
+          "entity": "학생"
+        },
+        {
+          "move": "OBSERVATION",
+          "evidence": "GIVEN",
+          "entity": "가게"
+        },
+        {
+          "move": "EVENT",
+          "evidence": "GIVEN",
+          "entity": "지나가는 사람"
+        }
+      ],
+      "relations": [
+        {
+          "from": 1,
+          "to": 2,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 4,
+          "to": 5,
+          "type": "TEMPORAL_NEXT"
+        }
+      ]
+    },
+    {
+      "id": "INFO_DEMO_01",
+      "sourceWork": "AUTHOR_SIMULATED_NOTICE_01",
+      "genre": "public_notice",
+      "audience": "학교 구성원",
+      "purpose": "행사 일정의 확정 정보와 아직 결정되지 않은 사항을 오해 없이 안내한다",
+      "facts": [
+        "학교 도서관이 금요일 오후에 독서 토론 모임을 연다.",
+        "모임은 16시부터 17시까지 도서관 세미나실에서 진행될 예정이다.",
+        "참여 희망자는 목요일 18시까지 도서관 안내 데스크에 신청하면 된다.",
+        "참가비는 없다.",
+        "토론 도서는 행사 당일 현장에서 안내한다."
+      ],
+      "uncertainties": [
+        "토론 도서의 실제 제목",
+        "참가 인원",
+        "모임 진행자의 신원"
+      ],
+      "factAnnotations": [
+        {
+          "move": "SETUP",
+          "evidence": "REPORTED",
+          "entity": "학교 도서관"
+        },
+        {
+          "move": "EVENT",
+          "evidence": "REPORTED",
+          "entity": "모임"
+        },
+        {
+          "move": "EVENT",
+          "evidence": "REPORTED",
+          "entity": "참여 희망자"
+        },
+        {
+          "move": "OBSERVATION",
+          "evidence": "REPORTED",
+          "entity": "참가비"
+        },
+        {
+          "move": "LIMITATION",
+          "evidence": "REPORTED",
+          "entity": "토론 도서"
+        }
+      ],
+      "relations": [
+        {
+          "from": 1,
+          "to": 2,
+          "type": "ELABORATION"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "type": "ELABORATION"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "type": "ELABORATION"
+        },
+        {
+          "from": 4,
+          "to": 5,
+          "type": "ELABORATION"
+        }
+      ]
+    }
+  ]
+}
