@@ -23,8 +23,8 @@ jobs:
         with:
           node-version: '22'
       - name: Pure local tests (no model calls)
-        run: node --test experiments/g10-p1/compare.test.cjs
+        run: node --test experiments/g10-p1/*.test.cjs
       - name: Prompt-only smoke (no LLM invocation)
-        run: node experiments/g10-p1/compare.cjs --dry-run --input experiments/g10-p1/fixtures/author_original_demo.json > /dev/null
+        run: node experiments/g10-p1/compare.cjs --dry-run --input experiments/g10-p1/fixtures/author_original_demo.json > /dev/null\n      - name: Cohort paired-generation dry run (no network, no model)\n        run: node experiments/g10-p1/paired_runner_v02.cjs --dry-run --input experiments/g10-p1/fixtures/cohort_v02.json > /dev/null
 
 # No write tokens, no push/merge/tag, no model credentials, no artifact uploads.
