@@ -1,14 +1,25 @@
 # KSGT — Korean Stylistic Generation Theory
 
+## Current active stage: Generation X G10-P1 — Lightweight Discourse-Guided Korean Prose Generation
+
+**ACTIVE / 2026-11-03.** Official full name: **KSGT Generation X G10-P1 — Lightweight Discourse-Guided Korean Prose Generation: Source-Conditioned Planning, Contextual Linguistic Realization & End-to-End Quality Evaluation**.
+
+The central deliverable is **actual Korean paragraph/document prose**, generated with existing language models and a lightweight source-conditioned discourse planning and contextual realization harness. Its value must be tested against matched strong direct-generation and rich-prompt baselines using independent Korean human reader preference, source-fidelity checks and real computation costs—not inferred from synthetic gate PASS counts, candidate-oracle coverage or editing legitimacy theory.
+
+[Notion official G10-P1](https://app.notion.com/p/40def561cf9281a0b990ee1b3662b79e) · [Generation IX non-success program closure](experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md) · [G10-P1 program](experiments/g10-p1/RESEARCH_PROGRAM.md).
+
+**Historical status caveat:** Generation IX was administratively closed as a program at user direction, with P59/P60 unresolved questions and P64 exploratory HOLD explicitly transferred. This is not an earned semantic/reader-quality PASS; historical G9 files remain for audit. The source of truth for the active stage is `CURRENT_STAGE.json`.
+
+
 KSGT studies **how context, information structure, discourse, syntax, register, and factual commitments become natural Korean prose**. The research objective is a passage-level Korean-writing system that can be judged for naturalness and factual integrity against a generic LLM baseline—not AI detector evasion, not a string-blacklist, and not a general proposer/approval/governance theory.
 
 ## Exploratory research bridge — Korean referential realization (P9-P34)
 
-[Primary-paper and evidence-authority audit](experiments/g9-p60/P9_NATIVE_REALIZATION_EVIDENCE.md) and [bounded Node authority gate](experiments/g9-p60/p9_authority_gate_v01.cjs) records directly read Choe (2021, 2022) and Kwon & Lee (2026) findings, the distinct antecedent-interpretation / processing / naturalness / writing-choice outcome types, and post-treatment selection limitations. The separate P26 Windows Work Mode harness **reports** 25/25 repaired tests; its code has **not** been imported or independently executed here. No native human preference gains or formal P9/P64/Generation promotion are claimed. The official GitHub stage remains **G9-P60**.
+[Primary-paper and evidence-authority audit](experiments/g9-p60/P9_NATIVE_REALIZATION_EVIDENCE.md) and [bounded Node authority gate](experiments/g9-p60/p9_authority_gate_v01.cjs) records directly read Choe (2021, 2022) and Kwon & Lee (2026) findings, the distinct antecedent-interpretation / processing / naturalness / writing-choice outcome types, and post-treatment selection limitations. The separate P26 Windows Work Mode harness **reports** 25/25 repaired tests; its code has **not** been imported or independently executed here. No native human preference gains or formal P9/P64/Generation promotion are claimed. The official stage at the time of this historical audit was **G9-P60**; the current active stage is G10-P1.
 
-## Current live stage: Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation
+## Historical Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation (Program Closed 2026-11-03)
 
-**OPEN / 2026-10-09.** Official full name: **KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification**.
+**HISTORICALLY OPEN FROM 2026-10-09; PROGRAM CLOSED 2026-11-03 WITH UNRESOLVED CLAIMS.** Official full name: **KSGT Generation IX G9-P60 — Source-Disjoint Korean Revision Evaluation, Semantic Admissibility & Reader-Calibrated Writing Preference: Original-Output Provenance, Contamination Graphs, Genre-Conditioned Repair & Human-Anchor Identification**.
 
 This stage inherits **all P59 theory and annotated-data constraints** rather than treating memory or typed reference as a substitute for better writing. The [official P60 program](experiments/g9-p60/RESEARCH_PROGRAM.md) and [GitHub executable P53 output/source/paragraph court](experiments/g9-p60/revision_evaluation_v01.cjs) establish **twelve verified historical generated drafts over six source-brief components, 22 hashed paragraph instances, and a source-connected 3/2/1 retrospective partition**. Eight- versus 14-billion-parameter experiments reuse SCI01/NAR02 and were previously exposed, hence **no genuinely new independent holdout**.
 
