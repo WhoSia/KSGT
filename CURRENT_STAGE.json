@@ -521,27 +521,27 @@
     "deleting historical G9 evidence"
   ],
   "next_scientific_action": "Implement matched Korean paragraph generation and compare actual outputs using new source-disjoint blind human evaluation",
-  "current_substage": "G10-P1-v0.2 SOURCE_LICENSED_DISCOURSE_PLANNER_AND_FOUR_ARM_PAIRED_HARNESS",
+  "current_substage": "G10-P1-v0.3 KOREAN_REALIZATION_FIVE_ARM_AND_UNRATED_OUTPUT_AUDIT",
   "latest_experiment": {
-    "identifier": "G10-P1-v0.2",
-    "type": "ENGINEERING_AND_FALSIFICATION_INSTRUMENT",
-    "status": "PUBLIC_NODE_CI_PASS_LIVE_MODEL_NOT_RUN",
-    "sourceGroups": 3,
-    "sourceGroupAuthority": "AUTHOR_SYNTHETIC_DEVELOPMENT_ONLY",
-    "arms": [
+    "identifier": "G10-P1-v0.3",
+    "status": "ENGINEERING_CI_VERIFIED_NO_NEW_EXTERNAL_NEURAL_OUTPUTS",
+    "generationPolicies": [
       "DIRECT",
       "RICH_PROMPT",
       "DISCOURSE_GUIDED",
-      "LICENSED_PLAN_V02"
+      "LICENSED_PLAN_V02",
+      "KOREAN_REALIZATION_V03"
     ],
-    "planAuthority": "EXPLICIT_AUTHOR_PROVIDED_RELATIONS_ONLY_NOT_AUTOMATIC_KOREAN_PARSING",
-    "allArmsSameLicensedSourceAnnotations": true,
-    "humanReaderRatings": 0,
-    "independentNovelSourceWorks": 0,
-    "sourceFidelitySuperiority": "NOT_MEASURED",
-    "realProseQualitySuperiority": "NOT_MEASURED",
-    "costSuperiority": "NOT_MEASURED",
-    "testPath": "experiments/g10-p1/paired_runner_v02.test.cjs",
-    "protocol": "experiments/g10-p1/paper/PILOT_PROTOCOL_V02.md"
+    "plannedDevelopmentCells": 15,
+    "sourceWorks": 3,
+    "sourceWorkStatus": "THREE_AUTHOR_CREATED_DEVELOPMENT_ONLY",
+    "newRealNeuralGenerations": 0,
+    "independentHumanRatings": 0,
+    "realizationClaim": "TOPICALITY_AND_ELLIPSIS_HINTS_ARE_CONSERVATIVE_HEURISTICS_NOT_SEMANTIC_LABELS",
+    "costAudit": "EXPLICIT_USER_SUPPLIED_RATE_USAGE_DEPENDENT_NOT_YET_RUN",
+    "surfaceAudit": "LITERAL_NUMERIC_ANOMALY_ONLY_NOT_SEMANTIC_FIDELITY",
+    "paperProtocol": "experiments/g10-p1/paper/REALIZATION_STUDY_V03.md",
+    "actualWritingImprovement": "NOT_MEASURED",
+    "nextExperiment": "RUN_ALLOWED_SAME_MODEL_ON_3_SOURCE_X_5_ARM_PILOT_AND_INDEPENDENT_NATIVE_EVALUATION"
   }
 }
