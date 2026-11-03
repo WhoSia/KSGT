@@ -24,6 +24,20 @@ OPENAI_API_KEY=... node experiments/g10-p1/compare.cjs --run --model MODEL --inp
 
 Never commit credentials or private source texts. The endpoint can be configured via `OPENAI_BASE_URL` and `OPENAI_API_KEY` for a compatible chat-completions service; use approved legal sources and model terms. Store raw generated passages and all private task text outside the repository. `compare.cjs` explicitly requires `--run` and API credentials to make network calls.
 
+### Groq provider adapter — available, not yet live-executed
+
+[Groq local setup](GROQ_LOCAL_SETUP_20261103.md) · [dedicated provider adapter](provider_client_v01.cjs) · [5-arm paired runner](paired_runner_v02.cjs).
+
+The officially documented Groq OpenAI-compatible endpoint is `https://api.groq.com/openai/v1`. Use `--provider groq` and a *local* `GROQ_API_KEY`, never a pasted chat secret or committed file. Run an author-created one-source × five-arm smoke first; use `llama-3.3-70b-versatile` or another model currently enabled for the account, and verify actual per-account limits. This is a generation bridge, not a claim of improved Korean writing quality. The API environment variable is **not automatically available to GitHub or Notion connectors**. Local model outputs remain private.
+
+```bash
+node experiments/g10-p1/paired_runner_v02.cjs --dry-run --input experiments/g10-p1/fixtures/groq_smoke_one_source.json
+# With user-provisioned Groq environment variable only:
+node experiments/g10-p1/paired_runner_v02.cjs --run --provider groq --model llama-3.3-70b-versatile --temperature 0.2 --max-tokens 850 --input experiments/g10-p1/fixtures/groq_smoke_one_source.json --output experiments/g10-p1/local/groq_pilot_one_source.json
+```
+
+No Groq network requests or independent reader judgments have been performed by this repository integration as of 2026-11-03. Read-only CI uses a mocked provider and never receives API credentials.
+
 ### Scientific comparison
 
 - Source grouping by original **work/brief**. Historical P53 EX09/EX10 are **development/regression** only and may not masquerade as unseen holdouts.
