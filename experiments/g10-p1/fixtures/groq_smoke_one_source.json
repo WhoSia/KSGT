@@ -1,0 +1,74 @@
+{
+  "schema": "ksgt.g10.p1.groq-development-smoke.v01",
+  "authority": "AUTHOR_SYNTHETIC_DEVELOPMENT_ONLY",
+  "tasks": [
+    {
+      "id": "SCI_DEMO_01",
+      "sourceWork": "AUTHOR_SIMULATED_SCIENCE_01",
+      "genre": "science_explainer",
+      "audience": "고등학생",
+      "purpose": "관찰과 원인 추정을 구분하는 산문",
+      "facts": [
+        "같은 종류의 씨앗을 두 개의 화분에 심었다.",
+        "한 화분은 창가에, 다른 화분은 실내 안쪽에 두었다.",
+        "일주일 동안 같은 양의 물을 주었다.",
+        "일주일 뒤 창가 화분에서 싹이 더 많이 관찰되었다.",
+        "화분 주변의 조도와 온도는 측정하지 않았다."
+      ],
+      "uncertainties": [
+        "빛이 발아 차이를 일으킨 인과 여부",
+        "정확한 발아 수",
+        "흙과 온도 등 다른 환경이 같았는지"
+      ],
+      "factAnnotations": [
+        {
+          "move": "SETUP",
+          "evidence": "GIVEN",
+          "entity": "씨앗"
+        },
+        {
+          "move": "SETUP",
+          "evidence": "GIVEN",
+          "entity": "두 화분"
+        },
+        {
+          "move": "EVENT",
+          "evidence": "GIVEN",
+          "entity": "두 화분"
+        },
+        {
+          "move": "OBSERVATION",
+          "evidence": "OBSERVED",
+          "entity": "창가 화분"
+        },
+        {
+          "move": "LIMITATION",
+          "evidence": "OBSERVED",
+          "entity": "측정하지 않은 조도와 온도"
+        }
+      ],
+      "relations": [
+        {
+          "from": 1,
+          "to": 2,
+          "type": "BACKGROUND"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 5,
+          "to": 4,
+          "type": "LIMITATION"
+        }
+      ]
+    }
+  ]
+}
