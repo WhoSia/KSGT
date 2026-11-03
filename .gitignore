@@ -1,0 +1,14 @@
+# KSGT G10-P1 local credentials and unpublished source/output artifacts
+.env
+.env.*
+!.env.example
+*.local.json
+*.secrets.json
+**/.groq-key
+**/private-*.json
+**/LOCAL_PRIVATE_*.json
+experiments/g10-p1/local/
+experiments/g10-p1/results/
+experiments/g10-p1/private/
+# Research outputs include unpublished Korean prose and reviewer linkage.
+# Keep source briefs, generated passages, arm keys and ratings outside GitHub.
