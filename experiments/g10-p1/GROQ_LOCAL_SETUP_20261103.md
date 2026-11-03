@@ -31,7 +31,9 @@ Primary sources:
 
 ```powershell
 # Enter the key privately in this terminal prompt (not in a GitHub file or this chat).
-$env:GROQ_API_KEY = Read-Host "Groq API key"
+$secureKey = Read-Host "Groq API key" -AsSecureString
+$env:GROQ_API_KEY = [System.Net.NetworkCredential]::new("", $secureKey).Password
+Remove-Variable secureKey
 node --version
 node --test experiments/g10-p1/*.test.cjs
 node experiments/g10-p1/paired_runner_v02.cjs --dry-run --input experiments/g10-p1/fixtures/groq_smoke_one_source.json > $null
@@ -44,7 +46,7 @@ node experiments/g10-p1/paired_runner_v02.cjs --run --provider groq --model llam
 Remove-Item Env:GROQ_API_KEY
 ```
 
-**PowerShell input caution:** `Read-Host` on common PowerShell installations echoes typed input. Keep the terminal private and avoid screen capture/sharing. If a masked-input method supported by your shell is available, prefer it. Closing the shell after use also clears the session-only variable.
+**PowerShell input:** `Read-Host -AsSecureString` masks typed characters. The key is necessarily present as a plaintext process environment variable during API calls; do not share the terminal/environment or leave unattended processes. Closing the shell clears this session-only variable.
 
 ### macOS/Linux bash from repository root
 
