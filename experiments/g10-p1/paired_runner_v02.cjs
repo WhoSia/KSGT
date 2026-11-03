@@ -9,19 +9,32 @@ const {performance}=require("node:perf_hooks");
 const {makeMessages,validateTask}=require("./compare.cjs");
 const {build,compactPromptPlan,validate}=require("./discourse_plan_v02.cjs");
 const ARMS=Object.freeze(["DIRECT","RICH_PROMPT","DISCOURSE_GUIDED","LICENSED_PLAN_V02"]);
+function sourceAnnotations(task){
+ if(!task.factAnnotations && !task.relations)return "";
+ const a=(task.factAnnotations||[]).map((x,i)=>
+  "F"+(i+1)+" "+x.move+" / "+(x.evidence||"UNSPECIFIED")+" / entity="+(x.entity||"미지정")).join("; ");
+ const r=(task.relations||[]).map(x=>"F"+x.from+" "+x.type+" F"+x.to).join("; ");
+ return "원천에서 명시한 메타정보(새 사실이 아님):\n정보 상태: "+(a||"미제공")+
+  "\n허가된 담화 관계: "+(r||"미제공");
+}
 function messages(arm,task){
+ if(!ARMS.includes(arm))throw Error("UNKNOWN_ARM");
+ validate(task);
+ const annotations=sourceAnnotations(task);
+ let ms;
  if(arm==="LICENSED_PLAN_V02"){
-   validate(task);
    const baseline=makeMessages("DIRECT",task);
-   return [
+   ms=[
     baseline[0],
     {role:"user",content:
       "다음 원천만 사용해 한국어 문단 본문을 작성하세요. 먼저 주어진 담화 관계와 정보 상태를 반영하세요. 근거가 없는 인과·비교·지시 대상·감정은 만들지 마세요. 정보구조에 맞는 조사와 생략을 선택하되, 구성 항목을 기계적으로 문장에 나열하지 마세요.\n"+
        compactPromptPlan(task)+"\n\n"+baseline[1].content}
    ];
- }
- if(!ARMS.includes(arm))throw Error("UNKNOWN_ARM");
- return makeMessages(arm,task);
+ } else ms=makeMessages(arm,task);
+ // Give all rivals the SAME author-supplied facts, discourse relations and
+ // epistemic annotations. This avoids a privileged-information confound.
+ if(annotations)ms[1].content+="\n\n"+annotations;
+ return ms;
 }
 function seededOrder(arms,seed){
  let state=crypto.createHash("sha256").update(String(seed)).digest().readUInt32LE(0);
