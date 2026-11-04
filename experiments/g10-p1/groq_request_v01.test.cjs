@@ -27,3 +27,9 @@ test("allows only the original three-work author synthetic development cohort",(
   "experiments/g10-p1/fixtures/cohort_v02.json");
  assert.throws(()=>validate({...request,cohort:"../secret.json"}),/ONLY_PUBLIC_AUTHOR_SYNTHETIC/);
 });
+
+test("allows fixed author-synthetic shuffled discourse challenge cohort but no external paths",()=>{
+ const c="experiments/g10-p1/fixtures/challenge_cohort_v01.json";
+ assert.equal(validate({...request,cohort:c}).cohort,c);
+ assert.throws(()=>validate({...request,cohort:"private/research.csv"}),/ONLY_PUBLIC_AUTHOR_SYNTHETIC/);
+});
