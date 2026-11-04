@@ -23,7 +23,7 @@ function build(report,randomInt=crypto.randomInt){
   }
   if(x.sourceTask!==y.sourceTask||x.sourceWork!==y.sourceWork)throw Error("SOURCE_PAIR_MISMATCH");
   const left=randomInt(2)===0?x:y,right=left===x?y:x;
-  const blindId="PAIR_"+crypto.createHash("sha256").update(group).digest("hex").slice(0,12);
+  const blindId="PAIR_"+crypto.randomBytes(12).toString("hex");
   packet.push({blindId,sourceTask:x.sourceTask,sourceWork:x.sourceWork,
    instruction:"동일한 글쓰기 과제의 두 한국어 문단 중 더 읽기 좋은 글을 선택하거나 동률을 표시하세요. 원천 충실도는 별도 평가자가 확인합니다.",
    A:left.text,B:right.text,readerChoice:null,readerId:null});
