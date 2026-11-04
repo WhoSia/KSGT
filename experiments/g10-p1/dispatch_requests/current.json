@@ -1,9 +1,9 @@
 {
   "schema": "ksgt.g10.p1.groq-commit-request.v01",
-  "requestId": "PILOT_20261104_01",
-  "model": "llama-3.3-70b-versatile",
+  "requestId": "PILOT_20261104_02",
+  "model": "openai/gpt-oss-120b",
   "cohort": "experiments/g10-p1/fixtures/groq_smoke_one_source.json",
-  "maxTokens": 850,
+  "maxTokens": 1500,
   "temperature": 0.2,
-  "seed": "pilot-20261104-001"
+  "seed": "pilot-20261104-002"
 }
