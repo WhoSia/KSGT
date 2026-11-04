@@ -1,7 +1,7 @@
 {
   "schema": "ksgt.g10.p1.groq-commit-request.v01",
-  "requestId": "PILOT_20261104_03",
-  "model": "openai/gpt-oss-120b",
+  "requestId": "PILOT_20261104_04",
+  "model": "openai/gpt-oss-20b",
   "cohort": "experiments/g10-p1/fixtures/cohort_v02.json",
   "maxTokens": 1500,
   "temperature": 0.2,
