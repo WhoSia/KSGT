@@ -1,0 +1,76 @@
+name: KSGT G10-P1 Role-Aware Plan v05 Crossed Experiment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/g10-p1/dispatch_requests/factorial_v05_current.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-role-v05-factorial
+  cancel-in-progress: false
+
+jobs:
+  two_model_four_arm_development:
+    if: ${{ github.actor == 'WhoSia' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout read-only
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests and fully offline 24-cell scheduling smoke
+        run: |
+          node --test experiments/g10-p1/*.test.cjs
+          node experiments/g10-p1/factorial_runner_v02.cjs \
+            --dry-run \
+            --request experiments/g10-p1/dispatch_requests/factorial_v05_current.json \
+            --output "${{ runner.temp }}/offline-factorial.json" \
+            --summary "${{ runner.temp }}/offline-factorial-summary.json" > /dev/null
+      - name: Validate Groq secret presence
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then echo "::error::Missing GROQ_API_KEY"; exit 1; fi
+      - name: Run actual two-model factorial Korean prose generation
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p1/factorial_runner_v02.cjs \
+            --request experiments/g10-p1/dispatch_requests/factorial_v05_current.json \
+            --output "${{ runner.temp }}/factorial-private-raw.json" \
+            --summary "${{ runner.temp }}/factorial-safe-summary.json"
+      - name: Public experiment summary without any Korean prose
+        if: always()
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const fs=require("fs");
+          const file=process.env.RUNNER_TEMP+"/factorial-safe-summary.json";
+          if(!fs.existsSync(file)){console.log("No experiment summary saved.");process.exit(0)}
+          const j=JSON.parse(fs.readFileSync(file,"utf8"));
+          console.log("## Two models × six architecture arms × three source works");
+          console.log("Assigned: "+j.assigned+" | Generated: "+j.generated+" | Failed: "+j.failed);
+          console.log("Source data are author-created synthetic development tasks, not human quality gold.");
+          for(const a of j.rows)console.log("- "+a.model+" / "+a.sourceTask+" / "+a.arm+
+            ": "+a.outcome+" tokens="+(a.promptTokens??"?")+"/"+(a.completionTokens??"?"));
+          NODE
+      - name: Preserve raw development passages (1 day; synthetic-only source)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-factorial-v05-synthetic-development
+          path: |
+            ${{ runner.temp }}/factorial-private-raw.json
+            ${{ runner.temp }}/factorial-safe-summary.json
+          retention-days: 1
+          if-no-files-found: ignore
+
+# No write permissions, no CI-authored git commits, tags, merges, or pushes.
