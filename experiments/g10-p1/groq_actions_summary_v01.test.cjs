@@ -1,6 +1,6 @@
 "use strict";
 const test=require("node:test"),assert=require("node:assert/strict");
-const {summarize}=require("./groq_actions_summary_v01.cjs");
+const {summarize,verifyComplete}=require("./groq_actions_summary_v01.cjs");
 test("public CI summary has metadata but never outputs private completion or prompts",()=>{
  const report={schema:"ksgt.g10.p1.paired-generation.v02",model:"llama-3.3-70b-versatile",provider:"groq",
  rows:[{arm:"DIRECT",outcome:"GENERATED",text:"비공개 한국어 원문",prompt:"secret prompt",usage:{prompt_tokens:100,completion_tokens:80},latencyMs:123},
@@ -12,4 +12,18 @@ test("public CI summary has metadata but never outputs private completion or pro
 });
 test("dry-run metadata not accepted as a generated-prose report",()=>{
  assert.throws(()=>summarize({schema:"other",rows:[]}),/INVALID_REPORT/);
+});
+
+test("all five models failing is a failing experiment despite completed GitHub workflow",()=>{
+ const arms=["DIRECT","RICH_PROMPT","DISCOURSE_GUIDED","LICENSED_PLAN_V02","KOREAN_REALIZATION_V03"];
+ const r={schema:"ksgt.g10.p1.paired-generation.v02",rows:arms.map(arm=>({arm,outcome:"FAILED",failureClass:"PROVIDER_HTTP_404"}))};
+ assert.throws(()=>verifyComplete(r),/GROQ_GENERATION_INCOMPLETE_5_OF_5/);
+ const onlyOne={...r,rows:r.rows.map((x,i)=>i===0?{...x,outcome:"GENERATED",text:"한국어 예제"}:x)};
+ assert.throws(()=>verifyComplete(onlyOne),/GROQ_GENERATION_INCOMPLETE_4_OF_5/);
+});
+test("the strict verifier passes only when all five different arms have nonempty output",()=>{
+ const arms=["DIRECT","RICH_PROMPT","DISCOURSE_GUIDED","LICENSED_PLAN_V02","KOREAN_REALIZATION_V03"];
+ const r={schema:"ksgt.g10.p1.paired-generation.v02",rows:arms.map((arm,i)=>({arm,outcome:"GENERATED",text:"실제 문단 "+i}))};
+ assert.equal(verifyComplete(r),true);
+ assert.throws(()=>verifyComplete({...r,rows:r.rows.slice(1)}),/INVALID_FIVE_ARM_REPORT/);
 });
