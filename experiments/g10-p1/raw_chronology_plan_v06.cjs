@@ -11,7 +11,7 @@ function classify(fact){
  const day=s.match(sciDay);
  if(/(?:측정하지|확인되지|알\s*수\s*없|미확인|알려지지|단정할\s*수\s*없)/u.test(s))
   return {role:"LIMITATION",day:null,confidence:"LEXICAL"};
- if(/(?:심었|파종|배치|놓았|놓여|두었|설치|준비\s*단계)/u.test(s))
+ if(/(?:심었|파종|배치|주었|놓았|놓여|두었|설치|준비\s*단계)/u.test(s))
   return {role:"SETUP",day:null,confidence:"LEXICAL"};
  if(day&&/(?:관찰|세어|셌|잎|싹|확인)/u.test(s))
   return {role:"DATED_OBSERVATION",day:Number(day[1]),confidence:"EXPLICIT_DAY_CUE"};
