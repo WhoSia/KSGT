@@ -1,0 +1,12 @@
+{
+  "schema": "ksgt.g10.p1.factorial-request.v02",
+  "requestId": "ROLE_V05_20261104_01",
+  "cohort": "experiments/g10-p1/fixtures/challenge_cohort_v01.json",
+  "models": [
+    "openai/gpt-oss-20b",
+    "openai/gpt-oss-120b"
+  ],
+  "maxTokens": 1200,
+  "temperature": 0.2,
+  "seed": "role-v05-20261104"
+}
