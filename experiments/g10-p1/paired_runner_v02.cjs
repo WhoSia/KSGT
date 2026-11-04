@@ -122,6 +122,7 @@ async function main(){
   const target=path.resolve(cfg.output);
   fs.writeFileSync(target,JSON.stringify(report,null,2)+"\n",{flag:"wx",mode:0o600});
   process.stdout.write(JSON.stringify({report:target,rows:report.rows.length,status:report.status})+"\n");
+    if(cfg.mode==="run" && report.rows.some(r=>r.outcome!=="GENERATED"||typeof r.text!=="string"||!r.text.trim()))process.exitCode=1;
  }else{
   if(cfg.mode==="run")throw Error("OUTPUT_REQUIRED");
   process.stdout.write(JSON.stringify(report,null,2)+"\n");
