@@ -30,3 +30,9 @@ test("every completed blind pair has private provenance and different arm labels
  assert.ok(r.privateKey.pairs.every(x=>x.A_arm!==x.B_arm));
  assert.equal(new Set(r.privateKey.pairs.map(x=>x.blindId)).size,6);
 });
+
+test("opaque pair IDs change across repeated exports, preventing model-hash guessing",()=>{
+ const a=build(data(),()=>0),b=build(data(),()=>0);
+ assert.notEqual(a.publicPacket.pairs[0].blindId,b.publicPacket.pairs[0].blindId);
+ assert.ok(/^PAIR_[0-9a-f]{24}$/.test(a.publicPacket.pairs[0].blindId));
+});
