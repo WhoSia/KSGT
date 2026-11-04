@@ -1,0 +1,8 @@
+{
+  "schema": "ksgt.g10.p1.raw-source-request.v01",
+  "id": "RAWAUTO_20261105_01",
+  "cohort": "experiments/g10-p1/fixtures/challenge_cohort_v01.json",
+  "maxTokens": 1150,
+  "temperature": 0.2,
+  "seed": "raw-chron-A"
+}
