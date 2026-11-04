@@ -26,10 +26,20 @@ function summarize(report){
   "This smoke is a development test; independent Korean reader quality has **not** been measured.");
  return lines.join("\n")+"\n";
 }
+function verifyComplete(report){
+ if(report?.schema!=="ksgt.g10.p1.paired-generation.v02"||!Array.isArray(report.rows)||report.rows.length!==5)throw Error("INVALID_FIVE_ARM_REPORT");
+ const unique=new Set(report.rows.map(r=>r.arm));
+ if(unique.size!==5)throw Error("DUPLICATE_OR_MISSING_ARMS");
+ const failures=report.rows.filter(r=>r.outcome!=="GENERATED"||typeof r.text!=="string"||!r.text.trim());
+ if(failures.length)throw Error("GROQ_GENERATION_INCOMPLETE_"+failures.length+"_OF_5");
+ return true;
+}
 function main(){
- if(process.argv.length!==3)throw Error("USAGE_node_summary_report.json");
+ if(process.argv.length<3||process.argv.length>4)throw Error("USAGE_node_summary_report.json_[--verify]");
  const report=JSON.parse(fs.readFileSync(path.resolve(process.argv[2]),"utf8"));
- process.stdout.write(summarize(report));
+ if(process.argv[3]==="--verify"){verifyComplete(report);process.stdout.write("ALL_FIVE_GENERATIONS_VERIFIED\\n");}
+ else if(!process.argv[3])process.stdout.write(summarize(report));
+ else throw Error("UNSUPPORTED_MODE");
 }
 if(require.main===module)try{main()}catch(e){console.error(e.message);process.exitCode=1}
-module.exports={summarize};
+module.exports={summarize,verifyComplete};
