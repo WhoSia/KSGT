@@ -1,9 +1,9 @@
 {
   "schema": "ksgt.g10.p1.groq-commit-request.v01",
-  "requestId": "PILOT_20261104_05",
-  "model": "openai/gpt-oss-120b",
-  "cohort": "experiments/g10-p1/fixtures/challenge_cohort_v01.json",
-  "maxTokens": 1500,
+  "requestId": "QWEN_CONTACT_20261104_01",
+  "model": "qwen/qwen3.8-27b",
+  "cohort": "experiments/g10-p1/fixtures/groq_smoke_one_source.json",
+  "maxTokens": 1100,
   "temperature": 0.2,
-  "seed": "pilot-20261104-challenge-A"
+  "seed": "qwen-20261104-A"
 }
