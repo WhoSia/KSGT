@@ -1,7 +1,7 @@
 "use strict";
 const fs=require("node:fs");
 const ALLOWED_MODELS=new Set(["openai/gpt-oss-20b","openai/gpt-oss-120b","qwen/qwen3.8-27b"]);
-const COHORTS=new Set(["experiments/g10-p1/fixtures/groq_smoke_one_source.json","experiments/g10-p1/fixtures/cohort_v02.json"]);
+const COHORTS=new Set(["experiments/g10-p1/fixtures/groq_smoke_one_source.json","experiments/g10-p1/fixtures/cohort_v02.json","experiments/g10-p1/fixtures/challenge_cohort_v01.json"]);
 function validate(v){
  if(!v||v.schema!=="ksgt.g10.p1.groq-commit-request.v01")throw Error("INVALID_REQUEST_SCHEMA");
  if(!/^[A-Z0-9_-]{8,72}$/.test(v.requestId))throw Error("INVALID_REQUEST_ID");
