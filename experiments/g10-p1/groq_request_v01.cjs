@@ -1,12 +1,12 @@
 "use strict";
 const fs=require("node:fs");
 const ALLOWED_MODELS=new Set(["openai/gpt-oss-20b","openai/gpt-oss-120b","qwen/qwen3.8-27b"]);
-const COHORT="experiments/g10-p1/fixtures/groq_smoke_one_source.json";
+const COHORTS=new Set(["experiments/g10-p1/fixtures/groq_smoke_one_source.json","experiments/g10-p1/fixtures/cohort_v02.json"]);
 function validate(v){
  if(!v||v.schema!=="ksgt.g10.p1.groq-commit-request.v01")throw Error("INVALID_REQUEST_SCHEMA");
  if(!/^[A-Z0-9_-]{8,72}$/.test(v.requestId))throw Error("INVALID_REQUEST_ID");
  if(!ALLOWED_MODELS.has(v.model))throw Error("UNAPPROVED_MODEL");
- if(v.cohort!==COHORT)throw Error("ONLY_PUBLIC_SYNTHETIC_SMOKE_SOURCE_PERMITTED");
+ if(!COHORTS.has(v.cohort))throw Error("ONLY_PUBLIC_AUTHOR_SYNTHETIC_DEVELOPMENT_SOURCES_PERMITTED");
  if(!Number.isInteger(v.maxTokens)||v.maxTokens<400||v.maxTokens>1500)throw Error("INVALID_TOKEN_BUDGET");
  if(typeof v.temperature!=="number"||v.temperature<0||v.temperature>1)throw Error("INVALID_TEMPERATURE");
  if(typeof v.seed!=="string"||!/^[A-Za-z0-9_-]{1,64}$/.test(v.seed))throw Error("INVALID_SEED");
