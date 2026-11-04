@@ -20,6 +20,7 @@ test("mock request routes only to Groq and does not log credentials",async()=>{
    assert.equal(url,GROQ_URL+"/chat/completions");
    assert.equal(opts.headers.authorization,"Bearer SECRET_TEST_KEY");
    assert.ok(!opts.body.includes("SECRET_TEST_KEY"));
+   const body=JSON.parse(opts.body);assert.equal(body.reasoning_effort,"low");assert.equal(body.include_reasoning,false);
    return {ok:true,json:async()=>({model:"openai/gpt-oss-20b",
     choices:[{message:{content:"사람이 읽는 한국어."},finish_reason:"stop"}],
     usage:{prompt_tokens:19,completion_tokens:7}})};
@@ -27,6 +28,15 @@ test("mock request routes only to Groq and does not log credentials",async()=>{
  assert.equal(called,1);assert.equal(output.text,"사람이 읽는 한국어.");
  assert.equal(output.usage.prompt_tokens,19);
  assert.equal(output.provider,"groq");
+});
+test("non-GPT-OSS model does not receive incompatible reasoning flags",async()=>{
+ await chat({provider:"groq",model:"qwen/qwen3.8-27b",messages:[{role:"user",content:"안내"}],temperature:0.2,maxTokens:1000},
+  {GROQ_API_KEY:"TEST"},async(_,opts)=>{
+   const body=JSON.parse(opts.body);
+   assert.equal(body.reasoning_effort,undefined);
+   assert.equal(body.include_reasoning,undefined);
+   return {ok:true,json:async()=>({choices:[{message:{content:"안내문입니다."}}]})};
+  });
 });
 test("provider error omits private server response and credential",async()=>{
  await assert.rejects(chat({provider:"groq",model:"x",messages:[{role:"user",content:"P"}],
