@@ -1,0 +1,12 @@
+{
+  "schema": "ksgt.g10.p1.factorial-request.v01",
+  "requestId": "FACTOR_20261104_01",
+  "cohort": "experiments/g10-p1/fixtures/challenge_cohort_v01.json",
+  "models": [
+    "openai/gpt-oss-20b",
+    "openai/gpt-oss-120b"
+  ],
+  "maxTokens": 1200,
+  "temperature": 0.2,
+  "seed": "factor-20261104-A"
+}
