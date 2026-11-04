@@ -5,7 +5,7 @@
  * Not a general Korean semantic parser.
  */
 const crypto=require("node:crypto");
-const sciDay=/\b(?:관찰\s*)?(\d{1,3})\s*일(?:째|차)\b/u;
+const sciDay=/(?:관찰\s*)?(\d{1,3})\s*일(?:째|차)/u;
 function classify(fact){
  const s=String(fact);
  const day=s.match(sciDay);
