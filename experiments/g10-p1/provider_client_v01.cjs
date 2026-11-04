@@ -21,6 +21,11 @@ function requestBody(model,messages,temperature,maxTokens){
 async function chat({provider,model,messages,temperature,maxTokens},env=process.env,fetchFn=fetch){
  const {baseUrl,key}=resolveProvider(provider,env);
  const payload=requestBody(model,messages,temperature,maxTokens);
+ // Groq GPT-OSS requires a bounded reasoning budget to reserve room for the actual Korean prose.
+ if(provider==="groq" && /^openai\/gpt-oss-(20b|120b)$/.test(model)){
+   payload.reasoning_effort="low";
+   payload.include_reasoning=false;
+ }
  const started=performance.now();
  const response=await fetchFn(baseUrl+"/chat/completions",{
   method:"POST",
