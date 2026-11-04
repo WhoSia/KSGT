@@ -5,9 +5,9 @@ on:
     inputs:
       model:
         description: "Groq model ID (check GroqCloud Models for availability)"
-        required: true
+        required: false
         type: string
-        default: "llama-3.3-70b-versatile"
+        default: ""
       publish_outputs:
         description: "Upload raw Korean model outputs as GitHub artifact? May be accessible to repository readers; leave false by default"
         required: true
@@ -57,7 +57,7 @@ jobs:
       - name: Run Groq five-arm single-source pilot
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          GROQ_MODEL: ${{ inputs.model }}
+          GROQ_MODEL: ${{ inputs.model || vars.GROQ_MODEL || 'llama-3.3-70b-versatile' }}
           REPORT_PATH: ${{ runner.temp }}/ksgt-groq-pilot.json
         run: |
           node experiments/g10-p1/paired_runner_v02.cjs \
