@@ -1,0 +1,92 @@
+name: KSGT G10-P1 Groq Commit-Triggered Prose Pilot
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'experiments/g10-p1/dispatch_requests/current.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-groq-commit-pilot
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    if: ${{ github.actor == 'WhoSia' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout source read-only
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify regression tests (no external model calls)
+        run: node --test experiments/g10-p1/*.test.cjs
+
+      - name: Read and validate committed experiment request
+        id: request
+        run: |
+          node experiments/g10-p1/groq_request_v01.cjs \
+            experiments/g10-p1/dispatch_requests/current.json >> "$GITHUB_OUTPUT"
+
+      - name: Check secret availability without exposing its value
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then
+            echo "::error::Missing repository secret GROQ_API_KEY"
+            exit 1
+          fi
+
+      - name: Generate five actual Korean prose candidates through Groq
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MODEL_ID: ${{ steps.request.outputs.model }}
+          SOURCE_PATH: ${{ steps.request.outputs.cohort }}
+          BUDGET: ${{ steps.request.outputs.max_tokens }}
+          TEMPERATURE: ${{ steps.request.outputs.temperature }}
+          EXPERIMENT_SEED: ${{ steps.request.outputs.seed }}
+          OUTPUT_PATH: ${{ runner.temp }}/ksgt-groq-development.json
+        run: |
+          node experiments/g10-p1/paired_runner_v02.cjs \
+            --run --provider groq \
+            --model "$MODEL_ID" \
+            --max-tokens "$BUDGET" \
+            --temperature "$TEMPERATURE" \
+            --seed "$EXPERIMENT_SEED" \
+            --input "$SOURCE_PATH" \
+            --output "$OUTPUT_PATH"
+
+      - name: Publish non-sensitive experiment summary
+        if: always()
+        env:
+          OUTPUT_PATH: ${{ runner.temp }}/ksgt-groq-development.json
+        run: |
+          if [ -f "$OUTPUT_PATH" ]; then
+            node experiments/g10-p1/groq_actions_summary_v01.cjs "$OUTPUT_PATH" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No model result file; workflow or authentication failed." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Preserve synthetic development output for research review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-groq-author-synthetic-development
+          path: ${{ runner.temp }}/ksgt-groq-development.json
+          retention-days: 1
+          if-no-files-found: ignore
+
+# Trigger comes from a human-account GitHub commit, not an Actions bot commit.
+# GitHub Actions executes only. No push, commit, merge, tags or write-scoped tokens.
+# Synthetic public development source ONLY; raw completion artifact may be downloadable by repository readers.
