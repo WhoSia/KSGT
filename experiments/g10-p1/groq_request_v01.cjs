@@ -1,6 +1,6 @@
 "use strict";
 const fs=require("node:fs");
-const ALLOWED_MODELS=new Set(["llama-3.3-70b-versatile","openai/gpt-oss-20b","openai/gpt-oss-120b","llama-3.1-8b-instant"]);
+const ALLOWED_MODELS=new Set(["openai/gpt-oss-20b","openai/gpt-oss-120b","qwen/qwen3.8-27b"]);
 const COHORT="experiments/g10-p1/fixtures/groq_smoke_one_source.json";
 function validate(v){
  if(!v||v.schema!=="ksgt.g10.p1.groq-commit-request.v01")throw Error("INVALID_REQUEST_SCHEMA");
