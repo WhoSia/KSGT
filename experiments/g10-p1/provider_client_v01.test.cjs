@@ -29,12 +29,12 @@ test("mock request routes only to Groq and does not log credentials",async()=>{
  assert.equal(output.usage.prompt_tokens,19);
  assert.equal(output.provider,"groq");
 });
-test("non-GPT-OSS model does not receive incompatible reasoning flags",async()=>{
+test("Qwen Groq non-thinking mode is explicit and model-specific",async()=>{
  await chat({provider:"groq",model:"qwen/qwen3.8-27b",messages:[{role:"user",content:"안내"}],temperature:0.2,maxTokens:1000},
   {GROQ_API_KEY:"TEST"},async(_,opts)=>{
    const body=JSON.parse(opts.body);
-   assert.equal(body.reasoning_effort,undefined);
-   assert.equal(body.include_reasoning,undefined);
+   assert.equal(body.reasoning_effort,"none");
+   assert.equal(body.include_reasoning,false);
    return {ok:true,json:async()=>({choices:[{message:{content:"안내문입니다."}}]})};
   });
 });
