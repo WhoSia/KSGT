@@ -26,6 +26,10 @@ async function chat({provider,model,messages,temperature,maxTokens},env=process.
    payload.reasoning_effort="low";
    payload.include_reasoning=false;
  }
+ if(provider==="groq" && model==="qwen/qwen3.8-27b"){
+   payload.reasoning_effort="none";
+   payload.include_reasoning=false;
+ }
  const started=performance.now();
  const response=await fetchFn(baseUrl+"/chat/completions",{
   method:"POST",
