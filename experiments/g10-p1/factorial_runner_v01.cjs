@@ -42,7 +42,7 @@ async function run(cohort,request,{dryRun=false,invoke=chat}={}){
  validateRequest(request);
  const v=validateCohort(cohort);
  if(v.tasks!==3||v.sourceWorks!==3)throw Error("FIXED_THREE_DEVELOPMENT_WORKS_REQUIRED");
- if(!dryRun&&!process.env.GROQ_API_KEY)throw Error("GROQ_API_KEY_REQUIRED");
+ if(!dryRun&&invoke===chat&&!process.env.GROQ_API_KEY)throw Error("GROQ_API_KEY_REQUIRED");
  const rows=[];
  for(const task of cohort.tasks){
   for(const model of request.models){
