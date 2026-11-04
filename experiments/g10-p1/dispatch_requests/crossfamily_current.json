@@ -1,8 +1,8 @@
 {
   "schema": "ksgt.g10.p1.crossfamily-request.v01",
-  "id": "CROSSFAM_20261105_01",
+  "id": "CROSSFAM_20261105_02",
   "cohort": "experiments/g10-p1/fixtures/challenge_cohort_v01.json",
   "maxTokens": 1250,
   "temperature": 0.2,
-  "seed": "crossfam-v01"
+  "seed": "crossfam-v01-repeat02"
 }
