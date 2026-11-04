@@ -1,6 +1,6 @@
 "use strict";
 /** G10-P1 v0.4: crossed model × architecture on real Korean prose.
- * Two-matched-model / four-arm experiment; 30 calls for 3 source works.
+ * Two-matched-model / four-arm experiment; 36 calls for 3 source works.
  * Does NOT output human preferences, semantic gold or causal proofs.
  */
 const fs=require("node:fs"),path=require("node:path"),crypto=require("node:crypto");
@@ -8,7 +8,7 @@ const {messages:existing,seededOrder,validateCohort}=require("./paired_runner_v0
 const {compact,padBudget}=require("./compact_plan_v04.cjs");
 const {plan:rolePlan}=require("./role_aware_plan_v05.cjs");
 const {chat}=require("./provider_client_v01.cjs");
-const ARMS=Object.freeze(["RICH_PROMPT","RICH_CHAR_MATCH","COMPACT_PLAN_V04","ORDER_PERTURBED_V04","ROLE_AWARE_PLAN_V05"]);
+const ARMS=Object.freeze(["RICH_PROMPT","RICH_CHAR_MATCH","COMPACT_PLAN_V04","ORDER_PERTURBED_V04","ROLE_AWARE_PLAN_V05","RICH_CHAR_MATCH_V05"]);
 const ALLOWED_MODELS=new Set(["openai/gpt-oss-20b","openai/gpt-oss-120b"]);
 function armMessages(task,arm){
  if(!ARMS.includes(arm))throw Error("UNRECOGNIZED_ARM");
@@ -17,9 +17,10 @@ function armMessages(task,arm){
  if(arm==="RICH_PROMPT")return copy();
  const good=compact(task);
  const planNote="\n\n참고할 문단 구성 계획(원천 사실보다 우선하지 않음):\n"+good.planText;
- if(arm==="RICH_CHAR_MATCH"){
+ if(arm==="RICH_CHAR_MATCH"||arm==="RICH_CHAR_MATCH_V05"){
   const x=copy();
-  x[1].content=padBudget(x[1].content,x[1].content.length+planNote.length);
+  const noteLength=arm==="RICH_CHAR_MATCH_V05"?("\n\n참고할 문단 구성 계획(원천 사실보다 우선하지 않음):\n"+rolePlan(task).prompt).length:planNote.length;
+  x[1].content=padBudget(x[1].content,x[1].content.length+noteLength);
   return x;
  }
  const p=arm==="COMPACT_PLAN_V04"?good:compact(task,{perturb:true});
