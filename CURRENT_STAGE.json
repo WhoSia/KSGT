@@ -10,13 +10,13 @@
   "current_artifact": "experiments/g10-p1/RESEARCH_PROGRAM.md",
   "current_question": "Does a compact, source-conditioned, reader-purpose-aware global discourse plan improve complete Korean documents beyond strong one-call LLM writing, generic outlines, and compute-matched rivals?",
   "current_authority": {
-    "actual_new_g10_model_generations": 259,
+    "actual_new_g10_model_generations": 277,
     "independent_korean_reader_preference": 0,
     "source_fidelity_comparison": "RESEARCHER_ILLUSTRATIVE_ONLY_NO_INDEPENDENT_GOLD",
     "matched_cost_comparison": "R6_REAL_TOTAL_PROVIDER_TOKENS_KSGT_PLUS_28_11_PERCENT_VS_STRONG_PROMPTS_NOT_BUDGET_MATCHED",
     "validated_prose_quality_gain": "NONE_PROVEN_GLOBAL_OR_LOCAL",
     "historical_one_paragraph_generations": 196,
-    "new_three_paragraph_documents": 63,
+    "new_three_paragraph_documents": 81,
     "r5_three_paragraph_development_outputs": 9,
     "r5_remote_node_ci": "GITHUB_RUN_41968783130_169_OF_169_PASS",
     "r5_real_api": "GROQ_GPTOSS20B_3_EXPOSED_SOURCE_WORKS_X_3_ARMS_9_GENERATED_0_FAILED",
@@ -45,7 +45,10 @@
     "r6_semantic_guarantee": "FALSIFIED_BY_NEW_UNLICENSED_SCENE_ACTIONS_IN_KSGT_GENRE_LICENSE",
     "r6_canonical_drive_raw_id": "1G8tqpBj-HUgV3YLn4-uedRkNdIvUt80C",
     "r6_blind_development_packet_drive_id": "1TXJwBD5i-kRnrgtBysYga_QXuBG1ANaf",
-    "r6_private_arm_key_drive_id": "1I3FwUfMcmZGQPOjXfWlfFDt6HTMa5H4o"
+    "r6_private_arm_key_drive_id": "1I3FwUfMcmZGQPOjXfWlfFDt6HTMa5H4o",
+    "r7_output_summary": "R7_GROQ_30_CALLS_18_FINALS_0_FAILED_CI_217_PASS",
+    "r7_semantic": "PLAN_AND_REALIZATION_FAILURE_RESEARCHER_COUNTEREXAMPLES_HUMAN_GOLD_ZERO",
+    "r7_drive_id": "1b4LFDBopZ_Z08TxV2egdRshdtu0pAEzW"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
