@@ -3,31 +3,42 @@
     "sourceName": "KoLLA v2 existing multi-reference correction corpus",
     "lane": "HUMAN_REWRITE",
     "canonicalRootId": "KSGT:KoLLA-V2",
-    "sourceWorkId": "KOLLA_CORPUS_WIDE_NOT_SINGLE_WORK",
+    "sourceWorkId": "KOLLA_100_ESSAYS_UNMAPPED",
     "sourceEditionId": "ZENODO_16908784",
-    "groupId": "KOLLA_ALL_SAME_UNKNOWN_ESSAYS",
+    "groupId": "KOLLA_ESSAY_BOUNDARIES_NOT_IN_DISTRIBUTED_M2",
     "split": "dev",
     "license": {
-      "status": "UNKNOWN",
-      "note": "Rights per released corpus must be inspected before candidate ingestion."
+      "status": "VERIFIED",
+      "note": "Verify and satisfy exact GPLv3 obligations before making any redistributed derivative/public output. Paper CC BY 4.0 is a different license.",
+      "name": "GPL-3.0",
+      "evidence": "Song Lim Park (2026) KoLLA v2 Data availability section; Zenodo 15287128"
     },
     "receipt": {
-      "status": "METADATA_ONLY",
-      "sha256": null,
+      "status": "RAW_BYTES_VERIFIED",
+      "sha256": "d42d21289708f46c3092b154c36b303b9fd5f77cca4d15b41d770992703de4f7",
       "driveId": "1dCUq2o8u6x1fzBg77DztfIWuH1dae8w2",
       "fileName": "16908784.zip",
       "fileSizeBytes": 358800,
-      "historicalExpectedSha256": "d42d21289708f46c3092b154c36b303b9fd5f77cca4d15b41d770992703de4f7"
+      "historicalExpectedSha256": "d42d21289708f46c3092b154c36b303b9fd5f77cca4d15b41d770992703de4f7",
+      "m2Sha256": "d848bac8095bf4280e9c8f6bb7ef2733434cf0eb2c2977d34fd4a0eb6c061ed4",
+      "m2Blocks": 1418,
+      "secondAnnotatorPresent": 1410,
+      "missingSecond": 8,
+      "m2RawVerifiedDate": "2026-11-05"
     },
     "provenance": {
       "humanOriginVerified": true,
       "aiAssisted": false,
-      "independentSemanticAdjudication": false
+      "independentSemanticAdjudication": false,
+      "sourceWorkGroupVerified": false,
+      "originalLanguageKoreanVerified": false,
+      "nativeL1Verified": false
     },
     "claims": {
       "freshNativePreference": false,
       "humanSemanticGold": false
-    }
+    },
+    "remarks": "Raw ZIP and 72/72 hidden/visible human reference reconstruction PASS; however 100-essay boundaries absent. NO blind source-disjoint admission."
   },
   {
     "sourceName": "StyleKQC human directive paraphrases",
@@ -50,7 +61,8 @@
     "provenance": {
       "humanOriginVerified": true,
       "aiAssisted": false,
-      "independentSemanticAdjudication": false
+      "independentSemanticAdjudication": false,
+      "sourceWorkGroupVerified": false
     },
     "claims": {
       "freshNativePreference": false,
@@ -78,7 +90,8 @@
     "provenance": {
       "humanOriginVerified": true,
       "aiAssisted": false,
-      "independentSemanticAdjudication": false
+      "independentSemanticAdjudication": false,
+      "sourceWorkGroupVerified": false
     },
     "claims": {
       "freshNativePreference": false,
@@ -106,7 +119,8 @@
     "provenance": {
       "humanOriginVerified": true,
       "aiAssisted": false,
-      "independentSemanticAdjudication": false
+      "independentSemanticAdjudication": false,
+      "sourceWorkGroupVerified": false
     },
     "claims": {
       "freshNativePreference": false,
