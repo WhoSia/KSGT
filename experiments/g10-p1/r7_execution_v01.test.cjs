@@ -1,0 +1,14 @@
+"use strict";
+const test=require("node:test"),a=require("node:assert/strict");
+const {gate,run}=require("./r7_execution_v01.cjs");
+const cohort=require("./fixtures/r6_cohort_v01.json"),cfg=require("./fixtures/r7_request_v01.json");
+const plan=JSON.stringify({units:[{type:"SOURCE_CLAIM",factIds:["F1"],content:"첫 사실"},{type:"SOURCE_CLAIM",factIds:["F2"],content:"두 번째 사실"},{type:"SOURCE_CLAIM",factIds:["F3"],content:"세 번째 사실"},{type:"RHETORICAL_BRIDGE",factIds:[],addsWorldFact:false,content:"이어지는 설명"}]});
+test("frozen config must cap 30 calls",()=>{a.equal(gate(cfg).maxCalls,30);a.throws(()=>gate({...cfg,maxCalls:31}),/INVALID_REQUEST/)});
+test("three policies and six sources give eighteen assignments",async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:true,invoke:async()=>{n++}});a.equal(n,0);a.equal(r.assigned,18);a.equal(r.calls,0);a.equal(r.generated,0)});
+test("live requires explicit provider adapter",async()=>a.rejects(run(cohort,cfg,{dryRun:false}),/INVOCATION_REQUIRED/));
+test("successful simulated execution totals thirty provider calls",async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:false,invoke:async q=>{n++;return {text:q.messages[1].content.includes("JSON 객체")?plan:"임시 한국어 생성문",usage:{prompt_tokens:99,completion_tokens:25}}}});a.equal(n,30);a.equal(r.calls,30);a.equal(r.generated,18);a.equal(r.failed,0);a.ok(r.records.filter(x=>x.arm==="KSGT_CLAIM_PLAN").every(x=>x.steps.some(s=>s.phase==="plan")&&x.steps.length===2))});
+test("unparseable intermediate stops final and preserves failure denominator",async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:false,invoke:async q=>{n++;return {text:q.messages[1].content.includes("JSON 객체")?"not json":"평범한 초안"}}});a.equal(r.assigned,18);a.equal(r.generated,12);a.equal(r.failed,6);a.equal(r.calls,24);a.ok(r.records.filter(x=>x.arm==="KSGT_CLAIM_PLAN").every(x=>x.steps.length===1))});
+test("one provider exception is not silently discarded",async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:false,invoke:async q=>{if(++n===1)throw Error("MOCK_FAILURE");return {text:q.messages[1].content.includes("JSON 객체")?plan:"모형 초안"}}});a.equal(r.assigned,18);a.equal(r.failed,1);a.equal(r.generated,17)});
+test("empty provider result fails instead of pretending output",async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:false,invoke:async q=>{n++;return {text:q.messages[1].content.includes("JSON 객체")?plan:""}}});a.equal(r.assigned,18);a.ok(r.failed>0)});
+test("mock outcomes never become human or source-truth gold",async()=>{const r=await run(cohort,cfg);a.equal(r.readers,0);a.equal(r.generated,0)});
+test("wrong model cannot contact provider",async()=>{let n=0;await a.rejects(run(cohort,{...cfg,model:"other"},{dryRun:false,invoke:async()=>n++}),/INVALID_REQUEST/);a.equal(n,0)});
