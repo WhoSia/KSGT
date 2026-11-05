@@ -1,0 +1,17 @@
+"use strict";
+const test=require("node:test"),a=require("node:assert/strict");
+const {ARMS,decodePlan,messages,preflight}=require("./r7_commitment_pipeline_v01.cjs");
+const cohort=require("./fixtures/r6_cohort_v01.json"),t=cohort.tasks[0];
+const plan={units:[{type:"SOURCE_CLAIM",factIds:["F1"],content:"실습 일시"},{type:"SOURCE_CLAIM",factIds:["F2"],content:"신청 시각"},{type:"QUALIFIED_INTERPRETATION",factIds:["F6"],qualified:true,content:"아직 미정인 노트북"},{type:"RHETORICAL_BRIDGE",factIds:[],addsWorldFact:false,content:"이와 별개로"}]};
+test("six source works and two genuine two-call rivals",()=>{a.equal(preflight(cohort).sourceWorks,6);a.equal(preflight(cohort).providerCallsMaximum,30);a.equal(ARMS.length,3)});
+test("same exact source in all arms",()=>a.equal(new Set([messages(t,"STRONG_DIRECT","final"),messages(t,"GENERIC_DRAFT_REVISE","draft"),messages(t,"KSGT_CLAIM_PLAN","plan")].map(x=>x.sourceSha256)).size,1));
+test("witnessed plan parses without becoming semantic gold",()=>{const p=decodePlan(JSON.stringify(plan),t);a.equal(p.units.length,4);a.match(p.warning,/NOT_ENTAILMENT_GOLD/)});
+test("fenced JSON accepted",()=>a.equal(decodePlan("(```json\n"+JSON.stringify(plan)+"\n```",t).units.length,4));
+test("nonsyntactic plan rejected",()=>a.throws(()=>decodePlan("not json",t),/UNPARSEABLE_PLAN/));
+test("source claim needs evidence ID",()=>{const p=structuredClone(plan);p.units[0].factIds=[];a.throws(()=>decodePlan(JSON.stringify(p),t),/SOURCE_CLAIM_NEEDS_WITNESS/)});
+test("unknown ID rejected",()=>{const p=structuredClone(plan);p.units[0].factIds=["F99"];a.throws(()=>decodePlan(JSON.stringify(p),t),/UNWITNESSED_FACT_REFERENCE/)});
+test("interpretation needs qualification",()=>{const p=structuredClone(plan);p.units[2].qualified=false;a.throws(()=>decodePlan(JSON.stringify(p),t),/UNQUALIFIED_INFERENCE/)});
+test("bridge cannot add world state",()=>{const p=structuredClone(plan);p.units[3].addsWorldFact=true;a.throws(()=>decodePlan(JSON.stringify(p),t),/BRIDGE_ASSERTS_FACT/)});
+test("duplicate unit rejected",()=>{const p=structuredClone(plan);p.units.push({...p.units[0]});a.throws(()=>decodePlan(JSON.stringify(p),t),/DUPLICATE_UNIT/)});
+test("invalid phase rejected",()=>a.throws(()=>messages(t,"KSGT_CLAIM_PLAN","draft"),/INVALID_PHASE/));
+test("final stage still references original source",()=>{const p=messages(t,"KSGT_CLAIM_PLAN","final",JSON.stringify(plan));a.ok(p.messages[1].content.includes("원천 JSON"));a.ok(p.messages[1].content.includes("승인된 계획 JSON"))});
