@@ -16,7 +16,7 @@ function manifest(works,{seed='0',replicates=2}={}){
    out.push(row('STRONG_DIRECT',null,null));
    for(let i=0;i<orderedDrafts.length;i++){
     const d=orderedDrafts[i];out.push(row('BUILD_SHARED_DRAFT',d,null));
-    const orderedRevisers=(repeat+i)%2===phase?[...REVISERS]:[...REVISERS].reverse();
+    const orderedRevisers=(repeat+DRAFTS.indexOf(d))%2===phase?[...REVISERS]:[...REVISERS].reverse();
     for(const r of orderedRevisers)out.push(row('REVISE_SHARED_DRAFT',d,r));
    }
   }
