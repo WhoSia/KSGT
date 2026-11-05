@@ -10,13 +10,23 @@
   "current_artifact": "experiments/g10-p1/RESEARCH_PROGRAM.md",
   "current_question": "Does a compact, source-conditioned, reader-purpose-aware global discourse plan improve complete Korean documents beyond strong one-call LLM writing, generic outlines, and compute-matched rivals?",
   "current_authority": {
-    "actual_new_g10_model_generations": 232,
+    "actual_new_g10_model_generations": 241,
     "independent_korean_reader_preference": 0,
     "source_fidelity_comparison": "RESEARCHER_ILLUSTRATIVE_ONLY_NO_INDEPENDENT_GOLD",
-    "matched_cost_comparison": "GLOBALDOC001_REAL_PROVIDER_USAGE_PRESENT_BUT_STRONG_BASELINE_NOT_BUDGET_MATCHED",
+    "matched_cost_comparison": "R5_REAL_PROVIDER_USAGE_GRAPH_PLUS_7_55_PERCENT_TOTAL_TOKENS_VS_STRONG_BUT_PROMPTS_NOT_COMPUTE_MATCHED",
     "validated_prose_quality_gain": "NONE_PROVEN_GLOBAL_OR_LOCAL",
     "historical_one_paragraph_generations": 196,
-    "new_three_paragraph_documents": 36
+    "new_three_paragraph_documents": 45,
+    "r5_three_paragraph_development_outputs": 9,
+    "r5_remote_node_ci": "GITHUB_RUN_41968783130_169_OF_169_PASS",
+    "r5_real_api": "GROQ_GPTOSS20B_3_EXPOSED_SOURCE_WORKS_X_3_ARMS_9_GENERATED_0_FAILED",
+    "r5_provider_total_tokens": {
+      "STRONG_DIRECT": 2184,
+      "EXPLICIT_EDGE": 2313,
+      "GRAPH_ORDER": 2349
+    },
+    "r5_quality": "RESEARCHER_ILLUSTRATIVE_SOURCE_CONCERNS_ONLY_ZERO_INDEPENDENT_SEMANTIC_OR_HUMAN_GOLD",
+    "r5_canonical_drive_raw_id": "1Cek0jY60mxJyIZI_z9Ow3lNdZACyHCWO"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
