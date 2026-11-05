@@ -1,0 +1,16 @@
+{
+  "schema": "ksgt.g10.p1.r8.launch.v01",
+  "date": "2026-11-05",
+  "cohort": "experiments/g10-p1/fixtures/r6_cohort_v01.json",
+  "preregistration": "experiments/g10-p1/paper/R8_SHARED_DRAFT_PREREG_20261105.md",
+  "sourceWorks": 6,
+  "policyCells": 18,
+  "maxCalls": 18,
+  "arms": [
+    "BASE_DRAFT",
+    "GENERIC_REVISION",
+    "SOURCE_ACCOUNTABLE_REVISION"
+  ],
+  "model": "openai/gpt-oss-20b",
+  "evidence": "AUTHOR_SYNTHETIC_EXPOSED_DEVELOPMENT_NOT_HOLDOUT"
+}
