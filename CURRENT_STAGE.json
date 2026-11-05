@@ -141,6 +141,20 @@
       "python3": 5,
       "nodeStatus": "PASS_LOCAL",
       "remoteCI": "NOT_CONFIRMED_SUCCESS"
+    },
+    "r9_4_original_KoLLA_v1_tarball": {
+      "historicalProjectSite": "https://cl.indiana.edu/~kolla/",
+      "historicalTarballAdvertised": true,
+      "currentByteAcquisition": "FAILED_TIMEOUT",
+      "sha256": null,
+      "originalEssayMapVerified": false,
+      "sourceNote": "Sung and Shin 2025 report original dataset source unavailable as of 2024-09; direct access timeout in this session"
+    },
+    "r9_4_remote_ci": {
+      "latestWorkflowRun": 42037665376,
+      "headSha": "6f81e57762fab1e7d85cf151921227c214095ab0",
+      "status": "queued",
+      "conclusion": null
     }
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
