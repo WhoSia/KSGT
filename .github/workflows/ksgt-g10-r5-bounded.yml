@@ -1,0 +1,51 @@
+name: KSGT R5 bounded source-equal Groq development pilot
+on:
+  push:
+    paths:
+      - 'experiments/g10-p1/fixtures/r5_launch_20261105.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bounded-r5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify all G10 pure tests before provider use
+        run: node --test experiments/g10-p1/*.test.cjs
+      - name: Verify prompt-only execution contract
+        run: node experiments/g10-p1/r5_provider_cli_v01.cjs --dry-run > /dev/null
+      - name: Bound live execution to 9 predefined source-policy cells
+        shell: bash
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then
+            echo 'R5_BLOCKED_MISSING_GROQ_API_KEY'; exit 2
+          fi
+          node experiments/g10-p1/r5_provider_cli_v01.cjs --execute "$RUNNER_TEMP/r5_output.json"
+      - name: Print only counting and provider usage diagnostics
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/r5_output.json" ]; then
+            R5_OUTPUT="$RUNNER_TEMP/r5_output.json" node -e 'const r=require(process.env.R5_OUTPUT); console.log(JSON.stringify({assigned:r.assigned,generated:r.generated,failed:r.failed,usage:r.records.map(x=>({sourceWork:x.sourceWork,arm:x.arm,outcome:x.outcome,promptTokens:x.usage?.prompt_tokens??null,completionTokens:x.usage?.completion_tokens??null}))}))'
+          else
+            echo 'R5_NO_PROVIDER_OUTPUT_FILE'
+          fi
+      - name: Preserve original raw evidence as CI artifact (no bot commits)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r5-raw-developments-${{ github.run_id }}
+          path: ${{ runner.temp }}/r5_output.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+# No git push, content write, PR, tag or bot-authored repository contribution.
