@@ -47,5 +47,9 @@
     }
   ],
   "humanRecruitment": 0,
-  "newModelOutputs": 0
+  "newModelOutputs": 0,
+  "upstreamGitBlobSha1": "637d4405a89b41439b63cc175ec20ae666227905",
+  "upstreamObservedKLTestSplitRecords": 168,
+  "upstreamObservedCandidateEssayGroups": 97,
+  "remainderExactM2MatchStatus": "UNVERIFIED_FOR_161_KL_TEST_RECORDS"
 }
