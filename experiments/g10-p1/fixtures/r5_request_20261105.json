@@ -1,0 +1,7 @@
+{
+  "schema": "ksgt.g10.p1.r5.request.v01",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "maxTokens": 900,
+  "temperature": 0
+}
