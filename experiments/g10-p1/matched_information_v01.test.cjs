@@ -1,0 +1,13 @@
+"use strict";
+const test=require("node:test"),assert=require("node:assert/strict");
+const {ARMS,sourcePacket,prompt,compare}=require("./matched_information_v01.cjs");
+const t={id:"NOTICE_A",sourceWork:"NOTICE_A",genre:"public_notice",audience:"신청자",purpose:"참가 조건 안내",facts:[{id:"F1",text:"실습은 금요일이다"},{id:"F2",text:"실습 신청은 수요일 마감이다"},{id:"F3",text:"오리엔테이션은 선택이다"},{id:"F4",text:"참가비는 없다"}],edges:[{before:"F2",after:"F1",type:"READER_PREREQUISITE",evidence:"AUTHOR_DECLARED"}]};
+test("five distinct policies exist",()=>assert.equal(new Set(ARMS).size,5));
+test("all five arms receive identical source facts and edges byte-for-byte",()=>{const x=compare(t);assert.equal(x.matchedSourceInformation,true);assert.equal(new Set(x.arms.map(r=>r.sourcePacket)).size,1);assert.deepEqual(JSON.parse(x.arms[0].sourcePacket).edges,t.edges)});
+test("graph plan moves prerequisite before dependent; ablation retains original",()=>{assert.match(prompt(t,"GRAPH_PLAN").messages[1].content,/F2 → F1/);assert.match(prompt(t,"GRAPH_PLAN_ABLATED").messages[1].content,/F1 → F2/)});
+test("strong direct and explicit edge arm both see the edge",()=>{for(const arm of ["STRONG_DIRECT","EXPLICIT_EDGE_PROMPT"]){assert.match(prompt(t,arm).messages[1].content,/READER_PREREQUISITE/);assert.match(prompt(t,arm).messages[1].content,/AUTHOR_DECLARED/)}});
+test("all arms are prompt-only, do not certify matched compute",()=>{const x=compare(t);assert.equal(x.modelOutputs,0);assert.equal(x.humanRatings,0);assert.equal(x.matchedTokenBudget,false);assert.ok(x.arms.every(a=>a.promptChars>a.sourceChars))});
+test("no edge implies graph and ablation same order",()=>{const z={...t,edges:[]};assert.match(prompt(z,"GRAPH_PLAN").messages[1].content,/F1 → F2 → F3 → F4/)});
+test("invalid semantic attribution never enters matched cohort",()=>{const z={...t,edges:[{...t.edges[0],evidence:"MODEL_GUESSED"}]};assert.throws(()=>compare(z),/UNLICENSED_EDGE/)});
+test("source fact text and IDs are mandatory",()=>{assert.throws(()=>sourcePacket({...t,facts:t.facts.map((f,i)=>i===0?{...f,text:""}:f)}),/INVALID_TEXT_SOURCE/)});
+test("no invented genre-specific paragraph eligibility claims",()=>{const z=prompt(t,"GRAPH_PLAN").messages[1].content;assert.ok(!z.includes("반드시 참여"));assert.ok(z.includes("실습 신청은 수요일 마감이다"))});
