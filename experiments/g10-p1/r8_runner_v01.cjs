@@ -42,7 +42,7 @@ async function main(argv=process.argv.slice(2),env=process.env){
   fs.writeFileSync(filename,JSON.stringify(result,null,2)+"\n",{flag:"wx",mode:0o600});
  }
  console.log(JSON.stringify({assigned:result.assignedCells,calls:result.calls,generated:result.generatedCells,failed:result.failedCells,unattempted:result.unattemptedCells}));
- if(result.failedCells||result.unattemptedCells)process.exitCode=1;
+ if(live&&(result.failedCells||result.unattemptedCells))process.exitCode=1;
  return result;
 }
 if(require.main===module)main().catch(e=>{console.error(String(e.message||e).replace(/[^A-Za-z0-9_]/g,"_"));process.exitCode=1});
