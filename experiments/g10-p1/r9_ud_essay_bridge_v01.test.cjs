@@ -1,0 +1,11 @@
+"use strict";
+const t=require("node:test"),a=require("node:assert/strict");
+const {parseUD,bridge,normalize}=require("./r9_ud_essay_bridge_v01.cjs");
+const ud=(...rows)=>rows.map(([id,text])=>"# sent_id = "+id+"\n# text = "+text+"\n1\t값\t값\tNOUN\tNNG\t_\t0\troot\t_\t_\n").join("\n");
+t("public KL sentence IDs produce candidate essay-group labels only",()=>{const u=ud(["KL-fb-24-7","아주좋아요."],["KL-fb-24-8","밥을 먹었어요."]);const r=bridge(["아주 좋아요 .","밥을 먹었어요 ."],u);a.equal(r.exactUniqueMatches,2);a.equal(r.essayGroupCandidates,1);a.equal(r.sourceWorkVerified,false);a.equal(r.documentHold,true)});
+t("Unicode NFC normalization and spaces support exact equal text only",()=>a.equal(normalize("가 나 ."),normalize("가나.")));
+t("duplicate source lines are ambiguous, not silently linked",()=>{const u=ud(["KL-fi-3-2","같은 문장."]);const r=bridge(["같은 문장 .","같은 문장."],u);a.equal(r.exactUniqueMatches,0);a.equal(r.collisions[0].type,"M2_SOURCE_NOT_UNIQUE")});
+t("identical original cannot be two essay groups without collision",()=>{const r=bridge(["하나입니다 ."],ud(["KL-fb-1-1","하나입니다."],["KL-fb-2-1","하나입니다."]));a.equal(r.collisions.some(x=>x.type==="M2_LINKS_MULTIPLE_ESSAYS"),true)});
+t("non-KoLLA UD records do not mix into KoLLA match",()=>a.equal(parseUD(ud(["KH-A1","문장."],["KL-fb-1-1","문장."])).length,1));
+t("row without KL text fails closed",()=>a.throws(()=>parseUD("# sent_id = KL-fb-4-1\n1\ta\ta\tNOUN\tNNG\t_\t0\troot\t_\t_\n"),/KL_SENT_TEXT_MISSING/));
+t("empty source corpus never provides verified groups",()=>{const r=bridge([],ud(["KL-fb-1-1","문장."]));a.equal(r.exactUniqueMatches,0);a.equal(r.sourceWorkVerified,false)});
