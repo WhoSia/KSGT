@@ -1,0 +1,51 @@
+{
+  "schema": "ksgt.g10.p1.r9.3.ud-kolla-seven-source-contact.v01",
+  "upstream": "UniversalDependencies/UD_Korean-KSL/ko_ksl-ud-test.conllu",
+  "upstreamVersion": "CURRENT_MASTER_UNSEALED",
+  "sourceOriginal": "KoLLA-v2/16908784.zip/KoLLA_multi-refs.m2",
+  "sourceM2SHA256": "d848bac8095bf4280e9c8f6bb7ef2733434cf0eb2c2977d34fd4a0eb6c061ed4",
+  "normalization": "NFC_REMOVE_ALL_WHITESPACE_ONLY",
+  "scope": "SELECTED_SEVEN_VERIFIED_EXAMPLES_NOT_FULL_CORPUS",
+  "checked": 7,
+  "unique": 7,
+  "sourceWorkBoundaryAuthority": "HOLD",
+  "examples": [
+    {
+      "publicUDSentId": "KL-fb-24-7",
+      "m2SourceIndex0": 61,
+      "uniqueSourceMatch": true
+    },
+    {
+      "publicUDSentId": "KL-fb-7-1",
+      "m2SourceIndex0": 290,
+      "uniqueSourceMatch": true
+    },
+    {
+      "publicUDSentId": "KL-hb-22-4",
+      "m2SourceIndex0": 876,
+      "uniqueSourceMatch": true
+    },
+    {
+      "publicUDSentId": "KL-fi-7-13",
+      "m2SourceIndex0": 704,
+      "uniqueSourceMatch": true
+    },
+    {
+      "publicUDSentId": "KL-hb-22-5",
+      "m2SourceIndex0": 877,
+      "uniqueSourceMatch": true
+    },
+    {
+      "publicUDSentId": "KL-hb-22-1",
+      "m2SourceIndex0": 873,
+      "uniqueSourceMatch": true
+    },
+    {
+      "publicUDSentId": "KL-fi-11-4",
+      "m2SourceIndex0": 635,
+      "uniqueSourceMatch": true
+    }
+  ],
+  "humanRecruitment": 0,
+  "newModelOutputs": 0
+}
