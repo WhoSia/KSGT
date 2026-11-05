@@ -1,0 +1,48 @@
+name: KSGT R8 Shared Draft Source-Accountable Revision Pilot
+on:
+  push:
+    paths:
+      - 'experiments/g10-p1/fixtures/r8_launch_v01.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  r8-source-revision:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: All read-only G10 tests
+        run: node --test experiments/g10-p1/*.test.cjs
+      - name: R8 preflight without model use
+        run: node experiments/g10-p1/r8_runner_v01.cjs --dry-run
+      - name: Bounded shared-draft Groq generation
+        shell: bash
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then echo "R8_GROQ_KEY_UNAVAILABLE"; exit 2; fi
+          node experiments/g10-p1/r8_runner_v01.cjs --execute "$RUNNER_TEMP/r8_output.json"
+      - name: Print only counts and token receipts
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/r8_output.json" ]; then
+            R8_OUTPUT="$RUNNER_TEMP/r8_output.json" node -e 'const x=require(process.env.R8_OUTPUT);console.log(JSON.stringify({assigned:x.assignedCells,calls:x.calls,generated:x.generatedCells,failed:x.failedCells,unattempted:x.unattemptedCells,usage:x.records.flatMap(r=>[r.draft,...r.revisions].filter(Boolean).map(z=>({sourceWork:r.sourceWork,arm:z.arm,status:z.status,tokens:z.usage?.total_tokens??null})))}))'
+          else
+            echo "R8_RAW_OUTPUT_UNAVAILABLE"
+          fi
+      - name: Preserve original bytes without any Git commits
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r8-shared-draft-raw-${{ github.run_id }}
+          path: ${{ runner.temp }}/r8_output.json
+          if-no-files-found: ignore
+          retention-days: 7
+# No push, write token or GitHub Actions bot-authored changes.
