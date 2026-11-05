@@ -6,9 +6,9 @@ const REVISERS=Object.freeze(['GENERIC_DRAFT_REVISE','KSGT_SELECTIVE_ACCOUNTABIL
 function digest(x){return crypto.createHash('sha256').update(x).digest('hex');}
 function manifest(works,{seed='0',replicates=2}={}){
  if(!Array.isArray(works)||!works.length||!Number.isInteger(replicates)||replicates<1||replicates>20)throw Error('INVALID_DESIGN');
- const seen=new Set(),out=[];
+ const seen=new Set(),seenSources=new Set(),out=[];
  for(const w of works){
-  if(!w||typeof w.workId!=='string'||!w.workId||!/^[a-f0-9]{64}$/.test(w.sourceSha256||'')||!['development','heldout'].includes(w.split)||seen.has(w.workId))throw Error('INVALID_WORK');seen.add(w.workId);
+  if(!w||typeof w.workId!=='string'||!w.workId||!/^[a-f0-9]{64}$/.test(w.sourceSha256||'')||!['development','heldout'].includes(w.split)||seen.has(w.workId)||seenSources.has(w.sourceSha256))throw Error('INVALID_WORK_OR_SOURCE_LEAKAGE');seen.add(w.workId);seenSources.add(w.sourceSha256);
   for(let repeat=0;repeat<replicates;repeat++){
    const groupId=digest([seed,w.workId,repeat].join(':')),phase=Number.parseInt(digest([seed,w.workId].join(':')).slice(0,1),16)%2;
    const orderedDrafts=repeat%2===phase?[...DRAFTS]:[...DRAFTS].reverse();
