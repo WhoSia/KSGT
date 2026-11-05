@@ -1,0 +1,131 @@
+{
+  "schema": "ksgt.g10.p1.r6.researcher-candidate-source-flags.v01",
+  "authority": "UNBLINDED_RESEARCHER_ILLUSTRATIVE_NONEXHAUSTIVE_NOT_GOLD",
+  "runId": 41975371632,
+  "rawZipSha256": "80695e18ae9c48b08b8a0e9c3564992c65222dc3bbb1905c84f8c7ddcbdb5e44",
+  "rows": [
+    {
+      "sourceWork": "NOTICE_CONDITION_A",
+      "arm": "STRONG_DIRECT",
+      "exactOutputSpan": "매주 금요일",
+      "candidateType": "UNLICENSED_RECURRENCE",
+      "sourceFactIds": [
+        "F1"
+      ]
+    },
+    {
+      "sourceWork": "NOTICE_CONDITION_A",
+      "arm": "GENERIC_CONTRACT",
+      "exactOutputSpan": "매주 금요일",
+      "candidateType": "UNLICENSED_RECURRENCE",
+      "sourceFactIds": [
+        "F1"
+      ]
+    },
+    {
+      "sourceWork": "PUBLIC_NOTICE_B",
+      "arm": "GENERIC_CONTRACT",
+      "exactOutputSpan": "매주 토요일",
+      "candidateType": "UNLICENSED_RECURRENCE",
+      "sourceFactIds": [
+        "F1"
+      ]
+    },
+    {
+      "sourceWork": "PUBLIC_NOTICE_B",
+      "arm": "GENERIC_CONTRACT",
+      "exactOutputSpan": "입장료가 부과되지",
+      "candidateType": "UNLICENSED_ADMISSION_FEE",
+      "sourceFactIds": [
+        "F4"
+      ]
+    },
+    {
+      "sourceWork": "PUBLIC_NOTICE_B",
+      "arm": "STRONG_DIRECT",
+      "exactOutputSpan": "변동이 없으니",
+      "candidateType": "UNLICENSED_SCHEDULE_CERTAINTY",
+      "sourceFactIds": [
+        "F1"
+      ]
+    },
+    {
+      "sourceWork": "SCIENCE_CALIB_B",
+      "arm": "GENERIC_CONTRACT",
+      "exactOutputSpan": "일반적인 센서 오차 범위",
+      "candidateType": "UNSUPPORTED_ERROR_RANGE_GENERALIZATION",
+      "sourceFactIds": [
+        "F4",
+        "F5"
+      ]
+    },
+    {
+      "sourceWork": "SCIENCE_CALIB_B",
+      "arm": "STRONG_DIRECT",
+      "exactOutputSpan": "오차 범위에 기인할 가능성이 높",
+      "candidateType": "UNSUPPORTED_CAUSAL_STRENGTH",
+      "sourceFactIds": [
+        "F4",
+        "F5"
+      ]
+    },
+    {
+      "sourceWork": "SCENE_CORRIDOR_B",
+      "arm": "STRONG_DIRECT",
+      "exactOutputSpan": "정각을 알리는 종소리",
+      "candidateType": "ADDED_UNOBSERVED_EVENT",
+      "sourceFactIds": [
+        "F1"
+      ]
+    },
+    {
+      "sourceWork": "SCENE_CORRIDOR_B",
+      "arm": "GENERIC_CONTRACT",
+      "exactOutputSpan": "정각을 알리는 종소리",
+      "candidateType": "ADDED_UNOBSERVED_EVENT",
+      "sourceFactIds": [
+        "F1"
+      ]
+    },
+    {
+      "sourceWork": "SCENE_CORRIDOR_B",
+      "arm": "KSGT_GENRE_LICENSE",
+      "exactOutputSpan": "그 컵은 아직 비어 있었으며",
+      "candidateType": "ADDED_UNOBSERVED_OBJECT_PROPERTY",
+      "sourceFactIds": [
+        "F5"
+      ]
+    },
+    {
+      "sourceWork": "SCENE_CORRIDOR_B",
+      "arm": "KSGT_GENRE_LICENSE",
+      "exactOutputSpan": "컵을 들고 복도 끝으로 걸어갔다",
+      "candidateType": "ADDED_UNOBSERVED_ACTION",
+      "sourceFactIds": [
+        "F5"
+      ]
+    },
+    {
+      "sourceWork": "SCENE_UNORDERED_A",
+      "arm": "KSGT_GENRE_LICENSE",
+      "exactOutputSpan": "지현의 조용한 독서",
+      "candidateType": "ADDED_UNOBSERVED_ACTION",
+      "sourceFactIds": [
+        "F2",
+        "F5"
+      ]
+    },
+    {
+      "sourceWork": "SCENE_UNORDERED_A",
+      "arm": "STRONG_DIRECT",
+      "exactOutputSpan": "조용히 페이지를 넘겼다",
+      "candidateType": "ADDED_UNOBSERVED_ACTION",
+      "sourceFactIds": [
+        "F2",
+        "F5"
+      ]
+    }
+  ],
+  "warning": "These deliberately selected exact output spans are nonexhaustive qualitative candidate deviations, not a count of all errors. An unflagged arm is not certified source-faithful. One researcher read all 18 outputs unblinded and inspected candidates against source.",
+  "countOfIllustrativeFlags": 13
+}
