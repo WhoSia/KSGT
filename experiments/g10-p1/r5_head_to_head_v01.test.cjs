@@ -1,0 +1,16 @@
+"use strict";
+const test=require("node:test"),a=require("node:assert/strict");
+const {ARMS,make,preflight,validateConfig,run}=require("./r5_head_to_head_v01.cjs");
+const cohort=require("./fixtures/r2_matched_information_dev_v01.json");
+const config={schema:"ksgt.g10.p1.r5.request.v01",provider:"groq",model:"openai/gpt-oss-20b",maxTokens:900,temperature:0};
+test("all 3 source works and all 9 cells preserved",()=>{const x=preflight(cohort);a.equal(x.sourceWorks,3);a.equal(x.assignedCells,9);a.equal(x.realProviderOutputs,0);a.equal(x.humanRatings,0)});
+test("same information per task and 3 distinct arms",()=>{a.equal(new Set(ARMS).size,3);for(const t of cohort.tasks){const x=ARMS.map(arm=>make(t,arm));a.equal(new Set(x.map(z=>z.sourceSha256)).size,1);a.equal(new Set(x.map(z=>z.promptSha256)).size,3)}});
+test("same edges visible in direct and explicit and graph arms",()=>{const t=cohort.tasks[0];for(const arm of ARMS){let p=make(t,arm);a.ok(p.messages[1].content.includes('"AUTHOR_DECLARED"'));a.ok(p.messages[1].content.includes("실습 참가자"));}});
+test("graph plan reorders the notice prerequisite",()=>{a.match(make(cohort.tasks[0],"GRAPH_ORDER").messages[1].content,/F2 → F1/)});
+test("invalid edges fail closed before model invocation",()=>{const t=cohort.tasks[0];const bad={...t,edges:[{...t.edges[0],evidence:"MODEL_GUESSED"}]};a.throws(()=>make(bad,"GRAPH_ORDER"),/UNLICENSED_EDGE/)});
+test("dry run sends zero requests",async()=>{let calls=0;const r=await run(cohort,config,{dryRun:true,invoke:async()=>{calls++}});a.equal(calls,0);a.equal(r.records.length,9);a.equal(r.generated,0)});
+test("live mode requires explicit provider injection",async()=>{await a.rejects(run(cohort,config,{dryRun:false}),/EXPLICIT_PROVIDER_INVOKER_REQUIRED/)});
+test("mock execution retains all nine cells",async()=>{let n=0;const r=await run(cohort,config,{dryRun:false,invoke:async()=>{n++;return {text:"MOCK ONLY",usage:{prompt_tokens:100,completion_tokens:20},latencyMs:5}}});a.equal(n,9);a.equal(r.generated,9);a.ok(r.records.every(x=>x.usage.prompt_tokens===100));});
+test("partial failures remain denominator",async()=>{let n=0;const r=await run(cohort,config,{dryRun:false,invoke:async()=>{n++;if(n%2)throw Error("SIMULATED_FAIL");return {text:"MOCK"}}});a.equal(r.assigned,9);a.equal(r.failed,5);a.equal(r.generated,4);});
+test("invalid model config rejected",()=>{a.throws(()=>validateConfig({...config,model:""}),/INVALID_CONFIG/);a.throws(()=>validateConfig({...config,maxTokens:100000}),/INVALID_CONFIG/)});
+test("duplicate work is a failed gate",()=>{a.throws(()=>preflight({...cohort,tasks:[cohort.tasks[0],cohort.tasks[0]]}),/DUPLICATE_SOURCE_WORK/)});
