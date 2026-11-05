@@ -2,6 +2,10 @@
 
 **Disposition:** POSITIVE EXTERNAL SOURCE-STRING CONTACT / 7 OF 7 SPECIFIED EXACT-NORMALIZED EXAMPLES LINKED UNIQUELY / ORIGINAL ESSAY AUTHORITY STILL HOLD / NO FULL-CORPUS RECONSTRUCTION CLAIM.
 
+## R9.4 CORRECTION AND EXPANSION — 2026-11-05
+
+This R9.3 document is a **seven-case preliminary lead, superseded for corpus coverage by [R9.4's actual dev/test census](R9_4_UD_KOLLA_246_EXACT_BRIDGE_AUDIT_20261105.md)**. Crucially, the earlier statement that the UD test file contains “168 KL source IDs” omits **heterogeneous ID families**: there are 168 raw `KL-` prefixed test entries, but only **122 canonical `KL-fb/fi/hb/hi-N-N`** plus **2 `N-N-N` suffixed** candidate KoLLA essay IDs. Another 44 have distinct `KL-H_P` or `KL-H_T` format and cannot inherit that assumed essay ID meaning. In public dev+test, the corresponding counts are **338 raw `KL-` prefixes = 240 canonical + 6 split-suffixed + 92 other-family**. Strict source-hash replay against the original M2 on all 246 candidate-format entries yields **180 uniquely linked, 62 unmatched, 4 ambiguous**, 59 candidate groups and zero group-span interleavings / 282 order inversions checked with zero failures. The UPSTREAM TRAIN SPLIT WAS NOT READ (7.7 MB file-size tooling constraint). All original 100-essay boundary and author claims remain HOLD. The earlier seven IDs remain verified subset examples, not the final coverage denominator.
+
 ## Discovery
 
 [Official UniversalDependencies/UD_Korean-KSL](https://github.com/UniversalDependencies/UD_Korean-KSL) README explicitly says the treebank includes a subset of original **KoLLA** learner sentences, with `KL` IDs and group tags `fb, fi, hb`, in addition to other independent Kyung Hee and argumentative datasets. Its current `ko_ksl-ud-test.conllu` contains sample IDs that are consistent with the form:
