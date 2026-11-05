@@ -1,0 +1,53 @@
+name: KSGT R6 Source-License and Genre-Realization Bounded Development
+on:
+  push:
+    paths:
+      - 'experiments/g10-p1/fixtures/r6_launch_v01.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  r6-bounded:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - name: Check out without write credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: All G10 regression tests before provider contact
+        run: node --test experiments/g10-p1/*.test.cjs
+      - name: R6 source parity and authorization dry-run
+        run: node experiments/g10-p1/r6_runner_v01.cjs --dry-run
+      - name: Real bound 18-call Groq run
+        shell: bash
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then
+            echo "R6_BLOCKED_MISSING_PROVIDER_KEY"; exit 2
+          fi
+          node experiments/g10-p1/r6_runner_v01.cjs --execute "$RUNNER_TEMP/r6_output.json"
+      - name: Only log outcome and cost counts, never raw prose
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/r6_output.json" ]; then
+            R6_OUTPUT="$RUNNER_TEMP/r6_output.json" node -e 'const r=require(process.env.R6_OUTPUT);console.log(JSON.stringify({assigned:r.assigned,generated:r.generated,failures:r.failures,usage:r.rows.map(x=>({sourceWork:x.sourceWork,arm:x.arm,status:x.status,promptTokens:x.usage?.prompt_tokens??null,completionTokens:x.usage?.completion_tokens??null}))}))'
+          else
+            echo "R6_NO_OUTPUT_FILE"
+          fi
+      - name: Preserve original source-identifiable outputs without bot commits
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r6-raw-development-${{ github.run_id }}
+          path: ${{ runner.temp }}/r6_output.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+# No git push/merge/tag/PR creation; no bot-authored Git commits.
