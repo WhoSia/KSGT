@@ -8,13 +8,15 @@
   "official_name": "KSGT Generation X G10-P1 — Lightweight Discourse-Guided Korean Prose Generation: Source-Conditioned Planning, Contextual Linguistic Realization & End-to-End Quality Evaluation",
   "canonical_notion_id": "40def561-cf92-81a0-b990-ee1b3662b79e",
   "current_artifact": "experiments/g10-p1/RESEARCH_PROGRAM.md",
-  "current_question": "Does lightweight source-conditioned discourse planning and contextual Korean linguistic realization improve full-paragraph Korean writing quality over matched strong LLM direct and rich-prompt baselines at measurable cost?",
+  "current_question": "Does a compact, source-conditioned, reader-purpose-aware global discourse plan improve complete Korean documents beyond strong one-call LLM writing, generic outlines, and compute-matched rivals?",
   "current_authority": {
-    "actual_new_g10_model_generations": 196,
+    "actual_new_g10_model_generations": 232,
     "independent_korean_reader_preference": 0,
-    "source_fidelity_comparison": "RESEARCHER_EXAMPLES_ONLY_NO_INDEPENDENT_ADJUDICATION",
-    "matched_cost_comparison": "REAL_PROVIDER_TOKENS_MEASURED_FOR_ANNOTATED_AND_RAW_SOURCE_EXPERIMENTS",
-    "validated_prose_quality_gain": "NONE_PROVEN"
+    "source_fidelity_comparison": "RESEARCHER_ILLUSTRATIVE_ONLY_NO_INDEPENDENT_GOLD",
+    "matched_cost_comparison": "GLOBALDOC001_REAL_PROVIDER_USAGE_PRESENT_BUT_STRONG_BASELINE_NOT_BUDGET_MATCHED",
+    "validated_prose_quality_gain": "NONE_PROVEN_GLOBAL_OR_LOCAL",
+    "historical_one_paragraph_generations": 196,
+    "new_three_paragraph_documents": 36
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -521,40 +523,33 @@
     "deleting historical G9 evidence"
   ],
   "next_scientific_action": "Implement matched Korean paragraph generation and compare actual outputs using new source-disjoint blind human evaluation",
-  "current_substage": "G10-P1-v0.6 TWO_SEED_MODEL_FAMILY_INTERACTION_AND_ANNOTATION_FREE_PLANNING",
+  "current_substage": "G10-P1 GLOBAL_R1_DOCUMENT_LEVEL_PURPOSE_AND_SOURCE_INFORMATION_ARCHITECTURE",
   "latest_experiment": {
-    "identifier": "G10-P1-v0.6 CROSS_FAMILY_TWO_SEEDS_AND_RAW_ANNOTATION_FREE",
-    "status": "REAL_KOREAN_OUTPUTS_196_HUMAN_READER_SCORES_ZERO",
-    "developmentSourceWorks": 6,
-    "models": [
+    "identifier": "G10-P1 GLOBALDOC001",
+    "status": "REAL_THREE_PARAGRAPH_KOREAN_DOCS_GENERATED_NO_PREFERENCE_GOLD",
+    "run": 41951615788,
+    "modelNames": [
       "openai/gpt-oss-20b",
       "openai/gpt-oss-120b",
       "qwen/qwen3.8-27b"
     ],
-    "crossFamilySeed1": {
-      "run": 41936930175,
-      "outputs": 27,
-      "driveId": "1M0eU1BVLrPk4mE5jTkKepU6WjHAn5CxB"
-    },
-    "crossFamilySeed2": {
-      "run": 41937219229,
-      "outputs": 27,
-      "driveId": "1qsl1H_rOSx5Y5Phb2twDw4nmplmLa5M_"
-    },
-    "annotationFreeV06": {
-      "run": 41937937429,
-      "outputs": 27,
-      "driveId": "1240kjvohhX68TDx42HrRrzrrTCnbChpk"
-    },
-    "blindReaderPilot": {
-      "pairs": 18,
-      "booklets": 6,
-      "independentRatings": 0,
-      "driveSmallPacket": "1p38WTllWoUjlDNuNAAJ0E2llMlMpeQpD"
-    },
-    "newManuscript": "experiments/g10-p1/paper/MANUSCRIPT_DRAFT_V02.md",
-    "scientificBoundary": "REPEATED_EXPOSED_SYNTHETIC_DEVELOPMENT_ONLY_NO_CAUSAL_HUMAN_QUALITY_GAIN",
-    "nextResearch": "NEW_SOURCE_WORKS_NATIVE_READER_PREFERENCES_INDEPENDENT_SOURCE_REVIEW_AND_COMPUTE_COST"
+    "developmentSourceWorks": 3,
+    "policies": [
+      "STRONG_ONE_SHOT",
+      "GENERIC_OUTLINE",
+      "GLOBAL_MAP",
+      "GLOBAL_MAP_ABLATED"
+    ],
+    "actualThreeParagraphDocuments": 36,
+    "generatedOneParagraphHistory": 196,
+    "archiveDriveId": "1EWDXm30FMMcZgQ9g108jDBrbhuvMD9jw",
+    "blindReaderPacketDriveId": "1FiRrGAB-hnwM1uNPrRLPj00hKWGbQGVw",
+    "humanReaderVotes": 0,
+    "centralProgramme": "experiments/g10-p1/GLOBAL_WRITING_PROGRAM_R1_20261105.md",
+    "study": "experiments/g10-p1/paper/GLOBAL_DOCUMENT_001_20261105_AUDIT.md",
+    "mainInsight": "GLOBAL_MAP_PRODUCES_SHORTER_DOCS_BUT_GREATER_TOTAL_PROVIDER_TOKENS_AND_MIXED_GENRE_FIDELITY",
+    "newArchitecturePrototype": "experiments/g10-p1/global_genre_purpose_v02.cjs",
+    "scientificGate": "HUMAN_READER_DOCUMENT_PREFERENCE_SOURCE_FIDELITY_AND_FRESH_SOURCE_WORKS_NOT_AVAILABLE"
   },
   "provider_connectivity": {
     "codeStatus": "ACTUAL_GROQ_API_PASS_GPTOSS20B_120B_QWEN27B_MULTISEED_AND_RAW_SOURCE",
