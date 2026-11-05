@@ -73,7 +73,21 @@
     "human_recruitment_authorized": false,
     "r9_historical_evidence_audit": "experiments/g10-p1/paper/R9_HUMAN_EVIDENCE_NO_FRESH_RECRUITMENT_20261105.md",
     "r9_existing_human_sources": "G8_STYLEKQC_KOLLA_WMT24PP_KLUE_NIKL_PUBLIC_HUMAN_TRACES_TASK_SPECIFIC_AUTHORITY",
-    "r9_unidentified_claim": "CURRENT_EXACT_OUTPUT_NATIVE_READER_PAIRWISE_PREFERENCE_RETAINS_HOLD_NO_AUTO_RECRUIT"
+    "r9_unidentified_claim": "CURRENT_EXACT_OUTPUT_NATIVE_READER_PAIRWISE_PREFERENCE_RETAINS_HOLD_NO_AUTO_RECRUIT",
+    "r9_human_evidence_replay": "LEGACY_KOLLA_FINAL72_CSV_TEXT_PARSED_72_OF_72_WITHOUT_AUTHOR_INDEPENDENCE",
+    "r9_legacy_kolla_result": {
+      "rows": 72,
+      "localMultiRows": 36,
+      "structuralRows": 36,
+      "candidateSourceIdentity": 10,
+      "visibleHumanSourceIdentity": 14,
+      "candidateVisibleExactIdentity": 0,
+      "independentEssayCount": "UNKNOWN"
+    },
+    "r9_kolla_zip_custody": "DRIVE_ORIGINAL_FOUND_358800_BYTES_METADATA_ONLY_RAW_SHA_READBACK_PENDING",
+    "r9_existing_corpora_admission": "FOUR_SOURCE_INVENTORY_ALL_HOLD_LICENSE_OR_BYTE_PROOF",
+    "r9_native_tests": "REMOTE_CI_QUEUED_DO_NOT_CLAIM_PASS",
+    "r9_next_gate": "SOURCE_WORK_GROUP_LICENSE_RAW_BYTES_FIRST_THEN_PROSPECTIVE_EXISTING_HUMAN_TRACE_REPLAY"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
