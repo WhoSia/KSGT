@@ -1,0 +1,116 @@
+[
+  {
+    "sourceName": "KoLLA v2 existing multi-reference correction corpus",
+    "lane": "HUMAN_REWRITE",
+    "canonicalRootId": "KSGT:KoLLA-V2",
+    "sourceWorkId": "KOLLA_CORPUS_WIDE_NOT_SINGLE_WORK",
+    "sourceEditionId": "ZENODO_16908784",
+    "groupId": "KOLLA_ALL_SAME_UNKNOWN_ESSAYS",
+    "split": "dev",
+    "license": {
+      "status": "UNKNOWN",
+      "note": "Rights per released corpus must be inspected before candidate ingestion."
+    },
+    "receipt": {
+      "status": "METADATA_ONLY",
+      "sha256": null,
+      "driveId": "1dCUq2o8u6x1fzBg77DztfIWuH1dae8w2",
+      "fileName": "16908784.zip",
+      "fileSizeBytes": 358800,
+      "historicalExpectedSha256": "d42d21289708f46c3092b154c36b303b9fd5f77cca4d15b41d770992703de4f7"
+    },
+    "provenance": {
+      "humanOriginVerified": true,
+      "aiAssisted": false,
+      "independentSemanticAdjudication": false
+    },
+    "claims": {
+      "freshNativePreference": false,
+      "humanSemanticGold": false
+    }
+  },
+  {
+    "sourceName": "StyleKQC human directive paraphrases",
+    "lane": "HUMAN_REWRITE",
+    "canonicalRootId": "KSGT:StyleKQC",
+    "sourceWorkId": "STYLEKQC_RAW_NOT_ACQUIRED",
+    "sourceEditionId": "2022_LREC_1_771",
+    "groupId": "STYLEKQC_UNKNOWN_CORE_QUERY",
+    "split": "dev",
+    "license": {
+      "status": "UNKNOWN",
+      "note": "Dataset redistribution and derivative-use license not verified here."
+    },
+    "receipt": {
+      "status": "PUBLISHED_RECEIPT_ONLY",
+      "sha256": null,
+      "source": "https://aclanthology.org/2022.lrec-1.771/",
+      "historicalCourt": "1XlBDlcNPSqHOwQT4uqtAJdqUGT0a1Yq78-gfo6PyN0w"
+    },
+    "provenance": {
+      "humanOriginVerified": true,
+      "aiAssisted": false,
+      "independentSemanticAdjudication": false
+    },
+    "claims": {
+      "freshNativePreference": false,
+      "humanSemanticGold": false
+    }
+  },
+  {
+    "sourceName": "WMT24++ en-ko_KR professional post-edit",
+    "lane": "HUMAN_POSTEDIT",
+    "canonicalRootId": "KSGT:WMT24PP",
+    "sourceWorkId": "WMT24PP_RAW_NOT_MIRRORED",
+    "sourceEditionId": "WMT24PP_EN_KOKR",
+    "groupId": "WMT24PP_UNKNOWN_DOC",
+    "split": "dev",
+    "license": {
+      "status": "UNKNOWN",
+      "note": "Dataset-specific terms pending."
+    },
+    "receipt": {
+      "status": "PUBLISHED_RECEIPT_ONLY",
+      "sha256": null,
+      "historicalCourt": "1BKNTb4QA2QCuIIuYoJc0D6BATaRUUPeWxWXPBLhHt4",
+      "dataset": "google/wmt24pp"
+    },
+    "provenance": {
+      "humanOriginVerified": true,
+      "aiAssisted": false,
+      "independentSemanticAdjudication": false
+    },
+    "claims": {
+      "freshNativePreference": false,
+      "humanSemanticGold": false
+    }
+  },
+  {
+    "sourceName": "KLUE STS v1.1 dev published human semantic task",
+    "lane": "HUMAN_TASK_RATING",
+    "canonicalRootId": "KSGT:KLUE",
+    "sourceWorkId": "KLUE_STS_DEV_CORPUS",
+    "sourceEditionId": "KLUE_STS_1_1",
+    "groupId": "KLUE_STS_DEV_UNKNOWN_ROW",
+    "split": "dev",
+    "license": {
+      "status": "UNKNOWN",
+      "note": "Raw dataset license must be confirmed for exact row usage."
+    },
+    "receipt": {
+      "status": "PUBLISHED_RECEIPT_ONLY",
+      "sha256": null,
+      "gitBlobSha": "2645707503e7b25cc3d9f94103cbfb2f5a086f56",
+      "historicalCourt": "1LwQ9MYrEnfVVe1VQiUX0C_eB2-mS4LnGK9wagGMQdkk"
+    },
+    "provenance": {
+      "humanOriginVerified": true,
+      "aiAssisted": false,
+      "independentSemanticAdjudication": false
+    },
+    "claims": {
+      "freshNativePreference": false,
+      "humanSemanticGold": false
+    }
+  }
+]
