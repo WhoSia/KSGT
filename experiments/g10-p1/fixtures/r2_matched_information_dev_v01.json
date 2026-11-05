@@ -1,0 +1,140 @@
+{
+  "schema": "ksgt.g10.p1.r2.development-fixtures.v01",
+  "evidence": "AUTHOR_SYNTHETIC_EXPOSED_DEVELOPMENT_NOT_HOLDOUT",
+  "tasks": [
+    {
+      "id": "NOTICE_CONDITION_A",
+      "sourceWork": "NOTICE_CONDITION_A",
+      "genre": "public_notice",
+      "audience": "행사 참가 신청자",
+      "purpose": "신청 여부 및 참석 조건을 혼동 없이 판단하게 하기",
+      "facts": [
+        {
+          "id": "F1",
+          "text": "공학 실습은 금요일 오후 3시에 시작된다."
+        },
+        {
+          "id": "F2",
+          "text": "실습 참가자는 수요일 오후 6시까지 포털에서 신청해야 한다."
+        },
+        {
+          "id": "F3",
+          "text": "오리엔테이션은 목요일 오후 5시에 열린다."
+        },
+        {
+          "id": "F4",
+          "text": "오리엔테이션은 신청하지 않은 사람도 참석할 수 있다."
+        },
+        {
+          "id": "F5",
+          "text": "오리엔테이션 참석 여부는 실습 신청 자격에 영향을 주지 않는다."
+        },
+        {
+          "id": "F6",
+          "text": "실습에 필요한 전자 부품은 학교가 제공하지만 개인 노트북 필요 여부는 아직 공지되지 않았다."
+        }
+      ],
+      "edges": [
+        {
+          "before": "F2",
+          "after": "F1",
+          "type": "READER_PREREQUISITE",
+          "evidence": "AUTHOR_DECLARED"
+        },
+        {
+          "before": "F3",
+          "after": "F4",
+          "type": "READER_PREREQUISITE",
+          "evidence": "AUTHOR_DECLARED"
+        }
+      ]
+    },
+    {
+      "id": "SCIENCE_LIMIT_A",
+      "sourceWork": "SCIENCE_LIMIT_A",
+      "genre": "science_explainer",
+      "audience": "고등학생",
+      "purpose": "관찰과 인과적 해석의 경계 설명",
+      "facts": [
+        {
+          "id": "F1",
+          "text": "복원 전 하천 구간에서 저서생물 8종을 관찰했다."
+        },
+        {
+          "id": "F2",
+          "text": "복원 후 같은 구간에서 저서생물 11종을 관찰했다."
+        },
+        {
+          "id": "F3",
+          "text": "관찰은 복원 전후 각각 한 차례였다."
+        },
+        {
+          "id": "F4",
+          "text": "복원과 무관한 계절 변화 가능성을 배제할 수 없다."
+        },
+        {
+          "id": "F5",
+          "text": "수온과 유량의 장기 측정 자료는 없다."
+        },
+        {
+          "id": "F6",
+          "text": "종수 변화만으로 복원이 증가의 원인이라고 확정할 수 없다."
+        }
+      ],
+      "edges": [
+        {
+          "before": "F1",
+          "after": "F2",
+          "type": "READER_PREREQUISITE",
+          "evidence": "AUTHOR_DECLARED"
+        },
+        {
+          "before": "F3",
+          "after": "F6",
+          "type": "READER_PREREQUISITE",
+          "evidence": "AUTHOR_DECLARED"
+        },
+        {
+          "before": "F5",
+          "after": "F6",
+          "type": "READER_PREREQUISITE",
+          "evidence": "AUTHOR_DECLARED"
+        }
+      ]
+    },
+    {
+      "id": "SCENE_UNORDERED_A",
+      "sourceWork": "SCENE_UNORDERED_A",
+      "genre": "scene_essay",
+      "audience": "일반 독자",
+      "purpose": "관찰 가능한 움직임을 통해 장면을 전달",
+      "facts": [
+        {
+          "id": "F1",
+          "text": "도서관 창가에 책 두 권이 놓여 있었다."
+        },
+        {
+          "id": "F2",
+          "text": "지현은 창문 쪽 의자에 앉았다."
+        },
+        {
+          "id": "F3",
+          "text": "민호는 반납대에 책을 올려두었다."
+        },
+        {
+          "id": "F4",
+          "text": "밖에는 약한 비가 내리고 있었다."
+        },
+        {
+          "id": "F5",
+          "text": "지현은 책갈피를 책 사이에 끼웠다."
+        },
+        {
+          "id": "F6",
+          "text": "민호는 도서관 문을 닫고 나갔다."
+        }
+      ],
+      "edges": []
+    }
+  ]
+}
