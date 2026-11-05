@@ -9,3 +9,5 @@ test('no source text in output',()=>{const x=manifest([work('w')]);a.equal(x.raw
 test('reject duplicate source work IDs',()=>a.throws(()=>manifest([work('w'),work('w')]),/INVALID_WORK/));
 test('reject invalid source hash',()=>a.throws(()=>manifest([work('w','development','bad')]),/INVALID_WORK/));
 test('each draft reviser order reverses between two replicates',()=>{const x=manifest([work('w')]);for(const d of ['CLEAN_SOURCE_ONLY','SOURCE_WITH_PROTECTED_CONSTRAINTS']){const orders=[0,1].map(replicate=>x.rows.filter(r=>r.replicate===replicate&&r.draftTreatment===d&&r.step==='REVISE_SHARED_DRAFT').map(r=>r.revision));a.deepEqual(orders[0],[...orders[1]].reverse())}});
+
+test('same source under different work identifiers is not an independent unit',()=>{a.throws(()=>manifest([work('first'),work('second')]),/SOURCE_LEAKAGE/)});
