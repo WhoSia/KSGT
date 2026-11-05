@@ -10,11 +10,11 @@
   "current_artifact": "experiments/g10-p1/RESEARCH_PROGRAM.md",
   "current_question": "Does lightweight source-conditioned discourse planning and contextual Korean linguistic realization improve full-paragraph Korean writing quality over matched strong LLM direct and rich-prompt baselines at measurable cost?",
   "current_authority": {
-    "actual_new_g10_model_generations": 115,
+    "actual_new_g10_model_generations": 196,
     "independent_korean_reader_preference": 0,
-    "source_fidelity_comparison": "RESEARCHER_PROSE_INSPECTION_ONLY_NO_INDEPENDENT_GOLD",
-    "matched_cost_comparison": "PROVIDER_TOKENS_MEASURED_NEAR_MATCHED_PROMPT_CONTROLS",
-    "validated_prose_quality_gain": "NOT_CLAIMED"
+    "source_fidelity_comparison": "RESEARCHER_EXAMPLES_ONLY_NO_INDEPENDENT_ADJUDICATION",
+    "matched_cost_comparison": "REAL_PROVIDER_TOKENS_MEASURED_FOR_ANNOTATED_AND_RAW_SOURCE_EXPERIMENTS",
+    "validated_prose_quality_gain": "NONE_PROVEN"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -521,45 +521,48 @@
     "deleting historical G9 evidence"
   ],
   "next_scientific_action": "Implement matched Korean paragraph generation and compare actual outputs using new source-disjoint blind human evaluation",
-  "current_substage": "G10-P1-v0.5 TWO_FACTORIAL_PILOTS_AND_CROSS_FAMILY_QWEN",
+  "current_substage": "G10-P1-v0.6 TWO_SEED_MODEL_FAMILY_INTERACTION_AND_ANNOTATION_FREE_PLANNING",
   "latest_experiment": {
-    "identifier": "G10-P1-v0.5 CROSS_MODEL_AND_QWEN_CONTACT",
-    "status": "LIVE_MODEL_OUTPUTS_VERIFIED_NO_INDEPENDENT_NATIVE_READER_JUDGMENTS",
+    "identifier": "G10-P1-v0.6 CROSS_FAMILY_TWO_SEEDS_AND_RAW_ANNOTATION_FREE",
+    "status": "REAL_KOREAN_OUTPUTS_196_HUMAN_READER_SCORES_ZERO",
+    "developmentSourceWorks": 6,
     "models": [
       "openai/gpt-oss-20b",
       "openai/gpt-oss-120b",
       "qwen/qwen3.8-27b"
     ],
-    "distinctModelFamilies": 2,
-    "distinctAuthorSyntheticSourceWorks": 6,
-    "successfulOutputs": 115,
-    "factorial001": {
-      "run": 41785252058,
-      "outputs": 24,
-      "driveId": "1jCCjAyNp8R3IBZ2QWvBJKfaZERamyIts"
+    "crossFamilySeed1": {
+      "run": 41936930175,
+      "outputs": 27,
+      "driveId": "1M0eU1BVLrPk4mE5jTkKepU6WjHAn5CxB"
     },
-    "factorial002": {
-      "run": 41786019896,
-      "outputs": 36,
-      "driveId": "1KJyT3hSRcbtgXL3NpUcFC5Kh1X6I_nKz"
+    "crossFamilySeed2": {
+      "run": 41937219229,
+      "outputs": 27,
+      "driveId": "1qsl1H_rOSx5Y5Phb2twDw4nmplmLa5M_"
     },
-    "qwenContact": {
-      "run": 41786535413,
-      "outputs": 5,
-      "driveId": "1BCbffTLyrtjBx4lWWq6rFadLfmL396xV"
+    "annotationFreeV06": {
+      "run": 41937937429,
+      "outputs": 27,
+      "driveId": "1240kjvohhX68TDx42HrRrzrrTCnbChpk"
     },
-    "study": "experiments/g10-p1/paper/FACTORIAL001_002_MODEL_ARCHITECTURE_DISENTANGLEMENT_20261104.md",
-    "caveat": "ALL_SYNTHETIC_EXPOSED_DEVELOPMENT_NO_HUMAN_PREFERENCE_AND_NO_CONFIRMED_QUALITY_GAIN",
-    "observedFailure": "V04_MEASUREMENT_LIMITATION_WRONG_OPENING_V05_PARTIALLY_CORRECTED_WITH_NEW_UNLICENSED_NARRATIVE_ADDENDUM",
-    "nextAction": "FROZEN_NEW_SOURCE_WORKS_AND_INDEPENDENT_NATIVE_KOREAN_BLIND_READER_JUDGMENTS"
+    "blindReaderPilot": {
+      "pairs": 18,
+      "booklets": 6,
+      "independentRatings": 0,
+      "driveSmallPacket": "1p38WTllWoUjlDNuNAAJ0E2llMlMpeQpD"
+    },
+    "newManuscript": "experiments/g10-p1/paper/MANUSCRIPT_DRAFT_V02.md",
+    "scientificBoundary": "REPEATED_EXPOSED_SYNTHETIC_DEVELOPMENT_ONLY_NO_CAUSAL_HUMAN_QUALITY_GAIN",
+    "nextResearch": "NEW_SOURCE_WORKS_NATIVE_READER_PREFERENCES_INDEPENDENT_SOURCE_REVIEW_AND_COMPUTE_COST"
   },
   "provider_connectivity": {
-    "codeStatus": "SUCCESS_GPTOSS20B_GPTOSS120B_QWEN3_8_27B",
+    "codeStatus": "ACTUAL_GROQ_API_PASS_GPTOSS20B_120B_QWEN27B_MULTISEED_AND_RAW_SOURCE",
     "provider": "groq",
     "baseUrl": "https://api.groq.com/openai/v1",
     "credentialPolicy": "USER_LOCAL_ENV_GROQ_API_KEY_NEVER_COMMIT_OR_CHAT",
-    "actualAuthenticatedGroqCalls": 120,
-    "liveModelOutputs": 115,
+    "actualAuthenticatedGroqCalls": 201,
+    "liveModelOutputs": 196,
     "userAction": "NONE_FOR_GITHUB_TRIGGERED_DEV_PILOTS; REAL_READER_AND_INDEPENDENT_DATA_ARE_FUTURE_RESEARCH_REQUIREMENTS",
     "instructions": "experiments/g10-p1/GROQ_LOCAL_SETUP_20261103.md",
     "confidence": "THREE_SUCCESSFUL_15_OUTPUT_PILOTS_AND_ONE_SUCCESSFUL_5_OUTPUT_PILOT_PLUS_ONE_5_BY_404_FAILURE",
