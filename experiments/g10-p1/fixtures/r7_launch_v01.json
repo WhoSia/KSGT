@@ -1,0 +1,17 @@
+{
+  "schema": "ksgt.g10.p1.r7.launch.v01",
+  "frozenDate": "2026-11-05",
+  "sourceWorks": 6,
+  "arms": [
+    "STRONG_DIRECT",
+    "GENERIC_DRAFT_REVISE",
+    "KSGT_CLAIM_PLAN"
+  ],
+  "assignedCells": 18,
+  "maximumProviderCalls": 30,
+  "model": "openai/gpt-oss-20b",
+  "sourceCohort": "experiments/g10-p1/fixtures/r6_cohort_v01.json",
+  "preregistration": "experiments/g10-p1/paper/R7_CLAIM_REALIZATION_PREREG_20261105.md",
+  "evidenceAuthority": "AUTHOR_SYNTHETIC_EXPOSED_DEVELOPMENT",
+  "humanRatings": 0
+}
