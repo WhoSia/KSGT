@@ -6,7 +6,7 @@ const plan={units:[{type:"SOURCE_CLAIM",factIds:["F1"],content:"실습 일시"},
 test("six source works and two genuine two-call rivals",()=>{a.equal(preflight(cohort).sourceWorks,6);a.equal(preflight(cohort).providerCallsMaximum,30);a.equal(ARMS.length,3)});
 test("same exact source in all arms",()=>a.equal(new Set([messages(t,"STRONG_DIRECT","final"),messages(t,"GENERIC_DRAFT_REVISE","draft"),messages(t,"KSGT_CLAIM_PLAN","plan")].map(x=>x.sourceSha256)).size,1));
 test("witnessed plan parses without becoming semantic gold",()=>{const p=decodePlan(JSON.stringify(plan),t);a.equal(p.units.length,4);a.match(p.warning,/NOT_ENTAILMENT_GOLD/)});
-test("fenced JSON accepted",()=>a.equal(decodePlan("(```json\n"+JSON.stringify(plan)+"\n```",t).units.length,4));
+test("fenced JSON accepted",()=>a.equal(decodePlan("```json\n"+JSON.stringify(plan)+"\n```",t).units.length,4));
 test("nonsyntactic plan rejected",()=>a.throws(()=>decodePlan("not json",t),/UNPARSEABLE_PLAN/));
 test("source claim needs evidence ID",()=>{const p=structuredClone(plan);p.units[0].factIds=[];a.throws(()=>decodePlan(JSON.stringify(p),t),/SOURCE_CLAIM_NEEDS_WITNESS/)});
 test("unknown ID rejected",()=>{const p=structuredClone(plan);p.units[0].factIds=["F99"];a.throws(()=>decodePlan(JSON.stringify(p),t),/UNWITNESSED_FACT_REFERENCE/)});
