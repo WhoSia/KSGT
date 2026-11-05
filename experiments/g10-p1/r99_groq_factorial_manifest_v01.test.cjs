@@ -1,0 +1,10 @@
+'use strict';const test=require('node:test'),a=require('node:assert/strict'),{manifest}=require('./r99_groq_factorial_manifest_v01.cjs');
+const work=(id,split='development',sha='a'.repeat(64))=>({workId:id,split,sourceSha256:sha});
+test('one work two repeats requires fourteen provider calls',()=>{const x=manifest([work('w')]);a.equal(x.providerCallsPlanned,14);a.equal(x.actualProviderCalls,0)});
+test('each draft reused by two revisers',()=>{const x=manifest([work('w')],{replicates:1});for(const d of ['CLEAN_SOURCE_ONLY','SOURCE_WITH_PROTECTED_CONSTRAINTS'])a.equal(x.rows.filter(v=>v.draftTreatment===d&&v.step==='REVISE_SHARED_DRAFT').length,2)});
+test('retain strong direct one-call baseline',()=>{const x=manifest([work('w')],{replicates:1});a.equal(x.rows.filter(r=>r.step==='STRONG_DIRECT').length,1)});
+test('seeded reproducibility',()=>{const a1=manifest([work('w')],{seed:'v1'}),a2=manifest([work('w')],{seed:'v1'});a.deepEqual(a1,a2)});
+test('distinct replicates',()=>{const x=manifest([work('w')]);a.notEqual(x.rows[0].groupId,x.rows[7].groupId)});
+test('no source text in output',()=>{const x=manifest([work('w')]);a.equal(x.rawTextIncluded,false);a.equal(x.qualitySuperiorityEstablished,false)});
+test('reject duplicate source work IDs',()=>a.throws(()=>manifest([work('w'),work('w')]),/INVALID_WORK/));
+test('reject invalid source hash',()=>a.throws(()=>manifest([work('w','development','bad')]),/INVALID_WORK/));
