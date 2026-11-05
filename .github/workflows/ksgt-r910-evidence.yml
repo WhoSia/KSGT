@@ -27,7 +27,7 @@ jobs:
         working-directory: experiments/g10-p1
         shell: bash
         run: |
-          python -m unittest -v test_r910_sha_replay.py
+          python -m unittest -v test_r910_sha_replay.py test_r910_blind_packet.py
           python - <<'PY'
           import json
           j=json.load(open('fixtures/r910_sha256_replay_aggregate.json',encoding='utf8'))
