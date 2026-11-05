@@ -115,7 +115,33 @@
     "r9_3_ud_external_candidate": "UD_KOREAN_KSL_SEVEN_OF_SEVEN_UNIQUE_NFC_WHITESPACE_NORMALIZED_LINKS_ESSAY_GROUP_RECOVERY_POSSIBLE_UNVERIFIED",
     "r9_3_ud_candidate_groups": "KL_hb_22_UD_SENT_IDS_1_4_5_MATCH_M2_873_876_877_ORIGINAL_ESSAY_UNVERIFIED",
     "r9_3_ud_lead_report": "experiments/g10-p1/paper/R9_3_UD_KSL_EXTERNAL_ESSAY_BRIDGE_LEAD_20261105.md",
-    "r9_3_ud_coverage": "SELECTED_7_PUBLIC_KL_SENTENCES_NOT_ALL_UD_ORIGINAL_1418"
+    "r9_3_ud_coverage": "SUPERSEDED_BY_R9_4_CANONICAL_DEV_TEST_246_180_LINKED_59_GROUP_CANDIDATES_FULL_ESSAY_HOLD",
+    "r9_4_ud_dev_test": {
+      "scope": "PUBLIC_UD_KSL_DEV_TEST_CANDIDATE_ID_FORMAT_ONLY",
+      "rawKLPrefixIds": 338,
+      "canonical": 240,
+      "suffixed": 6,
+      "otherUnclassified": 92,
+      "checked": 246,
+      "uniqueNormalizedM2Links": 180,
+      "unmatched": 62,
+      "ambiguous": 4,
+      "candidateGroups": 59,
+      "interleavings": 0,
+      "withinGroupOrderPairs": 282,
+      "inversions": 0,
+      "originalEssayIdAuthority": "NOT_ESTABLISHED",
+      "train": "NOT_FETCHED_SIZE_LIMIT",
+      "independentReaderResults": 0
+    },
+    "r9_4_report": "experiments/g10-p1/paper/R9_4_UD_KOLLA_246_EXACT_BRIDGE_AUDIT_20261105.md",
+    "r9_4_drive_folder": "1yVtDoJuOCP-_Tg38KBj9SIxr04PDIVda",
+    "r9_4_local_tests": {
+      "node22": 7,
+      "python3": 5,
+      "nodeStatus": "PASS_LOCAL",
+      "remoteCI": "NOT_CONFIRMED_SUCCESS"
+    }
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -621,7 +647,7 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "Check entire version-pinned UD-Korean-KSL KoLLA subset for unique original-M2 sentence matches, collisions and original essay index authority; do not extrapolate to all 100 essays; no new human recruitment.",
+  "next_scientific_action": "Obtain original EXMARaLDA essay-to-sentence mapping and large UD-KSL train split with immutable SHA/version, audit 62 nonmatches without semantic-altering normalization, then evaluate Korean writing quality against strong direct alternatives; no new recruitment.",
   "current_substage": "G10-P1 GLOBAL_R1_DOCUMENT_LEVEL_PURPOSE_AND_SOURCE_INFORMATION_ARCHITECTURE",
   "latest_experiment": {
     "identifier": "G10-P1 GLOBALDOC001",
