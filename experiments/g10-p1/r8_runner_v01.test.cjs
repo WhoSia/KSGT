@@ -1,0 +1,12 @@
+"use strict";
+const test=require("node:test"),a=require("node:assert/strict");
+const {gate,run}=require("./r8_runner_v01.cjs");
+const cohort=require("./fixtures/r6_cohort_v01.json"),config=require("./fixtures/r8_request_v01.json");
+test("frozen request validates",()=>a.equal(gate(config).maxCalls,18));
+test("config refuses larger call count",()=>a.throws(()=>gate({...config,maxCalls:19}),/INVALID_R8_CONFIG/));
+test("dry run makes zero calls",async()=>{let n=0;const r=await run(cohort,config,{dryRun:true,invoke:async()=>n++});a.equal(n,0);a.equal(r.assignedCells,18)});
+test("live run requires explicit provider",async()=>a.rejects(run(cohort,config,{dryRun:false}),/PROVIDER_NOT_INJECTED/));
+test("simulated 18-stage run preserves shared draft identity",async()=>{let n=0;const r=await run(cohort,config,{dryRun:false,invoke:async()=>({text:"테스트 문장 "+(++n)})});a.equal(n,18);a.equal(r.generatedCells,18);a.ok(r.records.every(x=>x.revisions[0].draftSha256===x.revisions[1].draftSha256))});
+test("draft failure counts unattempted revisions",async()=>{let n=0;const r=await run(cohort,config,{dryRun:false,invoke:async()=>{if(++n===1)throw Error("MOCK");return {text:"테스트"}}});a.equal(r.failedCells,1);a.equal(r.unattemptedCells,2)});
+test("reviser failure remains a failure",async()=>{let n=0;const r=await run(cohort,config,{dryRun:false,invoke:async()=>{if(++n===2)throw Error("MOCK");return {text:"테스트"}}});a.equal(r.failedCells,1);a.equal(r.unattemptedCells,0)});
+test("no human or semantic gold is invented",async()=>{const r=await run(cohort,config);a.equal(r.humanRatings,0);a.equal(r.independentSemanticGold,0)});
