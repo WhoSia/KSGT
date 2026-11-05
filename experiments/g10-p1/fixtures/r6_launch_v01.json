@@ -1,0 +1,14 @@
+{
+  "schema": "ksgt.g10.p1.r6.launch.v01",
+  "maxProviderCalls": 18,
+  "cohort": "experiments/g10-p1/fixtures/r6_cohort_v01.json",
+  "request": "experiments/g10-p1/fixtures/r6_request_v01.json",
+  "arms": [
+    "STRONG_DIRECT",
+    "GENERIC_CONTRACT",
+    "KSGT_GENRE_LICENSE"
+  ],
+  "preRegistered": "experiments/g10-p1/paper/R6_SOURCE_LICENSE_PREREG_20261105.md",
+  "evidenceAuthority": "AUTHOR_AUTHORED_EXPOSED_DEVELOPMENT_NO_EXTERNAL_HOLDOUT",
+  "launchedDate": "2026-11-05"
+}
