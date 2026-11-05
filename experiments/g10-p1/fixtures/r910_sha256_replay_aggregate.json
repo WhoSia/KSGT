@@ -1,0 +1,33 @@
+{
+  "schema": "ksgt.r9.10.ud-kolla-sha256-cold-replay.v01",
+  "originalKoLLAZipSha256": "d42d21289708f46c3092b154c36b303b9fd5f77cca4d15b41d770992703de4f7",
+  "originalM2Sha256": "d848bac8095bf4280e9c8f6bb7ef2733434cf0eb2c2977d34fd4a0eb6c061ed4",
+  "sourceM2Blocks": 1418,
+  "udBlobSHA1": {
+    "dev": "eff8a689c1dad1231ac5d342ebb78742f6327fa3",
+    "test": "637d4405a89b41439b63cc175ec20ae666227905"
+  },
+  "candidateUDRows": 246,
+  "unique": 180,
+  "missing": 62,
+  "ambiguous": 4,
+  "uniqueM2SourceIndices": 180,
+  "candidateGroupSpans": 59,
+  "spansInterleavingCount": 0,
+  "withinGroupComparablePairs": 279,
+  "withinGroupSequenceInversions": 0,
+  "withinGroupSameNumberPairsExcluded": 3,
+  "originalEssayMapCertified": false,
+  "independentHumanRatings": 0,
+  "rawLearnerTextPublished": false,
+  "udRecordsPerSplit": {
+    "dev": 122,
+    "test": 124
+  },
+  "limitations": [
+    "NFC+whitespace normalized equality, not raw bytes",
+    "UD IDs are external and unauthenticated as original essay IDs",
+    "No UD train text replay",
+    "No end-to-end original essay boundaries"
+  ]
+}
