@@ -10,13 +10,13 @@
   "current_artifact": "experiments/g10-p1/RESEARCH_PROGRAM.md",
   "current_question": "Does a compact, source-conditioned, reader-purpose-aware global discourse plan improve complete Korean documents beyond strong one-call LLM writing, generic outlines, and compute-matched rivals?",
   "current_authority": {
-    "actual_new_g10_model_generations": 277,
+    "actual_new_g10_model_generations": 295,
     "independent_korean_reader_preference": 0,
     "source_fidelity_comparison": "RESEARCHER_ILLUSTRATIVE_ONLY_NO_INDEPENDENT_GOLD",
-    "matched_cost_comparison": "R7_SAME_TWO_CALLS_KSGT_PLUS_16_56_PERCENT_TOTAL_TOKENS_VS_GENERIC_DRAFT_REVISE_NOT_TOKEN_MATCHED",
+    "matched_cost_comparison": "R8_SHARED_DRAFT_BOTH_REVISERS_ONE_EXTRA_CALL_GENERIC_7414_VS_ACCOUNTABLE_7365_STEP_TOKENS_NOT_INSTRUCTION_TOKEN_MATCHED",
     "validated_prose_quality_gain": "NONE_PROVEN_GLOBAL_OR_LOCAL",
     "historical_one_paragraph_generations": 196,
-    "new_three_paragraph_documents": 81,
+    "new_three_paragraph_documents": 99,
     "r5_three_paragraph_development_outputs": 9,
     "r5_remote_node_ci": "GITHUB_RUN_41968783130_169_OF_169_PASS",
     "r5_real_api": "GROQ_GPTOSS20B_3_EXPOSED_SOURCE_WORKS_X_3_ARMS_9_GENERATED_0_FAILED",
@@ -55,7 +55,19 @@
       "KSGT_CLAIM_PLAN": 12646
     },
     "r7_three_paragraph_format_compliant": 16,
-    "r7_plan_shape_pass": "6_OF_6_TYPES_AND_REFERENCES_ONLY_NOT_ENTAILMENT"
+    "r7_plan_shape_pass": "6_OF_6_TYPES_AND_REFERENCES_ONLY_NOT_ENTAILMENT",
+    "r8_real_api": "GROQ_GPTOSS20B_6_EXPOSED_AUTHORED_WORKS_18_CALLS_18_OUTPUTS_SHARED_DRAFT_0_FAILED",
+    "r8_remote_node_ci": "R8_INITIAL_RUN_41987454634_ZERO_CALLS_DRYRUN_EXIT_ERROR_FIXED_RETRY_41987543928_235_OF_235_PASS",
+    "r8_provider_total_tokens": {
+      "BASE_DRAFT": 5036,
+      "GENERIC_REVISION": 7414,
+      "SOURCE_ACCOUNTABLE_REVISION": 7365
+    },
+    "r8_three_paragraph_compliant": 17,
+    "r8_shared_draft_source_identity": "SIX_OF_SIX_PAIRED_REVISIONS_SHARE_EXACT_BASE_DRAFT_SHA_AND_SOURCE_SHA",
+    "r8_semantic": "SELECTIVE_REPAIRS_BOTH_ARMS_NO_COMPLETE_PROVENANCE_REPAIR_CORRIDOR_2_PARAGRAPHS",
+    "r8_raw_drive_id": "12fGj9tz26ImJkff0W1sRzaxNxaHT7L3A",
+    "r8_raw_sha256": "4c8c3f8adcd63b047bc5c71ceeed76e0a26a299ee6b770debb39b316aec591e9"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
