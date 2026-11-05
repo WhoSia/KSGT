@@ -1,0 +1,61 @@
+{
+  "schema": "ksgt.r99.drive-custody.v02",
+  "status": "EIGHT_DRIVE_FILES_DOWNLOADED_AND_TESTED",
+  "records": [
+    {
+      "file": "r98_groq_lineage_audit_v01.py",
+      "driveId": "1uGO85ngah8_7QOcMBpj7giGCyxiLHceu",
+      "driveSha256": "3894b78cfd45e1d24d726ca78befbac254182ae6742992907a606034d15f5f1b",
+      "canonicalSha256": "3e769399cc766bb02d7a6a27cf6acc17459bc215e8a9540280d24228aa20c6c8"
+    },
+    {
+      "file": "r98_groq_lineage_audit_v01.test.py",
+      "driveId": "1Xe6cD7ii60ROZ7sTSreq7uzclcNHZ6xH",
+      "driveSha256": "7468cce9928adcc3aaf61b130253dd99c1a428ed45e798b435d817bcbcb5dc1e",
+      "canonicalSha256": "ac5c8f2bf34fd214e0fad9bda3d3beb51f7ace531e8d41ff45817565c89aa0fd"
+    },
+    {
+      "file": "r97_r8_original_output_replay_v01.py",
+      "driveId": "176onmWgXh0MsnWF3Tqg1nnlAhwHo6fvN",
+      "driveSha256": "263654a086d11a621443adbe1c0129e9591da771d17cba6cda0f75868d9e1c01",
+      "canonicalSha256": "cf6f88f4781d14228a3537816603e42b3cff9c982c3fc940079a87f233f9d16d"
+    },
+    {
+      "file": "r98_kolla_surface_census_v01.cjs",
+      "driveId": "1Q2oJogeQ57A-UTm-_YEexqFwc7WlIL_W",
+      "driveSha256": "b853a4bce1c763b1c3dc305846e42c529568aed944255e45101892b3636d7c3b",
+      "canonicalSha256": "a2f36b4274f1621057b490cab91995c83b88d676840c1c360ff4916efdf6f522"
+    },
+    {
+      "file": "r99_groq_factorial_manifest_v01.cjs",
+      "driveId": "19X7lZSW82VLUJzBQ_CTEechFdSarUAER",
+      "driveSha256": "d1ab04c3e3ddcb8981bb3b4fabe2b3f17eba3aa4bfffafb397d90d91999e35cc",
+      "canonicalSha256": "f965c610d03d73e7efc4f469aaeca2e3bb26f8d181efffed93746fae1673764e",
+      "githubBlobSha1": "b5152bd60262d014c46830c71dc6619269a94fbe"
+    },
+    {
+      "file": "r99_groq_factorial_manifest_v01.test.cjs",
+      "driveId": "1vRkKbQvCm30KNEY-_TEm01Com3gAMAoI",
+      "driveSha256": "b9085e65ee7cefe50066d28addcfbd9ed60823dc2b97117936eb572cf193c93b",
+      "canonicalSha256": "6237d3bc4a96b14929dad15c3831eb97d3515455e427589da76d3ca80371cea1",
+      "githubBlobSha1": "c951b7b95f884d370c287e15c4172986e09df2d0",
+      "extraReconstruction": "Add missing blank line before final test to exactly match GitHub source."
+    },
+    {
+      "file": "groq_four_rounds_aggregate.json",
+      "driveId": "1fkHB-rCjGHQQ3bGwmFeHv9K-5enuwe5R",
+      "driveSha256": "43b4772be0a47a5962b96686c5c91a592f9a77ad856db72151a262ede69840ac",
+      "canonicalSha256": "0195bde9db7598d800feb95bf1038affa8c4c88ae25747b28ce5fd1bb0871a44"
+    },
+    {
+      "file": "kolla_surface_census.json",
+      "driveId": "1hAeZo7-M9a6Z0B3riPuT-s5oNTaiHA4M",
+      "driveSha256": "508e5986570e4ce5fd977ac6aae02dedf2a1a20628d71a106558c78a3288607d",
+      "canonicalSha256": "f075f0b82954483f920a270b6d7eedb69f711ce9ae893c76da48a77c795e67c1"
+    }
+  ],
+  "transformation": "Google Docs exported UTF-8 BOM + CRLF (and stripped trailing LF); canonicalization removes BOM, converts CRLF to LF and restores final LF; Drive bytes are NOT identical to original code bytes",
+  "newGroqCalls": 0,
+  "supersedes": "experiments/g10-p1/fixtures/r99_drive_custody_readback_v01.json",
+  "warning": "Drive file bytes differ from GitHub original because text/plain export changes BOM/newlines; see per-record checks. Canonical reconstruction of the R9.9 test requires restoring one intentionally blank line. Exact byte preservation is pending separate CI ZIP."
+}
