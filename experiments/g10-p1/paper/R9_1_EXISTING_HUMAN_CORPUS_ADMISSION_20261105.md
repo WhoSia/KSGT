@@ -1,5 +1,13 @@
 # KSGT G10-P1 R9.1 — Existing Korean Human-Trace Data Admission & Legacy KoLLA Packet Replay (2026-11-05)
 
+## CRITICAL ERRATUM — 2026-11-05 R9.3 raw-byte replay
+
+**This R9.1 report contained a substantive role attribution error.** The FINAL72 `candidate` is **NOT a provisional KSGT model output**. Its `hidden_annotator` field identifies one of the two pre-existing KoLLA **human corrections** that has been masked as the candidate; `visible_ref` is the other human annotator correction. Reconstruction directly from the independently SHA-verified original `KoLLA_multi-refs.m2` matched **candidate=hidden human 72/72, visible_ref=opposite human 72/72, source=original source 72/72**. Thus all earlier references to "KSGT candidate" in this R9.1 document and its initial interpretation are **withdrawn**, not model evidence. Full original SHA256 d42d21289708f46c3092b154c36b303b9fd5f77cca4d15b41d770992703de4f7 (358,800 bytes); M2 SHA256 d848bac8095bf4280e9c8f6bb7ef2733434cf0eb2c2977d34fd4a0eb6c061ed4.
+
+An independent full-M2 human-pair census found **432 exact reference-pair matches / 1,410 genuinely paired rows (30.64%)**, and **8 second-annotator-missing repeated instruction-like source blocks**. The earlier reported 440/1,418 (31.03%) is unsuitable as the strict paired-human agreement rate and appears consistent with adding eight single-annotator noop/placeholder blocks. The 100 essay identities remain UNMAPPED. See [R9.3 original-byte proof and corrected source authority](R9_3_KOLLA_RAW_ROLE_AND_ESSAY_BOUNDARY_AUDIT_20261105.md) and [cold replay code](../r9_kolla_m2_cold_replay_v01.cjs).
+
+All original R9.1 descriptions below are **historical superseded text** and are retained for audit of the error; the erratum above controls interpretation.
+
 ## Result
 **Data-first external-human research RESUMED / NEW HUMAN RECRUITMENT = FALSE / DATA ADMISSION FAIL-CLOSED / CLINCHING QUALITY CLAIM UNIDENTIFIED / G10-P1 OPEN.**
 
