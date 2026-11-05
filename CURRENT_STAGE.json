@@ -111,7 +111,11 @@
     "r9_3_source_papers": "SONG_2026_KOLLA;MITA_2024_TETRA;ZHAN_2026_JELV;CHO_2022_STYLEKQC",
     "r9_3_report": "experiments/g10-p1/paper/R9_3_KOLLA_RAW_ROLE_AND_ESSAY_BOUNDARY_AUDIT_20261105.md",
     "r9_3_drive_folder": "1FkVmEluzNfWwobMqrWrSJXapuW-BKWN0",
-    "r9_3_nativeL1_caveat": "ORIGINAL_KOLLA_WRITERS_ARE_KOREAN_L2_LEARNERS_NOT_KOREAN_L1_ORIGINAL_PROSE_GOLD"
+    "r9_3_nativeL1_caveat": "ORIGINAL_KOLLA_WRITERS_ARE_KOREAN_L2_LEARNERS_NOT_KOREAN_L1_ORIGINAL_PROSE_GOLD",
+    "r9_3_ud_external_candidate": "UD_KOREAN_KSL_SEVEN_OF_SEVEN_UNIQUE_NFC_WHITESPACE_NORMALIZED_LINKS_ESSAY_GROUP_RECOVERY_POSSIBLE_UNVERIFIED",
+    "r9_3_ud_candidate_groups": "KL_hb_22_UD_SENT_IDS_1_4_5_MATCH_M2_873_876_877_ORIGINAL_ESSAY_UNVERIFIED",
+    "r9_3_ud_lead_report": "experiments/g10-p1/paper/R9_3_UD_KSL_EXTERNAL_ESSAY_BRIDGE_LEAD_20261105.md",
+    "r9_3_ud_coverage": "SELECTED_7_PUBLIC_KL_SENTENCES_NOT_ALL_UD_ORIGINAL_1418"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -617,7 +621,7 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "Recover verifiable KoLLA essay-to-sentence boundaries or an external provenance-equivalent source; otherwise use descriptive 1410-pair existing-human edit analysis without prospective independent-essay claims; no fresh recruitment.",
+  "next_scientific_action": "Check entire version-pinned UD-Korean-KSL KoLLA subset for unique original-M2 sentence matches, collisions and original essay index authority; do not extrapolate to all 100 essays; no new human recruitment.",
   "current_substage": "G10-P1 GLOBAL_R1_DOCUMENT_LEVEL_PURPOSE_AND_SOURCE_INFORMATION_ARCHITECTURE",
   "latest_experiment": {
     "identifier": "G10-P1 GLOBALDOC001",
