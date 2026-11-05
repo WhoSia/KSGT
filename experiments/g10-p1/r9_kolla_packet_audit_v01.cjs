@@ -38,6 +38,8 @@ function audit(csv) {
  }
  return {
   scope:"HISTORIC_ANNOTATOR_PACKETS_NOT_INDEPENDENT_HUMAN_PREFERENCE",
+  candidateRole:"EXISTING_HUMAN_HIDDEN_ANNOTATOR_REFERENCE_NOT_MODEL_OUTPUT",
+  visibleReferenceRole:"EXISTING_HUMAN_OPPOSITE_ANNOTATOR_REFERENCE",
   sourceArtifactRole:"DRIVE_TEXT_CSV_METADATA_PARSED_NOT_RAW_BYTES_REPLAY",
   rows:data.length,distinctChallengeIds:seen.size,distinctRowHashes:hashes.size,
   candidateIdenticalToSource:sourceKept,visibleHumanCorrectionIdenticalToSource:refNoop,
