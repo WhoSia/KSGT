@@ -1,0 +1,16 @@
+"use strict";
+const test=require('node:test'),assert=require('node:assert/strict');
+const {configGate,rotationFor,rows,run}=require('./r6_runner_v01.cjs');
+const cohort=require('./fixtures/r6_cohort_v01.json');
+const cfg=require('./fixtures/r6_request_v01.json');
+test('frozen R6 config valid and exactly 18 calls',()=>{assert.equal(configGate(cfg).maxCalls,18);assert.equal(rows(cohort).length,18)});
+test('three unique arms and identical source per work',()=>{for(const t of cohort.tasks){const v=rows(cohort).filter(r=>r.sourceWork===t.sourceWork);assert.equal(v.length,3);assert.equal(new Set(v.map(x=>x.arm)).size,3);assert.equal(new Set(v.map(x=>x.sourceSha256)).size,1)}});
+test('rotation deterministic by source ID',()=>{const w=cohort.tasks[0].sourceWork;assert.equal(rotationFor(w),rotationFor(w))});
+test('dry-run makes zero calls',async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:true,invoke:async()=>{n++}});assert.equal(n,0);assert.equal(r.assigned,18);assert.equal(r.generated,0)});
+test('live invocation requires explicit injection',async()=>{await assert.rejects(run(cohort,cfg,{dryRun:false}),/PROVIDER_INVOKER_NOT_INJECTED/)});
+test('mock run retains usage and all 18 outcomes',async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:false,invoke:async()=>{n++;return {text:'MOCK ONLY',usage:{prompt_tokens:12,completion_tokens:6},latencyMs:4}}});assert.equal(n,18);assert.equal(r.generated,18);assert.equal(r.failures,0);assert.ok(r.rows.every(x=>x.usage?.prompt_tokens===12))});
+test('mock failures stay in denominator',async()=>{let n=0;const r=await run(cohort,cfg,{dryRun:false,invoke:async()=>{if(++n%3===0)throw Error('SYNTHETIC_ERROR');return {text:'MOCK ONLY'}}});assert.equal(r.assigned,18);assert.equal(r.generated,12);assert.equal(r.failures,6)});
+test('empty completion counts as failure',async()=>{const r=await run(cohort,cfg,{dryRun:false,invoke:async()=>({text:''})});assert.equal(r.failures,18);assert.equal(r.generated,0)});
+test('provider or model substitution rejected',()=>{assert.throws(()=>configGate({...cfg,provider:'openai'}),/INVALID_FROZEN_CONFIG/);assert.throws(()=>configGate({...cfg,model:'openai/gpt-oss-120b'}),/INVALID_FROZEN_CONFIG/)});
+test('call count cannot increase',()=>assert.throws(()=>configGate({...cfg,maxCalls:200}),/INVALID_FROZEN_CONFIG/));
+test('unlicensed source fails before any provider calls',async()=>{const changed={...cohort,tasks:[{...cohort.tasks[0],creativeLicense:'UNLICENSED'},...cohort.tasks.slice(1)]};let called=0;await assert.rejects(run(changed,cfg,{dryRun:false,invoke:async()=>{called++}}),/INVALID_SOURCE_SCHEMA/);assert.equal(called,0)});
