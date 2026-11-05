@@ -10,6 +10,10 @@
 
 This is an **external candidate of original essay identity**; we must not conflate grouping in a later syntactic treebank with a proven bijective original 100-essay mapping.
 
+## Verified published public test-split boundary (not full treebank)
+
+The **public GitHub test-split blob** `ko_ksl-ud-test.conllu` was fetched via GitHub, repository blob SHA-1 `637d4405a89b41439b63cc175ec20ae666227905`. The current public test split yielded **168 `KL-` source IDs** (97 distinct candidate essay group labels under the `KL-fb/fi/hb-group` prefix); only the seven specified examples below have been cold-compared against the entire 1,418-block KoLLA M2. The other **161 entries are NOT yet proven exact original matches**, and their apparent group counts cannot be promoted into an independent 100-essay partition. This source blob SHA pins the test-file contents as viewed; it is not a SHA-256 receipt for all train/dev/test CoNLL-U files.
+
 ## Independently replayed original M2 contacts
 
 I read the first published `KL` samples from the upstream GitHub test treebank and cold-compared their NFC+whitespace-normalized `# text` fields with **all 1,418** original KoLLA M2 `S` lines using the already SHA-sealed M2. In the seven deliberately selected concrete examples, **all 7** have **exactly one** match in the original M2 (M2 index zero-based). No learner text is reproduced below.
