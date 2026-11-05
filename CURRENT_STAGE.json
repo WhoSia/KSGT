@@ -10,13 +10,13 @@
   "current_artifact": "experiments/g10-p1/RESEARCH_PROGRAM.md",
   "current_question": "Does a compact, source-conditioned, reader-purpose-aware global discourse plan improve complete Korean documents beyond strong one-call LLM writing, generic outlines, and compute-matched rivals?",
   "current_authority": {
-    "actual_new_g10_model_generations": 241,
+    "actual_new_g10_model_generations": 259,
     "independent_korean_reader_preference": 0,
     "source_fidelity_comparison": "RESEARCHER_ILLUSTRATIVE_ONLY_NO_INDEPENDENT_GOLD",
-    "matched_cost_comparison": "R5_REAL_PROVIDER_USAGE_GRAPH_PLUS_7_55_PERCENT_TOTAL_TOKENS_VS_STRONG_BUT_PROMPTS_NOT_COMPUTE_MATCHED",
+    "matched_cost_comparison": "R6_REAL_TOTAL_PROVIDER_TOKENS_KSGT_PLUS_28_11_PERCENT_VS_STRONG_PROMPTS_NOT_BUDGET_MATCHED",
     "validated_prose_quality_gain": "NONE_PROVEN_GLOBAL_OR_LOCAL",
     "historical_one_paragraph_generations": 196,
-    "new_three_paragraph_documents": 45,
+    "new_three_paragraph_documents": 63,
     "r5_three_paragraph_development_outputs": 9,
     "r5_remote_node_ci": "GITHUB_RUN_41968783130_169_OF_169_PASS",
     "r5_real_api": "GROQ_GPTOSS20B_3_EXPOSED_SOURCE_WORKS_X_3_ARMS_9_GENERATED_0_FAILED",
@@ -26,7 +26,26 @@
       "GRAPH_ORDER": 2349
     },
     "r5_quality": "RESEARCHER_ILLUSTRATIVE_SOURCE_CONCERNS_ONLY_ZERO_INDEPENDENT_SEMANTIC_OR_HUMAN_GOLD",
-    "r5_canonical_drive_raw_id": "1Cek0jY60mxJyIZI_z9Ow3lNdZACyHCWO"
+    "r5_canonical_drive_raw_id": "1Cek0jY60mxJyIZI_z9Ow3lNdZACyHCWO",
+    "r6_three_paragraph_assigned": 18,
+    "r6_three_paragraph_format_compliant": 17,
+    "r6_real_api": "GROQ_GPTOSS20B_6_AUTHOR_SYNTHETIC_DEV_WORKS_X_3_ARMS_18_GENERATED_0_FAILED",
+    "r6_remote_node_ci": "GITHUB_RUN_41975371632_192_OF_192_PASS",
+    "r6_provider_total_tokens": {
+      "STRONG_DIRECT": 4967,
+      "GENERIC_CONTRACT": 5292,
+      "KSGT_GENRE_LICENSE": 6363
+    },
+    "r6_prompt_tokens": {
+      "STRONG_DIRECT": 3514,
+      "GENERIC_CONTRACT": 3796,
+      "KSGT_GENRE_LICENSE": 4730
+    },
+    "r6_quality": "UNBLINDED_13_SELECTED_SOURCE_DRIFT_SPANS_NOT_EXHAUSTIVE_OR_INDEPENDENT_GOLD",
+    "r6_semantic_guarantee": "FALSIFIED_BY_NEW_UNLICENSED_SCENE_ACTIONS_IN_KSGT_GENRE_LICENSE",
+    "r6_canonical_drive_raw_id": "1G8tqpBj-HUgV3YLn4-uedRkNdIvUt80C",
+    "r6_blind_development_packet_drive_id": "1TXJwBD5i-kRnrgtBysYga_QXuBG1ANaf",
+    "r6_private_arm_key_drive_id": "1I3FwUfMcmZGQPOjXfWlfFDt6HTMa5H4o"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
