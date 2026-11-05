@@ -13,7 +13,7 @@
     "actual_new_g10_model_generations": 277,
     "independent_korean_reader_preference": 0,
     "source_fidelity_comparison": "RESEARCHER_ILLUSTRATIVE_ONLY_NO_INDEPENDENT_GOLD",
-    "matched_cost_comparison": "R6_REAL_TOTAL_PROVIDER_TOKENS_KSGT_PLUS_28_11_PERCENT_VS_STRONG_PROMPTS_NOT_BUDGET_MATCHED",
+    "matched_cost_comparison": "R7_SAME_TWO_CALLS_KSGT_PLUS_16_56_PERCENT_TOTAL_TOKENS_VS_GENERIC_DRAFT_REVISE_NOT_TOKEN_MATCHED",
     "validated_prose_quality_gain": "NONE_PROVEN_GLOBAL_OR_LOCAL",
     "historical_one_paragraph_generations": 196,
     "new_three_paragraph_documents": 81,
@@ -48,7 +48,14 @@
     "r6_private_arm_key_drive_id": "1I3FwUfMcmZGQPOjXfWlfFDt6HTMa5H4o",
     "r7_output_summary": "R7_GROQ_30_CALLS_18_FINALS_0_FAILED_CI_217_PASS",
     "r7_semantic": "PLAN_AND_REALIZATION_FAILURE_RESEARCHER_COUNTEREXAMPLES_HUMAN_GOLD_ZERO",
-    "r7_drive_id": "1b4LFDBopZ_Z08TxV2egdRshdtu0pAEzW"
+    "r7_drive_id": "1b4LFDBopZ_Z08TxV2egdRshdtu0pAEzW",
+    "r7_policy_total_tokens": {
+      "STRONG_DIRECT": 4842,
+      "GENERIC_DRAFT_REVISE": 10849,
+      "KSGT_CLAIM_PLAN": 12646
+    },
+    "r7_three_paragraph_format_compliant": 16,
+    "r7_plan_shape_pass": "6_OF_6_TYPES_AND_REFERENCES_ONLY_NOT_ENTAILMENT"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
