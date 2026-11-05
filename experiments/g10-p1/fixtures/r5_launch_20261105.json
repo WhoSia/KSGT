@@ -1,0 +1,15 @@
+{
+  "schema": "ksgt.g10.p1.r5.launch.v01",
+  "authorizedRun": "GROQ_BOUNDED_DEVELOPMENT",
+  "maxSourceWorks": 3,
+  "arms": [
+    "STRONG_DIRECT",
+    "EXPLICIT_EDGE",
+    "GRAPH_ORDER"
+  ],
+  "maxProviderCalls": 9,
+  "requestPath": "experiments/g10-p1/fixtures/r5_request_20261105.json",
+  "sourceCohort": "EXPOSED_AUTHOR_SYNTHETIC_DEVELOPMENT",
+  "scientificStatus": "DEVELOPMENT_ONLY_NO_READER_GOLD",
+  "launchedOn": "2026-11-05"
+}
