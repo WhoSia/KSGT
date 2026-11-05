@@ -1,5 +1,5 @@
 'use strict';
-/** R9.9 preregistered factorial execution manifest. No model calls or output access. */
+/** R9.9 factorial preregistration. Counterbalanced per-replicate staged calls, never live API. */
 const crypto=require('node:crypto');
 const DRAFTS=Object.freeze(['CLEAN_SOURCE_ONLY','SOURCE_WITH_PROTECTED_CONSTRAINTS']);
 const REVISERS=Object.freeze(['GENERIC_DRAFT_REVISE','KSGT_SELECTIVE_ACCOUNTABILITY']);
@@ -10,15 +10,17 @@ function manifest(works,{seed='0',replicates=2}={}){
  for(const w of works){
   if(!w||typeof w.workId!=='string'||!w.workId||!/^[a-f0-9]{64}$/.test(w.sourceSha256||'')||!['development','heldout'].includes(w.split)||seen.has(w.workId))throw Error('INVALID_WORK');seen.add(w.workId);
   for(let repeat=0;repeat<replicates;repeat++){
-   const groupId=digest([seed,w.workId,repeat].join(':'));
-   out.push({workId:w.workId,split:w.split,replicate:repeat,groupId,step:'STRONG_DIRECT',draftTreatment:null,revision:null,sourceSha256:w.sourceSha256});
-   for(const d of DRAFTS){
-    out.push({workId:w.workId,split:w.split,replicate:repeat,groupId,step:'BUILD_SHARED_DRAFT',draftTreatment:d,revision:null,sourceSha256:w.sourceSha256});
-    for(const r of REVISERS)out.push({workId:w.workId,split:w.split,replicate:repeat,groupId,step:'REVISE_SHARED_DRAFT',draftTreatment:d,revision:r,sourceSha256:w.sourceSha256});
+   const groupId=digest([seed,w.workId,repeat].join(':')),phase=Number.parseInt(groupId.slice(0,1),16)%2;
+   const orderedDrafts=repeat%2===phase?[...DRAFTS]:[...DRAFTS].reverse();
+   const row=(step,draftTreatment,revision)=>({workId:w.workId,split:w.split,replicate:repeat,groupId,step,draftTreatment,revision,sourceSha256:w.sourceSha256});
+   out.push(row('STRONG_DIRECT',null,null));
+   for(let i=0;i<orderedDrafts.length;i++){
+    const d=orderedDrafts[i];out.push(row('BUILD_SHARED_DRAFT',d,null));
+    const orderedRevisers=(repeat+i)%2===phase?[...REVISERS]:[...REVISERS].reverse();
+    for(const r of orderedRevisers)out.push(row('REVISE_SHARED_DRAFT',d,r));
    }
   }
  }
- const cellsPerReplicate=1+DRAFTS.length*(1+REVISERS.length);
- return {schema:'ksgt.r9.9.groq-factorial-manifest.v01',sourceWorks:works.length,replicates,cellsPerReplicate,providerCallsPlanned:out.length,rows:out,actualProviderCalls:0,actualReaderRatings:0,qualitySuperiorityEstablished:false,rawTextIncluded:false};
+ return {schema:'ksgt.r9.9.groq-factorial-manifest.v02',sourceWorks:works.length,replicates,cellsPerReplicate:7,providerCallsPlanned:out.length,rows:out,actualProviderCalls:0,actualReaderRatings:0,qualitySuperiorityEstablished:false,rawTextIncluded:false,executionOrder:'COUNTERBALANCED_STAGED_DEPENDENCIES'};
 }
 module.exports={DRAFTS,REVISERS,manifest};
