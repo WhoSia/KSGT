@@ -1,0 +1,14 @@
+"use strict";
+const test=require("node:test"),a=require("node:assert/strict");
+const {ARMS,prompt,preflight}=require("./r8_shared_draft_v01.cjs");
+const cohort=require("./fixtures/r6_cohort_v01.json"),t=cohort.tasks[0],draft="공학 실습은 금요일 오후 세 시에 시작됩니다.";
+test("three distinct arms and eighteen intended outputs",()=>{a.equal(ARMS.length,3);a.equal(new Set(ARMS).size,3);a.equal(preflight(cohort).assignedOutputs,18)});
+test("all policies see byte-identical original source JSON",()=>{const xs=ARMS.map(x=>prompt(t,x,x==="BASE_DRAFT"?undefined:draft));a.equal(new Set(xs.map(x=>x.sourceSha256)).size,1)});
+test("revisions share exact same draft SHA",()=>{const a1=prompt(t,"GENERIC_REVISION",draft),b1=prompt(t,"SOURCE_ACCOUNTABLE_REVISION",draft);a.equal(a1.draftSha256,b1.draftSha256)});
+test("source accountability prioritizes minimal edits",()=>a.match(prompt(t,"SOURCE_ACCOUNTABLE_REVISION",draft).messages[1].content,/바꿔야 하는 문장만/));
+test("generic reviser has equal source access",()=>a.match(prompt(t,"GENERIC_REVISION",draft).messages[1].content,/원천 JSON/));
+test("revision refuses empty or missing draft",()=>{a.throws(()=>prompt(t,"GENERIC_REVISION",""),/SHARED_DRAFT_REQUIRED/);a.throws(()=>prompt(t,"SOURCE_ACCOUNTABLE_REVISION"),/SHARED_DRAFT_REQUIRED/)});
+test("unrecognized arm is refused",()=>a.throws(()=>prompt(t,"UNREGULATED",draft),/UNKNOWN_R8_ARM/));
+test("invalid work provenance fails closed",()=>a.throws(()=>preflight({...cohort,authority:"INDEPENDENT_HOLDOUT"}),/INVALID_COHORT/));
+test("duplicate source-work fails closed",()=>a.throws(()=>preflight({...cohort,tasks:[cohort.tasks[0],...cohort.tasks.slice(0,5)]}),/DUPLICATE_WORK/));
+test("source metadata does not claim human preference or matched tokens",()=>{const p=preflight(cohort);a.equal(p.independentHumanReaders,0);a.equal(p.tokenBudgetMatched,false)});
