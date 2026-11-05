@@ -1,0 +1,10 @@
+'use strict';const test=require('node:test'),a=require('node:assert/strict'),{validatePacket:v}=require('./r97_reader_evidence_v01.cjs');
+const h=s=>s.repeat(64),work=(id,split,sha)=>({id,split,sourceSha256:sha}),pair=(workId)=>({id:'p1',workId,AOutputSha256:h('c'),BOutputSha256:h('d'),blindKeySeparated:true,readerRatings:[]});
+test('valid unscored packet is not evidence of superiority',()=>{const r=v({works:[work('x','development',h('a'))],pairs:[pair('x')]});a.equal(r.pass,true);a.equal(r.writingSuperiorityEstablished,false);a.equal(r.readerPacketComplete,false)});
+test('reject same source across splits',()=>a.ok(v({works:[work('x','development',h('a')),work('y','heldout',h('a'))],pairs:[]}).errors.includes('SOURCE_LEAKAGE')));
+test('reject revealed arm key',()=>{const p=pair('x');p.blindKeySeparated=false;a.ok(v({works:[work('x','development',h('a'))],pairs:[p]}).errors.includes('ARM_KEY_EXPOSED'))});
+test('reject simulated unadmitted reader',()=>{const p=pair('x');p.readerRatings=[{choice:'A',independent:false,nativeKorean:true,raterPseudonym:'r'}];a.ok(v({works:[work('x','heldout',h('a'))],pairs:[p]}).errors.includes('UNADMITTED_RATING'))});
+test('reject malformed output digest',()=>{const p=pair('x');p.BOutputSha256='bad';a.ok(v({works:[work('x','development',h('a'))],pairs:[p]}).errors.includes('UNSEALED_OUTPUT'))});
+test('reject identical outputs',()=>{const p=pair('x');p.BOutputSha256=p.AOutputSha256;a.ok(v({works:[work('x','development',h('a'))],pairs:[p]}).errors.includes('IDENTICAL_PAIR'))});
+test('reject duplicated work id',()=>a.ok(v({works:[work('x','heldout',h('a')),work('x','heldout',h('b'))],pairs:[]}).errors.includes('INVALID_WORK')));
+test('ratings still do not independently prove superiority',()=>{const p=pair('x');p.readerRatings=[{choice:'B',independent:true,nativeKorean:true,raterPseudonym:'r'}];const r=v({works:[work('x','heldout',h('a'))],pairs:[p]});a.equal(r.readerPacketComplete,true);a.equal(r.writingSuperiorityEstablished,false)});
