@@ -8,6 +8,8 @@ The central deliverable is **actual Korean paragraph/document prose**, generated
 
 [Notion official G10-P1](https://app.notion.com/p/40def561cf9281a0b990ee1b3662b79e) · [Generation IX non-success program closure](experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md) · [G10-P1 program](experiments/g10-p1/RESEARCH_PROGRAM.md).
 
+**2026-11-05 GLOBAL RESEARCH REFOCUS (within G10-P1, no false promotion):** Prior 196 single-paragraph neural outputs and all local-order/source-error experiments remain exposed **development history**. The scientific center is now global purpose/reader-oriented writing across complete Korean documents, not endlessly repairing local lexical/temporal problems. [Global Writing Programme R1](experiments/g10-p1/GLOBAL_WRITING_PROGRAM_R1_20261105.md) · [36 real three-paragraph documents audit](experiments/g10-p1/paper/GLOBAL_DOCUMENT_001_20261105_AUDIT.md) · [global reader evaluation gate](experiments/g10-p1/paper/GLOBAL_DOCUMENT_READER_EVALUATION_R1_20261105.md). Three models × three author-synthetic works × four generation policies = 36 real complete three-paragraph outputs, all test/CI complete, **zero independently validated reader ratings or established writing superiority**. Current stage remains **G10-P1 OPEN**. Meaningful rivals in 2026 include IS-CoT, LOOM and Align to Structure, so global outlining alone is not novel.
+
 **Historical status caveat:** Generation IX was administratively closed as a program at user direction, with P59/P60 unresolved questions and P64 exploratory HOLD explicitly transferred. This is not an earned semantic/reader-quality PASS; historical G9 files remain for audit. The source of truth for the active stage is `CURRENT_STAGE.json`.
 
 
