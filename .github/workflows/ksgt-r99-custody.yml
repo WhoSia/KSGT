@@ -1,0 +1,70 @@
+name: KSGT R9.9 Read-Only Source Custody
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/ksgt-r99-custody.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-custody:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check source-only regression tests
+        run: |
+          node --test experiments/g10-p1/r97_boundary_partial_v01.test.cjs experiments/g10-p1/r97_reader_evidence_v01.test.cjs experiments/g10-p1/r98_kolla_surface_census_v01.test.cjs experiments/g10-p1/r99_groq_factorial_manifest_v01.test.cjs
+          python experiments/g10-p1/r98_groq_lineage_audit_v01.test.py
+      - name: Seal exact source bytes (no model calls, no learner records)
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,zipfile
+          files=[
+            'experiments/g10-p1/r97_boundary_partial_v01.cjs',
+            'experiments/g10-p1/r97_boundary_partial_v01.test.cjs',
+            'experiments/g10-p1/r97_reader_evidence_v01.cjs',
+            'experiments/g10-p1/r97_reader_evidence_v01.test.cjs',
+            'experiments/g10-p1/r97_r8_original_output_replay_v01.py',
+            'experiments/g10-p1/r98_groq_lineage_audit_v01.py',
+            'experiments/g10-p1/r98_groq_lineage_audit_v01.test.py',
+            'experiments/g10-p1/r98_kolla_surface_census_v01.cjs',
+            'experiments/g10-p1/r98_kolla_surface_census_v01.test.cjs',
+            'experiments/g10-p1/r99_groq_factorial_manifest_v01.cjs',
+            'experiments/g10-p1/r99_groq_factorial_manifest_v01.test.cjs',
+            'experiments/g10-p1/paper/R9_7_PROVENANCE_AND_R8_OUTPUT_REPLAY_20261106.md',
+            'experiments/g10-p1/paper/R9_8_GROQ_R5_R8_COLD_REPLAY_AND_KOLLA_MULTIPLICITY_20261106.md',
+          ]
+          os.makedirs('sealed',exist_ok=True)
+          manifest={'schema':'ksgt.r99.source-custody.v1','source':'WhoSia/KSGT','files':[],'containsLearnerText':False,'containsModelRawOutputs':False}
+          target='sealed/KSGT_R99_EXACT_GITHUB_SOURCE_BYTES.zip'
+          with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED) as z:
+            for path in sorted(files):
+              data=open(path,'rb').read()
+              manifest['files'].append({'path':path,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+              zi=zipfile.ZipInfo(path,(2026,1,1,0,0,0))
+              zi.compress_type=zipfile.ZIP_DEFLATED
+              z.writestr(zi,data)
+            zi=zipfile.ZipInfo('SHA256_MANIFEST.json',(2026,1,1,0,0,0))
+            zi.compress_type=zipfile.ZIP_DEFLATED
+            z.writestr(zi,json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+          with zipfile.ZipFile(target) as z:
+            for item in manifest['files']:
+              assert hashlib.sha256(z.read(item['path'])).hexdigest()==item['sha256']
+          print(json.dumps({'zip':target,'sha256':hashlib.sha256(open(target,'rb').read()).hexdigest(),'fileCount':len(files)}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R99_EXACT_SOURCE_CUSTODY
+          path: sealed/KSGT_R99_EXACT_GITHUB_SOURCE_BYTES.zip
+          if-no-files-found: error
+          retention-days: 30
