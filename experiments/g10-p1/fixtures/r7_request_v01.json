@@ -1,0 +1,8 @@
+{
+  "schema": "r7.request.v01",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "temperature": 0,
+  "maxTokens": 900,
+  "maxCalls": 30
+}
