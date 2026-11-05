@@ -1,0 +1,40 @@
+name: KSGT R9.10 Public Evidence Gates
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r910-evidence.yml'
+      - 'experiments/g10-p1/r910_sha_replay.py'
+      - 'experiments/g10-p1/test_r910_sha_replay.py'
+      - 'experiments/g10-p1/test_r910_blind_packet.py'
+      - 'experiments/g10-p1/fixtures/r910_sha256_replay_aggregate.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-and-receipt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify static syntax
+        run: python -m py_compile experiments/g10-p1/r910_sha_replay.py experiments/g10-p1/test_r910_sha_replay.py experiments/g10-p1/test_r910_blind_packet.py
+      - name: Run synthetic tests; report private data as skipped
+        working-directory: experiments/g10-p1
+        shell: bash
+        run: |
+          python -m unittest -v test_r910_sha_replay.py
+          python - <<'PY'
+          import json
+          j=json.load(open('fixtures/r910_sha256_replay_aggregate.json',encoding='utf8'))
+          assert j['schema']=='ksgt.r9.10.ud-kolla-sha256-cold-replay.v01'
+          assert (j['candidateUDRows'],j['unique'],j['missing'],j['ambiguous'])==(246,180,62,4)
+          assert (j['candidateGroupSpans'],j['withinGroupComparablePairs'],j['withinGroupSameNumberPairsExcluded'])==(59,279,3)
+          assert j['originalEssayMapCertified'] is False
+          assert j['rawLearnerTextPublished'] is False
+          print('PUBLIC_AGGREGATE_SCHEMA_PASS; LOCAL_PRIVATE_10_CASE_REPLAY_NOT_REEXECUTED_BY_CI')
+          PY
