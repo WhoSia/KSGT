@@ -10,7 +10,7 @@ function manifest(works,{seed='0',replicates=2}={}){
  for(const w of works){
   if(!w||typeof w.workId!=='string'||!w.workId||!/^[a-f0-9]{64}$/.test(w.sourceSha256||'')||!['development','heldout'].includes(w.split)||seen.has(w.workId))throw Error('INVALID_WORK');seen.add(w.workId);
   for(let repeat=0;repeat<replicates;repeat++){
-   const groupId=digest([seed,w.workId,repeat].join(':')),phase=Number.parseInt(groupId.slice(0,1),16)%2;
+   const groupId=digest([seed,w.workId,repeat].join(':')),phase=Number.parseInt(digest([seed,w.workId].join(':')).slice(0,1),16)%2;
    const orderedDrafts=repeat%2===phase?[...DRAFTS]:[...DRAFTS].reverse();
    const row=(step,draftTreatment,revision)=>({workId:w.workId,split:w.split,replicate:repeat,groupId,step,draftTreatment,revision,sourceSha256:w.sourceSha256});
    out.push(row('STRONG_DIRECT',null,null));
