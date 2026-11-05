@@ -11,4 +11,5 @@ test("garbled row rejected",()=>{assert.throws(()=>audit(csv(["oops"])),/CSV_FIE
 test("schema mismatch rejected",()=>{assert.throws(()=>audit("x,y,z\n1,2,3\n"),/CSV_HEADER_SCHEMA_MISMATCH/)});
 test("unclosed quotes fail closed",()=>{assert.throws(()=>parseCsv('a,"b'),/UNTERMINATED_QUOTE/)});
 test("invalid row hash rejected",()=>{const a=fake();a[3]="nohash";assert.throws(()=>audit(csv(a)),/SOURCE_SHA_FORMAT/)});
+test("both KoLLA packet correction fields are HUMAN references",()=>{const x=audit(csv(fake()));assert.equal(x.candidateRole,"EXISTING_HUMAN_HIDDEN_ANNOTATOR_REFERENCE_NOT_MODEL_OUTPUT");assert.equal(x.visibleReferenceRole,"EXISTING_HUMAN_OPPOSITE_ANNOTATOR_REFERENCE")});
 test("synthetic test is not native preference measurement",()=>{const a=audit(csv(fake()));assert.equal(a.claims.modelComparisonWin,false)});
