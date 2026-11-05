@@ -1,0 +1,50 @@
+name: KSGT R7 Source-Accountable Korean Realization Bounded Development
+on:
+  push:
+    paths:
+      - 'experiments/g10-p1/fixtures/r7_launch_v01.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  r7-bounded:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: All G10 regression tests before provider contact
+        run: node --test experiments/g10-p1/*.test.cjs
+      - name: R7 fixed-source dry-run
+        run: node experiments/g10-p1/r7_execution_v01.cjs --dry-run
+      - name: Real R7 bounded 30-call comparison
+        shell: bash
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then
+            echo "R7_PROVIDER_NOT_CONFIGURED"; exit 2
+          fi
+          node experiments/g10-p1/r7_execution_v01.cjs --execute "$RUNNER_TEMP/r7_output.json"
+      - name: Print only stage and token summaries
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/r7_output.json" ]; then
+            R7_OUTPUT="$RUNNER_TEMP/r7_output.json" node -e 'const r=require(process.env.R7_OUTPUT);console.log(JSON.stringify({assigned:r.assigned,calls:r.calls,generated:r.generated,failed:r.failed,stages:r.records.map(x=>({sourceWork:x.sourceWork,arm:x.arm,status:x.status,steps:x.steps.map(z=>({phase:z.phase,status:z.status,tokens:z.usage?.total_tokens??null,failureClass:z.failureClass??null}))}))}))'
+          else
+            echo "R7_NO_PROVIDER_OUTPUT"
+          fi
+      - name: Preserve full original stage texts without bot commit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7-raw-development-${{ github.run_id }}
+          path: ${{ runner.temp }}/r7_output.json
+          if-no-files-found: ignore
+          retention-days: 7
+# Read-only, no GitHub Actions bot commits or pushes.
