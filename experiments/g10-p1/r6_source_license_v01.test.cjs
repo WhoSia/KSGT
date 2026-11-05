@@ -1,0 +1,16 @@
+"use strict";
+const test=require('node:test'),assert=require('node:assert/strict');
+const {ARM_NAMES,validate,build,preflight}=require('./r6_source_license_v01.cjs');
+const cohort=require('./fixtures/r6_cohort_v01.json');
+test('exactly six authored development source works and eighteen policy cells',()=>{const p=preflight(cohort);assert.equal(p.sourceWorks,6);assert.equal(p.assignedCells,18);assert.equal(p.actualOutputs,0)});
+test('all policies see identical source packet and author protections',()=>{for(const t of cohort.tasks){const a=ARM_NAMES.map(x=>build(t,x));assert.equal(new Set(a.map(x=>x.sourceSha256)).size,1);for(const p of a){assert.ok(p.messages[1].content.includes('creativeLicense'));assert.ok(p.messages[1].content.includes('protected'))}}});
+test('notices preserve unknown and negated source clauses',()=>{for(const id of ['NOTICE_CONDITION_A','PUBLIC_NOTICE_B']){const t=cohort.tasks.find(x=>x.id===id);assert.ok(t.protected.some(p=>p.kind==='UNKNOWN'));assert.ok(t.protected.some(p=>p.kind==='NEGATION'));assert.equal(t.creativeLicense,'NO_NEW_OPERATIONAL_FACTS')}});
+test('scientific uncertainty and noncausality both declared',()=>{for(const t of cohort.tasks.filter(t=>t.genre==='science_explainer')){assert.ok(t.protected.some(p=>p.kind==='NONCAUSAL'));assert.ok(t.protected.some(p=>p.kind==='UNKNOWN'));assert.match(build(t,'KSGT_GENRE_LICENSE').messages[1].content,/인과/)}});
+test('narratives authorize no new source events',()=>{for(const t of cohort.tasks.filter(t=>t.genre==='scene_essay'))assert.equal(t.creativeLicense,'NO_NEW_EVENTS')});
+test('KSGT changes instruction not source packet',()=>{const t=cohort.tasks[0],a=ARM_NAMES.map(x=>build(t,x));assert.equal(new Set(a.map(p=>p.promptSha256)).size,3);assert.match(a[2].messages[1].content,/출처가 확정한 보호 경계/)});
+test('duplicate work rejected',()=>{const t=cohort.tasks[0];assert.throws(()=>preflight({...cohort,tasks:[...cohort.tasks.slice(0,5),t]}),/DUP_SOURCE_WORK/)});
+test('invalid source fact ID rejected',()=>{const t=cohort.tasks[0];assert.throws(()=>validate({...t,facts:[{...t.facts[0],id:'R1'},...t.facts.slice(1)]}),/INVALID_SOURCE_FACT/)});
+test('unlicensed edge rejected',()=>{const t=cohort.tasks[0];assert.throws(()=>validate({...t,edges:[{...t.edges[0],evidence:'MODEL_INFERRED'}]}),/UNLICENSED_EDGE/)});
+test('protected claim with unknown fact rejected',()=>{const t=cohort.tasks[0];assert.throws(()=>validate({...t,protected:[{...t.protected[0],factIds:['F99']}]}),/INVALID_PROTECTED_ASSERTION/)});
+test('cyclic dependency rejected',()=>{const t=cohort.tasks[0];assert.throws(()=>validate({...t,edges:[...t.edges,{before:'F1',after:'F2',type:'READER_PREREQUISITE',evidence:'AUTHOR_DECLARED'}]}),/CYCLE/)});
+test('no external holdout and no human quality claimed',()=>{const p=preflight(cohort);assert.equal(p.independentHumanGold,0);assert.equal(p.tokenBudgetMatched,false);assert.match(cohort.authority,/NO_EXTERNAL_HOLDOUT/)});
