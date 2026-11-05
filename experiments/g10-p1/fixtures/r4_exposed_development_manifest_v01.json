@@ -1,0 +1,23 @@
+{
+  "schema": "ksgt.g10.p1.r4.manifest.v01",
+  "sourceDisjointVerified": false,
+  "source": "experiments/g10-p1/fixtures/r2_matched_information_dev_v01.json",
+  "authority": "AUTHOR_SYNTHETIC_EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_HOLDOUT",
+  "works": [
+    {
+      "id": "NOTICE_CONDITION_A",
+      "eligibleForOrderChange": true,
+      "provenance": "DEVELOPMENT"
+    },
+    {
+      "id": "SCIENCE_LIMIT_A",
+      "eligibleForOrderChange": false,
+      "provenance": "DEVELOPMENT"
+    },
+    {
+      "id": "SCENE_UNORDERED_A",
+      "eligibleForOrderChange": false,
+      "provenance": "DEVELOPMENT"
+    }
+  ]
+}
