@@ -8,3 +8,4 @@ test('distinct replicates',()=>{const x=manifest([work('w')]);a.notEqual(x.rows[
 test('no source text in output',()=>{const x=manifest([work('w')]);a.equal(x.rawTextIncluded,false);a.equal(x.qualitySuperiorityEstablished,false)});
 test('reject duplicate source work IDs',()=>a.throws(()=>manifest([work('w'),work('w')]),/INVALID_WORK/));
 test('reject invalid source hash',()=>a.throws(()=>manifest([work('w','development','bad')]),/INVALID_WORK/));
+test('each draft reviser order reverses between two replicates',()=>{const x=manifest([work('w')]);for(const d of ['CLEAN_SOURCE_ONLY','SOURCE_WITH_PROTECTED_CONSTRAINTS']){const orders=[0,1].map(replicate=>x.rows.filter(r=>r.replicate===replicate&&r.draftTreatment===d&&r.step==='REVISE_SHARED_DRAFT').map(r=>r.revision));a.deepEqual(orders[0],[...orders[1]].reverse())}});
