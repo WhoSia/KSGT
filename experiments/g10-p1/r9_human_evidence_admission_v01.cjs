@@ -26,6 +26,7 @@ function classify(row) {
   if (receipt.status !== "RAW_BYTES_VERIFIED") issues.push("RAW_SOURCE");
   if (!/^[a-f0-9]{64}$/.test(receipt.sha256 || "")) issues.push("RAW_SHA256");
   if (provenance.humanOriginVerified !== true && lane !== "SYNTHETIC_DEVELOPMENT") issues.push("HUMAN_PROVENANCE");
+  if (provenance.sourceWorkGroupVerified !== true) issues.push("SOURCE_WORK_GROUP_UNVERIFIED");
   if (provenance.aiAssisted === true || provenance.aiAssisted === "UNKNOWN") issues.push("AI_ORIGIN_UNCERTAINTY");
   if (claims.freshNativePreference === true) issues.push("UNAUTHORIZED_PREFERENCE_CLAIM");
   if (claims.humanSemanticGold === true && provenance.independentSemanticAdjudication !== true) issues.push("UNAUTHORIZED_SEMANTIC_GOLD");
