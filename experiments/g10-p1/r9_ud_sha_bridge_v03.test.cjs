@@ -1,0 +1,12 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),{norm,sha,audit}=require('./r9_ud_sha_bridge_v03.cjs');
+const row=(id,s,split='dev')=>({id,split,sha256:sha(s),normLength:[...norm(s)].length});
+test('normalize NFC and whitespace',()=>{a.equal(sha('가 나'),sha('가나'));a.notEqual(sha('가나'),sha('가다'))});
+test('unique digest does not certify essay',()=>{const v=audit(['가.','나.'],[row('KL-fb-1-1','가.'),row('KL-fb-1-2','나.')]);a.equal(v.unique,2);a.equal(v.sourceWorkVerified,false);a.equal(v.comparablePairs,1)});
+test('duplicate source ambiguous',()=>{a.equal(audit(['가.','가.'],[row('KL-fi-1-1','가.')]).ambiguous,1)});
+test('missing source stays missing',()=>{a.equal(audit(['가.'],[row('KL-hb-1-1','나.')]).missing,1)});
+test('invalid hash and duplicate ID rejected',()=>{a.throws(()=>audit(['가.'],[{...row('KL-fb-1-1','가.'),sha256:'bad'}]),/INVALID/);a.throws(()=>audit(['가.'],[row('KL-fb-1-1','가.'),row('KL-fb-1-1','가.')]),/DUPLICATE/)});
+test('detect crossing group spans',()=>{a.equal(audit(['가.','나.','다.'],[row('KL-fi-1-1','가.'),row('KL-fi-2-1','나.'),row('KL-fi-1-2','다.')]).interleavings,1)});
+test('detect inversion',()=>{a.equal(audit(['가.','나.'],[row('KL-fi-1-2','가.'),row('KL-fi-1-1','나.')]).inversions,1)});
+test('same ordinal split suffixes are incomparable',()=>{a.equal(audit(['가.','나.'],[row('KL-fi-1-2-1','가.'),row('KL-fi-1-2-2','나.')]).comparablePairs,0)});
+test('normalization is not byte identity',()=>{a.equal(sha('가 나'),sha('가나'));a.notEqual(Buffer.from('가 나').toString('hex'),Buffer.from('가나').toString('hex'))});
