@@ -1,0 +1,10 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),{bounds}=require('./r912_preference_bounds.cjs');
+test('R8 six exposed development works: two identical four unknown',()=>{const b=bounds(2,4);a.equal(b.pairs,6);a.deepEqual(b.meanPreferenceBounds,[-2/3,2/3]);a.equal(b.observedWinner,null)});
+test('R8 genre notice: one identical one unknown',()=>a.deepEqual(bounds(1,1).meanPreferenceBounds,[-0.5,0.5]));
+test('R8 genre science: one identical one unknown',()=>a.deepEqual(bounds(1,1).meanPreferenceBounds,[-0.5,0.5]));
+test('R8 genre scenes: two distinct unrated',()=>a.deepEqual(bounds(0,2).meanPreferenceBounds,[-1,1]));
+test('all identical outputs leave zero possible preference difference',()=>a.deepEqual(bounds(3,0).meanPreferenceBounds,[0,0]));
+test('reject degenerate sample',()=>a.throws(()=>bounds(0,0),/INVALID/));
+test('reject negative counts',()=>a.throws(()=>bounds(-1,5),/INVALID/));
+test('no human evidence implied',()=>{const b=bounds(2,4);a.equal(b.readerJudgments,0);a.equal(b.statisticalConfidenceInterval,false)});
