@@ -1,0 +1,14 @@
+'use strict';
+const test=require('node:test'), assert=require('node:assert/strict');
+const {sha,decide,applyHumanPatch}=require('./r912_selective_preflight.cjs');
+const issue={kind:'UNSUPPORTED_CLAIM',factIds:['F1'],evidenceStatus:'INDEPENDENTLY_REVIEWED',pErrorLower:0.9,gainLower:0.9,repairCostUpper:0.1,styleLossUpper:0.1};
+test('calibrated evidence yields proposal but not automatic edit',()=>{const x=decide(issue);assert.equal(x.action,'PROPOSE_REPAIR');assert.equal(x.automaticallyEditable,false)});
+test('unreviewed evidence yields review',()=>assert.equal(decide({...issue,evidenceStatus:'MODEL_GUESS'}).action,'REVIEW'));
+test('uncalibrated evidence yields review',()=>assert.equal(decide({kind:'FORMAT_FAILURE',factIds:['F1']}).action,'REVIEW'));
+test('low benefit yields keep',()=>assert.equal(decide({...issue,gainLower:0.1}).action,'KEEP'));
+test('unsupported fact id rejected',()=>assert.throws(()=>decide({...issue,factIds:['BAD']}),/INVALID_ISSUE/));
+test('stale patch rejected',()=>assert.throws(()=>applyHumanPatch('원본',{humanApproved:true,sourceSha256:'x'},['F1']),/STALE_SOURCE/));
+test('approval required',()=>assert.throws(()=>applyHumanPatch('원본',{},['F1']),/APPROVAL/));
+test('codepoint safe Unicode patch',()=>{const text='😊매주 토요일';const patch={humanApproved:true,sourceSha256:sha(text),start:1,end:4,before:'매주 ',after:'',factIds:['F1']};assert.equal(applyHumanPatch(text,patch,['F1']),'😊토요일')});
+test('invalid reference rejected',()=>{const text='매주 토요일';const patch={humanApproved:true,sourceSha256:sha(text),start:0,end:3,before:'매주 ',after:'',factIds:['F2']};assert.throws(()=>applyHumanPatch(text,patch,['F1']),/AUTHORITY/)});
+test('oversized rewrite is blocked',()=>{const text='가'.repeat(300);const patch={humanApproved:true,sourceSha256:sha(text),start:0,end:200,before:'가'.repeat(200),after:'',factIds:['F1']};assert.throws(()=>applyHumanPatch(text,patch,['F1']),/SPAN/)});
