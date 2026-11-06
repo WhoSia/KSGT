@@ -1,0 +1,45 @@
+{
+  "schema": "ksgt.r911.exact-artifact-bundle.v1",
+  "date": "2026-11-06",
+  "newGroqCalls": 0,
+  "externalHumanRatings": 0,
+  "originalEssayMapVerified": false,
+  "containsLearnerText": false,
+  "files": [
+    {
+      "path": "r911_boundary_identification.py",
+      "sha256": "0d2f1be7bba05e08905cd7729f3a35a725fe71edfccdc7ff54ebf28ea34d22d4",
+      "sizeBytes": 4686
+    },
+    {
+      "path": "test_r911_boundary_identification.py",
+      "sha256": "6980fcb683595c02bd1109db2beed4187309b4ec2f506da7d5c86e96ebad4ced",
+      "sizeBytes": 1013
+    },
+    {
+      "path": "r911_candidate_boundary_aggregate.json",
+      "sha256": "190837958893afe1b277b44e7a82529972f944b0c1fd352edb1ed1081ea7bafc",
+      "sizeBytes": 1118
+    },
+    {
+      "path": "r911_r8_style_failure_probe.py",
+      "sha256": "cf049f087e7afc39b48881a8555a61e26da6d9b8e927bdc71ec3f991e47cc8e9",
+      "sizeBytes": 3139
+    },
+    {
+      "path": "test_r911_r8_style_failure_probe.py",
+      "sha256": "bb3b6737dbccafe57a1e1443b9a0be639f2846fb0ee1966373af782c19631531",
+      "sizeBytes": 889
+    },
+    {
+      "path": "r911_r8_surface_probe_aggregate.json",
+      "sha256": "813dee878efbe2c73716aacf29f3f25f3aa04b1a9fecb93b89b816c84964ce32",
+      "sizeBytes": 6113
+    },
+    {
+      "path": "R9_11_BOUNDARY_IDENTIFICATION_AND_PROSE_REALIZATION_FAILURE_20261106.md",
+      "sha256": "d3eb125cb4ec37a382353a23c8e6be563eb26a54f205b58d164e92bf2e7d03b2",
+      "sizeBytes": 7965
+    }
+  ]
+}
