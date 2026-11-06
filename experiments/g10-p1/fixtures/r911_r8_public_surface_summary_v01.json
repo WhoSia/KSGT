@@ -1,0 +1,19 @@
+{
+  "schema": "ksgt.r911.r8-public-summary.v1",
+  "sourceWorks": 6,
+  "exactIdenticalFinalPairs": 2,
+  "accountableShorter": 3,
+  "accountableLonger": 1,
+  "accountableSameLength": 2,
+  "accountableParagraphDeficits": 1,
+  "policyMetaVoiceFlags": {
+    "genericWorks": 1,
+    "accountableWorks": 1
+  },
+  "newGroqCalls": 0,
+  "newHumanRatings": 0,
+  "newSemanticGold": 0,
+  "qualitySuperiorityEstablished": false,
+  "source": "real sealed Groq R8 output; development only",
+  "note": "Surface-level audit; not an independent reader quality or source-entailment verdict."
+}
