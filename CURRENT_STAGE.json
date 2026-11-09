@@ -155,7 +155,15 @@
       "headSha": "6f81e57762fab1e7d85cf151921227c214095ab0",
       "status": "queued",
       "conclusion": null
-    }
+    },
+    "historical_295_scope": "196 legacy single-paragraph occurrences + 63 R5-R8 final three-paragraph documents + 36 global documents; excludes later R9.14 15 and R9.23 9 new prose outputs; older individual 196 not byte replayed in R9.23.",
+    "r9_14_extra_real_completions": 15,
+    "r9_23_extra_real_prose_outputs": 9,
+    "r9_23_extra_model_critic_outputs": 3,
+    "r9_23_actual_provider_attempts": 13,
+    "r9_23_total_tokens_including_truncation": 17164,
+    "r9_23_human_quality": "UNRATED",
+    "r9_23_trainable_data": "NOT_JUDGED"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -661,9 +669,43 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "Obtain original EXMARaLDA essay-to-sentence mapping and large UD-KSL train split with immutable SHA/version, audit 62 nonmatches without semantic-altering normalization, then evaluate Korean writing quality against strong direct alternatives; no new recruitment.",
-  "current_substage": "G10-P1 GLOBAL_R1_DOCUMENT_LEVEL_PURPOSE_AND_SOURCE_INFORMATION_ARCHITECTURE",
+  "next_scientific_action": "Treat R9.23 actual model outputs as exposed development. Replace verbose incorrect LLM critique with compact source-linked issue hypotheses and compare strong direct / generic / context interventions at controlled provider budgets, then independent Korean readers on unseen works.",
+  "current_substage": "G10-P1 R9.23 — ACTUAL GROQ SHARED-DRAFT ROLE-SEPARATED KOREAN DEVELOPMENT",
   "latest_experiment": {
+    "identifier": "G10-P1 R9.23",
+    "status": "REAL_GROQ_12_STAGE_OUTPUTS_COMPLETE_AFTER_ONE_TRUNCATED_RETRY_NO_HUMAN_GOLD",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "initialRun": 42715376704,
+    "finalRun": 42715847103,
+    "authorExposedDevelopmentSourceWorks": 3,
+    "actualProviderAttemptsIncludingTruncated": 13,
+    "completedRoleSlots": 12,
+    "actualNewKoreanProseTexts": 9,
+    "unverifiedModelCritiques": 3,
+    "totalTokensIncludingTruncated": 17164,
+    "truncatedAttemptTokens": 1885,
+    "independentNewReaderRatings": 0,
+    "parameterUpdates": 0,
+    "rawInitialDriveId": "1yBntvdYDvfoyBtxKkvr8tpgaptsA3_6d",
+    "rawFinalDriveId": "1jcrvtyllt6rjxSVJ1DGq2HWWhUfOF_q6",
+    "replayArchiveDriveId": "1bgr-sKttH7BtHktcoJD-aOIwQQLOpH3m",
+    "report": "experiments/g10-p1/paper/R9_23_REAL_GROQ_PROSE_RECOVERY_AND_MULTI_ROLE_REVISION_20261110.md",
+    "note": "Generic edit and critic-conditioned edit use the same original draft, but 1-call vs 2-call edit comparison is not compute matched or independently quality rated."
+  },
+  "provider_connectivity": {
+    "codeStatus": "ACTUAL_GROQ_API_PASS_GPTOSS20B_120B_QWEN27B_MULTISEED_AND_RAW_SOURCE",
+    "provider": "groq",
+    "baseUrl": "https://api.groq.com/openai/v1",
+    "credentialPolicy": "USER_LOCAL_ENV_GROQ_API_KEY_NEVER_COMMIT_OR_CHAT",
+    "actualAuthenticatedGroqCalls": 201,
+    "liveModelOutputs": 196,
+    "userAction": "NONE_FOR_GITHUB_TRIGGERED_DEV_PILOTS; REAL_READER_AND_INDEPENDENT_DATA_ARE_FUTURE_RESEARCH_REQUIREMENTS",
+    "instructions": "experiments/g10-p1/GROQ_LOCAL_SETUP_20261103.md",
+    "confidence": "THREE_SUCCESSFUL_15_OUTPUT_PILOTS_AND_ONE_SUCCESSFUL_5_OUTPUT_PILOT_PLUS_ONE_5_BY_404_FAILURE",
+    "importedIntoNotionOrGitHubSecrets": false
+  },
+  "historical_latest_global_document_experiment": {
     "identifier": "G10-P1 GLOBALDOC001",
     "status": "REAL_THREE_PARAGRAPH_KOREAN_DOCS_GENERATED_NO_PREFERENCE_GOLD",
     "run": 41951615788,
@@ -689,17 +731,5 @@
     "mainInsight": "GLOBAL_MAP_PRODUCES_SHORTER_DOCS_BUT_GREATER_TOTAL_PROVIDER_TOKENS_AND_MIXED_GENRE_FIDELITY",
     "newArchitecturePrototype": "experiments/g10-p1/global_genre_purpose_v02.cjs",
     "scientificGate": "HUMAN_READER_DOCUMENT_PREFERENCE_SOURCE_FIDELITY_AND_FRESH_SOURCE_WORKS_NOT_AVAILABLE"
-  },
-  "provider_connectivity": {
-    "codeStatus": "ACTUAL_GROQ_API_PASS_GPTOSS20B_120B_QWEN27B_MULTISEED_AND_RAW_SOURCE",
-    "provider": "groq",
-    "baseUrl": "https://api.groq.com/openai/v1",
-    "credentialPolicy": "USER_LOCAL_ENV_GROQ_API_KEY_NEVER_COMMIT_OR_CHAT",
-    "actualAuthenticatedGroqCalls": 201,
-    "liveModelOutputs": 196,
-    "userAction": "NONE_FOR_GITHUB_TRIGGERED_DEV_PILOTS; REAL_READER_AND_INDEPENDENT_DATA_ARE_FUTURE_RESEARCH_REQUIREMENTS",
-    "instructions": "experiments/g10-p1/GROQ_LOCAL_SETUP_20261103.md",
-    "confidence": "THREE_SUCCESSFUL_15_OUTPUT_PILOTS_AND_ONE_SUCCESSFUL_5_OUTPUT_PILOT_PLUS_ONE_5_BY_404_FAILURE",
-    "importedIntoNotionOrGitHubSecrets": false
   }
 }
