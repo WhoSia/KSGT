@@ -1,0 +1,18 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const h=require('./r915_reader_first_harness.cjs');
+const task=()=>({id:'science',sourceWork:'SCI_A',genre:'science_explainer',audience:'고등학생',purpose:'관찰 결과 설명',facts:['관찰 7일째 11개의 싹을 셌다.','수분 차이는 확인되지 않았다.'],uncertainties:['인과를 확정할 수 없다.'],relations:[{from:1,to:2,type:'LIMITATION'}]});
+test('four strategy profiles',()=>assert.equal(h.PROFILES.length,4));
+test('source sha identical for all profiles',()=>assert.equal(new Set(h.PROFILES.map(p=>h.build(task(),p).sourceSha256)).size,1));
+test('prompt sha differs across profiles',()=>assert.equal(new Set(h.PROFILES.map(p=>h.build(task(),p).promptSha256)).size,4));
+test('four conditions for each distinct source work',()=>assert.equal(h.harness([task()]).rows.length,4));
+test('no fake model calls',()=>assert.equal(h.harness([task()]).actualModelCalls,0));
+test('no fake human preferences',()=>assert.equal(h.harness([task()]).readerQualityRatings,0));
+test('unknown profile rejected',()=>assert.throws(()=>h.build(task(),'WINNER'),/UNKNOWN_PROFILE/));
+test('blank source rejected',()=>{const x=task();x.facts=[];assert.throws(()=>h.build(x,'STRONG_RICH'),/INVALID_FACTS/)});
+test('bad relation rejected',()=>{const x=task();x.relations=[{from:1,to:8,type:'TEMPORAL_NEXT'}];assert.throws(()=>h.build(x,'STRONG_RICH'),/INVALID_RELATIONS/)});
+test('duplicate source unit rejected',()=>assert.throws(()=>h.harness([task(),task()]),/DUPLICATE_SOURCE_WORK/));
+test('meta language is diagnostic not score',()=>{const r=h.surfaceAudit('원천 정보는 정확히 보존되어 있습니다.');assert.ok(r.flags.unrequestedMeta>0);assert.equal('qualityScore' in r,false)});
+test('reader first asks not to delete important facts',()=>assert.match(h.instructions('READER_PRIORITY','public_notice'),/모든 핵심 결과/));
+test('rhythm profile does not enforce monotonous short sentences',()=>assert.match(h.instructions('RHYTHM_CONTEXTUAL','scene_essay'),/길고 짧은/));
+test('read-only source input is not mutated',()=>{const x=task(),j=JSON.stringify(x);h.build(x,'DISCOURSE_INVISIBLE');assert.equal(JSON.stringify(x),j)});
