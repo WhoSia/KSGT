@@ -1,0 +1,17 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict');
+const f=require('./g10_axis_factorial_v01.cjs');
+const basic=()=>({id:'test',sourceWork:'work-1',genre:'science_explainer',audience:'고등학생',purpose:'설명',facts:['결과다.','설정이다.','한계다.'],uncertainties:['원인은 불명확하다.'],factAnnotations:[{move:'OBSERVATION',entity:'A'},{move:'SETUP',entity:'A'},{move:'LIMITATION',entity:'B'}],relations:[{from:2,to:1,type:'BACKGROUND'}]});
+test('5 distinct arms',()=>a.equal(new Set(f.ARMS).size,5));
+test('all arms inherit exactly the same authoritative source packet',()=>{const x=f.ARMS.map(arm=>f.messages(basic(),arm));a.equal(new Set(x.map(z=>z.authoritativeSha256)).size,1)});
+test('plan-only excludes Korean module',()=>{const x=f.messages(basic(),'ORDER_ONLY');a.equal(x.dimensions[0],1);a.equal(x.dimensions[1],0);a.equal(x.messages[1].content.includes('화제 연속성'),false)});
+test('Korean-only excludes explicit plan ordering',()=>{const x=f.messages(basic(),'KOREAN_ONLY');a.equal(x.dimensions[0],0);a.equal(x.dimensions[1],1);a.equal(x.messages[1].content.includes('권장 제시 순서'),false)});
+test('joint arm includes both effects',()=>{const x=f.messages(basic(),'ORDER_PLUS_KOREAN');a.equal(x.messages[1].content.includes('권장 제시 순서'),true);a.equal(x.messages[1].content.includes('화제 연속성'),true)});
+test('author-declared precedence respected',()=>a.deepEqual(f.authorOrder(basic()),['F2','F1','F3']));
+test('non-temporal relation does not invent precedence',()=>{const x=basic();x.relations=[{from:1,to:2,type:'CONTRAST'}];a.deepEqual(f.authorOrder(x),['F2','F1','F3'])});
+test('cycle is rejected instead of inventing a plan',()=>{const x=basic();x.relations.push({from:1,to:2,type:'BACKGROUND'});a.throws(()=>f.authorOrder(x),/CYCLE/)});
+test('invalid author relation rejected',()=>{const x=basic();x.relations=[{from:99,to:1,type:'BACKGROUND'}];a.throws(()=>f.messages(x,'RICH_BASELINE'),/INVALID_AUTHOR_RELATION/)});
+test('invalid fact annotation length rejected',()=>{const x=basic();x.factAnnotations=[];a.throws(()=>f.authorOrder(x),/ANNOTATION_LENGTH_MISMATCH/)});
+test('no model calls in five-arm manifest',()=>{const x=f.manifest({tasks:[basic()]});a.equal(x.plannedCompletions,5);a.equal(x.modelCallsActuallyMade,0);a.equal(x.independentReaderRatings,0)});
+test('different source units cannot share work ID',()=>{const x=basic(),y=basic();y.facts=['different'];y.factAnnotations=[{}];y.relations=[];a.throws(()=>f.manifest({tasks:[x,y]}),/DUPLICATE_SOURCE_UNIT/)});
+test('missing source is rejected',()=>{const x=basic();x.facts=[];a.throws(()=>f.manifest({tasks:[x]}),/INVALID_FACTS/)});
