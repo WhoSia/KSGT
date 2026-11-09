@@ -307,6 +307,14 @@
           "authorConfirmed": true,
           "replacement": "서진은 표를 가방 주머니에 넣었다.",
           "reason": "Avoid a person switch into an agentless metaphor after Harin."
+        },
+        {
+          "previous": 2,
+          "current": 3,
+          "surfaceStyle": "READER_DIRECT",
+          "authorConfirmed": true,
+          "replacement": "서진은 하린을 따라 전시장 안으로 들어갔다.",
+          "reason": "After a prior Seojin-clause, explicitly maintain subject without a possibly over-explicit contrastive particle."
         }
       ]
     }
