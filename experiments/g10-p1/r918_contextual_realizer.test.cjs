@@ -1,0 +1,15 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),h=require('./r918_contextual_realizer.cjs');
+const task=()=>({id:'x',sourceWork:'w',genre:'scene_essay',audience:'일반 독자',purpose:'상황을 명료하게 전달',facts:['윤서가 우산을 보았다','윤서가 걸었다','민재가 우산을 받았다'],uncertainties:['이유는 알려지지 않았다'],factAnnotations:[{entity:'윤서'},{entity:'윤서'},{entity:'민재'}],relations:[{from:1,to:2,type:'TEMPORAL_NEXT'},{from:2,to:3,type:'CONTRAST'}]});
+test('five source-identical architecture arms',()=>{const x=h.ARMS.map(p=>h.prompt(task(),p));a.equal(x.length,5);a.equal(new Set(x.map(y=>y.sourceSha256)).size,1);a.equal(new Set(x.map(y=>y.promptSha256)).size,5)});
+test('model and training counts are zero',()=>{const x=h.manifest([task()]);a.equal(x.modelCalls,0);a.equal(x.trainingSteps,0);a.equal(x.rows.length,5)});
+test('adjacent entity label never certifies coreference',()=>{const x=h.localChoice(task());a.equal(x.trace[1].omission,'CONSIDER_ONLY_WITH_CONTEXT');a.match(x.limitation,/do not resolve/)});
+test('competing entity blocks automatic omission',()=>{const x=task();x.facts.push('윤서가 다시 등장했다');x.factAnnotations.push({entity:'윤서'});const y=h.localChoice(x);a.equal(y.trace[3].omission,'RETAIN_EXPLICIT_IF_AMBIGUOUS')});
+test('unannotated entity never compels omission',()=>{const x=task();x.factAnnotations[1]={};a.equal(h.localChoice(x).trace[1].omission,'NO_AUTOMATIC_OMISSION')});
+test('different discourse relation types preserved',()=>{const x=h.relationChoice(task());a.equal(x.relations[0].sourceType,'TEMPORAL_NEXT');a.equal(x.relations[1].sourceType,'CONTRAST')});
+test('no authored relation cannot become causal relation',()=>{const x=task();x.relations=[];a.equal(h.relationChoice(x).relations.length,0)});
+test('genre role is advice not authoritative source amendment',()=>{const x=h.readerChoice(task());a.equal(x.role,'EVENT_TRACE_AND_REFERENCE')});
+test('notice and science have distinct reader functions',()=>{const x=task();x.genre='public_notice';a.equal(h.readerChoice(x).role,'ACTION_AND_ELIGIBILITY');x.genre='science_explainer';a.equal(h.readerChoice(x).role,'OBSERVATION_AND_EPISTEMIC_LIMIT')});
+test('each arm shares literal source JSON',()=>{const x=h.ARMS.map(p=>h.prompt(task(),p).messages[1].content.split('공통 출처 패킷:\n')[1]);a.equal(new Set(x).size,1)});
+test('bad relation indices blocked by existing schema',()=>{const x=task();x.relations=[{from:0,to:2,type:'BACKGROUND'}];a.throws(()=>h.prompt(x,'STRONG_RICH'),/INVALID_RELATIONS/)});
+test('duplicate source work rejected',()=>a.throws(()=>h.manifest([task(),task()]),/DUPLICATE_WORK/));
