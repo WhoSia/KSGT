@@ -1,0 +1,51 @@
+name: KSGT R9.16 Exact Source Custody (Read Only)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r916-source-custody.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  custody:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run actual R9.16 source and preference unit tests
+        run: node --test experiments/g10-p1/r916_*.test.cjs
+      - name: Preserve exact Git checkout source bytes and aggregate manifest
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,json,zipfile,pathlib,os
+          root=pathlib.Path('experiments/g10-p1')
+          files=[root/name for name in [
+            'r916_corpus_provenance_v01.cjs',
+            'r916_corpus_provenance_v01.test.cjs',
+            'r916_preference_pairs_v01.cjs',
+            'r916_preference_pairs_v01.test.cjs',
+            'paper/R9_16_CORPUS_PROVENANCE_AND_READER_TRAINING_GATE_20261109.md']]
+          manifest={'schema':'ksgt.r916.source-custody.v1','containsExternalLearnerText':False,'modelCalls':0,'parameterTraining':False,'files':[]}
+          output=pathlib.Path(os.environ['RUNNER_TEMP'])/'KSGT_R916_EXACT_GITHUB_SOURCE.zip'
+          with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as z:
+            for p in files:
+              raw=p.read_bytes();manifest['files'].append({'path':str(p),'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()})
+              z.writestr(str(p),raw)
+            z.writestr('R916_SHA256_MANIFEST.json',json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+          with zipfile.ZipFile(output) as z:
+            for r in manifest['files']:
+              assert hashlib.sha256(z.read(r['path'])).hexdigest()==r['sha256']
+          print(json.dumps({'fileCount':len(files),'zipSha256':hashlib.sha256(output.read_bytes()).hexdigest(),'bytes':output.stat().st_size}))
+          PY
+      - name: Publish read-only source artifact; never commit from Actions
+        uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R916_EXACT_GITHUB_SOURCE
+          path: ${{ runner.temp }}/KSGT_R916_EXACT_GITHUB_SOURCE.zip
+          retention-days: 7
