@@ -11,7 +11,8 @@ const sha=x=>crypto.createHash('sha256').update(typeof x==='string'?x:JSON.strin
 const end=/[.!?。！？]$/u;
 function validateRulebook(t,book){
  if(!book||book.schema!=='ksgt.r922.author-paragraph-rules.v1'||book.sourceWork!==t.sourceWork
-   ||!Array.isArray(book.rules))throw Error('RULEBOOK_SOURCE_MISMATCH');
+   ||!Array.isArray(book.rules)||!Array.isArray(book.sourceFacts)||
+   JSON.stringify(book.sourceFacts)!==JSON.stringify(t.facts))throw Error('RULEBOOK_SOURCE_MISMATCH');
  const n=t.facts.length;
  for(const r of book.rules){
   if(!r||!Number.isInteger(r.current)||r.current<1||r.current>n||
