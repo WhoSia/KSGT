@@ -1,0 +1,15 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),m=require('./r916_corpus_provenance_v01.cjs');
+const rec=(workId,text,split='development')=>({datasetId:'legally-reviewed-local',workId,text,split,genre:'argumentative',permission:'RESEARCH_ONLY',permissionEvidenceId:'manual-terms-receipt'});
+test('isolated source works partition independently',()=>{const x=m.inventory([rec('a','한글 원문입니다.'),rec('b','서로 다른 글입니다.','heldout')]);a.equal(x.rows,2);a.equal(x.leakageGroups,2);a.equal(x.rawTextIncluded,false);});
+test('NFC and whitespace equivalent texts cannot cross split',()=>a.throws(()=>m.inventory([rec('a','가 나'),rec('b','가\n나','heldout')]),/CROSS_SPLIT/));
+test('same text across distinct dataset ids cannot cross split',()=>{const b={...rec('b','가 나','heldout'),datasetId:'other-dataset'};a.throws(()=>m.inventory([rec('a','가 나'),b]),/CROSS_SPLIT/);});
+test('same source-work cannot be re-labeled as heldout',()=>a.throws(()=>m.inventory([rec('a','가'),rec('a','나','heldout')]),/CROSS_SPLIT/));
+test('transitive ancestry reaches parent with no direct text match',()=>{const x=rec('child','수정 글입니다.','heldout');x.derivedFrom=['parent'];a.throws(()=>m.inventory([rec('parent','원문입니다.'),x]),/CROSS_SPLIT/);});
+test('author groups do not split across development and heldout',()=>{const a1=rec('one','첫 글');a1.authorId='author-1';const a2=rec('two','다른 글','heldout');a2.authorId='author-1';a.throws(()=>m.inventory([a1,a2]),/CROSS_SPLIT/);});
+test('research-only license cannot silently become training permission',()=>{const x=rec('x','글');x.train=true;a.throws(()=>m.inventory([x]),/TRAINING_NOT_ALLOWED/);});
+test('training permission is explicitly recorded but is not independently verified',()=>{const x=rec('x','글');x.permission='TRAINING_ALLOWED';x.train=true;const y=m.inventory([x]);a.equal(y.records[0].trainRequested,true);a.equal(y.permissionIndependentlyVerifiedByCode,false);});
+test('scores are independent observations, not a generated preference label',()=>{const x=rec('x','문장');x.score=[{raterId:'1',dimension:'organization',scaleId:'one-to-five',value:2},{raterId:'2',dimension:'organization',scaleId:'one-to-five',value:4}];const q=m.compareRaters([x]);a.equal(q.records[0].spread,2);a.equal(q.records[0].mean,3);a.equal(m.inventory([x]).ratings,2);});
+test('no raw text or author ids emitted in inventory',()=>{const x=rec('writer-secret','절대 노출하면 안 되는 원문');x.authorId='private';const raw=JSON.stringify(m.inventory([x]));a.equal(raw.includes('절대 노출하면 안 되는 원문'),false);a.equal(raw.includes('writer-secret'),false);a.equal(raw.includes('private'),false);});
+test('invalid scores are rejected not silently replaced',()=>{const x=rec('x','글');x.score=[{raterId:'1',dimension:'expression',scaleId:'5',value:NaN}];a.throws(()=>m.checkRecord(x),/BAD_RATER_SCORE/);});
+test('empty corpus yields honest zero counts',()=>{const x=m.inventory([]);a.equal(x.rows,0);a.equal(x.ratings,0);});
