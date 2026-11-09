@@ -1,0 +1,78 @@
+{
+  "schema": "ksgt.g10.p1.r922.author-paragraph-context-cohort.v1",
+  "authority": "AUTHOR_WRITTEN_SYNTHETIC_DEVELOPMENT_ONLY_NOT_HUMAN_PREFERENCE_GOLD",
+  "rulebooks": [
+    {
+      "schema": "ksgt.r922.author-paragraph-rules.v1",
+      "sourceWork": "AUTHOR_R920_COMMUNITY_NOTICE_01",
+      "sourceFacts": [
+        "참가비는 없다.",
+        "관찰 도구는 행사장에서 제공한다.",
+        "공개 실험은 토요일 오전 10시 과학관 2층에서 진행된다.",
+        "참가 신청은 목요일 오후 6시에 마감된다."
+      ],
+      "rules": [
+        {
+          "current": 4,
+          "surfaceStyle": "READER_DIRECT",
+          "requiredPrecedingFactIds": [
+            3
+          ],
+          "previousTextIncludes": "공개 실험",
+          "expectedCurrentSentence": "참가하려면 목요일 오후 6시까지 신청해 주세요.",
+          "replacement": "참가 신청은 목요일 오후 6시에 마감됩니다.",
+          "authorConfirmed": true,
+          "rationale": "Immediately after the event mention, use concise application deadline without repeating the same participation framing."
+        }
+      ]
+    },
+    {
+      "schema": "ksgt.r922.author-paragraph-rules.v1",
+      "sourceWork": "AUTHOR_R920_LIBRARY_LIGHT_01",
+      "sourceFacts": [
+        "조도와 토양 수분을 측정하지 않아 잎 수 차이의 원인을 확정할 수 없다.",
+        "두 책상에서 같은 종류의 식물 화분을 하나씩 관찰했다.",
+        "첫 번째 화분은 창가에, 두 번째 화분은 복도 쪽에 있었다.",
+        "7일째 첫 번째 화분에는 잎 8장, 두 번째 화분에는 잎 6장이 있었다."
+      ],
+      "rules": [
+        {
+          "current": 1,
+          "surfaceStyle": "RHYTHM_VARIED",
+          "requiredPrecedingFactIds": [
+            4
+          ],
+          "previousTextIncludes": "7일째",
+          "expectedCurrentSentence": "7일째 관측만으로 원인은 단정할 수 없다. 조도와 토양 수분을 재지 않았기 때문이다.",
+          "replacement": "이 차이의 원인은 단정할 수 없다. 조도와 토양 수분을 재지 않았기 때문이다.",
+          "authorConfirmed": true,
+          "rationale": "The preceding observation already introduces day seven, so avoid repeated date and preserve a source-backed demonstrative."
+        }
+      ]
+    },
+    {
+      "schema": "ksgt.r922.author-paragraph-rules.v1",
+      "sourceWork": "AUTHOR_R920_MUSEUM_SCENE_01",
+      "sourceFacts": [
+        "하린은 서진보다 먼저 전시장 안으로 들어갔다.",
+        "서진은 표를 가방 주머니에 넣었다.",
+        "서진은 하린을 따라 전시장 안으로 들어갔다.",
+        "서진은 전시관 입구에서 표를 받았다."
+      ],
+      "rules": [
+        {
+          "current": 3,
+          "surfaceStyle": "READER_DIRECT",
+          "requiredPrecedingFactIds": [
+            2
+          ],
+          "previousTextIncludes": "표",
+          "expectedCurrentSentence": "서진은 하린을 따라 전시장 안으로 들어갔다.",
+          "replacement": "이어서 서진은 하린을 따라 전시장 안으로 들어갔다.",
+          "authorConfirmed": true,
+          "rationale": "Source-declared pocketing-before-following temporal link permits a restrained 'then' expression, only where the immediately previous fact is the ticket scene."
+        }
+      ]
+    }
+  ]
+}
