@@ -78,6 +78,24 @@
             "RHYTHM_VARIED": "신청 마감은 목요일 오후 6시입니다."
           }
         }
+      ],
+      "boundaryRealizations": [
+        {
+          "previous": 1,
+          "current": 4,
+          "surfaceStyle": "READER_DIRECT",
+          "authorConfirmed": true,
+          "replacement": "참가 신청은 목요일 오후 6시에 마감됩니다.",
+          "reason": "Avoid treating mention of fee as implied participation eligibility."
+        },
+        {
+          "previous": 2,
+          "current": 4,
+          "surfaceStyle": "READER_DIRECT",
+          "authorConfirmed": true,
+          "replacement": "신청은 목요일 오후 6시까지 해 주세요.",
+          "reason": "Respond directly after event logistics."
+        }
       ]
     },
     {
@@ -167,6 +185,24 @@
             "RHYTHM_VARIED": "7일째에는 첫 번째 화분에서 잎 8장, 두 번째 화분에서 6장을 셌다."
           }
         }
+      ],
+      "boundaryRealizations": [
+        {
+          "previous": 3,
+          "current": 1,
+          "surfaceStyle": "READER_DIRECT",
+          "authorConfirmed": true,
+          "replacement": "조도와 토양 수분은 측정하지 않았다. 따라서 잎 수 차이의 원인을 확정할 수 없다.",
+          "reason": "Avoid misplaced discourse opposition as a new causal/contrast relation."
+        },
+        {
+          "previous": 4,
+          "current": 1,
+          "surfaceStyle": "RHYTHM_VARIED",
+          "authorConfirmed": true,
+          "replacement": "7일째 관측만으로 원인은 단정할 수 없다. 조도와 토양 수분을 재지 않았기 때문이다.",
+          "reason": "Link limitation to immediately preceding reported observation without identifying causal mechanism."
+        }
       ]
     },
     {
@@ -253,6 +289,24 @@
             "READER_DIRECT": "전시관 입구에서 서진이 표를 받았다.",
             "RHYTHM_VARIED": "서진이 표를 받은 곳은 전시관 입구였다."
           }
+        }
+      ],
+      "boundaryRealizations": [
+        {
+          "previous": 1,
+          "current": 2,
+          "surfaceStyle": "READER_DIRECT",
+          "authorConfirmed": true,
+          "replacement": "서진은 받은 표를 가방 주머니에 넣었다.",
+          "reason": "After Harin is salient, restore the agent explicitly rather than infer omitted subject."
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "surfaceStyle": "RHYTHM_VARIED",
+          "authorConfirmed": true,
+          "replacement": "서진은 표를 가방 주머니에 넣었다.",
+          "reason": "Avoid a person switch into an agentless metaphor after Harin."
         }
       ]
     }
