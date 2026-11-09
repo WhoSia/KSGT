@@ -1,0 +1,72 @@
+name: KSGT R9.22 Historical Restoration and Paragraph Context Realization
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r922-historical-reconstruction.yml'
+      - 'experiments/g10-p1/r922_paragraph_state_v01.cjs'
+      - 'experiments/g10-p1/r922_paragraph_state_v01.test.cjs'
+      - 'experiments/g10-p1/fixtures/r922_paragraph_context_rules_v01.json'
+      - 'experiments/g10-p1/paper/R9_22_DEEP_HISTORICAL_RECONSTRUCTION_AND_PARAGRAPH_STATE_20261109.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: R9.19–R9.22 genuine source hierarchy tests
+        run: node --test experiments/g10-p1/r919_source_bounded_plan_slate_v01.test.cjs experiments/g10-p1/r920_author_surface_composer_v01.test.cjs experiments/g10-p1/r921_boundary_realizer_v01.test.cjs experiments/g10-p1/r922_paragraph_state_v01.test.cjs
+      - name: Actual paragraph-state text outputs and baseline-exact comparisons
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs');
+          const h=require('./experiments/g10-p1/r922_paragraph_state_v01.cjs');
+          const t=JSON.parse(fs.readFileSync('experiments/g10-p1/fixtures/r920_author_surface_microcohort_v01.json','utf8'));
+          const r=JSON.parse(fs.readFileSync('experiments/g10-p1/fixtures/r922_paragraph_context_rules_v01.json','utf8'));
+          const v=h.slate(t.tasks,r.rulebooks);
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/R922_ACTUAL_PARAGRAPH_CONTEXT_COMPOSITIONS.json',JSON.stringify(v,null,2)+'\n');
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/R922_SAFE_AGGREGATE.json',JSON.stringify(h.safeReceipt(v),null,2)+'\n');
+          console.log(JSON.stringify({sourceWorks:v.records.length,candidates:v.attemptedCompositions,
+            uniqueTextsByWork:v.records.map(x=>x.distinctExactTexts),paragraphRewritesByWork:v.records.map(x=>x.appliedParagraphChanges),
+            newModelCalls:0,newReaderRatings:0,trainingUpdates:0}));
+          for(let i=0;i<t.tasks.length;i++){
+            const book=r.rulebooks[i],task=t.tasks[i];
+            const pick=v.records[i].candidates.find(c=>c.mode==='CONTEXT_WINDOW'&&c.changeCount>0);
+            if(pick){const b=h.realize(task,book,{orderMethod:pick.orderMethod,surfaceStyle:pick.surfaceStyle,mode:'BASE'});
+              console.log('SOURCE_WORK='+task.sourceWork+'\nBEFORE: '+b.text+'\nAFTER: '+pick.text);}
+          }
+          JS
+      - name: Exact repo and produced artifact SHA receipt
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os,pathlib,hashlib,zipfile,json
+          base=pathlib.Path('experiments/g10-p1')
+          paths=[base/p for p in ['r922_paragraph_state_v01.cjs','r922_paragraph_state_v01.test.cjs',
+            'fixtures/r922_paragraph_context_rules_v01.json','fixtures/r920_author_surface_microcohort_v01.json',
+            'paper/R9_22_DEEP_HISTORICAL_RECONSTRUCTION_AND_PARAGRAPH_STATE_20261109.md']]
+          paths.extend(pathlib.Path(os.environ['RUNNER_TEMP'])/f for f in ['R922_ACTUAL_PARAGRAPH_CONTEXT_COMPOSITIONS.json','R922_SAFE_AGGREGATE.json'])
+          out=pathlib.Path(os.environ['RUNNER_TEMP'])/'KSGT_R922_RECONSTRUCTION_AND_PARAGRAPH_OUTPUTS.zip'
+          m={'schema':'ksgt.r922.original-bytes-receipt.v1','files':[],'modelCalls':0,'newReaderRatings':0}
+          with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED) as z:
+            for p in paths:
+              name=str(p) if p.is_relative_to(base) else p.name
+              raw=p.read_bytes();m['files'].append({'path':name,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()});z.writestr(name,raw)
+            z.writestr('R922_SHA256_MANIFEST.json',json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+          with zipfile.ZipFile(out) as z:
+            assert all(hashlib.sha256(z.read(f['path'])).hexdigest()==f['sha256'] for f in m['files'])
+          print(json.dumps({'sealedFileCount':len(paths),'bytes':out.stat().st_size,'sha256':hashlib.sha256(out.read_bytes()).hexdigest()}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R922_HISTORICAL_RECONSTRUCTION_PARAGRAPH_STATE
+          path: ${{ runner.temp }}/KSGT_R922_RECONSTRUCTION_AND_PARAGRAPH_OUTPUTS.zip
+          retention-days: 7
