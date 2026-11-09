@@ -1,0 +1,45 @@
+name: KSGT R9.14 Actual Korean Reader Pilot
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r914-real-reader-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ksgt-r914-real-reader-pilot
+  cancel-in-progress: false
+jobs:
+  real-model-pilot:
+    if: github.actor == 'WhoSia'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests for real-generation runner
+        run: node --test experiments/g10-p1/r914_real_reader_pilot_v01.test.cjs experiments/g10-p1/g10_axis_factorial_v01.test.cjs
+      - name: Verify assignments without provider calls
+        run: node experiments/g10-p1/r914_real_reader_pilot_v01.cjs --dry-run
+      - name: Ensure explicit Groq secret provisioned
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then echo 'GROQ_KEY_NOT_AVAILABLE'; exit 2; fi
+      - name: Generate actual Korean paragraphs (3 development works x 5 arms)
+        run: node experiments/g10-p1/r914_real_reader_pilot_v01.cjs --execute "$RUNNER_TEMP/r914_raw.json"
+      - name: Preserve full author-development outputs without CI commits
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R914_REAL_KOREAN_15_ARM_RAW
+          path: |
+            ${{ runner.temp }}/r914_raw.json
+            ${{ runner.temp }}/r914_raw_summary.json
+          if-no-files-found: ignore
+          retention-days: 3
