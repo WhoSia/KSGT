@@ -1,0 +1,12 @@
+'use strict';
+const {test}=require('node:test'),a=require('node:assert/strict');
+const d=require('./r915_data_custody.cjs');
+const sample=()=>({datasetId:'AUTHOR',sourceWork:'work1',genre:'science',split:'development',text:'자체 작성한 실험 설명입니다.',rightsReceipt:'AUTHORIZED_RESEARCH'});
+test('valid research-only row emits hashes but not text',()=>{const r=d.admission(sample());a.equal('text' in r,false);a.equal(r.useForTraining,false)});
+test('no raw text in inventory',()=>a.equal(d.inventory([sample()]).rawTextIncluded,false));
+test('training requires separately established rights',()=>{const x=sample();x.useForTraining=true;a.throws(()=>d.admission(x),/TRAINING_NOT_LICENSED/)});
+test('not-yet-verified rights cannot enter',()=>{const x=sample();x.rightsReceipt='UNKNOWN';a.throws(()=>d.admission(x),/RIGHTS_NOT_VERIFIED/)});
+test('source work cannot leak across partitions',()=>{const x=sample(),y=sample();y.split='heldout';a.throws(()=>d.inventory([x,y]),/CROSS_SPLIT_SOURCE_WORK_LEAKAGE/)});
+test('same source work across records same split is allowed',()=>{const x=sample(),y=sample();y.text='다른 문장';const z=d.inventory([x,y]);a.equal(z.records,2);a.equal(z.sourceWorks,1)});
+test('invalid split rejected',()=>{const x=sample();x.split='test';a.throws(()=>d.admission(x),/INVALID_SPLIT/)});
+test('duplicate source works across datasets not blindly merged',()=>{const x=sample(),y=sample();y.datasetId='DIFFERENT';const z=d.inventory([x,y]);a.equal(z.sourceWorks,2)});
