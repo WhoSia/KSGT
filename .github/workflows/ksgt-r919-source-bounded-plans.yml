@@ -1,0 +1,53 @@
+name: KSGT R9.19 Source-Bounded Prose Planner
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r919-source-bounded-plans.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run source-level candidate planning regression tests
+        run: node --test experiments/g10-p1/r919_source_bounded_plan_slate_v01.test.cjs experiments/g10-p1/r918_contextual_realizer.test.cjs
+      - name: Audit actual plan diversity and temporal guarantees
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs');
+          const h=require('./experiments/g10-p1/r919_source_bounded_plan_slate_v01.cjs');
+          const cohort=JSON.parse(fs.readFileSync('experiments/g10-p1/fixtures/challenge_cohort_v01.json','utf8'));
+          const x=cohort.tasks.map(t=>{const s=h.slate(t);return {sourceWork:t.sourceWork,orders:s.plans.map(p=>({method:p.method,order:p.order})),distinctOrders:s.distinctOrders};});
+          console.log(JSON.stringify({authorExposedDev:true,results:x,actualModelCalls:0,readerRatings:0},null,2));
+          JS
+      - name: Seal exact code and actual check-out SHA manifest
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib, zipfile
+          root=pathlib.Path('experiments/g10-p1')
+          paths=[root/p for p in ['r919_source_bounded_plan_slate_v01.cjs','r919_source_bounded_plan_slate_v01.test.cjs','r918_contextual_realizer.cjs','r918_contextual_realizer.test.cjs','paper/R9_19_KOREAN_CANDIDATE_PLANNING_20261109.md']]
+          m={'schema':'ksgt.r919.source-exact.v1','files':[],'newModelCalls':0,'newHumanRatings':0,'trainingPerformed':False}
+          dest=pathlib.Path(os.environ['RUNNER_TEMP'])/'KSGT_R919_EXACT_SOURCE.zip'
+          with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
+            for f in paths:
+              raw=f.read_bytes();h=hashlib.sha256(raw).hexdigest()
+              m['files'].append({'path':str(f),'size':len(raw),'sha256':h});z.writestr(str(f),raw)
+            z.writestr('R919_SOURCE_SHA256_MANIFEST.json',json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+          with zipfile.ZipFile(dest) as z:
+            assert all(hashlib.sha256(z.read(r['path'])).hexdigest()==r['sha256'] for r in m['files'])
+          print(json.dumps({'files':len(paths),'zipSHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'bytes':dest.stat().st_size}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R919_EXACT_SOURCE
+          path: ${{ runner.temp }}/KSGT_R919_EXACT_SOURCE.zip
+          retention-days: 7
