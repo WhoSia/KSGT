@@ -1,0 +1,68 @@
+name: KSGT R9.20 Author-Written Korean Surface Composition
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r920-surface-composition.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute actual 3x3 author-surface composition regression
+        run: node --test experiments/g10-p1/r920_author_surface_composer_v01.test.cjs experiments/g10-p1/r919_source_bounded_plan_slate_v01.test.cjs
+      - name: Generate and preserve real Korean paragraphs with aligned provenance
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs');
+          const p=require('./experiments/g10-p1/r920_author_surface_composer_v01.cjs');
+          const cohort=JSON.parse(fs.readFileSync('experiments/g10-p1/fixtures/r920_author_surface_microcohort_v01.json','utf8'));
+          const data=cohort.tasks.map(t=>p.slate(t));
+          const out={schema:'ksgt.r920.real-offline-prose-candidates.v1',provenance:cohort.authority,
+            modelCalls:0,parameterTrainingSteps:0,qualityRatings:0,results:data};
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/R920_ACTUAL_KOREAN_COMPOSITIONS.json',JSON.stringify(out,null,2)+'\n');
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/R920_SAFE_MANIFEST.json',JSON.stringify(p.safeManifest(cohort.tasks),null,2)+'\n');
+          console.log(JSON.stringify({works:data.length,candidates:data.reduce((s,d)=>s+d.candidates.length,0),
+             distinctOrdersByWork:data.map(d=>d.uniqueOrders),distinctExactTextsByWork:data.map(d=>d.uniqueExactTexts),
+             modelCalls:0,qualityMeasured:false}));
+          for(const t of cohort.tasks){
+            const x=p.compose(t,{orderMethod:'READER_FUNCTION',surfaceStyle:'READER_DIRECT'});
+            console.log('ILLUSTRATIVE_AUTHOR_COMPOSED_PARAGRAPH '+t.id+': '+x.text);
+          }
+          JS
+      - name: Freeze exact checkout source and Korean examples
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,pathlib,zipfile
+          root=pathlib.Path('experiments/g10-p1')
+          src=[root/x for x in [
+           'r920_author_surface_composer_v01.cjs','r920_author_surface_composer_v01.test.cjs',
+           'fixtures/r920_author_surface_microcohort_v01.json',
+           'paper/R9_20_AUTHOR_SURFACE_COMPOSITION_20261109.md']]
+          src.extend(pathlib.Path(os.environ['RUNNER_TEMP'])/x for x in ['R920_ACTUAL_KOREAN_COMPOSITIONS.json','R920_SAFE_MANIFEST.json'])
+          dest=pathlib.Path(os.environ['RUNNER_TEMP'])/'KSGT_R920_ACTUAL_KOREAN_AUTHOR_COMPOSITIONS.zip'
+          m={'schema':'ksgt.r920.exact-archive.v1','files':[],'rawExternalCorpus':False,'newModelCalls':0}
+          with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
+           for x in src:
+            raw=x.read_bytes();name=str(x) if x.is_relative_to(root) else x.name
+            m['files'].append({'path':name,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()});z.writestr(name,raw)
+           z.writestr('R920_SHA256_MANIFEST.json',json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+          with zipfile.ZipFile(dest) as z:
+           for x in m['files']:assert hashlib.sha256(z.read(x['path'])).hexdigest()==x['sha256']
+          print(json.dumps({'sourceFiles':len(src),'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'bytes':dest.stat().st_size}))
+          PY
+      - name: Retain actual compositions and exact research bytes without bot commits
+        uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R920_REAL_AUTHOR_SURFACE_PARAGRAPHS
+          path: ${{ runner.temp }}/KSGT_R920_ACTUAL_KOREAN_AUTHOR_COMPOSITIONS.zip
+          retention-days: 7
