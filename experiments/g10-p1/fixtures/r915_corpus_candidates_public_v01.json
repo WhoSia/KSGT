@@ -1,0 +1,64 @@
+{
+  "schema": "ksgt.r915.public-corpus-metadata.v1",
+  "checked": "2026-11-09",
+  "rawBytesIngested": 0,
+  "modelTrainingPerformed": false,
+  "sources": [
+    {
+      "name": "NIKL 2025 writing raw corpus",
+      "url": "https://kli.korean.go.kr/main/requestMain.do?lang=ko",
+      "type": "~1000-character human argumentative documents",
+      "role": "human prose distribution",
+      "access": "APPLICATION_REQUIRED",
+      "training": "HOLD_VERIFY_LICENSE"
+    },
+    {
+      "name": "NIKL 2025 writing scoring corpus",
+      "url": "https://kli.korean.go.kr/main/requestMain.do?lang=ko",
+      "type": "two-expert rated argumentative documents",
+      "role": "content-organization-expression calibration",
+      "access": "APPLICATION_REQUIRED",
+      "training": "HOLD_VERIFY_LICENSE"
+    },
+    {
+      "name": "NIKL 2025 instruction-guided revision corpus",
+      "url": "https://kli.korean.go.kr/taskOrdtm/taskList.do?clCd=END_TASK&subMenuId=sub01&taskOrdtmId=103",
+      "type": "revision corpus, schema unverified",
+      "role": "revision intent learning",
+      "access": "APPLICATION_AND_SCHEMA_CHECK",
+      "training": "HOLD_VERIFY_LICENSE"
+    },
+    {
+      "name": "KoSEnd",
+      "url": "https://aclanthology.org/2025.acl-srw.29/",
+      "type": "3000 sentences x 15 ending annotations",
+      "role": "sentence ending evaluation not document preference",
+      "access": "CHECK_DATA_RELEASE",
+      "training": "HOLD_VERIFY_LICENSE"
+    },
+    {
+      "name": "Synthetic Korean writing style instruct",
+      "url": "https://huggingface.co/datasets/coastral/korean-writing-style-instruct",
+      "type": "28978 synthetic records, card lists Apache-2.0",
+      "role": "style control not human naturalness gold",
+      "access": "PUBLIC_DATASET",
+      "training": "HOLD_PROVENANCE_REVIEW"
+    },
+    {
+      "name": "KoLLA v2",
+      "url": "https://doi.org/10.1007/s10579-025-09882-9",
+      "type": "1418 learner sentences, two corrected references, 100 essays described",
+      "role": "GEC background, not native prose-quality gold",
+      "access": "PRIVATE_CORPUS_CUSTODY",
+      "training": "HOLD"
+    },
+    {
+      "name": "AI-Hub general knowledge sentence evaluation",
+      "url": "https://aihub.or.kr/aihubdata/data/view.do?aihubDataSe=&currMenu=&dataSetSn=71311&topMenu=",
+      "type": "sentence-level machine/human 4-dimensional evaluation",
+      "role": "sentence evaluator exploration not long-form gold",
+      "access": "APPLICATION_REQUIRED",
+      "training": "HOLD_LICENSE"
+    }
+  ]
+}
