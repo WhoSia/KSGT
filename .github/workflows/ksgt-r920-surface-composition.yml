@@ -4,6 +4,10 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/ksgt-r920-surface-composition.yml'
+      - 'experiments/g10-p1/r920_author_surface_composer_v01.cjs'
+      - 'experiments/g10-p1/r920_author_surface_composer_v01.test.cjs'
+      - 'experiments/g10-p1/fixtures/r920_author_surface_microcohort_v01.json'
+      - 'experiments/g10-p1/paper/R9_20_AUTHOR_SURFACE_COMPOSITION_20261109.md'
   workflow_dispatch:
 permissions:
   contents: read
