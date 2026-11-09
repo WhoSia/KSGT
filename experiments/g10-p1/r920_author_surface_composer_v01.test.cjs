@@ -80,7 +80,8 @@ test('script reports descriptive candidate diversity not naturalness',()=>{
   a.equal(s.distinctTextHashIsNotLiteraryDiversity,true);a.equal(s.readerPreference,'NOT_MEASURED');}
 });
 test('synthetic contradictory temporal cycle is refused',()=>{
- const t=structuredClone(tasks[0]);t.relations.push({from:1,to:2,type:'TEMPORAL_NEXT'});
+ const t=structuredClone(tasks[0]);const edge=t.relations.find(e=>e.type==='TEMPORAL_NEXT');
+ t.relations.push({from:edge.to,to:edge.from,type:'TEMPORAL_NEXT'});
  a.throws(()=>h.slate(t),/TEMPORAL_RELATION_CYCLE/);
 });
 test('wrong surface punctuation stops rather than silently autofixing',()=>{
