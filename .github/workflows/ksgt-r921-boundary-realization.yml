@@ -1,0 +1,62 @@
+name: KSGT R9.21 Context-Aware Korean Boundary Realization
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r921-boundary-realization.yml'
+      - 'experiments/g10-p1/r921_boundary_realizer_v01.cjs'
+      - 'experiments/g10-p1/r921_boundary_realizer_v01.test.cjs'
+      - 'experiments/g10-p1/fixtures/r920_author_surface_microcohort_v01.json'
+      - 'experiments/g10-p1/paper/R9_21_CONTEXT_CONDITIONED_KOREAN_REALIZATION_20261109.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test source-bounded order surface and boundary implementation
+        run: node --test experiments/g10-p1/r919_source_bounded_plan_slate_v01.test.cjs experiments/g10-p1/r920_author_surface_composer_v01.test.cjs experiments/g10-p1/r921_boundary_realizer_v01.test.cjs
+      - name: Compose full authored Korean surface candidates and safe receipts
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs');
+          const h=require('./experiments/g10-p1/r921_boundary_realizer_v01.cjs');
+          const data=JSON.parse(fs.readFileSync('experiments/g10-p1/fixtures/r920_author_surface_microcohort_v01.json','utf8'));
+          const results=data.tasks.map(t=>h.slate(t));
+          const receipt=h.safeReceipt(data.tasks);
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/R921_ACTUAL_AUTHORED_KOREAN_COMPOSITIONS.json',JSON.stringify({authority:data.authority,results,sourceWorks:results.length,modelCalls:0,qualityRatings:0},null,2)+'\n');
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/R921_SAFE_RECEIPT.json',JSON.stringify(receipt,null,2)+'\n');
+          console.log(JSON.stringify({works:results.length,candidates:results.reduce((n,r)=>n+r.candidates.length,0),
+            uniqueExactTextsByWork:results.map(r=>r.uniqueExactTexts),overridesByWork:results.map(r=>r.overrideApplications),modelCalls:0,trainingUpdates:0,qualityMeasured:false}));
+          JS
+      - name: Exact bytes custody and manifest (no external text)
+        run: |
+          python - <<'PY'
+          import os,json,hashlib,pathlib,zipfile
+          root=pathlib.Path('experiments/g10-p1')
+          src=[root/p for p in ['r921_boundary_realizer_v01.cjs','r921_boundary_realizer_v01.test.cjs','r920_author_surface_composer_v01.cjs','fixtures/r920_author_surface_microcohort_v01.json','paper/R9_21_CONTEXT_CONDITIONED_KOREAN_REALIZATION_20261109.md']]
+          src.extend(pathlib.Path(os.environ['RUNNER_TEMP'])/x for x in ['R921_ACTUAL_AUTHORED_KOREAN_COMPOSITIONS.json','R921_SAFE_RECEIPT.json'])
+          dest=pathlib.Path(os.environ['RUNNER_TEMP'])/'KSGT_R921_EXACT_AUTHOR_SURFACES.zip'
+          m={'schema':'ksgt.r921.exact-bytes.v1','entries':[],'modelCalls':0,'training':False}
+          with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
+            for p in src:
+              name=str(p) if p.is_relative_to(root) else p.name
+              raw=p.read_bytes();m['entries'].append({'path':name,'size':len(raw),'sha256':hashlib.sha256(raw).hexdigest()});z.writestr(name,raw)
+            z.writestr('R921_SHA256_MANIFEST.json',json.dumps(m,indent=2,ensure_ascii=False)+'\n')
+          with zipfile.ZipFile(dest) as z:
+            assert all(hashlib.sha256(z.read(r['path'])).hexdigest()==r['sha256'] for r in m['entries'])
+          print(json.dumps({'files':len(m['entries']),'bytes':dest.stat().st_size,'sha256':hashlib.sha256(dest.read_bytes()).hexdigest()}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R921_EXACT_AUTHORED_KOREAN_COMPOSITIONS
+          path: ${{ runner.temp }}/KSGT_R921_EXACT_AUTHOR_SURFACES.zip
+          retention-days: 7
