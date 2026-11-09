@@ -1,0 +1,260 @@
+{
+  "schema": "ksgt.g10.p1.r920.author-written-surface-fixtures.v1",
+  "authority": "AUTHOR_SYNTHETIC_DEVELOPMENT_ONLY; ALL SENTENCE FORMS HAND-AUTHORED",
+  "rights": "LOCAL_AUTHOR_FIXTURE_NO_EXTERNAL_CORPUS",
+  "tasks": [
+    {
+      "id": "R920_NOTICE_NEW_01",
+      "sourceWork": "AUTHOR_R920_COMMUNITY_NOTICE_01",
+      "genre": "public_notice",
+      "audience": "지역 과학관 방문객",
+      "purpose": "신청 기한과 프로그램 운영 조건을 알아보기 쉽게 안내한다.",
+      "facts": [
+        "공개 실험은 토요일 오전 10시 과학관 2층에서 진행된다.",
+        "참가 신청은 목요일 오후 6시에 마감된다.",
+        "참가비는 없다.",
+        "관찰 도구는 행사장에서 제공한다."
+      ],
+      "uncertainties": [],
+      "factAnnotations": [
+        {
+          "move": "EVENT",
+          "entity": "공개 실험"
+        },
+        {
+          "move": "EVENT",
+          "entity": "신청 희망자"
+        },
+        {
+          "move": "OBSERVATION",
+          "entity": "참가비"
+        },
+        {
+          "move": "OBSERVATION",
+          "entity": "관찰 도구"
+        }
+      ],
+      "relations": [
+        {
+          "from": 2,
+          "to": 1,
+          "type": "TEMPORAL_NEXT"
+        }
+      ],
+      "realizations": [
+        {
+          "factId": "F1",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "공개 실험은 토요일 오전 10시 과학관 2층에서 진행됩니다.",
+            "READER_DIRECT": "토요일 오전 10시, 과학관 2층에서 공개 실험이 열립니다.",
+            "RHYTHM_VARIED": "공개 실험은 토요일 오전 10시. 장소는 과학관 2층입니다."
+          }
+        },
+        {
+          "factId": "F2",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "참가 신청은 목요일 오후 6시에 마감됩니다.",
+            "READER_DIRECT": "참가하려면 목요일 오후 6시까지 신청해 주세요.",
+            "RHYTHM_VARIED": "신청 마감은 목요일 오후 6시입니다."
+          }
+        },
+        {
+          "factId": "F3",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "참가비는 없습니다.",
+            "READER_DIRECT": "참가비는 무료입니다.",
+            "RHYTHM_VARIED": "참가비는 받지 않습니다."
+          }
+        },
+        {
+          "factId": "F4",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "관찰 도구는 행사장에서 제공됩니다.",
+            "READER_DIRECT": "관찰 도구는 행사장에서 제공해 드립니다.",
+            "RHYTHM_VARIED": "관찰 도구는 행사장에서 제공합니다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "R920_SCI_NEW_01",
+      "sourceWork": "AUTHOR_R920_LIBRARY_LIGHT_01",
+      "genre": "science_explainer",
+      "audience": "고등학생",
+      "purpose": "두 조건에서의 관측 차이와 원인 추론의 한계를 분명히 전달한다.",
+      "facts": [
+        "두 책상에서 같은 종류의 식물 화분을 하나씩 관찰했다.",
+        "첫 번째 화분은 창가에, 두 번째 화분은 복도 쪽에 있었다.",
+        "7일째 첫 번째 화분에는 잎 8장, 두 번째 화분에는 잎 6장이 있었다.",
+        "조도와 토양 수분을 측정하지 않아 잎 수 차이의 원인을 확정할 수 없다."
+      ],
+      "uncertainties": [
+        "잎 수 차이가 햇빛 때문인지 검증하지 않았다."
+      ],
+      "factAnnotations": [
+        {
+          "move": "SETUP",
+          "entity": "두 화분"
+        },
+        {
+          "move": "SETUP",
+          "entity": "두 화분"
+        },
+        {
+          "move": "OBSERVATION",
+          "entity": "두 화분"
+        },
+        {
+          "move": "LIMITATION",
+          "entity": "관찰 조건"
+        }
+      ],
+      "relations": [
+        {
+          "from": 1,
+          "to": 3,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "type": "BACKGROUND"
+        },
+        {
+          "from": 4,
+          "to": 3,
+          "type": "LIMITATION"
+        }
+      ],
+      "realizations": [
+        {
+          "factId": "F1",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "같은 종류의 식물 화분을 두 책상에서 하나씩 관찰했다.",
+            "READER_DIRECT": "관찰 대상은 두 책상에 놓인 같은 종류의 식물 화분이었다.",
+            "RHYTHM_VARIED": "관찰한 화분은 둘이다. 둘 다 같은 종류의 식물이었다."
+          }
+        },
+        {
+          "factId": "F2",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "첫 번째 화분은 창가에 있었고, 두 번째 화분은 복도 쪽에 있었다.",
+            "READER_DIRECT": "두 화분의 위치는 달랐다. 하나는 창가, 다른 하나는 복도 쪽이었다.",
+            "RHYTHM_VARIED": "첫 번째는 창가, 두 번째는 복도 쪽에 놓였다."
+          }
+        },
+        {
+          "factId": "F3",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "7일째 잎은 첫 번째 화분에서 8장, 두 번째 화분에서 6장 관찰되었다.",
+            "READER_DIRECT": "7일째 잎을 세어 보니 첫 번째 화분은 8장, 두 번째 화분은 6장이었다.",
+            "RHYTHM_VARIED": "7일째에는 첫 번째 화분에서 잎 8장, 두 번째 화분에서 6장을 셌다."
+          }
+        },
+        {
+          "factId": "F4",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "조도와 토양 수분을 측정하지 않았으므로 잎 수 차이의 원인을 확정할 수 없다.",
+            "READER_DIRECT": "다만 조도와 토양 수분은 측정하지 않았다. 따라서 무엇이 잎 수 차이를 만들었는지는 알 수 없다.",
+            "RHYTHM_VARIED": "원인은 단정할 수 없다. 조도와 토양 수분을 재지 않았기 때문이다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "R920_SCENE_NEW_01",
+      "sourceWork": "AUTHOR_R920_MUSEUM_SCENE_01",
+      "genre": "scene_essay",
+      "audience": "일반 독자",
+      "purpose": "두 인물의 이동과 물건 전달을 혼동 없이 서술한다.",
+      "facts": [
+        "서진은 전시관 입구에서 표를 받았다.",
+        "서진은 표를 가방 주머니에 넣었다.",
+        "하린은 서진보다 먼저 전시장 안으로 들어갔다.",
+        "서진은 하린을 따라 전시장 안으로 들어갔다."
+      ],
+      "uncertainties": [],
+      "factAnnotations": [
+        {
+          "move": "SETUP",
+          "entity": "서진"
+        },
+        {
+          "move": "EVENT",
+          "entity": "서진"
+        },
+        {
+          "move": "EVENT",
+          "entity": "하린"
+        },
+        {
+          "move": "EVENT",
+          "entity": "서진"
+        }
+      ],
+      "relations": [
+        {
+          "from": 1,
+          "to": 2,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "type": "TEMPORAL_NEXT"
+        },
+        {
+          "from": 2,
+          "to": 4,
+          "type": "TEMPORAL_NEXT"
+        }
+      ],
+      "realizations": [
+        {
+          "factId": "F1",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "서진은 전시관 입구에서 표를 받았다.",
+            "READER_DIRECT": "전시관 입구에서 서진이 표를 받았다.",
+            "RHYTHM_VARIED": "서진이 표를 받은 곳은 전시관 입구였다."
+          }
+        },
+        {
+          "factId": "F2",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "서진은 받은 표를 가방 주머니에 넣었다.",
+            "READER_DIRECT": "받은 표는 가방 주머니에 넣었다.",
+            "RHYTHM_VARIED": "표는 가방 주머니로 들어갔다."
+          }
+        },
+        {
+          "factId": "F3",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "하린은 서진보다 먼저 전시장 안으로 들어갔다.",
+            "READER_DIRECT": "하린이 먼저 전시장 안으로 들어갔다.",
+            "RHYTHM_VARIED": "먼저 전시장 안으로 들어간 사람은 하린이었다."
+          }
+        },
+        {
+          "factId": "F4",
+          "authorConfirmed": true,
+          "forms": {
+            "NEUTRAL": "서진은 하린을 따라 전시장 안으로 들어갔다.",
+            "READER_DIRECT": "서진도 하린을 따라 전시장 안으로 들어갔다.",
+            "RHYTHM_VARIED": "서진이 그 뒤를 따랐다. 두 사람의 목적지는 전시장 안이었다."
+          }
+        }
+      ]
+    }
+  ]
+}
