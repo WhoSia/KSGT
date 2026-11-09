@@ -26,16 +26,16 @@ test('realized text has no internal labels or annotations',()=>{
  }
 });
 test('notice: application closes before program start in every plan',()=>{
- const t=tasks[0];for(const c of h.slate(t).candidates)a.ok(c.order.indexOf(2)<c.order.indexOf(1));
+ const t=tasks[0];for(const c of h.slate(t).candidates)a.ok(c.order.indexOf(4)<c.order.indexOf(3));
 });
 test('science: observation setup before seventh day in every plan',()=>{
- const t=tasks[1];for(const c of h.slate(t).candidates)a.ok(c.order.indexOf(1)<c.order.indexOf(3));
+ const t=tasks[1];for(const c of h.slate(t).candidates)a.ok(c.order.indexOf(2)<c.order.indexOf(4));
 });
 test('narrative: tickets pocketed before following Harin',()=>{
  const t=tasks[2];for(const c of h.slate(t).candidates){
-  a.ok(c.order.indexOf(1)<c.order.indexOf(2));
-  a.ok(c.order.indexOf(2)<c.order.indexOf(4));
-  a.ok(c.order.indexOf(3)<c.order.indexOf(4));
+  a.ok(c.order.indexOf(4)<c.order.indexOf(2));
+  a.ok(c.order.indexOf(2)<c.order.indexOf(3));
+  a.ok(c.order.indexOf(1)<c.order.indexOf(3));
  }
 });
 test('surface and ordering can be separately varied',()=>{
@@ -86,4 +86,15 @@ test('synthetic contradictory temporal cycle is refused',()=>{
 test('wrong surface punctuation stops rather than silently autofixing',()=>{
  const t=structuredClone(tasks[1]);t.realizations[3].forms.NEUTRAL='측정하지 않았다';
  a.throws(()=>h.slate(t),/BAD_AUTHORED_SENTENCE/);
+});
+
+test('shuffled source makes order styles genuinely distinguishable on all new works',()=>{
+ for(const t of tasks){const s=h.slate(t);a.ok(s.uniqueOrders>=2,
+  'source work '+t.sourceWork+' must exercise at least two temporally valid orders');}
+});
+test('fact-to-surface identity persists under nonchronological input fixture order',()=>{
+ for(const t of tasks)for(let i=0;i<t.facts.length;i++){
+  a.equal(t.realizations[i].factId,'F'+(i+1));
+  a.equal(t.realizations[i].authorConfirmed,true);
+ }
 });
