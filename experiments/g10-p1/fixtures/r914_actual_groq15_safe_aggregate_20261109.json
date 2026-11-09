@@ -1,0 +1,67 @@
+{
+  "schema": "ksgt.r914.actual-groq-15-aggregate.v1",
+  "date": "2026-11-09",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "runId": 42554195938,
+  "artifactId": 13646652384,
+  "originalZipSha256": "1f7101780a804743d341fe373b63dceb4664eff9176d423de3b48dcc49d2f940",
+  "cohort": "author-authored exposed 3 development works",
+  "sources": 3,
+  "arms": 5,
+  "realCalls": 15,
+  "generated": 15,
+  "failed": 0,
+  "incomplete": 0,
+  "humanRatings": 0,
+  "accuracyAdjudication": "NOT_PERFORMED",
+  "readerPreference": "NOT_MEASURED",
+  "byArm": {
+    "STRONG_DIRECT": {
+      "calls": 3,
+      "promptTokens": 2036,
+      "completionTokens": 588,
+      "totalTokens": 2624,
+      "reasoningTokens": 31,
+      "textChars": 898
+    },
+    "RICH_BASELINE": {
+      "calls": 3,
+      "promptTokens": 2150,
+      "completionTokens": 578,
+      "totalTokens": 2728,
+      "reasoningTokens": 44,
+      "textChars": 857
+    },
+    "ORDER_ONLY": {
+      "calls": 3,
+      "promptTokens": 2444,
+      "completionTokens": 643,
+      "totalTokens": 3087,
+      "reasoningTokens": 116,
+      "textChars": 828
+    },
+    "KOREAN_ONLY": {
+      "calls": 3,
+      "promptTokens": 2753,
+      "completionTokens": 518,
+      "totalTokens": 3271,
+      "reasoningTokens": 43,
+      "textChars": 747
+    },
+    "ORDER_PLUS_KOREAN": {
+      "calls": 3,
+      "promptTokens": 3047,
+      "completionTokens": 565,
+      "totalTokens": 3612,
+      "reasoningTokens": 114,
+      "textChars": 688
+    }
+  },
+  "limitations": [
+    "The plan and realization prompt arms differ in instructions and prompt tokens, so model-efficiency causality is not yet identified.",
+    "All tasks are exposed author-created development briefs, not independent unseen documents.",
+    "The actual source of model text is the archived Groq response, not model-simulated examples.",
+    "The reader packet is an exploratory blinded preference exercise, not independent general-population evaluation."
+  ]
+}
