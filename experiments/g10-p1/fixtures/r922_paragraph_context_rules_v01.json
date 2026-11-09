@@ -16,13 +16,13 @@
           "current": 4,
           "surfaceStyle": "READER_DIRECT",
           "requiredPrecedingFactIds": [
-            3
+            2
           ],
-          "previousTextIncludes": "공개 실험",
-          "expectedCurrentSentence": "참가하려면 목요일 오후 6시까지 신청해 주세요.",
+          "previousTextIncludes": "관찰 도구",
+          "expectedCurrentSentence": "신청은 목요일 오후 6시까지 해 주세요.",
           "replacement": "참가 신청은 목요일 오후 6시에 마감됩니다.",
           "authorConfirmed": true,
-          "rationale": "Immediately after the event mention, use concise application deadline without repeating the same participation framing."
+          "rationale": "Explicitly display the application deadline after equipment logistics with no implied need to bring equipment."
         }
       ]
     },
