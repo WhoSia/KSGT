@@ -1,0 +1,45 @@
+name: KSGT R9.23 Actual Groq Korean Role-Separated Revision
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r923-real-role-pipeline.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ksgt-r923-live-role-pipeline
+  cancel-in-progress: false
+jobs:
+  real-model-pipeline:
+    if: github.actor == 'WhoSia'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify role separation, matched source and no fake gold
+        run: node --test experiments/g10-p1/r923_actual_role_pipeline_v01.test.cjs
+      - name: Validate dry-run with zero requests
+        run: node experiments/g10-p1/r923_actual_role_pipeline_v01.cjs --dry-run
+      - name: Assert authorized Groq secret exists
+        run: |
+          if [ -z "$GROQ_API_KEY" ]; then echo 'GROQ_SECRET_MISSING'; exit 2; fi
+      - name: Real Korean generation and shared-draft revision, three authored works
+        run: node experiments/g10-p1/r923_actual_role_pipeline_v01.cjs --execute "$RUNNER_TEMP/r923_live.json"
+      - name: Preserve original model completions and safe usage receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R923_REAL_GROQ_KOREAN_ROLE_PIPELINE_12_CALLS
+          path: |
+            ${{ runner.temp }}/r923_live.json
+            ${{ runner.temp }}/r923_live.safe.json
+          if-no-files-found: ignore
+          retention-days: 7
