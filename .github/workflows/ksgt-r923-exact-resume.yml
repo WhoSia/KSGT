@@ -1,0 +1,60 @@
+name: KSGT R9.23 Exact Retry of Incomplete Groq Stage
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ksgt-r923-exact-resume.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  resume-without-repeat:
+    if: github.actor == 'WhoSia'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regression of initial and resumed model pipelines
+        run: node --test experiments/g10-p1/r923_actual_role_pipeline_v01.test.cjs experiments/g10-p1/r923_resume_failed_stages_v01.test.cjs
+      - name: Retrieve immutable original incomplete experiment artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: KSGT_R923_REAL_GROQ_KOREAN_ROLE_PIPELINE_12_CALLS
+          run-id: 42715376704
+          github-token: ${{ github.token }}
+          repository: WhoSia/KSGT
+          path: ${{ runner.temp }}/r923_original
+      - name: Verify archive original and Groq access without logging content
+        shell: bash
+        run: |
+          test -n "$GROQ_API_KEY" || { echo 'GROQ_SECRET_MISSING'; exit 2; }
+          test -f "$RUNNER_TEMP/r923_original/r923_live.json" || { echo 'ORIGINAL_REAL_OUTPUT_MISSING'; exit 2; }
+          node - <<'JS'
+          const fs=require('node:fs');
+          const p=process.env.RUNNER_TEMP+'/r923_original/r923_live.json';
+          const d=JSON.parse(fs.readFileSync(p,'utf8'));
+          if(d.records?.length!==3||d.calls?.length!==12||d.newModelCalls!==11)throw Error('WRONG_INITIAL_EVIDENCE');
+          console.log(JSON.stringify({originalCallRows:d.calls.length,realAttempts:d.newModelCalls,
+            incomplete:d.calls.filter(x=>x.status==='INCOMPLETE').length,
+            skipped:d.calls.filter(x=>x.status==='SKIPPED_DEPENDENCY').length}));
+          JS
+      - name: Resume ONLY failed diagnostic and blocked context revision (2 Groq calls)
+        run: node experiments/g10-p1/r923_resume_failed_stages_v01.cjs --resume "$RUNNER_TEMP/r923_original/r923_live.json" "$RUNNER_TEMP/r923_complete.json"
+      - name: Preserve complete model outputs AND original failure trace
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KSGT_R923_GROQ_13_CALL_12_STAGE_COMPLETE_COLD_RESUME
+          path: |
+            ${{ runner.temp }}/r923_complete.json
+            ${{ runner.temp }}/r923_complete.safe.json
+          if-no-files-found: ignore
+          retention-days: 7
