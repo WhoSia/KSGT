@@ -7,8 +7,10 @@ const { chat, resolveProvider } = require('./provider_client_v01.cjs');
 const { MODEL, packet, messages } = require('./r923_actual_role_pipeline_v01.cjs');
 
 const ARMS = ['generic', 'anchored'];
+const THREE_ARMS = ['generic', 'plain', 'anchored'];
 const REVISION_SETTINGS = Object.freeze({ provider: 'groq', model: MODEL, temperature: 0, maxTokens: 1450 });
 const KINDS = new Set(['source', 'transition', 'repetition', 'ending']);
+const NOTE_GUIDE = 'F와 U 뒤의 숫자는 각각 facts와 uncertainties의 1번부터 시작하는 위치다. 각 제안은 해당 구절을 원천과 대조한 뒤 반영한다.';
 const sha = (value) => createHash('sha256')
   .update(typeof value === 'string' ? value : JSON.stringify(value))
   .digest('hex');
@@ -50,7 +52,13 @@ function compileNotes(source, draft, notes) {
   return compiled;
 }
 
-function prepare(cohort, archive, annotations) {
+function renderPlainNotes(notes) {
+  return [NOTE_GUIDE, ...notes.map(({ kind, quotes, refs, impact, edit }) =>
+    `유형은 ${kind}. 초안 구절은 ${quotes.map((quote) => JSON.stringify(quote)).join(' / ')}. 관련 원천은 ${refs.join(', ')}. 독자 영향은 ${impact} 수정 제안은 ${edit}`)]
+    .join('\n');
+}
+
+function prepare(cohort, archive, annotations, { threeArms = false } = {}) {
   if (archive?.schema !== 'ksgt.r923.real-groq-pipeline.v1' ||
       annotations?.schema !== 'ksgt.r924.anchored-notes.v1' ||
       !Array.isArray(archive.records) || !Array.isArray(annotations.works) ||
@@ -61,7 +69,7 @@ function prepare(cohort, archive, annotations) {
         new Set(works.map(({ sourceWork }) => sourceWork)).size !== ids.length ||
         works.some(({ sourceWork }) => !ids.includes(sourceWork))) throw Error('REPLAY_COVERAGE_MISMATCH');
   }
-  return cohort.tasks.flatMap((task) => {
+  return cohort.tasks.flatMap((task, index) => {
     const source = packet(task);
     const old = archive.records.find(({ sourceWork }) => sourceWork === task.sourceWork);
     const proposed = annotations.works.find(({ sourceWork }) => sourceWork === task.sourceWork);
@@ -74,20 +82,21 @@ function prepare(cohort, archive, annotations) {
     }
     const notes = compileNotes(source, draft, proposed.notes);
     const baseline = messages(task, 'GENERIC_REVISION', { draft });
-    // Alternate the first arm deterministically across the three works.
-    const order = ids.indexOf(task.sourceWork) % 2 ? [...ARMS].reverse() : ARMS;
+    const rotation = index % THREE_ARMS.length;
+    const order = threeArms
+      ? THREE_ARMS.slice(rotation).concat(THREE_ARMS.slice(0, rotation))
+      : index % 2 ? [...ARMS].reverse() : ARMS;
     return order.map((arm) => {
       let prompt = baseline;
-      if (arm === 'anchored' && notes.length) {
+      if (arm !== 'generic' && notes.length) {
         const user = JSON.parse(baseline[1].content);
-        user.anchoredEditNotes = {
-          guide: 'F와 U 뒤의 숫자는 각각 facts와 uncertainties의 1번부터 시작하는 위치다. 각 제안은 해당 구절을 원천과 대조한 뒤 반영한다.',
-          notes,
-        };
+        user.anchoredEditNotes = arm === 'anchored'
+          ? { guide: NOTE_GUIDE, notes }
+          : renderPlainNotes(notes);
         prompt = [baseline[0], { role: 'user', content: JSON.stringify(user) }];
       }
       return { sourceWork: task.sourceWork, arm, sourceSha256: sha(source), draftSha256: sha(draft),
-        promptSha256: sha(prompt), noteCount: arm === 'anchored' ? notes.length : 0, prompt };
+        promptSha256: sha(prompt), noteCount: arm === 'generic' ? 0 : notes.length, prompt };
     });
   });
 }
@@ -128,14 +137,16 @@ function writePrivate(filename, contents) {
 }
 
 async function main([mode, archivePath, notesPath, output, ...rest]) {
-  const live = mode === '--execute';
-  if ((!live && mode !== '--dry-run') || !archivePath || !notesPath || Boolean(output) !== live || rest.length) {
-    throw Error('USAGE: --dry-run ARCHIVE_JSON NOTES_JSON | --execute ARCHIVE_JSON NOTES_JSON NEW_OUTPUT_DIR');
+  const live = ['--execute', '--execute-three'].includes(mode);
+  const threeArms = ['--dry-run-three', '--execute-three'].includes(mode);
+  if ((!live && !['--dry-run', '--dry-run-three'].includes(mode)) ||
+      !archivePath || !notesPath || Boolean(output) !== live || rest.length) {
+    throw Error('USAGE: --dry-run[-three] ARCHIVE_JSON NOTES_JSON | --execute[-three] ARCHIVE_JSON NOTES_JSON NEW_OUTPUT_DIR');
   }
   const read = (name) => JSON.parse(fs.readFileSync(name, 'utf8'));
   const cohort = read(path.join(__dirname, 'fixtures', 'global_document_dev_v01.json'));
   const annotations = read(notesPath);
-  const cells = prepare(cohort, read(archivePath), annotations);
+  const cells = prepare(cohort, read(archivePath), annotations, { threeArms });
   if (!live) {
     console.log(JSON.stringify({ mode: 'DRY_RUN', planned: cells.map(({ prompt, ...cell }) => cell),
       providerRequests: 0 }, null, 2));
