@@ -65,5 +65,18 @@ test('malformed provider patch is archived without treating it as KEEP', async (
   assert.equal(output.rows[0].status, 'GENERATED');
   assert.equal(output.rows[0].outcome, 'INVALID_PATCH');
   assert.equal(output.rows[0].finalSha256, null);
+  assert.equal(output.rows[0].finalParagraphCount, null);
   assert.ok(!Object.hasOwn(output.rows[0], 'text'));
+});
+
+test('patch response formatting and committed document formatting are recorded separately', async (t) => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'ksgt-r928-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  const [cell] = buildPlan().filter((r) => r.variant === 'clean' && r.condition === 'patch');
+  const output = await executePlan([cell], path.join(root, 'test'), { invoke: async () => ({
+    text: '{"action":"KEEP"}', finishReason: 'stop',
+    usage: { prompt_tokens: 2, completion_tokens: 1, total_tokens: 3 },
+  }) });
+  assert.equal(output.rows[0].paragraphCount, 1);
+  assert.equal(output.rows[0].finalParagraphCount, 3);
 });
