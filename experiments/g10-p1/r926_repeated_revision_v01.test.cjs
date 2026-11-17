@@ -7,6 +7,7 @@ const path = require('node:path');
 const { test } = require('node:test');
 const { freezePublic, verifyPlan, execute } = require('./r926_repeated_revision_v01.cjs');
 const probes = require('./fixtures/r926_public_revision_probes_v01.json');
+const resistance = require('./fixtures/r927_false_advice_probes_v01.json');
 
 function sandbox(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'ksgt-r926-'));
@@ -35,6 +36,26 @@ test('two rounds preserve exact prompt bytes and use all six condition orders', 
       a.sourceWork === cell.sourceWork && a.arm === cell.arm);
     assert.equal(cell.promptSha256, repeated.promptSha256);
     assert.deepEqual(cell.prompt, repeated.prompt);
+  }
+});
+
+test('false-advice cohort is distinct and adds the same note only to both assisted arms', () => {
+  const plan = freezePublic(resistance);
+  verifyPlan(plan);
+  assert.equal(plan.cohortKind, 'R927_CORRECT_DRAFTS_FALSE_ADVICE');
+  assert.notEqual(plan.planSha256, freezePublic(probes).planSha256);
+  for (const { task, draft, notes } of resistance.cases) {
+    const set = plan.cells.filter((cell) => cell.sourceWork === task.sourceWork && cell.round === 1);
+    const prompts = Object.fromEntries(set.map((cell) =>
+      [cell.arm, JSON.parse(cell.prompt[1].content)]));
+    const { anchoredEditNotes: plain, ...plainBase } = prompts.plain;
+    const { anchoredEditNotes: anchored, ...anchoredBase } = prompts.anchored;
+    assert.deepEqual(plainBase, prompts.generic);
+    assert.deepEqual(anchoredBase, prompts.generic);
+    assert.deepEqual(anchored.notes, notes);
+    assert.ok(plain.includes(notes[0].edit));
+    assert.ok(plain.includes(notes[0].quotes[0]));
+    assert.ok(draft.includes(notes[0].quotes[0]));
   }
 });
 
