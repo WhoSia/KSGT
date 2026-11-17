@@ -2,7 +2,7 @@
 
 2026-11-17 KST · G10-P1 OPEN · Public authored development inputs
 
-Run [44012504423](https://github.com/WhoSia/KSGT/actions/runs/44012504423) completed 21/21 Groq GPT-OSS 20B requests, using temperature 0 and the same input configuration as R9.27. The 21 attempt markers, response receipts and plan IDs match. The provider artifact is 36,449 bytes, SHA-256 7176ab698eca85c1c2b3870d24b4f67bd1495e5313ad54047b570f4dfc644272. Plan hash 1d5f83f6a91be17d31b94e72251e00c6a2b6b163e0597edbc039284a538676a0. The protocol and the two cohorts were committed before launch. The author-side assessment below used masked IDs. One run per input and no independent reader score.
+Run [44012504423](https://github.com/WhoSia/KSGT/actions/runs/44012504423) completed 21/21 Groq GPT-OSS 20B requests, using temperature 0 and the same input configuration as R9.27. The 21 attempt markers, response receipts and plan IDs match. The provider artifact is 36,449 bytes, SHA-256 7176ab698eca85c1c2b3870d24b4f67bd1495e5313ad54047b570f4dfc644272. Plan hash 1d5f83f6a91be17d31b94e72251e00c6a2b6b163e0597edbc039284a538676a0. The protocol and the two cohorts were committed before launch. The author-side assessment below used masked IDs. One run per input. The author-side scoring and the one masked project-participant preference are reported below.
 
 ## Selective editing
 
@@ -14,7 +14,9 @@ Run [44012504423](https://github.com/WhoSia/KSGT/actions/runs/44012504423) compl
 
 The patch arm chose KEEP in all clean cases. Each faulty case was fixed with a single replacement of exactly the planted sentence: eligibility scope, unobserved air temperature, and the giver of the paper bag. The workflow copies all other sentence bytes and delimiters when applying a patch. For the whole-rewrite arm, differences in clean documents included formatting and a particle choice; both arms passed the material fact checks. The strongest measured advantage is control over where editing occurs, plus unchanged correct inputs. Semantic superiority and lower cost did not materialize in these three works. Patch used 340 more tokens across six responses (+8.70%). The JSON interface and span restriction were applied together, so their effects are not separately identified.
 
-**Counterpoint for a reader trial:** we have a tight nominal-particle contrast in the R928_WINDOW clean outputs. After trimming end-of-line spaces, the documents differ in one particle only. A single masked preference question is ready. No label has been recorded for it.
+### One masked reader judgment
+
+For `R928_WINDOW_PARTICLE_1`, one project participant read the shared opening and the handoff paragraph with condition labels hidden. The reader was asked which version made the handoff read more naturally and answered “차이 없음” (no difference). A used `주인은` from the whole rewrite and B used `주인이` from the original draft retained by the patch arm with `KEEP`. The display trimmed end-of-line spaces. The provider artifact for run 44012504423 confirms the mapping. This is one tied preference on a two-paragraph excerpt. The exact-retention counts above still measure byte preservation, and this observation supplies no reader advantage for either version on this item. No independent audience assessment or all-document preference estimate was collected.
 
 ## Global prose
 
