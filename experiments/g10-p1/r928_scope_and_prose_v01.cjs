@@ -124,7 +124,8 @@ async function executePlan(plan, directory, { invoke } = {}) {
           final = { action: received.condition, text: received.text, changed: null };
         }
       }
-      const row = { ...received, outcome, final, finalSha256: final && sha(final.text) };
+      const row = { ...received, outcome, final, finalSha256: final && sha(final.text),
+        finalParagraphCount: final && final.text.trim().split(/\r?\n[ \t]*\r?\n+/).length };
       write(path.join(directory, row.id + '.result.json'), row);
       const { text, final: finalBody, ...summary } = row;
       rows.push({ ...summary, action: finalBody?.action ?? null, changed: finalBody?.changed ?? null });
