@@ -9,6 +9,11 @@ const { REVISION_SETTINGS, buildRevisionCells, prepare, run } = require('./r924_
 const ARMS = ['generic', 'plain', 'anchored'];
 const COHORT = 'global_document_dev_v01.json';
 const PUBLIC_PROBES = 'r926_public_revision_probes_v01.json';
+const RESISTANCE_PROBES = 'r927_false_advice_probes_v01.json';
+const PUBLIC_COHORTS = {
+  'ksgt.r926.authored-public-probes.v1': 'R926_AUTHORED_PUBLIC_PROBES',
+  'ksgt.r927.false-advice-public-probes.v1': 'R927_CORRECT_DRAFTS_FALSE_ADVICE',
+};
 const sha = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 function finishPlan(base, cohortKind) {
@@ -33,11 +38,11 @@ function freezeHistorical(cohort, archive, notes) {
 }
 
 function freezePublic(probes) {
-  if (probes?.schema !== 'ksgt.r926.authored-public-probes.v1' || !Array.isArray(probes.cases)) {
+  if (!Object.hasOwn(PUBLIC_COHORTS, probes?.schema) || !Array.isArray(probes.cases)) {
     throw Error('INVALID_PUBLIC_PROBES');
   }
   return finishPlan(probes.cases.flatMap(({ task, draft, notes }) =>
-    buildRevisionCells(task, draft, notes, ARMS)), 'R926_AUTHORED_PUBLIC_PROBES');
+    buildRevisionCells(task, draft, notes, ARMS)), PUBLIC_COHORTS[probes.schema]);
 }
 
 function verifyPlan({ planSha256, ...sealed }) {
@@ -123,16 +128,17 @@ async function main([mode, ...args]) {
     writeNew(output, freezeHistorical(fixture(COHORT), read(archive), read(notes)));
     return;
   }
-  if (mode === '--plan-public' && args.length === 0) {
-    const { cells, ...plan } = freezePublic(fixture(PUBLIC_PROBES));
+  const publicFixture = mode?.endsWith('-resistance') ? RESISTANCE_PROBES : PUBLIC_PROBES;
+  if (['--plan-public', '--plan-resistance'].includes(mode) && args.length === 0) {
+    const { cells, ...plan } = freezePublic(fixture(publicFixture));
     console.log(JSON.stringify({ ...plan, cells: cells.map(({ prompt, ...cell }) => cell) }, null, 2));
     return;
   }
-  if (!['--execute', '--resume', '--execute-public'].includes(mode) || args.length !== 2) {
-    throw Error('USAGE: --freeze-historical ARCHIVE NOTES PLAN | --plan-public | --execute PLAN OUTPUT_DIR | --resume PLAN OUTPUT_DIR | --execute-public OUTPUT_DIR SUMMARY');
+  const isPublic = ['--execute-public', '--execute-resistance'].includes(mode);
+  if ((!isPublic && !['--execute', '--resume'].includes(mode)) || args.length !== 2) {
+    throw Error('USAGE: --freeze-historical ARCHIVE NOTES PLAN | --plan-public | --plan-resistance | --execute PLAN OUTPUT_DIR | --resume PLAN OUTPUT_DIR | --execute-public OUTPUT_DIR SUMMARY | --execute-resistance OUTPUT_DIR SUMMARY');
   }
-  const isPublic = mode === '--execute-public';
-  const plan = isPublic ? freezePublic(fixture(PUBLIC_PROBES)) : read(args[0]);
+  const plan = isPublic ? freezePublic(fixture(publicFixture)) : read(args[0]);
   const directory = isPublic ? args[0] : args[1];
   resolveProvider('groq');
   const result = await execute(plan, directory, { resume: mode === '--resume' });
