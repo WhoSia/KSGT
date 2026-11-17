@@ -58,6 +58,25 @@ function renderPlainNotes(notes) {
     .join('\n');
 }
 
+function buildRevisionCells(task, draft, proposals, arms) {
+  const source = packet(task);
+  const notes = compileNotes(source, draft, proposals);
+  const baseline = messages(task, 'GENERIC_REVISION', { draft });
+  return arms.map((arm) => {
+    if (!THREE_ARMS.includes(arm)) throw Error('UNKNOWN_REVISION_ARM');
+    let prompt = baseline;
+    if (arm !== 'generic' && notes.length) {
+      const user = JSON.parse(baseline[1].content);
+      user.anchoredEditNotes = arm === 'anchored'
+        ? { guide: NOTE_GUIDE, notes }
+        : renderPlainNotes(notes);
+      prompt = [baseline[0], { role: 'user', content: JSON.stringify(user) }];
+    }
+    return { sourceWork: task.sourceWork, arm, sourceSha256: sha(source), draftSha256: sha(draft),
+      promptSha256: sha(prompt), noteCount: arm === 'generic' ? 0 : notes.length, prompt };
+  });
+}
+
 function prepare(cohort, archive, annotations, { threeArms = false } = {}) {
   if (archive?.schema !== 'ksgt.r923.real-groq-pipeline.v1' ||
       annotations?.schema !== 'ksgt.r924.anchored-notes.v1' ||
@@ -80,24 +99,11 @@ function prepare(cohort, archive, annotations, { threeArms = false } = {}) {
         sha(draft) !== old.draft.textSha256 || sha(draft) !== proposed.draftSha256) {
       throw Error('SOURCE_OR_DRAFT_SHA_MISMATCH');
     }
-    const notes = compileNotes(source, draft, proposed.notes);
-    const baseline = messages(task, 'GENERIC_REVISION', { draft });
     const rotation = index % THREE_ARMS.length;
     const order = threeArms
       ? THREE_ARMS.slice(rotation).concat(THREE_ARMS.slice(0, rotation))
       : index % 2 ? [...ARMS].reverse() : ARMS;
-    return order.map((arm) => {
-      let prompt = baseline;
-      if (arm !== 'generic' && notes.length) {
-        const user = JSON.parse(baseline[1].content);
-        user.anchoredEditNotes = arm === 'anchored'
-          ? { guide: NOTE_GUIDE, notes }
-          : renderPlainNotes(notes);
-        prompt = [baseline[0], { role: 'user', content: JSON.stringify(user) }];
-      }
-      return { sourceWork: task.sourceWork, arm, sourceSha256: sha(source), draftSha256: sha(draft),
-        promptSha256: sha(prompt), noteCount: arm === 'generic' ? 0 : notes.length, prompt };
-    });
+    return buildRevisionCells(task, draft, proposed.notes, order);
   });
 }
 
@@ -111,9 +117,10 @@ function receipt(cell, result) {
     paragraphCount: text.trim().split(/\r?\n[ \t]*\r?\n+/).length, promptSha256: cell.promptSha256 };
 }
 
-async function run(cells, { invoke = chat, record = () => {} } = {}) {
+async function run(cells, { invoke = chat, before = () => {}, record = () => {} } = {}) {
   const results = [];
   for (const cell of cells) {
+    before(cell);
     let outcome;
     try {
       const result = await invoke({ ...REVISION_SETTINGS, messages: cell.prompt });
@@ -170,4 +177,4 @@ if (require.main === module) main(process.argv.slice(2)).catch((error) => {
   console.error(error.message);
   process.exitCode = 1;
 });
-module.exports = { compileNotes, prepare, run };
+module.exports = { REVISION_SETTINGS, buildRevisionCells, compileNotes, prepare, run };
