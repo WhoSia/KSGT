@@ -43,6 +43,38 @@ test('an empty note list yields identical arm prompts', () => {
   assert.equal(generic.promptSha256, anchored.promptSha256);
 });
 
+test('three arms preserve the original prompts and carry the same note payload as prose', () => {
+  const pair = prepare(...inputs());
+  const [generic, plain, anchored] = prepare(...inputs(), { threeArms: true });
+  assert.deepEqual([generic, anchored], pair);
+  const { anchoredEditNotes: prose, ...plainBase } = JSON.parse(plain.prompt[1].content);
+  const { anchoredEditNotes: structured, ...anchoredBase } = JSON.parse(anchored.prompt[1].content);
+  assert.deepEqual(plainBase, anchoredBase);
+  assert.equal(plain.prompt[0].content, anchored.prompt[0].content);
+  assert.equal(plain.noteCount, anchored.noteCount);
+  for (const item of [structured.guide, note.kind, ...note.quotes, ...note.refs, note.impact, note.edit]) {
+    assert.ok(prose.includes(item));
+  }
+  assert.notEqual(plain.promptSha256, anchored.promptSha256);
+});
+
+test('three arms rotate through all positions and use identical prompts without notes', () => {
+  const [cohort, archive, annotations] = inputs([]);
+  for (const sourceWork of ['DEV_TEST_2', 'DEV_TEST_3']) {
+    const extra = { ...task, sourceWork };
+    const sourceSha256 = hash(JSON.stringify(packet(extra)));
+    cohort.tasks.push(extra);
+    archive.records.push({ ...archive.records[0], sourceWork, sourceSha256 });
+    annotations.works.push({ ...annotations.works[0], sourceWork, sourceSha256 });
+  }
+  const cells = prepare(cohort, archive, annotations, { threeArms: true });
+  assert.deepEqual(cells.map(({ arm }) => arm),
+    ['generic', 'plain', 'anchored', 'plain', 'anchored', 'generic', 'anchored', 'generic', 'plain']);
+  for (let i = 0; i < cells.length; i += 3) {
+    assert.equal(new Set(cells.slice(i, i + 3).map(({ promptSha256 }) => promptSha256)).size, 1);
+  }
+});
+
 test('rejects one or two copies of the same claimed repetition span', () => {
   for (const quotes of [[note.quotes[0]], [note.quotes[0], note.quotes[0]]]) {
     assert.throws(() => compileNotes(task, draft, [{ ...note, quotes }]),
