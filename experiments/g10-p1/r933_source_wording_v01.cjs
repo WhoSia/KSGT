@@ -35,8 +35,8 @@ function buildPlan() {
       throw new Error('INVALID_SOURCE_WORDING_PAIR');
     }
     const modes = index % 2 ? ['revise', 'generate'] : ['generate', 'revise'];
-    return modes.flatMap((mode, mi) => {
-      const order = (index + mi) % 2 ? ['explicit', 'compact'] : ['compact', 'explicit'];
+    return modes.flatMap((mode) => {
+      const order = index % 2 ? ['explicit', 'compact'] : ['compact', 'explicit'];
       return order.map((condition) => {
         const changedFacts = source.facts.slice();
         if (condition === 'explicit') changedFacts[target] = explicit;

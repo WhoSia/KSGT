@@ -23,3 +23,13 @@ test('source wording pairs change one fact string and share the exact draft', ()
     assert.equal(Object.hasOwn(ad, 'draft'), a.mode === 'revise');
   }
 });
+
+test('within each mode both source wordings appear first three times', () => {
+  const plan = buildPlan();
+  const first = plan.filter((_, i) => i % 2 === 0);
+  for (const mode of ['generate', 'revise']) {
+    for (const condition of ['compact', 'explicit']) {
+      assert.equal(first.filter((cell) => cell.mode === mode && cell.condition === condition).length, 3);
+    }
+  }
+});

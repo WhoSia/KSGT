@@ -1,4 +1,4 @@
-name: KSGT R9.33 Source Wording
+name: KSGT R9.33 Balanced Source Wording
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
         run: |
           node --test experiments/g10-p1/r924_anchored_revision_v01.test.cjs experiments/g10-p1/r926_repeated_revision_v01.test.cjs experiments/g10-p1/r928_scope_and_prose_v01.test.cjs experiments/g10-p1/r929_global_writing_v01.test.cjs experiments/g10-p1/r930_genre_relations_v01.test.cjs experiments/g10-p1/r931_scene_paragraphs_v01.test.cjs experiments/g10-p1/r932_ending_scope_v01.test.cjs experiments/g10-p1/r933_source_wording_v01.test.cjs
           node experiments/g10-p1/r933_source_wording_v01.cjs --plan > "$RUNNER_TEMP/r933-plan-safe.json"
-      - name: Run 24 matched generation and revision calls
+      - name: Run 24 balanced matched generation and revision calls
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
