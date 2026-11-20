@@ -96,4 +96,25 @@ function audit(plan, text) {
   return { status: issues.length ? "rejected" : "supported", issues, evidence: Object.fromEntries(evidence) };
 }
 
-module.exports = { render, recover, audit };
+function reviseScope(plan, text, ruleIndex, { audience, mode }) {
+  const current = audit(plan, text);
+  if (current.status !== "supported") return { status: "unresolved_source", text, audit: current };
+
+  if (!Number.isInteger(ruleIndex) || ruleIndex < 0 || ruleIndex >= plan.rules.length) {
+    throw Error("INVALID_RULE_INDEX");
+  }
+  const selected = plan.rules[ruleIndex];
+  const revisedPlan = { ...plan, rules: plan.rules.map((rule, i) =>
+    i === ruleIndex ? { ...rule, audience, mode } : rule) };
+  validate(revisedPlan);
+  const span = current.evidence[selected.actions[0]].scopeSpan;
+  const [start, end] = span;
+  const replacement = header(revisedPlan, audience, mode);
+  const revisedText = text.slice(0, start) + replacement + text.slice(end);
+  const checked = audit(revisedPlan, revisedText);
+  if (checked.status !== "supported") throw Error("SCOPE_REVISION_MISMATCH");
+  return { status: "supported", plan: revisedPlan, text: revisedText,
+    change: { oldSpan: span, newSpan: [start, start + replacement.length] }, audit: checked };
+}
+
+module.exports = { render, recover, audit, reviseScope };
