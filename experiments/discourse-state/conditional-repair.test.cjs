@@ -31,3 +31,20 @@ test("a patch cannot publish if it adds a line or drops a required phrase", () =
   assert.equal(applyPatch(old, received(old.second + "\n한 줄 추가.")).second, old.second);
   assert.deepEqual(applyPatch(old, received(old.second)), { second: old.second, accepted: true });
 });
+
+test("paired feedback changes the defect field alone", () => {
+  const { buildPlan } = require("./repair-feedback.cjs");
+  const plan = buildPlan();
+  assert.equal(plan.length, 8);
+  assert.equal(new Set(plan.map(c => c.sourceWork)).size, 4);
+  for (let i = 0; i < plan.length; i += 2) {
+    const pair = plan.slice(i, i + 2);
+    const a = pair.find(c => c.condition === "generic");
+    const b = pair.find(c => c.condition === "annotated");
+    assert.equal(a.sourceWork, b.sourceWork);
+    assert.deepEqual(a.prompt[0], b.prompt[0]);
+    const { 확인된_결함과_고칠_관계, ...matched } = JSON.parse(b.prompt[1].content);
+    assert.equal(typeof 확인된_결함과_고칠_관계, "string");
+    assert.deepEqual(JSON.parse(a.prompt[1].content), matched);
+  }
+});
