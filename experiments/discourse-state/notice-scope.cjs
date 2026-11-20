@@ -5,7 +5,9 @@ const ALL = "모든 이용자";
 const isLine = text => typeof text === "string" && text.trim() === text && text.length > 0 && !/[\r\n]/.test(text);
 
 function validate(plan) {
-  const actionTexts = Object.values(plan.actions);
+  const alternatives = plan.alternatives ?? {};
+  if (Object.keys(alternatives).some(id => !Object.hasOwn(plan.actions, id))) throw Error("UNKNOWN_ACTION_WORDING");
+  const actionTexts = [...Object.values(plan.actions), ...Object.values(alternatives)];
   const audiences = Object.values(plan.audiences);
   if (!actionTexts.length || actionTexts.some(s => !isLine(s)) ||
       new Set(actionTexts).size !== actionTexts.length) throw Error("INVALID_ACTION_WORDING");
@@ -23,53 +25,68 @@ function validate(plan) {
       seen.add(id);
     }
   }
-  if (seen.size !== actionTexts.length) throw Error("UNBOUND_ACTION");
+  if (seen.size !== Object.keys(plan.actions).length) throw Error("UNBOUND_ACTION");
 }
 
-function header(plan, audience, mode) {
+function header(plan, audience, mode, format) {
   const name = audience === "all" ? ALL : plan.audiences[audience];
-  return `다음 절차는 ${name}에게${mode === "only" ? "만" : ""} 적용됩니다.`;
+  const recipient = name + "에게" + (mode === "only" ? "만" : "");
+  if (format === "paragraph") return recipient + " 적용되는 절차입니다.";
+  return "다음 절차는 " + recipient + " 적용됩니다.";
 }
 
-function render(plan) {
+function render(plan, { format = "list", alternate = false } = {}) {
   validate(plan);
-  return plan.rules.map(rule => [
-    header(plan, rule.audience, rule.mode),
-    ...rule.actions.map(id => "- " + plan.actions[id]),
-  ].join("\n")).join("\n\n");
+  if (!["list", "paragraph"].includes(format)) throw Error("INVALID_FORMAT");
+  const blocks = plan.rules.map(rule => {
+    const title = header(plan, rule.audience, rule.mode, format);
+    const actions = rule.actions.map(id => (alternate && plan.alternatives?.[id]) || plan.actions[id]);
+    if (format === "list") return [title, ...actions.map(s => "- " + s)].join("\n");
+    if ([title, ...actions].some(s => !s.endsWith(".") || s.includes(". "))) {
+      throw Error("UNSUPPORTED_PARAGRAPH_PUNCTUATION");
+    }
+    return [title, ...actions].join(" ");
+  });
+  return blocks.join("\n\n");
 }
 
 function recover(plan, text) {
   validate(plan);
-  const supported = new Map([[header(plan, "all", "all"), { audience: "all", mode: "all" }]]);
-  for (const audience of Object.keys(plan.audiences)) {
-    for (const mode of ["only", "applies"]) supported.set(header(plan, audience, mode), { audience, mode });
+  const scopes = new Map();
+  for (const format of ["list", "paragraph"]) {
+    for (const [audience, mode] of [["all", "all"], ...Object.keys(plan.audiences)
+      .flatMap(id => ["only", "applies"].map(m => [id, m]))]) {
+      scopes.set(header(plan, audience, mode, format), { audience, mode, format });
+    }
   }
-  const actions = new Map(Object.entries(plan.actions).map(([id, s]) => ["- " + s, id]));
-  const recovered = [];
+  const actions = new Map(Object.entries(plan.actions).map(([id, s]) => [s, id]));
+  for (const [id, s] of Object.entries(plan.alternatives ?? {})) actions.set(s, id);
+  const blocks = [];
   let cursor = 0;
-  let block = null;
-  for (const line of text.split("\n")) {
-    const span = [cursor, cursor + line.length];
-    cursor += line.length + 1;
-    if (!line) {
-      if (!block || !block.items.length) return { status: "unsupported", reason: "empty_block", span };
-      block = null;
-      continue;
+  for (const rendering of text.split("\n\n")) {
+    const isList = rendering.includes("\n");
+    const delimiter = isList ? "\n" : " ";
+    const sentences = isList ? rendering.split(delimiter) : rendering.split(/(?<=\.) /);
+    const [title, ...actionLines] = sentences;
+    const span = [cursor, cursor + title.length];
+    const scope = scopes.get(title);
+    if (!scope || (scope.format === "list") !== isList || !actionLines.length) {
+      return { status: "unsupported", reason: "unknown_scope_header_or_boundary", span };
     }
-    if (!block) {
-      const scope = supported.get(line);
-      if (!scope) return { status: "unsupported", reason: "unknown_scope_header", span };
-      block = { ...scope, span, items: [] };
-      recovered.push(block);
-      continue;
+    cursor = span[1] + delimiter.length;
+    const items = [];
+    for (const line of actionLines) {
+      const actionSpan = [cursor, cursor + line.length];
+      const wording = isList && line.startsWith("- ") ? line.slice(2) : isList ? "" : line;
+      const id = actions.get(wording);
+      if (id === undefined) return { status: "unsupported", reason: "unknown_action_or_boundary", span: actionSpan };
+      items.push({ id, span: actionSpan });
+      cursor = actionSpan[1] + delimiter.length;
     }
-    const id = actions.get(line);
-    if (!id) return { status: "unsupported", reason: "unknown_action_or_boundary", span };
-    block.items.push({ id, span });
+    blocks.push({ ...scope, span, items });
+    cursor += 2 - delimiter.length;
   }
-  if (!block?.items.length) return { status: "unsupported", reason: "missing_action" };
-  return { status: "parsed", blocks: recovered };
+  return { status: "parsed", blocks };
 }
 
 function audit(plan, text) {
@@ -86,7 +103,7 @@ function audit(plan, text) {
       const expect = expected.get(item.id);
       if (evidence.has(item.id)) issues.push({ kind: "duplicate", id: item.id });
       const observed = { audience: block.audience, mode: block.mode, before: block.items[i - 1]?.id ?? null };
-      evidence.set(item.id, { ...observed, scopeSpan: block.span, actionSpan: item.span });
+      evidence.set(item.id, { ...observed, format: block.format, scopeSpan: block.span, actionSpan: item.span });
       if (observed.audience !== expect.audience) issues.push({ kind: "audience", id: item.id });
       if (observed.mode !== expect.mode) issues.push({ kind: "mode", id: item.id });
       if (observed.before !== expect.before) issues.push({ kind: "order_or_group", id: item.id });
@@ -107,9 +124,10 @@ function reviseScope(plan, text, ruleIndex, { audience, mode }) {
   const revisedPlan = { ...plan, rules: plan.rules.map((rule, i) =>
     i === ruleIndex ? { ...rule, audience, mode } : rule) };
   validate(revisedPlan);
-  const span = current.evidence[selected.actions[0]].scopeSpan;
+  const evidence = current.evidence[selected.actions[0]];
+  const span = evidence.scopeSpan;
   const [start, end] = span;
-  const replacement = header(revisedPlan, audience, mode);
+  const replacement = header(revisedPlan, audience, mode, evidence.format);
   const revisedText = text.slice(0, start) + replacement + text.slice(end);
   const checked = audit(revisedPlan, revisedText);
   if (checked.status !== "supported") throw Error("SCOPE_REVISION_MISMATCH");
