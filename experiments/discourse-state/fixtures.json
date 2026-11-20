@@ -1,0 +1,294 @@
+[
+  {
+    "id": "recipient-a",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "선배",
+        "referents": [
+          "민지"
+        ]
+      },
+      {
+        "kind": "focus",
+        "reader": "담당자",
+        "referents": [
+          "민지",
+          "지수"
+        ]
+      }
+    ],
+    "reader": "선배",
+    "target": "민지",
+    "name": "민지가 서류를 맡았어요.",
+    "omit": "서류를 맡았어요.",
+    "allowOmit": true
+  },
+  {
+    "id": "recipient-b",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "선배",
+        "referents": [
+          "민지"
+        ]
+      },
+      {
+        "kind": "focus",
+        "reader": "담당자",
+        "referents": [
+          "민지",
+          "지수"
+        ]
+      }
+    ],
+    "reader": "담당자",
+    "target": "민지",
+    "name": "민지가 서류를 맡았어요.",
+    "omit": "서류를 맡았어요.",
+    "allowOmit": false
+  },
+  {
+    "id": "inside-quote-a",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "친구",
+        "referents": [
+          "가영",
+          "하늘"
+        ]
+      },
+      {
+        "kind": "enter"
+      },
+      {
+        "kind": "focus",
+        "reader": "친구",
+        "referents": [
+          "하늘"
+        ]
+      }
+    ],
+    "reader": "친구",
+    "target": "하늘",
+    "name": "하늘이가 먼저 돌아왔대.",
+    "omit": "먼저 돌아왔대.",
+    "allowOmit": true
+  },
+  {
+    "id": "inside-quote-b",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "친구",
+        "referents": [
+          "가영",
+          "하늘"
+        ]
+      },
+      {
+        "kind": "enter"
+      },
+      {
+        "kind": "focus",
+        "reader": "친구",
+        "referents": [
+          "하늘",
+          "가영"
+        ]
+      }
+    ],
+    "reader": "친구",
+    "target": "하늘",
+    "name": "하늘이가 먼저 돌아왔대.",
+    "omit": "먼저 돌아왔대.",
+    "allowOmit": false
+  },
+  {
+    "id": "after-quote-a",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "동생",
+        "referents": [
+          "유나"
+        ]
+      },
+      {
+        "kind": "enter"
+      },
+      {
+        "kind": "focus",
+        "reader": "동생",
+        "referents": [
+          "유나",
+          "서현"
+        ]
+      },
+      {
+        "kind": "leave"
+      }
+    ],
+    "reader": "동생",
+    "target": "유나",
+    "name": "유나가 라디오를 껐어.",
+    "omit": "라디오를 껐어.",
+    "allowOmit": true
+  },
+  {
+    "id": "after-quote-b",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "동생",
+        "referents": [
+          "유나"
+        ]
+      },
+      {
+        "kind": "enter"
+      },
+      {
+        "kind": "focus",
+        "reader": "동생",
+        "referents": [
+          "유나",
+          "서현"
+        ]
+      }
+    ],
+    "reader": "동생",
+    "target": "유나",
+    "name": "유나가 라디오를 껐어.",
+    "omit": "라디오를 껐어.",
+    "allowOmit": false
+  },
+  {
+    "id": "competing-reference-a",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "친구",
+        "referents": [
+          "지영"
+        ]
+      }
+    ],
+    "reader": "친구",
+    "target": "지영",
+    "name": "지영이가 먼저 나갔어.",
+    "omit": "먼저 나갔어.",
+    "allowOmit": true
+  },
+  {
+    "id": "competing-reference-b",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "친구",
+        "referents": [
+          "지영"
+        ]
+      },
+      {
+        "kind": "add",
+        "reader": "친구",
+        "referent": "미라"
+      }
+    ],
+    "reader": "친구",
+    "target": "지영",
+    "name": "지영이가 먼저 나갔어.",
+    "omit": "먼저 나갔어.",
+    "allowOmit": false
+  },
+  {
+    "id": "refocus-a",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "동료",
+        "referents": [
+          "정우",
+          "민석"
+        ]
+      },
+      {
+        "kind": "focus",
+        "reader": "동료",
+        "referents": [
+          "민석"
+        ]
+      }
+    ],
+    "reader": "동료",
+    "target": "민석",
+    "name": "민석 씨가 답을 보냈습니다.",
+    "omit": "답을 보냈습니다.",
+    "allowOmit": true
+  },
+  {
+    "id": "refocus-b",
+    "events": [
+      {
+        "kind": "focus",
+        "reader": "동료",
+        "referents": [
+          "정우",
+          "민석"
+        ]
+      }
+    ],
+    "reader": "동료",
+    "target": "민석",
+    "name": "민석 씨가 답을 보냈습니다.",
+    "omit": "답을 보냈습니다.",
+    "allowOmit": false
+  },
+  {
+    "id": "missing-state-a",
+    "events": [
+      {
+        "kind": "add",
+        "reader": "팀장",
+        "referent": "현수"
+      },
+      {
+        "kind": "focus",
+        "reader": "팀원",
+        "referents": [
+          "현수"
+        ]
+      }
+    ],
+    "reader": "팀원",
+    "target": "현수",
+    "name": "현수가 먼저 확인했어요.",
+    "omit": "먼저 확인했어요.",
+    "allowOmit": true
+  },
+  {
+    "id": "missing-state-b",
+    "events": [
+      {
+        "kind": "add",
+        "reader": "팀장",
+        "referent": "현수"
+      },
+      {
+        "kind": "focus",
+        "reader": "팀원",
+        "referents": [
+          "현수"
+        ]
+      }
+    ],
+    "reader": "팀장",
+    "target": "현수",
+    "name": "현수가 먼저 확인했어요.",
+    "omit": "먼저 확인했어요.",
+    "allowOmit": false
+  }
+]
