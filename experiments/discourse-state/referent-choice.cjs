@@ -91,4 +91,4 @@ function run() {
 }
 
 if (require.main === module) console.log(JSON.stringify(run(), null, 2));
-module.exports = { DiscourseState, scopedChoice, run, score };
+module.exports = { DiscourseState, choose, scopedChoice, run, score };
