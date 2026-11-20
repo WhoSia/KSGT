@@ -1,0 +1,46 @@
+name: KSGT R9.39 Conditional Paragraph Repair
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r939-conditional-repair-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r939-conditional-repair-groq
+  cancel-in-progress: false
+
+jobs:
+  conditional-repair:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify fixed alternatives and discourse transitions
+        run: |
+          node --test experiments/discourse-state/*.test.cjs
+          node experiments/discourse-state/conditional-repair.cjs --plan > "$RUNNER_TEMP/r939-plan-safe.json"
+      - name: Compare full rewrite and conditional paragraph repair
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/discourse-state/conditional-repair.cjs --execute "$RUNNER_TEMP/r939-run"
+      - name: Archive attempt markers, response receipts and token usage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r939-conditional-repair-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r939-plan-safe.json
+            ${{ runner.temp }}/r939-run/
