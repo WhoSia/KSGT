@@ -1,0 +1,7 @@
+# R9.42b — Separate referent-choice decision from prose realization
+
+The R9.42 free-form model output kept overt names for all 20 contexts under both raw-context and candidate-inventory prompts, with 20/20 paired responses byte-identical. That is not enough to infer a failure to identify competing referents: naming remains pragmatically permissible even when a subject could be dropped. This intervention asks for the intermediate decision separately.
+
+Use the same 20 authored prefixes, source actor and next action. Compare the raw paragraph with the paragraph plus a hand-annotated candidate inventory. Both arms share precisely the same system instruction; candidate inventory is the only changed information. Ask the model for a one-token categorical choice, NAME or OMIT. Store malformed responses as invalid instead of interpreting them by regex. The finite reference uses the authored rule rather than a human reading experiment. A success would show that a model can reproduce that rule under the chosen prompt, not that its independently generated prose naturally takes the corresponding form.
+
+Do not treat an annotated candidate list as evidence extracted by a model, or label concordance with the authored rule as reader comprehension. Report original output, prompt hashes, response hashes, call outcomes and actual token cost. Prefer later writer and reader comparison of whole paragraphs over further optimization of naming frequency in these seen synthetic scenes.
