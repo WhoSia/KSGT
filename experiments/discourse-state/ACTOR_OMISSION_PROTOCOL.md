@@ -1,0 +1,5 @@
+# R9.41b — Omission permission versus an explicit omission preference
+
+Use the twelve already-frozen R9.41 contexts. Re-run the baseline alongside a version that changes only the instruction allowing omission when a single actor is available to an instruction requiring omission in that case. Keep the competing-actor naming instruction, source actions, known intended actor, model and parameters fixed. Alternate arm order by case. This test probes whether prompt wording alone can produce the desired variation. It uses seen synthetic material and performs no reader recruitment.
+
+Record name versus bare continuation, retention of source facts, and whether a bare form occurs in a two-candidate condition. A name after the competitor leaves is allowed by the permission arm. Under the explicit instruction it fails only the operational omission preference. A lexical name count is distinct from source fidelity or a reader's actual respondent choice. Report if the competing state is not respected.
