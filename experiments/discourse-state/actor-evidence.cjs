@@ -31,6 +31,11 @@ function sourceSpan(prefix, passage, minimum) {
   return [start, start + passage.length];
 }
 function extractAnnotatedState(work) {
+  // A cited string inside a denial or quotation is not an asserted event.
+  // This finite protocol accepts only the declared, complete source sentences.
+  if (work.eventKeys.map(key => work[key]).join(" ") !== work.prefix) {
+    throw Error("UNSUPPORTED_SOURCE_BOUNDARY");
+  }
   const active = new Set();
   const evidence = [];
   let previousEnd = 0;

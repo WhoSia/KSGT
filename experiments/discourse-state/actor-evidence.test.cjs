@@ -32,11 +32,11 @@ test("evidence tampering or reordering fails closed", () => {
   for (let i = 0; i < works().length; i += 5) {
     const w = works()[i + 3];
     assert.throws(() => extractAnnotatedState({ ...w,
-      prefix: w.prefix.replace("만", "도") }), /UNSUPPORTED_SOURCE_EVIDENCE/);
+      prefix: w.prefix.replace("만", "도") }), /UNSUPPORTED_SOURCE_(BOUNDARY|EVIDENCE)/);
     assert.throws(() => extractAnnotatedState({ ...w,
-      prefix: w.prefix.replace(w.exit, "누군가 밖으로 나갔다.") }), /UNSUPPORTED_SOURCE_EVIDENCE/);
+      prefix: w.prefix.replace(w.exit, "누군가 밖으로 나갔다.") }), /UNSUPPORTED_SOURCE_(BOUNDARY|EVIDENCE)/);
     assert.throws(() => extractAnnotatedState({ ...w,
-      prefix: [w.opening, w.exit, w.competing, w.anchor].join(" ") }), /UNSUPPORTED_SOURCE_EVIDENCE/);
+      prefix: [w.opening, w.exit, w.competing, w.anchor].join(" ") }), /UNSUPPORTED_SOURCE_(BOUNDARY|EVIDENCE)/);
   }
 });
 test("matched model arms differ in candidate inventory only, never gold", () => {
@@ -62,5 +62,17 @@ test("target and source action stay fixed through the five transitions", () => {
       assert.equal(new Set(block.map(w => w[field])).size, 1);
     assert.deepEqual(block.map(w => w.expected),
       ["omit_allowed", "name_required", "name_required", "omit_allowed", "name_required"]);
+  }
+});
+
+test("quotation and denial of an anchor never become a positive assertion", () => {
+  for (let i = 0; i < works().length; i += 5) {
+    const w = works()[i + 3];
+    const quotation = w.prefix.replace(w.anchor, "‘" + w.anchor + "’라는 말은 사실이 아니었다.");
+    assert.ok(quotation.includes(w.anchor));
+    assert.throws(() => extractAnnotatedState({ ...w, prefix: quotation }), /UNSUPPORTED_SOURCE_BOUNDARY/);
+    const hypothetical = w.prefix.replace(w.anchor, "만약 " + w.anchor + "라면 상황이 다르다.");
+    assert.ok(hypothetical.includes(w.anchor));
+    assert.throws(() => extractAnnotatedState({ ...w, prefix: hypothetical }), /UNSUPPORTED_SOURCE_BOUNDARY/);
   }
 });
