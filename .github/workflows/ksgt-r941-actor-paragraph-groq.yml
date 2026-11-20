@@ -1,0 +1,46 @@
+name: KSGT R9.41 Actor Paragraphs
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r941-actor-paragraph-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r941-actor-paragraph-groq
+  cancel-in-progress: false
+
+jobs:
+  actor-paragraph:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify fixed alternatives and discourse transitions
+        run: |
+          node --test experiments/discourse-state/*.test.cjs
+          node experiments/discourse-state/actor-paragraph.cjs --plan > "$RUNNER_TEMP/r941-plan-safe.json"
+      - name: Generate twelve actor continuations with the model baseline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/discourse-state/actor-paragraph.cjs --execute "$RUNNER_TEMP/r941-run"
+      - name: Archive attempt markers, response receipts and token usage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r941-actor-paragraph-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r941-plan-safe.json
+            ${{ runner.temp }}/r941-run/
