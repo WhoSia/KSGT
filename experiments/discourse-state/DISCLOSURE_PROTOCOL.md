@@ -1,0 +1,7 @@
+# R9.37 — Disclosure in generated Korean paragraphs
+
+Four synthetic briefs, two literary scenes and two notices, each supply two ordered events or procedures and one fact to disclose early or late. Hold all three facts fixed. A two-line format and exact lexical anchors let an automated check identify which line contained each piece. This is an order check. It cannot judge whether the name denotes the same actor, an action is unchanged, a limited obligation was kept, a spelling variant is equivalent, or a repetition is rhetorically helpful.
+
+Three conditions share Groq GPT-OSS 20B at temperature zero. Direct receives all facts and an early or late instruction. Plan gets the same facts allocated by the executable plan and answers in one call. The incremental condition sees only the facts for the first line. Its accepted first line and the new facts form the second request. A failed first line is counted against that condition and prevents its second request. Later disclosure is hidden from the first call by construction. The methods differ in prompt and calls, so differences measure three complete approaches.
+
+Report individual text, success for both variants of a brief, token charges, and a separate author diagnostic of preserved event, reference and scope. The diagnostic is not independent reader evaluation. If an issue such as scope only becomes evident at the end, retain it for the next test, including whether a first sentence could cause an incorrect provisional reading.
