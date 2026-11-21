@@ -1,0 +1,30 @@
+name: KSGT G10-P1 R9.44 Reader Packet Gate
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths:
+      - '.github/workflows/ksgt-g10-p1-r944-packets.yml'
+      - 'experiments/g10-p1/r944_two_phase_reader_packet.py'
+      - 'experiments/g10-p1/test_r944_two_phase_reader_packet.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-packets:
+    if: github.ref == 'refs/heads/research/r9-24-anchored-revision'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test independent stage separation, receipts and incomplete form rejection
+        run: python -m unittest discover -s experiments/g10-p1 -p 'test_r944_two_phase_reader_packet.py' -v
+      - name: Check Python code without model/API calls
+        run: python -m py_compile experiments/g10-p1/r944_two_phase_reader_packet.py
