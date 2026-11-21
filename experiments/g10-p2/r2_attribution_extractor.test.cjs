@@ -102,6 +102,7 @@ test("ledger tracks contradictions, reports, absence and uncertainty conservativ
 test("score verifies every frozen request ID and full 40-case completion",()=>{
   withTemp(root=>{
     const plan=r.buildPlan();
+    const planHash=require("../g10-p1/r929_global_writing_v01.cjs").planReceipt(plan).planHash;
     const look=new Map(r.examples().map(ex=>[ex.id,ex]));
     for(const c of plan){
       const caseId=c.id.slice("P2R2_".length,-("_"+c.condition).length);
@@ -110,10 +111,12 @@ test("score verifies every frozen request ID and full 40-case completion",()=>{
       const status=c.condition==="binary"?(ex.gold==="ASSERTED"?"ASSERTED":"NOT_ASSERTED"):ex.gold;
       const evidence=status==="NOT_ASSERTED"||status==="ABSENT"?"":ex.snippet.split(".")[0]+".";
       const text=JSON.stringify({status,evidence});
-      fs.writeFileSync(path.join(root,c.id+".attempt.json"),JSON.stringify({id:c.id,promptSha256:c.promptSha256}));
+      fs.writeFileSync(path.join(root,c.id+".attempt.json"),JSON.stringify({id:c.id,promptSha256:c.promptSha256,planHash}));
+      const responseSha=require("node:crypto").createHash("sha256").update(text).digest("hex");
       fs.writeFileSync(path.join(root,c.id+".result.json"),JSON.stringify({id:c.id,promptSha256:c.promptSha256,
-        outcome:"GENERATED",text,textSha256:"synthetic",usage:{prompt_tokens:10,completion_tokens:5,total_tokens:15}}));
+        outcome:"GENERATED",text,textSha256:responseSha,usage:{prompt_tokens:10,completion_tokens:5,total_tokens:15}}));
     }
+    fs.writeFileSync(path.join(root,"summary.json"),JSON.stringify({planHash,rows:plan.map(c=>({id:c.id}))}));
     const scored=r.score(root);
     const a=r.aggregate(scored);
     assert.equal(scored.rows.length,40);

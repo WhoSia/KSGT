@@ -115,6 +115,15 @@ function mergeLedger(prior,extraction) {
 }
 function score(root) {
   const plan=buildPlan(), index=new Map(plan.map(c=>[c.id,c]));
+  const planHash=planReceipt(plan).planHash;
+  const summary=JSON.parse(fs.readFileSync(path.join(root,"summary.json"),"utf8"));
+  if(summary.planHash!==planHash||summary.rows?.length!==plan.length)
+    throw Error("INVALID_R2_SUMMARY");
+  for(const suffix of [".attempt.json",".result.json"]){
+    const observed=new Set(fs.readdirSync(root).filter(f=>f.endsWith(suffix)).map(f=>f.slice(0,-suffix.length)));
+    if(observed.size!==plan.length||[...observed].some(id=>!index.has(id)))
+      throw Error("UNACCOUNTED_R2_RECEIPTS");
+  }
   const rows=[];
   for(const ex of examples()){
     const item={id:ex.id,sourceWork:ex.sourceWork,genre:ex.genre,gold:ex.gold,
@@ -124,7 +133,11 @@ function score(root) {
       const result=JSON.parse(fs.readFileSync(path.join(root,id+".result.json"),"utf8"));
       const attempt=JSON.parse(fs.readFileSync(path.join(root,id+".attempt.json"),"utf8"));
       if(attempt.id!==id||result.id!==id||result.promptSha256!==index.get(id).promptSha256||
-        attempt.promptSha256!==index.get(id).promptSha256)throw Error("MISMATCHED_REQUEST_RECEIPT_"+id);
+        attempt.promptSha256!==index.get(id).promptSha256||attempt.planHash!==planHash)
+        throw Error("MISMATCHED_REQUEST_RECEIPT_"+id);
+      if(result.outcome==="GENERATED" &&
+        (typeof result.text!=="string"||hash(result.text)!==result.textSha256))
+        throw Error("RESPONSE_BYTES_MISMATCH_"+id);
       const output=result.outcome==="GENERATED" ?parseStrict(result.text,condition,ex.snippet):
         {valid:false,reason:"CALL_"+result.outcome};
       const claimed=output.valid?output.status:null;
