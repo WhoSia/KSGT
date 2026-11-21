@@ -4,7 +4,7 @@
   "generation": "X",
   "current_stage": "G10-P2",
   "stage_type": "READER_STATE_COUPLED_KOREAN_WRITING_ARCHITECTURE",
-  "status": "OPEN_R1_SYNTHETIC_ENGINEERING_NO_INDEPENDENT_HUMAN_QUALITY_GAIN",
+  "status": "OPEN_R2B_DEVELOPMENT_NO_INDEPENDENT_HUMAN_QUALITY_GAIN",
   "official_name": "KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs",
   "canonical_notion_id": "41fef561-cf92-8105-a17b-c0c33a9701bc",
   "current_artifact": "experiments/g10-p2/RESEARCH_PROGRAM.md",
