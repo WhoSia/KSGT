@@ -27,7 +27,7 @@ const CASES=[
  {family:173,start:2701,from:"informal",to:"formal"}
 ];
 const DEMOS=[0,50,78,129,202,240,295,341,375,606,932,1174,1373,1705];
-const sha=x=>createHash("sha256").update(typeof x==="string"?x:JSON.stringify(x)).digest("hex");
+const sha=x=>createHash("sha256").update(typeof x==="string"||Buffer.isBuffer(x)?x:JSON.stringify(x)).digest("hex");
 const ensure=(x,why)=>{if(!x)throw Error(why)};
 const write=(f,o)=>fs.writeFileSync(f,JSON.stringify(o,null,2)+"\n",{flag:"wx",mode:0o600});
 function parseUpstream(raw){
