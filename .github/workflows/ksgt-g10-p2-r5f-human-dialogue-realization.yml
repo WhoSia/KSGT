@@ -1,0 +1,78 @@
+name: KSGT G10-P2 R5f Human Korean Conversation Realization (16 Live 120B)
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths:
+      - .github/workflows/ksgt-g10-p2-r5f-human-dialogue-realization.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-g10-p2-r5f-16-real-human-style-20261121
+  cancel-in-progress: false
+
+jobs:
+  korean-human-dialogue-style-generation:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: --unhandled-rejections=strict
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 65
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Human contributor provenance and prohibition on bot authors
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -45 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+            echo 'GIT_BOT_CONTRIBUTOR_PROHIBITED'; exit 1
+          fi
+      - name: Native regression tests, including actual retrieval contract
+        run: |
+          node --test experiments/g10-p2/r5/*.test.cjs
+          node --test experiments/g10-p2/*.test.cjs
+      - name: Fetch original CC BY-NC Korean human dialog source at immutable Git commit and cold verify blob bytes
+        run: |
+          curl --fail --silent --show-error --location --retry 2             'https://raw.githubusercontent.com/smilegate-ai/korean_smile_style_dataset/b362299d1ac9a8a0de2f64eb8f55f3b386e97fad/smilestyle_dataset.tsv'             -o "$RUNNER_TEMP/SmileStyle_original_CC-BY-NC-4.0.tsv"
+          node experiments/g10-p2/r5/r5f_korean_human_dialogue_retrieval.cjs --preflight             "$RUNNER_TEMP/SmileStyle_original_CC-BY-NC-4.0.tsv" > "$RUNNER_TEMP/r5f-upstream-preflight.json"
+          node -e 'let x=require(process.argv[1]);if(x.newCalls!==16||x.corpus.sourceFamilies!==235||x.corpus.distinctTestFamilies!==8||x.corpus.distinctDemoFamilies!==14)process.exit(1);console.log("R5f-pinned-upstream",x.planHash,x.corpus.upstreamSHA256)' "$RUNNER_TEMP/r5f-upstream-preflight.json"
+          cat > "$RUNNER_TEMP/SOURCE_LICENSE_AND_ATTRIBUTION.txt" <<'ATTR'
+          Original: Smilegate AI / Seonghyun Kim (2022), SmileStyle: Parallel Style-variant Corpus for Korean Multi-turn Chat Text Dataset
+          Original public repo: https://github.com/smilegate-ai/korean_smile_style_dataset
+          Pinned upstream commit: b362299d1ac9a8a0de2f64eb8f55f3b386e97fad
+          Original TSV git-blob SHA-1: 1f666dcb38d4822ff7bb61cf899d568f01c576e8
+          Dataset license: CC BY-NC 4.0 (noncommercial use, attribution required). Check complete license at https://creativecommons.org/licenses/by-nc/4.0/
+          Quality limitation: repository authors describe this as a toy dataset that contains typos and style-conversion mistakes.
+          Do not represent a reference dialogue as a unique preferred or independently expert-rated Korean literary text.
+          ATTR
+      - name: Generate actual 16 whole Korean 5-turn conversations by GPT-OSS 120B
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r5/r5f_korean_human_dialogue_retrieval.cjs --execute             "$RUNNER_TEMP/r5f-live" "$RUNNER_TEMP/SmileStyle_original_CC-BY-NC-4.0.tsv"
+      - name: Re-read all provider outputs and recount 16 actual calls with original human references
+        run: |
+          node experiments/g10-p2/r5/r5f_korean_human_dialogue_retrieval.cjs --score             "$RUNNER_TEMP/r5f-live" "$RUNNER_TEMP/SmileStyle_original_CC-BY-NC-4.0.tsv"             > "$RUNNER_TEMP/r5f-cold-recount.json"
+          node -e 'let x=require(process.argv[1]);if(x.actualProviderCalls!==16||x.sourceConversationFamilies!==8||x.wholeFiveTurnDialogues!==16||x.independentNativeReaderPreference!==0||x.qualitySuperiority!=="UNPROVEN")process.exit(1);console.log("R5f-paired-complete-results",JSON.stringify(x))' "$RUNNER_TEMP/r5f-cold-recount.json"
+          test "$(grep -c '^## [1-8]\.' "$RUNNER_TEMP/r5f-live/plain-Korean-human-style-dialogues.md")" -eq 8
+      - name: Preserve raw licensed corpus, license, every provider receipt and complete Korean comparative texts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r5f-smilestyle-16-real-120b-five-turn-dialogues
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/SmileStyle_original_CC-BY-NC-4.0.tsv
+            ${{ runner.temp }}/SOURCE_LICENSE_AND_ATTRIBUTION.txt
+            ${{ runner.temp }}/r5f-upstream-preflight.json
+            ${{ runner.temp }}/r5f-live/
+            ${{ runner.temp }}/r5f-cold-recount.json
