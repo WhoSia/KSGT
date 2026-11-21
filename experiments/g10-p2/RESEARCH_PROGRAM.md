@@ -40,3 +40,7 @@ Can a reader-state transition performed **after a sentence is actually written**
 [P1 retrospective](../g10-p1/paper/R9_44_G10_P1_RETROSPECTIVE_P2_NAMING_20261121.md). [P1 original Notion](https://app.notion.com/p/40def561cf9281a0b990ee1b3662b79e). [P2 Notion](https://app.notion.com/p/41fef561cf928105a17bc0c33a9701bc). Historical CURRENT_STAGE.json counts preserved without false aggregation. Notion: research judgments; Drive: original and private bytes; GitHub: code/tests/docs. Read-only Actions. No bot commits.
 
 **Initial outcomes:** new independent human ratings = 0; newly trained P2 networks = 0; demonstrated full-prose improvement = 0. P2 has officially started as research, not as a validated quality win.
+
+## 2026-11-21 — R1 execution receipts
+
+[Verified R1 mechanism and limits](R1_VERIFIED_RESULTS_20261121.md), [CI run 44868642896](https://github.com/WhoSia/KSGT/actions/runs/44868642896): 13/13 hermetic Node tests PASS, 0 newly called models, 0 independently scored Korean readers. [Research OS Drive evidence capsule](https://drive.google.com/file/d/1sUk0yg1Vh0Kv_f-69nkuvq9Zjo-BTYni/view) is a synthetic experiment/CI summary, **not** model-output raw data (SHA-256 0e90941757e31e24d82c3c46e2ecfa8877a90b9ce48d6aeb9674e082fe689f76), uploaded and cold read back byte-identical. Keep its source evidence distinct from the independent full prose study to follow.

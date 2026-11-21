@@ -18,13 +18,15 @@
     "complete_korean_prose_quality_advantage": "UNOBSERVED",
     "author_exposed_synthetic_works": 4,
     "author_exposed_synthetic_source_facts": 8,
-    "hermetic_node_tests_passed": 10,
-    "hermetic_ci_run": 44868442416,
+    "hermetic_node_tests_passed": 13,
+    "hermetic_ci_run": 44868642896,
     "unit_fixture_outcome": "SOURCE_STATE_AND_PLAN_ONLY_CONTRAST_TESTED_NO_HUMAN_GOLD",
     "r1_code": "experiments/g10-p2/reader_state_v01.cjs",
     "r1_fixture": "experiments/g10-p2/fixtures/r1_reader_state_author_dev_v01.json",
     "experimental_scope_limit": "AUTHOR_LICENSED_SURFACE_EXACT_MATCH_NOT_AUTOMATIC_KOREAN_SEMANTIC_PARSER",
-    "quality_cost_claim": "NOT_PROVEN"
+    "quality_cost_claim": "NOT_PROVEN",
+    "r1_drive_evidence_id": "1sUk0yg1Vh0Kv_f-69nkuvq9Zjo-BTYni",
+    "r1_drive_sha256": "0e90941757e31e24d82c3c46e2ecfa8877a90b9ce48d6aeb9674e082fe689f76"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -535,16 +537,18 @@
   "latest_experiment": {
     "identifier": "G10-P2 R1",
     "status": "SYNTHETIC_FINITE_MECHANISM_CI_PASS_HUMAN_AND_LIVE_MODEL_OUTCOMES_NOT_TESTED",
-    "run": 44868442416,
+    "run": 44868642896,
     "sourceWorks": 4,
     "sourceFacts": 8,
-    "passedTests": 10,
+    "passedTests": 13,
     "failedTests": 0,
     "newProviderCalls": 0,
     "independentReaderRatings": 0,
     "newModelTraining": 0,
-    "report": "experiments/g10-p2/R1_PREREGISTERED_STATE_CONTRAST_20261121.md",
-    "code": "experiments/g10-p2/reader_state_v01.cjs"
+    "report": "experiments/g10-p2/R1_VERIFIED_RESULTS_20261121.md",
+    "code": "experiments/g10-p2/reader_state_v01.cjs",
+    "driveEvidenceId": "1sUk0yg1Vh0Kv_f-69nkuvq9Zjo-BTYni",
+    "driveEvidenceKind": "SOURCE_WITNESS_SUMMARY_ONLY_NO_PROVIDER_RAW"
   },
   "provider_connectivity": {
     "codeStatus": "ACTUAL_GROQ_API_PASS_GPTOSS20B_120B_QWEN27B_MULTISEED_AND_RAW_SOURCE",
