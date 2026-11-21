@@ -29,8 +29,9 @@ The latter is an *illustrative* referential choice; licensed omission of the sec
 6. Missing source fact: no ellipsis.
 7. Malformed request: abstain.
 8. Candidate surface differs from licensed exact string: no ellipsis.
+9. Licensed candidate text is returned unchanged under exact trace match.
 
-The bundled Node test exercises eight deterministic assertions; a local Node run passed 8/8. These are implementation checks, **not** evidence of genre-spanning Korean quality, independent semantic annotation, latency advantage, trained model or innovation in zero-pronoun theory. Prior work includes Roh & Lee (2003), Roh/Na/Lee (2005), and discourse-continuity studies.
+The bundled Node test exercises nine deterministic assertions; a local Node run passed 8/8. These are implementation checks, **not** evidence of genre-spanning Korean quality, independent semantic annotation, latency advantage, trained model or innovation in zero-pronoun theory. Prior work includes Roh & Lee (2003), Roh/Na/Lee (2005), and discourse-continuity studies.
 
 ## R5j experimental gate before any quality claim
 For a new, rights-clear, source-disjoint corpus of actual professionally revised Korean paragraphs: collect source / before-after alignment with editorial intent and provenance; create author-separated splits; pre-fix (1) DIRECT120B, (2) plain-language same-state baseline, (3) explicit reference retention, (4) typed/authorized reference controller, and (5) equal-token repeated direct generation. Score **complete paragraph** quality and source fidelity independently, blind to arm; include annotation and retrieval costs. Track rejected/abstained inputs. Never count a deterministic source-frame conservation check as reader gold; do not treat editorial edits as aesthetic superiority without human validation.
