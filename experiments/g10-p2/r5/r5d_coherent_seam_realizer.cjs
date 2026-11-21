@@ -18,7 +18,7 @@ function selectedCases(oldRoot){
   const base=old.get(entry.sourceWork);req(base,"R5D_SOURCE_NOT_FOUND");
   const text=base.original;
   for(const [k,q] of [["from",entry.from],["through",entry.through]]){
-   req(typeof q==="string"&&q.length>6&&text.indexOf(q)>=0&&
+   req(typeof q==="string"&&q.length>0&&text.indexOf(q)>=0&&
      text.indexOf(q)===text.lastIndexOf(q),"R5D_INVALID_UNIQUE_"+k);
   }
   const a=text.indexOf(entry.from),b=text.indexOf(entry.through,a);
