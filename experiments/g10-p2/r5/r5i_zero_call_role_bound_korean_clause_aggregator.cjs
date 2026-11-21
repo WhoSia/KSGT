@@ -97,7 +97,7 @@ function derive(raw){
  const map=new Map(r.fixture.works.map(w=>[w.id,w]));
  const rows=src.rows.map(row=>{
   const work=map.get(row.sourceWork);
-  ok(work&&r.sha===undefined,"R5I_UNEXPECTED_SOURCE_WORK");
+  ok(Boolean(work),"R5I_UNEXPECTED_SOURCE_WORK");
   ok(row.source.namedCharacters.every((x,i)=>x.id===work.entities[i].id&&x.name===work.entities[i].name),
    "R5I_HIDDEN_SOURCE_ROLE_REPLACE");
   const reconstructedSelected=r.render(work,row.selector.selectedIndices),
