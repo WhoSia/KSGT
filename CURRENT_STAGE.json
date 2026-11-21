@@ -232,7 +232,12 @@
     "r5f_original_drive_id": "1f-OmbWQnalFIsanaRaQ_EY1GEMCrkPBr",
     "r5f_original_zip_sha256": "e76598ad63f44839cacd2dc5c3848ad0f29d8c88a25c87754f5500fc4302f498",
     "r5f_quality_gain": "NOT_DEMONSTRATED_MIXED_HUMAN_DIALOGUE_STYLE_ONLY",
-    "r5f_result_report": "experiments/g10-p2/r5/19_R5F_16_LIVE_HUMAN_STYLE_DIALOGUES_RESULTS_AND_OPERATION_CENSUS_20261121.md"
+    "r5f_result_report": "experiments/g10-p2/r5/19_R5F_16_LIVE_HUMAN_STYLE_DIALOGUES_RESULTS_AND_OPERATION_CENSUS_20261121.md",
+    "r5f_style_variant_individual_authorship": "UNVERIFIED_FROM_ORIGINAL_README",
+    "r5f_style_variant_human_annotator_identities": "NOT_DOCUMENTED_IN_README",
+    "r5f_style_variant_human_preference_gold": "NONE_VERIFIED",
+    "r5f_valid_estimator_scope": "PUBLIC_KOREAN_STYLE_VARIANTS_RETRIEVAL_VS_DIRECT_EXPOSED_DEVELOPMENT",
+    "r5f_authorship_erratum_report": "experiments/g10-p2/r5/19_R5F_16_LIVE_HUMAN_STYLE_DIALOGUES_RESULTS_AND_OPERATION_CENSUS_20261121.md"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -1118,6 +1123,8 @@
     "qualityAdvantage": "UNESTABLISHED",
     "nativeRun": 44902845961,
     "driveOriginal": "1f-OmbWQnalFIsanaRaQ_EY1GEMCrkPBr",
-    "report": "experiments/g10-p2/r5/19_R5F_16_LIVE_HUMAN_STYLE_DIALOGUES_RESULTS_AND_OPERATION_CENSUS_20261121.md"
+    "report": "experiments/g10-p2/r5/19_R5F_16_LIVE_HUMAN_STYLE_DIALOGUES_RESULTS_AND_OPERATION_CENSUS_20261121.md",
+    "sourceVariantAuthorshipAuthority": "UNKNOWN_NOT_VERIFIED_HUMAN_EDITING",
+    "amendedScope": "PUBLIC_STYLE_CORPUS_EXEMPLAR_RETRIEVAL_NOT_AUTHENTICATED_HUMAN_EDITOR_EXAMPLES"
   }
 }
