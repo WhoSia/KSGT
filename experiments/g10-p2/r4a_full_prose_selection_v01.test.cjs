@@ -68,8 +68,10 @@ test("writer prompts preserve exactly the same source facts and do not leak read
     const b=JSON.parse(cells[1].prompt[1].content);
     assert.deepEqual(a.sourceFacts,w.facts);
     assert.deepEqual(b.sourceFacts,w.facts);
-    assert.ok(!cells.some(c=>c.prompt[1].content.includes(w.readerQuestion)||
-      c.prompt[1].content.includes(w.answer)));
+    assert.equal(Object.prototype.hasOwnProperty.call(a,"readerQuestion"),false);
+    assert.equal(Object.prototype.hasOwnProperty.call(a,"answer"),false);
+    assert.equal(Object.prototype.hasOwnProperty.call(b,"readerQuestion"),false);
+    assert.equal(Object.prototype.hasOwnProperty.call(b,"answer"),false);
     assert.equal(cells.filter(c=>c.condition==="rich").length,1);
     assert.equal(cells.every(c=>c.promptSha256===hash(c.prompt)),true);
   }
