@@ -21,10 +21,13 @@ const p={operation:'DELETE_REPEATED_NOMINAL',startCp:second,endCp:second+3,expec
 const a=run();
 const candidate=screenWithAdmission({admission:a,proposal:p,actorId:'NARRATOR',objectId:'WINDOW_1'});
 assert.equal(candidate.status,'STRUCTURAL_CANDIDATE_ONLY');
+assert.equal(screenWithAdmission({admission:{...a},proposal:p,actorId:'NARRATOR',objectId:'WINDOW_1'}).reason,'NOT_ADMITTED');
+assert.throws(()=>{a.source='forged';},TypeError);
+assert.throws(()=>{a.mentions[0].text='forged';},TypeError);
 assert.equal(candidate.semanticStatus,'UNVERIFIED');
 assert.equal(candidate.naturalnessStatus,'UNVERIFIED');
 assert.equal(screenWithAdmission({admission:a,proposal:{...p,startCp:0},actorId:'A',objectId:'B'}).reason,'EDIT_MENTION_NOT_WITNESSED');
 assert.equal(screenWithAdmission({admission:run({...evidence,sourceFactIds:['FORGED']}),proposal:p,actorId:'A',objectId:'B'}).reason,'NOT_ADMITTED');
 assert.throws(()=>canonical({bad:undefined}));
 assert.equal(digest(canonical({b:2,a:1})),digest(canonical({a:1,b:2})));
-console.log('R5l 15 tests pass; pinned digest is NOT proof of authenticity or coreference.');
+console.log('R5l 18 tests pass; pinned digest is NOT proof of authenticity or coreference.');
