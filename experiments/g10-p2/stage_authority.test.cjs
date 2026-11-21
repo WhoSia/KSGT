@@ -3,7 +3,7 @@ const {test}=require("node:test"),a=require("node:assert/strict"),s=require("../
 
 test("approved G10-P2 title and R5 prospective, R4b human gate remain open",()=>{
  a.equal(s.current_stage,"G10-P2");
- a.equal(s.status,"OPEN_R5_DESIGN_R4B_HUMAN_EVIDENCE_PENDING");
+ a.match(s.status,/^OPEN_R5[AB]_.*QUALITY_HOLD$/);
  a.equal(s.official_name,"KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs");
  a.equal(s.canonical_notion_id,"41fef561-cf92-8105-a17b-c0c33a9701bc");
 });
@@ -15,14 +15,17 @@ test("P1 authority and R4a historical stage explicitly preserved",()=>{
  a.equal(s.historical_g10_p2_r4a_latest_experiment.totalProviderCalls,60);
  a.equal(s.historical_g10_p2_r4a_latest_experiment.tokensTotal,49978);
 });
-test("P2 208 model calls count R2/R2b/R4a/R4b once, never read-only recovery",()=>{
+test("P2 cumulative model calls count R2/R2b/R4a/R4b/R5a/R5b once, never read-only recovery",()=>{
  const c=s.current_authority;
  a.equal(c.new_g10_p2_r2_extractor_calls,80);
  a.equal(c.new_g10_p2_r2b_extractor_calls,48);
  a.equal(c.r3_new_provider_calls,0);
  a.equal(c.r4a_provider_calls,60);
  a.equal(c.r4b_real_provider_calls,20);
- a.equal(c.real_provider_model_calls,208);
+ a.equal(c.r5a_real_provider_calls,40);
+ a.equal(c.r5a_real_independent_reader_ratings,0);
+ a.equal(c.r5a_independent_source_audits,0);
+ a.equal(c.real_provider_model_calls,80+48+0+60+20+40+(c.r5b_real_provider_calls||0));
  a.equal(s.latest_experiment.newModelCalls,20);
  a.equal(s.latest_experiment.posthocReplayNewModelCalls,0);
  a.equal(s.latest_experiment.stageCumulativeModelCalls,208);
