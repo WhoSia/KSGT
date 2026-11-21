@@ -4,7 +4,7 @@
   "generation": "X",
   "current_stage": "G10-P2",
   "stage_type": "READER_STATE_COUPLED_KOREAN_WRITING_ARCHITECTURE",
-  "status": "OPEN_R2B_DEVELOPMENT_NO_INDEPENDENT_HUMAN_QUALITY_GAIN",
+  "status": "OPEN_R3_FINITE_CONTRACT_NO_INDEPENDENT_HUMAN_QUALITY_GAIN",
   "official_name": "KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs",
   "canonical_notion_id": "41fef561-cf92-8105-a17b-c0c33a9701bc",
   "current_artifact": "experiments/g10-p2/RESEARCH_PROGRAM.md",
@@ -46,8 +46,19 @@
     "r2b_groq_run": 44871200039,
     "r2b_drive_id": "1lDwdjS7LwCPeUcdS6qvJ2gARCCn6kWqT",
     "r2b_drive_sha256": "28e5320b9dcb652d993ddcdf14b74208603654799ac71796f5bc9b5871b9b1e4",
-    "latest_hermetic_node_tests_passed": 28,
-    "latest_hermetic_ci_run": 44871200039
+    "latest_hermetic_node_tests_passed": 39,
+    "latest_hermetic_ci_run": 44871827738,
+    "r3_four_original_source_work_units": 4,
+    "r3_investigator_structured_cases": 12,
+    "r3_author_declared_outcomes": {
+      "ALLOW": 4,
+      "REJECT": 7,
+      "MENTION_ONLY": 1
+    },
+    "r3_new_provider_calls": 0,
+    "r3_closed_surface_scope": "LICENSED_FULL_SENTENCE_MATCH_ONLY_NOT_AUTOMATIC_SEMANTIC_PARSER",
+    "r3_real_korean_writing_quality_gain": "UNOBSERVED",
+    "r3_ci_run": 44871827738
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -553,33 +564,33 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "Return from isolated attribution labels to full Korean prose: freeze fresh source-work-disjoint complete-document tasks, compare strong direct/rich/same-state-in-text/executable selective controller at matched candidate and model budgets, and collect independent Korean reader usability plus source-fidelity audit. R2/2b are exposed single-author development, not human-quality results.",
-  "current_substage": "G10-P2 R2b — PRIOR REAL PROSE ATTRIBUTION STRESS, ACTOR AND CONDITIONAL SCOPE ERRORS",
+  "next_scientific_action": "Stop expanding authored narrow classifications. Run R3 next full-text causal comparison on fresh source-work-disjoint Korean briefs: strong direct/rich, identical state-as-text, executable controller, no-op and compute-matched rival. Measure complete-text usability and independent semantic source audit and total source-annotation/extraction costs. Do not claim a full-prose gain from finite R3 rules.",
+  "current_substage": "G10-P2 R3 — FINITE SOURCE–SURFACE DUAL-AUTHORITY CONTRACT PASSED; FULL-PROSE STUDY OPEN",
   "latest_experiment": {
-    "identifier": "G10-P2 R2b",
-    "status": "PRIOR_GENERATED_COMPLETE_PROSE_DIAGNOSTIC_WITH_INDEPENDENT_HUMAN_GOLD_ZERO",
-    "sourceRun": 44782747496,
-    "originalGeneratedTextsRecovered": 36,
-    "originalModelTextsAudited": 24,
-    "originalSourceWorkUnits": 8,
-    "sourceWorkDisjointFromOriginalModelGeneration": false,
-    "newProviderAttempts": 48,
-    "newProviderCompletions": 48,
-    "stageTotalProviderCalls": 128,
-    "predecidedAuthorLabels": 22,
-    "authorIndeterminate": 2,
-    "binaryCorrect": "20/22",
-    "taxonomyCorrect": "16/22",
-    "jsonAndEvidenceValid": {
-      "binary": "23/24",
-      "attribution": "20/24"
+    "identifier": "G10-P2 R3",
+    "status": "FINITE_PROOF_CONTRACT_PASS_NO_HUMAN_OR_FREETEXT_QUALITY_CLAIM",
+    "priorRealExtractionCalls": 128,
+    "newProviderCalls": 0,
+    "sourceWorkUnits": 4,
+    "investigatorStructuredCases": 12,
+    "expectedLabels": {
+      "ALLOW": 4,
+      "REJECT": 7,
+      "MENTION_ONLY": 1
     },
-    "taxonomyFalsePositives": 2,
-    "latestNodeTestsPassed": 28,
+    "observedAgainstFixture": {
+      "ALLOW": 4,
+      "REJECT": 7,
+      "MENTION_ONLY": 1
+    },
+    "scope": "AUTHOR_LICENSED_FULL_SENTENCE_CLOSED_GRAMMAR",
     "independentReaderRatings": 0,
-    "run": 44871200039,
-    "report": "experiments/g10-p2/R2B_REAL_PROSE_RESULTS_20261121.md",
-    "driveEvidenceId": "1lDwdjS7LwCPeUcdS6qvJ2gARCCn6kWqT"
+    "independentSemanticGold": 0,
+    "verifiedWriterQualityGain": "NONE_PROVEN",
+    "run": 44871827738,
+    "passedTests": 39,
+    "failedTests": 0,
+    "report": "experiments/g10-p2/R3_DUAL_AUTHORITY_FINITE_RESULTS_20261121.md"
   },
   "provider_connectivity": {
     "codeStatus": "ACTUAL_GROQ_API_PASS_GPTOSS20B_120B_QWEN27B_MULTISEED_AND_RAW_SOURCE",
