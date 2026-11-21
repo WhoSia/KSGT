@@ -1,0 +1,224 @@
+{
+  "schema": "ksgt.g10p2.r2.authored-dev.v1",
+  "status": "INVESTIGATOR_AUTHORED_EXPOSED_DEV_LABELS_NOT_INDEPENDENT_GOLD",
+  "date": "2026-11-21",
+  "aim": "Distinguish accessible proposition from narrator commitment in Korean realized snippets",
+  "works": [
+    {
+      "id": "CHAT_GRAPH",
+      "genre": "chat",
+      "proposition": "그림 3의 왼쪽 범례가 최종 승인되었다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "원본 데이터와 비교를 마쳤다. 그림 3의 왼쪽 범례는 최종 승인됐다."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "원본 데이터와 비교했지만 그림 3의 왼쪽 범례는 최종 승인되지 않았다."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "팀장은 그림 3의 왼쪽 범례가 최종 승인됐다고 말했다. 그러나 확인 서명은 아직 없다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "그림 3의 왼쪽 범례가 최종 승인됐는지 아직 확인하는 중이다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "그림 3의 세로축 단위를 바꿨다. 오른쪽 그래프의 제목도 줄였다."
+        }
+      ]
+    },
+    {
+      "id": "CHAT_SHARE",
+      "genre": "chat",
+      "proposition": "수정된 실험 일정표를 오늘 공유했다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "수정된 실험 일정표를 오늘 단체방에 올렸다. 확인해 줘."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "오늘은 수정된 실험 일정표를 공유하지 않았다. 내일 다시 확인할게."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "한 친구가 수정된 실험 일정표를 오늘 공유했다고 말했지만, 단체방에는 파일이 보이지 않는다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "수정된 실험 일정표를 오늘 공유했는지는 확인되지 않았다. 보낸 사람에게 물어보겠다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "측정 장비 순서만 다시 정했다. 지난주 사진 링크는 그대로다."
+        }
+      ]
+    },
+    {
+      "id": "SCI_SCALE",
+      "genre": "science",
+      "proposition": "두 측정의 저울 영점 오차가 동일했다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "두 측정에서 저울 영점 오차는 각각 0.3 g으로 같았다. 따라서 차이에서는 해당 오차가 상쇄된다."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "첫 측정의 저울 영점 오차는 0.3 g, 둘째는 0.1 g이었다. 동일하지 않았다."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "조교는 두 측정의 저울 영점 오차가 동일했다고 주장했지만, 검증 기록은 없다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "두 측정의 저울 영점 오차가 같았는지는 확인하지 못했다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "저울에 시료를 두 번 올렸다. 각 시료의 표면 상태를 기록했다."
+        }
+      ]
+    },
+    {
+      "id": "SCI_DROPLET",
+      "genre": "science",
+      "proposition": "재질 차이가 물방울 퍼짐 폭의 원인으로 확인되었다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "세척 상태와 양을 통제해 반복 측정했고, 재질 차이가 물방울 퍼짐 폭의 원인으로 확인됐다."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "물방울 퍼짐 폭은 달랐지만 재질 차이가 원인이라고 확인된 것은 아니다."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "연구 보조원이 재질 차이가 퍼짐 폭의 원인이라고 말했다. 실험 책임자는 검증을 보류했다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "재질 차이가 퍼짐 폭의 원인인지 확인하기 위한 반복 실험을 준비했다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "물방울의 초기 지름을 사진으로 측정했다. 조명 각도를 바꿔 촬영했다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_TIME",
+      "genre": "notice",
+      "proposition": "체육관 집합 시간이 금요일 오후 네 시로 변경되었다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "이번 주 체육관 집합 시간은 금요일 오후 네 시로 변경했습니다. 기존 안내 시간을 적용하지 마세요."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "체육관 집합 시간이 금요일 오후 네 시로 변경된 것은 아닙니다. 시간 변경 공지는 철회됐습니다."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "일부 학생이 체육관 집합 시간이 금요일 오후 네 시로 바뀌었다고 전하지만, 학교가 확인한 공지는 아닙니다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "체육관 집합 시간이 금요일 오후 네 시로 바뀌는지는 아직 결정되지 않았습니다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "체육관 출입구는 북쪽 문을 이용해 주세요. 물품 보관 장소는 복도입니다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_BADGE",
+      "genre": "notice",
+      "proposition": "임시 명찰 착용 의무가 교직원에게만 적용된다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "임시 명찰 착용 의무는 교직원에게만 적용합니다. 방문객에게는 적용하지 않습니다."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "임시 명찰 착용 의무는 교직원에게만 적용되는 규정이 아닙니다. 등록 방문객도 대상입니다."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "행사 안내원은 명찰 의무가 교직원에게만 적용된다고 설명했지만, 공식 규정에서는 그 범위를 확인하지 못했습니다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "임시 명찰 착용 의무가 교직원에게만 적용되는지 담당 부서에 문의 중입니다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "행사장에서 제공하는 명찰의 위치는 안내대 옆입니다. 사용한 목걸이는 출구에 반납하세요."
+        }
+      ]
+    },
+    {
+      "id": "SCENE_DOOR",
+      "genre": "scene",
+      "proposition": "나래가 잠긴 문을 열었다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "나래는 문고리를 두 번 비틀고 잠긴 문을 열었다. 복도에 찬 공기가 흘렀다."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "나래가 힘껏 밀었지만 잠긴 문은 열리지 않았다."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "누군가 나래가 잠긴 문을 열었다고 떠들었다. 나래는 그 이야기를 듣지 못했다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "나래가 그 잠긴 문을 열었는지는 아무도 확인하지 못했다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "나래는 복도 끝 창문에 서 있었다. 천장의 전등이 깜박였다."
+        }
+      ]
+    },
+    {
+      "id": "SCENE_CUP",
+      "genre": "scene",
+      "proposition": "미선이 금이 간 컵을 치웠다.",
+      "cases": [
+        {
+          "status": "ASSERTED",
+          "snippet": "미선은 금이 간 컵을 조심스럽게 들어 찬장에 치웠다."
+        },
+        {
+          "status": "DENIED",
+          "snippet": "미선은 금이 간 컵에 손을 뻗었지만 결국 치우지 않았다."
+        },
+        {
+          "status": "ATTRIBUTED",
+          "snippet": "동생은 미선이 금이 간 컵을 치웠다고 말했다. 하지만 식탁은 가림막에 가려져 있었다."
+        },
+        {
+          "status": "QUESTION",
+          "snippet": "미선이 금이 간 컵을 치웠는지는 뒤돌아선 준호도 알지 못했다."
+        },
+        {
+          "status": "ABSENT",
+          "snippet": "미선은 의자를 창가로 옮겼다. 바닥에는 신문이 접혀 있었다."
+        }
+      ]
+    }
+  ]
+}

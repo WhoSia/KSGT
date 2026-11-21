@@ -1,0 +1,61 @@
+name: KSGT G10-P2 R4b Bounded Repair vs Full Rewrite
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r4b-bounded-repair.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-r4b-once-original-real-text
+  cancel-in-progress: false
+
+jobs:
+  repair-contrast:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test provenance and bounded edit guards
+        run: node --test experiments/g10-p2/*.test.cjs
+      - name: Restore complete actual 60-call R4a archive
+        uses: actions/download-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4a-full-prose-raw
+          repository: WhoSia/KSGT
+          run-id: 44883541327
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/r4a-original
+      - name: Verify all 60 previous source and response hashes; freeze 20 edits
+        run: |
+          node experiments/g10-p2/r4b_original_text_local_repair.cjs --plan "$RUNNER_TEMP/r4a-original/r4a-live" > "$RUNNER_TEMP/r4b-frozen-plan.json"
+      - name: Execute PATCH versus full REWRITE with same source, target and one model call each
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r4b_original_text_local_repair.cjs --execute "$RUNNER_TEMP/r4a-original/r4a-live" "$RUNNER_TEMP/r4b-new"
+      - name: Re-validate raw response SHA, edit spans and both arm outcomes
+        run: |
+          node experiments/g10-p2/r4b_original_text_local_repair.cjs --score "$RUNNER_TEMP/r4a-original/r4a-live" "$RUNNER_TEMP/r4b-new" > "$RUNNER_TEMP/r4b-scored.json"
+          node -e 'const s=require(process.argv[1]);const {rows,...totals}=s;console.log("R4b-outcomes",JSON.stringify(totals));console.log("R4b-each",JSON.stringify(rows.map(x=>({id:x.id,target:x.goldStatus,patch:x.patch.status,rewrite:x.rewrite.status,removedP:x.target?.remainedInModelPatch===false,removedR:x.target?.remainedInFullRewrite===false,patchTokens:x.patch.usage?.total_tokens,rewriteTokens:x.rewrite.usage?.total_tokens}))))' "$RUNNER_TEMP/r4b-scored.json"
+      - name: Archive complete original and new raw source/edits separately from Git
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b-bounded-repair-original-raw
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r4a-original/
+            ${{ runner.temp }}/r4b-frozen-plan.json
+            ${{ runner.temp }}/r4b-new/
+            ${{ runner.temp }}/r4b-scored.json

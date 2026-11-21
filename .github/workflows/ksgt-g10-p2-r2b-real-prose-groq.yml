@@ -1,0 +1,62 @@
+name: KSGT G10-P2 R2b Prior Real Prose Attribution Audit
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r2b-real-prose-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-g10-p2-r2b-prior-real-prose
+  cancel-in-progress: false
+
+jobs:
+  prior-prose-audit:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Confirm source-authored R2b controls and live coder
+        run: node --test experiments/g10-p2/*.test.cjs
+      - name: Reopen original R9.34 outputs from their actual archived run
+        uses: actions/download-artifact@v4
+        with:
+          name: ksgt-r934-reader-pilot-groq
+          repository: WhoSia/KSGT
+          run-id: 44782747496
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/r934-original
+      - name: Cold-validate all 36 originals, freeze 48 changed-task prompts
+        run: |
+          node experiments/g10-p2/r2b_real_prose_extractor.cjs --offline "$RUNNER_TEMP/r934-original"
+          node experiments/g10-p2/r2b_real_prose_extractor.cjs --plan "$RUNNER_TEMP/r934-original" > "$RUNNER_TEMP/r2b-frozen-plan.json"
+      - name: Compare unchanged binary and attribution prompts on the actual paragraphs
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r2b_real_prose_extractor.cjs --execute "$RUNNER_TEMP/r934-original" "$RUNNER_TEMP/r2b-provider"
+      - name: Audit source hashes, complete model attempts and author-side decisive cases
+        run: |
+          node experiments/g10-p2/r2b_real_prose_extractor.cjs --score "$RUNNER_TEMP/r934-original" "$RUNNER_TEMP/r2b-provider" > "$RUNNER_TEMP/r2b-scored.json"
+          node -e 'const r=require(process.argv[1]);for(const [arm,d] of Object.entries(r.metrics)){const {examples,...totals}=d;console.log(arm,JSON.stringify(totals));console.log(arm+"-cases",JSON.stringify(examples))}' "$RUNNER_TEMP/r2b-scored.json"
+      - name: Archive source originals, every model receipt and private author scoring
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r2b-prior-prose-raw
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r934-original/
+            ${{ runner.temp }}/r2b-frozen-plan.json
+            ${{ runner.temp }}/r2b-provider/
+            ${{ runner.temp }}/r2b-scored.json

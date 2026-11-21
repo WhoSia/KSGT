@@ -1,0 +1,49 @@
+name: KSGT G10-P2 R4b Read-Only Raw Response Recovery
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r4b-read-only-recovery.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  verify-and-recover-without-provider:
+    if: github.ref == 'refs/heads/research/g10-p2-reader-state-coupled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regress source permissions and no-target controls
+        run: node --test experiments/g10-p2/*.test.cjs
+      - name: Cold read the archived first-run wrapper failure and all actual provider responses
+        uses: actions/download-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b-bounded-repair-original-raw
+          repository: WhoSia/KSGT
+          run-id: 44895132995
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/r4b-original
+      - name: Validate R4a original, R4b prompt hashes, 20 raw response SHAs and recover score
+        run: |
+          node experiments/g10-p2/r4b_original_text_local_repair.cjs --plan "$RUNNER_TEMP/r4b-original/r4a-original/r4a-live" > "$RUNNER_TEMP/r4b-verified-legacy-plan.json"
+          node experiments/g10-p2/r4b_original_text_local_repair.cjs --score "$RUNNER_TEMP/r4b-original/r4a-original/r4a-live" "$RUNNER_TEMP/r4b-original/r4b-new" > "$RUNNER_TEMP/r4b-verified-recovery.json"
+          node -e 'const s=require(process.argv[1]);const {rows,...totals}=s;console.log("R4b-recovery",JSON.stringify(totals));console.log("R4b-cases",JSON.stringify(rows.map(x=>({id:x.id,target:x.goldStatus,patch:x.patch.status,rewrite:x.rewrite.status,removedPatch:x.target?.remainedInModelPatch===false,removedRewrite:x.target?.remainedInFullRewrite===false}))))' "$RUNNER_TEMP/r4b-verified-recovery.json"
+      - name: Preserve all prior bytes with read-only recovery receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b-verified-read-only-recovery
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r4b-original/
+            ${{ runner.temp }}/r4b-verified-legacy-plan.json
+            ${{ runner.temp }}/r4b-verified-recovery.json

@@ -1,0 +1,50 @@
+name: KSGT G10-P2 R4a Full Korean Prose Candidate Selection
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r4a-full-prose.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-g10-p2-r4a-authored-dev-single-run
+  cancel-in-progress: false
+
+jobs:
+  full-prose-causal-pilot:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source and dynamic-stage provenance before live calls
+        run: |
+          node --test experiments/g10-p2/*.test.cjs
+          node experiments/g10-p2/r4a_full_prose_selection_v01.cjs --plan > "$RUNNER_TEMP/r4a-frozen-plan.json"
+      - name: Run actual 24 prose + 24 source risk audit + 12 chooser calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r4a_full_prose_selection_v01.cjs --execute "$RUNNER_TEMP/r4a-live"
+      - name: Verify every original output, candidate-selection and model self-audit receipt
+        run: |
+          node experiments/g10-p2/r4a_full_prose_selection_v01.cjs --score "$RUNNER_TEMP/r4a-live" > "$RUNNER_TEMP/r4a-score-readback.json"
+          node -e 'const s=require(process.argv[1]);const {rows,...agg}=s;console.log("R4a-summary",JSON.stringify(agg));console.log("R4a-choices",JSON.stringify(rows.map(x=>({id:x.sourceWork,genre:x.genre,candidatesEqual:x.candidateTextsEqual,controller:x.executable.choice,controllerStatus:x.executable.status,asText:x.stateAsText.choice,asTextValid:x.stateAsText.valid,risks:[x.riskState.direct.risks?.length??null,x.riskState.rich.risks?.length??null],valid:[x.riskState.direct.valid,x.riskState.rich.valid]}))))' "$RUNNER_TEMP/r4a-score-readback.json"
+      - name: Archive all writer/audit/selector requests and original provider responses
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4a-full-prose-raw
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r4a-frozen-plan.json
+            ${{ runner.temp }}/r4a-live/
+            ${{ runner.temp }}/r4a-score-readback.json

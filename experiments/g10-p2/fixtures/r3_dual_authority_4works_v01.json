@@ -1,0 +1,204 @@
+{
+  "schema": "ksgt.g10p2.r3.dual-source-surface.author-structured.v1",
+  "status": "AUTHOR_STRUCTURED_CLOSED_SOURCE_LICENSE_NO_AUTOMATIC_PARSER",
+  "linksTo": "experiments/g10-p1/fixtures/r934_reader_cohort_v01.json",
+  "works": [
+    {
+      "id": "CHAT_CHECK",
+      "factIndex": 3,
+      "relation": {
+        "predicate": "SHARE_PRESENTATION_FILE",
+        "actor": "TEAM",
+        "time": "UNDECIDED",
+        "condition": "LEGEND_REVIEW_COMPLETE",
+        "modality": "PLANNED"
+      },
+      "examples": [
+        {
+          "id": "licensed",
+          "text": "범례 색상 확인을 마친 뒤 파일을 공유할 계획이지만 시각은 미정이다.",
+          "expected": "ALLOW",
+          "hypothesis": {
+            "predicate": "SHARE_PRESENTATION_FILE",
+            "actor": "TEAM",
+            "time": "UNDECIDED",
+            "condition": "LEGEND_REVIEW_COMPLETE",
+            "modality": "PLANNED",
+            "epistemic": "PLANNED"
+          }
+        },
+        {
+          "id": "changed_time",
+          "text": "범례 색상 확인을 마친 뒤 파일을 내일 아침 공유한다.",
+          "expected": "REJECT",
+          "hypothesis": {
+            "predicate": "SHARE_PRESENTATION_FILE",
+            "actor": "TEAM",
+            "time": "TOMORROW_MORNING",
+            "condition": "LEGEND_REVIEW_COMPLETE",
+            "modality": "ASSERTED",
+            "epistemic": "PLANNED"
+          }
+        },
+        {
+          "id": "new_promise",
+          "text": "팀원이 결과가 나오면 바로 연락을 드리겠다고 약속했다.",
+          "expected": "REJECT",
+          "hypothesis": {
+            "predicate": "PROMISE_IMMEDIATE_MESSAGE",
+            "actor": "TEAM",
+            "time": "UNDECIDED",
+            "condition": "RESULT_ARRIVED",
+            "modality": "PLANNED",
+            "epistemic": "PLANNED"
+          }
+        }
+      ]
+    },
+    {
+      "id": "SCI_SCALE",
+      "factIndex": 4,
+      "relation": {
+        "predicate": "COMMON_ZERO_OFFSET_CANCELS",
+        "actor": "MEASUREMENT_DIFFERENCE",
+        "condition": "EQUAL_ZERO_ERROR",
+        "modality": "CONDITIONAL"
+      },
+      "examples": [
+        {
+          "id": "licensed",
+          "text": "두 측정에서 영점 오차가 같다면 표시값의 차이에서 해당 오차는 상쇄된다.",
+          "expected": "ALLOW",
+          "hypothesis": {
+            "predicate": "COMMON_ZERO_OFFSET_CANCELS",
+            "actor": "MEASUREMENT_DIFFERENCE",
+            "condition": "EQUAL_ZERO_ERROR",
+            "modality": "CONDITIONAL",
+            "epistemic": "CONDITIONAL"
+          }
+        },
+        {
+          "id": "promoted_premise",
+          "text": "두 측정의 영점 오차가 실제로 같았으므로 차이는 오차 없이 계산된다.",
+          "expected": "REJECT",
+          "hypothesis": {
+            "predicate": "ZERO_OFFSET_ACTUALLY_EQUAL",
+            "actor": "MEASUREMENT_DIFFERENCE",
+            "condition": "NONE",
+            "modality": "ASSERTED",
+            "epistemic": "CONDITIONAL"
+          }
+        },
+        {
+          "id": "unconditional_result",
+          "text": "표시값 차이에서는 영점 오차가 언제나 상쇄된다.",
+          "expected": "REJECT",
+          "hypothesis": {
+            "predicate": "COMMON_ZERO_OFFSET_CANCELS",
+            "actor": "MEASUREMENT_DIFFERENCE",
+            "condition": "NONE",
+            "modality": "ASSERTED",
+            "epistemic": "CONDITIONAL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_SETUP",
+      "factIndex": 4,
+      "relation": {
+        "predicate": "BRING_POWER_MEMO",
+        "actor": "POWER_REQUEST_TEAM_REPRESENTATIVE",
+        "condition": "POWER_CONNECTION_APPLIED",
+        "modality": "OBLIGATION"
+      },
+      "examples": [
+        {
+          "id": "licensed",
+          "text": "전기 연결을 신청한 팀 대표는 팀명과 소비 전력을 적은 메모를 가져와야 한다.",
+          "expected": "ALLOW",
+          "hypothesis": {
+            "predicate": "BRING_POWER_MEMO",
+            "actor": "POWER_REQUEST_TEAM_REPRESENTATIVE",
+            "condition": "POWER_CONNECTION_APPLIED",
+            "modality": "OBLIGATION",
+            "epistemic": "OBLIGATION"
+          }
+        },
+        {
+          "id": "broadened_scope",
+          "text": "전시 참가 팀의 모든 대표는 전기 연결 메모를 가져와야 한다.",
+          "expected": "REJECT",
+          "hypothesis": {
+            "predicate": "BRING_POWER_MEMO",
+            "actor": "ALL_TEAM_REPRESENTATIVES",
+            "condition": "ALL_TEAMS",
+            "modality": "OBLIGATION",
+            "epistemic": "OBLIGATION"
+          }
+        },
+        {
+          "id": "optionalized_obligation",
+          "text": "전기 연결을 신청한 팀 대표도 메모를 가져와도 된다.",
+          "expected": "REJECT",
+          "hypothesis": {
+            "predicate": "BRING_POWER_MEMO",
+            "actor": "POWER_REQUEST_TEAM_REPRESENTATIVE",
+            "condition": "POWER_CONNECTION_APPLIED",
+            "modality": "OPTIONAL",
+            "epistemic": "OBLIGATION"
+          }
+        }
+      ]
+    },
+    {
+      "id": "LIT_SHADOW",
+      "factIndex": 3,
+      "relation": {
+        "predicate": "RECEIVE_CLOTH",
+        "actor": "윤해",
+        "object": "접은 천",
+        "modality": "ASSERTED"
+      },
+      "examples": [
+        {
+          "id": "licensed",
+          "text": "윤해는 수빈이 내민 접은 천을 받아 두 손으로 펼쳤다.",
+          "expected": "ALLOW",
+          "hypothesis": {
+            "predicate": "RECEIVE_CLOTH",
+            "actor": "윤해",
+            "object": "접은 천",
+            "modality": "ASSERTED",
+            "epistemic": "ASSERTED"
+          }
+        },
+        {
+          "id": "reversed_actor",
+          "text": "수빈은 천을 받은 뒤 계단을 내려갔다.",
+          "expected": "REJECT",
+          "hypothesis": {
+            "predicate": "RECEIVE_CLOTH",
+            "actor": "수빈",
+            "object": "접은 천",
+            "modality": "ASSERTED",
+            "epistemic": "ASSERTED"
+          }
+        },
+        {
+          "id": "quoted_not_fact",
+          "text": "“윤해가 접은 천을 받았다”는 말은 소문에 불과했다.",
+          "epistemic": "ATTRIBUTED",
+          "expected": "MENTION_ONLY",
+          "hypothesis": {
+            "predicate": "RECEIVE_CLOTH",
+            "actor": "윤해",
+            "object": "접은 천",
+            "modality": "ASSERTED",
+            "epistemic": "ATTRIBUTED"
+          }
+        }
+      ]
+    }
+  ]
+}
