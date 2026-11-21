@@ -1,0 +1,70 @@
+name: KSGT G10-P2 R5i Korean Role-Preserving Clause Fusion (0 Model Calls)
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths:
+      - .github/workflows/ksgt-g10-p2-r5i-zero-call-korean-clause-fusion.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-g10-p2-r5i-korean-clause-fusion-zero-llm
+  cancel-in-progress: false
+
+jobs:
+  source-bound-korean-clause-fusion:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NODE_OPTIONS: --unhandled-rejections=strict
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 65
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Human-only Git contributor audit and all native tests
+        shell: bash
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -60 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+            echo 'REFUSE_BOT_CONTRIBUTORS'; exit 1
+          fi
+          node --test experiments/g10-p2/r5/*.test.cjs
+          node --test experiments/g10-p2/*.test.cjs
+      - name: Download exact earlier R5h actual provider artifact in READ-ONLY mode
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/r5h-source-original"
+          gh run download 44909195424 -R WhoSia/KSGT \
+            -n ksgt-g10-p2-r5h-16-real-120b-korean-role-bound-24-prose \
+            -D "$RUNNER_TEMP/r5h-source-original"
+          test -s "$RUNNER_TEMP/r5h-source-original/r5h-live/final-score.json"
+          echo "ed62b1f3a8f1772dad92eb4c14d38b1c6f710f16c577f8c9020cbd294a7b9216  $RUNNER_TEMP/r5h-source-original/r5h-live/final-score.json" | sha256sum -c -
+      - name: Compile source-role-safe same-agent Korean clause aggregation with ZERO new provider calls
+        run: |
+          node experiments/g10-p2/r5/r5i_zero_call_role_bound_korean_clause_aggregator.cjs \
+            --execute "$RUNNER_TEMP/r5h-source-original/r5h-live/final-score.json" "$RUNNER_TEMP/r5i-zero-call"
+      - name: Independently cold repeat original-byte backed aggregation and prohibit fake new generations
+        run: |
+          node experiments/g10-p2/r5/r5i_zero_call_role_bound_korean_clause_aggregator.cjs \
+            --score "$RUNNER_TEMP/r5h-source-original/r5h-live/final-score.json" > "$RUNNER_TEMP/r5i-cold-score.json"
+          node -e 'const j=require(process.argv[1]);if(j.newProviderCalls!==0||j.originalActualProviderCallsReused!==16||j.sourceWorks!==8||j.newCompleteAggregatedKoreanTexts!==16||j.selectedAggregatedSourcePairs!==16||j.defaultAggregatedSourcePairs!==16||j.independentNativeReaders!==0||j.independentSemanticGold!==0)process.exit(1);console.log("R5i-verified-zero-call-Korean-complete-texts",JSON.stringify(j))' "$RUNNER_TEMP/r5i-cold-score.json"
+          test "$(grep -c '^## [1-8]\.' "$RUNNER_TEMP/r5i-zero-call/plain-Korean-four-way-source-sentences.md")" -eq 8
+      - name: Archive original-hash anchored Korean complete-prose compilation and traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r5i-16-zero-llm-same-subject-aggregated-korean-paragraphs
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r5i-zero-call/
+            ${{ runner.temp }}/r5i-cold-score.json
