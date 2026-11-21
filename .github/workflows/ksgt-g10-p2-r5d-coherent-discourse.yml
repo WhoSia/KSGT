@@ -43,9 +43,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir -p "$RUNNER_TEMP/old-r5b" "$RUNNER_TEMP/old-r5c/r5c-live"
+          mkdir -p "$RUNNER_TEMP/old-r5b" "$RUNNER_TEMP/old-r5c"
           gh run download 44899223057 --repo "$GITHUB_REPOSITORY" --name ksgt-g10-p2-r5b-korean-realizer-20b120b-24realcalls --dir "$RUNNER_TEMP/old-r5b"
-          gh run download 44900323773 --repo "$GITHUB_REPOSITORY" --name ksgt-g10-p2-r5c-16-real-120b-edits-and-rewrites --dir "$RUNNER_TEMP/old-r5c/r5c-live"
+          gh run download 44900323773 --repo "$GITHUB_REPOSITORY" --name ksgt-g10-p2-r5c-16-real-120b-edits-and-rewrites --dir "$RUNNER_TEMP/old-r5c"
           test -s "$RUNNER_TEMP/old-r5b/r5b-live/responses/R5A_NOTICE_BOOK_B120.result.json"
           test -s "$RUNNER_TEMP/old-r5c/r5c-live/final-score.json"
           node experiments/g10-p2/r5/r5d_coherent_seam_realizer.cjs --preflight "$RUNNER_TEMP/old-r5b" > "$RUNNER_TEMP/r5d-frozen-preflight.json"
