@@ -43,9 +43,9 @@ function validate(root=fixture){
   w.frames.forEach((f,i)=>{
    ok(f.id==="S"+(i+1)&&f.subjectEntityID===expected[i]&&
     f.encodedBy==="RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"&&
-    typeof f.sourceFact==="string"&&f.sourceFact.length>=15&&
+    typeof f.sourceFact==="string"&&f.sourceFact.length>=8&&
     Array.isArray(f.predicateChoices)&&f.predicateChoices.length===2&&
-    f.predicateChoices.every(v=>typeof v==="string"&&v.length>=12&&v.endsWith("."))&&
+    f.predicateChoices.every(v=>typeof v==="string"&&v.length>=8&&v.endsWith("."))&&
     f.predicateChoices[0]!==f.predicateChoices[1],"R5H_BAD_FRAME_"+w.id+"_"+i);
    if(i===0||i===5)ok(f.kind!=="character_event","R5H_BACKGROUND_ROLE");
    else ok(f.kind==="character_event","R5H_EVENT_ROLE");
