@@ -1,0 +1,44 @@
+name: KSGT G10-P2 R5f Human Style Operations Census (Zero Model Calls)
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r5f-human-style-census.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  licensed-korean-source-operations:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 60
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Human-only contributor check and source-model regression tests
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -45 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+            echo 'GIT_BOT_AUTHOR_NOT_ALLOWED'; exit 1
+          fi
+          node --test experiments/g10-p2/r5/*.test.cjs
+          node --test experiments/g10-p2/*.test.cjs
+      - name: Fetch real pinned noncommercial Korean corpus and count character and whitespace edit operations
+        run: |
+          curl --fail --silent --show-error --location             'https://raw.githubusercontent.com/smilegate-ai/korean_smile_style_dataset/b362299d1ac9a8a0de2f64eb8f55f3b386e97fad/smilestyle_dataset.tsv'             -o "$RUNNER_TEMP/SmileStyle_original.tsv"
+          python3 experiments/g10-p2/r5/r5f_human_style_operation_census.py "$RUNNER_TEMP/SmileStyle_original.tsv" > "$RUNNER_TEMP/r5f-style-operation-census.json"
+          python3 -c 'import json,sys;d=json.load(open(sys.argv[1]));assert d["pairedUtterances"]==3470 and d["observedDelimiterDefinedNonemptyBlocks"]==236 and d["atMostTwoWhitespaceEditTokens"]==2913 and d["sourceSHA256"]=="523ce83d6e9154e2357ca759460b487231aa0853bf98b208d0cb624a8e1e69bf";print("KOREAN_HUMAN_STYLE_CENSUS",json.dumps(d))' "$RUNNER_TEMP/r5f-style-operation-census.json"
+      - name: Preserve source-licensed aggregate evidence only
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r5f-original-human-style-3470-pair-operation-census
+          retention-days: 7
+          if-no-files-found: error
+          path: ${{ runner.temp }}/r5f-style-operation-census.json
