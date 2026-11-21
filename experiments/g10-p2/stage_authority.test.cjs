@@ -3,7 +3,7 @@ const {test}=require("node:test"),a=require("node:assert/strict"),s=require("../
 
 test("approved G10-P2 title and R5 prospective, R4b human gate remain open",()=>{
  a.equal(s.current_stage,"G10-P2");
- a.match(s.status,/^OPEN_R5[ABCD]_.*QUALITY_HOLD$/);
+ a.match(s.status,/^OPEN_R5[ABCDEF]_.*QUALITY_HOLD$/);
  a.equal(s.official_name,"KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs");
  a.equal(s.canonical_notion_id,"41fef561-cf92-8105-a17b-c0c33a9701bc");
 });
@@ -25,7 +25,7 @@ test("P2 cumulative model calls count R2/R2b/R4a/R4b/R5a/R5b once, never read-on
  a.equal(c.r5a_real_provider_calls,40);
  a.equal(c.r5a_real_independent_reader_ratings,0);
  a.equal(c.r5a_independent_source_audits,0);
- a.equal(c.real_provider_model_calls,80+48+0+60+20+40+(c.r5b_new_writer_provider_calls||0)+(c.r5c_real_provider_calls||0)+(c.r5d_real_provider_calls||0));
+ a.equal(c.real_provider_model_calls,80+48+0+60+20+40+(c.r5b_new_writer_provider_calls||0)+(c.r5c_real_provider_calls||0)+(c.r5d_real_provider_calls||0)+(c.r5f_real_provider_calls||0));
  a.equal(s.latest_experiment.newModelCalls,20);
  a.equal(s.latest_experiment.posthocReplayNewModelCalls,0);
  a.equal(s.latest_experiment.stageCumulativeModelCalls,208);
