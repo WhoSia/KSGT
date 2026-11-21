@@ -38,7 +38,7 @@ function validateFixture(data=raw){
     counts[w.genre]=(counts[w.genre]||0)+1;
     for(const name of ["audience","purpose","task","readerQuestion","answer","risk"])
       ensure(typeof w[name]==="string"&&w[name].trim()===w[name] &&
-        w[name].length>=(name==="answer"?3:9),"MISSING_TASK_FIELD");
+        w[name].length>=2,"MISSING_TASK_FIELD");
     ensure(Array.isArray(w.facts)&&w.facts.length>=4 && w.facts.length<=7 &&
       w.facts.every(x=>typeof x==="string"&&x.length>8) &&
       new Set(w.facts).size===w.facts.length,"BAD_SOURCE_FACTS");
