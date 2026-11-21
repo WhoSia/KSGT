@@ -8,6 +8,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { createHash } = require("node:crypto");
 const { executePlan } = require("../g10-p1/r928_scope_and_prose_v01.cjs");
+const { resolveProvider } = require("../g10-p1/provider_client_v01.cjs");
 const { planReceipt } = require("../g10-p1/r929_global_writing_v01.cjs");
 const cohort = require("./fixtures/r2_attribution_8works_40cases_v01.json");
 
@@ -181,6 +182,7 @@ async function main(args) {
     cases:examples().length,goldCounts:Object.fromEntries(GOLD.map(k=>[k,examples().filter(x=>x.gold===k).length])),
     modelCalls:0},null,2));
   if(mode==="--execute") {
+    resolveProvider("groq");
     const output=await executePlan(buildPlan(),root);
     const ok=output.rows.filter(r=>r.outcome==="GENERATED").length;
     console.log(JSON.stringify({generated:ok,attempts:output.rows.length,planHash:output.planHash}));
