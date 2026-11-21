@@ -1,0 +1,68 @@
+name: KSGT G10-P2 R5h Korean Role-Bound Surface Realizer (16 Actual 120B Calls)
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths:
+      - .github/workflows/ksgt-g10-p2-r5h-korean-role-bound-realizer.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-r5h-16-true-120b-role-bound-korean-20261121
+  cancel-in-progress: false
+
+jobs:
+  actual-korean-role-binding:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: --unhandled-rejections=strict
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 65
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: No GitHub Actions bot contributors and provenance from user
+        shell: bash
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -60 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+            echo "GITHUB_ACTIONS_BOT_CONTRIBUTION_NOT_ALLOWED"; exit 1
+          fi
+      - name: Run all R5 role-model and historic stage native regression tests
+        run: |
+          node --test experiments/g10-p2/r5/*.test.cjs
+          node --test experiments/g10-p2/*.test.cjs
+      - name: Freeze source frames, legal zero-subject forms and no-model default paragraphs
+        run: |
+          node experiments/g10-p2/r5/r5h_korean_role_bound_micro_realizer.cjs --preflight > "$RUNNER_TEMP/r5h-preflight.json"
+          node -e 'const x=require(process.argv[1]);if(x.sourceWorks!==8||x.calls!==16||x.frames!==48||x.outputTexts!==24||x.works.some(w=>w.candidates.join(",")!=="2,4,6,4,6,2"))process.exit(1);console.log("R5h-frozen-Korean-role-compiler",x.planHash,x.works.map(w=>w.id).join(","))' "$RUNNER_TEMP/r5h-preflight.json"
+          test -s "$RUNNER_TEMP/r5h-preflight.json"
+      - name: Call actual strong GPT-OSS 120B 16 times, direct vs finite-surface choice
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r5/r5h_korean_role_bound_micro_realizer.cjs --execute "$RUNNER_TEMP/r5h-live"
+      - name: Cold verify all 16 original model receipts and compiled 24 complete texts
+        run: |
+          node experiments/g10-p2/r5/r5h_korean_role_bound_micro_realizer.cjs --score "$RUNNER_TEMP/r5h-live" > "$RUNNER_TEMP/r5h-cold-score.json"
+          node -e 'const s=require(process.argv[1]);if(s.originalSourceScenes!==8||s.newProviderCalls!==16||s.frameCount!==48||s.completeKoreanProseTexts!==24||s.independentNativeKoreanReaderVotes!==0||s.independentSourceSemanticGold!==0||s.trainingNewNeuralModel!==false||s.qualitySuperiority!=="UNPROVEN")process.exit(1);console.log("R5h-authentic-Korean-compiled-results",JSON.stringify(s))' "$RUNNER_TEMP/r5h-cold-score.json"
+          test "$(grep -c '^## [1-8]\.' "$RUNNER_TEMP/r5h-live/plain-Korean-full-24-scenes-and-role-traces.md")" -eq 8
+      - name: Preserve source, exact model prompts, raw provider responses and full readable Korean
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r5h-16-real-120b-korean-role-bound-24-prose
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r5h-preflight.json
+            ${{ runner.temp }}/r5h-live/
+            ${{ runner.temp }}/r5h-cold-score.json
