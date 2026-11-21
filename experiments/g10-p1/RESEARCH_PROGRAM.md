@@ -67,3 +67,20 @@ No Groq network requests or independent reader judgments have been performed by 
 ### Preservation / authority
 
 Generation IX's entire exact previous CURRENT_STAGE snapshot is archived under `historical_g9_final_snapshot` in current root `CURRENT_STAGE.json`; old files and Git history preserved. The G9 latest scientifically closed stage remains G9-P58. G9-P59/P60 and P64 exploratory hypotheses were programmatically closed **without invented PASS results**. Human-authored Git commits only; CI cannot commit/push/merge/tag.
+
+
+## Audit update · 2026-11-21 · R9.44 and P2 naming
+
+The original G10-P1 question and negative-evidence rules above remain authoritative. The 2026-11-03 provider-setup paragraphs are historical snapshots, not the present API state. R9.25 later verified the original 196 early outputs, R9.29–R9.34 examined full prose, and R9.35–R9.42b probed executable reader-state controls. None establishes an independently validated Korean-reader writing quality advantage.
+
+- [Full chronological review](paper/R9_44_G10_P1_RETROSPECTIVE_P2_NAMING_20261121.md)
+- [Original R9.34 full-text cohort and development-only source screen](paper/R9_34_READER_PILOT_RESULTS_20261121.md)
+- [R9.43 mechanisms and revised blind-versus-source-auditor procedure](paper/R9_43_R934_COMPLETE_PROSE_REAUDIT_20261121.md)
+- [Executable two-phase packet constructor](r944_two_phase_reader_packet.py), [synthetic receipt/arm validation](test_r944_two_phase_reader_packet.py), and [R9.44 read-only CI](https://github.com/WhoSia/KSGT/actions/runs/44866418701)
+- [Drive R9.44 archive](https://drive.google.com/drive/folders/14EERMbvZostjUzWF6QHzksNic8baepfb): four balanced reader forms in each stage, researcher-only key stored separately. Source facts, reader questions and intended audiences were checked against the original 12 R9.34 source works with no mismatches.
+
+**Disposition:** G10-P1 stays OPEN. P2 is a formal name and architecture proposal, not an active stage. Proposed title: **KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs**.
+
+The scientific delta is the update of reader state after each *actually realized* Korean utterance, explicit KEEP/no-op, and same-state, same-model, compute-matched tests with independent real readers. It neither certifies a Transformer replacement nor cancels P1's null/negative results.
+
+The older 295 value in `CURRENT_STAGE.json` is a historical composed baseline (196 legacy + 63 R5–R8 final + Global36), not a cumulative P1 total through R9.44. The four R9.44 forms reuse the same 12 work briefs and independent reader / source-auditor responses remain zero.

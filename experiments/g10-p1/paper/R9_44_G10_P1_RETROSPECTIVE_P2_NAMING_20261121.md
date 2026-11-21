@@ -44,8 +44,9 @@ An honest P1 exit can be either a bounded *pilot closure without superiority* af
 
 - [Reader stage A ZIP](https://drive.google.com/file/d/1XEa99YPXbXWOYfPq2m_JPP2pfcJsN8p9/view): four forms, twelve works each, masked arm, no source-fact list; asks what a reader understands, whether the passage is usable and what they would first edit.
 - [Source auditor stage B ZIP](https://drive.google.com/file/d/17OKW-xhg5JOJXgJ7XMcB61mkKjpInzqO/view): same pair mappings with the complete source facts; separately judges new commitments, conditional scope, scientific inference, omission and literary event fidelity.
-- [Researcher-private mapping ZIP](https://drive.google.com/file/d/1_Uj9M-oRGcheja3Uodtfn5fB-hf2_x4B/view): condition identity, exact archival plan hash, and zero recorded responses. **Never share the private key with participants or stage B annotators.**
+- Researcher-private mapping ZIP: retained separately, owner-only in the [Drive R9.44 folder](https://drive.google.com/drive/folders/14EERMbvZostjUzWF6QHzksNic8baepfb). It contains condition identity, exact archival plan hash and zero recorded responses. **Never share the private key with participants or auditors.**
 - [Code](../r944_two_phase_reader_packet.py), [tests](../test_r944_two_phase_reader_packet.py). The code refuses incomplete/mismatched receipt sets, wrong source-work arms and existing output directories. Local source-archive readback passed three tests; hermetic CI exercises independent synthetic data. Reader forms do not themselves establish blinded respondent allocation or real recruitment.
+- A second audit compared the 12 source fact arrays, task requests, intended audiences and comprehension questions to the repository's original R9.34 cohort: **12/12 exact matches**, zero altered fact sentences.
 - [Drive R9.44 folder](https://drive.google.com/drive/folders/14EERMbvZostjUzWF6QHzksNic8baepfb).
 
 ## 4. Proposed formal P2 name — proposal ONLY
