@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {decide}=require('./r5j_reference_guard.cjs');
+const base={actor:'준서',previousActor:'준서',object:'유리창',previousObject:'유리창',competitorActors:['준서'],explicit:'준서는 유리창을 바라보며 유리창에는 손을 대지 않았다.',elliptical:'준서는 유리창을 바라보면서도 손을 대지는 않았다.'};
+const licensed=(o=base)=>({...o,license:{actor:o.actor,object:o.object,explicit:o.explicit,elliptical:o.elliptical,sourceFactId:'S5'}});
+assert.equal(decide(licensed()).decision,'LICENSED_ELLIPSIS');
+assert.equal(decide(licensed()).text,base.elliptical);
+assert.equal(decide(licensed({...base,previousActor:'하윤'})).reason,'REFERENT_SWITCH');
+assert.equal(decide(licensed({...base,previousObject:'문고리'})).reason,'REFERENT_SWITCH');
+assert.equal(decide(licensed({...base,competitorActors:['준서','민수']})).reason,'COMPETITOR_PRESENT');
+assert.equal(decide({...licensed(),license:{...licensed().license,actor:'민수'}}).reason,'NO_EXACT_LICENSE');
+assert.equal(decide({...licensed(),license:{...licensed().license,sourceFactId:''}}).reason,'NO_SOURCE_TRACE');
+assert.equal(decide({}).decision,'ABSTAIN');
+assert.equal(decide({...licensed(),elliptical:'준서는 문고리를 만졌다.'}).reason,'NO_EXACT_LICENSE');
+console.log('R5j: eight test situations pass; implementation evidence only, no human quality gold.');
