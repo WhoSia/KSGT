@@ -46,7 +46,7 @@ function parseUpstream(raw){
   ensure(c[0].trim()&&c[1].trim(),"UPSTREAM_MISSING_FORMAL_OR_INFORMAL");
   rows.push({index:i-1,family,formal:c[0],informal:c[1]});
  }
- ensure(rows.length===3470&&family+1===235&&sep===235,"UPSTREAM_COUNTS_CHANGED");
+ ensure(rows.length===3470&&family+1===236&&sep===235,"UPSTREAM_COUNTS_CHANGED");
  return {rows,sha256:sha(raw),blobSHA1:blob,sourceBytes:raw.length,
   dataLines:rows.length,nonEmptyFamilies:family+1,separatorRows:sep};
 }
@@ -71,7 +71,7 @@ function withCorpus(c){
  });
  ensure(new Set(ex.map(x=>x.family)).size===ex.length,"EXAMPLE_FAMILY_DUPLICATED");
  return {tests,ex,stats:{upstreamBytes:c.sourceBytes,upstreamSHA256:c.sha256,
-    blobSHA1:c.blobSHA1,sourceFamilies:235,
+    blobSHA1:c.blobSHA1,sourceDelimiterBlocks:236,sourceRowSeparators:235,
     distinctTestFamilies:8,distinctDemoFamilies:ex.length}};
 }
 function koreanBigrams(s){
