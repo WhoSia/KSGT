@@ -1,0 +1,124 @@
+{
+  "schema": "ksgt.g10p2.r5c.frozen-8-target-v1",
+  "studyAuthority": "AUTHOR_VISIBLE_FROZEN_DEVELOPMENT_TARGETS_NOT_INDEPENDENT_SOURCE_GOLD",
+  "sourceR5bRun": 44899223057,
+  "sourceR5bDriveFileId": "1gIPzK5yUwvy-_J7DShDfs_zZ_M9iwFDs",
+  "sourceModel": "openai/gpt-oss-120b",
+  "targets": [
+    {
+      "sourceWork": "R5A_CHAT_ARCHIVE",
+      "originalTextSha256": "8f6b098de18e83247e69bbed430821c19259a523331ff20abd34743cb784d8ac",
+      "originalPromptSha256": "d3b49535cb0c35cdf459b50a4adedc37ddb0952567f0778d4ccf398eee516aba",
+      "originalTotalTokens": 610,
+      "quote": "위 사항을 참고하여 검토 일정을 잡고, 검토가 완료되는 대로 제출 여부를 알려 주세요.",
+      "kind": "UNLICENSED_RECIPIENT_INSTRUCTION",
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "diagnosis": "팀이 검토할 계획이라는 사실을 기록하면 충분하다. 팀원에게 검토 일정을 잡으라거나 확정 뒤 알려 달라는 새 의무를 만들지 않는다."
+    },
+    {
+      "sourceWork": "R5A_CHAT_SOURCE",
+      "originalTextSha256": "c22d886b65f492d2e2147e600794c961b69c7decf6e229b8af8caa6b8d24d0c0",
+      "originalPromptSha256": "d53cc2387cf51889713da50af774041615edf3c29f95d6b428653818e013f56f",
+      "originalTotalTokens": 496,
+      "quote": "다만 최종 논문의 PDF 전체 본문은 아직 확보되지 않아 문헌 원장에 ‘원문 미확보’로 표시해 두었습니다.",
+      "kind": "MISSING_EPISTEMIC_SCOPE",
+      "refs": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "diagnosis": "학회 발표 초록과 학술지 최종 논문 내용이 같은지는 아직 확인되지 않았다. 이 독립된 불확실성을 자연스럽게 복구하되 완본 PDF가 있는 듯 쓰지 않는다."
+    },
+    {
+      "sourceWork": "R5A_NOTICE_BOOK",
+      "originalTextSha256": "4814b7bb81cb67752a16d796d2301bb4cd747ead5b67c0016be7e3b3d1d09efe",
+      "originalPromptSha256": "588c4daadac51b7a75c50dbf145641ae3de577bcaa267fe127d7526ad0bc0daf",
+      "originalTotalTokens": 587,
+      "quote": "목요일 및 다른 요일의 운영 방식은 변함이 없습니다.",
+      "kind": "SCOPE_EXPANSION",
+      "refs": [
+        4,
+        5
+      ],
+      "diagnosis": "수요일 공지만 적용된다는 사실과 목요일 운영이 변함없다는 사실만 명시돼 있다. 다른 요일 전부에 대한 운영 보장은 주어지지 않았다. 반납함 가능 여부 미확인도 다른 곳에 빠져 있으나 이 실험은 지정한 한 구절만 고칠 수 있다."
+    },
+    {
+      "sourceWork": "R5A_NOTICE_SHOW",
+      "originalTextSha256": "5a7bf12a882b2ff9efd746c3679b7ea20db32771c7ec62868c219ff557872c13",
+      "originalPromptSha256": "f420ab459ec28744b1bdbef2831ffbdb1e78087b21058ec5ad27a99f330295e6",
+      "originalTotalTokens": 648,
+      "quote": "설치 장소는 아직 배정되지 않았으며, 배정이 확정되는 대로 별도로 안내드릴 예정입니다.",
+      "kind": "INVENTED_FUTURE_PROMISE",
+      "refs": [
+        3,
+        5
+      ],
+      "diagnosis": "장소가 아직 미정이며 작품을 가져오기 전에 장소 안내를 확인해야 한다는 사실만 있다. 장소 확정 뒤 별도 안내를 보내겠다는 일정·전달 약속은 원천에 없다."
+    },
+    {
+      "sourceWork": "R5A_SCENE_GARDEN",
+      "originalTextSha256": "65a9f5191751ae87cbe14423c747cc653e55c5dad10c17ed15ca967d84a85f54",
+      "originalPromptSha256": "5214ec6346b462076b38dd7d4912084d6e0f55df7ac0082326f2472078f09651",
+      "originalTotalTokens": 811,
+      "quote": "현우는 조용히 서서 창밖을 스쳐 지나가는 물방울 잔향을 들으며, 손을 살짝 들어 화분 위에 머무는 빗방울을 가볍게 닦아냈다.",
+      "kind": "UNLICENSED_EVENT_IN_FICTION",
+      "refs": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "diagnosis": "현우가 화분을 닦는 동작은 원천에 없으며 장면의 지정된 사건을 바꾼다. 새 인물 행동을 추가하지 않는 선에서 짧게 제거하거나 이미지로 문맥을 이어 간다. 감각적 묘사는 허용하지만 새 사건은 허용되지 않는다."
+    },
+    {
+      "sourceWork": "R5A_SCENE_PAPER",
+      "originalTextSha256": "f05dc02188dd5f49ec83717cb5ae7f9048e86f02a5fffa40b374e1fd09fe4cf9",
+      "originalPromptSha256": "5ba2eeb255b4f542b9ad4a265f5a312fd1bead345493ab31ab3903b6e3a10887",
+      "originalTotalTokens": 694,
+      "quote": "나는 조용히 걸어가며 남은 작품들을 마지막으로 훑어보았다.",
+      "kind": "UNLICENSED_NARRATIVE_ACTION",
+      "refs": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "diagnosis": "원천에는 화자가 전시관에 홀로 있고 의자 아래 종이를 발견하며 내용을 읽거나 집지 않는다는 사건만 있다. 작품을 둘러보는 추가 행동은 필수적이지 않으므로 원천 사건의 순서를 유지하되 불필요한 새 사건을 제거한다."
+    },
+    {
+      "sourceWork": "R5A_SCI_CLOCK",
+      "originalTextSha256": "2a75fa144f415a818c99e9ee2143cce2efa95af72b9fa720836af13fe6f96de3",
+      "originalPromptSha256": "666bfaf19d6e72721b6b250b2be68a7950a1596c65bf710234094da5dfa5fa1f",
+      "originalTotalTokens": 712,
+      "quote": "이러한 추가 실험을 통해 얻은 데이터가 있으면, 반응 속도 차이의 원인을 보다 정확히 규명할 수 있을 것입니다.",
+      "kind": "BOILERPLATE_REDUNDANT_ENDING",
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "diagnosis": "이미 온도와 교반을 통제한 반복 계획을 앞에서 적었다. 같은 결론을 일반적인 선언문으로 다시 말하는 마지막 문장을 덜어내거나 필요한 새 정보 없이 문체만 간결하게 정리한다."
+    },
+    {
+      "sourceWork": "R5A_SCI_FILM",
+      "originalTextSha256": "576486d9bf89aab69452f409d269767eb1f2f1d6be9fb6884beebdc2a4fdc788",
+      "originalPromptSha256": "f37d9d43804fe24de913786274e3c3c2ebd3cac7bcebe3dc138c2039f47fd2d6",
+      "originalTotalTokens": 843,
+      "quote": "현재의 결과는 차이를 확인한 초기 단계이며, 추가 실험을 통해 변수들을 체계적으로 제어한 뒤에야 정확한 원인 분석이 가능할 것이다.",
+      "kind": "BOILERPLATE_REDUNDANT_ENDING",
+      "refs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "diagnosis": "결과·한계·추가 반복 계획을 본문에서 이미 설명했기 때문에 마지막 문장은 별도 정보를 보태지 않는다. 앞 문장까지의 결론이 자연스럽게 닫히도록 덜어내거나 짧게 다듬되 인과를 과장하지 않는다."
+    }
+  ]
+}
