@@ -12,4 +12,4 @@ assert.equal(decide({...licensed(),license:{...licensed().license,actor:'민수'
 assert.equal(decide({...licensed(),license:{...licensed().license,sourceFactId:''}}).reason,'NO_SOURCE_TRACE');
 assert.equal(decide({}).decision,'ABSTAIN');
 assert.equal(decide({...licensed(),elliptical:'준서는 문고리를 만졌다.'}).reason,'NO_EXACT_LICENSE');
-console.log('R5j: eight test situations pass; implementation evidence only, no human quality gold.');
+console.log('R5j: nine assertions pass; implementation evidence only, no human quality gold.');
