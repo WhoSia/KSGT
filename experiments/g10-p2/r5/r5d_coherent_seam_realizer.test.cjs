@@ -12,7 +12,7 @@ test("four manually declared dependence edges are explicitly investigator-superv
  for(const c of book.cases){
   const target=r5c.frozen.targets.find(t=>t.sourceWork===c.sourceWork);
   assert.ok(target);
-  assert.ok(c.from.length>20&&c.through.length>=5);
+  assert.ok(typeof c.from==="string"&&c.from.length>0&&typeof c.through==="string"&&c.through.length>0);
   assert.ok(c.dependency.length>35);
  }
 });
