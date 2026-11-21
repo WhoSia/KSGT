@@ -39,3 +39,20 @@ This is an **additional dated index-search ledger** rather than an alteration to
 **Acquisition gate:** obtain a legal original PDF or official publisher edition where accessible; compare bibliographic title, year, author, edition, page count, rights, canonical parent and SHA before moving into 10_PAPERS. This ledger DOES NOT represent a successful PDF intake, full-text reading, or legal right to redistribute third-party code. For titles without a verified direct PDF, give the official landing page but label as landing page; the WRitEer and SuperWriter URLs above are verified publisher PDF download targets, not proof that the bytes were saved in Drive.
 
 Novelty judgment: [R5a external-rival audit](09_R5A_EXTERNAL_NOVELTY_KILL_AND_RAVEL_REVIEW_20261121.md) makes it inappropriate to claim generic reader-state writing control, generic multi-agent editing, or generic Plan/Write/Refine as new KSGT inventions. If an external system proves the same source-grounded Korean reader recoverability/cost question, narrow/kill our theory accordingly.
+
+
+## 2026-11-21 R5c–R5e retrieval and Research OS 00 intake delta
+
+Scope: **actual Korean generation experiments, not a general library intake sweep**. This R5c–R5e continuation did not retrieve or publish any new KSGT theory PDF. It re-read existing original G8 adjacent human edits and executed 20 real 120B calls, with originals preserved as ZIP archives in the dedicated G10-P2 experimental folders.
+
+| Inventory item | Actual 2026-11-21 check | Correct action |
+|---|---|---|
+| [G8 R2c first original adjacent Korean Wikipedia pair](https://drive.google.com/drive/folders/1H3yRl5aAM5Dvs0t9GHk05D0gB-HXieQF) | Existing old.txt/new.txt **both read**, edit predominantly adds album infobox/metadata | Do not mark a quality-improving literary revision; metadata cannot be native-prose preference gold |
+| [G8 R2k distinct-page tranche ZIP](https://drive.google.com/file/d/1phWo3wfqlBAmymxFTi-DfPJBx0x1E40v/view) | Original 13,189-byte ZIP opened/CRC checked, one actually revealed old/new pair #000051; other sources remain sealed | Need source-authorized, language-bearing stylistic change identification before training |
+| [R5c real experimental original ZIP](https://drive.google.com/file/d/1hh0u-A-1EUhXxutWdpMon-bNMVWaJ6Ur/view) | Raw model provenance, 16 new calls, 24 full Korean alternatives, SHA verified | Research evidence, not third-party scholarly paper; store separately |
+| [R5d real experimental original ZIP](https://drive.google.com/file/d/1sz3cHhy-O_rrbnXCo4IA5B1toDKedjwy/view) | Raw model provenance, 4 new calls, 16 comparison texts including replays, SHA verified | Research evidence, not human linguistic gold |
+| Research OS [00_INTAKE](https://drive.google.com/drive/folders/1MLtYh0pv8QUZDReYzRqjDrOjRkSJAD16) | Direct list has changed during this session as other projects receive and route papers. At last scoped check it contained four *unassigned* PDFs: Knuth-paper.pdf, babai1981.pdf, 2104.07201v1.pdf, furst1980.pdf; KSGT relevance not established. Earlier Wi-Fi sensing papers had already been moved by another workflow. | **Do not claim to have ingested/relocated them** into KSGT or mistake cross-lab assets for missing KSGT books. No file was moved by this KSGT session. |
+
+Existing ReaderScope / WRitEer / SuperWriter full text + provenance/edition audit remains open as documented above, and older missing Asher / Chierchia complete-scan / journal-version Sourati distinctions remain unchanged. These are not magically acquired by running additional models. No new independent native reader evidence or literary author-revision gold was obtained.
+
+The next *high-value acquisition target* is not a fourth paper about error detection; it is **licensed, source-attributed actual before/after polished Korean prose by an experienced human editor**, genre-tagged, retaining edits' original parents. See [human-edit negative-sample report](17_R5E_HUMAN_REVISION_SOURCE_ADMISSIBILITY_OBSERVATIONS_20261121.md).
