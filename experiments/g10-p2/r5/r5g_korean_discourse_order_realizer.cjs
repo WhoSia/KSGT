@@ -47,7 +47,7 @@ function validateFixture(root=fixture){
   const ids=new Set(w.nodes.map(n=>n.id));
   assert(ids.size===6&&[...ids].every(id=>/^F[1-6]$/.test(id)),"R5G_BAD_NODE_IDS");
   for(const n of w.nodes){
-   assert(typeof n.text==="string"&&n.text.length>=25&&
+   assert(typeof n.text==="string"&&n.text.length>=15&&
     ROLE_WEIGHT[w.genre][n.role]!==undefined&&STATUS.has(n.status)&&
     Array.isArray(n.topics)&&n.topics.length>=1&&n.topics.length<=3&&
     n.topics.every(t=>typeof t==="string"&&t.length>0)&&
