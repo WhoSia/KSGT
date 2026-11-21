@@ -46,8 +46,8 @@
     "r2b_groq_run": 44871200039,
     "r2b_drive_id": "1lDwdjS7LwCPeUcdS6qvJ2gARCCn6kWqT",
     "r2b_drive_sha256": "28e5320b9dcb652d993ddcdf14b74208603654799ac71796f5bc9b5871b9b1e4",
-    "latest_hermetic_node_tests_passed": 55,
-    "latest_hermetic_ci_run": 44883956488,
+    "latest_hermetic_node_tests_passed": 57,
+    "latest_hermetic_ci_run": 44884276959,
     "r3_four_original_source_work_units": 4,
     "r3_investigator_structured_cases": 12,
     "r3_author_declared_outcomes": {
@@ -623,12 +623,13 @@
     "strongCostMatchedIterativeControl": "NOT_RUN",
     "run": 44883541327,
     "readerPacketRun": 44883956488,
-    "lastTestsPassed": 55,
+    "lastTestsPassed": 57,
     "lastTestsFailed": 0,
     "report": "experiments/g10-p2/R4A_FULL_PROSE_SELECTION_RESULTS_20261121.md",
     "driveRaw": "1bkxWgjehdnoXq3nJKwDwTcr5kwf4tfEC",
     "readerStageADrive": "1hCk2DI2Mcd9UGqOCv6IhYtL2mBjNP9dt",
-    "auditorStageBDrive": "12pcwQmNJ6ZAv0ltv88bMsFCaqqXnfX_n"
+    "auditorStageBDrive": "12pcwQmNJ6ZAv0ltv88bMsFCaqqXnfX_n",
+    "lastNodeRegressionRun": 44884276959
   },
   "provider_connectivity": {
     "codeStatus": "ACTUAL_GROQ_API_PASS_GPTOSS20B_120B_QWEN27B_MULTISEED_AND_RAW_SOURCE",
