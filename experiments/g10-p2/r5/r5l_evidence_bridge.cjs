@@ -17,6 +17,8 @@ function canonical(x){
 const schema='ksgt.g10.p2.r5l.source-evidence.v1';
 const knownKinds=new Set(['POLARITY','MODALITY','ACTOR','OBJECT','CONDITION','QUOTE_SCOPE','TEMPORAL']);
 const fail=(reason)=>({status:'ABSTAIN',reason});
+// A trusted admission is an in-process capability, not a caller-asserted status string.
+const admitted=new WeakSet();
 function admit({source,evidence,pinned}={}){
   if(typeof source!=='string'||!evidence||typeof evidence!=='object'||!pinned||typeof pinned!=='object')return fail('MALFORMED');
   if(!/^[a-f0-9]{64}$/.test(pinned.sourceSha256||'')||!/^[a-f0-9]{64}$/.test(pinned.evidenceSha256||''))return fail('MISSING_PINNED_ROOT');
@@ -32,12 +34,16 @@ function admit({source,evidence,pinned}={}){
   if(!evidence.protectedSpans.every(valid))return fail('INVALID_PROTECTED_SPAN');
   // No provided sourceFactId or actorID can establish actual semantic truth.
   if(!Array.isArray(evidence.mentions)||!evidence.mentions.every(p=>p&&typeof p.text==='string'&&p.text.length>0&&Number.isSafeInteger(p.startCp)&&Number.isSafeInteger(p.endCp)&&p.startCp>=0&&p.startCp<p.endCp&&p.endCp<=n&&u.slice(p.startCp,p.endCp).join('')===p.text))return fail('INVALID_MENTION');
-  return {status:'PINNED_BYTE_EVIDENCE_ONLY',source,sourceSha256:pinned.sourceSha256,
-    evidenceSha256:evidenceDigest,sourceFactIds:[...evidence.sourceFactIds],protectedSpans:evidence.protectedSpans.map(p=>({...p})),
-    mentions:evidence.mentions.map(m=>({...m})),semanticStatus:'UNVERIFIED',naturalnessStatus:'UNVERIFIED'};
+  const record=Object.freeze({status:'PINNED_BYTE_EVIDENCE_ONLY',source,sourceSha256:pinned.sourceSha256,
+    evidenceSha256:evidenceDigest,sourceFactIds:Object.freeze([...evidence.sourceFactIds]),
+    protectedSpans:Object.freeze(evidence.protectedSpans.map(p=>Object.freeze({...p}))),
+    mentions:Object.freeze(evidence.mentions.map(m=>Object.freeze({...m}))),
+    semanticStatus:'UNVERIFIED',naturalnessStatus:'UNVERIFIED'});
+  admitted.add(record);
+  return record;
 }
 function screenWithAdmission({admission,proposal,actorId,objectId}={}){
-  if(!admission||admission.status!=='PINNED_BYTE_EVIDENCE_ONLY')return fail('NOT_ADMITTED');
+  if(!admission||typeof admission!=='object'||!admitted.has(admission))return fail('NOT_ADMITTED');
   if(typeof actorId!=='string'||!actorId||typeof objectId!=='string'||!objectId||!proposal||typeof proposal!=='object')return fail('MISSING_PROPOSAL_ROLE');
   const witnessed=admission.mentions.some(m=>m.startCp===proposal.startCp&&m.endCp===proposal.endCp&&m.text===proposal.expected);
   if(!witnessed)return fail('EDIT_MENTION_NOT_WITNESSED');
