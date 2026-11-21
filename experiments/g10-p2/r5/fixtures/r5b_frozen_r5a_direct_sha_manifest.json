@@ -1,0 +1,57 @@
+{
+  "schema": "ksgt.g10p2.r5b.r5a-direct-reuse.v1",
+  "source": "R5a original model responses, GitHub Actions #44897700620, Drive original 1SJsUyVnGlviJH69PB-o85XLeCGAIBW5e",
+  "sourceZipSha256": "8ca75a538ceb7d592f65f387d8e3cf46e70975870f4c23af261c38dc86476ab7",
+  "baseModel": "openai/gpt-oss-20b",
+  "baselineCallCount": 8,
+  "records": [
+    {
+      "sourceWork": "R5A_CHAT_ARCHIVE",
+      "outputSha256": "59c7eba5f45d0b612cd22d5cf038a69fa9683bbf920ce4605b516364866d704d",
+      "promptSha256": "d3b49535cb0c35cdf459b50a4adedc37ddb0952567f0778d4ccf398eee516aba",
+      "tokens": 561
+    },
+    {
+      "sourceWork": "R5A_CHAT_SOURCE",
+      "outputSha256": "8346a43141637e132eba3fc4a2b66a427b3610f04cc45e543b07ec2ebe5daecd",
+      "promptSha256": "d53cc2387cf51889713da50af774041615edf3c29f95d6b428653818e013f56f",
+      "tokens": 515
+    },
+    {
+      "sourceWork": "R5A_SCI_FILM",
+      "outputSha256": "412560abc19eb34f13ba27018837f91e905edf0081c277b69f6577837b4b8b63",
+      "promptSha256": "f37d9d43804fe24de913786274e3c3c2ebd3cac7bcebe3dc138c2039f47fd2d6",
+      "tokens": 664
+    },
+    {
+      "sourceWork": "R5A_SCI_CLOCK",
+      "outputSha256": "a00b90ee506cebec0631e8768c033d5c5da48589b8d8d0b2d468ec5b3e96b3f6",
+      "promptSha256": "666bfaf19d6e72721b6b250b2be68a7950a1596c65bf710234094da5dfa5fa1f",
+      "tokens": 571
+    },
+    {
+      "sourceWork": "R5A_NOTICE_BOOK",
+      "outputSha256": "8c5546ea94e17a18707c085062e80cebd9de8183645eebb22e7193a331673821",
+      "promptSha256": "588c4daadac51b7a75c50dbf145641ae3de577bcaa267fe127d7526ad0bc0daf",
+      "tokens": 596
+    },
+    {
+      "sourceWork": "R5A_NOTICE_SHOW",
+      "outputSha256": "9381d83b6798433af6a5ca47d5ae4a46cb72debf92bf0489137fffed67d4cb6b",
+      "promptSha256": "f420ab459ec28744b1bdbef2831ffbdb1e78087b21058ec5ad27a99f330295e6",
+      "tokens": 667
+    },
+    {
+      "sourceWork": "R5A_SCENE_GARDEN",
+      "outputSha256": "80d1337c39e31b44ec8227d97c7139844d5d98c00b09660b51fca2f97721e9d8",
+      "promptSha256": "5214ec6346b462076b38dd7d4912084d6e0f55df7ac0082326f2472078f09651",
+      "tokens": 690
+    },
+    {
+      "sourceWork": "R5A_SCENE_PAPER",
+      "outputSha256": "5c7a43bd9395d3ac3432d326f97fb93d4a98ca50017388143d21022a400b919c",
+      "promptSha256": "5ba2eeb255b4f542b9ad4a265f5a312fd1bead345493ab31ab3903b6e3a10887",
+      "tokens": 731
+    }
+  ]
+}
