@@ -1,7 +1,7 @@
 # KSGT Generation X G10-P1
 ## Lightweight Discourse-Guided Korean Prose Generation: Source-Conditioned Planning, Contextual Linguistic Realization & End-to-End Quality Evaluation
 
-**Status: OPEN — generation research and implementable baseline comparison, no claimed prose-quality gain.**
+**Historical P1 status: CLOSED AS BOUNDED FEASIBILITY/REFUTATION PILOT (2026-11-21). End-to-end Korean prose superiority NOT established; independent reader evaluations 0. G10-P2 authorized by project owner and activated separately.**
 **Notion:** https://app.notion.com/p/40def561cf9281a0b990ee1b3662b79e
 **Predecessor:** [Generation IX evidence-preserving program closure](../g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md)
 
@@ -84,3 +84,8 @@ The original G10-P1 question and negative-evidence rules above remain authoritat
 The scientific delta is the update of reader state after each *actually realized* Korean utterance, explicit KEEP/no-op, and same-state, same-model, compute-matched tests with independent real readers. It neither certifies a Transformer replacement nor cancels P1's null/negative results.
 
 The older 295 value in `CURRENT_STAGE.json` is a historical composed baseline (196 legacy + 63 R5–R8 final + Global36), not a cumulative P1 total through R9.44. The four R9.44 forms reuse the same 12 work briefs and independent reader / source-auditor responses remain zero.
+
+
+### 2026-11-21 — G10-P1 bounded-pilot program closure (accepted by project owner)
+
+The original v0.x and R1–R9.44 records above are historical and retain their original dates and evidence levels. The retrospective [R9.44](paper/R9_44_G10_P1_RETROSPECTIVE_P2_NAMING_20261121.md) inventories actual outputs, source provenance corrections, limitations and the two-phase reader packet. This P1 closure is a **program stage transition**, not acceptance of its core superiority hypothesis: guided plans did not yield a proven independent human-quality gain, automatic source-state estimation remains limited, and reader gold is absent. Carry every negative and untested claim into [G10-P2](../g10-p2/RESEARCH_PROGRAM.md) without silently revising old reports. Historical raw packages stay in Drive; open G10-P1 code/metadata remain in Git. 
