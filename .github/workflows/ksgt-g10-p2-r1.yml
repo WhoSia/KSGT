@@ -1,0 +1,32 @@
+name: KSGT G10-P2 R1 Reader-State Proof-of-Mechanism
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths:
+      - '.github/workflows/ksgt-g10-p2-r1.yml'
+      - 'experiments/g10-p2/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-g10-p2-r1-read-only
+  cancel-in-progress: false
+
+jobs:
+  finite-state-tests:
+    if: github.ref == 'refs/heads/research/g10-p2-reader-state-coupled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify four-genre source-span/state/revision contract
+        run: node --test experiments/g10-p2/*.test.cjs
+      - name: Emit controlled diagnostic only, no model/human claims
+        run: node experiments/g10-p2/reader_state_v01.cjs
