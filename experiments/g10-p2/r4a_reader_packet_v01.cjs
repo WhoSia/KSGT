@@ -29,6 +29,8 @@ function ordering(items,formNo){
   return items.slice(offset).concat(items.slice(0,offset));
 }
 function orientation(workIndex,formNo){
+  ensure(Number.isInteger(workIndex)&&workIndex>=0 &&
+    Number.isInteger(formNo)&&formNo>=1&&formNo<=4,"BAD_FORM_NUMBER");
   return (workIndex+(formNo-1))%2===0?"direct":"rich";
 }
 function header(form,stage){
