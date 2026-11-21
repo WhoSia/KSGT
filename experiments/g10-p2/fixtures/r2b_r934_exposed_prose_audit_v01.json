@@ -1,0 +1,99 @@
+{
+  "schema": "ksgt.g10p2.r2b.p1-exposed-real-prose.v1",
+  "date": "2026-11-21",
+  "sourceRun": 44782747496,
+  "sourceArtifact": 14650903417,
+  "sourceArtifactSha256": "f27a6d8fd23c4a3bec2fad70c41497d73f3d50d4f865b32bff156d0dbcfbf48b",
+  "sourceKind": "REAL_PRIOR_MODEL_GENERATIONS_DEVELOPMENT_NOT_FRESH_HOLDOUT",
+  "labelAuthority": "SINGLE_INVESTIGATOR_PRE_PROVIDER_CALL_NOT_INDEPENDENT",
+  "works": [
+    {
+      "id": "CHAT_CHECK",
+      "genre": "chat",
+      "proposition": "그림 2의 범례 색상 두 개는 아직 원본 데이터와 대조 중이다.",
+      "labels": {
+        "direct": "YES",
+        "rich": "YES",
+        "guided": "YES"
+      },
+      "note": "세 조건 모두 아직 대조 중이라고 명시"
+    },
+    {
+      "id": "CHAT_REPLY",
+      "genre": "chat",
+      "proposition": "회의에서 A안을 최종안으로 채택했다.",
+      "labels": {
+        "direct": "NO",
+        "rich": "NO",
+        "guided": "NO"
+      },
+      "note": "먼저 실험한다는 순서를 최종 채택으로 단정하지 않음"
+    },
+    {
+      "id": "SCI_SCALE",
+      "genre": "science",
+      "proposition": "두 측정의 저울 영점 오차는 실제로 같은 값이었다.",
+      "labels": {
+        "direct": "INDETERMINATE",
+        "rich": "NO",
+        "guided": "NO"
+      },
+      "note": "direct 본문에 동일하다고 가정한 문장과 동일하므로라는 단정 및 후반 조건 재강조가 공존"
+    },
+    {
+      "id": "SCI_CARD",
+      "genre": "science",
+      "proposition": "재질 차이만으로 이번 물방울 퍼짐 폭의 차이가 결정되었다.",
+      "labels": {
+        "direct": "NO",
+        "rich": "NO",
+        "guided": "NO"
+      },
+      "note": "rich의 재질만으로 결정 문장은 통제 이후의 예상 조건문이지 이번 관측 원인 확정이 아님"
+    },
+    {
+      "id": "NOTICE_SETUP",
+      "genre": "notice",
+      "proposition": "전기 연결을 신청한 팀은 팀명과 소비 전력을 적은 메모를 가져와야 한다.",
+      "labels": {
+        "direct": "YES",
+        "rich": "YES",
+        "guided": "YES"
+      },
+      "note": "세 조건 모두 신청 팀에 대한 의무를 명시함"
+    },
+    {
+      "id": "NOTICE_ROOM",
+      "genre": "notice",
+      "proposition": "수요일 정확히 14시 면담 예약자는 1층 상담실로 간다.",
+      "labels": {
+        "direct": "YES",
+        "rich": "YES",
+        "guided": "YES"
+      },
+      "note": "세 조건 모두 목록 또는 표에서 명시함"
+    },
+    {
+      "id": "LIT_SHADOW",
+      "genre": "scene",
+      "proposition": "수빈은 천을 받은 뒤 계단 아래로 내려갔다.",
+      "labels": {
+        "direct": "NO",
+        "rich": "YES",
+        "guided": "NO"
+      },
+      "note": "rich는 윤해가 천을 받았다고 먼저 쓴 뒤 수빈이 받았다고도 썼음; 표면 단정 YES이나 원천 사실 위반"
+    },
+    {
+      "id": "LIT_CUP",
+      "genre": "scene",
+      "proposition": "컵 안에 따뜻한 차가 남아 있었다.",
+      "labels": {
+        "direct": "NO",
+        "rich": "NO",
+        "guided": "INDETERMINATE"
+      },
+      "note": "guided는 따뜻한 차가 남아 있는 듯이라고 비유/추정해 사실 단정 여부가 불명확함"
+    }
+  ]
+}
