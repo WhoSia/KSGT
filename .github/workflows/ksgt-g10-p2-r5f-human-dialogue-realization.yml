@@ -43,7 +43,7 @@ jobs:
         run: |
           curl --fail --silent --show-error --location --retry 2             'https://raw.githubusercontent.com/smilegate-ai/korean_smile_style_dataset/b362299d1ac9a8a0de2f64eb8f55f3b386e97fad/smilestyle_dataset.tsv'             -o "$RUNNER_TEMP/SmileStyle_original_CC-BY-NC-4.0.tsv"
           node experiments/g10-p2/r5/r5f_korean_human_dialogue_retrieval.cjs --preflight             "$RUNNER_TEMP/SmileStyle_original_CC-BY-NC-4.0.tsv" > "$RUNNER_TEMP/r5f-upstream-preflight.json"
-          node -e 'let x=require(process.argv[1]);if(x.newCalls!==16||x.corpus.sourceFamilies!==235||x.corpus.distinctTestFamilies!==8||x.corpus.distinctDemoFamilies!==14)process.exit(1);console.log("R5f-pinned-upstream",x.planHash,x.corpus.upstreamSHA256)' "$RUNNER_TEMP/r5f-upstream-preflight.json"
+          node -e 'let x=require(process.argv[1]);if(x.newCalls!==16||x.corpus.sourceDelimiterBlocks!==236||x.corpus.sourceRowSeparators!==235||x.corpus.distinctTestFamilies!==8||x.corpus.distinctDemoFamilies!==14)process.exit(1);console.log("R5f-pinned-upstream",x.planHash,x.corpus.upstreamSHA256)' "$RUNNER_TEMP/r5f-upstream-preflight.json"
           cat > "$RUNNER_TEMP/SOURCE_LICENSE_AND_ATTRIBUTION.txt" <<'ATTR'
           Original: Smilegate AI / Seonghyun Kim (2022), SmileStyle: Parallel Style-variant Corpus for Korean Multi-turn Chat Text Dataset
           Original public repo: https://github.com/smilegate-ai/korean_smile_style_dataset
