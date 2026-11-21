@@ -98,6 +98,14 @@ function choose(work, realizedPrefix, mode="observed") {
     actualKnown:view.known, events:view.events };
 }
 function assessDraft(work, lines) {
+  // A single authored anaphoric utterance with no realized antecedent can be
+  // repaired by replacing that licensed sentence with the explicit alternative.
+  if (Array.isArray(lines) && lines.length === 1 &&
+      lines[0] === work.second.anaphoric) {
+    validateWork(work);
+    return { decision:"REVISE", output:work.second.explicit,
+      reason:"MISSING_REALIZED_ANTECEDENT", replacedLine:0 };
+  }
   const read = observe(work, lines);
   if (read.events.some(x => x.status === "UNKNOWN" || x.status === "DUPLICATE"))
     return { decision:"ABSTAIN", output:read.actualText, reason:"UNSUPPORTED_OR_DUPLICATED_SURFACE" };
