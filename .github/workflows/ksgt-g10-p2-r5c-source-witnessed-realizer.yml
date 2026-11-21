@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-          fetch-depth: 25
+          fetch-depth: 40
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -32,7 +32,7 @@ jobs:
         shell: bash
         run: |
           test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
-          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+          if git log -30 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
             echo 'BOT_CONTRIBUTION_ZERO violation'; exit 1
           fi
       - name: Native regression tests and source-anchored output gate
