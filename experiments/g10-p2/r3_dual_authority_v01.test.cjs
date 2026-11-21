@@ -86,7 +86,8 @@ test("unsupported passage returns byte-identical ABSTAIN instead of fabricated r
  assert.equal(result.modelCalls,0);
 });
 test("unknown work id and invalid source claims are never silently admitted",()=>{
- assert.throws(()=>x.loadLicense("NOT_REAL"),/UNKNOWN_SOURCE_WORK/);
+ assert.throws(()=>x.loadLicense("NOT_REAL"),/BAD_WORK_ID/);
+ assert.throws(()=>x.loadLicense("CHAT_FAKE"),/UNKNOWN_SOURCE_WORK/);
  const w=entries()[0],ex=w.examples[0];
  const malformed={...ex.hypothesis,model_guess:"APPROVED"};
  assert.equal(x.crossCheck({workId:w.id,realizedText:ex.text,
