@@ -1,12 +1,20 @@
 # KSGT — Korean Stylistic Generation Theory
 
-## Current active stage: Generation X G10-P1 — Lightweight Discourse-Guided Korean Prose Generation
+## Current active research branch: Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture
 
-**ACTIVE / 2026-11-03.** Official full name: **KSGT Generation X G10-P1 — Lightweight Discourse-Guided Korean Prose Generation: Source-Conditioned Planning, Contextual Linguistic Realization & End-to-End Quality Evaluation**.
+**OPEN / 2026-11-21.** Official name: **KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs**. The default `main` branch can lag this active research branch; inspect `CURRENT_STAGE.json` on the **same branch** for phase authority. No independent Korean prose-quality superiority has been demonstrated.
 
-The central deliverable is **actual Korean paragraph/document prose**, generated with existing language models and a lightweight source-conditioned discourse planning and contextual realization harness. Its value must be tested against matched strong direct-generation and rich-prompt baselines using independent Korean human reader preference, source-fidelity checks and real computation costs—not inferred from synthetic gate PASS counts, candidate-oracle coverage or editing legitimacy theory.
+**Scientific North Star:** build a genuinely strong and efficient Korean writing generator, not merely a grammar checker, provenance filter, humanizer or evaluation harness. Source-grounded reader state must change the **actual complete text** to serve a real reader's purpose and must outperform a matched strong direct model, genre-appropriate prompt and the **identical state supplied as ordinary text**; count extraction, annotation, provider calls and the full runtime. Style includes cadence, legitimate repetition, voice and literary discretion rather than banned AI-looking strings.
 
-[Notion official G10-P1](https://app.notion.com/p/40def561cf9281a0b990ee1b3662b79e) · [Generation IX non-success program closure](experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md) · [G10-P1 program](experiments/g10-p1/RESEARCH_PROGRAM.md).
+**Latest real evidence:** R4a used 12 development source works / 24 generated full texts / 60 model calls; its self-auditor missed invented actions and locations, and independent Korean reader and source-auditor gold remain 0. R4b reused 10 exposed texts and made 20 additional real model calls: strict one-span PATCH removed the target string in **3/6** flagged cases versus **6/6** full rewrites, while **4/4** no-target originals were kept in both arms. Removing the target text does not establish a correct replacement or complete-text fidelity. P2 R2 (80), R2b (48), R4a (60), R4b (20) account for **208** real P2 model requests; these are not 208 independent writing tasks.
+
+**Active next evidence gate:** the [R5 prospective research instruments](experiments/g10-p2/r5/00_ORIGIN_TO_CAUSAL_TARGET_20261121.md), [causal baseline preregistration](experiments/g10-p2/r5/02_CAUSAL_IDENTIFICATION_PREREG_20261121.md), [source-work disjointness/authority tests](experiments/g10-p2/r5/r5_disjoint_split.test.cjs), and the [missing-literature delta](experiments/g10-p2/r5/04_LITERATURE_INVENTORY_DELTA_20261121.md) are **development and engineering work, not a new experimental quality result**. R5 is not a new official stage and the remote CI PASS must be checked separately. Human selection authority cannot be replaced by simulated AI votes.
+
+[Official G10-P2 Notion](https://app.notion.com/p/41fef561cf928105a17bc0c33a9701bc) · [P2 research program](experiments/g10-p2/RESEARCH_PROGRAM.md) · [R4b observed result](experiments/g10-p2/R4B_STRICT_REPAIR_RESULTS_20261121.md) · [G10-P1 historical closure](experiments/g10-p1/G10_P1_BOUNDED_PILOT_CLOSURE_20261121.md) · [Generation IX non-success closure](experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md).
+
+### Historical G10-P1 archive (preserved, not current stage)
+
+G10-P1 official historical name: **Lightweight Discourse-Guided Korean Prose Generation: Source-Conditioned Planning, Contextual Linguistic Realization & End-to-End Quality Evaluation**. Its earlier experiments and all null results remain readable below.
 
 **2026-11-17 R9.30 GENRE RELATIONS DEVELOPMENT:** [Protocol](experiments/g10-p1/paper/R9_30_GENRE_RELATIONS_PROTOCOL_20261117.md) · [Results](experiments/g10-p1/paper/R9_30_GENRE_RELATIONS_RESULTS_20261117.md). Six new fragment briefs, 18 Groq outputs. Grouped notes made 6/6 reader-task answers recoverable, versus 4/6 in both other arms, while meeting 1/6 intended effects versus 2/6 direct and 3/6 flat. No genre met the frozen continuation rule. [Notion](https://app.notion.com/p/41bef561cf928172a759f8105bf28855) · [Verified source-output archive](https://drive.google.com/file/d/1b70Awtmks4msMD9qHjlZVQvFAL3AFx8z/view).
 
