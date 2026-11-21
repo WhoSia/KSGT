@@ -25,7 +25,7 @@ test("P2 cumulative model calls count R2/R2b/R4a/R4b/R5a/R5b once, never read-on
  a.equal(c.r5a_real_provider_calls,40);
  a.equal(c.r5a_real_independent_reader_ratings,0);
  a.equal(c.r5a_independent_source_audits,0);
- a.equal(c.real_provider_model_calls,80+48+0+60+20+40+(c.r5b_real_provider_calls||0));
+ a.equal(c.real_provider_model_calls,80+48+0+60+20+40+(c.r5b_new_writer_provider_calls||0)+(c.r5c_real_provider_calls||0));
  a.equal(s.latest_experiment.newModelCalls,20);
  a.equal(s.latest_experiment.posthocReplayNewModelCalls,0);
  a.equal(s.latest_experiment.stageCumulativeModelCalls,208);
