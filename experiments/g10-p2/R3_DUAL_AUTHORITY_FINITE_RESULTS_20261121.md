@@ -46,3 +46,8 @@ R3 demonstrates that source-evidence and actual-output evidence need independent
 Next required advance: *full Korean prose* experiment on new source-work-disjoint briefs with strong direct/rich prompting, same source-state as normal text, identical model + candidate slate under executable control, no-op and compute-matched revision. Collect independent Korean reader task performance and a separate semantic source audit. A fallback that abstains on nearly all unknown expressions may be accurate on fixed examples but unusable for natural prose. Report rejection/abstention coverage, false approvals, usability and total annotation/provider cost.
 
 **P2 remains OPEN. Independent reader gold = 0. Verified positive Korean writing-quality gain = none.**
+
+
+## Final regression receipt after stage-gate synchronization
+
+The source/surface protocol itself passed 39/39 in [CI 44871827738](https://github.com/WhoSia/KSGT/actions/runs/44871827738). After the official G10-P2 stage-authority test was also updated to include the R3 ledger (without importing P1 generation counts or inventing model calls), [CI 44871924123](https://github.com/WhoSia/KSGT/actions/runs/44871924123) passed **40/40** tests, zero failed. The extra test verifies the stage transition and the separation of 128 genuine model extraction requests from **0** independent human reader ratings; it is not a new scientific observation.

@@ -46,8 +46,8 @@
     "r2b_groq_run": 44871200039,
     "r2b_drive_id": "1lDwdjS7LwCPeUcdS6qvJ2gARCCn6kWqT",
     "r2b_drive_sha256": "28e5320b9dcb652d993ddcdf14b74208603654799ac71796f5bc9b5871b9b1e4",
-    "latest_hermetic_node_tests_passed": 39,
-    "latest_hermetic_ci_run": 44871827738,
+    "latest_hermetic_node_tests_passed": 40,
+    "latest_hermetic_ci_run": 44871924123,
     "r3_four_original_source_work_units": 4,
     "r3_investigator_structured_cases": 12,
     "r3_author_declared_outcomes": {
@@ -58,7 +58,7 @@
     "r3_new_provider_calls": 0,
     "r3_closed_surface_scope": "LICENSED_FULL_SENTENCE_MATCH_ONLY_NOT_AUTOMATIC_SEMANTIC_PARSER",
     "r3_real_korean_writing_quality_gain": "UNOBSERVED",
-    "r3_ci_run": 44871827738
+    "r3_ci_run": 44871924123
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -587,8 +587,8 @@
     "independentReaderRatings": 0,
     "independentSemanticGold": 0,
     "verifiedWriterQualityGain": "NONE_PROVEN",
-    "run": 44871827738,
-    "passedTests": 39,
+    "run": 44871924123,
+    "passedTests": 40,
     "failedTests": 0,
     "report": "experiments/g10-p2/R3_DUAL_AUTHORITY_FINITE_RESULTS_20261121.md"
   },
