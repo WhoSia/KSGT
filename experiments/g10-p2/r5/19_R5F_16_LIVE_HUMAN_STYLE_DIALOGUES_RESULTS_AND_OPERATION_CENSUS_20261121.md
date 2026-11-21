@@ -1,4 +1,14 @@
-# G10-P2 R5f — 16 genuine Korean five-turn dialogues: human exemplar retrieval did not establish a prose-quality advantage
+# G10-P2 R5f — 16 genuine Korean five-turn dialogues: public style-variant retrieval did not establish a prose-quality advantage
+
+
+## R5f primary-source authorship ERRATUM — issued after model execution
+
+**The scientific label has been corrected; the historical data, original frozen run and numerical results have not.** A subsequent direct read of the [pinned upstream SmileStyle README](https://github.com/smilegate-ai/korean_smile_style_dataset/blob/b362299d1ac9a8a0de2f64eb8f55f3b386e97fad/README.md) confirmed only that **Smilegate AI built a 17-style parallel Korean dialogue dataset** and warns of typos and conversion errors. Its public README **does not document who wrote, generated or checked individual transformed rows, human annotation protocols or independent human preference labels.**
+
+The earlier phrases **"human-written style references", "human-authored dialogue style pairs", "human example retrieval"** in this R5f document and the frozen preregistration **are NOT established original-source facts**. Read them as historical shorthand for **published Korean style-parallel source variants (per-variant human authorship UNVERIFIED)**. Neither the script's historical variable names `humanReferenceStyleTurns`/`humanReferenceSHA256` nor the workflow title proves annotator identity. Source corpus group separation is at most **236 delimiter-defined nonempty blocks**, not verified independent writers, speakers or humans.
+
+The authentic study, now more narrowly characterized, compared 8 direct-model 5-turn Korean dialogue transformations against 8 otherwise equal transformations with **four retrieved examples from a public style-variant dataset of unverified editing provenance**. All 16 provider receipts, SHA and token totals, exact-reference overlaps, local naturalness observations and mixed/negative conclusion remain valid within that narrower scope. **0 independently verified human style-preference judgments, 0 independent source-semantic gold, 0 evidence for a trained new generator, 0 validated superiority**. The original license, original ZIP and source text hashes remain unchanged; don't rewrite those bytes or backdate this erratum. Before future use as supervised HUMAN-preference material, obtain actual source annotation/production methods from the dataset authors.
+
 
 Date: 2026-11-21 KST. **Developer experiment completed** with real GPT-OSS 120B provider calls and originally published Korean conversation text. No independent native-reader preference, no novel neural model and no established global or genre-specific writing-quality gain. **Official G10-P2 OPEN / QUALITY_HOLD.**
 
