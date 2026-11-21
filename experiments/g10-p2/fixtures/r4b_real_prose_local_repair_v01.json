@@ -7,7 +7,7 @@
   "annotationScope": "SINGLE_TARGET_PER_TEXT_NOT_GLOBAL_SOURCE_FIDELITY",
   "cases": [
     {
-      "id": "R4B_CHAT_UPLOAD_direct",
+      "id": "R4B_R4A_CHAT_UPLOAD_direct",
       "sourceWork": "R4A_CHAT_UPLOAD",
       "priorArm": "direct",
       "originalTextSha256": "56493c2127170b444f9072b1f239f95098012137175abfe987d42c73693fdc67",
@@ -18,7 +18,7 @@
       "issue": "원천에는 업로드 시각 미정과 사진 허가 뒤 공유 계획만 있다. 시각 통지는 새 연락 약속이며 허가되지 않았다."
     },
     {
-      "id": "R4B_CHAT_UPLOAD_rich",
+      "id": "R4B_R4A_CHAT_UPLOAD_rich",
       "sourceWork": "R4A_CHAT_UPLOAD",
       "priorArm": "rich",
       "originalTextSha256": "32ae33ed09fd708d740394fa74fb54187b5424cc8cdf2c93f2d8f3d792414e89",
@@ -29,7 +29,7 @@
       "issue": "원천에 없는 연락 약속이 새로 들어갔다. 앞의 공유 계획 자체와 구별한다."
     },
     {
-      "id": "R4B_NOTICE_CHEM_direct",
+      "id": "R4B_R4A_NOTICE_CHEM_direct",
       "sourceWork": "R4A_NOTICE_CHEM",
       "priorArm": "direct",
       "originalTextSha256": "20e09d769c22c83d84014df0f918292bcac494e290c8ed83f979536afa1d8161",
@@ -40,7 +40,7 @@
       "issue": "신청 시각은 명시하지만 장소는 원천에 없으므로 제출 장소를 만들어 내지 않는다."
     },
     {
-      "id": "R4B_NOTICE_CHEM_rich",
+      "id": "R4B_R4A_NOTICE_CHEM_rich",
       "sourceWork": "R4A_NOTICE_CHEM",
       "priorArm": "rich",
       "originalTextSha256": "ffaccb901510ea653e160b270f211f7bbf3d7c76935d5fb4af4cdfc69c64c7f4",
@@ -51,7 +51,7 @@
       "issue": "신청 시각은 명시하지만 제출 장소는 원천에 없다. 장소 신설은 허가되지 않았다."
     },
     {
-      "id": "R4B_SCI_SEED_rich",
+      "id": "R4B_R4A_SCI_SEED_rich",
       "sourceWork": "R4A_SCI_SEED",
       "priorArm": "rich",
       "originalTextSha256": "196a28b30556aa42344f7c950a074eda4e09f6e599b1762933d8fcd0131bbb05",
@@ -62,7 +62,7 @@
       "issue": "다음 실험 계획에서 빛 노출 시간을 고정한다는 사실을 물의 양만 통제한다는 표현으로 바꾸지 않는다."
     },
     {
-      "id": "R4B_SCENE_NOTE_rich",
+      "id": "R4B_R4A_SCENE_NOTE_rich",
       "sourceWork": "R4A_SCENE_NOTE",
       "priorArm": "rich",
       "originalTextSha256": "54e2c207b1c34fe817f9f1000e83ad6db6d40c00bc6d03edcd0e9a0a50ba5285",
@@ -73,7 +73,7 @@
       "issue": "원천에는 접은 쪽지를 놓는 행동만 있고 쪽지가 펼쳐지는 새 사건은 없다. 배경 감각의 부수 묘사와 구분한다."
     },
     {
-      "id": "R4B_CHAT_SHIFT_direct",
+      "id": "R4B_R4A_CHAT_SHIFT_direct",
       "sourceWork": "R4A_CHAT_SHIFT",
       "priorArm": "direct",
       "originalTextSha256": "49f35088406389c218ea854259c3de3f8ddf3bfd3debb430ee47153c6de6b887",
@@ -84,7 +84,7 @@
       "issue": "이 문서는 완전 무결하다는 뜻이 아니다. 이 연구에서 지정한 목표 오류가 없으므로 불필요한 수정의 발생률만 본다."
     },
     {
-      "id": "R4B_NOTICE_RETURN_direct",
+      "id": "R4B_R4A_NOTICE_RETURN_direct",
       "sourceWork": "R4A_NOTICE_RETURN",
       "priorArm": "direct",
       "originalTextSha256": "ca1c0e71ca3386935870a615a369d7b379eb20fe27e3b14522384ec68fea84f1",
@@ -95,7 +95,7 @@
       "issue": "행위자의 서술체 통일 등 문체 개선의 여지는 있지만 지정한 원천 위반 목표는 없다."
     },
     {
-      "id": "R4B_NOTICE_ROOM_direct",
+      "id": "R4B_R4A_NOTICE_ROOM_direct",
       "sourceWork": "R4A_NOTICE_ROOM",
       "priorArm": "direct",
       "originalTextSha256": "392b3efaf8d7b97a89e60904b3058acf0364ab28a27e3e350ee209c3aafebc62",
@@ -106,7 +106,7 @@
       "issue": "경계 포함과 장소 이동이 명시돼 있으나 원천과 완전히 일치한다는 독립 정답이 아니다."
     },
     {
-      "id": "R4B_SCENE_RIBBON_direct",
+      "id": "R4B_R4A_SCENE_RIBBON_direct",
       "sourceWork": "R4A_SCENE_RIBBON",
       "priorArm": "direct",
       "originalTextSha256": "54e5a7fbe49305938a8acad5dfb265154c1e5d34a597c40018e6e42b02326732",
