@@ -4,7 +4,7 @@
   "generation": "X",
   "current_stage": "G10-P2",
   "stage_type": "READER_STATE_COUPLED_KOREAN_WRITING_ARCHITECTURE",
-  "status": "OPEN_R5A_40_ACTUAL_REAL_PROSE_CALLS_COMPLETE_INDEPENDENT_QUALITY_HOLD",
+  "status": "OPEN_R5B_24_ACTUAL_KOREAN_WRITER_CALLS_COMPLETE_QUALITY_HOLD",
   "official_name": "KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs",
   "canonical_notion_id": "41fef561-cf92-8105-a17b-c0c33a9701bc",
   "current_artifact": "experiments/g10-p2/RESEARCH_PROGRAM.md",
@@ -13,7 +13,7 @@
     "scope": "G10_P2_ONLY",
     "real_independent_korean_reader_ratings": 0,
     "source_fidelity_independent_gold": 0,
-    "real_provider_model_calls": 248,
+    "real_provider_model_calls": 272,
     "trained_new_models": 0,
     "complete_korean_prose_quality_advantage": "UNOBSERVED",
     "author_exposed_synthetic_works": 4,
@@ -140,7 +140,40 @@
     "r5a_novelty_rival": "ReaderScope EMNLP 2026 kills generic reader response control novelty",
     "r5a_native_r5_tests_passed": 17,
     "r5a_prior_p2_tests_passed": 80,
-    "r5a_runtime_bot_contribution": "ZERO_IN_VERIFIED_RECENT_20"
+    "r5a_runtime_bot_contribution": "ZERO_IN_VERIFIED_RECENT_20",
+    "r5b_new_writer_provider_calls": 24,
+    "r5b_reused_earlier_direct_calls": 8,
+    "r5b_new_provider_tokens": 19455,
+    "r5b_comparable_complete_texts": 32,
+    "r5b_source_work_count": 8,
+    "r5b_source_authority": "R5A_AUTHOR_SYNTHETIC_EXPOSED_DEVELOPMENT_NOT_NEW_HELDOUT",
+    "r5b_comparison_arms": [
+      "B20_ORIGINAL_8_R5A_REUSED",
+      "K20_GENRE_CRAFT_8_NEW",
+      "B120_STRONG_DIRECT_8_NEW",
+      "K120_STRONG_CRAFT_8_NEW"
+    ],
+    "r5b_token_totals": {
+      "B20_prior_original": 4995,
+      "K20_new": 6997,
+      "B120_new": 5401,
+      "K120_new": 7057
+    },
+    "r5b_total_chacters": {
+      "B20": 2781,
+      "K20": 2009,
+      "B120": 3271,
+      "K120": 2100
+    },
+    "r5b_human_expert_votes": 0,
+    "r5b_independent_source_semantic_gold": 0,
+    "r5b_quality_gain": "UNESTABLISHED",
+    "r5b_learned_new_architecture": "NONE_PROMPT_POLICY_DEVELOPMENT",
+    "r5b_native_ci_run": 44899223057,
+    "r5b_original_drive_id": "1gIPzK5yUwvy-_J7DShDfs_zZ_M9iwFDs",
+    "r5b_original_zip_sha256": "11b227026dc70effc5c4748ebf6eb445f073366de6aa269cc9fa1429b0af0157",
+    "r5b_expert_reading_notion_id": "41fef561-cf92-8113-847a-d6ac166a91d0",
+    "r5b_results_report": "experiments/g10-p2/r5/12_R5B_24_NEW_REAL_PROSE_RESULTS_AND_HUMAN_WRITING_REFOCUS_20261121.md"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -1011,5 +1044,21 @@
     "readerStageADrive": "1hCk2DI2Mcd9UGqOCv6IhYtL2mBjNP9dt",
     "auditorStageBDrive": "12pcwQmNJ6ZAv0ltv88bMsFCaqqXnfX_n",
     "lastNodeRegressionRun": 44884276959
+  },
+  "latest_real_prose_development_experiment": {
+    "identifier": "G10-P2 R5b",
+    "status": "24_REAL_NEW_20B_120B_KOREAN_PROSE_MODEL_RESPONSES_COMPLETE_EXPOSED_DEVELOPMENT_ONLY",
+    "sourceWorks": 8,
+    "actualNewProviderCalls": 24,
+    "priorReusedOriginalCalls": 8,
+    "wholeTexts": 32,
+    "model20bStylePolicyEffect": "SOURCE_VISIBLE_MIXED",
+    "model120bStylePolicyEffect": "SOURCE_VISIBLE_MIXED",
+    "humanPreferenceCollected": 0,
+    "independentSourceGold": 0,
+    "wholeTextQualityAdvantage": "NO_HUMAN_VALIDATED_CLAIM",
+    "nativeRun": 44899223057,
+    "driveOriginal": "1gIPzK5yUwvy-_J7DShDfs_zZ_M9iwFDs",
+    "report": "experiments/g10-p2/r5/12_R5B_24_NEW_REAL_PROSE_RESULTS_AND_HUMAN_WRITING_REFOCUS_20261121.md"
   }
 }
