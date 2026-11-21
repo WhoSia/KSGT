@@ -1,0 +1,71 @@
+name: KSGT G10-P2 R5b Korean Realizer 20B-vs-120B Actual Prose
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r5b-lexical-realizer.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-g10-p2-r5b-20261121-prose-realizer-only
+  cancel-in-progress: false
+
+jobs:
+  korean-realizer-whole-prose:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 25
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Confirm human author and no GitHub Actions bot contributions
+        shell: bash
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+            echo BOT_CONTRIBUTION_ZERO_VIOLATION; exit 1
+          fi
+      - name: Native Node realizer and previous G10-P2 regression tests
+        run: |
+          node --test experiments/g10-p2/r5/*.test.cjs
+          node --test experiments/g10-p2/*.test.cjs
+          node experiments/g10-p2/r5/r5b_korean_realizer.cjs --plan > "$RUNNER_TEMP/r5b-frozen-plan.json"
+          node -e 'let s=require(process.argv[1]);if(s.works!==8||s.newCalls!==24||s.oldActualCallsReused!==8||s.pairs.length!==24)process.exit(1);console.log("R5b-plan",s.planHash)' "$RUNNER_TEMP/r5b-frozen-plan.json"
+      - name: Retrieve the exact already-sealed R5a eight historical direct writer replies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/r5a-sealed"
+          gh run download 44897700620 --repo "$GITHUB_REPOSITORY" --name ksgt-g10-p2-r5a-realized-prefix-40call-evidence --dir "$RUNNER_TEMP/r5a-sealed"
+          node -e 'let r=require("./experiments/g10-p2/r5/r5b_korean_realizer.cjs");let v=r.oldBaseline(process.argv[1]);console.log("R5b-cold-old-baseline",v.length,v.reduce((t,x)=>t+x.tokens,0))' "$RUNNER_TEMP/r5a-sealed"
+      - name: Actually generate new Korean prose with 20B and 120B under the same sources
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r5/r5b_korean_realizer.cjs --execute "$RUNNER_TEMP/r5b-live"
+      - name: Reconstruct all 32 complete Korean texts and compare real model cost
+        run: |
+          node experiments/g10-p2/r5/r5b_korean_realizer.cjs --score "$RUNNER_TEMP/r5b-live" "$RUNNER_TEMP/r5a-sealed" > "$RUNNER_TEMP/r5b-recount.json"
+          node experiments/g10-p2/r5/r5b_korean_realizer.cjs --owner-markdown "$RUNNER_TEMP/r5b-live" "$RUNNER_TEMP/r5a-sealed" > "$RUNNER_TEMP/r5b-plain-korean-reading-packet.md"
+          node -e 'let x=require(process.argv[1]);if(x.works!==8||x.completedWholeTexts!==32||x.newProviderCalls!==24||x.independentReaderVotes!==0||x.qualityAdvantage!=="NOT_ESTABLISHED")process.exit(1);console.log("R5b-actual-results",JSON.stringify(x))' "$RUNNER_TEMP/r5b-recount.json"
+          test "$(grep -c '^### 원고 A' "$RUNNER_TEMP/r5b-plain-korean-reading-packet.md")" -eq 8
+      - name: Preserve actual new model outputs and readable Korean texts as a raw research artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r5b-korean-realizer-20b120b-24realcalls
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r5b-frozen-plan.json
+            ${{ runner.temp }}/r5b-live/
+            ${{ runner.temp }}/r5b-recount.json
+            ${{ runner.temp }}/r5b-plain-korean-reading-packet.md
