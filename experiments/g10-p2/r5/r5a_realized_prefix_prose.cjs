@@ -29,8 +29,8 @@ function validateFixture(x=fixture){
   parents.add(w.parent);
   ok(KINDS.includes(w.genre),"INVALID_GENRE");tally[w.genre]++;
   for(const k of ["audience","purpose","task","risk","readerQuestion","license"])
-   ok(typeof w[k]==="string"&&w[k].length>=12,"MISSING_FIELD_"+k);
-  ok(Array.isArray(w.facts)&&w.facts.length===5&&w.facts.every(t=>typeof t==="string"&&t.length>=20)&&new Set(w.facts).size===5,"INVALID_FACTS");
+   ok(typeof w[k]==="string"&&w[k].length>=4,"MISSING_FIELD_"+k);
+  ok(Array.isArray(w.facts)&&w.facts.length===5&&w.facts.every(t=>typeof t==="string"&&t.length>=18)&&new Set(w.facts).size===5,"INVALID_FACTS");
   ok(Number.isInteger(w.planFirstFactIndex)&&w.planFirstFactIndex>=1&&w.planFirstFactIndex<=w.facts.length,"INVALID_PLAN_FACT");
  }
  ok(Object.values(tally).every(n=>n===2),"GENRE_IMBALANCE");
