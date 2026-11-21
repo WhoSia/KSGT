@@ -42,6 +42,7 @@ jobs:
       - name: Frozen fresh Korean writing source and no-call algorithm preflight
         run: |
           node experiments/g10-p2/r5/r5g_korean_discourse_order_realizer.cjs --preflight > "$RUNNER_TEMP/r5g-preflight-plan.json"
+          test -s "$RUNNER_TEMP/r5g-preflight-plan.json"
           node -e 'const x=require(process.argv[1]);if(x.works!==8||x.newCalls!==16||x.perWork.length!==8||x.perWork.some(y=>y.solution.nodeCount!==6))process.exit(1);console.log("R5g-actual-source-topologies",x.planHash,x.perWork.map(y=>y.id+":"+y.solution.validOrders).join(","))' "$RUNNER_TEMP/r5g-preflight-plan.json"
       - name: Generate real complete Korean prose from direct 120B vs executable DAG ordering 120B
         env:
