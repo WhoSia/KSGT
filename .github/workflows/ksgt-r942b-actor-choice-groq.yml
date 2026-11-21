@@ -1,0 +1,51 @@
+name: KSGT R9.42b Explicit Actor Choice
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r942b-actor-choice-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r942b-actor-choice-groq
+  cancel-in-progress: false
+
+jobs:
+  actor-choice:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regression tests for evidence and choice
+        run: |
+          node --test experiments/discourse-state/*.test.cjs
+          node experiments/discourse-state/actor-choice-pilot.cjs --plan > "$RUNNER_TEMP/r942b-plan.json"
+      - name: Compare raw and candidate choice decisions
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/discourse-state/actor-choice-pilot.cjs --execute "$RUNNER_TEMP/r942b-run"
+      - name: Verify receipts and print choice table
+        run: |
+          node experiments/discourse-state/actor-choice-pilot.cjs --score "$RUNNER_TEMP/r942b-run" > "$RUNNER_TEMP/r942b-results.json"
+          node -e 'const r=require(process.argv[1]);for(const arm of ["raw","candidate_inventory"]){const a=r.map(x=>x.model[arm]);console.log(arm,JSON.stringify({total:a.length,valid:a.filter(x=>x.choice).length,matched:a.filter(x=>x.agreesWithAnnotatedRule).length,omits:a.filter(x=>x.choice==="omit").length,nonempty:a.filter(x=>x.text!==null).length,tokens:a.reduce((s,x)=>s+(x.tokens||0),0),rows:r.map(x=>({id:x.id,expect:x.expected,decision:x.model[arm].choice}))}))}' "$RUNNER_TEMP/r942b-results.json"
+      - name: Preserve run evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r942b-actor-choice-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r942b-plan.json
+            ${{ runner.temp }}/r942b-run/
+            ${{ runner.temp }}/r942b-results.json

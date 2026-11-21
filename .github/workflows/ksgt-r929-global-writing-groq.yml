@@ -1,0 +1,48 @@
+name: KSGT R9.29 Groq Global Writing
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r929-global-writing-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r929-global-writing-groq
+  cancel-in-progress: false
+
+jobs:
+  public-writing:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify paired briefs and revision regression
+        run: |
+          node --test experiments/g10-p1/r924_anchored_revision_v01.test.cjs experiments/g10-p1/r926_repeated_revision_v01.test.cjs experiments/g10-p1/r928_scope_and_prose_v01.test.cjs experiments/g10-p1/r929_global_writing_v01.test.cjs
+          node experiments/g10-p1/r929_global_writing_v01.cjs --plan > "$RUNNER_TEMP/r929-plan-safe.json"
+      - name: Run 18 matched whole-document generation calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p1/r929_global_writing_v01.cjs --execute "$RUNNER_TEMP/r929-run"
+      - name: Archive attempt markers, response receipts and token usage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r929-global-writing-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r929-plan-safe.json
+            ${{ runner.temp }}/r929-run/summary.json
+            ${{ runner.temp }}/r929-run/*.attempt.json
+            ${{ runner.temp }}/r929-run/*.result.json

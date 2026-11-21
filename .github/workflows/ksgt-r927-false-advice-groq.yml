@@ -1,0 +1,48 @@
+name: KSGT R9.27 Groq False Advice Pilot
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r927-false-advice-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r927-false-advice-groq
+  cancel-in-progress: false
+
+jobs:
+  public-revision:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify bounded input and revision regression
+        run: |
+          node --test experiments/g10-p1/r924_anchored_revision_v01.test.cjs experiments/g10-p1/r926_repeated_revision_v01.test.cjs
+          node experiments/g10-p1/r926_repeated_revision_v01.cjs --plan-resistance > "$RUNNER_TEMP/r927-plan-safe.json"
+      - name: Run two repeats across the three correct drafts and false advice
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p1/r926_repeated_revision_v01.cjs --execute-resistance "$RUNNER_TEMP/r927-run" "$RUNNER_TEMP/r927-summary.json"
+      - name: Archive attempt markers, response receipts and token usage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r927-false-advice-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r927-plan-safe.json
+            ${{ runner.temp }}/r927-summary.json
+            ${{ runner.temp }}/r927-run/*.attempt.json
+            ${{ runner.temp }}/r927-run/*.result.json

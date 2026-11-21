@@ -1,0 +1,46 @@
+name: KSGT R9.38 Fact Visibility
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r938-fact-visibility-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r938-fact-visibility-groq
+  cancel-in-progress: false
+
+jobs:
+  fact-visibility:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify fixed alternatives and discourse transitions
+        run: |
+          node --test experiments/discourse-state/*.test.cjs
+          node experiments/discourse-state/visibility-pilot.cjs --plan > "$RUNNER_TEMP/r938-plan-safe.json"
+      - name: Generate Korean prose under matched fact visibility
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/discourse-state/visibility-pilot.cjs --execute "$RUNNER_TEMP/r938-run"
+      - name: Archive attempt markers, response receipts and token usage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r938-fact-visibility-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r938-plan-safe.json
+            ${{ runner.temp }}/r938-run/

@@ -1,0 +1,341 @@
+[
+  {
+    "id": "HANDOVER",
+    "target": "민지",
+    "distractor": "수현",
+    "named": "민지가 열쇠를 안내실에 맡겼어요.",
+    "omitted": "열쇠를 안내실에 맡겼어요.",
+    "variants": [
+      {
+        "reader": "지후",
+        "passage": "폐관 뒤 열쇠는 인수 담당자가 안내실에 맡기기로 했다. 지후에게 간 당번표에는 인수 담당으로 민지 한 명이 적혀 있었다. 나경에게 전달된 이전 표에는 민지와 수현이 공동 담당이라고 적혀 있었고, 새 표는 지후에게만 갔다.",
+        "active": [
+          "민지"
+        ],
+        "allowOmit": true,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "지후",
+            "referents": [
+              "민지"
+            ]
+          },
+          {
+            "kind": "focus",
+            "reader": "나경",
+            "referents": [
+              "민지",
+              "수현"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "나경",
+        "passage": "폐관 뒤 열쇠는 인수 담당자가 안내실에 맡기기로 했다. 지후에게 간 당번표에는 인수 담당으로 민지 한 명이 적혀 있었다. 나경에게 전달된 이전 표에는 민지와 수현이 공동 담당이라고 적혀 있었고, 새 표는 지후에게만 갔다.",
+        "active": [
+          "민지",
+          "수현"
+        ],
+        "allowOmit": false,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "지후",
+            "referents": [
+              "민지"
+            ]
+          },
+          {
+            "kind": "focus",
+            "reader": "나경",
+            "referents": [
+              "민지",
+              "수현"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "QUOTED",
+    "target": "예린",
+    "distractor": "태호",
+    "named": "예린이 먼저 사진을 골랐대.",
+    "omitted": "먼저 사진을 골랐대.",
+    "variants": [
+      {
+        "reader": "소연",
+        "passage": "소연은 편집실 밖 이야기에서 예린과 태호 두 사람을 들었다. 지금 읽는 문장은 반장이 편집실에서 남긴 쪽지를 옮긴 인용문 안에 붙는다. 쪽지는 지금부터 예린이 한 일을 순서대로 적겠다는 말로 시작한다.",
+        "active": [
+          "예린"
+        ],
+        "allowOmit": true,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "소연",
+            "referents": [
+              "예린",
+              "태호"
+            ]
+          },
+          {
+            "kind": "enter"
+          },
+          {
+            "kind": "focus",
+            "reader": "소연",
+            "referents": [
+              "예린"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "소연",
+        "passage": "소연은 편집실 밖 이야기에서 예린과 태호 두 사람을 들었다. 지금 읽는 문장은 반장이 편집실에서 남긴 쪽지를 옮긴 인용문 안에 붙는다. 쪽지는 예린과 태호가 각각 한 일을 시간순으로 섞어 적겠다는 말로 시작한다.",
+        "active": [
+          "예린",
+          "태호"
+        ],
+        "allowOmit": false,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "소연",
+            "referents": [
+              "예린",
+              "태호"
+            ]
+          },
+          {
+            "kind": "enter"
+          },
+          {
+            "kind": "focus",
+            "reader": "소연",
+            "referents": [
+              "예린",
+              "태호"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "QUOTE_RETURN",
+    "target": "지안",
+    "distractor": "우혁",
+    "named": "지안이 마지막으로 전원을 껐어.",
+    "omitted": "마지막으로 전원을 껐어.",
+    "variants": [
+      {
+        "reader": "현정",
+        "passage": "현정에게 지안의 마감 작업만 차례대로 들려주고 있었다. 중간에 지안과 우혁이 나눠 한 전날 업무의 기록을 인용했다. 이제 인용을 끝내고 지안이 하던 오늘 마감 작업의 다음 순서를 말한다.",
+        "active": [
+          "지안"
+        ],
+        "allowOmit": true,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "현정",
+            "referents": [
+              "지안"
+            ]
+          },
+          {
+            "kind": "enter"
+          },
+          {
+            "kind": "focus",
+            "reader": "현정",
+            "referents": [
+              "지안",
+              "우혁"
+            ]
+          },
+          {
+            "kind": "leave"
+          }
+        ]
+      },
+      {
+        "reader": "현정",
+        "passage": "현정에게 지안의 마감 작업만 차례대로 들려주고 있었다. 중간에 지안과 우혁이 나눠 한 전날 업무의 기록을 인용했다. 바로 뒤 문장까지 전날 기록을 인용하며, 그 기록은 둘 중 어느 쪽 일을 적는지 따로 밝히지 않는다.",
+        "active": [
+          "지안",
+          "우혁"
+        ],
+        "allowOmit": false,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "현정",
+            "referents": [
+              "지안"
+            ]
+          },
+          {
+            "kind": "enter"
+          },
+          {
+            "kind": "focus",
+            "reader": "현정",
+            "referents": [
+              "지안",
+              "우혁"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SECOND_REPLY",
+    "target": "다빈",
+    "distractor": "준서",
+    "named": "다빈 씨가 답을 먼저 보냈습니다.",
+    "omitted": "답을 먼저 보냈습니다.",
+    "variants": [
+      {
+        "reader": "보라",
+        "passage": "목요일 접수처에 보낼 답을 준비한 사람은 다빈이었다. 보라가 본 대화에서도 내내 다빈이 보낼 답만 다뤘다. 준서는 월요일 명단에만 있었고 목요일 답에는 관여하지 않았다.",
+        "active": [
+          "다빈"
+        ],
+        "allowOmit": true,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "보라",
+            "referents": [
+              "다빈"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "보라",
+        "passage": "목요일 접수처에 보낼 답을 준비한 사람은 처음에 다빈뿐이었다. 그런데 보라가 보는 대화에 준서도 들어와 같은 접수처에 별도 답을 보내겠다고 했다. 두 사람의 답 가운데 어느 쪽이 먼저 도착했는지는 보라에게 아직 전하지 않았다.",
+        "active": [
+          "다빈",
+          "준서"
+        ],
+        "allowOmit": false,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "보라",
+            "referents": [
+              "다빈"
+            ]
+          },
+          {
+            "kind": "add",
+            "reader": "보라",
+            "referent": "준서"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "REOPEN",
+    "target": "은채",
+    "distractor": "도윤",
+    "named": "은채가 남은 상자를 가져갔어.",
+    "omitted": "남은 상자를 가져갔어.",
+    "variants": [
+      {
+        "reader": "가람",
+        "passage": "가람에게 처음에는 은채와 도윤의 정리 작업을 함께 이야기했다. 도윤의 얘기는 거기서 마쳤고, 이제부터는 물품실에 돌아온 은채가 한 일을 순서대로 말하겠다고 가람에게 밝혔다.",
+        "active": [
+          "은채"
+        ],
+        "allowOmit": true,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "가람",
+            "referents": [
+              "은채",
+              "도윤"
+            ]
+          },
+          {
+            "kind": "focus",
+            "reader": "가람",
+            "referents": [
+              "은채"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "가람",
+        "passage": "가람에게 처음에는 은채와 도윤의 정리 작업을 함께 이야기했다. 두 사람이 모두 물품실에 돌아왔고, 가람에게는 이제부터 두 사람이 해 놓은 일을 순서대로 섞어서 말하겠다고 밝혔다.",
+        "active": [
+          "은채",
+          "도윤"
+        ],
+        "allowOmit": false,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "가람",
+            "referents": [
+              "은채",
+              "도윤"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "NEW_LISTENER",
+    "target": "연우",
+    "distractor": "세은",
+    "named": "연우가 문 앞에서 기다리고 있어.",
+    "omitted": "문 앞에서 기다리고 있어.",
+    "variants": [
+      {
+        "reader": "윤서",
+        "passage": "세은은 윤서에게 전화해 지금부터 연우의 동선을 알려 주겠다고 했다. 윤서는 처음부터 통화 내용을 들었다. 하진은 방금 다른 전화로 연결되어 앞서 어떤 사람 얘기를 했는지 모른다.",
+        "active": [
+          "연우"
+        ],
+        "allowOmit": true,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "윤서",
+            "referents": [
+              "연우"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "하진",
+        "passage": "세은은 윤서에게 전화해 지금부터 연우의 동선을 알려 주겠다고 했다. 윤서는 처음부터 통화 내용을 들었다. 하진은 방금 다른 전화로 연결되어 앞서 어떤 사람 얘기를 했는지 모른다.",
+        "active": null,
+        "allowOmit": false,
+        "events": [
+          {
+            "kind": "focus",
+            "reader": "윤서",
+            "referents": [
+              "연우"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

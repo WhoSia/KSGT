@@ -1,0 +1,46 @@
+name: KSGT R9.40 Notice Scope
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r940-notice-scope-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r940-notice-scope-groq
+  cancel-in-progress: false
+
+jobs:
+  notice-scope:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify fixed alternatives and discourse transitions
+        run: |
+          node --test experiments/discourse-state/*.test.cjs
+          node experiments/discourse-state/notice-scope-pilot.cjs --plan > "$RUNNER_TEMP/r940-plan-safe.json"
+      - name: Render eight structured notices with the model baseline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/discourse-state/notice-scope-pilot.cjs --execute "$RUNNER_TEMP/r940-run"
+      - name: Archive attempt markers, response receipts and token usage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r940-notice-scope-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r940-plan-safe.json
+            ${{ runner.temp }}/r940-run/

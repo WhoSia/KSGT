@@ -1,0 +1,9 @@
+# R9.32 — Whole-scene and Last-two-sentence Revision
+
+Six exposed, synthetic R9.31 drafts with identical paired source/draft payloads. The unedited original is a third, zero-call candidate. COIN fixed and LETTER fixed have overt end commentary. LIGHT fixed has an extra final action and an earlier lighting conflict. LIGHT free is a clean control. KEY fixed has malformed prose before the editable suffix. GATE free has errors within and before the suffix. Cases were selected after R9.31 and are diagnostic, not a held-out rate sample.
+
+Use Groq GPT-OSS 20B with the previous runner settings. Alternate call order. Only the output instruction changes between whole and suffix. Suffix reconstruction is the exact original prefix followed by the raw returned suffix. A duplicated prefix or a commentary-only response counts as a failure when it is present. Record the original, both new texts and hashes. No second try for a weak completion.
+
+Before revealing whole versus suffix, use the full brief to judge whether the original defect was repaired, the source's core scene and last beat were retained, no material change or addition was introduced or retained, and no conspicuous prose error remains. Report these individually, and the conjunction. For LIGHT free, report the no-op rate and whether any change affects the scene. Original unmet targets remain visible even when a suffix repairs the end. The reviewer is a single investigator and can infer arm from prefix overlap. No naturalness or reader-preference claim is supported.
+
+Reconstruct a suffix response by applying splitEnding to the archived original and concatenating its prefix with the returned text. The result JSON produced by the shared runner contains only the provider's response in both arms. It must not be read as the reconstructed final scene in the suffix arm.

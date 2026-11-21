@@ -1,0 +1,48 @@
+name: KSGT R9.36 Discourse State Contrast
+
+on:
+  push:
+    branches: [research/r9-24-anchored-revision]
+    paths: ['.github/workflows/ksgt-r936-discourse-state-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-r936-discourse-state-groq
+  cancel-in-progress: false
+
+jobs:
+  discourse-contrast:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/r9-24-anchored-revision' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify fixed alternatives and discourse transitions
+        run: |
+          node --test experiments/discourse-state/*.test.cjs
+          node experiments/discourse-state/new-passage-pilot.cjs --plan > "$RUNNER_TEMP/r936-plan-safe.json"
+      - name: Run 36 matched choice and state-extraction calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/discourse-state/new-passage-pilot.cjs --execute "$RUNNER_TEMP/r936-run"
+      - name: Archive attempt markers, response receipts and token usage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r936-discourse-state-groq
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r936-plan-safe.json
+            ${{ runner.temp }}/r936-run/summary.json
+            ${{ runner.temp }}/r936-run/*.attempt.json
+            ${{ runner.temp }}/r936-run/*.result.json
