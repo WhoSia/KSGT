@@ -59,7 +59,9 @@ function renderForm(data,panel,version,stage){
  if(stage==="A")text+="**A단계:** 원천 사실 목록은 보여 주지 않습니다. 자연스러움·목적 달성·독해·최초 수정 위치를 평가해 주세요. 다른 원천 감사 자료를 보지 않은 사람이 참여해야 합니다.\n\n";
  else text+="**B단계:** 원천 사실을 대조해 원천에 없는 약속·장소·행위자·인과·추가 사건·누락된 조건을 구체적으로 확인합니다. 다른 독자 평가 자료나 모델 판단표는 보지 말아 주세요.\n\n";
  for(const [i,row] of rows.entries()){
-  const forward=(i+version)%2===0;
+  // Orientation is based on frozen panel identity, not reordered form slot;
+  // otherwise reversing a four-item form cancels the intended arm flip.
+  const forward=(ids.indexOf(row.id)+version)%2===0;
   const A=forward?row.modelLocalPatch:row.fullRewrite;
   const B=forward?row.fullRewrite:row.modelLocalPatch;
   text+="## 글감 "+(i+1)+" · "+row.genre+"\n\n"+
