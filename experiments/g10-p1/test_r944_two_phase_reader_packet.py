@@ -6,7 +6,7 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
-from r944_two_phase_packet import cards_for_form, generate, read_evidence
+from r944_two_phase_reader_packet import cards_for_form, generate, read_evidence
 
 COHORT = Path(__file__).parent / 'fixtures' / 'r934_reader_cohort_v01.json'
 ARMS = ('direct', 'rich', 'guided')
