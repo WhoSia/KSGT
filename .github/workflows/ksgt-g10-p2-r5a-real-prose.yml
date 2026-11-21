@@ -1,0 +1,62 @@
+name: KSGT G10-P2 R5a Actual Realized-Prefix Korean Prose Pilot
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths:
+      - '.github/workflows/ksgt-g10-p2-r5a-real-prose.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-g10-p2-r5a-20261121-author-synthetic-pilot-once
+  cancel-in-progress: false
+
+jobs:
+  actual-korean-prose-development:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 25
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify authenticated human contribution and zero bot authors
+        shell: bash
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+            echo 'BOT_CONTRIBUTION_ZERO violation'; exit 1
+          fi
+      - name: Execute native R5a full pipeline and older P2 regression gates before inference
+        run: |
+          node --test experiments/g10-p2/r5/*.test.cjs
+          node --test experiments/g10-p2/*.test.cjs
+          node experiments/g10-p2/r5/r5a_realized_prefix_prose.cjs --plan > "$RUNNER_TEMP/r5a-pre-execution-plan.json"
+          node -e 'let p=require(process.argv[1]);if(p.plannedTotalCalls!==40||p.sourceWorks!==8||p.cells.length!==16)process.exit(1);console.log("R5a-preflight",p.writerPlanHash)' "$RUNNER_TEMP/r5a-pre-execution-plan.json"
+      - name: Call GPT-OSS 20B on eight original author-exposed Korean writing tasks
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r5/r5a_realized_prefix_prose.cjs --execute "$RUNNER_TEMP/r5a-live"
+      - name: Cold score all 40 provider responses and preserve non-promoted evidence scope
+        run: |
+          node experiments/g10-p2/r5/r5a_realized_prefix_prose.cjs --score "$RUNNER_TEMP/r5a-live" > "$RUNNER_TEMP/r5a-readback-summary.json"
+          node -e 'let s=require(process.argv[1]);if(s.callCount!==40||s.completeTexts!==24||s.realIndependentReaderRatings!==0||s.proseQualityAdvantage!=="UNESTABLISHED")process.exit(1);console.log("R5a-evidence",JSON.stringify(s))' "$RUNNER_TEMP/r5a-readback-summary.json"
+      - name: Archive all real model responses, frozen prompts, hashes, failures and usage for Drive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r5a-realized-prefix-40call-evidence
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r5a-pre-execution-plan.json
+            ${{ runner.temp }}/r5a-live/
+            ${{ runner.temp }}/r5a-readback-summary.json
