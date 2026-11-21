@@ -64,7 +64,13 @@ function crossCheck({workId,realizedText,evidence,hypothesis}){
   }
   if(hypothesis.epistemic!==licensed.license.modality)
     return {decision:"REJECT",reason:"SOURCE_MODALITY_OR_CONDITION_PROMOTED",proof};
-  return {decision:"ALLOW",reason:"STRUCTURED_RELATION_AND_SOURCE_WITNESSED",
+  // R3 v0 refuses to trust a model's own semantic-role tuple as a certificate.
+  // Only authored exact full-sentence surfaces may be admitted in this toy court.
+  const allowed=new Set(fixture.works.find(w=>w.id===workId).examples
+    .filter(ex=>ex.expected==="ALLOW").map(ex=>ex.text));
+  if(!allowed.has(realizedText)||realizedText!==evidence)
+    return {decision:"ABSTAIN",reason:"NO_INDEPENDENT_SURFACE_RELATION_CERTIFICATE",proof};
+  return {decision:"ALLOW",reason:"STRUCTURED_RELATION_AND_AUTHORED_SURFACE_WITNESSED",
     modality:licensed.license.modality,proof};
 }
 function reviewText(workId,lines,claims){
