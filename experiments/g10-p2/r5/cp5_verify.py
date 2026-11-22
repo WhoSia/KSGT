@@ -13,6 +13,7 @@ import sys
 SCHEMA = 'ksgt.g9.p45.cp5.document-stats-multipart.v1'
 HEX64 = re.compile(r'^[0-9a-f]{64}$')
 BLOCK = 1024 * 1024
+MAX_JSONL_LINE_BYTES = 64 * 1024 * 1024
 
 
 class CP5Error(Exception):
@@ -41,9 +42,9 @@ def parse_manifest(manifest):
         raise CP5Error('NOT_A_STATISTICS_ONLY_MANIFEST')
     if data.get('source_table_file') != 'g9_p45_nikl_document_sufficient_stats_cp5.jsonl.gz':
         raise CP5Error('SOURCE_NAME_MISMATCH')
-    if not isinstance(data.get('source_table_bytes'), int) or data['source_table_bytes'] <= 0 or not HEX64.fullmatch(str(data.get('source_table_sha256', ''))):
+    if type(data.get('source_table_bytes')) is not int or data['source_table_bytes'] <= 0 or not HEX64.fullmatch(str(data.get('source_table_sha256', ''))):
         raise CP5Error('INVALID_SOURCE_CHECKSUM')
-    if not isinstance(data.get('document_rows'), int) or data['document_rows'] < 1:
+    if type(data.get('document_rows')) is not int or data['document_rows'] < 1:
         raise CP5Error('INVALID_ROW_COUNT')
     names = set()
     for i, p in enumerate(parts, 1):
@@ -124,7 +125,9 @@ def verify(manifest_path, parts_dir, with_rows=False):
         paths = [root / p['file_name'] for p in manifest['parts']]
         # gzip.GzipFile reads via buffer; compressed bytes remain original, no export.
         with ChainedReader(paths) as source, gzip.GzipFile(fileobj=io.BufferedReader(source, buffer_size=BLOCK)) as decoded:
-            while line := decoded.readline():
+            while line := decoded.readline(MAX_JSONL_LINE_BYTES + 1):
+                if len(line) > MAX_JSONL_LINE_BYTES:
+                    raise CP5Error('OVERSIZED_JSONL_LINE:' + str(count + 1))
                 if not line.strip():
                     raise CP5Error('EMPTY_JSONL_LINE:' + str(count + 1))
                 row = json.loads(line)
@@ -148,7 +151,7 @@ def main():
         result = verify(args.manifest, args.parts_dir, args.rows)
         if args.receipt:
             dst = Path(args.receipt).resolve()
-            if dst.exists() or dst == Path(args.manifest).resolve() or dst.parent == Path(args.parts_dir).resolve():
+            if dst.exists() or dst == Path(args.manifest).resolve() or dst.is_relative_to(Path(args.parts_dir).resolve()):
                 raise CP5Error('RECEIPT_PATH_MUST_BE_NEW_AND_OUTSIDE_PARTS_DIRECTORY')
             with dst.open('x', encoding='utf-8') as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)
