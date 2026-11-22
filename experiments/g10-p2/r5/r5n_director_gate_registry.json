@@ -1,0 +1,20 @@
+{
+  "schema": "ksgt.g10p2.director.gates.v1",
+  "as_of": "2026-11-23",
+  "overall_stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "provider_calls_historical": 340,
+  "new_provider_calls": 0,
+  "independent_reader_outcomes": 0,
+  "gates": [
+    {"id": "G0-CUSTODY", "status": "PARTIAL", "pass_requires": ["complete artifact inventory", "remote cold-byte SHA for byte-authoritative outputs"], "evidence": ["R5m and R5m.1 13 Drive files metadata-relisted"], "not_evidence": ["cold SHA of all uploads"]},
+    {"id": "G1-CP5", "status": "HOLD", "pass_requires": ["hash all 10 fragments", "match concatenated 857083889-byte gzip SHA", "parse JSONL rows if row count claimed"], "evidence": ["manifest exists", "10 sizes sum to 857083889", "13 synthetic verifier tests"], "not_evidence": ["12,352,778 rows actually parsed"]},
+    {"id": "G2-P36", "status": "HOLD", "pass_requires": ["actual-schema native adapter located or rebuilt from official source", "edition-aware tests", "provenance for original source offsets"], "evidence": ["historical official slot counts and annotation ontology"], "not_evidence": ["English reviewer-response adapter"]},
+    {"id": "G3-P62", "status": "PARTIAL", "pass_requires": ["work-level dependency identities", "exposure-disjoint split audit"], "evidence": ["R6 twelve machine proposal receipts from exposed records"], "not_evidence": ["12 human semantic judgments"]},
+    {"id": "G4-EDITORIAL", "status": "HOLD", "pass_requires": ["rights-cleared native Korean source and edit pairs", "stable work groups", "editor authenticity and mapping"], "evidence": [], "not_evidence": ["P45 EDF aggregate features"]},
+    {"id": "G5-EVAL", "status": "HOLD", "pass_requires": ["source-work-disjoint freeze", "preregistered model/cost/rubric", "independent blind reader and source fidelity audits"], "evidence": ["G10-P2 comparative design prose"], "not_evidence": ["completed independent reader ratings"]},
+    {"id": "G6-CODE", "status": "PARTIAL", "pass_requires": ["real-schema adapter executed", "whole-text writer and scorer integration", "regression suite"], "evidence": ["server-reported six synthetic adapter tests", "local 13 CP5 synthetic verifier tests"], "not_evidence": ["full Korean writing system validated"]}
+  ],
+  "dependencies": {"quality_claim": ["G4-EDITORIAL", "G5-EVAL", "G6-CODE"], "cp5_specific_claim": ["G1-CP5"], "p36_native_claim": ["G2-P36"], "P62_source_disjoint_claim": ["G3-P62"]},
+  "decision_branches": ["POSITIVE", "MIXED", "NULL", "INVALID"],
+  "no_auto_promotion": true
+}
