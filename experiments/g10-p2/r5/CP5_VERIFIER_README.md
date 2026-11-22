@@ -30,7 +30,7 @@ The optional receipt must be **new** and live outside the corpus parts directory
 python -m unittest -v test_cp5_verify.py
 ```
 
-These 9 tests use *only synthetic small compressed JSONL bytes*: exact content/row PASS, missing parts, modified bytes, incorrect sequence, path escape, manifest size mismatch, tampered aggregate digest, row count mismatch. Real CP5 part bytes are not present in this package.
+These 13 tests use *only synthetic small compressed JSONL bytes*: exact content/row PASS, missing parts, modified bytes, incorrect sequence, path escape, manifest size mismatch, tampered aggregate digest, row count mismatch, booleans in schema, oversized decoded rows, symbolic links and nested receipt output. Real CP5 part bytes are not present in this package.
 
 ## Provenance and scientific use
 
@@ -43,3 +43,6 @@ These 9 tests use *only synthetic small compressed JSONL bytes*: exact content/r
 
 ## Preserved copies (2026-11-23)
 [Authenticated Drive folder](https://drive.google.com/drive/folders/1vGOnNQX0KHLlTMU8uChPq7KKUAioz-NF) contains the original unmodified ZIP (SHA-256 `2289aa8e357965fb9f6433a7f25474759d17dbd9087e5d7990c51fe00972fef6`) and its five constituent files; remote file-size readback 6/6 succeeded. The user-facing Drive folder is authoritative archive; these tracked GitHub files are reproducible code, never private raw corpus.
+
+## R5m.1 hardening and custody
+The revised verifier caps each JSONL line at 64 MiB, refuses a receipt path inside the corpus parts directory even when nested, and rejects boolean values in integer manifest fields. It still has a potential time-of-check/time-of-use limitation if another process mutates fragments between checksum verification and optional decompression; use an immutable snapshot. The new [private Drive R5m.1 folder](https://drive.google.com/drive/folders/1aX_XB82o6Czw2q7DdHLPivlyf0ru-_qM) contains the updated code, 13-test suite, metadata manifest, README, receipt and ZIP, while the [original R5m archive](https://drive.google.com/drive/folders/1vGOnNQX0KHLlTMU8uChPq7KKUAioz-NF) remains intact. New ZIP 8,192 bytes, SHA-256 `bb60a54e51a2d9ea85e8ff690b307b3b63ab08e9e38ccbb4e1ba9aab4ec77972`. Drive file sizes were verified; full cold-byte SHA-256 readback of Google Drive objects is not yet claimed.
