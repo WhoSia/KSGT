@@ -4,7 +4,10 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from cp5_verify import verify, parse_manifest, CP5Error
+import contextlib
+import io
+from unittest.mock import patch
+from cp5_verify import verify, parse_manifest, CP5Error, main
 
 
 class Tests(unittest.TestCase):
@@ -69,6 +72,37 @@ class Tests(unittest.TestCase):
         self.manifest['document_rows'] = 7; self.save()
         with self.assertRaisesRegex(CP5Error, 'RECORDED_ROW_COUNT_MISMATCH'):
             verify(self.manifest_path, self.path, True)
+
+    def test_bool_manifest_fields_rejected(self):
+        self.manifest['document_rows'] = True; self.save()
+        with self.assertRaisesRegex(CP5Error, 'INVALID_ROW_COUNT'):
+            parse_manifest(self.manifest_path)
+
+    def test_bounded_row_decompression(self):
+        with patch('cp5_verify.MAX_JSONL_LINE_BYTES', 12):
+            with self.assertRaisesRegex(CP5Error, 'OVERSIZED_JSONL_LINE'):
+                verify(self.manifest_path, self.path, True)
+
+    def test_receipt_nested_inside_corpus_rejected(self):
+        dst_dir = self.path / 'nested_receipts'
+        dst_dir.mkdir()
+        output = dst_dir / 'receipt.json'
+        argv = ['cp5_verify.py', '--manifest', str(self.manifest_path),
+                '--parts-dir', str(self.path), '--receipt', str(output)]
+        with patch('sys.argv', argv), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(main(), 1)
+        self.assertFalse(output.exists())
+
+    def test_symlinked_part_is_rejected(self):
+        part = self.path / self.manifest['parts'][0]['file_name']
+        target = self.path / 'original-part'
+        part.rename(target)
+        try:
+            part.symlink_to(target)
+        except (OSError, NotImplementedError):
+            self.skipTest('symlink unsupported in test environment')
+        with self.assertRaisesRegex(CP5Error, 'MISSING_OR_UNSAFE_PART'):
+            verify(self.manifest_path, self.path)
 
     def test_joined_hash(self):
         self.manifest['source_table_sha256'] = '0'*64; self.save()
