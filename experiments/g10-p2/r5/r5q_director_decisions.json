@@ -1,0 +1,11 @@
+{
+  "schema": "ksgt.g10p2.r5q.lira-decision-update.v1",
+  "weight_formula": "0.30*gate + 0.30*quality + 0.20*info + 0.15*feasibility + 0.05*(1-cost)",
+  "scale": "subjective operational prioritization, not probability",
+  "base": {"id":"D1-NIKL24-ACCESS", "gate": 0.98, "quality": 0.96, "info": 0.96, "feasibility": 0.70, "cost":0.40},
+  "updated": {"id":"D1-NIKL24-ACCESS", "gate": 0.98, "quality": 0.96, "info": 0.96, "feasibility": 0.77, "cost":0.40},
+  "comparison": {"id":"D2-BLIND-EVAL-PREREG", "gate": 0.95, "quality":0.95, "info": 0.95, "feasibility":0.86, "cost":0.32},
+  "decision": "D1_AND_D2_JOINT_P0",
+  "new_evidence": "User reports submitted application and stated agreement period; no downloaded corpus bytes or full rights text",
+  "quality_promotion": false
+}
