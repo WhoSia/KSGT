@@ -77,12 +77,14 @@
       ],
       "evidence": [
         "R5o: existing KoLLA v2 exact original ZIP and M2 bytes replayed (1418 sentences, 1410 paired annotator blocks; 1 overlapping-edit ABSTAIN); Korean L2 sentence correction only",
-        "R5p official NIKL 2024 construction report checked: 1,500 instruction/example feedback targets, including language-model evaluations corrected by experts; not 1,500 certified human edits to source prose"
+        "R5p official NIKL 2024 construction report checked: 1,500 instruction/example feedback targets, including language-model evaluations corrected by experts; not 1,500 certified human edits to source prose",
+        "R5q USER-ATTESTED 2026-11-23 application submitted for NIKL 2024 writing-correction instruction corpus; stated usage agreement through 2075-12-31"
       ],
       "not_evidence": [
         "P45 EDF aggregate features",
         "native Korean paragraph-level source/edit pairs; complete 100-essay boundary; independently assessed prose quality",
-        "Expert-edited language-model feedback treated as before/after native paragraph rewrite; actual NIKL 2024 JSON not acquired"
+        "Expert-edited language-model feedback treated as before/after native paragraph rewrite; actual NIKL 2024 JSON not acquired",
+        "Actual authenticated download, released raw JSON fields, unrestricted redistribution or model training rights, before/after full-prose human rewrites"
       ]
     },
     {
@@ -142,5 +144,5 @@
     "INVALID"
   ],
   "no_auto_promotion": true,
-  "latest_evidence_revision": "R5p_NIKL_2024_FEEDBACK_AUTHORITY_CORRECTION"
+  "latest_evidence_revision": "R5q_USER_APPLICATION_SUBMITTED_RIGHTS_AND_RAW_BYTES_HOLD"
 }
