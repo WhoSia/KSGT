@@ -1,3 +1,5 @@
+> **SECURITY ERRATUM (R5s, 2026-11-23):** The original R5r public synthetic receipt included an unkeyed SHA-256 `assignment_commitment` of a 7-arm permutation. Because only 7! = 5,040 mappings exist, brute-force mapping recovery succeeded for both original synthetic rows. **DO NOT use the old receipt or seed for any live blind study.** The source generator was patched in R5s to omit this public field; the former receipt remains a deprecated historical audit fixture. See [R5s repair](38_R5S_BLIND_COMMITMENT_LEAKAGE_REPAIR_20261123.md). Real evaluator blinding is still not certified.
+
 # KSGT G10-P2 R5r — Prospective human evaluation preflight (NOT a registered powered experiment)
 
 **Stage:** `G10-P2 OPEN / QUALITY_HOLD`; no new model generations, no reader ratings, no independent source-work test items, no new model trained. R5q user-attested 2024 NIKL corpus application is not a corpus download or license grant.
