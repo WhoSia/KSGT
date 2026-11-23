@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 from r5u_lira_gate import audit_lines,LineHold
-TEXT=(Path(__file__).parent/'R5U_LIRA_LINES.md').read_text(encoding='utf-8')
+TEXT=(Path(__file__).parent/'r5u_lira_lines.md').read_text(encoding='utf-8')
 class Tests(unittest.TestCase):
     def test_all_lines(self):self.assertEqual(len(audit_lines(TEXT)),14)
     def test_no_unscored(self):
