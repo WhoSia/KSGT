@@ -1,0 +1,11 @@
+{
+  "schema":"ksgt.g10p2.r5v.director.v1", "stage":"G10-P2 OPEN / QUALITY_HOLD", "new_provider_calls":0,"historical_provider_calls":340,"human_reader_outcomes":0,
+  "score_semantics":"subjective provenance and priority on 0..1 scale, not probabilities",
+  "decisions":[
+    {"id":"D2-OUTCOME-CUSTODY","P":0.96,"E":0.97,"gate":"READY","decision":"SYNTHETIC_FIX_COMPLETED_REAL_LOCK_HOLD"},
+    {"id":"D2-SOURCE-UNCERTAINTY","P":0.97,"E":0.93,"gate":"READY","decision":"MISSINGNESS_SENSITIVITY_IMPLEMENTED_REAL_AUDIT_HOLD"},
+    {"id":"D1-NIKL24-RAW-ACCESS","P":0.93,"E":0.56,"gate":"PREPARE","decision":"APPLICATION_REPORTED_RAW_AND_LICENSE_UNVERIFIED"},
+    {"id":"D3-INDEPENDENT-WORKS","P":0.94,"E":0.70,"gate":"PREPARE","decision":"PARENT_WORK_PROVENANCE_UNVERIFIED"},
+    {"id":"D6-TRAIN-NEW-MODEL","P":0.32,"E":0.46,"gate":"BLOCKED","decision":"HUMAN_QUALITY_MISSING"}
+  ]
+}
