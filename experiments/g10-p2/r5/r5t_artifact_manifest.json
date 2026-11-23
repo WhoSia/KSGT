@@ -1,0 +1,45 @@
+{
+  "schema": "ksgt.g10p2.r5t.custody.v1",
+  "test_suite": "24/24 synthetic PASS",
+  "historical_provider_calls": 340,
+  "new_provider_calls": 0,
+  "independent_human_outcomes": 0,
+  "real_nikl2024_raw_acquired": false,
+  "files": [
+    {
+      "name": "r5t_lira_multiaxis.py",
+      "bytes": 5726,
+      "sha256": "2561981bef13f6a4e7036d502e749a9eae82d09e806fdb03e23fb74d0804b36f"
+    },
+    {
+      "name": "r5t_evaluation_contract.py",
+      "bytes": 2190,
+      "sha256": "233b319f384f4b02135f215f9a15be067a5010660d1e0974de559bb7db3d2944"
+    },
+    {
+      "name": "test_r5t_multiaxis.py",
+      "bytes": 3980,
+      "sha256": "cddbac350052f69f1769f450f0d5c78f3fea980de5dc378df5b219aec46fdab1"
+    },
+    {
+      "name": "R5T_DECISIONS.json",
+      "bytes": 6394,
+      "sha256": "6ea3692aa47c279b75caa19c57c0079f4b0e2b22d462896b2ba4de4a0b25afe4"
+    },
+    {
+      "name": "R5T_LIRA_LINES.md",
+      "bytes": 2155,
+      "sha256": "a99426b7560d3af6955747ccd9ecd6748649cde217023f8757a694861e62edb9"
+    },
+    {
+      "name": "R5T_AUDIT_RECEIPT.json",
+      "bytes": 5676,
+      "sha256": "f2c5e62f9ab74b936d61a5cd8fcb5333ed4d8051c0ca6157062826a24aa2cd8b"
+    },
+    {
+      "name": "39_R5T_MULTIDIMENSIONAL_LIRA_JEV_AND_EVALUATION_CONTRACT_20261123.md",
+      "bytes": 7141,
+      "sha256": "f8fa4195752c06e53a7f7090c4a8b2063b743b83a27ea3ef078d830b161b8957"
+    }
+  ]
+}
