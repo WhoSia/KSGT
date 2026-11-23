@@ -1,0 +1,39 @@
+{
+  "scenarios": 243,
+  "delta": 0.1,
+  "winner_counts": {
+    "D1-NIKL24-ACCESS": 48,
+    "D2-BLIND-EVAL-PREREG": 195,
+    "D3-SOURCE-WORK-BOUNDARY": 0,
+    "D4-NIKL-NATIVE-ADAPTER": 0,
+    "D5-CP5-FULL-HASH": 0,
+    "D6-NEW-READER-STATE-MODEL": 0
+  },
+  "bounds": {
+    "D1-NIKL24-ACCESS": {
+      "min": 0.8322,
+      "max": 0.9553
+    },
+    "D2-BLIND-EVAL-PREREG": {
+      "min": 0.88,
+      "max": 0.9459
+    },
+    "D3-SOURCE-WORK-BOUNDARY": {
+      "min": 0.8072,
+      "max": 0.9155
+    },
+    "D4-NIKL-NATIVE-ADAPTER": {
+      "min": 0.6361,
+      "max": 0.7482
+    },
+    "D5-CP5-FULL-HASH": {
+      "min": 0.3841,
+      "max": 0.5284
+    },
+    "D6-NEW-READER-STATE-MODEL": {
+      "min": 0.3193,
+      "max": 0.4009
+    }
+  },
+  "note": "Specified weight-space perturbation, not empirical confidence intervals"
+}
