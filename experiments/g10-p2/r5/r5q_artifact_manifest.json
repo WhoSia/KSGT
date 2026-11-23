@@ -1,0 +1,44 @@
+{
+  "schema": "ksgt.g10p2.r5q.custody.v1",
+  "files": [
+    {
+      "name": "nikl24_intake.py",
+      "bytes": 4004,
+      "sha256": "c48ae4250d8f596713beefd6a91e4c6a39bd9da41077046e24ca8779c787e38c"
+    },
+    {
+      "name": "test_nikl24_intake.py",
+      "bytes": 3800,
+      "sha256": "fe77d3196d752f3a6cd2fe148ece206b094294992256b1afaff404043ee408fa"
+    },
+    {
+      "name": "test_r5q_gate.py",
+      "bytes": 2880,
+      "sha256": "a4a3aa4cc8f589381b80bb084d5e1937b0d96275e0e9f251924cfbf28f5adc43"
+    },
+    {
+      "name": "R5Q_LIRA_LINES.md",
+      "bytes": 3051,
+      "sha256": "a8110f919446b5a23b8371f346a8f91607f4a6dc96de8756accf408af97b8cba"
+    },
+    {
+      "name": "R5Q_APPLICATION_GATE.json",
+      "bytes": 1062,
+      "sha256": "42a5384be991ac42c0e2dd40cd0507e5fde34bf1b9082ac9d8c72b9bd19d5d48"
+    },
+    {
+      "name": "R5Q_DIRECTOR_DECISIONS.json",
+      "bytes": 778,
+      "sha256": "b93a69a8b47bb3acd0d30666be28e8c97b3ee104d3ccc685ea702f09cbb17ae6"
+    },
+    {
+      "name": "R5Q_PREREG_AND_ADMISSION.md",
+      "bytes": 6121,
+      "sha256": "a447cb45452abe14591a088cf67fbc38acf8ccbee00fd9830528313d705d2385"
+    }
+  ],
+  "test_result": "19/19 local synthetic+gate unit tests",
+  "raw_corpus_included": false,
+  "archive_acquired": false,
+  "quality_hold": true
+}
