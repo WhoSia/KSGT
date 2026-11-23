@@ -1,0 +1,223 @@
+{
+  "schema": "ksgt.g10p2.r5t.lira.multiaxis.v1",
+  "stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "verified_human_outcomes": 0,
+  "real_nikl24_raw_acquired": false,
+  "sources": {
+    "R1": "https://github.com/WhoSia/KSGT/blob/research/g10-p2-reader-state-coupled/experiments/g10-p2/r5/02_CAUSAL_IDENTIFICATION_PREREG_20261121.md",
+    "R2": "https://github.com/WhoSia/KSGT/blob/research/g10-p2-reader-state-coupled/experiments/g10-p2/r5/37_R5R_BLIND_EVALUATION_PREFLIGHT_20261123.md",
+    "R3": "https://github.com/WhoSia/KSGT/blob/research/g10-p2-reader-state-coupled/experiments/g10-p2/r5/38_R5S_BLIND_COMMITMENT_LEAKAGE_REPAIR_20261123.md",
+    "R4": "https://github.com/WhoSia/KSGT/blob/research/g10-p2-reader-state-coupled/experiments/g10-p2/r5/36_R5Q_NIKL24_APPLICATION_AND_RIGHTS_SAFE_INTAKE_20261123.md",
+    "R5": "https://github.com/WhoSia/KSGT/blob/research/g10-p2-reader-state-coupled/experiments/g10-p2/r5/r5p_lira_decisions.json"
+  },
+  "decisions": [
+    {
+      "id": "D1-NIKL24-ACCESS",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.91,
+        "language_quality_relevance": 0.94,
+        "execution_readiness": 0.73,
+        "reversibility": 0.9,
+        "risk_reduction": 0.88,
+        "cost_efficiency": 0.72
+      },
+      "evidence": {
+        "source_directness": 0.94,
+        "reproducibility": 0.3,
+        "independence": 0.49,
+        "completeness": 0.51
+      },
+      "uncertainty": {
+        "bottleneck_relief": 0.14,
+        "causal_information": 0.14,
+        "language_quality_relevance": 0.14,
+        "execution_readiness": 0.14,
+        "reversibility": 0.14,
+        "risk_reduction": 0.14,
+        "cost_efficiency": 0.14
+      },
+      "execution_gate": "PREPARE",
+      "blockers": [
+        "RAW_CORPUS_NOT_ACQUIRED",
+        "RIGHTS_NOT_VERIFIED"
+      ],
+      "source_ids": [
+        "R4",
+        "R5"
+      ]
+    },
+    {
+      "id": "D2-BLIND-EVAL-PREREG",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.97,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.88,
+        "reversibility": 0.94,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.83
+      },
+      "evidence": {
+        "source_directness": 0.97,
+        "reproducibility": 0.78,
+        "independence": 0.66,
+        "completeness": 0.73
+      },
+      "uncertainty": {
+        "bottleneck_relief": 0.08,
+        "causal_information": 0.08,
+        "language_quality_relevance": 0.08,
+        "execution_readiness": 0.08,
+        "reversibility": 0.08,
+        "risk_reduction": 0.08,
+        "cost_efficiency": 0.08
+      },
+      "execution_gate": "READY",
+      "blockers": [],
+      "source_ids": [
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "id": "D3-WORK-LINEAGE",
+      "utility": {
+        "bottleneck_relief": 0.88,
+        "causal_information": 0.91,
+        "language_quality_relevance": 0.89,
+        "execution_readiness": 0.74,
+        "reversibility": 0.88,
+        "risk_reduction": 0.92,
+        "cost_efficiency": 0.76
+      },
+      "evidence": {
+        "source_directness": 0.95,
+        "reproducibility": 0.62,
+        "independence": 0.55,
+        "completeness": 0.68
+      },
+      "uncertainty": {
+        "bottleneck_relief": 0.14,
+        "causal_information": 0.14,
+        "language_quality_relevance": 0.14,
+        "execution_readiness": 0.14,
+        "reversibility": 0.14,
+        "risk_reduction": 0.14,
+        "cost_efficiency": 0.14
+      },
+      "execution_gate": "PREPARE",
+      "blockers": [
+        "UNVERIFIED_PARENT_WORK_IDS"
+      ],
+      "source_ids": [
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "id": "D7-BLIND-SECURITY",
+      "utility": {
+        "bottleneck_relief": 0.8,
+        "causal_information": 0.88,
+        "language_quality_relevance": 0.82,
+        "execution_readiness": 0.95,
+        "reversibility": 0.96,
+        "risk_reduction": 0.94,
+        "cost_efficiency": 0.95
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.9,
+        "completeness": 0.95
+      },
+      "uncertainty": {
+        "bottleneck_relief": 0.08,
+        "causal_information": 0.08,
+        "language_quality_relevance": 0.08,
+        "execution_readiness": 0.08,
+        "reversibility": 0.08,
+        "risk_reduction": 0.08,
+        "cost_efficiency": 0.08
+      },
+      "execution_gate": "READY",
+      "blockers": [],
+      "source_ids": [
+        "R3",
+        "R2"
+      ]
+    },
+    {
+      "id": "D5-CP5-FULL-HASH",
+      "utility": {
+        "bottleneck_relief": 0.44,
+        "causal_information": 0.65,
+        "language_quality_relevance": 0.25,
+        "execution_readiness": 0.72,
+        "reversibility": 0.89,
+        "risk_reduction": 0.81,
+        "cost_efficiency": 0.62
+      },
+      "evidence": {
+        "source_directness": 0.82,
+        "reproducibility": 0.51,
+        "independence": 0.55,
+        "completeness": 0.69
+      },
+      "uncertainty": {
+        "bottleneck_relief": 0.14,
+        "causal_information": 0.14,
+        "language_quality_relevance": 0.14,
+        "execution_readiness": 0.14,
+        "reversibility": 0.14,
+        "risk_reduction": 0.14,
+        "cost_efficiency": 0.14
+      },
+      "execution_gate": "PREPARE",
+      "blockers": [
+        "TEN_PARTS_NOT_HASHED"
+      ],
+      "source_ids": [
+        "R1",
+        "R5"
+      ]
+    },
+    {
+      "id": "D6-TRAIN-NEW-MODEL",
+      "utility": {
+        "bottleneck_relief": 0.27,
+        "causal_information": 0.4,
+        "language_quality_relevance": 0.45,
+        "execution_readiness": 0.22,
+        "reversibility": 0.35,
+        "risk_reduction": 0.34,
+        "cost_efficiency": 0.15
+      },
+      "evidence": {
+        "source_directness": 0.66,
+        "reproducibility": 0.37,
+        "independence": 0.38,
+        "completeness": 0.41
+      },
+      "uncertainty": {
+        "bottleneck_relief": 0.14,
+        "causal_information": 0.14,
+        "language_quality_relevance": 0.14,
+        "execution_readiness": 0.14,
+        "reversibility": 0.14,
+        "risk_reduction": 0.14,
+        "cost_efficiency": 0.14
+      },
+      "execution_gate": "BLOCKED",
+      "blockers": [
+        "NO_HUMAN_EVAL",
+        "NO_QUALITY_EVIDENCE"
+      ],
+      "source_ids": [
+        "R1",
+        "R5"
+      ]
+    }
+  ]
+}
