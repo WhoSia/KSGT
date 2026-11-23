@@ -2,7 +2,7 @@ import hashlib,json,re
 from pathlib import Path
 from r5v_lock_audit import canonical_lock,fidelity_bounds
 P=Path(__file__).parent
-text=(P/'R5V_LIRA_LINES.md').read_text()
+text=(P/'r5v_lira_lines.md').read_text()
 lines=text.splitlines()
 source_ids={'R1','R2','R3','R4'}
 rows=[]
