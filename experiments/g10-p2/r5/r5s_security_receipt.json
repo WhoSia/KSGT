@@ -1,0 +1,12 @@
+{
+  "schema": "ksgt.g10p2.r5s.blind-public-audit.v1",
+  "rows_checked": 2,
+  "legacy_commitment_exposure": false,
+  "human_study_authorized": false,
+  "quality_promotion": false,
+  "original_r5r_synthetic_rows_bruteforce_recovered": 2,
+  "new_regression_pass": 15,
+  "old_regression_pass_after_patch": 20,
+  "real_human_ratings": 0,
+  "real_corpus_ingested": false
+}
