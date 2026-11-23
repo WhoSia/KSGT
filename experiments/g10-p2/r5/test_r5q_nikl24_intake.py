@@ -69,7 +69,7 @@ class TestNikl24Intake(unittest.TestCase):
 
     def test_high_ratio(self):
         self.archive([('a.txt', '123')])
-        with patch('nikl24_intake.MAX_RATIO', 0):
+        with patch('r5q_nikl24_intake.MAX_RATIO', 0):
             with self.assertRaisesRegex(IntakeError, 'EXCESSIVE_COMPRESSION_RATIO'):
                 inspect_archive(self.path)
 
@@ -95,7 +95,7 @@ class TestNikl24Intake(unittest.TestCase):
 
     def test_oversized_member(self):
         self.archive([('a.txt', 'large')])
-        with patch('nikl24_intake.MAX_MEMBER_BYTES', 1):
+        with patch('r5q_nikl24_intake.MAX_MEMBER_BYTES', 1):
             with self.assertRaisesRegex(IntakeError, 'MEMBER_TOO_LARGE'):
                 inspect_archive(self.path)
 
