@@ -1,0 +1,88 @@
+{
+  "base_leader": "D2-BLIND-EVAL-PREREG",
+  "scenario_count": 120,
+  "leader_changes": 10,
+  "lead_change_cases": [
+    {
+      "candidate": "D1-NIKL24-ACCESS",
+      "dimension": "feasibility",
+      "delta": 0.1,
+      "actual_delta": 0.1,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D1-NIKL24-ACCESS",
+      "dimension": "feasibility",
+      "delta": 0.2,
+      "actual_delta": 0.2,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "gate",
+      "delta": -0.2,
+      "actual_delta": -0.2,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "gate",
+      "delta": -0.1,
+      "actual_delta": -0.1,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "quality",
+      "delta": -0.2,
+      "actual_delta": -0.2,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "quality",
+      "delta": -0.1,
+      "actual_delta": -0.1,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "info",
+      "delta": -0.2,
+      "actual_delta": -0.2,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "info",
+      "delta": -0.1,
+      "actual_delta": -0.1,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "feasibility",
+      "delta": -0.2,
+      "actual_delta": -0.2,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    },
+    {
+      "candidate": "D2-BLIND-EVAL-PREREG",
+      "dimension": "feasibility",
+      "delta": -0.1,
+      "actual_delta": -0.1,
+      "leader": "D1-NIKL24-ACCESS",
+      "leader_changed": true
+    }
+  ],
+  "interpretation": "One-coordinate scoring input challenges only, not empirical significance"
+}
