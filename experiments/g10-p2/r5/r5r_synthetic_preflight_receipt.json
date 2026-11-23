@@ -1,0 +1,54 @@
+{
+  "schema": "ksgt.g10p2.r5r.blind-packet.v1",
+  "stage": "PREFLIGHT_NOT_FROZEN_NOT_RANDOMIZED_HUMAN_STUDY",
+  "blind_packet": [
+    {
+      "work_token": "e4960f67f7426691c126a947",
+      "task_token": "4c8fb675657dbbc37b16167f",
+      "genre": "설명문",
+      "audience": "고등학생",
+      "blind_display_labels": [
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X6",
+        "X7"
+      ],
+      "assignment_commitment": "f8defb17d30c91bb57c09812e63f8f6fc39bdd620c50cc95f337b3bc69bae25c",
+      "model_identity": "SYNTHETIC-NOT-A-MODEL"
+    },
+    {
+      "work_token": "b664f6c5ad9294c0dfd359c0",
+      "task_token": "b9e1c777aa8f5d4fac5d4612",
+      "genre": "보고서",
+      "audience": "연구자",
+      "blind_display_labels": [
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X6",
+        "X7"
+      ],
+      "assignment_commitment": "3076f435493bf1e7e58096defc2231dcd5e0d00296e315ec268d2c78e62ea8bd",
+      "model_identity": "SYNTHETIC-NOT-A-MODEL"
+    }
+  ],
+  "works": 2,
+  "arms": [
+    "STRONG_DIRECT",
+    "RICH_PROMPT",
+    "STATE_AS_TEXT",
+    "EXECUTABLE_STATE",
+    "EQUAL_COST_ITERATIVE",
+    "NO_OP_KEEP",
+    "SHAM_STATE"
+  ],
+  "human_outcomes": 0,
+  "source_work_independence_claim": false,
+  "reader_study_approval": false,
+  "quality_promotion": false
+}
