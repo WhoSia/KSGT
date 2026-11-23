@@ -1,0 +1,23 @@
+{
+  "schema": "ksgt.g10p2.r5r.lira-director.v1",
+  "model_calls_historical": 340,
+  "new_model_calls": 0,
+  "independent_human_reader_outcomes": 0,
+  "stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "score_meaning": "director-assessed heuristic priority/evidence, not calibrated probability or measured causal effect",
+  "hard_gates": {
+    "original_nikl2024_zip_acquired": false,
+    "rights_fulltext_verified": false,
+    "native_before_after_work_pairs_verified": false,
+    "source_work_disjoint_verified": false,
+    "preregistration_frozen_and_powered": false,
+    "blinded_human_outcomes": false,
+    "quality_promotion_allowed": false
+  },
+  "choices": [
+    {"id":"G5-BLIND-PACKET-PREFLIGHT","priority":0.94,"evidence":0.90,"action":"IMPLEMENT_SYNTHETIC_ONLY","reason":"Human comparison is an unblocked P0 infrastructure job"},
+    {"id":"G4-AUTHORIZED-NIKL-INTAKE","priority":0.93,"evidence":0.99,"action":"WAIT_FOR_ACTUAL_BYTES_AND_RIGHTS","reason":"User-submitted application is not original archive acquisition"},
+    {"id":"G5-POWERED-FREEZE","priority":0.96,"evidence":0.94,"action":"HOLD_UNTIL_PILOT_AND_WORK_AUDIT","reason":"No empirical work-level variance, effect threshold, or real human panels"},
+    {"id":"NEW-READER-STATE-MODEL","priority":0.33,"evidence":0.92,"action":"DEFER","reason":"No independently established whole-prose benefit"}
+  ]
+}
