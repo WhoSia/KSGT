@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Create metadata-only G10-P2 seven-arm blind task allocations, never response text.
 
+R5s security erratum: the legacy unkeyed SHA256 commitment of a 7! permutation
+was reversible by public exhaustive search and MUST NEVER be distributed.
+This synthetic preflight deliberately publishes no mapping commitment.
+
 This is a *preflight* and not a fully frozen, powered or reader-rated preregistration.
 Works must have independently audited lineage; caller-supplied flags are not independently authenticated.
 """
@@ -69,7 +73,6 @@ def allocate(cfg, tasks):
                        'task_token':_id(seed,task['task_id'])[:24],
                        'genre':task['genre'],'audience':task['audience'],
                        'blind_display_labels':sorted(labels),
-                       'assignment_commitment':hashlib.sha256(json.dumps(labels,sort_keys=True).encode()).hexdigest(),
                        'model_identity':cfg['model_identity']})
     result.sort(key=lambda row:row['task_token'])
     return {'schema':'ksgt.g10p2.r5r.blind-packet.v1',
