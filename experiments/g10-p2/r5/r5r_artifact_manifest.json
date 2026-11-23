@@ -1,0 +1,52 @@
+{
+  "schema": "ksgt.g10p2.r5r.artifact-manifest.v1",
+  "corpus_raw_text_included": false,
+  "real_human_ratings": 0,
+  "files": [
+    {
+      "file": "r5r_blind_packet.py",
+      "bytes": 5928,
+      "sha256": "881d1884299ab04ecc1fd698c6619ea92f637d4807ca45ac81926edbe89db5f8"
+    },
+    {
+      "file": "test_r5r_blind_packet.py",
+      "bytes": 3926,
+      "sha256": "a7441c41213fb8227736dcd9285dc27f8f5d2f3ee5055850420cc26c0664ce47"
+    },
+    {
+      "file": "test_r5r_protocol.py",
+      "bytes": 1659,
+      "sha256": "a240ee999050387752d3879540e722281aacec14fa5621f47d17fa70d170de8d"
+    },
+    {
+      "file": "R5R_PREREG_PROTOCOL.md",
+      "bytes": 8414,
+      "sha256": "b62b20796217755dd28f3793e917339b584500ea83757b33d402a216309dc653"
+    },
+    {
+      "file": "R5R_LIRA_LINES.md",
+      "bytes": 2697,
+      "sha256": "78d6bea9682b6e0f40eedac6efbdc3ece73ecf9fabc3083e0a84ff1476ce0741"
+    },
+    {
+      "file": "R5R_DIRECTOR_DECISIONS.json",
+      "bytes": 1362,
+      "sha256": "4b478adfcbe8ec6fe66b74e1445ba6e412b9fb73f81e35e0b70697c8df8da928"
+    },
+    {
+      "file": "SYNTHETIC_CONFIG.json",
+      "bytes": 647,
+      "sha256": "91f5da369127b67c82a01e5de6091c73fb8c6e5a07cbd6e89afd34a81280abe9"
+    },
+    {
+      "file": "SYNTHETIC_TASKS.json",
+      "bytes": 594,
+      "sha256": "58296095e180c37d960328dcd763f1a3369700b947752bf3d8fcd03aaa411e6c"
+    },
+    {
+      "file": "R5R_SYNTHETIC_PREFLIGHT_RECEIPT.json",
+      "bytes": 1353,
+      "sha256": "359d71bf2ea6aa39a55c6f81baee3cac342d4392ad65f8a686bcbea87ed3baed"
+    }
+  ]
+}
