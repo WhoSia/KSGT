@@ -72,8 +72,6 @@ class Tests(unittest.TestCase):
         v=summarize(a,M,P);self.assertEqual(v['contrasts'][2]['works_paired'],0);self.assertIsNone(v['contrasts'][2]['mean_work_delta'])
     def test_empty(self):
         with self.assertRaisesRegex(AnalysisHold,'EMPTY'):validate([],M,P)
-if __name__=='__main__':unittest.main()
-
 class AdditionalCourtTests(unittest.TestCase):
     def test_signflip_bound_four_works(self):
         res=summarize(fixture(),M,P)
@@ -86,3 +84,5 @@ class AdditionalCourtTests(unittest.TestCase):
         self.assertEqual(r['row_count'],57)
         self.assertEqual(r['contrasts'][0]['works_paired'],4)
         self.assertAlmostEqual(r['contrasts'][0]['mean_work_delta'],1)
+
+if __name__=="__main__": unittest.main()
