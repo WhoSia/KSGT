@@ -1,0 +1,59 @@
+{
+  "schema": "ksgt.g10p2.r5u.artifact-manifest.v1",
+  "files": [
+    {
+      "name": "r5u_worklevel_analysis.py",
+      "bytes": 6625,
+      "sha256": "b4ce355aa0e6f95507d28e275843985b055dd1f9e656fc34187a451c476c13cc"
+    },
+    {
+      "name": "test_r5u_worklevel.py",
+      "bytes": 5452,
+      "sha256": "7d4490aaf13751794a4c0ad59ff3d9ef230b56a90dd5cff1e11233f9d204b9df"
+    },
+    {
+      "name": "r5u_lira_gate.py",
+      "bytes": 931,
+      "sha256": "68cd805a07b4a0617f86362800f964395b6a95fe9aeb2768d58df1096f4e8e5b"
+    },
+    {
+      "name": "test_r5u_lira_gate.py",
+      "bytes": 743,
+      "sha256": "43195e1618796dd3552c296e1eaa03df8a484556c7cda54baf95c986c065ed24"
+    },
+    {
+      "name": "R5U_STATISTICAL_PLAN.md",
+      "bytes": 6003,
+      "sha256": "2f8502dd7e509a923f6afb6a6f405060a875991255da0dbd073a78e219ba179e"
+    },
+    {
+      "name": "R5U_LIRA_LINES.md",
+      "bytes": 2425,
+      "sha256": "4090bbb4871855df0000eae6f363c5edae03526db45efcac703023b9932f5cce"
+    },
+    {
+      "name": "R5U_DIRECTOR_DECISIONS.json",
+      "bytes": 1220,
+      "sha256": "3ccb6bdbf89c7665cb8971ef20b05b095bd6bae4f64c24a8891803e23bd16225"
+    },
+    {
+      "name": "R5U_SYNTHETIC_DIAGNOSTIC_RECEIPT.json",
+      "bytes": 2953,
+      "sha256": "e6da9c52ab3b3c4437f081e00b8d372510b4e1848e8261f7484a5b1fc173e9c1"
+    },
+    {
+      "name": "R5U_SYNTHETIC_OUTCOME_LOCK.json",
+      "bytes": 267,
+      "sha256": "f0f8d7a6e12b0b03353804879de250b8914396b1dd3d6c0d916466c988d4c77c"
+    },
+    {
+      "name": "R5U_EXECUTION_RECEIPT.json",
+      "bytes": 3575,
+      "sha256": "6dcbfaaaab475eaba2f34b7a0e1a912daec8f2a71c03d688c0b265128e3abe34"
+    }
+  ],
+  "real_corpus_included": false,
+  "real_human_ratings": 0,
+  "secret_mapping_included": false,
+  "tests": "28/28 PASS"
+}
