@@ -72,14 +72,17 @@
       "pass_requires": [
         "rights-cleared native Korean source and edit pairs",
         "stable work groups",
-        "editor authenticity and mapping"
+        "editor authenticity and mapping",
+        "separately attest whether target is expert-edited feedback versus a real human-edited source-text rewrite, using actual released schema"
       ],
       "evidence": [
-        "R5o: existing KoLLA v2 exact original ZIP and M2 bytes replayed (1418 sentences, 1410 paired annotator blocks; 1 overlapping-edit ABSTAIN); Korean L2 sentence correction only"
+        "R5o: existing KoLLA v2 exact original ZIP and M2 bytes replayed (1418 sentences, 1410 paired annotator blocks; 1 overlapping-edit ABSTAIN); Korean L2 sentence correction only",
+        "R5p official NIKL 2024 construction report checked: 1,500 instruction/example feedback targets, including language-model evaluations corrected by experts; not 1,500 certified human edits to source prose"
       ],
       "not_evidence": [
         "P45 EDF aggregate features",
-        "native Korean paragraph-level source/edit pairs; complete 100-essay boundary; independently assessed prose quality"
+        "native Korean paragraph-level source/edit pairs; complete 100-essay boundary; independently assessed prose quality",
+        "Expert-edited language-model feedback treated as before/after native paragraph rewrite; actual NIKL 2024 JSON not acquired"
       ]
     },
     {
@@ -95,7 +98,8 @@
         "R5o: two original KoLLA annotators provide alternative L2 sentence corrections, not independent blinded G10-P2 reader/task outcomes"
       ],
       "not_evidence": [
-        "completed independent reader ratings"
+        "completed independent reader ratings",
+        "expert corrections of feedback are not independent reader preferences on produced complete Korean prose"
       ]
     },
     {
@@ -138,5 +142,5 @@
     "INVALID"
   ],
   "no_auto_promotion": true,
-  "latest_evidence_revision": "R5o_REAL_BYTE_REPLAY_WITH_NATIVE_EDIT_HOLD"
+  "latest_evidence_revision": "R5p_NIKL_2024_FEEDBACK_AUTHORITY_CORRECTION"
 }
