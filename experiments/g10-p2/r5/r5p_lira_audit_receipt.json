@@ -1,0 +1,302 @@
+{
+  "schema": "ksgt.g10p2.lira.audit.v1",
+  "report_sha256": "d99ae15e573c5f87ef0afe8ac3cc58e1052c329f919d6d980d300f20ee55eadb",
+  "lines_audited": 24,
+  "decision_count": 6,
+  "decisions": [
+    {
+      "id": "D2-BLIND-EVAL-PREREG",
+      "priority": 0.923,
+      "status": "NEXT",
+      "can_execute_now": true
+    },
+    {
+      "id": "D1-NIKL24-ACCESS",
+      "priority": 0.909,
+      "status": "NEXT",
+      "can_execute_now": true
+    },
+    {
+      "id": "D3-SOURCE-WORK-BOUNDARY",
+      "priority": 0.8735,
+      "status": "PREPARE",
+      "can_execute_now": true
+    },
+    {
+      "id": "D4-NIKL-NATIVE-ADAPTER",
+      "priority": 0.6985,
+      "status": "WAIT_FOR_SOURCE",
+      "can_execute_now": false
+    },
+    {
+      "id": "D5-CP5-FULL-HASH",
+      "priority": 0.4615,
+      "status": "PREPARE",
+      "can_execute_now": true
+    },
+    {
+      "id": "D6-NEW-READER-STATE-MODEL",
+      "priority": 0.3695,
+      "status": "DEFER",
+      "can_execute_now": false
+    }
+  ],
+  "score_semantics": "heuristic audit/priority ratings, NOT calibrated probabilities or human-quality gold",
+  "quality_promotion": false,
+  "lines": [
+    {
+      "line": 1,
+      "evidence": 0.95,
+      "priority": 0.95,
+      "type": "FACT",
+      "sources": [
+        "S1"
+      ],
+      "sha256": "48309c5a9e5ddea6aa86f50bebecc64fe160d817b15dc5172bfbca6b2d75b4f0"
+    },
+    {
+      "line": 2,
+      "evidence": 0.99,
+      "priority": 0.92,
+      "type": "HOLD",
+      "sources": [
+        "S1",
+        "S8"
+      ],
+      "sha256": "bc04b090fa5e18e51eb0894112f21258f814b0f2c054a65c88bf7e4fee8533bb"
+    },
+    {
+      "line": 3,
+      "evidence": 0.98,
+      "priority": 0.88,
+      "type": "FACT",
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "sha256": "0f2be112d0c9b3bf5b82feaa85c3eba680f8d66e38fa809e36fe307a43a56308"
+    },
+    {
+      "line": 4,
+      "evidence": 0.96,
+      "priority": 0.89,
+      "type": "FACT",
+      "sources": [
+        "S5"
+      ],
+      "sha256": "ef8b7ee7c8cdf10414efa270d8f2a255cc51a9386d8a4944efa08b563b95b802"
+    },
+    {
+      "line": 5,
+      "evidence": 0.95,
+      "priority": 0.91,
+      "type": "HOLD",
+      "sources": [
+        "S5"
+      ],
+      "sha256": "8c9b9e301aa61d46faa16cf615609714c42253eb65379e4a97a2e09d892bc823"
+    },
+    {
+      "line": 6,
+      "evidence": 0.94,
+      "priority": 0.96,
+      "type": "FACT",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "sha256": "3f4ae94902ae6170d4f139637a95963c7c41373513d81c8d7d135f90c7dabd60"
+    },
+    {
+      "line": 7,
+      "evidence": 0.93,
+      "priority": 0.95,
+      "type": "FACT",
+      "sources": [
+        "S3"
+      ],
+      "sha256": "6efbd075240f0c3848cdf91e1d97e323069a086cf29f629eae1da6b244fdd1f4"
+    },
+    {
+      "line": 8,
+      "evidence": 0.93,
+      "priority": 0.91,
+      "type": "FACT",
+      "sources": [
+        "S9"
+      ],
+      "sha256": "68c37157324f850f8467ac59dce41b606bf2c8d48e1d94ccf8341df1bb9515e0"
+    },
+    {
+      "line": 9,
+      "evidence": 0.93,
+      "priority": 0.96,
+      "type": "HOLD",
+      "sources": [
+        "S2",
+        "S9"
+      ],
+      "sha256": "6ab54dc414d9f2b2eb758069f9cfb4ec571e2c7837a2a40f05227d25e7b4f62f"
+    },
+    {
+      "line": 10,
+      "evidence": 0.75,
+      "priority": 0.95,
+      "type": "INFER",
+      "sources": [
+        "S1",
+        "S2",
+        "S9"
+      ],
+      "sha256": "1bbe9c37e0d5b981dc2897bcbadc65bd1c154ad48b2e60015463efa705819362"
+    },
+    {
+      "line": 11,
+      "evidence": 0.8,
+      "priority": 0.94,
+      "type": "PLAN",
+      "sources": [
+        "S1"
+      ],
+      "sha256": "99e8f16959fd858e3df28b6ed169107251c9f9b039f32706028584e1d34ab189"
+    },
+    {
+      "line": 12,
+      "evidence": 0.89,
+      "priority": 0.95,
+      "type": "PLAN",
+      "sources": [
+        "S1"
+      ],
+      "sha256": "e13889be3d9ad5b41319ec7386cfcb7a303846b3e50d4cef51141ada32921f43"
+    },
+    {
+      "line": 13,
+      "evidence": 0.8,
+      "priority": 0.91,
+      "type": "PLAN",
+      "sources": [
+        "S1",
+        "S5"
+      ],
+      "sha256": "8ff3badc585c6ba59d8d0cf6549639193744b794eaf428ceaae4d4dd565e08f4"
+    },
+    {
+      "line": 14,
+      "evidence": 0.91,
+      "priority": 0.88,
+      "type": "HOLD",
+      "sources": [
+        "S5"
+      ],
+      "sha256": "fc2d73faa0ed4b1cc7599e26fa5f6e00eb38035d654af67e08cbef29e75e7ee9"
+    },
+    {
+      "line": 15,
+      "evidence": 0.89,
+      "priority": 0.82,
+      "type": "FACT",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "sha256": "c62f07adb146fecd8b825669c7ecb8bf07d56582bcc483f244f8e3753f55dcc9"
+    },
+    {
+      "line": 16,
+      "evidence": 0.78,
+      "priority": 0.72,
+      "type": "INFER",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "sha256": "84a873a1644b30311b0eb03e8c0136e5ad1ad6707633adf239697fe932e1af3e"
+    },
+    {
+      "line": 17,
+      "evidence": 0.92,
+      "priority": 0.78,
+      "type": "HOLD",
+      "sources": [
+        "S1",
+        "S8"
+      ],
+      "sha256": "7fff16e3185289f52dd8bb145ec6888299e1c4428a54ceed1752ca09f1ea50ea"
+    },
+    {
+      "line": 18,
+      "evidence": 0.72,
+      "priority": 0.93,
+      "type": "PLAN",
+      "sources": [
+        "S1"
+      ],
+      "sha256": "6fcd1c12b3592a9c964edcdd8cd82d8d64c806bae6ab526aae2cf04e9658d273"
+    },
+    {
+      "line": 19,
+      "evidence": 0.72,
+      "priority": 0.91,
+      "type": "PLAN",
+      "sources": [
+        "S1"
+      ],
+      "sha256": "737ede369dc24161c72230a6d2ee3c9e5032983a5b6fe402835433299ba2b010"
+    },
+    {
+      "line": 20,
+      "evidence": 0.73,
+      "priority": 0.91,
+      "type": "PLAN",
+      "sources": [
+        "S1"
+      ],
+      "sha256": "e45c13493e0c4057b38130c1e8c4a32f716fe96f95fba23ac9012d46fab30d16"
+    },
+    {
+      "line": 21,
+      "evidence": 0.91,
+      "priority": 0.96,
+      "type": "HOLD",
+      "sources": [
+        "S1",
+        "S5"
+      ],
+      "sha256": "02fdef385839be1dae58719ff942515300f37da30954a9115219d769eaa3572e"
+    },
+    {
+      "line": 22,
+      "evidence": 0.67,
+      "priority": 0.87,
+      "type": "INFER",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "sha256": "db194244b96104d66d0839c58ed75d6779e04ea4af430f6190a4b76fc247c285"
+    },
+    {
+      "line": 23,
+      "evidence": 0.84,
+      "priority": 0.88,
+      "type": "PLAN",
+      "sources": [
+        "S1",
+        "S8"
+      ],
+      "sha256": "9c30e2b6413ef21629a1f72159d5c35a4cfa689358a5f028f7a73f0599d7fc6a"
+    },
+    {
+      "line": 24,
+      "evidence": 0.95,
+      "priority": 0.88,
+      "type": "HOLD",
+      "sources": [
+        "S1",
+        "S8"
+      ],
+      "sha256": "0ffc5af81465bc8d92bec5107ced8672591e7fa192600d35d1c45de1a79f604f"
+    }
+  ]
+}
