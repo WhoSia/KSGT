@@ -1,0 +1,89 @@
+{
+  "schema": "ksgt.g10p2.r5v.receipt.v1",
+  "scores": [
+    {
+      "line": 1,
+      "e": 0.99,
+      "p": 0.99,
+      "sha256": "6a064dae747e29bde5d1255a335a61709cd9f8d049c0f11fe00104ac0c485978"
+    },
+    {
+      "line": 2,
+      "e": 0.95,
+      "p": 0.98,
+      "sha256": "d708cf3a8fe32e97a13b11ca06cc528c29d84fdb1f5498d92669d957d47d9d72"
+    },
+    {
+      "line": 3,
+      "e": 0.96,
+      "p": 0.98,
+      "sha256": "22a6f5cd7bfad39cd374d3dc19bb241b2934cad53dedacfc078421adc08d27b7"
+    },
+    {
+      "line": 4,
+      "e": 0.97,
+      "p": 0.97,
+      "sha256": "46428d65857c0b5fd2f716acfcc4ac2173e4752730880ac3852e41db16dc02d7"
+    },
+    {
+      "line": 5,
+      "e": 0.98,
+      "p": 0.97,
+      "sha256": "7c6a368c5d3f0721c146960dfcbf67338554c48e64895408c24d93962b6b2aa6"
+    },
+    {
+      "line": 6,
+      "e": 0.98,
+      "p": 0.98,
+      "sha256": "35a5bb92a725165b1f1e9f618bf557e2fe83af23408072498b8737ed4a215afa"
+    },
+    {
+      "line": 7,
+      "e": 0.92,
+      "p": 0.97,
+      "sha256": "31ed1350e05bb255017489a84ab3a7f42ab6a2fb1969afd09b851cafa93442e7"
+    },
+    {
+      "line": 8,
+      "e": 0.96,
+      "p": 0.95,
+      "sha256": "e4065beedb75b4a94ea3af86aaa232ce440ac4f393eed3abdf6f197bc97369ba"
+    },
+    {
+      "line": 9,
+      "e": 0.99,
+      "p": 0.98,
+      "sha256": "4d8a9394fe287b099fdf4215000c41a5d1e078978e6ce837d616f2217956fd3f"
+    },
+    {
+      "line": 10,
+      "e": 0.96,
+      "p": 0.97,
+      "sha256": "92632c2c542e79c5db26d87191861b1d19736a5bb403af2dcf4472b0ecb476dc"
+    }
+  ],
+  "synthetic_lock": {
+    "schema": "ksgt.g10p2.r5v.canonical-synthetic-lock.v1",
+    "lock_sha256": "5b359138e19272ea1c52a73e7267227b97659c1c2983487073f711f051d7a909",
+    "row_count": 56,
+    "synthetic_only": true,
+    "real_lock_verified": false,
+    "real_unblinding_authorized": false,
+    "independent_raters_verified": false,
+    "quality_promotion": false
+  },
+  "missingness_example": {
+    "schema": "ksgt.g10p2.r5v.fidelity-sensitivity.v1",
+    "works": 4,
+    "works_with_uncertainty": 1,
+    "lower_delta": 0.0,
+    "upper_delta": 0.25,
+    "meaning": "worst-case bounds for unknown source-error labels, not a statistical confidence interval",
+    "confirmed_inference": false,
+    "quality_promotion": false
+  },
+  "new_tests_pass": 19,
+  "previous_tests_pass": 28,
+  "independent_human_outcomes": 0,
+  "quality_promotion": false
+}
