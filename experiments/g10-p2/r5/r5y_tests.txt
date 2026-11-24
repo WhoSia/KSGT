@@ -1,0 +1,19 @@
+test_c_target (test_r5y_archive_audit.ArchiveTests.test_c_target) ... ok
+test_census (test_r5y_archive_audit.ArchiveTests.test_census) ... ok
+test_cost (test_r5y_archive_audit.ArchiveTests.test_cost) ... ok
+test_d_parent (test_r5y_archive_audit.ArchiveTests.test_d_parent) ... ok
+test_d_reply (test_r5y_archive_audit.ArchiveTests.test_d_reply) ... ok
+test_false_repeat (test_r5y_archive_audit.ArchiveTests.test_false_repeat) ... ok
+test_false_witness (test_r5y_archive_audit.ArchiveTests.test_false_witness) ... ok
+test_family_leak (test_r5y_archive_audit.ArchiveTests.test_family_leak) ... ok
+test_guard_candidate (test_r5y_archive_audit.ArchiveTests.test_guard_candidate) ... ok
+test_guard_empty_tail (test_r5y_archive_audit.ArchiveTests.test_guard_empty_tail) ... ok
+test_guard_keep (test_r5y_archive_audit.ArchiveTests.test_guard_keep) ... ok
+test_guard_nonboundary (test_r5y_archive_audit.ArchiveTests.test_guard_nonboundary) ... ok
+test_raw_mutation (test_r5y_archive_audit.ArchiveTests.test_raw_mutation) ... ok
+test_replay (test_r5y_archive_audit.ArchiveTests.test_replay) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.538s
+
+OK
