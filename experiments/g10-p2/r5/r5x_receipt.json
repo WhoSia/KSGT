@@ -1,0 +1,57 @@
+{
+  "status": "EXPOSED_DEVELOPMENT_ONLY",
+  "r4a_nested_members_equal": 129,
+  "r4b_nested_members_equal": 173,
+  "r4a_archived_calls": 60,
+  "r4b_incremental_archived_calls": 20,
+  "r4b1_incremental_archived_calls": 0,
+  "r4a_tokens": {
+    "direct": 6963,
+    "rich": 7729,
+    "auditDirect": 11243,
+    "auditRich": 11740,
+    "chooser": 12303
+  },
+  "r4a_selection_agreement": 10,
+  "r4a_choice_pairs": {
+    "direct / direct": 9,
+    "direct / rich": 2,
+    "rich / rich": 1
+  },
+  "r4b_tokens": {
+    "patch": 8147,
+    "rewrite": 8839
+  },
+  "r4b_target_cases": 6,
+  "r4b_strict_status": {
+    "APPLIED_UNVERIFIED": 3,
+    "REJECT_WRONG_OR_DUPLICATED_SPAN": 3
+  },
+  "r4b_rewrite_status": {
+    "GLOBAL_REWRITE": 6
+  },
+  "r4b1_edge_whitespace_rescues": 3,
+  "r4b1_recorded_target_removal": 6,
+  "no_target_unchanged_all": 4,
+  "new_provider_calls": 0,
+  "independent_reader_ratings": 0,
+  "quality_promotion": false,
+  "limitations": "Posthoc investigator-selected targets and archived flags only; exact-string disappearance and byte equality do not establish semantic correctness or human preference.",
+  "archives": {
+    "R4a": {
+      "sha256": "06a89aed5ed3794aa85c6697cd290ff5abc282434af25f237f2e01ef4f691051",
+      "bytes": 112648,
+      "members": 129
+    },
+    "R4b": {
+      "sha256": "a417546e40e3fbc102ede1b13d681b272528115481a74532334a7c54a0c4db1d",
+      "bytes": 163170,
+      "members": 173
+    },
+    "R4b1": {
+      "sha256": "a2f06fbca1f9f0d68ac72958a4bf12d953a52b2a9707af75e7311dab6a317b43",
+      "bytes": 168613,
+      "members": 174
+    }
+  }
+}
