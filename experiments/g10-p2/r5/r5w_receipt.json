@@ -1,0 +1,87 @@
+{
+  "stage": "DEVELOPMENT_REPLAY_ONLY",
+  "archives": {
+    "R5g": {
+      "zip_sha256": "11f046944de91ae58433e982cae3526af61327e18d44f074a18d25cfd61d08d1",
+      "score_sha256": "cbd2cb894945c2df4c6a51c8b6cd3db875a2df4410e79a0633ae7f81cb9796af",
+      "bytes": 45125,
+      "members": 38
+    },
+    "R5h": {
+      "zip_sha256": "d8fb6a733accde7cd2a8c4dabc2f559f39881efdb13e2c1be8860546927cbfd1",
+      "score_sha256": "ed62b1f3a8f1772dad92eb4c14d38b1c6f710f16c577f8c9020cbd294a7b9216",
+      "bytes": 52344,
+      "members": 38
+    },
+    "R5i": {
+      "zip_sha256": "621be3f09a5dc8440a239a9b69fcd77a9b565fdd3116603ed7fb62945e7b2aec",
+      "score_sha256": "f56a23aab57ff14a36217e8856dd19e84686d154f2b11c7176ada1733da8f349",
+      "bytes": 9950,
+      "members": 3
+    }
+  },
+  "new_provider_calls": 0,
+  "independent_reader_outcomes": 0,
+  "quality_promotion": false,
+  "historical_response_rows": {
+    "R5g": 16,
+    "R5h": 16
+  },
+  "recorded_cost_by_arm": {
+    "R5g": {
+      "DIRECT": {
+        "calls": 8,
+        "tokens": 8028,
+        "latency_ms_sum": 3644
+      },
+      "LATTICE": {
+        "calls": 8,
+        "tokens": 11209,
+        "latency_ms_sum": 4864
+      }
+    },
+    "R5h": {
+      "DIRECT": {
+        "calls": 8,
+        "tokens": 5338,
+        "latency_ms_sum": 2971
+      },
+      "SELECTOR": {
+        "calls": 8,
+        "tokens": 14811,
+        "latency_ms_sum": 6981
+      }
+    }
+  },
+  "distinct_source_ids": 16,
+  "source_independence_certified": false,
+  "parent_compiled_text_matches": 16,
+  "parent_direct_text_matches": 8,
+  "aggregate_frame_trace_counts": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "aggregation_char_delta": {
+    "min": -17,
+    "max": -8,
+    "sum": -212
+  },
+  "selected_vs_default_same_aggregated": 0,
+  "selector_changes": 27,
+  "selector_changed_work_count": 8,
+  "warning": "Archived provider records, not newly authenticated API calls. Frame trace agreement is not semantic gold. Different work IDs do not establish independence."
+}
