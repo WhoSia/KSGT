@@ -1,0 +1,52 @@
+{
+  "files": [
+    {
+      "name": "r5w_decisions.json",
+      "bytes": 4366,
+      "sha256": "3d3fdee7c512c46e8824f9971881459a2bf1423d3e2795deec8cc6c5e133ce31"
+    },
+    {
+      "name": "r5w_lira_lines.md",
+      "bytes": 1539,
+      "sha256": "9d0c835a0ea483a6481ba39caf64c0fee20335b68f4215692e3cfbc8fba69c0e"
+    },
+    {
+      "name": "r5w_receipt.json",
+      "bytes": 2077,
+      "sha256": "5ecbfeac54093def44ac693396096ddcee2fb9434580bee6a535bbe4b13c6eb0"
+    },
+    {
+      "name": "r5w_replay.py",
+      "bytes": 5363,
+      "sha256": "c32f4f0ba48cf882e6b9fb45f5f1bbfd85a2ba4297160a64fc6613df517a7900"
+    },
+    {
+      "name": "r5w_report.md",
+      "bytes": 3383,
+      "sha256": "42aee2ee46b7418b82e30c45b073e82b4f0eb4a8da7e565e68a7b4a9cc14222a"
+    },
+    {
+      "name": "r5w_tests.txt",
+      "bytes": 897,
+      "sha256": "6e28e7ae225338ac58d1fda37077283071a7e5bf2e007167bf58d88a1ab862ba"
+    },
+    {
+      "name": "r5w_trace_audit.py",
+      "bytes": 2315,
+      "sha256": "c835dd3452a689a76907631b9d4dc532e230888984e5e530ef0bafbca8dc48c3"
+    },
+    {
+      "name": "r5w_trace_receipt.json",
+      "bytes": 343,
+      "sha256": "02a1ecaecf9f3bc78f7d701e1527278e81255693f4c7d404388cbdc473b8f9ef"
+    },
+    {
+      "name": "test_r5w_replay.py",
+      "bytes": 2889,
+      "sha256": "c6216d29495bdf28ea947c69aa5b82afa1cdc21b33f874b5d87f0258235d7d4d"
+    }
+  ],
+  "raw_source_text_included": false,
+  "new_provider_calls": 0,
+  "human_outcomes": 0
+}
