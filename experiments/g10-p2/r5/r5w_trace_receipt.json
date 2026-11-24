@@ -1,0 +1,16 @@
+{
+  "stage": "DEVELOPMENT_TRACE_REPLAY",
+  "counts": {
+    "singleton_segments": 32,
+    "joined_segments": 32,
+    "outputs": 16,
+    "frame_references": 96
+  },
+  "total_characters": {
+    "original": 2506,
+    "aggregated": 2294
+  },
+  "selected_default_text_difference_works": 8,
+  "human_semantic_gold": 0,
+  "quality_promotion": false
+}
