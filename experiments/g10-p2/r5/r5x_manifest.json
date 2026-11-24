@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "name": "r5x_decisions.json",
+      "sha256": "b17ee058fba3b7ac8c551809b3455747163ee2d56628f50894f3ca5cb3007d11",
+      "bytes": 3378
+    },
+    {
+      "name": "r5x_historical_replay.py",
+      "sha256": "28b5c7c5640b098294acd04d1d1c178a26a531c33d926ae4cb025ce19eea594f",
+      "bytes": 5514
+    },
+    {
+      "name": "r5x_lira_lines.md",
+      "sha256": "87e848cec4ba4857b61c145195e8218767af0831f7b963480bf57142ab180fe7",
+      "bytes": 1294
+    },
+    {
+      "name": "r5x_receipt.json",
+      "sha256": "850f8d4c8dc62d6d9f0074855bdab2000d4ae91e266f979e449a91b9f60eb529",
+      "bytes": 1578
+    },
+    {
+      "name": "r5x_report.md",
+      "sha256": "326f4e7ce5965af18e00cd3a3353add7e7730926948d5e45888b0d7ab8329c58",
+      "bytes": 2544
+    },
+    {
+      "name": "r5x_tests.txt",
+      "sha256": "7d4ded0203be33c5ae0e11043c19c9fe8396b365b994fa7713fbdb0453c28c46",
+      "bytes": 538
+    },
+    {
+      "name": "test_r5x_historical_replay.py",
+      "sha256": "4bb45168b10020c1fa0aa04ae94e44a0cbed919d7118d2ec5e1c2a29bd25a813",
+      "bytes": 1769
+    }
+  ],
+  "raw_prose_included": false
+}
