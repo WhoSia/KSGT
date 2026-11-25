@@ -1,0 +1,163 @@
+{
+  "stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "scores": [
+    {
+      "id": "D12 matched discourse diagnosis",
+      "utility": {
+        "bottleneck_relief": 0.97,
+        "causal_information": 0.95,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.99,
+        "reversibility": 0.99,
+        "risk_reduction": 0.94,
+        "cost_efficiency": 0.97
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.95,
+        "independence": 0.4,
+        "completeness": 0.76
+      },
+      "P": 0.9693,
+      "E": 0.775,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D13 proposal comparison and projection",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.97,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.99,
+        "reversibility": 0.99,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.96
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.4,
+        "completeness": 0.78
+      },
+      "P": 0.978,
+      "E": 0.7875,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D14 intent-conditioned generation using existing facts",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.97,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.88,
+        "reversibility": 0.98,
+        "risk_reduction": 0.95,
+        "cost_efficiency": 0.95
+      },
+      "evidence": {
+        "source_directness": 0.93,
+        "reproducibility": 0.78,
+        "independence": 0.4,
+        "completeness": 0.69
+      },
+      "P": 0.9608,
+      "E": 0.7,
+      "gate": "READY_DEVELOPMENT"
+    },
+    {
+      "id": "D3 source version lineage",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.94,
+        "language_quality_relevance": 0.91,
+        "execution_readiness": 0.73,
+        "reversibility": 0.97,
+        "risk_reduction": 0.99,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.97,
+        "independence": 0.42,
+        "completeness": 0.62
+      },
+      "P": 0.9197,
+      "E": 0.75,
+      "gate": "PREPARE"
+    },
+    {
+      "id": "D2 independent evaluation",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.99,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.55,
+        "reversibility": 0.95,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.8
+      },
+      "evidence": {
+        "source_directness": 0.95,
+        "reproducibility": 0.75,
+        "independence": 0.45,
+        "completeness": 0.65
+      },
+      "P": 0.9072,
+      "E": 0.7,
+      "gate": "PREPARE"
+    },
+    {
+      "id": "D6 model training",
+      "utility": {
+        "bottleneck_relief": 0.27,
+        "causal_information": 0.4,
+        "language_quality_relevance": 0.45,
+        "execution_readiness": 0.22,
+        "reversibility": 0.35,
+        "risk_reduction": 0.34,
+        "cost_efficiency": 0.15
+      },
+      "evidence": {
+        "source_directness": 0.66,
+        "reproducibility": 0.37,
+        "independence": 0.38,
+        "completeness": 0.41
+      },
+      "P": 0.321,
+      "E": 0.455,
+      "gate": "BLOCKED"
+    }
+  ],
+  "score_kind": "subjective director estimates, not probability",
+  "sources": {
+    "A": "r6b_alignment_receipt.json",
+    "B": "r6b_shared_receipt.json",
+    "C": "r6b_discourse_receipt.json",
+    "R": "r6b_report.md"
+  },
+  "line_sha256": [
+    "a6546b9522dafa0c810ba6eeca96cd9aa6e82b13fb9481a5f05267b54e13384f",
+    "df45207164a48d26e4a6dee0b13e64445fcb66796d33e7ae5fc9f80165b8e670",
+    "34aeb34349f6b94d1716296a9e0964881f3ed228bfa44db7eb9c3ab739910258",
+    "71979abd072013772a801c4d98ab597c22db4352d8003a17ba06ebe09be89086",
+    "c0c48949b7a4053ead40e63d13508bafd7cc1cbeef1b788caa49914d1e398853",
+    "8c390045be24d04cf005483f9b8c895de6d90e6ea25e6e2b579254bc2d7a0f42",
+    "bdaf7fcb7fd009068691bad9d7d9c4f15cccce1a7a68a1f952d440e7f7d808b8",
+    "6514a5e421346cb010a23c6b81121e3392576cdf2f36071272ed4e4b456b57cc",
+    "dbf86d554b4ada27bbdfe761a744a46c35a6065ab9094485d2efd6d49538e24c",
+    "06f0ec599d3449afddf3a50b680055929d9ff86fef18ef5a150e16eef0ee7c1e",
+    "9d102e1476efe38b88f16333cdf07241f143921cd85b6b02a93361f917089d59"
+  ],
+  "new_provider_calls": 0,
+  "independent_human_ratings": 0,
+  "quality_promotion": false
+}
