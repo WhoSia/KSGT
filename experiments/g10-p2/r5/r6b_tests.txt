@@ -1,0 +1,25 @@
+test_categories (test_r6b.Actual.test_categories) ... ok
+test_joint (test_r6b.Actual.test_joint) ... ok
+test_legacy_asymmetry (test_r6b.Actual.test_legacy_asymmetry) ... ok
+test_pairs (test_r6b.Actual.test_pairs) ... ok
+test_projection_partition (test_r6b.Actual.test_projection_partition) ... ok
+test_apply (test_r6b.Unit.test_apply) ... ok
+test_bad_span (test_r6b.Unit.test_bad_span) ... ok
+test_candidate (test_r6b.Unit.test_candidate) ... ok
+test_common (test_r6b.Unit.test_common) ... ok
+test_disjoint (test_r6b.Unit.test_disjoint) ... ok
+test_insert (test_r6b.Unit.test_insert) ... ok
+test_keep (test_r6b.Unit.test_keep) ... ok
+test_marker (test_r6b.Unit.test_marker) ... ok
+test_multiple (test_r6b.Unit.test_multiple) ... ok
+test_other (test_r6b.Unit.test_other) ... ok
+test_partial (test_r6b.Unit.test_partial) ... ok
+test_source_replacement (test_r6b.Unit.test_source_replacement) ... ok
+test_trailing (test_r6b.Unit.test_trailing) ... ok
+test_unmarked (test_r6b.Unit.test_unmarked) ... ok
+test_wrong_source (test_r6b.Unit.test_wrong_source) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.960s
+
+OK
