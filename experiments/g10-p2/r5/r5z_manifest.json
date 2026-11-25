@@ -1,0 +1,62 @@
+{
+  "files": [
+    {
+      "name": "r5z_decisions.json",
+      "bytes": 10909,
+      "sha256": "4ea053c2d8d1b84f8795baec68661cda97c57daaa5985975bff0348d0372a205"
+    },
+    {
+      "name": "r5z_edit_closure.py",
+      "bytes": 1811,
+      "sha256": "9b5aaca24eda48a8e0a9b22eebc9a5430a76b6ee0cdff1cd34fe857ae5d8d26d"
+    },
+    {
+      "name": "r5z_intake_handoff.md",
+      "bytes": 1790,
+      "sha256": "2f3bfac7fc0c0d5a4593e63e7066016141b86ea44beb2679b60d87b08ec13b12"
+    },
+    {
+      "name": "r5z_intake_tests.txt",
+      "bytes": 1109,
+      "sha256": "3c0a17d3d9eae79d04db0f197193e7474a09ae4bd9b768b396462ba2e03160f3"
+    },
+    {
+      "name": "r5z_lira_lines.md",
+      "bytes": 1527,
+      "sha256": "e21fc325aa6e50c6a92619419f24d5dd1b3c264a3d3dfe4146368e0a76d5169d"
+    },
+    {
+      "name": "r5z_receipt.json",
+      "bytes": 3248,
+      "sha256": "ee05dcbd33bf7f81b8b0c515e8f0a30e6d9a2dcf1c7169c239340a0917c0f178"
+    },
+    {
+      "name": "r5z_replay.py",
+      "bytes": 5622,
+      "sha256": "ff80df2e9b1bfcf09cdb7caa88d7172a3062fc2e61802e228e118dbaac04ca2c"
+    },
+    {
+      "name": "r5z_report.md",
+      "bytes": 4180,
+      "sha256": "0cdf46e32c1a8e56eb306651e9740e0fcacb37310a80f312712c108acb945418"
+    },
+    {
+      "name": "r5z_round1_receipt.json",
+      "bytes": 3089,
+      "sha256": "8f8ffdbde15b2511deb3f6d8630ddeadf4b8b351ced1c052dc241252feaa23dd"
+    },
+    {
+      "name": "r5z_tests.txt",
+      "bytes": 795,
+      "sha256": "b4162cc80453b50ddca47d71a569d27ba3576afd6f3a375bf05d62fc5e05779f"
+    },
+    {
+      "name": "test_r5z_edit_closure.py",
+      "bytes": 1971,
+      "sha256": "b5eedccc47ef215980a0195fbe8534705552838f3993c5a461260bf32c3b4850"
+    }
+  ],
+  "private_candidates_excluded_from_public_bundle": true,
+  "new_provider_calls": 0,
+  "independent_human_ratings": 0
+}
