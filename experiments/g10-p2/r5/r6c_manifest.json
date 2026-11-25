@@ -1,0 +1,62 @@
+{
+  "files": [
+    {
+      "name": "r6c_decisions.json",
+      "bytes": 5310,
+      "sha256": "f32c63d3ee5b45335a2793ded5d757da80fb61b72738420e0de38742b5804970"
+    },
+    {
+      "name": "r6c_discourse_cases.ts",
+      "bytes": 6004,
+      "sha256": "24fe29a19e2119dd7ac22764308a1e2347514767dd411cfe6dc55721ef6a6f9f"
+    },
+    {
+      "name": "r6c_discourse_plan.ts",
+      "bytes": 2341,
+      "sha256": "10342c8543ce2787dd8d9fcc15b00a30e50a85e0f3b644c4fc3d36cf5e317aa8"
+    },
+    {
+      "name": "r6c_discourse_receipt.json",
+      "bytes": 8593,
+      "sha256": "75847eda2f67a736f55e623150f74c03736ca5b8798128c726963debaa66ba54"
+    },
+    {
+      "name": "r6c_discourse_round1.json",
+      "bytes": 6726,
+      "sha256": "e6482ee46e6c6cc3d0f3fae2d823d67bfb9eadfe3b48f2a3b204ecf316f34141"
+    },
+    {
+      "name": "r6c_edit_lattice.go",
+      "bytes": 4159,
+      "sha256": "361a37c67d046063add6540b1e6965d7d18e5a7ef4a4bf928da38b556f8b36cb"
+    },
+    {
+      "name": "r6c_lattice_receipt.json",
+      "bytes": 1862,
+      "sha256": "fdbc93d27d82ca37fff3c22d7bf77fd906d9eb5469cda193a9febd2797b726a1"
+    },
+    {
+      "name": "r6c_lattice_replay.py",
+      "bytes": 6154,
+      "sha256": "1b8b1512a0c4b4c1c6b84e9128e66ecd62717f09d470ccfdb34d09e8956f5d79"
+    },
+    {
+      "name": "r6c_lira_lines.md",
+      "bytes": 1438,
+      "sha256": "71b3448a0e679517c50ddf7d97d40525c44aef882d90fdf0064cf220928e619d"
+    },
+    {
+      "name": "r6c_report.md",
+      "bytes": 6483,
+      "sha256": "ccadfe51438e65679416a2d5b6e1a9361f6e497d778612ea430b784217173393"
+    },
+    {
+      "name": "r6c_reproduce.sh",
+      "bytes": 581,
+      "sha256": "df901348a103ee82b0686b31d9b034ec23df9e5c2bffd87618ea656ed5810fa7"
+    }
+  ],
+  "source_archive_sha256": "92ca0e42198ff10d45b72771b39ce364343634691bc348cfcc0b47de60df3c54",
+  "raw_nikl_text_included": false,
+  "note": "TypeScript examples and output are investigator authored; no raw NIKL text or per-row derivatives."
+}
