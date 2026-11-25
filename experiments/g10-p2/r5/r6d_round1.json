@@ -1,0 +1,278 @@
+{
+  "authored": {
+    "notice": {
+      "exact": {
+        "order": [
+          "closure",
+          "exception",
+          "resume",
+          "scope"
+        ],
+        "variants": [
+          "explicit",
+          "contrast",
+          "explicit",
+          "explicit"
+        ],
+        "text": "수요일 4교시에는 대출 창구를 닫습니다. 다만 같은 시간에도 열람실은 이용할 수 있습니다. 대출 창구는 5교시에 다시 엽니다. 이번 변경은 수요일에만 적용됩니다.",
+        "cost": 2,
+        "missingEvidence": []
+      },
+      "greedy": {
+        "order": [
+          "closure",
+          "exception",
+          "resume",
+          "scope"
+        ],
+        "variants": [
+          "explicit",
+          "contrast",
+          "explicit",
+          "explicit"
+        ],
+        "text": "수요일 4교시에는 대출 창구를 닫습니다. 다만 같은 시간에도 열람실은 이용할 수 있습니다. 대출 창구는 5교시에 다시 엽니다. 이번 변경은 수요일에만 적용됩니다.",
+        "cost": 2,
+        "missingEvidence": []
+      },
+      "fixed": null
+    },
+    "science": {
+      "exact": {
+        "order": [
+          "result",
+          "limit",
+          "plan"
+        ],
+        "variants": [
+          "explicit",
+          "linked",
+          "explicit"
+        ],
+        "text": "조건 A와 B에서 색이 바뀌기까지 각각 42초와 35초가 걸렸다. 그러나 온도를 기록하지 않아 이 차이의 원인은 알 수 없다. 다음 실험에서는 온도를 일정하게 유지할 예정이다.",
+        "cost": 0,
+        "missingEvidence": [
+          "temperature"
+        ]
+      },
+      "greedy": {
+        "order": [
+          "result",
+          "limit",
+          "plan"
+        ],
+        "variants": [
+          "explicit",
+          "linked",
+          "explicit"
+        ],
+        "text": "조건 A와 B에서 색이 바뀌기까지 각각 42초와 35초가 걸렸다. 그러나 온도를 기록하지 않아 이 차이의 원인은 알 수 없다. 다음 실험에서는 온도를 일정하게 유지할 예정이다.",
+        "cost": 0,
+        "missingEvidence": [
+          "temperature"
+        ]
+      },
+      "fixed": {
+        "order": [
+          "result",
+          "limit",
+          "plan"
+        ],
+        "variants": [
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "조건 A와 B에서 색이 바뀌기까지 각각 42초와 35초가 걸렸다. 두 조건의 온도를 기록하지 않아 시간 차이의 원인은 알 수 없다. 다음 실험에서는 온도를 일정하게 유지할 예정이다.",
+        "cost": 1,
+        "missingEvidence": [
+          "temperature"
+        ]
+      }
+    },
+    "referent": {
+      "exact": {
+        "order": [
+          "introduce",
+          "pressure",
+          "convert",
+          "temperature"
+        ],
+        "variants": [
+          "intro",
+          "explicit",
+          "anaphor",
+          "explicit"
+        ],
+        "text": "실험에는 압력 센서와 온도 센서를 사용했다. 압력 센서는 압력의 변화를 감지한다. 이 센서는 측정값을 전기 신호로 변환한다. 온도 센서는 온도의 변화를 감지한다.",
+        "cost": 4,
+        "missingEvidence": []
+      },
+      "greedy": {
+        "order": [
+          "introduce",
+          "pressure",
+          "temperature",
+          "convert"
+        ],
+        "variants": [
+          "intro",
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "실험에는 압력 센서와 온도 센서를 사용했다. 압력 센서는 압력의 변화를 감지한다. 온도 센서는 온도의 변화를 감지한다. 압력 센서는 측정값을 전기 신호로 변환한다.",
+        "cost": 4,
+        "missingEvidence": []
+      },
+      "fixed": {
+        "order": [
+          "introduce",
+          "pressure",
+          "temperature",
+          "convert"
+        ],
+        "variants": [
+          "intro",
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "실험에는 압력 센서와 온도 센서를 사용했다. 압력 센서는 압력의 변화를 감지한다. 온도 센서는 온도의 변화를 감지한다. 압력 센서는 측정값을 전기 신호로 변환한다.",
+        "cost": 4,
+        "missingEvidence": []
+      }
+    },
+    "argument": {
+      "exact": {
+        "order": [
+          "observation",
+          "proposal",
+          "missing"
+        ],
+        "variants": [
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "현재 도서관은 오후 여섯 시에 문을 닫는다. 학교 도서관의 저녁 개방 시간을 늘리는 방안을 검토할 필요가 있다. 개방 시간 연장이 필요한지 판단하려면 학생 이용 수요를 조사해야 한다.",
+        "cost": 0,
+        "missingEvidence": [
+          "demand"
+        ]
+      },
+      "greedy": {
+        "order": [
+          "observation",
+          "proposal",
+          "missing"
+        ],
+        "variants": [
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "현재 도서관은 오후 여섯 시에 문을 닫는다. 학교 도서관의 저녁 개방 시간을 늘리는 방안을 검토할 필요가 있다. 개방 시간 연장이 필요한지 판단하려면 학생 이용 수요를 조사해야 한다.",
+        "cost": 0,
+        "missingEvidence": [
+          "demand"
+        ]
+      },
+      "fixed": {
+        "order": [
+          "proposal",
+          "observation",
+          "missing"
+        ],
+        "variants": [
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "학교 도서관의 저녁 개방 시간을 늘리는 방안을 검토할 필요가 있다. 현재 도서관은 오후 여섯 시에 문을 닫는다. 개방 시간 연장이 필요한지 판단하려면 학생 이용 수요를 조사해야 한다.",
+        "cost": 1,
+        "missingEvidence": [
+          "demand"
+        ]
+      }
+    },
+    "history": {
+      "exact": {
+        "order": [
+          "b",
+          "a",
+          "c"
+        ],
+        "variants": [
+          "b",
+          "a",
+          "c"
+        ],
+        "text": "온도 센서를 점검했다. 압력 센서를 점검했다. 이 센서의 압력 측정값을 기록했다.",
+        "cost": 1,
+        "missingEvidence": []
+      },
+      "greedy": null,
+      "fixed": null
+    },
+    "unsupported": {
+      "exact": null,
+      "greedy": null,
+      "fixed": null
+    },
+    "literary": {
+      "exact": {
+        "order": [
+          "wait",
+          "sound",
+          "reveal"
+        ],
+        "variants": [
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "나는 문 앞에 멈춰 섰다. 복도 끝에서 짧은 소리가 들렸다. 소리의 정체는 아직 알 수 없었다.",
+        "cost": 0,
+        "missingEvidence": []
+      },
+      "greedy": {
+        "order": [
+          "wait",
+          "sound",
+          "reveal"
+        ],
+        "variants": [
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "나는 문 앞에 멈춰 섰다. 복도 끝에서 짧은 소리가 들렸다. 소리의 정체는 아직 알 수 없었다.",
+        "cost": 0,
+        "missingEvidence": []
+      },
+      "fixed": {
+        "order": [
+          "sound",
+          "wait",
+          "reveal"
+        ],
+        "variants": [
+          "explicit",
+          "explicit",
+          "explicit"
+        ],
+        "text": "복도 끝에서 짧은 소리가 들렸다. 나는 문 앞에 멈춰 섰다. 소리의 정체는 아직 알 수 없었다.",
+        "cost": 2,
+        "missingEvidence": []
+      }
+    }
+  },
+  "synthetic": {
+    "checked": 250,
+    "feasible": 250,
+    "greedyLoss": 101,
+    "greedyDead": 0
+  },
+  "limits": "Manual fact-equivalent variant labels and developer costs. No independent prose ratings."
+}
