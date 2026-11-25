@@ -1,0 +1,295 @@
+{
+  "stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "raw_bytes_acquired_verified": true,
+  "full_rights_verified": false,
+  "legacy_judge_not_run": "R5t requires raw_acquired false; preserve historical gate, reuse weights and score_line only",
+  "weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "evidence_axes": [
+    "source_directness",
+    "reproducibility",
+    "independence",
+    "completeness"
+  ],
+  "sources": {
+    "A1": "r6a_census_receipt.json",
+    "A2": "r6a_feedback_receipt.json",
+    "A3": "r6a_family_receipt.json",
+    "S1": "Bundled Korean v1.1 specification pp 1–3",
+    "T1": "r6a_tests.txt"
+  },
+  "decisions": [
+    {
+      "id": "D1 verified intake/census",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.98,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 1,
+        "reversibility": 0.97,
+        "risk_reduction": 0.99,
+        "cost_efficiency": 0.99
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.99,
+        "independence": 0.55,
+        "completeness": 0.94
+      },
+      "P": 0.9876,
+      "E": 0.8675,
+      "execution_gate": "DONE_DESCRIPTIVE",
+      "judgment_not_probability": true
+    },
+    {
+      "id": "D12 matched content/organization feedback audit",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.98,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.96,
+        "reversibility": 0.97,
+        "risk_reduction": 0.94,
+        "cost_efficiency": 0.96
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.93,
+        "independence": 0.4,
+        "completeness": 0.72
+      },
+      "P": 0.9722,
+      "E": 0.76,
+      "execution_gate": "READY_DEVELOPMENT",
+      "judgment_not_probability": true
+    },
+    {
+      "id": "D13 explicit proposal semantic/manual audit",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.98,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.93,
+        "reversibility": 0.97,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.93,
+        "independence": 0.4,
+        "completeness": 0.7
+      },
+      "P": 0.9705,
+      "E": 0.755,
+      "execution_gate": "READY_DEVELOPMENT",
+      "judgment_not_probability": true
+    },
+    {
+      "id": "D3 version-aware source family lineage",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.94,
+        "language_quality_relevance": 0.91,
+        "execution_readiness": 0.73,
+        "reversibility": 0.97,
+        "risk_reduction": 0.99,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.97,
+        "independence": 0.42,
+        "completeness": 0.62
+      },
+      "P": 0.9197,
+      "E": 0.75,
+      "execution_gate": "PREPARE",
+      "judgment_not_probability": true
+    },
+    {
+      "id": "D2 independent reader/source evaluation",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.99,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.55,
+        "reversibility": 0.95,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.78
+      },
+      "evidence": {
+        "source_directness": 0.95,
+        "reproducibility": 0.75,
+        "independence": 0.45,
+        "completeness": 0.65
+      },
+      "P": 0.9052,
+      "E": 0.7,
+      "execution_gate": "PREPARE_RIGHTS_AND_RATERS",
+      "judgment_not_probability": true
+    },
+    {
+      "id": "D6 model training",
+      "utility": {
+        "bottleneck_relief": 0.27,
+        "causal_information": 0.4,
+        "language_quality_relevance": 0.45,
+        "execution_readiness": 0.22,
+        "reversibility": 0.35,
+        "risk_reduction": 0.34,
+        "cost_efficiency": 0.15
+      },
+      "evidence": {
+        "source_directness": 0.66,
+        "reproducibility": 0.37,
+        "independence": 0.38,
+        "completeness": 0.41
+      },
+      "P": 0.321,
+      "E": 0.455,
+      "execution_gate": "BLOCKED",
+      "judgment_not_probability": true
+    }
+  ],
+  "top_ready": "D12 matched content/organization feedback audit",
+  "sensitivity": {
+    "scenarios": 168,
+    "top_changes": 28
+  },
+  "lines": [
+    {
+      "id": "L001",
+      "E": 0.99,
+      "P": 0.99,
+      "kind": "FACT",
+      "sources": [
+        "A1"
+      ],
+      "sha256": "5b0093d7a6b18bc93ad65d95fdf99825c6e2d881271e2f3602733244a4a51b50"
+    },
+    {
+      "id": "L002",
+      "E": 0.99,
+      "P": 0.99,
+      "kind": "FACT",
+      "sources": [
+        "A1"
+      ],
+      "sha256": "551797c9cd7a020cb693775c94640bf323b5f606c8c99d188a73f29209609f3b"
+    },
+    {
+      "id": "L003",
+      "E": 0.99,
+      "P": 0.99,
+      "kind": "INFER",
+      "sources": [
+        "S1",
+        "A1"
+      ],
+      "sha256": "686daaa81f16425b698d4b3414d7b6baf1c66f73fc8b445bcde4ceb9ca6c98d3"
+    },
+    {
+      "id": "L004",
+      "E": 0.99,
+      "P": 0.97,
+      "kind": "FACT",
+      "sources": [
+        "A1"
+      ],
+      "sha256": "a7c26bce550efc68637daa89d0beb4d3746a497449918c6bbee98dcb456c0072"
+    },
+    {
+      "id": "L005",
+      "E": 0.99,
+      "P": 0.98,
+      "kind": "FACT",
+      "sources": [
+        "A1"
+      ],
+      "sha256": "8aee6e8ae3713b7caa8f76ba77e96bf0c119b4fd8f30c3ac57283edfe3a509bc"
+    },
+    {
+      "id": "L006",
+      "E": 0.99,
+      "P": 0.98,
+      "kind": "FACT",
+      "sources": [
+        "A2"
+      ],
+      "sha256": "f85f2c8f87862e1a45dc75a374af605d052773a67578c82051aa9de8d75c0a7d"
+    },
+    {
+      "id": "L007",
+      "E": 0.99,
+      "P": 0.95,
+      "kind": "FACT",
+      "sources": [
+        "A2"
+      ],
+      "sha256": "c0a3cb84cd715efed77c5de026100b9ae3599c94b821e4f50381042a8654f523"
+    },
+    {
+      "id": "L008",
+      "E": 0.95,
+      "P": 0.99,
+      "kind": "HOLD",
+      "sources": [
+        "A2"
+      ],
+      "sha256": "649b6743af1b1301e5a84033fae657ba38abf97391f4544342a941b5c3340c1f"
+    },
+    {
+      "id": "L009",
+      "E": 0.99,
+      "P": 0.98,
+      "kind": "FACT",
+      "sources": [
+        "A3"
+      ],
+      "sha256": "f8202796490d66b376c681eb2483741e08e49d74e5ac9fd858b48323e2ddfacd"
+    },
+    {
+      "id": "L010",
+      "E": 0.99,
+      "P": 0.95,
+      "kind": "FACT",
+      "sources": [
+        "T1"
+      ],
+      "sha256": "b7e049856cab15024848b9801e91318c0cb6d9f8763e3d67af6052df80685bfc"
+    },
+    {
+      "id": "L011",
+      "E": 0.94,
+      "P": 0.99,
+      "kind": "PLAN",
+      "sources": [
+        "A2",
+        "A3"
+      ],
+      "sha256": "de4d934aa73f7ee138979a5616970ee9d94c9961f1a8c02e0244435989138aa2"
+    },
+    {
+      "id": "L012",
+      "E": 0.99,
+      "P": 0.99,
+      "kind": "HOLD",
+      "sources": [
+        "S1",
+        "A1"
+      ],
+      "sha256": "0288d01ef3c13935081b6bc1e2ddbb7352e44f42a26641a503d32d48a1d6352f"
+    }
+  ],
+  "new_provider_calls": 0,
+  "independent_human_ratings": 0,
+  "quality_promotion": false
+}
