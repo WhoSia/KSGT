@@ -1,0 +1,341 @@
+{
+  "0.6": {
+    "counts": {
+      "sentence_rows": 950,
+      "linked": 924,
+      "strict_expert": 744,
+      "strict_model": 4,
+      "strict_joint": 2,
+      "expert_recovered": 757,
+      "model_recovered": 595,
+      "expert_strict_lost": 0,
+      "model_strict_lost": 1,
+      "joint": 537,
+      "unlinked": 26
+    },
+    "expert_status": {
+      "REVIEW_CANDIDATE_ONLY": 757,
+      "NESTED_QUOTE": 68,
+      "NO_SINGLE_RECOMMENDATION": 83,
+      "MISSING_SENTENCE_END": 5,
+      "NO_CONCLUSION_LINK": 3,
+      "NO_TERMINAL_QUOTE": 8
+    },
+    "model_status": {
+      "REVIEW_CANDIDATE_ONLY": 574,
+      "NESTED_QUOTE": 42,
+      "NO_TERMINAL_QUOTE": 107,
+      "MISSING_SENTENCE_END": 107,
+      "NO_SINGLE_RECOMMENDATION": 20,
+      "NO_CONCLUSION_LINK": 31,
+      "NOT_WHOLE_SOURCE_REPLACEMENT": 16,
+      "LOW_SOURCE_SIMILARITY": 6,
+      "EXPLICIT_UNCHANGED": 21
+    },
+    "surface_comparison": {
+      "DIFFERENT_SURFACE": 242,
+      "EXPERT_UNCHANGED": 0,
+      "MODEL_UNCHANGED": 15,
+      "OVERLAPPING_TOUCHED_POSITIONS": 182,
+      "DISJOINT_TOUCHED_POSITIONS": 83,
+      "EXACT": 257,
+      "WHITESPACE_STRIPPED_EQUAL": 38
+    },
+    "norm_category_joint_overlapping_membership": {
+      "띄어쓰기": {
+        "joint": 97,
+        "exact": 62
+      },
+      "문장 부호": {
+        "joint": 20,
+        "exact": 6
+      },
+      "부적절한 높임": {
+        "joint": 37,
+        "exact": 6
+      },
+      "부적절한 어순": {
+        "joint": 9,
+        "exact": 0
+      },
+      "부적절한 조사": {
+        "joint": 41,
+        "exact": 17
+      },
+      "부적절한 피동과 사동": {
+        "joint": 14,
+        "exact": 9
+      },
+      "부적절한 호응 및 시제": {
+        "joint": 61,
+        "exact": 11
+      },
+      "외래어 표기법": {
+        "joint": 23,
+        "exact": 13
+      },
+      "한글 맞춤법, 표준어 규정": {
+        "joint": 235,
+        "exact": 133
+      }
+    },
+    "threshold": 0.6,
+    "semantic_validation": false,
+    "new_provider_calls": 0
+  },
+  "0.7": {
+    "counts": {
+      "sentence_rows": 950,
+      "linked": 924,
+      "strict_expert": 744,
+      "strict_model": 4,
+      "strict_joint": 2,
+      "expert_recovered": 755,
+      "model_recovered": 586,
+      "expert_strict_lost": 2,
+      "model_strict_lost": 1,
+      "joint": 530,
+      "unlinked": 26
+    },
+    "expert_status": {
+      "REVIEW_CANDIDATE_ONLY": 755,
+      "NESTED_QUOTE": 68,
+      "NO_SINGLE_RECOMMENDATION": 83,
+      "MISSING_SENTENCE_END": 5,
+      "NO_CONCLUSION_LINK": 3,
+      "NO_TERMINAL_QUOTE": 8,
+      "LOW_SOURCE_SIMILARITY": 2
+    },
+    "model_status": {
+      "REVIEW_CANDIDATE_ONLY": 565,
+      "NESTED_QUOTE": 42,
+      "NO_TERMINAL_QUOTE": 107,
+      "MISSING_SENTENCE_END": 107,
+      "NO_SINGLE_RECOMMENDATION": 20,
+      "LOW_SOURCE_SIMILARITY": 15,
+      "NO_CONCLUSION_LINK": 31,
+      "NOT_WHOLE_SOURCE_REPLACEMENT": 16,
+      "EXPLICIT_UNCHANGED": 21
+    },
+    "surface_comparison": {
+      "DIFFERENT_SURFACE": 235,
+      "EXPERT_UNCHANGED": 0,
+      "MODEL_UNCHANGED": 15,
+      "OVERLAPPING_TOUCHED_POSITIONS": 175,
+      "DISJOINT_TOUCHED_POSITIONS": 83,
+      "EXACT": 257,
+      "WHITESPACE_STRIPPED_EQUAL": 38
+    },
+    "norm_category_joint_overlapping_membership": {
+      "띄어쓰기": {
+        "joint": 96,
+        "exact": 62
+      },
+      "문장 부호": {
+        "joint": 19,
+        "exact": 6
+      },
+      "부적절한 높임": {
+        "joint": 37,
+        "exact": 6
+      },
+      "부적절한 어순": {
+        "joint": 9,
+        "exact": 0
+      },
+      "부적절한 조사": {
+        "joint": 41,
+        "exact": 17
+      },
+      "부적절한 피동과 사동": {
+        "joint": 14,
+        "exact": 9
+      },
+      "부적절한 호응 및 시제": {
+        "joint": 58,
+        "exact": 11
+      },
+      "외래어 표기법": {
+        "joint": 23,
+        "exact": 13
+      },
+      "한글 맞춤법, 표준어 규정": {
+        "joint": 233,
+        "exact": 133
+      }
+    },
+    "threshold": 0.7,
+    "semantic_validation": false,
+    "new_provider_calls": 0
+  },
+  "0.8": {
+    "counts": {
+      "sentence_rows": 950,
+      "linked": 924,
+      "strict_expert": 744,
+      "strict_model": 4,
+      "strict_joint": 2,
+      "expert_recovered": 752,
+      "model_recovered": 569,
+      "expert_strict_lost": 5,
+      "model_strict_lost": 1,
+      "joint": 516,
+      "unlinked": 26
+    },
+    "expert_status": {
+      "REVIEW_CANDIDATE_ONLY": 752,
+      "LOW_SOURCE_SIMILARITY": 5,
+      "NESTED_QUOTE": 68,
+      "NO_SINGLE_RECOMMENDATION": 83,
+      "MISSING_SENTENCE_END": 5,
+      "NO_CONCLUSION_LINK": 3,
+      "NO_TERMINAL_QUOTE": 8
+    },
+    "model_status": {
+      "REVIEW_CANDIDATE_ONLY": 548,
+      "LOW_SOURCE_SIMILARITY": 32,
+      "NESTED_QUOTE": 42,
+      "NO_TERMINAL_QUOTE": 107,
+      "MISSING_SENTENCE_END": 107,
+      "NO_SINGLE_RECOMMENDATION": 20,
+      "NO_CONCLUSION_LINK": 31,
+      "NOT_WHOLE_SOURCE_REPLACEMENT": 16,
+      "EXPLICIT_UNCHANGED": 21
+    },
+    "surface_comparison": {
+      "DIFFERENT_SURFACE": 221,
+      "EXPERT_UNCHANGED": 0,
+      "MODEL_UNCHANGED": 15,
+      "OVERLAPPING_TOUCHED_POSITIONS": 165,
+      "DISJOINT_TOUCHED_POSITIONS": 79,
+      "EXACT": 257,
+      "WHITESPACE_STRIPPED_EQUAL": 38
+    },
+    "norm_category_joint_overlapping_membership": {
+      "띄어쓰기": {
+        "joint": 96,
+        "exact": 62
+      },
+      "문장 부호": {
+        "joint": 18,
+        "exact": 6
+      },
+      "부적절한 높임": {
+        "joint": 36,
+        "exact": 6
+      },
+      "부적절한 어순": {
+        "joint": 7,
+        "exact": 0
+      },
+      "부적절한 조사": {
+        "joint": 40,
+        "exact": 17
+      },
+      "부적절한 피동과 사동": {
+        "joint": 14,
+        "exact": 9
+      },
+      "부적절한 호응 및 시제": {
+        "joint": 52,
+        "exact": 11
+      },
+      "외래어 표기법": {
+        "joint": 23,
+        "exact": 13
+      },
+      "한글 맞춤법, 표준어 규정": {
+        "joint": 230,
+        "exact": 133
+      }
+    },
+    "threshold": 0.8,
+    "semantic_validation": false,
+    "new_provider_calls": 0
+  },
+  "0.9": {
+    "counts": {
+      "sentence_rows": 950,
+      "linked": 924,
+      "strict_expert": 744,
+      "strict_model": 4,
+      "strict_joint": 2,
+      "expert_recovered": 737,
+      "model_recovered": 521,
+      "expert_strict_lost": 19,
+      "model_strict_lost": 1,
+      "joint": 470,
+      "unlinked": 26
+    },
+    "expert_status": {
+      "REVIEW_CANDIDATE_ONLY": 737,
+      "LOW_SOURCE_SIMILARITY": 20,
+      "NESTED_QUOTE": 68,
+      "NO_SINGLE_RECOMMENDATION": 83,
+      "MISSING_SENTENCE_END": 5,
+      "NO_CONCLUSION_LINK": 3,
+      "NO_TERMINAL_QUOTE": 8
+    },
+    "model_status": {
+      "REVIEW_CANDIDATE_ONLY": 500,
+      "LOW_SOURCE_SIMILARITY": 80,
+      "NESTED_QUOTE": 42,
+      "NO_TERMINAL_QUOTE": 107,
+      "MISSING_SENTENCE_END": 107,
+      "NO_SINGLE_RECOMMENDATION": 20,
+      "NO_CONCLUSION_LINK": 31,
+      "NOT_WHOLE_SOURCE_REPLACEMENT": 16,
+      "EXPLICIT_UNCHANGED": 21
+    },
+    "surface_comparison": {
+      "DIFFERENT_SURFACE": 175,
+      "EXPERT_UNCHANGED": 0,
+      "MODEL_UNCHANGED": 15,
+      "OVERLAPPING_TOUCHED_POSITIONS": 134,
+      "DISJOINT_TOUCHED_POSITIONS": 64,
+      "EXACT": 257,
+      "WHITESPACE_STRIPPED_EQUAL": 38
+    },
+    "norm_category_joint_overlapping_membership": {
+      "띄어쓰기": {
+        "joint": 93,
+        "exact": 62
+      },
+      "문장 부호": {
+        "joint": 18,
+        "exact": 6
+      },
+      "부적절한 높임": {
+        "joint": 32,
+        "exact": 6
+      },
+      "부적절한 어순": {
+        "joint": 3,
+        "exact": 0
+      },
+      "부적절한 조사": {
+        "joint": 36,
+        "exact": 17
+      },
+      "부적절한 피동과 사동": {
+        "joint": 13,
+        "exact": 9
+      },
+      "부적절한 호응 및 시제": {
+        "joint": 38,
+        "exact": 11
+      },
+      "외래어 표기법": {
+        "joint": 21,
+        "exact": 13
+      },
+      "한글 맞춤법, 표준어 규정": {
+        "joint": 216,
+        "exact": 133
+      }
+    },
+    "threshold": 0.9,
+    "semantic_validation": false,
+    "new_provider_calls": 0
+  }
+}
