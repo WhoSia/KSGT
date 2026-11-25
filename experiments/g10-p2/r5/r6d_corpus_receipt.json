@@ -1,0 +1,27 @@
+{
+  "matched_feedback_sample": {
+    "문단": {
+      "eligible": 16,
+      "selected": 4
+    },
+    "문서": {
+      "eligible": 22,
+      "selected": 4
+    }
+  },
+  "proposal_sample": {
+    "EXACT": {
+      "eligible": 208,
+      "selected": 4
+    },
+    "WHITESPACE_STRIPPED_EQUAL": {
+      "eligible": 28,
+      "selected": 4
+    },
+    "DIFFERENT_SURFACE": {
+      "eligible": 198,
+      "selected": 4
+    }
+  },
+  "interpretation": "Post hoc topic/keyword-filtered samples for investigator review, not representative or independent. No raw source, IDs, or candidate text."
+}
