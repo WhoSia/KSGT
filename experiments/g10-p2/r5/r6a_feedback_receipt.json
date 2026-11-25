@@ -1,0 +1,57 @@
+{
+  "same_target_group_types": {
+    "표현/문장+표현/문장": 2,
+    "내용/문단+조직/문단": 89,
+    "내용/문서+조직/문서": 100
+  },
+  "duplicate_group_lineage_disagreement": 0,
+  "paired_content_organization": {
+    "문단": {
+      "pairs": 89,
+      "expert_content_longer": 89,
+      "expert_same_text": 0,
+      "median_lengths_expert_content_org_llm_content_org": [
+        322,
+        121,
+        478,
+        344
+      ]
+    },
+    "문서": {
+      "pairs": 100,
+      "expert_content_longer": 95,
+      "expert_same_text": 0,
+      "median_lengths_expert_content_org_llm_content_org": [
+        444.0,
+        252.5,
+        749.0,
+        731.5
+      ]
+    }
+  },
+  "expression_sentence_proposal_status": {
+    "REVIEW_CANDIDATE_ONLY": 744,
+    "NO_UNIQUE_INPUT_FORM": 26,
+    "AMBIGUOUS_NESTED_QUOTE": 31,
+    "NO_FULL_SOURCE_WITNESS": 56,
+    "NO_EXPLICIT_FINAL_RECOMMENDATION": 83,
+    "NOT_CHANGED_SENTENCE": 7,
+    "NO_IMMEDIATE_CONCLUSION": 3
+  },
+  "proposal_character_edit_proxy": {
+    "2-5": 235,
+    "11+": 19,
+    "1": 458,
+    "6-10": 32
+  },
+  "proposal_mechanical_indicators": {
+    "numeric_sequence_changed": 0,
+    "whitespace_only": 153,
+    "proposal_shorter": 129,
+    "proposal_longer": 243,
+    "proposal_same_length": 372
+  },
+  "semantic_validation": false,
+  "human_gold_claim": false,
+  "new_model_calls": 0
+}
