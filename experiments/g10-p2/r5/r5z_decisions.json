@@ -1,0 +1,404 @@
+{
+  "registry": {
+    "schema": "ksgt.g10p2.r5t.lira.multiaxis.v1",
+    "stage": "G10-P2 OPEN / QUALITY_HOLD",
+    "verified_human_outcomes": 0,
+    "real_nikl24_raw_acquired": false,
+    "sources": {
+      "U1": "2026-11-25 user report of approval and download",
+      "D1": "Drive intake folder 1UrmGhhzUm5L9xKcpmxfCMAF8PRyNmbA0 verified parent and empty listing",
+      "A1": "r5z_receipt.json",
+      "R1": "r5z_report.md first candidate review",
+      "T1": "r5z_tests.txt",
+      "T2": "r5z_intake_tests.txt"
+    },
+    "decisions": [
+      {
+        "id": "D1 NIKL approved: prepare authorized intake",
+        "utility": {
+          "bottleneck_relief": 0.99,
+          "causal_information": 0.98,
+          "language_quality_relevance": 0.99,
+          "execution_readiness": 0.82,
+          "reversibility": 0.95,
+          "risk_reduction": 0.98,
+          "cost_efficiency": 0.96
+        },
+        "evidence": {
+          "source_directness": 0.94,
+          "reproducibility": 0.65,
+          "independence": 0.48,
+          "completeness": 0.6
+        },
+        "uncertainty": {
+          "bottleneck_relief": 0.1,
+          "causal_information": 0.1,
+          "language_quality_relevance": 0.1,
+          "execution_readiness": 0.1,
+          "reversibility": 0.1,
+          "risk_reduction": 0.1,
+          "cost_efficiency": 0.1
+        },
+        "execution_gate": "PREPARE",
+        "source_ids": [
+          "U1",
+          "D1",
+          "T2"
+        ],
+        "blockers": [
+          "actual archive and full terms not verified"
+        ]
+      },
+      {
+        "id": "D10 dependency closure: comparative candidate replay",
+        "utility": {
+          "bottleneck_relief": 0.97,
+          "causal_information": 0.96,
+          "language_quality_relevance": 0.99,
+          "execution_readiness": 0.99,
+          "reversibility": 0.99,
+          "risk_reduction": 0.93,
+          "cost_efficiency": 0.97
+        },
+        "evidence": {
+          "source_directness": 0.99,
+          "reproducibility": 0.98,
+          "independence": 0.4,
+          "completeness": 0.83
+        },
+        "uncertainty": {
+          "bottleneck_relief": 0.08,
+          "causal_information": 0.08,
+          "language_quality_relevance": 0.08,
+          "execution_readiness": 0.08,
+          "reversibility": 0.08,
+          "risk_reduction": 0.08,
+          "cost_efficiency": 0.08
+        },
+        "execution_gate": "READY",
+        "source_ids": [
+          "A1",
+          "R1",
+          "T1"
+        ],
+        "blockers": []
+      },
+      {
+        "id": "D2 independent reader and source audit",
+        "utility": {
+          "bottleneck_relief": 0.99,
+          "causal_information": 0.99,
+          "language_quality_relevance": 0.99,
+          "execution_readiness": 0.55,
+          "reversibility": 0.95,
+          "risk_reduction": 0.96,
+          "cost_efficiency": 0.8
+        },
+        "evidence": {
+          "source_directness": 0.95,
+          "reproducibility": 0.75,
+          "independence": 0.45,
+          "completeness": 0.65
+        },
+        "uncertainty": {
+          "bottleneck_relief": 0.13,
+          "causal_information": 0.13,
+          "language_quality_relevance": 0.13,
+          "execution_readiness": 0.13,
+          "reversibility": 0.13,
+          "risk_reduction": 0.13,
+          "cost_efficiency": 0.13
+        },
+        "execution_gate": "PREPARE",
+        "source_ids": [
+          "A1",
+          "R1"
+        ],
+        "blockers": [
+          "independent assessor and authorized source frame absent"
+        ]
+      },
+      {
+        "id": "D11 selective state acquisition",
+        "utility": {
+          "bottleneck_relief": 0.94,
+          "causal_information": 0.95,
+          "language_quality_relevance": 0.97,
+          "execution_readiness": 0.9,
+          "reversibility": 0.97,
+          "risk_reduction": 0.93,
+          "cost_efficiency": 0.96
+        },
+        "evidence": {
+          "source_directness": 0.92,
+          "reproducibility": 0.86,
+          "independence": 0.4,
+          "completeness": 0.72
+        },
+        "uncertainty": {
+          "bottleneck_relief": 0.1,
+          "causal_information": 0.1,
+          "language_quality_relevance": 0.1,
+          "execution_readiness": 0.1,
+          "reversibility": 0.1,
+          "risk_reduction": 0.1,
+          "cost_efficiency": 0.1
+        },
+        "execution_gate": "READY",
+        "source_ids": [
+          "A1",
+          "R1"
+        ],
+        "blockers": []
+      },
+      {
+        "id": "D6 neural training",
+        "utility": {
+          "bottleneck_relief": 0.27,
+          "causal_information": 0.4,
+          "language_quality_relevance": 0.45,
+          "execution_readiness": 0.22,
+          "reversibility": 0.35,
+          "risk_reduction": 0.34,
+          "cost_efficiency": 0.15
+        },
+        "evidence": {
+          "source_directness": 0.66,
+          "reproducibility": 0.37,
+          "independence": 0.38,
+          "completeness": 0.41
+        },
+        "uncertainty": {
+          "bottleneck_relief": 0.15,
+          "causal_information": 0.15,
+          "language_quality_relevance": 0.15,
+          "execution_readiness": 0.15,
+          "reversibility": 0.15,
+          "risk_reduction": 0.15,
+          "cost_efficiency": 0.15
+        },
+        "execution_gate": "BLOCKED",
+        "source_ids": [
+          "A1"
+        ],
+        "blockers": [
+          "independent outcomes absent"
+        ]
+      }
+    ]
+  },
+  "court": {
+    "schema": "ksgt.g10p2.r5t.lira.multiaxis.v1",
+    "stage": "G10-P2 OPEN / QUALITY_HOLD",
+    "score_kind": "heuristic_not_probability",
+    "lines": 11,
+    "line_hashes": [
+      {
+        "id": "L001",
+        "E": 0.97,
+        "P": 0.99,
+        "kind": "FACT",
+        "sources": [
+          "U1"
+        ],
+        "sha256": "f7adbe47947fed866a464624856e53e9ab5b3ca7eec3eab027f4fa6386e1dfea"
+      },
+      {
+        "id": "L002",
+        "E": 0.99,
+        "P": 0.99,
+        "kind": "HOLD",
+        "sources": [
+          "U1",
+          "D1"
+        ],
+        "sha256": "9a7fe6a296bce80c2ff16baef3d45d0a7dfb1e6aa702164a488cc5df655765cb"
+      },
+      {
+        "id": "L003",
+        "E": 0.99,
+        "P": 0.98,
+        "kind": "FACT",
+        "sources": [
+          "D1"
+        ],
+        "sha256": "1f158c213e36a2eafe6757e4e4aea33c73c9132eb3519d2970bdf9887bf9df5c"
+      },
+      {
+        "id": "L004",
+        "E": 0.99,
+        "P": 0.97,
+        "kind": "FACT",
+        "sources": [
+          "A1"
+        ],
+        "sha256": "57cc1b73fdd8c595837e81c84cdd798b9493c3186fb2110e3333114942fc1c9f"
+      },
+      {
+        "id": "L005",
+        "E": 0.99,
+        "P": 0.96,
+        "kind": "FACT",
+        "sources": [
+          "A1"
+        ],
+        "sha256": "4a3831415cdc116293e0c46a070e3b793b68a2b5f7509d22a9e9b4511b406bb9"
+      },
+      {
+        "id": "L006",
+        "E": 0.99,
+        "P": 0.95,
+        "kind": "FACT",
+        "sources": [
+          "A1"
+        ],
+        "sha256": "b44f721b3440b349798ccea05d2ee56c2116e78cce4f76a33913afc738394190"
+      },
+      {
+        "id": "L007",
+        "E": 0.87,
+        "P": 0.98,
+        "kind": "INFER",
+        "sources": [
+          "A1",
+          "R1"
+        ],
+        "sha256": "536fc99651436c5c29ab11bc9adf3daa460f86b1fd675027e9b209c78510288b"
+      },
+      {
+        "id": "L008",
+        "E": 0.94,
+        "P": 0.98,
+        "kind": "PLAN",
+        "sources": [
+          "A1",
+          "R1"
+        ],
+        "sha256": "cb0a21fecd961d1b69938d76cfaeb98d052a61d71387633a4e9eba579a5f4493"
+      },
+      {
+        "id": "L009",
+        "E": 0.99,
+        "P": 0.95,
+        "kind": "FACT",
+        "sources": [
+          "T1",
+          "T2"
+        ],
+        "sha256": "dbb17714094d66a4bd249e664261aadd99ff86e08372bfcefbfbe3af7c1eb292"
+      },
+      {
+        "id": "L010",
+        "E": 0.99,
+        "P": 0.99,
+        "kind": "HOLD",
+        "sources": [
+          "A1"
+        ],
+        "sha256": "3e0cb9f6d280e73687173856dbc7b49968dcac69ad624d6f5362865ba8580b51"
+      },
+      {
+        "id": "L011",
+        "E": 0.9,
+        "P": 0.99,
+        "kind": "PLAN",
+        "sources": [
+          "U1",
+          "D1"
+        ],
+        "sha256": "6dae5470b73a5eda50b2fed6f8246d184faaa1b12c1a49e4d63e861f0baf4a41"
+      }
+    ],
+    "decisions": [
+      {
+        "id": "D10 dependency closure: comparative candidate replay",
+        "priority": 0.9719,
+        "evidence_support": 0.8,
+        "judgment_interval": [
+          0.8919,
+          1.0
+        ],
+        "execution_gate": "READY",
+        "blockers": []
+      },
+      {
+        "id": "D1 NIKL approved: prepare authorized intake",
+        "priority": 0.9584,
+        "evidence_support": 0.6675,
+        "judgment_interval": [
+          0.8584,
+          0.9896
+        ],
+        "execution_gate": "PREPARE",
+        "blockers": [
+          "actual archive and full terms not verified"
+        ]
+      },
+      {
+        "id": "D11 selective state acquisition",
+        "priority": 0.9455,
+        "evidence_support": 0.725,
+        "judgment_interval": [
+          0.8455,
+          1.0
+        ],
+        "execution_gate": "READY",
+        "blockers": []
+      },
+      {
+        "id": "D2 independent reader and source audit",
+        "priority": 0.9072,
+        "evidence_support": 0.7,
+        "judgment_interval": [
+          0.7772,
+          0.9514
+        ],
+        "execution_gate": "PREPARE",
+        "blockers": [
+          "independent assessor and authorized source frame absent"
+        ]
+      },
+      {
+        "id": "D6 neural training",
+        "priority": 0.321,
+        "evidence_support": 0.455,
+        "judgment_interval": [
+          0.171,
+          0.471
+        ],
+        "execution_gate": "BLOCKED",
+        "blockers": [
+          "independent outcomes absent"
+        ]
+      }
+    ],
+    "top_executable": "D10 dependency closure: comparative candidate replay",
+    "quality_promotion": false
+  },
+  "sensitivity": {
+    "scenarios": 140,
+    "top": "D10 dependency closure: comparative candidate replay",
+    "top_changes": 3,
+    "examples": [
+      {
+        "id": "D10 dependency closure: comparative candidate replay",
+        "dimension": "bottleneck_relief",
+        "delta": -0.2,
+        "new_top": "D11 selective state acquisition"
+      },
+      {
+        "id": "D10 dependency closure: comparative candidate replay",
+        "dimension": "causal_information",
+        "delta": -0.2,
+        "new_top": "D11 selective state acquisition"
+      },
+      {
+        "id": "D10 dependency closure: comparative candidate replay",
+        "dimension": "language_quality_relevance",
+        "delta": -0.2,
+        "new_top": "D11 selective state acquisition"
+      }
+    ],
+    "interpretation": "Local input-value perturbation; NOT confidence interval or empirical truth odds"
+  }
+}
