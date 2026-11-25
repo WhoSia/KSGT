@@ -1,0 +1,16 @@
+test_bad_edge (test_r5z_edit_closure.Test.test_bad_edge) ... ok
+test_bad_seed (test_r5z_edit_closure.Test.test_bad_seed) ... ok
+test_cycle (test_r5z_edit_closure.Test.test_cycle) ... ok
+test_disconnected (test_r5z_edit_closure.Test.test_disconnected) ... ok
+test_facet (test_r5z_edit_closure.Test.test_facet) ... ok
+test_missing (test_r5z_edit_closure.Test.test_missing) ... ok
+test_mutated_archive (test_r5z_edit_closure.Test.test_mutated_archive) ... ok
+test_overlap (test_r5z_edit_closure.Test.test_overlap) ... ok
+test_preserve (test_r5z_edit_closure.Test.test_preserve) ... ok
+test_real (test_r5z_edit_closure.Test.test_real) ... ok
+test_stale (test_r5z_edit_closure.Test.test_stale) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.005s
+
+OK
