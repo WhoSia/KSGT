@@ -1,0 +1,183 @@
+{
+  "stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "score_kind": "subjective director judgments, not probabilities",
+  "weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "scores": [
+    {
+      "id": "D15 exact alignment / bounded kernel",
+      "utility": {
+        "bottleneck_relief": 0.9,
+        "causal_information": 0.93,
+        "language_quality_relevance": 0.85,
+        "execution_readiness": 0.99,
+        "reversibility": 0.99,
+        "risk_reduction": 0.93,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.99,
+        "independence": 0.5,
+        "completeness": 0.89
+      },
+      "P": 0.928,
+      "E": 0.8425,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D14 intent-conditioned ordering",
+      "utility": {
+        "bottleneck_relief": 0.97,
+        "causal_information": 0.96,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.99,
+        "reversibility": 0.99,
+        "risk_reduction": 0.95,
+        "cost_efficiency": 0.96
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.4,
+        "completeness": 0.75
+      },
+      "P": 0.9712,
+      "E": 0.78,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D17 source-grounded edit obligation / local versus full generation",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.98,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.92,
+        "reversibility": 0.98,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.95
+      },
+      "evidence": {
+        "source_directness": 0.9,
+        "reproducibility": 0.8,
+        "independence": 0.4,
+        "completeness": 0.7
+      },
+      "P": 0.9711,
+      "E": 0.7,
+      "gate": "READY_DEVELOPMENT"
+    },
+    {
+      "id": "D13 proposal extraction semantic audit",
+      "utility": {
+        "bottleneck_relief": 0.97,
+        "causal_information": 0.97,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.94,
+        "reversibility": 0.98,
+        "risk_reduction": 0.95,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.95,
+        "reproducibility": 0.9,
+        "independence": 0.4,
+        "completeness": 0.7
+      },
+      "P": 0.9654,
+      "E": 0.7375,
+      "gate": "READY_DEVELOPMENT"
+    },
+    {
+      "id": "D3 source version lineage",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.94,
+        "language_quality_relevance": 0.91,
+        "execution_readiness": 0.73,
+        "reversibility": 0.97,
+        "risk_reduction": 0.99,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.97,
+        "independence": 0.42,
+        "completeness": 0.62
+      },
+      "P": 0.9197,
+      "E": 0.75,
+      "gate": "PREPARE"
+    },
+    {
+      "id": "D2 independent evaluation",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.99,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.55,
+        "reversibility": 0.95,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.8
+      },
+      "evidence": {
+        "source_directness": 0.95,
+        "reproducibility": 0.75,
+        "independence": 0.45,
+        "completeness": 0.65
+      },
+      "P": 0.9072,
+      "E": 0.7,
+      "gate": "PREPARE"
+    },
+    {
+      "id": "D6 model training",
+      "utility": {
+        "bottleneck_relief": 0.27,
+        "causal_information": 0.4,
+        "language_quality_relevance": 0.45,
+        "execution_readiness": 0.22,
+        "reversibility": 0.35,
+        "risk_reduction": 0.34,
+        "cost_efficiency": 0.15
+      },
+      "evidence": {
+        "source_directness": 0.66,
+        "reproducibility": 0.37,
+        "independence": 0.38,
+        "completeness": 0.41
+      },
+      "P": 0.321,
+      "E": 0.455,
+      "gate": "BLOCKED"
+    }
+  ],
+  "sources": {
+    "A": "r6c_lattice_receipt.json",
+    "B": "r6c_discourse_receipt.json and round1",
+    "R": "r6c_report.md"
+  },
+  "line_sha256": [
+    "ffd4e696c66a3571798352fea43b7d272267e7be1016879c9eb6e7c5d4298332",
+    "2bff314d4017a7b91fd395e4d8b17524f58c0913b3dbff2bc71931fe3fa52d81",
+    "a48054f23ccb47bbcdf5f3c8f36f446c5f45dd10d7e6b83ef40604ff43c78e81",
+    "bfabbb8cc2e6a7a32dcef6ab76903fce51e5dbd6a16ac64b51908f06a7137735",
+    "6990f851fba336795e8118d8f3c92a828dfbd41e1663b49b6b25ac5c51b0b478",
+    "93d0c20a295ad0c8c07feebabd76b282a69d646598b9fc6731743f21be76ba83",
+    "b953f04e8f1250529df4232968f3f516a78aa908f03d3b69f59737c75cd3a9ea",
+    "b0426392a4b3420fdc31cd4abab556b01b5201b9d5d0c1e60699f539c917f452",
+    "3f28e8c3653dc2f0bbff66be70e203dea347792108fafdac97e08ae96bd5a48d",
+    "28cf3110b9c0a61b5c538b35e7d79dfaa8c2e5f1a17aead6d0c17baa5bd2360d",
+    "12fa5c8bb1e9b59579c7e6f43f69b5f88f21fe2d7733b089d2d22965fdd59075"
+  ],
+  "new_provider_calls": 0,
+  "independent_human_ratings": 0,
+  "quality_promotion": false
+}
