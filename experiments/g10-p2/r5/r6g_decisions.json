@@ -1,0 +1,10 @@
+{
+  "authority": "Subjective research priorities, not probabilities or measured quality",
+  "scores": [
+    {"id":"D19 matched representation trial","P":0.9707,"E":0.675,"gate":"DONE_DEVELOPMENT_NEGATIVE"},
+    {"id":"D19b whole-text scope and genre preservation","P":0.979,"E":0.740,"gate":"READY"},
+    {"id":"D13 diagnostic rationale audit","P":0.9574,"E":0.735,"gate":"READY"},
+    {"id":"D18c semantic target relation adjudication","P":0.9399,"E":0.6425,"gate":"READY"}
+  ],
+  "note":"D19b score is a new investigator estimate; inherited rivals unchanged. Do not infer empirical superiority."
+}
