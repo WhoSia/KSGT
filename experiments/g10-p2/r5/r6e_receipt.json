@@ -1,0 +1,76 @@
+{
+  "archive_sha256": "92ca0e42198ff10d45b72771b39ce364343634691bc348cfcc0b47de60df3c54",
+  "records": 1500,
+  "groups": {
+    "내용/문단": {
+      "records": 100,
+      "baseline_records": 30,
+      "proposed_records": 11,
+      "review_records": 20,
+      "REVIEW_clauses": 20,
+      "REVIEW_unique_quote_anchor": 2,
+      "REVIEW_ordinal_anchor": 0,
+      "PROPOSED_clauses": 11,
+      "PROPOSED_unique_quote_anchor": 0,
+      "PROPOSED_ordinal_anchor": 0,
+      "proposed_REQUEST_EVIDENCE": 11
+    },
+    "내용/문서": {
+      "records": 100,
+      "baseline_records": 38,
+      "proposed_records": 16,
+      "review_records": 18,
+      "REVIEW_clauses": 19,
+      "REVIEW_unique_quote_anchor": 0,
+      "REVIEW_ordinal_anchor": 0,
+      "PROPOSED_clauses": 16,
+      "PROPOSED_unique_quote_anchor": 0,
+      "PROPOSED_ordinal_anchor": 0,
+      "proposed_REQUEST_EVIDENCE": 16
+    },
+    "조직/문단": {
+      "records": 100,
+      "baseline_records": 15,
+      "proposed_records": 3,
+      "review_records": 12,
+      "PROPOSED_clauses": 3,
+      "PROPOSED_unique_quote_anchor": 0,
+      "PROPOSED_ordinal_anchor": 1,
+      "proposed_REMOVE": 1,
+      "REVIEW_clauses": 12,
+      "REVIEW_unique_quote_anchor": 0,
+      "REVIEW_ordinal_anchor": 1,
+      "proposed_REQUEST_EVIDENCE": 2
+    },
+    "조직/문서": {
+      "records": 100,
+      "baseline_records": 31,
+      "proposed_records": 1,
+      "review_records": 30,
+      "REVIEW_clauses": 33,
+      "REVIEW_unique_quote_anchor": 0,
+      "REVIEW_ordinal_anchor": 0,
+      "PROPOSED_clauses": 1,
+      "PROPOSED_unique_quote_anchor": 0,
+      "PROPOSED_ordinal_anchor": 0,
+      "proposed_REQUEST_EVIDENCE": 1
+    }
+  },
+  "authored_development": {
+    "keyword": {
+      "tp": 11,
+      "fp": 14,
+      "fn": 0,
+      "exact_records": 10,
+      "n": 22
+    },
+    "scoped": {
+      "tp": 11,
+      "fp": 0,
+      "fn": 0,
+      "exact_records": 22,
+      "n": 22
+    }
+  },
+  "limitations": "Keyword-based candidates; not independent gold; no factual permission; no source content emitted."
+}
