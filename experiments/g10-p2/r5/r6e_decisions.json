@@ -1,0 +1,225 @@
+{
+  "weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "scores": [
+    {
+      "id": "D18a source-grounded obligation detection",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.98,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.96,
+        "reversibility": 0.98,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.96
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.94,
+        "independence": 0.35,
+        "completeness": 0.56
+      },
+      "P": 0.9773,
+      "E": 0.71,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D18b semantic target acquisition",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.99,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.91,
+        "reversibility": 0.97,
+        "risk_reduction": 0.98,
+        "cost_efficiency": 0.93
+      },
+      "evidence": {
+        "source_directness": 0.98,
+        "reproducibility": 0.91,
+        "independence": 0.35,
+        "completeness": 0.62
+      },
+      "P": 0.9708,
+      "E": 0.715,
+      "gate": "READY"
+    },
+    {
+      "id": "D13 diagnostic rationale audit",
+      "utility": {
+        "bottleneck_relief": 0.95,
+        "causal_information": 0.96,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.94,
+        "reversibility": 0.98,
+        "risk_reduction": 0.95,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.97,
+        "reproducibility": 0.89,
+        "independence": 0.4,
+        "completeness": 0.68
+      },
+      "P": 0.9574,
+      "E": 0.735,
+      "gate": "READY"
+    },
+    {
+      "id": "D19 nonadjacent realization",
+      "utility": {
+        "bottleneck_relief": 0.91,
+        "causal_information": 0.95,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.94,
+        "reversibility": 0.99,
+        "risk_reduction": 0.91,
+        "cost_efficiency": 0.96
+      },
+      "evidence": {
+        "source_directness": 0.9,
+        "reproducibility": 0.84,
+        "independence": 0.4,
+        "completeness": 0.64
+      },
+      "P": 0.9456,
+      "E": 0.695,
+      "gate": "READY"
+    },
+    {
+      "id": "D3 source lineage",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.94,
+        "language_quality_relevance": 0.91,
+        "execution_readiness": 0.73,
+        "reversibility": 0.97,
+        "risk_reduction": 0.99,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.97,
+        "independence": 0.42,
+        "completeness": 0.62
+      },
+      "P": 0.9197,
+      "E": 0.75,
+      "gate": "PREPARE"
+    },
+    {
+      "id": "D2 independent evaluation",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.99,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.55,
+        "reversibility": 0.95,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.8
+      },
+      "evidence": {
+        "source_directness": 0.95,
+        "reproducibility": 0.75,
+        "independence": 0.45,
+        "completeness": 0.65
+      },
+      "P": 0.9072,
+      "E": 0.7,
+      "gate": "PREPARE"
+    },
+    {
+      "id": "D6 training",
+      "utility": {
+        "bottleneck_relief": 0.27,
+        "causal_information": 0.4,
+        "language_quality_relevance": 0.45,
+        "execution_readiness": 0.22,
+        "reversibility": 0.35,
+        "risk_reduction": 0.34,
+        "cost_efficiency": 0.15
+      },
+      "evidence": {
+        "source_directness": 0.66,
+        "reproducibility": 0.37,
+        "independence": 0.38,
+        "completeness": 0.41
+      },
+      "P": 0.321,
+      "E": 0.455,
+      "gate": "BLOCKED"
+    }
+  ],
+  "perturbations": 84,
+  "ready_wins": {
+    "D18b semantic target acquisition": 74,
+    "D13 diagnostic rationale audit": 10,
+    "D19 nonadjacent realization": 0
+  },
+  "line_scores": [
+    {
+      "text": "Original NIKL archive SHA and CRC replay passed.",
+      "E": 1,
+      "P": 1,
+      "source": "r6e_receipt.json",
+      "sha256": "a844b314ab4c888b171bdc4c54bd924317fac19b04160a28a40c194d18693b07"
+    },
+    {
+      "text": "Keyword baseline produced 14 false-positive action labels on authored fixtures.",
+      "E": 1,
+      "P": 0.96,
+      "source": "r6e_receipt.json",
+      "sha256": "c07816008fdecc46c8d347dcddff4bf5b49fb4fda26a41848f5e494ca2597c94"
+    },
+    {
+      "text": "Scoped suffix binding passed the authored acceptance contract.",
+      "E": 0.98,
+      "P": 0.97,
+      "source": "r6e_receipt.json",
+      "sha256": "ae67083e101053dbd041ac3cf122d33fd3f181ad3ace77f921c46c1d16777124"
+    },
+    {
+      "text": "400 content/organization records were scanned; 31 proposed records, 30 evidence candidates and one remove candidate.",
+      "E": 1,
+      "P": 0.98,
+      "source": "r6e_receipt.json",
+      "sha256": "98dba369ca2811e0c0210aa1645a90648c4ac99a703c2a636419d8e2393d85b7"
+    },
+    {
+      "text": "No proposed clause had a unique exact quoted source anchor.",
+      "E": 1,
+      "P": 0.99,
+      "source": "r6e_receipt.json",
+      "sha256": "7164f2d0a94d6c365dbe3d6d7c3fcb580f25fd0ad68b9b1388f64278a041ec78"
+    },
+    {
+      "text": "Ordinal anchor introduced one structural proposed anchor, not verified semantic scope.",
+      "E": 0.98,
+      "P": 0.95,
+      "source": "r6e_receipt.json",
+      "sha256": "9db9b218fe27e2c6ebf530c7adbd7ddfb13b0ed1df85b97de24ec657bfa83921"
+    },
+    {
+      "text": "Candidate status does not authorize a factual addition or deletion.",
+      "E": 1,
+      "P": 1,
+      "source": "r6e_obligations.py",
+      "sha256": "3fb723cc8044d680ab9f5a9fdfc8c68d1f20f0753f48ffb7074061cecdec1703"
+    },
+    {
+      "text": "Prioritize semantic target acquisition over expanding surface patterns.",
+      "E": 0.715,
+      "P": 0.971,
+      "source": "r6e_receipt.json",
+      "sha256": "5a8269b1e6ed388d7af967bbbb70ca1556290d30e330ebca6f0301c5da39f518"
+    }
+  ],
+  "score_kind": "PI judgment not probability; authored fixtures not independent"
+}
