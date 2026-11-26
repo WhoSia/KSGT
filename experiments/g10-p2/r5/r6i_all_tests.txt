@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: all nine source states and facts shared with realizer
+ok 1 - all nine source states and facts shared with realizer
+  ---
+  duration_ms: 5.319396
+  type: 'test'
+  ...
+# Subtest: mock all nine, cold receipt check and blank-response stop
+ok 2 - mock all nine, cold receipt check and blank-response stop
+  ---
+  duration_ms: 10.654184
+  type: 'test'
+  ...
+# Subtest: all nine states partition 16 knowledge/world configurations
+ok 3 - all nine states partition 16 knowledge/world configurations
+  ---
+  duration_ms: 0.915462
+  type: 'test'
+  ...
+# Subtest: exclusive actual truth unsafe for unknown other sensor; exclusive confirmation insufficient
+ok 4 - exclusive actual truth unsafe for unknown other sensor; exclusive confirmation insufficient
+  ---
+  duration_ms: 0.425739
+  type: 'test'
+  ...
+# Subtest: all complete chosen paragraphs exact under authored compositional signatures, including negative versus unknown
+ok 5 - all complete chosen paragraphs exact under authored compositional signatures, including negative versus unknown
+  ---
+  duration_ms: 3.300805
+  type: 'test'
+  ...
+# Subtest: all authored status candidates checked against independently enumerated allowed assignments
+ok 6 - all authored status candidates checked against independently enumerated allowed assignments
+  ---
+  duration_ms: 1.146293
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 73.968029
