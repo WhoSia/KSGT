@@ -1,0 +1,98 @@
+{
+  "weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "scores": [
+    {
+      "id": "D18b retrieval prototype",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.98,
+        "language_quality_relevance": 0.95,
+        "execution_readiness": 0.98,
+        "reversibility": 0.99,
+        "risk_reduction": 0.98,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.98,
+        "reproducibility": 0.95,
+        "independence": 0.35,
+        "completeness": 0.58
+      },
+      "P": 0.9758,
+      "E": 0.715,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D19 matched complete-text realization",
+      "utility": {
+        "bottleneck_relief": 0.99,
+        "causal_information": 0.99,
+        "language_quality_relevance": 1,
+        "execution_readiness": 0.92,
+        "reversibility": 0.98,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.91
+      },
+      "evidence": {
+        "source_directness": 0.9,
+        "reproducibility": 0.85,
+        "independence": 0.35,
+        "completeness": 0.6
+      },
+      "P": 0.9707,
+      "E": 0.675,
+      "gate": "READY"
+    },
+    {
+      "id": "D13 diagnostic rationale audit",
+      "utility": {
+        "bottleneck_relief": 0.95,
+        "causal_information": 0.96,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.94,
+        "reversibility": 0.98,
+        "risk_reduction": 0.95,
+        "cost_efficiency": 0.94
+      },
+      "evidence": {
+        "source_directness": 0.97,
+        "reproducibility": 0.89,
+        "independence": 0.4,
+        "completeness": 0.68
+      },
+      "P": 0.9574,
+      "E": 0.735,
+      "gate": "READY"
+    },
+    {
+      "id": "D18c semantic relation adjudication",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.99,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.78,
+        "reversibility": 0.98,
+        "risk_reduction": 0.97,
+        "cost_efficiency": 0.83
+      },
+      "evidence": {
+        "source_directness": 0.94,
+        "reproducibility": 0.82,
+        "independence": 0.35,
+        "completeness": 0.46
+      },
+      "P": 0.9399,
+      "E": 0.6425,
+      "gate": "READY"
+    }
+  ],
+  "limits": "Subjective decision scores, not measured quality or probability."
+}
