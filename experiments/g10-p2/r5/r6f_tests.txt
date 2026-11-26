@@ -1,0 +1,18 @@
+test_cases (test_r6f_targets.Test.test_cases) ... ok
+test_no_document_ordinal (test_r6f_targets.Test.test_no_document_ordinal) ... ok
+test_offsets (test_r6f_targets.Test.test_offsets) ... ok
+test_pair (test_r6f_targets.Test.test_pair) ... ok
+test_partial_quote (test_r6f_targets.Test.test_partial_quote) ... ok
+test_no_factual_authority (test_r6f_claims.Test.test_no_factual_authority) ... ok
+test_no_override (test_r6f_claims.Test.test_no_override) ... ok
+test_roles (test_r6f_claims.Test.test_roles) ... ok
+test_ambiguous_anchor (test_r6e_obligations.TestObligations.test_ambiguous_anchor) ... ok
+test_cases (test_r6e_obligations.TestObligations.test_cases) ... ok
+test_offsets (test_r6e_obligations.TestObligations.test_offsets) ... ok
+test_unique_anchor (test_r6e_obligations.TestObligations.test_unique_anchor) ... ok
+test_ordinal (test_r6e_obligations.TestOrdinal.test_ordinal) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.003s
+
+OK
