@@ -1,0 +1,10 @@
+test_ambiguous_anchor (test_r6e_obligations.TestObligations.test_ambiguous_anchor) ... ok
+test_cases (test_r6e_obligations.TestObligations.test_cases) ... ok
+test_offsets (test_r6e_obligations.TestObligations.test_offsets) ... ok
+test_unique_anchor (test_r6e_obligations.TestObligations.test_unique_anchor) ... ok
+test_ordinal (test_r6e_obligations.TestOrdinal.test_ordinal) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
