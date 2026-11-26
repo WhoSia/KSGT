@@ -1,0 +1,460 @@
+[
+  {
+    "state": [
+      "T",
+      "T"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. 두 센서 모두에서 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 1,
+      "actual": 1,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0,
+            1
+          ],
+          "status": "T",
+          "text": "두 센서 모두에서 변동 폭의 감소가 확인됐다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서만 변동 폭이 감소했다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 1,
+        "actual": 2570,
+        "sound": false,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-world",
+            "member": 0,
+            "text": "A 센서에서만 변동 폭이 감소했다."
+          }
+        ]
+      },
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서만 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 1,
+        "actual": 14,
+        "sound": false,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-confirmed",
+            "member": 0,
+            "text": "A 센서에서만 변동 폭의 감소가 확인됐다."
+          }
+        ]
+      },
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. B 센서에서만 변동 폭이 감소했다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 1,
+        "actual": 20560,
+        "sound": false,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-world",
+            "member": 1,
+            "text": "B 센서에서만 변동 폭이 감소했다."
+          }
+        ]
+      },
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. B 센서에서만 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 1,
+        "actual": 4368,
+        "sound": false,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-confirmed",
+            "member": 1,
+            "text": "B 센서에서만 변동 폭의 감소가 확인됐다."
+          }
+        ]
+      }
+    ],
+    "candidateCount": 10
+  },
+  {
+    "state": [
+      "T",
+      "F"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서는 변동 폭의 감소가 확인됐다. B 센서에서는 변동 폭이 줄지 않았음을 확인했다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 2,
+      "actual": 2,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0
+          ],
+          "status": "T",
+          "text": "A 센서에서는 변동 폭의 감소가 확인됐다."
+        },
+        {
+          "kind": "status",
+          "members": [
+            1
+          ],
+          "status": "F",
+          "text": "B 센서에서는 변동 폭이 줄지 않았음을 확인했다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서만 변동 폭이 감소했다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 2,
+        "actual": 2570,
+        "sound": true,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-world",
+            "member": 0,
+            "text": "A 센서에서만 변동 폭이 감소했다."
+          }
+        ]
+      },
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서만 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 2,
+        "actual": 14,
+        "sound": true,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-confirmed",
+            "member": 0,
+            "text": "A 센서에서만 변동 폭의 감소가 확인됐다."
+          }
+        ]
+      }
+    ],
+    "candidateCount": 8
+  },
+  {
+    "state": [
+      "T",
+      "U"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서는 변동 폭의 감소가 확인됐다. B 센서에서는 변동 폭의 감소 여부를 확인하지 못했다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 12,
+      "actual": 12,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0
+          ],
+          "status": "T",
+          "text": "A 센서에서는 변동 폭의 감소가 확인됐다."
+        },
+        {
+          "kind": "status",
+          "members": [
+            1
+          ],
+          "status": "U",
+          "text": "B 센서에서는 변동 폭의 감소 여부를 확인하지 못했다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서만 변동 폭이 감소했다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 12,
+        "actual": 2570,
+        "sound": false,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-world",
+            "member": 0,
+            "text": "A 센서에서만 변동 폭이 감소했다."
+          }
+        ]
+      },
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서만 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 12,
+        "actual": 14,
+        "sound": true,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-confirmed",
+            "member": 0,
+            "text": "A 센서에서만 변동 폭의 감소가 확인됐다."
+          }
+        ]
+      }
+    ],
+    "candidateCount": 8
+  },
+  {
+    "state": [
+      "F",
+      "T"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서는 변동 폭이 줄지 않았음을 확인했다. B 센서에서는 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 16,
+      "actual": 16,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0
+          ],
+          "status": "F",
+          "text": "A 센서에서는 변동 폭이 줄지 않았음을 확인했다."
+        },
+        {
+          "kind": "status",
+          "members": [
+            1
+          ],
+          "status": "T",
+          "text": "B 센서에서는 변동 폭의 감소가 확인됐다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. B 센서에서만 변동 폭이 감소했다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 16,
+        "actual": 20560,
+        "sound": true,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-world",
+            "member": 1,
+            "text": "B 센서에서만 변동 폭이 감소했다."
+          }
+        ]
+      },
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. B 센서에서만 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 16,
+        "actual": 4368,
+        "sound": true,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-confirmed",
+            "member": 1,
+            "text": "B 센서에서만 변동 폭의 감소가 확인됐다."
+          }
+        ]
+      }
+    ],
+    "candidateCount": 8
+  },
+  {
+    "state": [
+      "F",
+      "F"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. 두 센서 모두에서 변동 폭이 줄지 않았음을 확인했다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 32,
+      "actual": 32,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0,
+            1
+          ],
+          "status": "F",
+          "text": "두 센서 모두에서 변동 폭이 줄지 않았음을 확인했다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [],
+    "candidateCount": 6
+  },
+  {
+    "state": [
+      "F",
+      "U"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서는 변동 폭이 줄지 않았음을 확인했다. B 센서에서는 변동 폭의 감소 여부를 확인하지 못했다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 192,
+      "actual": 192,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0
+          ],
+          "status": "F",
+          "text": "A 센서에서는 변동 폭이 줄지 않았음을 확인했다."
+        },
+        {
+          "kind": "status",
+          "members": [
+            1
+          ],
+          "status": "U",
+          "text": "B 센서에서는 변동 폭의 감소 여부를 확인하지 못했다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [],
+    "candidateCount": 6
+  },
+  {
+    "state": [
+      "U",
+      "T"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서는 변동 폭의 감소 여부를 확인하지 못했다. B 센서에서는 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 4352,
+      "actual": 4352,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0
+          ],
+          "status": "U",
+          "text": "A 센서에서는 변동 폭의 감소 여부를 확인하지 못했다."
+        },
+        {
+          "kind": "status",
+          "members": [
+            1
+          ],
+          "status": "T",
+          "text": "B 센서에서는 변동 폭의 감소가 확인됐다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. B 센서에서만 변동 폭이 감소했다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 4352,
+        "actual": 20560,
+        "sound": false,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-world",
+            "member": 1,
+            "text": "B 센서에서만 변동 폭이 감소했다."
+          }
+        ]
+      },
+      {
+        "text": "같은 날 두 센서의 출력값을 각각 기록했다. B 센서에서만 변동 폭의 감소가 확인됐다. 두 센서의 교정 상태는 기록하지 않았다.",
+        "required": 4352,
+        "actual": 4368,
+        "sound": true,
+        "exact": false,
+        "clauses": [
+          {
+            "kind": "only-confirmed",
+            "member": 1,
+            "text": "B 센서에서만 변동 폭의 감소가 확인됐다."
+          }
+        ]
+      }
+    ],
+    "candidateCount": 8
+  },
+  {
+    "state": [
+      "U",
+      "F"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. A 센서에서는 변동 폭의 감소 여부를 확인하지 못했다. B 센서에서는 변동 폭이 줄지 않았음을 확인했다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 8704,
+      "actual": 8704,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0
+          ],
+          "status": "U",
+          "text": "A 센서에서는 변동 폭의 감소 여부를 확인하지 못했다."
+        },
+        {
+          "kind": "status",
+          "members": [
+            1
+          ],
+          "status": "F",
+          "text": "B 센서에서는 변동 폭이 줄지 않았음을 확인했다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [],
+    "candidateCount": 6
+  },
+  {
+    "state": [
+      "U",
+      "U"
+    ],
+    "chosen": {
+      "text": "같은 날 두 센서의 출력값을 각각 기록했다. 두 센서 모두에서 변동 폭이 감소했는지는 확인하지 못했다. 두 센서의 교정 상태는 기록하지 않았다.",
+      "required": 52224,
+      "actual": 52224,
+      "sound": true,
+      "exact": true,
+      "clauses": [
+        {
+          "kind": "status",
+          "members": [
+            0,
+            1
+          ],
+          "status": "U",
+          "text": "두 센서 모두에서 변동 폭이 감소했는지는 확인하지 못했다."
+        }
+      ]
+    },
+    "valid": 6,
+    "rejected": [],
+    "candidateCount": 6
+  }
+]
