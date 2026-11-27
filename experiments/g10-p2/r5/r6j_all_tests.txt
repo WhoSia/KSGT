@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: same candidate pool, complete context cross product
+ok 1 - same candidate pool, complete context cross product
+  ---
+  duration_ms: 23.793912
+  type: 'test'
+  ...
+# Subtest: scope violation never selected; literal-only has no figure
+ok 2 - scope violation never selected; literal-only has no figure
+  ---
+  duration_ms: 5.072235
+  type: 'test'
+  ...
+# Subtest: changing focus changes the emitted order without changing fact labels
+ok 3 - changing focus changes the emitted order without changing fact labels
+  ---
+  duration_ms: 1.941778
+  type: 'test'
+  ...
+# Subtest: zero weights reduce to shortest; reject invalid context
+ok 4 - zero weights reduce to shortest; reject invalid context
+  ---
+  duration_ms: 5.144878
+  type: 'test'
+  ...
+# Subtest: fused clause retains actor introduction and final action, no arbitrary ellipsis
+ok 5 - fused clause retains actor introduction and final action, no arbitrary ellipsis
+  ---
+  duration_ms: 3.368449
+  type: 'test'
+  ...
+# Subtest: eight frozen prompts contain source facts but no compiled answer
+ok 6 - eight frozen prompts contain source facts but no compiled answer
+  ---
+  duration_ms: 25.675651
+  type: 'test'
+  ...
+# Subtest: mock complete then detect modified receipt; failure stops without retry
+ok 7 - mock complete then detect modified receipt; failure stops without retry
+  ---
+  duration_ms: 37.391793
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 166.148475
