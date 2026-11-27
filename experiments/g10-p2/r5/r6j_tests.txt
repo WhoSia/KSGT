@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: same candidate pool, complete context cross product
+ok 1 - same candidate pool, complete context cross product
+  ---
+  duration_ms: 14.64088
+  type: 'test'
+  ...
+# Subtest: scope violation never selected; literal-only has no figure
+ok 2 - scope violation never selected; literal-only has no figure
+  ---
+  duration_ms: 3.389956
+  type: 'test'
+  ...
+# Subtest: changing focus changes the emitted order without changing fact labels
+ok 3 - changing focus changes the emitted order without changing fact labels
+  ---
+  duration_ms: 1.500972
+  type: 'test'
+  ...
+# Subtest: zero weights reduce to shortest; reject invalid context
+ok 4 - zero weights reduce to shortest; reject invalid context
+  ---
+  duration_ms: 3.8868
+  type: 'test'
+  ...
+# Subtest: fused clause retains actor introduction and final action, no arbitrary ellipsis
+ok 5 - fused clause retains actor introduction and final action, no arbitrary ellipsis
+  ---
+  duration_ms: 0.345884
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 108.655671
