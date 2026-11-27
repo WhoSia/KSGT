@@ -3,7 +3,7 @@ const {test}=require("node:test"),a=require("node:assert/strict"),s=require("../
 
 test("approved G10-P2 title and R5 prospective, R4b human gate remain open",()=>{
  a.equal(s.current_stage,"G10-P2");
- a.equal(s.status,"OPEN_R6Z_DEVELOPMENT_COMPLETE_QUALITY_HOLD");
+ a.equal(s.status,"OPEN_R7A_DEVELOPMENT_COMPLETE_QUALITY_HOLD");
  a.equal(s.official_name,"KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs");
  a.equal(s.canonical_notion_id,"41fef561-cf92-8105-a17b-c0c33a9701bc");
 });
@@ -29,12 +29,12 @@ test("P2 cumulative model calls count R2/R2b/R4a/R4b/R5a/R5b once, never read-on
  a.equal(legacy,340);
  const r=c.r6_call_reconciliation;
  a.equal(r.base_r5i,legacy);
- a.equal(r.runs.length,16);
- a.equal(new Set(r.runs.map(x=>x.run)).size,16);
+ a.equal(r.runs.length,17);
+ a.equal(new Set(r.runs.map(x=>x.run)).size,17);
  a.equal(r.runs.find(x=>x.run===46000261677).id,"R6o");
  a.ok(r.runs.every(x=>Number.isSafeInteger(x.calls)&&x.calls>0));
  a.equal(r.incremental_calls,r.runs.reduce((n,x)=>n+x.calls,0));
- a.equal(r.incremental_calls,208);
+ a.equal(r.incremental_calls,226);
  a.equal(c.real_provider_model_calls,legacy+r.incremental_calls);
  a.equal(s.latest_experiment.newModelCalls,20);
  a.equal(s.latest_experiment.posthocReplayNewModelCalls,0);
@@ -77,7 +77,9 @@ test("P3 proposal and inherited holds do not change stage authority",()=>{
  a.equal(s.historical_g10_p2_r5i_stage_snapshot.provider_calls,340);
  a.equal(s.current_authority.rights_scope_status,"HOLD");
  a.equal(s.historical_r6xy_development.r6y_calls,0);
- a.equal(s.latest_r6_development.r6z_calls,4);
- a.equal(s.latest_r6_development.r6z_run,46028384605);
+ a.equal(s.historical_r6z_development.r6z_calls,4);
+ a.equal(s.latest_r6_development.r7a_calls,18);
+ a.equal(s.historical_r6z_development.r6z_run,46028384605);
+ a.equal(s.latest_r6_development.r7a_run,46029606917);
  a.equal(s.latest_r6_development.quality_advantage,"UNESTABLISHED");
 });
