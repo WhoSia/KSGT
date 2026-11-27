@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: all briefs: exact record multiset in both arms, source order and interleaving differ
+ok 1 - all briefs: exact record multiset in both arms, source order and interleaving differ
+  ---
+  duration_ms: 5.005334
+  type: 'test'
+  ...
+# Subtest: missing, duplicate, foreign IDs and future references are rejected
+ok 2 - missing, duplicate, foreign IDs and future references are rejected
+  ---
+  duration_ms: 0.761006
+  type: 'test'
+  ...
+# Subtest: a later paragraph may refer to an introduced fact without repeating its text
+ok 3 - a later paragraph may refer to an introduced fact without repeating its text
+  ---
+  duration_ms: 0.298202
+  type: 'test'
+  ...
+# Subtest: invalid empty or repeated reference contracts fail closed
+ok 4 - invalid empty or repeated reference contracts fail closed
+  ---
+  duration_ms: 0.5967
+  type: 'test'
+  ...
+# Subtest: matched source hash and one call per arm, shared system
+ok 5 - matched source hash and one call per arm, shared system
+  ---
+  duration_ms: 13.269931
+  type: 'test'
+  ...
+# Subtest: cold receipt verifies twelve calls and rejects tampering
+ok 6 - cold receipt verifies twelve calls and rejects tampering
+  ---
+  duration_ms: 31.637594
+  type: 'test'
+  ...
+# Subtest: provider failure halts and preserves partial receipt, no retry
+ok 7 - provider failure halts and preserves partial receipt, no retry
+  ---
+  duration_ms: 16.662051
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 197.892465
