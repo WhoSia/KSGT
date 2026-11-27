@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: enumeration agrees with independent permutation-filter oracle on 100 seeded DAGs
+ok 1 - enumeration agrees with independent permutation-filter oracle on 100 seeded DAGs
+  ---
+  duration_ms: 46.514387
+  type: 'test'
+  ...
+# Subtest: explicit overstatement and omission are distinct
+ok 2 - explicit overstatement and omission are distinct
+  ---
+  duration_ms: 8.528036
+  type: 'test'
+  ...
+# Subtest: partial order risk is policy sensitive and not factual certification
+ok 3 - partial order risk is policy sensitive and not factual certification
+  ---
+  duration_ms: 0.466456
+  type: 'test'
+  ...
+# Subtest: flashback resets temporal default without contradicting known order
+ok 4 - flashback resets temporal default without contradicting known order
+  ---
+  duration_ms: 0.423177
+  type: 'test'
+  ...
+# Subtest: fail closed on invalid event edges, cycles and missing coverage
+ok 5 - fail closed on invalid event edges, cycles and missing coverage
+  ---
+  duration_ms: 0.764889
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 129.99534
