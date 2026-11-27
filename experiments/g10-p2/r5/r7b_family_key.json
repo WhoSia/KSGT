@@ -1,0 +1,17 @@
+{
+  "id": "KEY",
+  "kind": "past knowledge vs current memory",
+  "target": "수진은 어제 보관함 번호를 알고 있었다.",
+  "parts": [
+    "수진",
+    "어제",
+    "알고 있었다",
+    "보관함 번호"
+  ],
+  "context": "수진은 오늘 보관함 번호를 기억하지 못한다.",
+  "variants": {
+    "SUPPORTED": "수진은 어제 보관함 번호를 정확히 알고 있었다.",
+    "CONTRADICTED": "수진은 어제 보관함 번호를 알지 못했다.",
+    "UNSETTLED": "수진이 어제 보관함 번호를 알고 있었는지는 확인되지 않았다."
+  }
+}
