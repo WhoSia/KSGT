@@ -1,0 +1,6 @@
+{
+  "authority": "Post-hoc investigator-authored writing alternatives; not independent human gold, not used in model calls or scored comparison.",
+  "station": "대합실의 의자 하나가 비어 있었다. 지수는 벽의 시계보다 손에 쥔 수첩을 자주 들여다보았다. 손가락이 닿는 모서리는 둥글게 닳아 있었고, 표지를 가만히 누르면 그 아래로 여러 장의 종이가 조금씩 밀렸다.\n\n다음 주 화요일. 그 아래에는 역 이름이 적혀 있었다. 지수는 수첩의 가장자리를 엄지로 문질렀다. 글씨는 종이 위에 고스란히 남아 있는데, 약속이 취소된 것인지는 알 수 없었다.\n\n벽의 시계가 오후 네 시를 가리켰다. 안내 방송이 울렸다. 방송의 울림이 이어지는 동안 지수는 수첩을 접었다.\n\n가방 입구를 벌렸다. 지수는 수첩을 가방에 넣고 개찰구 쪽으로 걸었다.",
+  "explain": "물에 덮개를 씌우느냐에 따라 수온이 얼마나 다르게 변할까? 이를 알아보기 위해 두 조건에서 물의 온도를 비교했다. 처음 기록된 온도는 모두 24도였으며, A에는 덮개가 있었고 B에는 없었다.\n\n10분 뒤 A의 온도는 22도, B의 온도는 20도였다. A는 2도, B는 4도 낮아진 셈이다. 적어도 이번 측정에서는 덮개가 있던 A의 수온이 더 적게 내려갔다.\n\n다만 각 조건에서 측정한 것은 한 번뿐이다. 주변 공기가 얼마나 움직였는지, 두 용기의 열적 특성이 어떠했는지도 기록되지 않았다. 두 수온의 차이는 확인할 수 있지만, 그 차이가 오로지 덮개의 유무에서 비롯되었는지까지는 판단할 수 없다.",
+  "limits": "Station alternative uses permitted texture and small gestures; not a certified source-preserving answer. Explanation preserves the explicit single-trial and unrecorded-variable status. Both alternatives are shorter than the approximate length target; do not score them as meeting length. This tension motivates a prospective length-target contrast rather than padding."
+}
