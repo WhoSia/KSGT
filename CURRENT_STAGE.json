@@ -4,7 +4,7 @@
   "generation": "X",
   "current_stage": "G10-P2",
   "stage_type": "READER_STATE_COUPLED_KOREAN_WRITING_ARCHITECTURE",
-  "status": "OPEN_R5I_16_ZERO_CALL_KOREAN_CLAUSE_AGGREGATIONS_COMPLETE_QUALITY_HOLD",
+  "status": "OPEN_R6Y_DEVELOPMENT_COMPLETE_QUALITY_HOLD",
   "official_name": "KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs",
   "canonical_notion_id": "41fef561-cf92-8105-a17b-c0c33a9701bc",
   "current_artifact": "experiments/g10-p2/RESEARCH_PROGRAM.md",
@@ -13,7 +13,7 @@
     "scope": "G10_P2_ONLY",
     "real_independent_korean_reader_ratings": 0,
     "source_fidelity_independent_gold": 0,
-    "real_provider_model_calls": 340,
+    "real_provider_model_calls": 544,
     "trained_new_models": 0,
     "complete_korean_prose_quality_advantage": "UNOBSERVED",
     "author_exposed_synthetic_works": 4,
@@ -297,7 +297,107 @@
     "r5i_derived_zip_sha256": "621be3f09a5dc8440a239a9b69fcd77a9b565fdd3116603ed7fb62945e7b2aec",
     "r5i_report": "experiments/g10-p2/r5/25_R5I_16_ZERO_CALL_KOREAN_CLAUSE_AGGREGATIONS_RESULTS_20261121.md",
     "r5i_scope": "POSTHOC_AUTHOR_SYNTHETIC_SOURCE_EXPOSED_NO_QUALITY_PROMOTION",
-    "r5i_natural_korean_quality_gain": "LOCAL_DEVELOPER_CLAUSE_FLOW_IMPROVEMENT_BUT_GLOBAL_SUPERIORITY_NOT_ESTABLISHED"
+    "r5i_natural_korean_quality_gain": "LOCAL_DEVELOPER_CLAUSE_FLOW_IMPROVEMENT_BUT_GLOBAL_SUPERIORITY_NOT_ESTABLISHED",
+    "r6_call_reconciliation": {
+      "base_r5i": 340,
+      "incremental_calls": 204,
+      "runs": [
+        {
+          "id": "R6g",
+          "calls": 8,
+          "run": 45889172122,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6h",
+          "calls": 12,
+          "run": 45891700991,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6i",
+          "calls": 9,
+          "run": 45892287882,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6j",
+          "calls": 8,
+          "run": 45995154714,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6l",
+          "calls": 6,
+          "run": 45997646787,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6o",
+          "calls": 3,
+          "run": 46000261677,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6p",
+          "calls": 12,
+          "run": 46003030662,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6q",
+          "calls": 16,
+          "run": 46003980729,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6r",
+          "calls": 10,
+          "run": 46006346975,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6s",
+          "calls": 16,
+          "run": 46007864242,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6t",
+          "calls": 12,
+          "run": 46010655076,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6u",
+          "calls": 16,
+          "run": 46013827732,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6v",
+          "calls": 12,
+          "run": 46016870691,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6w",
+          "calls": 48,
+          "run": 46021907657,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        },
+        {
+          "id": "R6x",
+          "calls": 16,
+          "run": 46024852407,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_REQUERIED"
+        }
+      ],
+      "source": "Canonical Notion recorded call counts; all 15 workflow run statuses rechecked. Not full historical receipt replay.",
+      "checkpoint": "experiments/g10-p2/r5/g10_p2_exit_review_checkpoint_20261128.json",
+      "erratum": "Run 46000261677 is R6o (not R6n in checkpoint); R6l display name still says R6j; workflow path identifies R6l. Counts unchanged."
+    },
+    "rights_scope_status": "HOLD"
   },
   "generation_ix_disposition": "PROGRAM_CLOSED_WITH_UNRESOLVED_SCIENTIFIC_QUESTIONS_TRANSFERRED",
   "generation_ix_terminal_receipt": "experiments/g9/GENERATION_IX_PROGRAM_CLOSURE_20261103.md",
@@ -803,8 +903,8 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "HUMAN_REQUIRED: collect voluntary independent Korean reader responses from masked Stage A and independent source-auditor responses from Stage B, each participant only one assigned form, avoiding private model method keys. R5 prereregistered equal-cost causal study remains a prospective program; new human and heldout evidence not yet observed.",
-  "current_substage": "G10-P2 R5 — PROSPECTIVE IDENTIFICATION, R4b.1 REAL-PROSE DEVELOPMENT COMPLETED; HUMAN EVIDENCE AWAITED",
+  "next_scientific_action": "Continue work-disjoint obligation/expressive move development in P2 prelude; HUMAN_REQUIRED for independent quality or source-gold claims. P3 formal title and bounded closure pending user confirmation; no automatic promotion.",
+  "current_substage": "G10-P2 R6x/R6y — P3 PRELUDE; QUALITY_HOLD / RIGHTS_SCOPE_HOLD",
   "latest_experiment": {
     "identifier": "G10-P2 R4b.1",
     "status": "DEVELOPMENT_REAL_PROSE_PATCHING_COMPLETED_HUMAN_SOURCE_AND_READER_GOLD_ZERO",
@@ -912,30 +1012,29 @@
     "note": "R9.34 was new to the programme when generated; it is now EXPOSED DEVELOPMENT and cannot become unseen confirmatory evidence."
   },
   "current_stage_review": {
-    "identifier": "G10-P1 R9.44",
-    "status": "EXIT_REVIEW_COMPLETED_P1_REMAINS_OPEN_P2_NAME_ONLY_PROPOSED",
-    "report": "experiments/g10-p1/paper/R9_44_G10_P1_RETROSPECTIVE_P2_NAMING_20261121.md",
-    "twoPhaseReaderMaterialsDriveFolder": "14EERMbvZostjUzWF6QHzksNic8baepfb",
-    "preparedReaderForms": 4,
-    "uniqueSourceWorks": 12,
+    "identifier": "G10-P2 R6y",
+    "status": "EXIT_PRELUDE_ONLY_P2_REMAINS_OPEN_P3_NOT_OPEN",
+    "report": "experiments/g10-p2/r5/G10_P2_P3_PRELUDE_20261128.md",
     "independentReaderResponses": 0,
-    "independentSourceAuditorResponses": 0,
-    "note": "Verified archive receipts, no test-set sample size inflation: four presentations of the same 12 works."
+    "independentSourceAuditorResponses": 0
   },
   "proposed_next_stage": {
-    "identifier": "G10-P2",
-    "name": "KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs",
+    "identifier": "G10-P3",
+    "name": "KSGT Generation X G10-P3 — Obligation-Constrained Discourse Realization: Semantic Authority, Expressive Latitude & Reader-State Transition",
     "status": "PROPOSAL_ONLY_NO_PROMOTION",
-    "scientificDelta": "Executable reader-state updates conditioned on actually realized Korean utterances, source-grounded relation control, adaptive no-op or local interventions, and human-validated whole-text quality/cost.",
+    "scientificDelta": "Model generation as selecting and executing licensed meaning-bearing moves under semantic obligations, communicative goals, expressive latitude and terminal control, with reader state and cost as separate outcomes.",
     "admissionRequires": [
-      "Explicit bounded P1 disposition retaining null and negative evidence",
-      "Independent Korean reader and source-auditor outcomes or explicitly labeled pilot-closure without superiority",
-      "Prospective work-disjoint source evaluation and matched state/compute baselines",
-      "Separate source extraction accuracy from conditional realization quality"
+      "User accepts formal stage name",
+      "Bounded P2 disposition with negative results and inherited holds",
+      "Reconcile old machine stage authority and update its compatibility tests",
+      "Fresh work-disjoint generation comparisons against strong direct and matched structured baselines",
+      "Do not declare quality, rights, or reader evaluation PASS without independent evidence"
     ],
     "forbid": [
-      "Equating oracle hand-authored state with autonomous semantic interpretation",
-      "Claiming Transformer replacement without matched data, quality and hardware-cost comparisons"
+      "Equate authored semantic labels with entailment",
+      "Treat exact solver path validity as natural Korean quality",
+      "Mandatory extra generation stage without matched benefit",
+      "Promote on call count or regression count"
     ]
   },
   "historical_g10_p1_authority": {
@@ -1199,5 +1298,52 @@
     "nativeRun": 44909707851,
     "derivedOriginal": "1QLoYd1XFDrOtnHHAUD7XjuP1wk1ByCci",
     "report": "experiments/g10-p2/r5/25_R5I_16_ZERO_CALL_KOREAN_CLAUSE_AGGREGATIONS_RESULTS_20261121.md"
+  },
+  "historical_g10_p2_r5i_stage_snapshot": {
+    "status": "OPEN_R5I_16_ZERO_CALL_KOREAN_CLAUSE_AGGREGATIONS_COMPLETE_QUALITY_HOLD",
+    "substage": "G10-P2 R5 — PROSPECTIVE IDENTIFICATION, R4b.1 REAL-PROSE DEVELOPMENT COMPLETED; HUMAN EVIDENCE AWAITED",
+    "provider_calls": 340,
+    "blob": "06e9b9b1d74b9dc151f43732531f1d386f956434",
+    "commit": "553120487ed383e94a17c21957619583022654b0"
+  },
+  "historical_g10_p1_p2_proposal": {
+    "identifier": "G10-P2",
+    "name": "KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs",
+    "status": "PROPOSAL_ONLY_NO_PROMOTION",
+    "scientificDelta": "Executable reader-state updates conditioned on actually realized Korean utterances, source-grounded relation control, adaptive no-op or local interventions, and human-validated whole-text quality/cost.",
+    "admissionRequires": [
+      "Explicit bounded P1 disposition retaining null and negative evidence",
+      "Independent Korean reader and source-auditor outcomes or explicitly labeled pilot-closure without superiority",
+      "Prospective work-disjoint source evaluation and matched state/compute baselines",
+      "Separate source extraction accuracy from conditional realization quality"
+    ],
+    "forbid": [
+      "Equating oracle hand-authored state with autonomous semantic interpretation",
+      "Claiming Transformer replacement without matched data, quality and hardware-cost comparisons"
+    ]
+  },
+  "historical_g10_p1_exit_review": {
+    "identifier": "G10-P1 R9.44",
+    "status": "EXIT_REVIEW_COMPLETED_P1_REMAINS_OPEN_P2_NAME_ONLY_PROPOSED",
+    "report": "experiments/g10-p1/paper/R9_44_G10_P1_RETROSPECTIVE_P2_NAMING_20261121.md",
+    "twoPhaseReaderMaterialsDriveFolder": "14EERMbvZostjUzWF6QHzksNic8baepfb",
+    "preparedReaderForms": 4,
+    "uniqueSourceWorks": 12,
+    "independentReaderResponses": 0,
+    "independentSourceAuditorResponses": 0,
+    "note": "Verified archive receipts, no test-set sample size inflation: four presentations of the same 12 works."
+  },
+  "latest_r6_development": {
+    "identifier": "G10-P2 R6x/R6y",
+    "status": "R6X_PAIRED_NULL_FOR_META_LEAKAGE_R6Y_FINITE_AUTHOR_LABEL_PROTOTYPE",
+    "r6x_calls": 16,
+    "r6x_run": 46024852407,
+    "r6x_tokens": 8481,
+    "r6y_calls": 0,
+    "r6y_assertions": 103,
+    "independent_reader_ratings": 0,
+    "quality_advantage": "UNESTABLISHED",
+    "r6x_report": "experiments/g10-p2/r5/r6x_scope_report.md",
+    "r6y_code": "experiments/g10-p2/r5/r6y_scope_transition_prototype.cjs"
   }
 }
