@@ -1,0 +1,57 @@
+name: KSGT G10-P2 R7d lexical license whole prose
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7d-writer.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  writer:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7d_family_gallery.json)" = 5705c0f2920758a97497d6287c0693cdda361cef
+          test "$(git hash-object experiments/g10-p2/r5/r7d_family_lab.json)" = 1b0e36f1d5799f369d03ab0b18682d0f667cc5a8
+          test "$(git hash-object experiments/g10-p2/r5/r7d_family_archive.json)" = 2247000704b3fb22153c987fac1d0f1a31c8ab6c
+          test "$(git hash-object experiments/g10-p2/r5/r7d_family_transfer.json)" = 6bd82402d9e879bb8e9cb5183c7a5b5f420fe275
+          test "$(git hash-object experiments/g10-p2/r5/r7d_prereg.md)" = cf2f119df20c3cdb0376ddeb9b8e3627d9f3f679
+          test "$(git hash-object experiments/g10-p2/r5/r7d_cases.cjs)" = f1989cac90775e7ad300fb46d8e25d536f19fc76
+          test "$(git hash-object experiments/g10-p2/r5/r7d_prompt.cjs)" = 6e62ecaeb68230ecfb90a9c2c87a1126eef1c36d
+          test "$(git hash-object experiments/g10-p2/r5/r7d_metrics.cjs)" = 0eacec45d76e039e28fea93b702dbe50660a4b3d
+          test "$(git hash-object experiments/g10-p2/r5/r7d_reader.cjs)" = b5cd9cb9bf1f9956b16d2e0c24696b9266039159
+          test "$(git hash-object experiments/g10-p2/r5/r7d_reader.test.cjs)" = a0bbd17ced1a251415d3d1c9fdec70b5158fbc7d
+          node --test experiments/g10-p2/r5/r7d_reader.test.cjs
+          node experiments/g10-p2/r5/r7d_reader.cjs --preflight > "$RUNNER_TEMP/r7d-preflight.json"
+      - name: Twenty four single generation calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7d_reader.cjs --execute "$RUNNER_TEMP/r7d-live"
+      - name: Verify and analyze
+        run: node experiments/g10-p2/r5/r7d_reader.cjs --verify "$RUNNER_TEMP/r7d-live" > "$RUNNER_TEMP/r7d-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7d-lexical-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7d-live/
+            ${{ runner.temp }}/r7d-preflight.json
+            ${{ runner.temp }}/r7d-analysis.json
