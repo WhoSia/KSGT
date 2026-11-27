@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: six frozen prompts contain source facts but no compiled answer
+ok 1 - six frozen prompts contain source facts but no compiled answer
+  ---
+  duration_ms: 4.224705
+  type: 'test'
+  ...
+# Subtest: mock complete then detect modified receipt; failure stops without retry
+ok 2 - mock complete then detect modified receipt; failure stops without retry
+  ---
+  duration_ms: 27.110538
+  type: 'test'
+  ...
+# Subtest: all six authored paragraphs satisfy local and persistent constraints and independent enumeration mode
+ok 3 - all six authored paragraphs satisfy local and persistent constraints and independent enumeration mode
+  ---
+  duration_ms: 6.115437
+  type: 'test'
+  ...
+# Subtest: multiple actor focus blocks subject omission; paragraph start resets local focus
+ok 4 - multiple actor focus blocks subject omission; paragraph start resets local focus
+  ---
+  duration_ms: 1.204325
+  type: 'test'
+  ...
+# Subtest: persistent object competition blocks same-nominal reference across paragraphs
+ok 5 - persistent object competition blocks same-nominal reference across paragraphs
+  ---
+  duration_ms: 0.542615
+  type: 'test'
+  ...
+# Subtest: unique object can remain available across paragraph boundary
+ok 6 - unique object can remain available across paragraph boundary
+  ---
+  duration_ms: 0.376164
+  type: 'test'
+  ...
+# Subtest: missing anchor, cycle, and extra-only candidate fail closed
+ok 7 - missing anchor, cycle, and extra-only candidate fail closed
+  ---
+  duration_ms: 0.288243
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 178.130829
