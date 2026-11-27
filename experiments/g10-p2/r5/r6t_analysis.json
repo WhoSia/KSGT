@@ -1,0 +1,328 @@
+{
+  "authority": "MECHANICAL_FORMAT_AND_COST_ONLY",
+  "receipt": {
+    "complete": 12,
+    "tokens": 11590,
+    "independentReaders": 0
+  },
+  "arms": {
+    "direct": {
+      "calls": 6,
+      "input": 4377,
+      "completion": 1446,
+      "tokens": 5823,
+      "medianRequestMs": 984.5,
+      "paragraphCountMatch": 6
+    },
+    "coupled": {
+      "calls": 6,
+      "input": 4377,
+      "completion": 1390,
+      "tokens": 5767,
+      "medianRequestMs": 720,
+      "paragraphCountMatch": 6
+    }
+  },
+  "rows": [
+    {
+      "id": "lab_direct",
+      "work": "lab",
+      "arm": "direct",
+      "sourceSHA": "b725ac69f366897daabb928cd03c555866563fcc662d59b37669af48625273e0",
+      "promptSHA": "ec5f4384827bebfd7f80dcc7cfad0f2f01465dff198d7e83a109d5e18e407800",
+      "textSHA": "628c622a2d8269051ed359808081e26ff4b0c5e43480972cacd59a1516b76726",
+      "text": "실험의 목적은 용기의 뚜껑 유무가 물의 증발량에 미치는 영향을 확인하는 것이었다. 이를 위해 두 개의 동일한 용기에 각각 100 g의 물을 넣었다. A 용기에는 뚜껑을 덮고, B 용기에는 뚜껑을 열어 두었다. 두 용기는 같은 책상 위에 놓고 한 시간 동안 그대로 두었다.  \n\n한 시간 후 A 용기의 물 무게는 98 g, B 용기의 물 무게는 94 g으로 측정되었다. 물의 초기 질량과 최종 질량의 차이를 물의 질량 감소량으로 정의하면, A 용기의 감소량은 2 g, B 용기의 감소량은 6 g이었다. 따라서 같은 시간 동안 뚜껑을 열어 둔 B 용기가 뚜껑을 닫은 A 용기보다 더 많은 물이 증발한 것으로 나타났다.  \n\n이 실험은 한 번만 수행했으며, 용기 주변의 공기 흐름은 측정하지 않았다. 따라서 뚜껑 유무가 증발량 차이에 직접적인 원인이라고 단정할 수는 없으며, 공기 흐름 등 다른 요인이 결과에 영향을 미쳤을 가능성도 존재한다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.087188619,
+        "prompt_tokens": 759,
+        "prompt_time": 0.033210989,
+        "completion_tokens": 315,
+        "completion_time": 0.667111453,
+        "total_tokens": 1074,
+        "total_time": 0.700322442,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        }
+      },
+      "latencyMs": 1188
+    },
+    {
+      "id": "lab_coupled",
+      "work": "lab",
+      "arm": "coupled",
+      "sourceSHA": "b725ac69f366897daabb928cd03c555866563fcc662d59b37669af48625273e0",
+      "promptSHA": "94d95310ff1740bbe45fa644add0d505c8c7e2b08eab1cb4b533cc1f235c665f",
+      "textSHA": "ece26c3760a04197a81cffe3f842bebfb095b9a1c7a822e365521e4aec065111",
+      "text": "실험의 목적은 용기의 뚜껑을 덮었는지 여부가 물의 증발량에 어떤 영향을 미치는지를 확인하는 것이었다. 이를 위해 두 개의 동일한 용기에 각각 100 g의 물을 넣었다. A 용기에는 뚜껑을 덮고, B 용기에는 뚜껑을 열어 두었다. 두 용기는 같은 책상 위에 놓고 정확히 한 시간 동안 방치하였다.  \n\n한 시간 후 A 용기의 물 무게는 98 g으로, 초기 무게보다 2 g 감소하였다. 반면 B 용기의 물 무게는 94 g으로, 초기 무게보다 6 g 감소하였다. 물의 초기 질량과 최종 질량의 차이를 물의 질량 감소량으로 정의했을 때, A와 B의 감소량을 같은 기준으로 비교하면 뚜껑이 있는 경우 증발이 적게 일어난다는 사실을 정량적으로 확인할 수 있다.  \n\n이 실험은 한 번만 수행했으며, 용기 주변의 공기 흐름은 측정하지 않았다. 따라서 관찰된 두 용기의 증발량 차이가 뚜껑 유무에만 기인한다고 단정할 수는 없으며, 공기 흐름 등 다른 요인의 영향을 배제하지 못했다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.004986498,
+        "prompt_tokens": 759,
+        "prompt_time": 0.035379818,
+        "completion_tokens": 322,
+        "completion_time": 0.685014932,
+        "total_tokens": 1081,
+        "total_time": 0.72039475,
+        "completion_tokens_details": {
+          "reasoning_tokens": 19
+        }
+      },
+      "latencyMs": 809
+    },
+    {
+      "id": "friend_coupled",
+      "work": "friend",
+      "arm": "coupled",
+      "sourceSHA": "aae196d803f562b18aa2ac6e573ca6d178fb8e8d7cb9d5f4cf1fb77fa8b704f9",
+      "promptSHA": "a193e4b162682840c29e213fde4ea38af54f46818c6f6bba6da87b96e02fa2bc",
+      "textSHA": "833c2564d98e3e478e86cb29e5a9f3961328eacda0ed12cdca079e706e952ede",
+      "text": "금요일 발표가 원래 오후 5시라고 했는데, 시작 시간이 오후 4시 30분으로 바뀌었어. 장소는 그대로 2층 강의실이니까 그대로 와. 발표 순서는 아직 정해지지 않았으니 나중에 알려줄게.  \n\n공동 폴더에 발표 자료 파일을 올려놨으니, 열어봤는지는 모르겠지만 첫 장 제목만 한 번 확인해 줬으면 해. 제목을 바꿀 필요는 없고, 이 메시지로 순서를 묻거나 정할 일도 없어.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.162668733,
+        "prompt_tokens": 650,
+        "prompt_time": 0.032627922,
+        "completion_tokens": 147,
+        "completion_time": 0.307829657,
+        "total_tokens": 797,
+        "total_time": 0.340457579,
+        "completion_tokens_details": {
+          "reasoning_tokens": 12
+        }
+      },
+      "latencyMs": 473
+    },
+    {
+      "id": "friend_direct",
+      "work": "friend",
+      "arm": "direct",
+      "sourceSHA": "aae196d803f562b18aa2ac6e573ca6d178fb8e8d7cb9d5f4cf1fb77fa8b704f9",
+      "promptSHA": "394463a6695292d364fedcd76093a4a06c7e94f33199f6039cb3f310d4a788b0",
+      "textSHA": "d72aae65ebe9e10a2649c68130642d688511553ff08559dca1503e644f4893bb",
+      "text": "발표 시간이 금요일 오후 4시 30분으로 바뀌었어. 장소는 그대로 2층 강의실이니까 그대로 와. 아직 발표 순서는 정해지지 않았으니 나중에 정해지면 알려줄게.  \n\n공동 폴더에 발표 자료 파일을 올렸는데, 열어봤는지는 모르겠네. 파일 첫 장 제목만 확인해 줬으면 해. 제목 수정은 필요 없고, 순서 얘기는 여기서 하지 않을게.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.004921196,
+        "prompt_tokens": 650,
+        "prompt_time": 0.535881937,
+        "completion_tokens": 130,
+        "completion_time": 0.280986392,
+        "total_tokens": 780,
+        "total_time": 0.816868329,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 12
+        }
+      },
+      "latencyMs": 872
+    },
+    {
+      "id": "fiction_direct",
+      "work": "fiction",
+      "arm": "direct",
+      "sourceSHA": "0b8f065ed7f98823ba3efce4282843b373269488d088b06f42fecfd89848a472",
+      "promptSHA": "39e5edb67f9001ef2075bbc43773fe940682d857b62f6472545a825107fcb546",
+      "textSHA": "978e5684c52bd0c8e1dd2ba99144df937354587624eb42e8effb86606209dbd6",
+      "text": "지후는 비어 있는 열람실의 입구에 서 있었다. 입구 바로 오른쪽 벽에 걸린 시계는 고요히 세 시를 가리키고 있었고, 그 짧은 눈금은 마치 멈춰선 그림자처럼 방 안을 스쳤다. 창문에는 빗방울이 맺혀 있었고, 유리 위에 머문 물방울들은 흐릿한 빛을 받아 작은 구슬처럼 반짝이며, 조용히 그 자리를 지키고 있었다.  \n\n창가에는 두 개의 책상이 나란히 놓여 있었다. 왼쪽 책상 위에는 접힌 종이 한 장이 조용히 놓여 있었고, 그 종이가 무엇을 적고 있는지는 지후에게 전혀 알려지지 않았다. 반대로 오른쪽 책상은 텅 비어 있었으며, 그 빈 공간은 마치 아무 말도 하지 않는 침묵처럼 남아 있었다.  \n\n열람실 안쪽 문은 닫혀 있었고, 언제 닫혔는지는 지후에게 알 수 없는 일이다. 그는 그 사실을 떠올리며, 왼쪽 책상 쪽으로 걸음마저 옮겼다. 그 발걸음은 방 안의 정적을 깨지 못한 채, 눈앞에 놓인 종이와 닫힌 문 사이에 남은 물음표만을 품고 멈추었다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.086110974,
+        "prompt_tokens": 817,
+        "prompt_time": 0.117389991,
+        "completion_tokens": 384,
+        "completion_time": 0.793644494,
+        "total_tokens": 1201,
+        "total_time": 0.911034485,
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      },
+      "latencyMs": 1071
+    },
+    {
+      "id": "fiction_coupled",
+      "work": "fiction",
+      "arm": "coupled",
+      "sourceSHA": "0b8f065ed7f98823ba3efce4282843b373269488d088b06f42fecfd89848a472",
+      "promptSHA": "5d3885ee770ef989d6a52ffafa827e48b09458ccf15654ff4664418df6dcea45",
+      "textSHA": "0d68d869a5d889d545a3886af979f0375bea8d06bed563e6e85495e16b9a7b43",
+      "text": "지후는 비어 있는 열람실의 입구에 서 있었다. 입구 바로 오른쪽 벽에 걸린 시계는 고요히 세 시를 가리키고 있었고, 그 옆에 달린 창문에는 빗방울이 맺혀 있었다. 시계의 짧은 초침이 멈춘 듯한 정적과, 빗방울이 유리 위에 남긴 작은 물결은 서로 다른 시간의 흐름을 조용히 비추었다.  \n\n창가에는 두 개의 책상이 나란히 놓여 있었다. 왼쪽 책상 위에는 접힌 종이가 하나 놓여 있었지만, 그 내용은 지후에게는 알 수 없는 것이었다. 오른쪽 책상은 텅 비어 있었으며, 두 책상의 대비는 그 자리의 정적을 더욱 두드러지게 만들었다.  \n\n열람실 안쪽 문은 닫혀 있었고, 그 문이 언제 닫혔는지는 지후에게도 알 수 없었다. 그는 그 사실을 머릿속에 새긴 채, 마지막으로 왼쪽 책상 쪽으로 걸었다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.078138607,
+        "prompt_tokens": 817,
+        "prompt_time": 0.040839432,
+        "completion_tokens": 301,
+        "completion_time": 0.638159232,
+        "total_tokens": 1118,
+        "total_time": 0.678998664,
+        "completion_tokens_details": {
+          "reasoning_tokens": 48
+        }
+      },
+      "latencyMs": 801
+    },
+    {
+      "id": "essay_coupled",
+      "work": "essay",
+      "arm": "coupled",
+      "sourceSHA": "01bf92a8ef5ea7954467458daf77db98d7fe0fea902e3a76f554084505c3676d",
+      "promptSHA": "cb07ef8198679938b83099ff365cc26d0f6864a7a7fe92d0f4db2574f194f0ac",
+      "textSHA": "a91349544c5013451b4ea7179948e2beef703dc2a687a912ba1db8c164f6110e",
+      "text": "오래 쓰던 수첩을 책장에 보관해 두었다. 그 안에는 지난달 도서관에서 빌린 책의 제목이 적혀 있다. 제목 옆에는 빌린 날짜가 기록되어 있다. 그리고 어느 한 제목 옆에는 작은 동그라미가 그려져 있다.\n\n동그라미를 그린 이유는 지금 기억하지 못한다. 기록을 살펴보니 그 책의 제목과 대출 날짜를 확인할 수 있었다. 그러나 그 책을 읽을 때의 기분은 떠오르지 않는다.\n\n기록은 잊은 사실을 되찾는 데 도움이 된다고 생각한다. 하지만 기록이 그때의 기분까지 대신해 주지는 못한다. 나는 수첩을 다시 책장에 넣었다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.005424022,
+        "prompt_tokens": 768,
+        "prompt_time": 0.365155948,
+        "completion_tokens": 195,
+        "completion_time": 0.430020659,
+        "total_tokens": 963,
+        "total_time": 0.795176607,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 20
+        }
+      },
+      "latencyMs": 855
+    },
+    {
+      "id": "essay_direct",
+      "work": "essay",
+      "arm": "direct",
+      "sourceSHA": "01bf92a8ef5ea7954467458daf77db98d7fe0fea902e3a76f554084505c3676d",
+      "promptSHA": "9a2c4dee7ca2e7ec6d536f1cf4fd2e9f76fe163c3952b3dbcf7c694691ee1d99",
+      "textSHA": "cd2f2e01036a96873fb2f6d3deb3d6c94a56c72e81d58537f859a5b5dbfea7ed",
+      "text": "오래 쓰던 수첩을 책장에 보관해 두었다. 그 안에는 지난달 도서관에서 빌린 책의 제목이 적혀 있다. 제목 옆에는 대출 날짜가 기록되어 있다. 또 한 제목 옆에는 작은 동그라미가 그려져 있다.  \n\n동그라미를 그린 이유는 지금 기억하지 못한다. 기록을 살펴보니 그 책의 제목과 대출 날짜를 확인할 수 있었다. 그러나 그 책을 읽을 때의 기분은 떠오르지 않는다.  \n\n기록은 잊은 사실을 되찾는 데 도움이 된다고 생각한다. 하지만 기록이 그때의 감정을 대신해 주지는 못한다. 그렇게 생각한 뒤 나는 수첩을 다시 책장에 넣었다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.032328295,
+        "prompt_tokens": 768,
+        "prompt_time": 0.035625698,
+        "completion_tokens": 199,
+        "completion_time": 0.419352058,
+        "total_tokens": 967,
+        "total_time": 0.454977756,
+        "completion_tokens_details": {
+          "reasoning_tokens": 21
+        }
+      },
+      "latencyMs": 532
+    },
+    {
+      "id": "notice_direct",
+      "work": "notice",
+      "arm": "direct",
+      "sourceSHA": "b89a59e75a328be5173d35e2c1601b5b5ba6c71c842742193d7289b674c96749",
+      "promptSHA": "2bc51e3fbe443ac6faf0ea8bfbf8e37b838c7738cb155e3cc06274b57c8057d4",
+      "textSHA": "b7a1cf20e32b6735c32e8abad71e808146e0e02b70446e017c1a973775fb5c46",
+      "text": "전시 장소가 기존 공지와 달리 2층 로비로 확정되었습니다. 전시 시작 시간은 변동 없이 수요일 오후 1시이며, 출품물은 수요일 오전 11시까지 2층 로비로 가져오시면 됩니다.  \n\n출품물에 부착할 이름표는 각자 직접 작성해 주시기 바랍니다. 이름표에는 반드시 이름과 작품 제목을 기재해 주세요. 작품 배치 순서는 아직 정해지지 않았으며, 이에 대한 안내 시점은 현재 알려드릴 수 없습니다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.032028103,
+        "prompt_tokens": 635,
+        "prompt_time": 0.925885795,
+        "completion_tokens": 181,
+        "completion_time": 0.382724607,
+        "total_tokens": 816,
+        "total_time": 1.308610402,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 53
+        }
+      },
+      "latencyMs": 1412
+    },
+    {
+      "id": "notice_coupled",
+      "work": "notice",
+      "arm": "coupled",
+      "sourceSHA": "b89a59e75a328be5173d35e2c1601b5b5ba6c71c842742193d7289b674c96749",
+      "promptSHA": "cf65f88cfb5c5a4547db9d474aa362274093953b548196d5c6b5ff748fc5e975",
+      "textSHA": "b368e80d5a73e1032ab024e529f07cde8215a22f8ce8c3896225f92abbab3062",
+      "text": "전시 장소가 기존 공지에 적힌 1층 복도가 아니라 2층 로비로 확정되었습니다. 전시 시작 시각은 변함없이 수요일 오후 1시이며, 출품물은 수요일 오전 11시까지 2층 로비로 반입해 주시기 바랍니다.  \n\n출품물에 부착할 이름표는 각자 직접 작성해 주셔야 합니다. 이름표에는 **이름**과 **작품 제목**을 기재해 주시기 바랍니다. 현재 작품 배치 순서는 아직 정해지지 않았으며, 배치 순서가 확정되는 시점에 대한 안내는 별도로 제공되지 않습니다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.150633555,
+        "prompt_tokens": 635,
+        "prompt_time": 0.031016441,
+        "completion_tokens": 195,
+        "completion_time": 0.41063086,
+        "total_tokens": 830,
+        "total_time": 0.441647301,
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        }
+      },
+      "latencyMs": 639
+    },
+    {
+      "id": "argument_coupled",
+      "work": "argument",
+      "arm": "coupled",
+      "sourceSHA": "da14155b4eef14067b892119a6cbe487d02bc671c10fd00950785edf0aa460b1",
+      "promptSHA": "d25668e4cb70edf7dbf22d71c9dc8a2ce73bc6d126b29819927bdd427d223b80",
+      "textSHA": "012ccfa2d23087823dd2e1e16af57cf91d2661b5cdba13432d327a04af601bf3",
+      "text": "동아리는 동일한 30개 항목을 정리하는 과제를 두 사람에게 각각 부여하여, 한 사람은 제목 순서대로, 다른 사람은 날짜 순서대로 정리하도록 함으로써 두 가지 자료 정리 방법의 효율을 비교하고자 했다.  \n\n실험 결과, 제목 순서로 정리한 A는 12분이 걸렸고, 날짜 순서로 정리한 B는 9분이 걸렸다. 이때 사람과 정리 방법이 동시에 달라졌기 때문에, 관찰된 3분 차이는 두 변수가 함께 작용한 결과로 해석해야 한다.  \n\n그러나 두 사람이 각각 해당 방법을 사용해 본 횟수는 기록되지 않았으며, 같은 사람이 두 방법을 번갈아 수행하는 교차 실험도 진행되지 않았다. 따라서 이 결과만으로 날짜 순서 방식 자체가 더 빠르다고 일반화할 수는 없다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.005572818,
+        "prompt_tokens": 748,
+        "prompt_time": 0.036133965,
+        "completion_tokens": 230,
+        "completion_time": 0.496066159,
+        "total_tokens": 978,
+        "total_time": 0.532200124,
+        "completion_tokens_details": {
+          "reasoning_tokens": 24
+        }
+      },
+      "latencyMs": 586
+    },
+    {
+      "id": "argument_direct",
+      "work": "argument",
+      "arm": "direct",
+      "sourceSHA": "da14155b4eef14067b892119a6cbe487d02bc671c10fd00950785edf0aa460b1",
+      "promptSHA": "ba14a32e861bab57f3be98fa51b8cb9d8394aa672e69fb0d58c51712ed7efa03",
+      "textSHA": "11db4ad2a9f155e4834af66ffa39d42ab37a98326d429cf39f4fbacdc5426c08",
+      "text": "동아리는 두 가지 자료 정리 방법의 효율을 비교하고자 했다. 이를 위해 동일한 30개 항목을 정리하는 과제를 두 사람에게 각각 부여하였다. 한 사람은 항목을 제목 순서대로 배열했으며, 다른 사람은 날짜 순서대로 배열하도록 지시받았다.  \n\n관찰 결과, 제목 순서로 정리한 사람은 작업을 마치는 데 12분이 걸렸고, 날짜 순서로 정리한 사람은 9분이 소요되었다. 이때 두 사람은 각각 다른 정리 방법을 사용했으며, 사람과 방법이 동시에 달라진 상황이었다.  \n\n그러나 두 사람의 이전 사용 경험은 기록되지 않았고, 같은 사람이 두 방법을 번갈아 수행하는 교차 실험도 이루어지지 않았다. 따라서 이번 결과만으로 날짜 순서 방식이 본질적으로 더 빠르다고 단정할 수 없으며, 개인의 익숙함이나 다른 요인이 영향을 미쳤을 가능성을 배제할 수 없다.",
+      "paragraphs": 3,
+      "expectedParagraphs": 3,
+      "usage": {
+        "queue_time": 0.085996553,
+        "prompt_tokens": 748,
+        "prompt_time": 0.282342385,
+        "completion_tokens": 237,
+        "completion_time": 0.488507625,
+        "total_tokens": 985,
+        "total_time": 0.77085001,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 7
+        }
+      },
+      "latencyMs": 898
+    }
+  ]
+}
