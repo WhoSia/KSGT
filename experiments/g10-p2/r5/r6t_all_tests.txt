@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: paragraph count, arm costs and medians are not quality scores
+ok 1 - paragraph count, arm costs and medians are not quality scores
+  ---
+  duration_ms: 2.512456
+  type: 'test'
+  ...
+# Subtest: all briefs: exact record multiset in both arms, source order and interleaving differ
+ok 2 - all briefs: exact record multiset in both arms, source order and interleaving differ
+  ---
+  duration_ms: 9.867225
+  type: 'test'
+  ...
+# Subtest: missing, duplicate, foreign IDs and future references are rejected
+ok 3 - missing, duplicate, foreign IDs and future references are rejected
+  ---
+  duration_ms: 0.82855
+  type: 'test'
+  ...
+# Subtest: a later paragraph may refer to an introduced fact without repeating its text
+ok 4 - a later paragraph may refer to an introduced fact without repeating its text
+  ---
+  duration_ms: 0.412894
+  type: 'test'
+  ...
+# Subtest: invalid empty or repeated reference contracts fail closed
+ok 5 - invalid empty or repeated reference contracts fail closed
+  ---
+  duration_ms: 1.733768
+  type: 'test'
+  ...
+# Subtest: matched source hash and one call per arm, shared system
+ok 6 - matched source hash and one call per arm, shared system
+  ---
+  duration_ms: 6.145377
+  type: 'test'
+  ...
+# Subtest: cold receipt verifies twelve calls and rejects tampering
+ok 7 - cold receipt verifies twelve calls and rejects tampering
+  ---
+  duration_ms: 19.464052
+  type: 'test'
+  ...
+# Subtest: provider failure halts and preserves partial receipt, no retry
+ok 8 - provider failure halts and preserves partial receipt, no retry
+  ---
+  duration_ms: 4.512792
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 176.643131
