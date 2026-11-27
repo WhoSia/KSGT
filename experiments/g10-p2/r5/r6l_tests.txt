@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: all six authored paragraphs satisfy local and persistent constraints and independent enumeration mode
+ok 1 - all six authored paragraphs satisfy local and persistent constraints and independent enumeration mode
+  ---
+  duration_ms: 4.077938
+  type: 'test'
+  ...
+# Subtest: multiple actor focus blocks subject omission; paragraph start resets local focus
+ok 2 - multiple actor focus blocks subject omission; paragraph start resets local focus
+  ---
+  duration_ms: 0.888122
+  type: 'test'
+  ...
+# Subtest: persistent object competition blocks same-nominal reference across paragraphs
+ok 3 - persistent object competition blocks same-nominal reference across paragraphs
+  ---
+  duration_ms: 0.535645
+  type: 'test'
+  ...
+# Subtest: unique object can remain available across paragraph boundary
+ok 4 - unique object can remain available across paragraph boundary
+  ---
+  duration_ms: 0.197176
+  type: 'test'
+  ...
+# Subtest: missing anchor, cycle, and extra-only candidate fail closed
+ok 5 - missing anchor, cycle, and extra-only candidate fail closed
+  ---
+  duration_ms: 0.182521
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 111.758313
