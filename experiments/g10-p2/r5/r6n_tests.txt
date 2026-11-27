@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: eight real works agree with independent forward oracle; fixed order is no better
+ok 1 - eight real works agree with independent forward oracle; fixed order is no better
+  ---
+  duration_ms: 14.105373
+  type: 'test'
+  ...
+# Subtest: entry contract of next fused span is checked against actual exit
+ok 2 - entry contract of next fused span is checked against actual exit
+  ---
+  duration_ms: 0.618667
+  type: 'test'
+  ...
+# Subtest: internal reversed dependency and paragraph crossing do not sneak through
+ok 3 - internal reversed dependency and paragraph crossing do not sneak through
+  ---
+  duration_ms: 0.528835
+  type: 'test'
+  ...
+# Subtest: global referents survive paragraph break but local focus does not
+ok 4 - global referents survive paragraph break but local focus does not
+  ---
+  duration_ms: 0.320381
+  type: 'test'
+  ...
+# Subtest: two hundred generated DAGs and six weights match independent oracle
+ok 5 - two hundred generated DAGs and six weights match independent oracle
+  ---
+  duration_ms: 95.665761
+  type: 'test'
+  ...
+# Subtest: reject missing mention, unknown ids and no legal solution
+ok 6 - reject missing mention, unknown ids and no legal solution
+  ---
+  duration_ms: 0.810646
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 201.231729
