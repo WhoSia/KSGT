@@ -1,0 +1,128 @@
+{
+  "schema": "ksgt.r7d.author-audit.v1",
+  "authority": "NONINDEPENDENT_DEVELOPER_READING_NOT_GOLD",
+  "run": 46032006425,
+  "notes": "Target labels concern the specific scoped proposition, not overall faithfulness. Ambiguous/mixed not forced into binary. Sensory details may be stylistically permissible in fiction depending license; not counted as independent violations. No blind score or human preference. English diagnostic notes refer to exact archived Korean texts.",
+  "rows": [
+    {
+      "id": "GALLERY__LICENSED__DIRECT",
+      "targetAssessment": "IMPLICIT_SUPPORTED",
+      "notes": "Same-seat prior rising conveyed; repeated current sitting, invented pot, handle and footstep approach/stop; action ending."
+    },
+    {
+      "id": "GALLERY__LICENSED__GLOBAL_AVOID",
+      "targetAssessment": "IMPLICIT_SUPPORTED",
+      "notes": "Prior sitting/reclining suggested through memory, but event order confused; added repeated map lowering, looking outside and footsteps stopping; action ending."
+    },
+    {
+      "id": "GALLERY__LICENSED__CONTEXTUAL",
+      "targetAssessment": "IMPLICIT_SUPPORTED",
+      "notes": "Again sitting signals prior event; map location and added rising after footsteps alter sequence; prior retrieval purpose omitted; action ending."
+    },
+    {
+      "id": "GALLERY__UNLICENSED__DIRECT",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "Sitting unambiguously present; added sunlight/approaching footsteps; action ending."
+    },
+    {
+      "id": "GALLERY__UNLICENSED__GLOBAL_AVOID",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "Unmotivated rising, sitting less explicit, final listening added; action boundary not clean."
+    },
+    {
+      "id": "GALLERY__UNLICENSED__CONTEXTUAL",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "Sitting implied through leaning, not explicit; approaching footsteps invented; concurrent leaning at terminal action."
+    },
+    {
+      "id": "LAB__LICENSED__DIRECT",
+      "targetAssessment": "PARTIAL",
+      "notes": "Sustained observation but expectation not conveyed; invented mixture, simultaneous procedure and mechanism speculation; observation onset/rate conflation."
+    },
+    {
+      "id": "LAB__LICENSED__GLOBAL_AVOID",
+      "targetAssessment": "EXPLICIT_SUPPORTED",
+      "notes": "Expectation and continued observation conveyed; invented sequential procedure, mixture, kinetic interpretation; meta ending."
+    },
+    {
+      "id": "LAB__LICENSED__CONTEXTUAL",
+      "targetAssessment": "PARTIAL",
+      "notes": "Continued watching conveyed but expectation omitted; invented no further tracking, observation onset strengthened; meta ending."
+    },
+    {
+      "id": "LAB__UNLICENSED__DIRECT",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "No watcher expectation asserted; invented simultaneous mixing, broader nonmeasurement and causal speculation; observation onset strengthened; meta ending."
+    },
+    {
+      "id": "LAB__UNLICENSED__GLOBAL_AVOID",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "No expectation asserted; invented exact log and composition/solvent mechanisms, equates within four minutes with immediate; kinetic inference."
+    },
+    {
+      "id": "LAB__UNLICENSED__CONTEXTUAL",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "No watcher expectation asserted; meta paragraph headings, simultaneous procedure, unsupported kinetic interpretation and approximate doubling; observation onset strengthened."
+    },
+    {
+      "id": "ARCHIVE__LICENSED__DIRECT",
+      "targetAssessment": "EXPLICIT_SUPPORTED",
+      "notes": "Prior knowledge explicit but actual walking, sensory experiences and memories invented; action ending."
+    },
+    {
+      "id": "ARCHIVE__LICENSED__GLOBAL_AVOID",
+      "targetAssessment": "EXPLICIT_SUPPORTED",
+      "notes": "Prior knowledge explicit, actual route-finding and memory invented; meta ending after closure."
+    },
+    {
+      "id": "ARCHIVE__LICENSED__CONTEXTUAL",
+      "targetAssessment": "EXPLICIT_SUPPORTED",
+      "notes": "Prior knowledge explicit, visiting/recalling and sensory interpretation invented; awkward '그때의 알았던 감각'; post-closure reflection."
+    },
+    {
+      "id": "ARCHIVE__UNLICENSED__DIRECT",
+      "targetAssessment": "UNLICENSED_IMPLICATION",
+      "notes": "'한때 알았던 무언가', '그곳에 대한 기억' and memory receding suggest prior knowledge; post-closure sensation."
+    },
+    {
+      "id": "ARCHIVE__UNLICENSED__GLOBAL_AVOID",
+      "targetAssessment": "AMBIGUOUS",
+      "notes": "Explicit uncertainty preserved, vague memory fragment may suggest prior knowledge; repeats closing action."
+    },
+    {
+      "id": "ARCHIVE__UNLICENSED__CONTEXTUAL",
+      "targetAssessment": "MIXED",
+      "notes": "Memory becoming blurred suggests prior familiarity while later explicitly doubts prior knowledge; post-closure sensation."
+    },
+    {
+      "id": "TRANSFER__LICENSED__DIRECT",
+      "targetAssessment": "EXPLICIT_SUPPORTED",
+      "notes": "Goal five and actual three retained; no explicit cue needed; final unknown remainder."
+    },
+    {
+      "id": "TRANSFER__LICENSED__GLOBAL_AVOID",
+      "targetAssessment": "EXPLICIT_SUPPORTED",
+      "notes": "Goal and actual retained, '지정된' three not provided, awkward '이동시킨 점은 완료'; final unknown remainder."
+    },
+    {
+      "id": "TRANSFER__LICENSED__CONTEXTUAL",
+      "targetAssessment": "EXPLICIT_SUPPORTED",
+      "notes": "Goal shortfall conveyed by '세 개만'; awkward '다섯 개 옮기기 목표 중'; final unknown remainder."
+    },
+    {
+      "id": "TRANSFER__UNLICENSED__DIRECT",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "No target addition; '현황을 파악' broader than checking; final unknown remainder."
+    },
+    {
+      "id": "TRANSFER__UNLICENSED__GLOBAL_AVOID",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "Invented morning number logging, repeats afternoon logging; final unknown remainder."
+    },
+    {
+      "id": "TRANSFER__UNLICENSED__CONTEXTUAL",
+      "targetAssessment": "NO_TARGET_ADDITION",
+      "notes": "All four facts retained concisely; no unsupported goal, final unknown remainder."
+    }
+  ]
+}
