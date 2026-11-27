@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: median on unsorted even and odd samples
+ok 1 - median on unsorted even and odd samples
+  ---
+  duration_ms: 2.350695
+  type: 'test'
+  ...
+# Subtest: paragraph trailing Markdown spaces do not hide a required refrain
+ok 2 - paragraph trailing Markdown spaces do not hide a required refrain
+  ---
+  duration_ms: 0.534809
+  type: 'test'
+  ...
+# Subtest: repeated opening is a cue not a rewrite
+ok 3 - repeated opening is a cue not a rewrite
+  ---
+  duration_ms: 2.953294
+  type: 'test'
+  ...
+# Subtest: intentional refrain and comparison are not length penalties
+ok 4 - intentional refrain and comparison are not length penalties
+  ---
+  duration_ms: 0.998955
+  type: 'test'
+  ...
+# Subtest: skip quotes and paragraph mismatch; decimal stays intact
+ok 5 - skip quotes and paragraph mismatch; decimal stays intact
+  ---
+  duration_ms: 1.314654
+  type: 'test'
+  ...
+# Subtest: similar length is genre sensitive
+ok 6 - similar length is genre sensitive
+  ---
+  duration_ms: 0.335618
+  type: 'test'
+  ...
+# Subtest: same source and same revision instruction; only diagnostic appended
+ok 7 - same source and same revision instruction; only diagnostic appended
+  ---
+  duration_ms: 6.372031
+  type: 'test'
+  ...
+# Subtest: live-path mock replays dynamic prompt, detects changed parent; no retry on failure
+ok 8 - live-path mock replays dynamic prompt, detects changed parent; no retry on failure
+  ---
+  duration_ms: 38.267919
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 140.023687
