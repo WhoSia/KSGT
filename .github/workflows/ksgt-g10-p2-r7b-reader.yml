@@ -1,0 +1,57 @@
+name: KSGT G10-P2 R7b target resolved reader
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7b-reader.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  reader:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_key.json)" = e4a7cb84751c99789998220b9787ada54862e313
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_count.json)" = 56ed8d3f06c3ee01e2e25eff15c304f242cf53cf
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_color.json)" = 5839607ac81ab0746e2368589205c09e1e91c9c5
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_room.json)" = 49bb86540fefa3253072a7219584760f96633093
+          test "$(git hash-object experiments/g10-p2/r5/r7b_prereg.md)" = 090840481d234916416da4089b3390d028933289
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_cases.cjs)" = d498ede5744d139a9cb35ddefa115b5fd1405f38
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_prompt.cjs)" = 21cdf498134806ac2ff620c317298edbbd7d2b92
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_parse.cjs)" = e80408e29ce90cf71e0c6b09def3e0eef95c45b6
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_reader.cjs)" = fd52e295abb8b98b8c8c65c461389780ebdbbcf8
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_reader.test.cjs)" = 6aa601b22c506d242bd218fc75309b208732cf7a
+          node --test experiments/g10-p2/r5/r7b_scope_reader.test.cjs
+          node experiments/g10-p2/r5/r7b_scope_reader.cjs --preflight > "$RUNNER_TEMP/r7b-preflight.json"
+      - name: Twenty four paired calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7b_scope_reader.cjs --execute "$RUNNER_TEMP/r7b-live"
+      - name: Verify and analyze
+        run: node experiments/g10-p2/r5/r7b_scope_reader.cjs --verify "$RUNNER_TEMP/r7b-live" > "$RUNNER_TEMP/r7b-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7b-scope-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7b-live/
+            ${{ runner.temp }}/r7b-preflight.json
+            ${{ runner.temp }}/r7b-analysis.json
