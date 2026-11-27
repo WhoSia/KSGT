@@ -4,7 +4,7 @@
   "generation": "X",
   "current_stage": "G10-P2",
   "stage_type": "READER_STATE_COUPLED_KOREAN_WRITING_ARCHITECTURE",
-  "status": "OPEN_R7C_DEVELOPMENT_COMPLETE_QUALITY_HOLD",
+  "status": "OPEN_R7D_DEVELOPMENT_COMPLETE_QUALITY_HOLD",
   "official_name": "KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs",
   "canonical_notion_id": "41fef561-cf92-8105-a17b-c0c33a9701bc",
   "current_artifact": "experiments/g10-p2/RESEARCH_PROGRAM.md",
@@ -13,7 +13,7 @@
     "scope": "G10_P2_ONLY",
     "real_independent_korean_reader_ratings": 0,
     "source_fidelity_independent_gold": 0,
-    "real_provider_model_calls": 606,
+    "real_provider_model_calls": 630,
     "trained_new_models": 0,
     "complete_korean_prose_quality_advantage": "UNOBSERVED",
     "author_exposed_synthetic_works": 4,
@@ -300,7 +300,7 @@
     "r5i_natural_korean_quality_gain": "LOCAL_DEVELOPER_CLAUSE_FLOW_IMPROVEMENT_BUT_GLOBAL_SUPERIORITY_NOT_ESTABLISHED",
     "r6_call_reconciliation": {
       "base_r5i": 340,
-      "incremental_calls": 266,
+      "incremental_calls": 290,
       "runs": [
         {
           "id": "R6g",
@@ -415,9 +415,15 @@
           "calls": 16,
           "run": 46030763844,
           "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_FULL_RECEIPT_REPLAY"
+        },
+        {
+          "id": "R7d",
+          "calls": 24,
+          "run": 46032006425,
+          "metadata": "COMPLETED_SUCCESS_ATTEMPT_1_FULL_RECEIPT_REPLAY"
         }
       ],
-      "source": "Canonical Notion historical counts and workflow metadata; R6z/R7a/R7b/R7c receipts locally replayed from Drive originals. Not full historical byte replay.",
+      "source": "Canonical Notion historical counts and workflow metadata; R6z/R7a/R7b/R7c/R7d receipts locally replayed from Drive copies. Not full historical byte replay.",
       "checkpoint": "experiments/g10-p2/r5/g10_p2_exit_review_checkpoint_20261128.json",
       "erratum": "Run 46000261677 is R6o (not R6n in checkpoint); R6l display name still says R6j; workflow path identifies R6l. Counts unchanged."
     },
@@ -927,8 +933,8 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "Return to complete Korean prose, compare licensed and unlicensed lexical presupposition and defeasible implicature using natural paired sources and strong direct baseline. HUMAN_REQUIRED for independent quality/source-gold claims; P3 formal title and bounded closure pending confirmation.",
-  "current_substage": "G10-P2 R7b/R7c — P3 PRELUDE; QUALITY_HOLD / RIGHTS_SCOPE_HOLD",
+  "next_scientific_action": "Test relation-specific semantic authorization on actual Korean prose, e.g. knowing a place vs having visited and observation vs event onset; compare selective repair/no-op against full rewrite, measuring repair-induced drift. HUMAN_REQUIRED for independent quality/source-gold claims; P3 title and bounded closure pending confirmation.",
+  "current_substage": "G10-P2 R7d — P3 PRELUDE; QUALITY_HOLD / RIGHTS_SCOPE_HOLD",
   "latest_experiment": {
     "identifier": "G10-P2 R4b.1",
     "status": "DEVELOPMENT_REAL_PROSE_PATCHING_COMPLETED_HUMAN_SOURCE_AND_READER_GOLD_ZERO",
@@ -1358,20 +1364,17 @@
     "note": "Verified archive receipts, no test-set sample size inflation: four presentations of the same 12 works."
   },
   "latest_r6_development": {
-    "identifier": "G10-P2 R7b/R7c",
-    "status": "R7BC_TARGET_DECOMPOSITION_NULL",
-    "r7b_calls": 24,
-    "r7b_run": 46030432309,
-    "r7b_tokens": 11326,
-    "r7c_calls": 16,
-    "r7c_run": 46030763844,
-    "r7c_tokens": 6839,
-    "author_label_agreement": "40/40",
+    "identifier": "G10-P2 R7d",
+    "status": "R7D_LEXICAL_SCOPE_WHOLE_PROSE_MIXED",
+    "r7d_calls": 24,
+    "r7d_run": 46032006425,
+    "r7d_tokens": 14905,
+    "complete_prose": 24,
     "independent_reader_ratings": 0,
     "quality_advantage": "UNESTABLISHED",
     "reports": [
-      "experiments/g10-p2/r5/r7b_scope_report.md",
-      "experiments/g10-p2/r5/r7c_implicit_report.md"
+      "experiments/g10-p2/r5/r7d_lexical_report.md",
+      "experiments/g10-p2/r5/r7d_author_audit.json"
     ]
   },
   "historical_r6xy_development": {
@@ -1411,5 +1414,22 @@
     "independent_reader_ratings": 0,
     "quality_advantage": "UNESTABLISHED",
     "report": "experiments/g10-p2/r5/r7a_pragmatic_report.md"
+  },
+  "historical_r7bc_development": {
+    "identifier": "G10-P2 R7b/R7c",
+    "status": "R7BC_TARGET_DECOMPOSITION_NULL",
+    "r7b_calls": 24,
+    "r7b_run": 46030432309,
+    "r7b_tokens": 11326,
+    "r7c_calls": 16,
+    "r7c_run": 46030763844,
+    "r7c_tokens": 6839,
+    "author_label_agreement": "40/40",
+    "independent_reader_ratings": 0,
+    "quality_advantage": "UNESTABLISHED",
+    "reports": [
+      "experiments/g10-p2/r5/r7b_scope_report.md",
+      "experiments/g10-p2/r5/r7c_implicit_report.md"
+    ]
   }
 }
