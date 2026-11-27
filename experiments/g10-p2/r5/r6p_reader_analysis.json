@@ -1,0 +1,310 @@
+{
+  "authority": "SINGLE_MODEL_READER_PROXY_NOT_HUMAN_EVALUATION",
+  "verified": {
+    "complete": 12,
+    "tokens": 4028,
+    "independentReaders": 0
+  },
+  "valid": 12,
+  "byCondition": [
+    {
+      "condition": "ab",
+      "count": 3,
+      "valid": 3,
+      "explicitUnknown": 1,
+      "impressionUnknown": 0
+    },
+    {
+      "condition": "ba",
+      "count": 3,
+      "valid": 3,
+      "explicitUnknown": 0,
+      "impressionUnknown": 0
+    },
+    {
+      "condition": "topic",
+      "count": 3,
+      "valid": 3,
+      "explicitUnknown": 3,
+      "impressionUnknown": 2
+    },
+    {
+      "condition": "unknown",
+      "count": 3,
+      "valid": 3,
+      "explicitUnknown": 3,
+      "impressionUnknown": 2
+    }
+  ],
+  "sequenceImpressionMatches": 6,
+  "sequenceExplicitMatches": 5,
+  "inputTokens": 2911,
+  "outputTokens": 1117,
+  "medianLatencyMs": 321,
+  "rows": [
+    {
+      "id": "library_ab",
+      "condition": "ab",
+      "parsed": {
+        "explicit": "A_BEFORE_B",
+        "impression": "A_BEFORE_B"
+      },
+      "raw": "{\"explicit\":\"A_BEFORE_B\",\"impression\":\"A_BEFORE_B\"}",
+      "usage": {
+        "queue_time": 0.123169259,
+        "prompt_tokens": 229,
+        "prompt_time": 0.067288941,
+        "completion_tokens": 79,
+        "completion_time": 0.168077849,
+        "total_tokens": 308,
+        "total_time": 0.23536679,
+        "completion_tokens_details": {
+          "reasoning_tokens": 54
+        }
+      },
+      "latencyMs": 557
+    },
+    {
+      "id": "library_topic",
+      "condition": "topic",
+      "parsed": {
+        "explicit": "UNDETERMINED",
+        "impression": "UNDETERMINED"
+      },
+      "raw": "{\"explicit\":\"UNDETERMINED\",\"impression\":\"UNDETERMINED\"}",
+      "usage": {
+        "queue_time": 0.119371883,
+        "prompt_tokens": 228,
+        "prompt_time": 0.010801398,
+        "completion_tokens": 99,
+        "completion_time": 0.208622316,
+        "total_tokens": 327,
+        "total_time": 0.219423714,
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        }
+      },
+      "latencyMs": 396
+    },
+    {
+      "id": "library_ba",
+      "condition": "ba",
+      "parsed": {
+        "explicit": "B_BEFORE_A",
+        "impression": "B_BEFORE_A"
+      },
+      "raw": "{\"explicit\":\"B_BEFORE_A\",\"impression\":\"B_BEFORE_A\"}",
+      "usage": {
+        "queue_time": 0.121301529,
+        "prompt_tokens": 229,
+        "prompt_time": 0.008718588,
+        "completion_tokens": 94,
+        "completion_time": 0.206021873,
+        "total_tokens": 323,
+        "total_time": 0.214740461,
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      },
+      "latencyMs": 392
+    },
+    {
+      "id": "library_unknown",
+      "condition": "unknown",
+      "parsed": {
+        "explicit": "UNDETERMINED",
+        "impression": "A_BEFORE_B"
+      },
+      "raw": "{\"explicit\":\"UNDETERMINED\",\"impression\":\"A_BEFORE_B\"}",
+      "usage": {
+        "queue_time": 0.125226982,
+        "prompt_tokens": 240,
+        "prompt_time": 0.067817115,
+        "completion_tokens": 108,
+        "completion_time": 0.229288856,
+        "total_tokens": 348,
+        "total_time": 0.297105971,
+        "completion_tokens_details": {
+          "reasoning_tokens": 82
+        }
+      },
+      "latencyMs": 475
+    },
+    {
+      "id": "scene_ba",
+      "condition": "ba",
+      "parsed": {
+        "explicit": "B_BEFORE_A",
+        "impression": "B_BEFORE_A"
+      },
+      "raw": "{\"explicit\":\"B_BEFORE_A\",\"impression\":\"B_BEFORE_A\"}",
+      "usage": {
+        "queue_time": 0.005123806,
+        "prompt_tokens": 236,
+        "prompt_time": 0.010279318,
+        "completion_tokens": 94,
+        "completion_time": 0.209051655,
+        "total_tokens": 330,
+        "total_time": 0.219330973,
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      },
+      "latencyMs": 279
+    },
+    {
+      "id": "scene_unknown",
+      "condition": "unknown",
+      "parsed": {
+        "explicit": "UNDETERMINED",
+        "impression": "UNDETERMINED"
+      },
+      "raw": "{\"explicit\":\"UNDETERMINED\",\"impression\":\"UNDETERMINED\"}",
+      "usage": {
+        "queue_time": 0.415556167,
+        "prompt_tokens": 250,
+        "prompt_time": 0.011911127,
+        "completion_tokens": 75,
+        "completion_time": 0.158835711,
+        "total_tokens": 325,
+        "total_time": 0.170746838,
+        "completion_tokens_details": {
+          "reasoning_tokens": 48
+        }
+      },
+      "latencyMs": 652
+    },
+    {
+      "id": "scene_ab",
+      "condition": "ab",
+      "parsed": {
+        "explicit": "UNDETERMINED",
+        "impression": "A_BEFORE_B"
+      },
+      "raw": "{\"explicit\":\"UNDETERMINED\",\"impression\":\"A_BEFORE_B\"}",
+      "usage": {
+        "queue_time": 0.004956016,
+        "prompt_tokens": 236,
+        "prompt_time": 0.011679714,
+        "completion_tokens": 111,
+        "completion_time": 0.238144081,
+        "total_tokens": 347,
+        "total_time": 0.249823795,
+        "completion_tokens_details": {
+          "reasoning_tokens": 85
+        }
+      },
+      "latencyMs": 306
+    },
+    {
+      "id": "scene_topic",
+      "condition": "topic",
+      "parsed": {
+        "explicit": "UNDETERMINED",
+        "impression": "UNDETERMINED"
+      },
+      "raw": "{\"explicit\":\"UNDETERMINED\",\"impression\":\"UNDETERMINED\"}",
+      "usage": {
+        "queue_time": 0.037431036,
+        "prompt_tokens": 241,
+        "prompt_time": 0.011136195,
+        "completion_tokens": 84,
+        "completion_time": 0.174294252,
+        "total_tokens": 325,
+        "total_time": 0.185430447,
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        }
+      },
+      "latencyMs": 275
+    },
+    {
+      "id": "records_topic",
+      "condition": "topic",
+      "parsed": {
+        "explicit": "UNDETERMINED",
+        "impression": "A_BEFORE_B"
+      },
+      "raw": "{\"explicit\":\"UNDETERMINED\",\"impression\":\"A_BEFORE_B\"}",
+      "usage": {
+        "queue_time": 0.005219903,
+        "prompt_tokens": 254,
+        "prompt_time": 0.011761257,
+        "completion_tokens": 117,
+        "completion_time": 0.247027924,
+        "total_tokens": 371,
+        "total_time": 0.258789181,
+        "completion_tokens_details": {
+          "reasoning_tokens": 91
+        }
+      },
+      "latencyMs": 319
+    },
+    {
+      "id": "records_ab",
+      "condition": "ab",
+      "parsed": {
+        "explicit": "A_BEFORE_B",
+        "impression": "A_BEFORE_B"
+      },
+      "raw": "{\"explicit\":\"A_BEFORE_B\",\"impression\":\"A_BEFORE_B\"}",
+      "usage": {
+        "queue_time": 0.004812099,
+        "prompt_tokens": 251,
+        "prompt_time": 0.011414761,
+        "completion_tokens": 97,
+        "completion_time": 0.201660545,
+        "total_tokens": 348,
+        "total_time": 0.213075306,
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        }
+      },
+      "latencyMs": 271
+    },
+    {
+      "id": "records_unknown",
+      "condition": "unknown",
+      "parsed": {
+        "explicit": "UNDETERMINED",
+        "impression": "UNDETERMINED"
+      },
+      "raw": "{\"explicit\":\"UNDETERMINED\",\"impression\":\"UNDETERMINED\"}",
+      "usage": {
+        "queue_time": 0.005746701,
+        "prompt_tokens": 266,
+        "prompt_time": 0.011977689,
+        "completion_tokens": 54,
+        "completion_time": 0.114448253,
+        "total_tokens": 320,
+        "total_time": 0.126425942,
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        }
+      },
+      "latencyMs": 197
+    },
+    {
+      "id": "records_ba",
+      "condition": "ba",
+      "parsed": {
+        "explicit": "B_BEFORE_A",
+        "impression": "B_BEFORE_A"
+      },
+      "raw": "{\"explicit\":\"B_BEFORE_A\",\"impression\":\"B_BEFORE_A\"}",
+      "usage": {
+        "queue_time": 0.037867737,
+        "prompt_tokens": 251,
+        "prompt_time": 0.013085844,
+        "completion_tokens": 105,
+        "completion_time": 0.220210744,
+        "total_tokens": 356,
+        "total_time": 0.233296588,
+        "completion_tokens_details": {
+          "reasoning_tokens": 80
+        }
+      },
+      "latencyMs": 323
+    }
+  ]
+}
