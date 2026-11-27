@@ -1,0 +1,7 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),{works}=require('./r6t_works.cjs'),{validate,render,records}=require('./r6t_obligations.cjs');
+const clone=x=>JSON.parse(JSON.stringify(x));
+test('all briefs: exact record multiset in both arms, source order and interleaving differ',()=>{for(const w of works){validate(w);const a=render(w,'direct'),b=render(w,'coupled');assert.deepEqual(a.split('\n').sort(),b.split('\n').sort());assert.notEqual(a,b);const {facts,effects}=records(w);for(const line of [...facts,...effects])assert.equal(b.split('\n').filter(x=>x===line).length,1);}});
+test('missing, duplicate, foreign IDs and future references are rejected',()=>{for(const change of [w=>w.paragraphs[0].introduce.pop(),w=>w.paragraphs[1].introduce.push(1),w=>w.paragraphs[0].introduce.push(100),w=>w.paragraphs[0].refer.push(5)]){const w=clone(works[0]);change(w);assert.throws(()=>validate(w));}});
+test('a later paragraph may refer to an introduced fact without repeating its text',()=>{const w=works[0],s=render(w,'coupled');assert.match(s,/앞 문단에서 이어받을 정보 2, 3/);assert.equal(s.split('\n').filter(x=>x.startsWith('정보 2:')).length,1);});
+test('invalid empty or repeated reference contracts fail closed',()=>{const w=clone(works[0]);w.paragraphs[1].refer=[2,2];assert.throws(()=>validate(w),/OBLIGATION/);w.paragraphs[1].refer=[];w.paragraphs[1].effect='';assert.throws(()=>validate(w),/OBLIGATION/);assert.throws(()=>render(works[0],'other'),/ARM/);});
