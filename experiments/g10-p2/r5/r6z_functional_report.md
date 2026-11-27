@@ -1,0 +1,26 @@
+# R6z — Propositional coverage and discourse-function coverage
+
+2026-11-28 KST. G10-P2 OPEN / QUALITY_HOLD / RIGHTS_SCOPE_HOLD; G10-P3 PRELUDE only.
+
+## Implementation and exact scope
+R6y requires each surface move to add a proposition bit. R6z adds separate manually typed functional bits, paragraph index, nonempty-paragraph flag, and last move. A surface transition must add a new proposition or function; BREAK advances paragraph and resets local last/has-text; END emits terminal proposition only in final paragraph after all required proposition and functional bits are covered. CONTROL is represented as structure rather than as narrative wording. The DP minimizes investigator-specified costs, not measured reader utility. 78 assertions and 69 comparisons with a separate set-based exhaustive path enumerator (shared schema validation), 57 feasible and 12 infeasible, 522 enumerated feasible paths; exact optimum/IDs/text agreement. Two author-composed finite candidate outputs (123 and 87 nonspace chars), 12 and 9 memo states, 0 provider calls. False approved authority on an unsupported explanatory move remains accepted, an explicit negative control. First draft syntax error fixed before commit or tests. Functions are one-use monotonic flags, not repeated pragmatic effects or actual reader updates. Candidate authority, prerequisites and costs are manual, no independent semantic parser. Selected scene is not evidence of writing quality.
+
+## Prospective rival trial
+Run 46028384605, exact HEAD 1e3fdb6ddd3e51383e56c45c7ab3ef782a1d1a43, completed/success. Preflight independently executed 78 assertions on Node22 and froze manifest SHA256 2c3c3cddc3c05c64b01c5bd4a44dbf1b473a615f2dadb4448c763bf531719a7a. 4/4 GPT-OSS120B calls, total 2485 tokens, previous recorded cumulative 544 + 4 = 548. One DIRECT (source/function/license) and one CANDIDATE_AWARE (same plus approved authored alternative expressions) per synthetic work. DP selects from the same approved alternatives with additional manual prerequisites/costs. Input/cost not equal across all three methods; human work to author choices not counted as zero cost. This is a bounded diagnostic of candidate supply, not identification of a solver benefit.
+
+| work | direct chars/tokens/latency ms | candidate-aware | finite chars |
+|---|---|---|---|
+| SCI_TRAY | 320/633/874 | 200/744/726 | 123 |
+| ESSAY_CLOCK | 103/487/798 | 100/621/415 | 87 |
+
+DIRECT 1120 tokens; CANDIDATE_AWARE 1365 (+21.875%). All 4/4 live and 2/2 finite outputs have two nonempty paragraphs. Two-family latency descriptive only. No independent judgments, no training.
+
+## Complete output reading (nonindependent developer)
+SCI_TRAY direct adds evenly covering, identical environment, eyes and other method details not provided; leaks "두 번째 문단에서는" and asserts qualitative evaporation reduction. Candidate-aware removes the explicit metanarrative and unsupported evaporation conclusion but adds simultaneous placement, moves the nonmeasurement fact to the first paragraph, and has redundant explanatory language. Finite output places procedure/observation in paragraph one and explanatory comparison/nonmeasurement/limit in paragraph two; no new observed variable apparent to author, but explanatory sentence substantially repeats result. Does not prove an independently useful discourse function.
+ESSAY_CLOCK direct wrongly uses "초침은 ... 여덟 시 십 분을 가리키고", confused antecedent in "그 시각이 언제 멈췄는지", and adds felt interpretation. Candidate-aware uses accurate clock hands, preserves unknown stopping time and ends with return; reflection is clearer than finite selected "내가 잊어버린 시간", which pragmatically suggests earlier memory/knowledge. Alternative manually tagged reflectAlt is clearer but has higher arbitrary cost; the cost policy can prefer worse prose. Finite mechanically satisfies authored labels, not robust semantics or naturalness. Both live outputs and finite are exposed development material. Do not interpret better style in one sample as population-level quality superiority.
+
+## Custody
+Artifact 15213481069, original ZIP 13149 bytes, SHA256 2e86e77fec1c2a198a1cc491464a0423a503b8d8a073f7f5e7124f50eccbafcf. Drive ZIP https://drive.google.com/file/d/1y_f2YaTw6iH8Y10fwrGDWuxioi5XbDK_/view. Native artifact digest, original local download, and Drive re-fetch match. 11 entries CRC and independent Python manifest/source/prompt/attempt/text/count/model/status/token replay 4/4. Wrapper responses not raw HTTP. No private source sent. 
+
+## Decision
+R6z DONE_DEVELOPMENT_MIXED. Keep optional product-state prototype; do not mandate a functional coverage controller. Next question: distinguish claimed function completion from actual effect on a reader; source-aligned contrast and uncertainty must not be replaced by one-use author tags. Candidate-aware direct remains a strong rival. Consider semantic-lattice alternatives and marginal reader contribution rather than merely adding required functions. P3 formal name remains proposed; no quality/rights promotion. Prior R6 ledger erratum R6n->R6o run 46000261677. No new literature intake or central missing-list update.
