@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: strict parse rejects omitted, added, invalid fields without inventing answers
+ok 1 - strict parse rejects omitted, added, invalid fields without inventing answers
+  ---
+  duration_ms: 7.754144
+  type: 'test'
+  ...
+# Subtest: sixteen frozen prompts contain passage but no condition label
+ok 2 - sixteen frozen prompts contain passage but no condition label
+  ---
+  duration_ms: 10.318695
+  type: 'test'
+  ...
+# Subtest: mock complete then detect modified receipt; failure stops without retry
+ok 3 - mock complete then detect modified receipt; failure stops without retry
+  ---
+  duration_ms: 28.965697
+  type: 'test'
+  ...
+# Subtest: equal information: paired before and after variants use identical source sentences
+ok 4 - equal information: paired before and after variants use identical source sentences
+  ---
+  duration_ms: 4.101359
+  type: 'test'
+  ...
+# Subtest: unknown order is not licensed by absence of an edge alone
+ok 5 - unknown order is not licensed by absence of an edge alone
+  ---
+  duration_ms: 4.359626
+  type: 'test'
+  ...
+# Subtest: scope and epistemic status cannot silently change
+ok 6 - scope and epistemic status cannot silently change
+  ---
+  duration_ms: 0.770905
+  type: 'test'
+  ...
+# Subtest: known order contradicts unknown strict chronology
+ok 7 - known order contradicts unknown strict chronology
+  ---
+  duration_ms: 0.466645
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 154.903358
