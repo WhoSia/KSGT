@@ -1,0 +1,143 @@
+{
+  "schema": "ksgt.g10.p2.exit-review.v1",
+  "currentStage": "G10-P2",
+  "status": "OPEN_QUALITY_HOLD_RIGHTS_SCOPE_HOLD",
+  "reviewedLegacySnapshot": {
+    "file": "CURRENT_STAGE.json",
+    "blob": "06e9b9b1d74b9dc151f43732531f1d386f956434",
+    "recordedCalls": 340,
+    "recordedStatus": "OPEN_R5I_16_ZERO_CALL_KOREAN_CLAUSE_AGGREGATIONS_COMPLETE_QUALITY_HOLD"
+  },
+  "callReconciliation": {
+    "baseR5i": 340,
+    "source": "G10-P2 canonical Notion running history and live R6w/R6x reports; not a fresh replay of every historical receipt",
+    "increments": [
+      [
+        "R6g",
+        8,
+        45889172122
+      ],
+      [
+        "R6h",
+        12,
+        45891700991
+      ],
+      [
+        "R6i",
+        9,
+        45892287882
+      ],
+      [
+        "R6j",
+        8,
+        45995154714
+      ],
+      [
+        "R6l",
+        6,
+        45997646787
+      ],
+      [
+        "R6n",
+        3,
+        46000261677
+      ],
+      [
+        "R6p",
+        12,
+        46003030662
+      ],
+      [
+        "R6q",
+        16,
+        46003980729
+      ],
+      [
+        "R6r",
+        10,
+        46006346975
+      ],
+      [
+        "R6s",
+        16,
+        46007864242
+      ],
+      [
+        "R6t",
+        12,
+        46010655076
+      ],
+      [
+        "R6u",
+        16,
+        46013827732
+      ],
+      [
+        "R6v",
+        12,
+        46016870691
+      ],
+      [
+        "R6w",
+        48,
+        46021907657
+      ],
+      [
+        "R6x",
+        16,
+        46024852407
+      ]
+    ],
+    "cumulative": 544,
+    "zeroCallR6y": 0
+  },
+  "currentEvidence": {
+    "independentHumanReaderRatings": 0,
+    "independentSourceGold": 0,
+    "trainedModels": 0,
+    "qualityAdvantage": "UNESTABLISHED",
+    "newArchitectureSuperiority": "UNESTABLISHED",
+    "r6x": {
+      "calls": 16,
+      "tokens": 8481,
+      "tests": 7,
+      "run": 46024852407,
+      "report": "experiments/g10-p2/r5/r6x_scope_report.md"
+    },
+    "r6y": {
+      "code": "experiments/g10-p2/r5/r6y_scope_transition_prototype.cjs",
+      "assertions": 103,
+      "generatedConditions": 96,
+      "feasible": 82,
+      "enumeratedFeasiblePaths": 1558,
+      "acceptedFalseAuthorityCounterexample": true,
+      "scope": "FINITE_SYNTHETIC_AUTHOR_LABELS_ONLY"
+    }
+  },
+  "proposedNextStage": {
+    "identifier": "G10-P3",
+    "status": "PRELUDE_ONLY_NOT_OPEN",
+    "name": "KSGT Generation X G10-P3 — Obligation-Constrained Discourse Realization: Semantic Authority, Expressive Latitude & Reader-State Transition",
+    "scope": "Model generation as selecting and executing licensed meaning-bearing moves under semantic obligations, communicative goals, expressive latitude and terminal control, with reader state and cost as separate outcomes.",
+    "inherit": [
+      "G9 semantic/referential scope",
+      "G10-P1 planning/realization baseline and null results",
+      "G10-P2 reader-state evidence and strong direct baseline",
+      "R5g/R5h/R6d finite candidate search; no novelty claim for DP itself"
+    ],
+    "admission": [
+      "User accepts formal stage name",
+      "Bounded P2 disposition with negative results and inherited holds",
+      "Reconcile old machine stage authority and update its compatibility tests",
+      "Fresh work-disjoint generation comparisons against strong direct and matched structured baselines",
+      "Do not declare quality, rights, or reader evaluation PASS without independent evidence"
+    ],
+    "forbid": [
+      "Equate authored semantic labels with entailment",
+      "Treat exact solver path validity as natural Korean quality",
+      "Mandatory extra generation stage without matched benefit",
+      "Promote on call count or regression count"
+    ]
+  },
+  "stageMutation": "NO_STAGE_TRANSITION; legacy CURRENT_STAGE.json intentionally not rewritten before compatibility migration"
+}
