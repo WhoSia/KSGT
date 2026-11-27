@@ -1,0 +1,1480 @@
+{
+  "authority": "AUTHORED_STRICT_EVENT_ORDER_AND_HYPOTHETICAL_READER_POLICY",
+  "summary": {
+    "count": 7,
+    "changes": 3,
+    "baselineLoss": 5,
+    "selectedLoss": 0,
+    "baselineChars": 293,
+    "selectedChars": 316
+  },
+  "rows": [
+    {
+      "id": "repair",
+      "baseline": {
+        "id": "linear",
+        "text": "A실의 서가 번호를 확인해 점검표에 적었다. B실의 반납함 위치를 확인했다.",
+        "groups": [
+          {
+            "events": [
+              "A",
+              "note"
+            ],
+            "mode": "sequence"
+          },
+          {
+            "events": [
+              "B"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "A",
+            "note"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [
+          [
+            "A",
+            "note"
+          ],
+          [
+            "A",
+            "B"
+          ],
+          [
+            "note",
+            "B"
+          ]
+        ],
+        "sourceWorlds": 3,
+        "compatibleWorlds": 1,
+        "lostWorlds": 2,
+        "risk": 0.6666666666666666,
+        "chars": 42
+      },
+      "selected": {
+        "id": "topic",
+        "text": "A실의 서가 번호와 B실의 반납함 위치를 확인했다. 확인한 서가 번호는 점검표에 적었다.",
+        "groups": [
+          {
+            "events": [
+              "A",
+              "B"
+            ],
+            "mode": "topic"
+          },
+          {
+            "events": [
+              "note"
+            ],
+            "mode": "topic"
+          }
+        ],
+        "hard": [
+          [
+            "A",
+            "note"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [],
+        "sourceWorlds": 3,
+        "compatibleWorlds": 3,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 49
+      },
+      "rows": [
+        {
+          "id": "linear",
+          "text": "A실의 서가 번호를 확인해 점검표에 적었다. B실의 반납함 위치를 확인했다.",
+          "groups": [
+            {
+              "events": [
+                "A",
+                "note"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "B"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "A",
+              "note"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [
+            [
+              "A",
+              "note"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "note",
+              "B"
+            ]
+          ],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 1,
+          "lostWorlds": 2,
+          "risk": 0.6666666666666666,
+          "chars": 42
+        },
+        {
+          "id": "topic",
+          "text": "A실의 서가 번호와 B실의 반납함 위치를 확인했다. 확인한 서가 번호는 점검표에 적었다.",
+          "groups": [
+            {
+              "events": [
+                "A",
+                "B"
+              ],
+              "mode": "topic"
+            },
+            {
+              "events": [
+                "note"
+              ],
+              "mode": "topic"
+            }
+          ],
+          "hard": [
+            [
+              "A",
+              "note"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 3,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 49
+        },
+        {
+          "id": "then",
+          "text": "A실의 서가 번호를 확인한 뒤 B실의 반납함 위치를 확인했다. 이후 번호를 적었다.",
+          "groups": [
+            {
+              "events": [
+                "A",
+                "B",
+                "note"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "note"
+            ]
+          ],
+          "admissible": false,
+          "extra": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "note"
+            ]
+          ],
+          "omitted": [],
+          "soft": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "note"
+            ]
+          ],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 1,
+          "lostWorlds": 2,
+          "risk": 0.6666666666666666,
+          "chars": 46
+        }
+      ]
+    },
+    {
+      "id": "letters",
+      "baseline": {
+        "id": "linear",
+        "text": "은서는 흰 봉투를 책상에 놓고 열었다. 민재는 파란 봉투를 선반에 놓았다. 흰 봉투를 여는 일과 파란 봉투를 놓는 일이 끝난 뒤 민재는 작업실을 나갔다.",
+        "groups": [
+          {
+            "events": [
+              "white",
+              "open"
+            ],
+            "mode": "sequence"
+          },
+          {
+            "events": [
+              "blue"
+            ],
+            "mode": "sequence"
+          },
+          {
+            "events": [
+              "leave"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "white",
+            "open"
+          ],
+          [
+            "blue",
+            "leave"
+          ],
+          [
+            "open",
+            "leave"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [
+          [
+            "white",
+            "open"
+          ],
+          [
+            "white",
+            "blue"
+          ],
+          [
+            "open",
+            "blue"
+          ],
+          [
+            "blue",
+            "leave"
+          ]
+        ],
+        "sourceWorlds": 3,
+        "compatibleWorlds": 1,
+        "lostWorlds": 2,
+        "risk": 0.6666666666666666,
+        "chars": 85
+      },
+      "selected": {
+        "id": "topic",
+        "text": "흰 봉투는 은서가 책상에 놓았고 파란 봉투는 민재가 선반에 놓았다. 은서는 자신이 놓은 봉투를 열었다. 흰 봉투를 여는 일과 파란 봉투를 놓는 일이 끝난 뒤 민재는 작업실을 나갔다.",
+        "groups": [
+          {
+            "events": [
+              "white",
+              "blue"
+            ],
+            "mode": "topic"
+          },
+          {
+            "events": [
+              "open"
+            ],
+            "mode": "topic"
+          },
+          {
+            "events": [
+              "leave"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "white",
+            "open"
+          ],
+          [
+            "blue",
+            "leave"
+          ],
+          [
+            "open",
+            "leave"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [],
+        "sourceWorlds": 3,
+        "compatibleWorlds": 3,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 101
+      },
+      "rows": [
+        {
+          "id": "linear",
+          "text": "은서는 흰 봉투를 책상에 놓고 열었다. 민재는 파란 봉투를 선반에 놓았다. 흰 봉투를 여는 일과 파란 봉투를 놓는 일이 끝난 뒤 민재는 작업실을 나갔다.",
+          "groups": [
+            {
+              "events": [
+                "white",
+                "open"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "blue"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "leave"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "blue",
+              "leave"
+            ],
+            [
+              "open",
+              "leave"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "white",
+              "blue"
+            ],
+            [
+              "open",
+              "blue"
+            ],
+            [
+              "blue",
+              "leave"
+            ]
+          ],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 1,
+          "lostWorlds": 2,
+          "risk": 0.6666666666666666,
+          "chars": 85
+        },
+        {
+          "id": "topic",
+          "text": "흰 봉투는 은서가 책상에 놓았고 파란 봉투는 민재가 선반에 놓았다. 은서는 자신이 놓은 봉투를 열었다. 흰 봉투를 여는 일과 파란 봉투를 놓는 일이 끝난 뒤 민재는 작업실을 나갔다.",
+          "groups": [
+            {
+              "events": [
+                "white",
+                "blue"
+              ],
+              "mode": "topic"
+            },
+            {
+              "events": [
+                "open"
+              ],
+              "mode": "topic"
+            },
+            {
+              "events": [
+                "leave"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "blue",
+              "leave"
+            ],
+            [
+              "open",
+              "leave"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 3,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 101
+        },
+        {
+          "id": "added",
+          "text": "은서가 흰 봉투를 열자 민재가 파란 봉투를 놓고 나갔다.",
+          "groups": [
+            {
+              "events": [
+                "white",
+                "open",
+                "blue",
+                "leave"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "open",
+              "blue"
+            ],
+            [
+              "blue",
+              "leave"
+            ]
+          ],
+          "admissible": false,
+          "extra": [
+            [
+              "white",
+              "blue"
+            ],
+            [
+              "open",
+              "blue"
+            ]
+          ],
+          "omitted": [],
+          "soft": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "open",
+              "blue"
+            ],
+            [
+              "blue",
+              "leave"
+            ]
+          ],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 1,
+          "lostWorlds": 2,
+          "risk": 0.6666666666666666,
+          "chars": 31
+        }
+      ]
+    },
+    {
+      "id": "studio",
+      "baseline": {
+        "id": "topic",
+        "text": "재윤은 왼쪽 책상에 놓은 흰 상자를 열었고 하은은 오른쪽 책상에 회색 상자를 놓았다. 흰 상자를 여는 일과 회색 상자를 놓는 일이 끝난 뒤 하은은 작업실을 나갔다.",
+        "groups": [
+          {
+            "events": [
+              "white",
+              "open",
+              "gray"
+            ],
+            "mode": "topic"
+          },
+          {
+            "events": [
+              "leave"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "white",
+            "open"
+          ],
+          [
+            "gray",
+            "leave"
+          ],
+          [
+            "open",
+            "leave"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [],
+        "sourceWorlds": 3,
+        "compatibleWorlds": 3,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 91
+      },
+      "selected": {
+        "id": "topic",
+        "text": "재윤은 왼쪽 책상에 놓은 흰 상자를 열었고 하은은 오른쪽 책상에 회색 상자를 놓았다. 흰 상자를 여는 일과 회색 상자를 놓는 일이 끝난 뒤 하은은 작업실을 나갔다.",
+        "groups": [
+          {
+            "events": [
+              "white",
+              "open",
+              "gray"
+            ],
+            "mode": "topic"
+          },
+          {
+            "events": [
+              "leave"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "white",
+            "open"
+          ],
+          [
+            "gray",
+            "leave"
+          ],
+          [
+            "open",
+            "leave"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [],
+        "sourceWorlds": 3,
+        "compatibleWorlds": 3,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 91
+      },
+      "rows": [
+        {
+          "id": "linear",
+          "text": "재윤이 왼쪽 책상에 흰 상자를 놓고 열었다. 하은은 오른쪽 책상에 회색 상자를 놓았다. 흰 상자를 여는 일과 회색 상자를 놓는 일이 끝난 뒤 하은은 작업실을 나갔다.",
+          "groups": [
+            {
+              "events": [
+                "white",
+                "open"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "gray"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "leave"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "gray",
+              "leave"
+            ],
+            [
+              "open",
+              "leave"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "white",
+              "gray"
+            ],
+            [
+              "open",
+              "gray"
+            ],
+            [
+              "gray",
+              "leave"
+            ]
+          ],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 1,
+          "lostWorlds": 2,
+          "risk": 0.6666666666666666,
+          "chars": 92
+        },
+        {
+          "id": "topic",
+          "text": "재윤은 왼쪽 책상에 놓은 흰 상자를 열었고 하은은 오른쪽 책상에 회색 상자를 놓았다. 흰 상자를 여는 일과 회색 상자를 놓는 일이 끝난 뒤 하은은 작업실을 나갔다.",
+          "groups": [
+            {
+              "events": [
+                "white",
+                "open",
+                "gray"
+              ],
+              "mode": "topic"
+            },
+            {
+              "events": [
+                "leave"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "white",
+              "open"
+            ],
+            [
+              "gray",
+              "leave"
+            ],
+            [
+              "open",
+              "leave"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [],
+          "sourceWorlds": 3,
+          "compatibleWorlds": 3,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 91
+        }
+      ]
+    },
+    {
+      "id": "new_notice_partial",
+      "baseline": {
+        "id": "linear",
+        "text": "안내문을 인쇄했다. 책상을 옮겼다.",
+        "groups": [
+          {
+            "events": [
+              "print"
+            ],
+            "mode": "sequence"
+          },
+          {
+            "events": [
+              "move"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [
+          [
+            "print",
+            "move"
+          ]
+        ],
+        "sourceWorlds": 2,
+        "compatibleWorlds": 1,
+        "lostWorlds": 1,
+        "risk": 0.5,
+        "chars": 19
+      },
+      "selected": {
+        "id": "topic",
+        "text": "안내문 인쇄와 책상 이동을 마쳤다.",
+        "groups": [
+          {
+            "events": [
+              "print",
+              "move"
+            ],
+            "mode": "topic"
+          }
+        ],
+        "hard": [],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [],
+        "sourceWorlds": 2,
+        "compatibleWorlds": 2,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 19
+      },
+      "rows": [
+        {
+          "id": "linear",
+          "text": "안내문을 인쇄했다. 책상을 옮겼다.",
+          "groups": [
+            {
+              "events": [
+                "print"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "move"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "sourceWorlds": 2,
+          "compatibleWorlds": 1,
+          "lostWorlds": 1,
+          "risk": 0.5,
+          "chars": 19
+        },
+        {
+          "id": "topic",
+          "text": "안내문 인쇄와 책상 이동을 마쳤다.",
+          "groups": [
+            {
+              "events": [
+                "print",
+                "move"
+              ],
+              "mode": "topic"
+            }
+          ],
+          "hard": [],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [],
+          "sourceWorlds": 2,
+          "compatibleWorlds": 2,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 19
+        },
+        {
+          "id": "then",
+          "text": "안내문을 인쇄한 뒤 책상을 옮겼다.",
+          "groups": [
+            {
+              "events": [
+                "print",
+                "move"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "admissible": false,
+          "extra": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "omitted": [],
+          "soft": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "sourceWorlds": 2,
+          "compatibleWorlds": 1,
+          "lostWorlds": 1,
+          "risk": 0.5,
+          "chars": 19
+        }
+      ]
+    },
+    {
+      "id": "new_notice_ordered",
+      "baseline": {
+        "id": "then",
+        "text": "안내문을 인쇄한 뒤 책상을 옮겼다.",
+        "groups": [
+          {
+            "events": [
+              "print",
+              "move"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "print",
+            "move"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [
+          [
+            "print",
+            "move"
+          ]
+        ],
+        "sourceWorlds": 1,
+        "compatibleWorlds": 1,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 19
+      },
+      "selected": {
+        "id": "then",
+        "text": "안내문을 인쇄한 뒤 책상을 옮겼다.",
+        "groups": [
+          {
+            "events": [
+              "print",
+              "move"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "print",
+            "move"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [
+          [
+            "print",
+            "move"
+          ]
+        ],
+        "sourceWorlds": 1,
+        "compatibleWorlds": 1,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 19
+      },
+      "rows": [
+        {
+          "id": "linear",
+          "text": "안내문을 인쇄했다. 책상을 옮겼다.",
+          "groups": [
+            {
+              "events": [
+                "print"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "move"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [],
+          "admissible": false,
+          "extra": [],
+          "omitted": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "soft": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "sourceWorlds": 1,
+          "compatibleWorlds": 1,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 19
+        },
+        {
+          "id": "topic",
+          "text": "안내문 인쇄와 책상 이동을 마쳤다.",
+          "groups": [
+            {
+              "events": [
+                "print",
+                "move"
+              ],
+              "mode": "topic"
+            }
+          ],
+          "hard": [],
+          "admissible": false,
+          "extra": [],
+          "omitted": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "soft": [],
+          "sourceWorlds": 1,
+          "compatibleWorlds": 1,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 19
+        },
+        {
+          "id": "then",
+          "text": "안내문을 인쇄한 뒤 책상을 옮겼다.",
+          "groups": [
+            {
+              "events": [
+                "print",
+                "move"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [
+            [
+              "print",
+              "move"
+            ]
+          ],
+          "sourceWorlds": 1,
+          "compatibleWorlds": 1,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 19
+        }
+      ]
+    },
+    {
+      "id": "new_scene_partial",
+      "baseline": {
+        "id": "topic",
+        "text": "종이 울렸고 복도에 불이 켜졌다.",
+        "groups": [
+          {
+            "events": [
+              "bell",
+              "light"
+            ],
+            "mode": "topic"
+          }
+        ],
+        "hard": [],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [],
+        "sourceWorlds": 2,
+        "compatibleWorlds": 2,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 18
+      },
+      "selected": {
+        "id": "topic",
+        "text": "종이 울렸고 복도에 불이 켜졌다.",
+        "groups": [
+          {
+            "events": [
+              "bell",
+              "light"
+            ],
+            "mode": "topic"
+          }
+        ],
+        "hard": [],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [],
+        "sourceWorlds": 2,
+        "compatibleWorlds": 2,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 18
+      },
+      "rows": [
+        {
+          "id": "linear",
+          "text": "종이 울렸다. 복도에 불이 켜졌다.",
+          "groups": [
+            {
+              "events": [
+                "bell"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "light"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [
+            [
+              "bell",
+              "light"
+            ]
+          ],
+          "sourceWorlds": 2,
+          "compatibleWorlds": 1,
+          "lostWorlds": 1,
+          "risk": 0.5,
+          "chars": 19
+        },
+        {
+          "id": "topic",
+          "text": "종이 울렸고 복도에 불이 켜졌다.",
+          "groups": [
+            {
+              "events": [
+                "bell",
+                "light"
+              ],
+              "mode": "topic"
+            }
+          ],
+          "hard": [],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [],
+          "sourceWorlds": 2,
+          "compatibleWorlds": 2,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 18
+        }
+      ]
+    },
+    {
+      "id": "new_scene_reverse",
+      "baseline": {
+        "id": "chronological",
+        "text": "복도에 불이 켜진 뒤 종이 울렸다.",
+        "groups": [
+          {
+            "events": [
+              "light",
+              "bell"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "light",
+            "bell"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [
+          [
+            "light",
+            "bell"
+          ]
+        ],
+        "sourceWorlds": 1,
+        "compatibleWorlds": 1,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 19
+      },
+      "selected": {
+        "id": "chronological",
+        "text": "복도에 불이 켜진 뒤 종이 울렸다.",
+        "groups": [
+          {
+            "events": [
+              "light",
+              "bell"
+            ],
+            "mode": "sequence"
+          }
+        ],
+        "hard": [
+          [
+            "light",
+            "bell"
+          ]
+        ],
+        "admissible": true,
+        "extra": [],
+        "omitted": [],
+        "soft": [
+          [
+            "light",
+            "bell"
+          ]
+        ],
+        "sourceWorlds": 1,
+        "compatibleWorlds": 1,
+        "lostWorlds": 0,
+        "risk": 0,
+        "chars": 19
+      },
+      "rows": [
+        {
+          "id": "linear",
+          "text": "종이 울렸다. 복도에 불이 켜졌다.",
+          "groups": [
+            {
+              "events": [
+                "bell"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "light"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [],
+          "admissible": false,
+          "extra": [],
+          "omitted": [
+            [
+              "light",
+              "bell"
+            ]
+          ],
+          "soft": [
+            [
+              "bell",
+              "light"
+            ]
+          ],
+          "sourceWorlds": 1,
+          "compatibleWorlds": 0,
+          "lostWorlds": 1,
+          "risk": 1,
+          "chars": 19
+        },
+        {
+          "id": "flashback",
+          "text": "종이 울렸다. 그 전에 복도에 불이 켜졌다.",
+          "groups": [
+            {
+              "events": [
+                "bell"
+              ],
+              "mode": "sequence"
+            },
+            {
+              "events": [
+                "light"
+              ],
+              "mode": "reset"
+            }
+          ],
+          "hard": [
+            [
+              "light",
+              "bell"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [],
+          "sourceWorlds": 1,
+          "compatibleWorlds": 1,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 24
+        },
+        {
+          "id": "chronological",
+          "text": "복도에 불이 켜진 뒤 종이 울렸다.",
+          "groups": [
+            {
+              "events": [
+                "light",
+                "bell"
+              ],
+              "mode": "sequence"
+            }
+          ],
+          "hard": [
+            [
+              "light",
+              "bell"
+            ]
+          ],
+          "admissible": true,
+          "extra": [],
+          "omitted": [],
+          "soft": [
+            [
+              "light",
+              "bell"
+            ]
+          ],
+          "sourceWorlds": 1,
+          "compatibleWorlds": 1,
+          "lostWorlds": 0,
+          "risk": 0,
+          "chars": 19
+        }
+      ]
+    }
+  ],
+  "sensitivity": [
+    {
+      "policy": "none",
+      "weight": 0,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 0,
+      "selectedLoss": 0,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "none",
+      "weight": 10,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 0,
+      "selectedLoss": 0,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "none",
+      "weight": 20,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 0,
+      "selectedLoss": 0,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "none",
+      "weight": 40,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 0,
+      "selectedLoss": 0,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "none",
+      "weight": 80,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 0,
+      "selectedLoss": 0,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "sequence",
+      "weight": 0,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 5,
+      "selectedLoss": 5,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "sequence",
+      "weight": 10,
+      "count": 7,
+      "changes": 1,
+      "baselineLoss": 5,
+      "selectedLoss": 4,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "sequence",
+      "weight": 20,
+      "count": 7,
+      "changes": 2,
+      "baselineLoss": 5,
+      "selectedLoss": 2,
+      "baselineChars": 293,
+      "selectedChars": 300
+    },
+    {
+      "policy": "sequence",
+      "weight": 40,
+      "count": 7,
+      "changes": 3,
+      "baselineLoss": 5,
+      "selectedLoss": 0,
+      "baselineChars": 293,
+      "selectedChars": 316
+    },
+    {
+      "policy": "sequence",
+      "weight": 80,
+      "count": 7,
+      "changes": 3,
+      "baselineLoss": 5,
+      "selectedLoss": 0,
+      "baselineChars": 293,
+      "selectedChars": 316
+    },
+    {
+      "policy": "all",
+      "weight": 0,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 8,
+      "selectedLoss": 8,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "all",
+      "weight": 10,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 8,
+      "selectedLoss": 8,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "all",
+      "weight": 20,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 8,
+      "selectedLoss": 8,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "all",
+      "weight": 40,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 8,
+      "selectedLoss": 8,
+      "baselineChars": 293,
+      "selectedChars": 293
+    },
+    {
+      "policy": "all",
+      "weight": 80,
+      "count": 7,
+      "changes": 0,
+      "baselineLoss": 8,
+      "selectedLoss": 8,
+      "baselineChars": 293,
+      "selectedChars": 293
+    }
+  ]
+}
