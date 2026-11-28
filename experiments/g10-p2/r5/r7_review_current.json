@@ -1,6 +1,6 @@
 {
   "schema": "ksgt.r7.review.v2",
-  "phase": "POST_R7F",
+  "phase": "POST_R7G_CONSTITUTION",
   "date": "2026-11-28",
   "axes": [
     "value",
@@ -60,9 +60,11 @@
   ],
   "gates": {
     "stage": "P2_OPEN_P3_PROPOSAL",
-    "independentQuality": "HOLD",
+    "independentQuality": "UNESTABLISHED_CLAIM_SPECIFIC_NOT_MAINLINE_GATE",
     "rights": "HOLD",
-    "humanReaderRatings": 0
+    "humanReaderRatings": 0,
+    "freshRecruitmentAuthorized": false,
+    "elicitedPacketDefault": false
   },
   "candidates": [
     {
@@ -75,9 +77,9 @@
         0.9,
         0.96
       ],
-      "gate": "ACTIONABLE",
-      "decision": "NEXT_BOUNDED",
-      "reason": "Four paired cost wins; boundary requires trusted labels and real context dependencies; test on naturally longer task briefs, avoid mandatory filters."
+      "gate": "DEFER",
+      "decision": "OPTIONAL_NEXT",
+      "reason": "Prior cost signal retained; expressive mechanism has higher relevance to founding goal."
     },
     {
       "id": "reader_outcome_packet",
@@ -89,9 +91,9 @@
         0.94,
         0.88
       ],
-      "gate": "ACTIONABLE",
-      "decision": "NEXT_PARALLEL",
-      "reason": "Review existing whole texts with task-oriented questions, blinded packet if independent reader available, no extra API until needed; packet is not evidence."
+      "gate": "STOP",
+      "decision": "HISTORICAL_ONLY_NO_DISTRIBUTION",
+      "reason": "Observation-process validity and user reaffirmation; R7g packet is historical, not a research milestone."
     },
     {
       "id": "independent_reader",
@@ -103,23 +105,23 @@
         0.52,
         0.25
       ],
-      "gate": "EXTERNAL_HOLD",
-      "decision": "HIGHEST_UNRESOLVED_GATE",
-      "reason": "Cannot simulate independent reader gold; existing R4b packets remain."
+      "gate": "DEFER",
+      "decision": "CLAIM_SPECIFIC_ONLY",
+      "reason": "New population claims remain unsupported; no fresh recruitment or wait gate by default."
     },
     {
       "id": "expressive_generation",
       "scores": [
-        0.98,
-        0.8,
-        0.82,
         0.99,
-        0.62,
-        0.79
+        0.87,
+        0.91,
+        0.99,
+        0.75,
+        0.9
       ],
       "gate": "ACTIONABLE",
-      "decision": "NEXT_CONDITIONAL",
-      "reason": "Original KSGT north star, actual prose not detector; fresh challenging genres only with meaningful distinct intervention and assessment."
+      "decision": "RUN_THEORY_FIRST",
+      "reason": "Recover G9-P41 Wildness/Sharpness, examine meaningful ambiguity and foregrounding; derive distinct generative intervention and inspect whole prose."
     },
     {
       "id": "relation_repair",
@@ -173,10 +175,24 @@
         0.85,
         0.63
       ],
-      "gate": "PARALLEL_HOLD",
-      "decision": "CONCURRENCY_CHECK_FIRST",
-      "reason": "Central TXT update remains unresolved; not a new duplicate ledger."
+      "gate": "ACTIONABLE",
+      "decision": "PARALLEL",
+      "reason": "Central TXT R7g updated; maintain source custody and actual paper reading."
+    },
+    {
+      "id": "native_trace_reconstruction",
+      "scores": [
+        0.98,
+        0.83,
+        0.92,
+        0.98,
+        0.9,
+        0.78
+      ],
+      "gate": "ACTIONABLE",
+      "decision": "PARALLEL",
+      "reason": "Existing authentic writing/revision context and evidence scope, not elicited ratings."
     }
   ],
-  "decision": "No automatic promotion. Actionable nondominated options are review packet, projection-boundary and expressive generation; choose review/validation and bounded projection next; avoid another broad prompt-layout run. Cost gain is observed only at provider-token level; human quality gate unchanged."
+  "decision": "Expressive-generation and native-trace reconstruction; no default recruitment or artificial reader packets. Literature parallel. Claims remain scoped; no automatic promotion."
 }

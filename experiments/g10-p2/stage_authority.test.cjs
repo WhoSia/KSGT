@@ -1,7 +1,7 @@
 "use strict";
 const {test}=require("node:test"),a=require("node:assert/strict"),s=require("../../CURRENT_STAGE.json");
 
-test("approved G10-P2 title and R5 prospective, R4b human gate remain open",()=>{
+test("approved G10-P2 title and evidence scope remain open",()=>{
  a.equal(s.current_stage,"G10-P2");
  a.equal(s.status,"OPEN_R7F_DEVELOPMENT_COMPLETE_QUALITY_HOLD");
  a.equal(s.official_name,"KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs");
@@ -66,7 +66,10 @@ test("distinct reader and auditor forms prepared but zero independent human resp
 test("R5 prospective design is not mislabelled as a completed model experiment",()=>{
  a.equal(s.current_authority.r5_prospective_protocol_present,true);
  a.equal(s.latest_experiment.identifier,"G10-P2 R4b.1");
- a.match(s.next_scientific_action,/HUMAN_REQUIRED/);
+ a.match(s.next_scientific_action,/DATA_FIRST/);
+ a.equal(s.operating_constitution.fresh_recruitment_authorized,false);
+ a.equal(s.operating_constitution.elicited_packet_default,false);
+ a.equal(s.operating_constitution.population_preference,"UNESTABLISHED_NOT_MAINLINE_GATE");
 });
 
 test("P3 proposal and inherited holds do not change stage authority",()=>{
@@ -94,4 +97,6 @@ test("P3 proposal and inherited holds do not change stage authority",()=>{
  a.equal(s.latest_r6_development.quality_advantage,"UNESTABLISHED");
 });
 
- test("gated review keeps all six dimensions and excludes blocked paths from Pareto frontier",()=>{const {frontier}=require("./r5/r7_review_policy.cjs"),r=require("./r5/r7_review_current.json"),v=frontier(r);a.deepEqual(v.frontier,["source_projection_boundary","reader_outcome_packet","expressive_generation"]);a.equal(v.promotionAllowed,false);a.ok(v.held.some(x=>x.id==="independent_reader"&&x.gate==="EXTERNAL_HOLD"));const x=structuredClone(r);x.candidates.push({id:"inferior",scores:[0,0,0,0,0,0],gate:"ACTIONABLE"});a.ok(frontier(x).dominated.includes("inferior"));x.candidates[0].scores[0]=1.1;a.throws(()=>frontier(x),/BAD_CANDIDATE/);});
+ test("gated review keeps all six dimensions and excludes blocked paths from Pareto frontier",()=>{const {frontier}=require("./r5/r7_review_policy.cjs"),r=require("./r5/r7_review_current.json"),v=frontier(r);a.deepEqual(v.frontier,["expressive_generation","native_trace_reconstruction"]);a.equal(v.promotionAllowed,false);a.ok(v.held.some(x=>x.id==="independent_reader"&&x.gate==="DEFER"));const x=structuredClone(r);x.candidates.push({id:"inferior",scores:[0,0,0,0,0,0],gate:"ACTIONABLE"});a.ok(frontier(x).dominated.includes("inferior"));x.candidates[0].scores[0]=1.1;a.throws(()=>frontier(x),/BAD_CANDIDATE/);});
+
+ test("research constitution forbids automatic human-recruitment and packet activation",()=>{const p=s.operating_constitution,r=require("./r5/r7_review_current.json");a.equal(p.fresh_recruitment_authorized,false);a.equal(p.elicited_packet_default,false);a.equal(p.reader_packet_status,"HISTORICAL_NOT_FOR_DISTRIBUTION");a.equal(p.cross_disciplinary_theory_required,true);a.equal(p.commit_target_per_substantive_research_loop,30);a.equal(p.extended_research_commit_target,100);a.equal(r.candidates.find(x=>x.id==="reader_outcome_packet").gate,"STOP");a.equal(r.gates.freshRecruitmentAuthorized,false);});

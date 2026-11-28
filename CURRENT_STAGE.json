@@ -205,7 +205,7 @@
     "r5d_independent_source_semantic_gold": 0,
     "r5d_prose_quality_gain": "NONE_DEMONSTRATED",
     "r5d_current_role": "EXPLORATORY_DEVELOPER_SELECTED_SEAM_NEGATIVE_RETIRE_MANDATORY_EDITOR",
-    "current_research_priority": "KOREAN_PROSE_REALIZATION_NATIVE_HUMAN_REVISION_CORPUS_NOT_HTML_READER_PILOTS",
+    "current_research_priority": "NATIVE_TRACE_EXPRESSIVE_GENERATION_AND_CROSS_DISCIPLINARY_THEORY",
     "r5f_real_provider_calls": 16,
     "r5f_direct_120b_calls": 8,
     "r5f_human_retrieved_120b_calls": 8,
@@ -945,8 +945,8 @@
     "using synthetic or model-self judgments as independent Korean human preference",
     "deleting historical G9 evidence"
   ],
-  "next_scientific_action": "Gated Pareto review: optional source projection boundary and whole-text reader-outcome review, expressive generation only with distinct test; avoid repeated prompt layout or mandatory local repair. HUMAN_REQUIRED for independent quality/source-gold claims; P3 title and bounded closure pending confirmation.",
-  "current_substage": "G10-P2 R7e/R7f — adaptive review / P3 PRELUDE; QUALITY_HOLD / RIGHTS_SCOPE_HOLD",
+  "next_scientific_action": "DATA_FIRST / NO_FRESH_RECRUITMENT. Recover native trace and cross-disciplinary generative mechanisms; distinguish locally unresolved and intentionally open meaning from source-required meaning, compare real prose against strong direct generation. Do not distribute R7g reader packets. Independent population preference remains UNESTABLISHED, not a mainline gate. P3 proposal only.",
+  "current_substage": "G10-P2 R7g correction / R7h expressive-generation prelude; QUALITY_HOLD / RIGHTS_SCOPE_HOLD",
   "latest_experiment": {
     "identifier": "G10-P2 R4b.1",
     "status": "DEVELOPMENT_REAL_PROSE_PATCHING_COMPLETED_HUMAN_SOURCE_AND_READER_GOLD_ZERO",
@@ -1460,5 +1460,23 @@
       "experiments/g10-p2/r5/r7d_lexical_report.md",
       "experiments/g10-p2/r5/r7d_author_audit.json"
     ]
+  },
+  "operating_constitution": {
+    "date": "2026-11-28",
+    "authority": "USER_REAFFIRMED",
+    "fresh_recruitment_authorized": false,
+    "elicited_packet_default": false,
+    "reader_packet_status": "HISTORICAL_NOT_FOR_DISTRIBUTION",
+    "population_preference": "UNESTABLISHED_NOT_MAINLINE_GATE",
+    "naturalistic_is_unbiased": false,
+    "commit_target_per_substantive_research_loop": 30,
+    "extended_research_commit_target": 100,
+    "empty_or_cosmetic_count_padding": false,
+    "squash_by_default": false,
+    "cross_disciplinary_theory_required": true,
+    "research_not_perpetual_engineering": true,
+    "notion_root": "3c4ef561-cf92-8148-a3f4-e424d4ca909e",
+    "entry": "3caef561-cf92-81f7-8e9c-f95e7449e054",
+    "correction": "experiments/g10-p2/r5/r7g_observation_policy_correction.md"
   }
 }
