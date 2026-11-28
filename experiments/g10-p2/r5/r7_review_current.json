@@ -1,6 +1,6 @@
 {
   "schema": "ksgt.r7.review.v2",
-  "phase": "POST_R7G_CONSTITUTION",
+  "phase": "POST_R7H_EXPRESSION_AND_COST",
   "date": "2026-11-28",
   "axes": [
     "value",
@@ -56,6 +56,19 @@
       "annotationCost": "UNMEASURED",
       "leakageReduction": "NOT_OBSERVED",
       "wholeTextAdvantage": "UNESTABLISHED"
+    },
+    {
+      "id": "R7h",
+      "run": 46127879614,
+      "calls": 12,
+      "tokens": 9552,
+      "separate_tokens": 5871,
+      "joint_tokens": 3681,
+      "continuations": 16,
+      "finite_partitions": 360,
+      "authority": "NONINDEPENDENT_DEVELOPER_FOCAL_READING",
+      "qualityAdvantage": "UNESTABLISHED",
+      "warning": "SHORTER_OUTPUT_AND_OMISSIONS_CONFOUND_COST"
     }
   ],
   "gates": {
@@ -121,7 +134,7 @@
       ],
       "gate": "ACTIONABLE",
       "decision": "RUN_THEORY_FIRST",
-      "reason": "Recover G9-P41 Wildness/Sharpness, examine meaningful ambiguity and foregrounding; derive distinct generative intervention and inspect whole prose."
+      "reason": "R7h separates obligation risk and expressive ambiguity mathematically; actual prose still omits required detail and recites possible motives. Derive mechanisms from native traces rather than repeating synthetic prompt layouts."
     },
     {
       "id": "relation_repair",
@@ -177,7 +190,7 @@
       ],
       "gate": "ACTIONABLE",
       "decision": "PARALLEL",
-      "reason": "Central TXT R7g updated; maintain source custody and actual paper reading."
+      "reason": "R7h central TXT verified 39 at readback; two Korean papers read, two public papers inspected with PDF byte acquisition blocked; continue in parallel."
     },
     {
       "id": "native_trace_reconstruction",
@@ -192,7 +205,21 @@
       "gate": "ACTIONABLE",
       "decision": "PARALLEL",
       "reason": "Existing authentic writing/revision context and evidence scope, not elicited ratings."
+    },
+    {
+      "id": "joint_branch_generation",
+      "scores": [
+        0.65,
+        0.55,
+        0.65,
+        0.57,
+        0.92,
+        0.96
+      ],
+      "gate": "DEFER",
+      "decision": "OPTIONAL_ONLY",
+      "reason": "37.30% token reduction on four paired synthetic works, partly shorter output; quality not equivalent and omissions persist."
     }
   ],
-  "decision": "Expressive-generation and native-trace reconstruction; no default recruitment or artificial reader packets. Literature parallel. Claims remain scoped; no automatic promotion."
+  "decision": "Expressive generation and native trace reconstruction remain primary; joint branching optional only. Literature parallel; no artificial human reader packet, no automatic promotion."
 }

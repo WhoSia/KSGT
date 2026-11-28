@@ -3,7 +3,7 @@ const {test}=require("node:test"),a=require("node:assert/strict"),s=require("../
 
 test("approved G10-P2 title and evidence scope remain open",()=>{
  a.equal(s.current_stage,"G10-P2");
- a.equal(s.status,"OPEN_R7F_DEVELOPMENT_COMPLETE_QUALITY_HOLD");
+ a.equal(s.status,"OPEN_R7H_DEVELOPMENT_COMPLETE_QUALITY_HOLD");
  a.equal(s.official_name,"KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs");
  a.equal(s.canonical_notion_id,"41fef561-cf92-8105-a17b-c0c33a9701bc");
 });
@@ -29,12 +29,12 @@ test("P2 cumulative model calls count R2/R2b/R4a/R4b/R5a/R5b once, never read-on
  a.equal(legacy,340);
  const r=c.r6_call_reconciliation;
  a.equal(r.base_r5i,legacy);
- a.equal(r.runs.length,22);
- a.equal(new Set(r.runs.map(x=>x.run)).size,22);
+ a.equal(r.runs.length,23);
+ a.equal(new Set(r.runs.map(x=>x.run)).size,23);
  a.equal(r.runs.find(x=>x.run===46000261677).id,"R6o");
  a.ok(r.runs.every(x=>Number.isSafeInteger(x.calls)&&x.calls>0));
  a.equal(r.incremental_calls,r.runs.reduce((n,x)=>n+x.calls,0));
- a.equal(r.incremental_calls,314);
+ a.equal(r.incremental_calls,326);
  a.equal(c.real_provider_model_calls,legacy+r.incremental_calls);
  a.equal(s.latest_experiment.newModelCalls,20);
  a.equal(s.latest_experiment.posthocReplayNewModelCalls,0);
@@ -84,15 +84,15 @@ test("P3 proposal and inherited holds do not change stage authority",()=>{
  a.equal(s.historical_r7a_development.r7a_calls,18);
  a.equal(s.historical_r7bc_development.r7b_calls,24);
  a.equal(s.historical_r7d_development.r7d_calls,24);
- a.equal(s.latest_r6_development.r7e_calls,16);
- a.equal(s.latest_r6_development.r7f_calls,8);
+ a.equal(s.historical_r7ef_development.r7e_calls,16);
+ a.equal(s.historical_r7ef_development.r7f_calls,8);
  a.equal(s.historical_r7bc_development.r7c_calls,16);
  a.equal(s.historical_r6z_development.r6z_run,46028384605);
  a.equal(s.historical_r7a_development.r7a_run,46029606917);
  a.equal(s.historical_r7bc_development.r7b_run,46030432309);
  a.equal(s.historical_r7d_development.r7d_run,46032006425);
- a.equal(s.latest_r6_development.r7e_run,46122629391);
- a.equal(s.latest_r6_development.r7f_run,46122900072);
+ a.equal(s.historical_r7ef_development.r7e_run,46122629391);
+ a.equal(s.historical_r7ef_development.r7f_run,46122900072);
  a.equal(s.historical_r7bc_development.r7c_run,46030763844);
  a.equal(s.latest_r6_development.quality_advantage,"UNESTABLISHED");
 });
@@ -100,3 +100,5 @@ test("P3 proposal and inherited holds do not change stage authority",()=>{
  test("gated review keeps all six dimensions and excludes blocked paths from Pareto frontier",()=>{const {frontier}=require("./r5/r7_review_policy.cjs"),r=require("./r5/r7_review_current.json"),v=frontier(r);a.deepEqual(v.frontier,["expressive_generation","native_trace_reconstruction"]);a.equal(v.promotionAllowed,false);a.ok(v.held.some(x=>x.id==="independent_reader"&&x.gate==="DEFER"));const x=structuredClone(r);x.candidates.push({id:"inferior",scores:[0,0,0,0,0,0],gate:"ACTIONABLE"});a.ok(frontier(x).dominated.includes("inferior"));x.candidates[0].scores[0]=1.1;a.throws(()=>frontier(x),/BAD_CANDIDATE/);});
 
  test("research constitution forbids automatic human-recruitment and packet activation",()=>{const p=s.operating_constitution,r=require("./r5/r7_review_current.json");a.equal(p.fresh_recruitment_authorized,false);a.equal(p.elicited_packet_default,false);a.equal(p.reader_packet_status,"HISTORICAL_NOT_FOR_DISTRIBUTION");a.equal(p.cross_disciplinary_theory_required,true);a.equal(p.commit_target_per_substantive_research_loop,30);a.equal(p.extended_research_commit_target,100);a.equal(r.candidates.find(x=>x.id==="reader_outcome_packet").gate,"STOP");a.equal(r.gates.freshRecruitmentAuthorized,false);});
+
+test("R7h scoped live evidence and optional joint branching",()=>{const d=s.latest_r6_development,r=require("./r5/r7_review_current.json");a.equal(d.r7h_calls,12);a.equal(d.r7h_run,46127879614);a.equal(d.r7h_tokens,d.separate_tokens+d.joint_tokens);a.equal(d.continuations,16);a.equal(d.quality_advantage,"UNESTABLISHED");a.equal(r.candidates.find(x=>x.id==="joint_branch_generation").gate,"DEFER");a.equal(s.current_authority.real_provider_model_calls,666);});
