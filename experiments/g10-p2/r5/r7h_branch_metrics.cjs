@@ -1,0 +1,4 @@
+'use strict';
+function decode(c,text){let o;try{o=JSON.parse(text);}catch{return {status:'INVALID_JSON',texts:[]};}if(!o||Array.isArray(o)||Object.keys(o).sort().join(',')!==c.keys.slice().sort().join(',')||c.keys.some(k=>typeof o[k]!=='string'||!o[k].trim()))return {status:'INVALID_SCHEMA',texts:[]};return {status:'VALID_FORMAT',texts:c.keys.map(k=>({branch:k,continuation:o[k],nonspace:[...o[k].replace(/\s/gu,'')].length,prefixRepeated:o[k].includes(c.source.prefix)}))};}
+function analyze(rows){return Object.fromEntries(['SEPARATE','JOINT'].map(arm=>{const a=rows.filter(r=>r.arm===arm);return [arm,{calls:a.length,tokens:a.reduce((s,r)=>s+r.tokens,0),validCalls:a.filter(r=>r.metrics.status==='VALID_FORMAT').length,continuations:a.flatMap(r=>r.metrics.texts).length,prefixRepeats:a.flatMap(r=>r.metrics.texts).filter(t=>t.prefixRepeated).length}]}));}
+module.exports={decode,analyze};
