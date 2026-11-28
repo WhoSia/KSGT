@@ -1,0 +1,100 @@
+{
+  "schema": "ksgt.r7e.review.v1",
+  "phase": "PRE_EXECUTION",
+  "axes": [
+    "value",
+    "novelty",
+    "evidence_gain",
+    "quality_relevance",
+    "cost_efficiency",
+    "feasibility"
+  ],
+  "scale": "0-1 subjective ordinal assessment, no weighting; higher is preferable; evidence_gain is anticipated information value, not observed evidence",
+  "gates": {
+    "independent_quality": "HOLD",
+    "rights": "HOLD",
+    "stage": "P2_OPEN_P3_PROPOSAL",
+    "no_bot": "REQUIRED"
+  },
+  "candidates": [
+    {
+      "id": "relation_repair",
+      "scores": [
+        0.98,
+        0.82,
+        0.96,
+        0.95,
+        0.76,
+        0.97
+      ],
+      "decision": "RUN",
+      "reason": "R7d relation drift; R4b already tested exact flagged span. Novel contrast: fresh same draft different source authorization; no target span oracle; indexed bounded edits including no-op."
+    },
+    {
+      "id": "independent_reader",
+      "scores": [
+        1,
+        0.55,
+        1,
+        1,
+        0.52,
+        0.25
+      ],
+      "decision": "HOLD_EXTERNAL",
+      "reason": "No independent ratings; cannot manufacture them."
+    },
+    {
+      "id": "global_discourse_planning",
+      "scores": [
+        0.96,
+        0.88,
+        0.85,
+        0.98,
+        0.65,
+        0.78
+      ],
+      "decision": "NEXT_CONDITIONAL",
+      "reason": "Return to whole-text planning if local correction is narrow or null."
+    },
+    {
+      "id": "automatic_scope_parser",
+      "scores": [
+        0.76,
+        0.55,
+        0.48,
+        0.64,
+        0.55,
+        0.7
+      ],
+      "decision": "DEFER",
+      "reason": "R7b/c no advantage from target decomposition."
+    },
+    {
+      "id": "global_lexical_avoid",
+      "scores": [
+        0.25,
+        0.15,
+        0.2,
+        0.25,
+        0.89,
+        0.99
+      ],
+      "decision": "STOP",
+      "reason": "R7d zero cue hits still semantic drift."
+    },
+    {
+      "id": "literature_custody",
+      "scores": [
+        0.87,
+        0.5,
+        0.85,
+        0.72,
+        0.85,
+        0.63
+      ],
+      "decision": "PARALLEL_IF_SAFE",
+      "reason": "Central missing TXT needs concurrency-safe update; do not invent holdings."
+    }
+  ],
+  "selection": "No sum. Gate unavailable independent human work; choose relation repair for strongest immediately actionable discrimination; compare to prior R4b, then rescore."
+}
