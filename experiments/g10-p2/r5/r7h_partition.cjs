@@ -1,5 +1,5 @@
 'use strict';
-function entropy(ps){return -ps.reduce((s,p)=>s+(p>0?p*Math.log2(p):0),0);}
+function entropy(ps){return ps.reduce((s,p)=>s-(p>0?p*Math.log2(p):0),0);}
 function analyze(c){if(!c||typeof c.target!=='string'||!Array.isArray(c.worlds)||!c.worlds.length)throw Error('BAD_CASE');const meanings=new Set(),a=new Map();let total=0;for(const w of c.worlds){if(typeof w.meaning!=='string'||meanings.has(w.meaning)||typeof w.answer!=='string'||!Number.isFinite(w.p)||w.p<0||w.p>1)throw Error('BAD_WORLD');meanings.add(w.meaning);total+=w.p;a.set(w.answer,(a.get(w.answer)||0)+w.p);}if(Math.abs(total-1)>1e-10)throw Error('BAD_MASS');const meaningEntropy=entropy(c.worlds.map(w=>w.p)),obligationEntropy=entropy([...a.values()]);let residual=0;for(const [answer,p] of a)if(p>0)residual+=p*entropy(c.worlds.filter(w=>w.answer===answer).map(w=>w.p/p));return {meaningEntropy,obligationEntropy,residual,wrongMass:1-(a.get(c.target)||0),support:[...a].filter(([_,p])=>p>0).map(([x])=>x),identityError:Math.abs(meaningEntropy-obligationEntropy-residual)};}
 module.exports={entropy,analyze};
 if(require.main===module)console.log(JSON.stringify(require('./r7h_counterexamples.json').cases.map(c=>({id:c.id,...analyze(c)})),null,2));
