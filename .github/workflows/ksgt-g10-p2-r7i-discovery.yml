@@ -1,0 +1,56 @@
+name: KSGT G10-P2 R7i discovery-first vs planning
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7i-discovery.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  discovery:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -30 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7i_filter.json)" = 6e088bfc838e138e9e965a385e5d19fee821078c
+          test "$(git hash-object experiments/g10-p2/r5/r7i_return.json)" = 96538df3461589126298e0c1fc82552f1011040e
+          test "$(git hash-object experiments/g10-p2/r5/r7i_scale.json)" = 26d8f7868bae0e213aa54e7e362a7096ce1b18aa
+          test "$(git hash-object experiments/g10-p2/r5/r7i_tile.json)" = d8bd2833407aa115143591075a3fc8e64d078a07
+          test "$(git hash-object experiments/g10-p2/r5/r7i_experiment_design.md)" = ef979d643765c9db584fbefe5a7b06f28a02ac0c
+          test "$(git hash-object experiments/g10-p2/r5/r7i_works.cjs)" = 5d64981ad02faf0d027b896c78d8724243ba6b6b
+          test "$(git hash-object experiments/g10-p2/r5/r7i_prompt.cjs)" = f5b18c2d1c0bad57fb5aeb6af0ea7f11a0afa146
+          test "$(git hash-object experiments/g10-p2/r5/r7i_runner.cjs)" = b77b8d3180c34208242e5e376f467e32ecef05a8
+          test "$(git hash-object experiments/g10-p2/r5/r7i_runner.test.cjs)" = 9b2f1587d58d145fe18cd8d1bc9a1679108c5d33
+          node --test experiments/g10-p2/r5/r7i_runner.test.cjs
+          node experiments/g10-p2/r5/r7i_runner.cjs --preflight > "$RUNNER_TEMP/r7i-preflight.json"
+      - name: Sixteen single provider calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7i_runner.cjs --execute "$RUNNER_TEMP/r7i-live"
+      - name: Verify receipt chain and analyze
+        run: node experiments/g10-p2/r5/r7i_runner.cjs --verify "$RUNNER_TEMP/r7i-live" > "$RUNNER_TEMP/r7i-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7i-discovery-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7i-live/
+            ${{ runner.temp }}/r7i-preflight.json
+            ${{ runner.temp }}/r7i-analysis.json
