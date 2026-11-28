@@ -1,0 +1,182 @@
+{
+  "schema": "ksgt.r7.review.v2",
+  "phase": "POST_R7F",
+  "date": "2026-11-28",
+  "axes": [
+    "value",
+    "novelty",
+    "expected_information_gain",
+    "quality_relevance",
+    "cost_efficiency",
+    "feasibility"
+  ],
+  "scale": "Subjective ordinal 0–1, all higher preferred. 0 means absent/unavailable, .5 plausible but uncertain, 1 unusually high. Not probabilities, precision estimates, or measured quality. No weighted total.",
+  "evidence": [
+    {
+      "id": "R7e",
+      "run": 46122629391,
+      "calls": 16,
+      "tokens": 10806,
+      "local": {
+        "targetRemoval": 2,
+        "targetCases": 4,
+        "authorizedNoop": 4,
+        "authorizedCases": 4,
+        "tokens": 5480
+      },
+      "full": {
+        "targetRemoval": 4,
+        "targetCases": 4,
+        "authorizedNoop": 4,
+        "authorizedCases": 4,
+        "tokens": 5326
+      },
+      "authority": "NONINDEPENDENT_DEVELOPER_FOCAL_READING"
+    },
+    {
+      "id": "R7f",
+      "run": 46122900072,
+      "calls": 8,
+      "tokens": 5013,
+      "direct": {
+        "requiredAnswers": 20,
+        "totalQuestions": 20,
+        "input": 2051,
+        "completion": 631,
+        "total": 2682
+      },
+      "projected": {
+        "requiredAnswers": 20,
+        "totalQuestions": 20,
+        "input": 1702,
+        "completion": 629,
+        "total": 2331
+      },
+      "authority": "NONINDEPENDENT_DEVELOPER_ANSWERABILITY_READING",
+      "annotationCost": "UNMEASURED",
+      "leakageReduction": "NOT_OBSERVED",
+      "wholeTextAdvantage": "UNESTABLISHED"
+    }
+  ],
+  "gates": {
+    "stage": "P2_OPEN_P3_PROPOSAL",
+    "independentQuality": "HOLD",
+    "rights": "HOLD",
+    "humanReaderRatings": 0
+  },
+  "candidates": [
+    {
+      "id": "source_projection_boundary",
+      "scores": [
+        0.94,
+        0.76,
+        0.89,
+        0.93,
+        0.9,
+        0.96
+      ],
+      "gate": "ACTIONABLE",
+      "decision": "NEXT_BOUNDED",
+      "reason": "Four paired cost wins; boundary requires trusted labels and real context dependencies; test on naturally longer task briefs, avoid mandatory filters."
+    },
+    {
+      "id": "reader_outcome_packet",
+      "scores": [
+        0.98,
+        0.64,
+        0.87,
+        0.99,
+        0.94,
+        0.88
+      ],
+      "gate": "ACTIONABLE",
+      "decision": "NEXT_PARALLEL",
+      "reason": "Review existing whole texts with task-oriented questions, blinded packet if independent reader available, no extra API until needed; packet is not evidence."
+    },
+    {
+      "id": "independent_reader",
+      "scores": [
+        1,
+        0.55,
+        1,
+        1,
+        0.52,
+        0.25
+      ],
+      "gate": "EXTERNAL_HOLD",
+      "decision": "HIGHEST_UNRESOLVED_GATE",
+      "reason": "Cannot simulate independent reader gold; existing R4b packets remain."
+    },
+    {
+      "id": "expressive_generation",
+      "scores": [
+        0.98,
+        0.8,
+        0.82,
+        0.99,
+        0.62,
+        0.79
+      ],
+      "gate": "ACTIONABLE",
+      "decision": "NEXT_CONDITIONAL",
+      "reason": "Original KSGT north star, actual prose not detector; fresh challenging genres only with meaningful distinct intervention and assessment."
+    },
+    {
+      "id": "relation_repair",
+      "scores": [
+        0.83,
+        0.55,
+        0.5,
+        0.83,
+        0.56,
+        0.97
+      ],
+      "gate": "DEFER",
+      "decision": "OPTIONAL_ONLY",
+      "reason": "R7e no focal advantage; 2/4 versus 4/4; higher token cost."
+    },
+    {
+      "id": "global_discourse_planning",
+      "scores": [
+        0.9,
+        0.5,
+        0.55,
+        0.95,
+        0.6,
+        0.78
+      ],
+      "gate": "DEFER",
+      "decision": "AVOID_REPETITION",
+      "reason": "Prior R5g/R6s/R6t/R6u mixed."
+    },
+    {
+      "id": "global_lexical_avoid",
+      "scores": [
+        0.25,
+        0.15,
+        0.2,
+        0.25,
+        0.89,
+        0.99
+      ],
+      "gate": "STOP",
+      "decision": "STOP",
+      "reason": "R7d zero proxy hits does not imply meaning fidelity."
+    },
+    {
+      "id": "literature_custody",
+      "scores": [
+        0.87,
+        0.5,
+        0.85,
+        0.72,
+        0.85,
+        0.63
+      ],
+      "gate": "PARALLEL_HOLD",
+      "decision": "CONCURRENCY_CHECK_FIRST",
+      "reason": "Central TXT update remains unresolved; not a new duplicate ledger."
+    }
+  ],
+  "decision": "No automatic promotion. Actionable nondominated options are review packet, projection-boundary and expressive generation; choose review/validation and bounded projection next; avoid another broad prompt-layout run. Cost gain is observed only at provider-token level; human quality gate unchanged."
+}
