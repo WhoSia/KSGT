@@ -1,0 +1,86 @@
+{
+  "schema": "ksgt.r7h.finite.v1",
+  "authority": "INVESTIGATOR_SPECIFIED_HYPOTHETICAL_DISTRIBUTIONS",
+  "cases": [
+    {
+      "id": "open_emotion",
+      "target": "returned",
+      "worlds": [
+        {
+          "meaning": "relief",
+          "answer": "returned",
+          "p": 0.5
+        },
+        {
+          "meaning": "regret",
+          "answer": "returned",
+          "p": 0.5
+        }
+      ],
+      "purpose": "obligation resolved, affect open"
+    },
+    {
+      "id": "wrong_confidence",
+      "target": "returned",
+      "worlds": [
+        {
+          "meaning": "did_not_return",
+          "answer": "not_returned",
+          "p": 1
+        }
+      ],
+      "purpose": "zero entropy wrong answer"
+    },
+    {
+      "id": "referent_ambiguity",
+      "target": "A",
+      "worlds": [
+        {
+          "meaning": "A acts",
+          "answer": "A",
+          "p": 0.5
+        },
+        {
+          "meaning": "B acts",
+          "answer": "B",
+          "p": 0.5
+        }
+      ],
+      "purpose": "obligation ambiguity"
+    },
+    {
+      "id": "redundant_explication",
+      "target": "returned",
+      "worlds": [
+        {
+          "meaning": "relief",
+          "answer": "returned",
+          "p": 1
+        },
+        {
+          "meaning": "regret",
+          "answer": "returned",
+          "p": 0
+        }
+      ],
+      "purpose": "same obligation, fewer possible emotional readings"
+    },
+    {
+      "id": "minority_correct",
+      "target": "A",
+      "worlds": [
+        {
+          "meaning": "A acts",
+          "answer": "A",
+          "p": 0.01
+        },
+        {
+          "meaning": "B acts",
+          "answer": "B",
+          "p": 0.99
+        }
+      ],
+      "purpose": "low entropy yet high wrong-answer mass"
+    }
+  ]
+}
