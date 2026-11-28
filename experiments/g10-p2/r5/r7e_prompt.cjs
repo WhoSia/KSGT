@@ -1,0 +1,6 @@
+'use strict';
+const {cases}=require('./r7e_cases.cjs');
+const system='한국어 편집자입니다. 원천 정보에 비추어 원고의 특정 의미 관계와 직접 연결된 표현을 검토하세요. 원천에서 뒷받침하는 사실은 유지하고, 확정되지 않은 사실을 추가하지 마세요. 수정이 필요하지 않으면 원고를 그대로 유지하세요. 문제가 있으면 그 부분과 직접 연결된 문장만 고치고, 자연스러운 한국어와 두 문단의 구성 및 종료 지점을 유지하세요. 원천에서 주어지지 않았다는 메타 설명은 장르상 필요하지 않으면 쓰지 마세요.';
+function messages(c,arm){const lines=['장르: '+c.genre,'원천 정보:',...c.facts,'검토할 의미 관계: '+c.target,'종료: '+c.end,'원고:',c.draft,'동일 원고의 문장 번호:',...c.slots.map((s,i)=>(i+1)+'. '+s)];if(arm==='LOCAL')lines.push('수정할 문장 번호와 새 문장만 JSON으로 출력하세요. 형식: {"edits":[{"index":1,"text":"새 문장"}]}. 수정이 필요 없으면 {"edits":[]}입니다. 서로 다른 문장 최대 두 개, 삭제는 빈 문자열, 줄바꿈 없이 출력합니다.');else if(arm==='FULL')lines.push('검토가 끝난 완성 원고 전체만 출력하세요. 수정이 필요 없다면 원고를 글자 그대로 반환하세요.');else throw Error('BAD_ARM');return [{role:'system',content:system},{role:'user',content:lines.join('\n')}];}
+function schedule(){return cases().flatMap((c,i)=>(i%2?['FULL','LOCAL']:['LOCAL','FULL']).map(arm=>({id:c.id+'__'+arm,work:c.work,scope:c.scope,arm,source:c,messages:messages(c,arm)})));}
+module.exports={system,messages,schedule};
