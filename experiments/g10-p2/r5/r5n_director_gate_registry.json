@@ -1,0 +1,148 @@
+{
+  "schema": "ksgt.g10p2.director.gates.v1",
+  "as_of": "2026-11-23",
+  "overall_stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "provider_calls_historical": 340,
+  "new_provider_calls": 0,
+  "independent_reader_outcomes": 0,
+  "gates": [
+    {
+      "id": "G0-CUSTODY",
+      "status": "PARTIAL",
+      "pass_requires": [
+        "complete artifact inventory",
+        "remote cold-byte SHA for byte-authoritative outputs"
+      ],
+      "evidence": [
+        "R5m and R5m.1 13 Drive files metadata-relisted"
+      ],
+      "not_evidence": [
+        "cold SHA of all uploads"
+      ]
+    },
+    {
+      "id": "G1-CP5",
+      "status": "HOLD",
+      "pass_requires": [
+        "hash all 10 fragments",
+        "match concatenated 857083889-byte gzip SHA",
+        "parse JSONL rows if row count claimed"
+      ],
+      "evidence": [
+        "manifest exists",
+        "10 sizes sum to 857083889",
+        "13 synthetic verifier tests"
+      ],
+      "not_evidence": [
+        "12,352,778 rows actually parsed"
+      ]
+    },
+    {
+      "id": "G2-P36",
+      "status": "HOLD",
+      "pass_requires": [
+        "actual-schema native adapter located or rebuilt from official source",
+        "edition-aware tests",
+        "provenance for original source offsets"
+      ],
+      "evidence": [
+        "historical official slot counts and annotation ontology"
+      ],
+      "not_evidence": [
+        "English reviewer-response adapter"
+      ]
+    },
+    {
+      "id": "G3-P62",
+      "status": "PARTIAL",
+      "pass_requires": [
+        "work-level dependency identities",
+        "exposure-disjoint split audit"
+      ],
+      "evidence": [
+        "R6 twelve machine proposal receipts from exposed records"
+      ],
+      "not_evidence": [
+        "12 human semantic judgments"
+      ]
+    },
+    {
+      "id": "G4-EDITORIAL",
+      "status": "HOLD",
+      "pass_requires": [
+        "rights-cleared native Korean source and edit pairs",
+        "stable work groups",
+        "editor authenticity and mapping",
+        "separately attest whether target is expert-edited feedback versus a real human-edited source-text rewrite, using actual released schema"
+      ],
+      "evidence": [
+        "R5o: existing KoLLA v2 exact original ZIP and M2 bytes replayed (1418 sentences, 1410 paired annotator blocks; 1 overlapping-edit ABSTAIN); Korean L2 sentence correction only",
+        "R5p official NIKL 2024 construction report checked: 1,500 instruction/example feedback targets, including language-model evaluations corrected by experts; not 1,500 certified human edits to source prose",
+        "R5q USER-ATTESTED 2026-11-23 application submitted for NIKL 2024 writing-correction instruction corpus; stated usage agreement through 2075-12-31"
+      ],
+      "not_evidence": [
+        "P45 EDF aggregate features",
+        "native Korean paragraph-level source/edit pairs; complete 100-essay boundary; independently assessed prose quality",
+        "Expert-edited language-model feedback treated as before/after native paragraph rewrite; actual NIKL 2024 JSON not acquired",
+        "Actual authenticated download, released raw JSON fields, unrestricted redistribution or model training rights, before/after full-prose human rewrites"
+      ]
+    },
+    {
+      "id": "G5-EVAL",
+      "status": "HOLD",
+      "pass_requires": [
+        "source-work-disjoint freeze",
+        "preregistered model/cost/rubric",
+        "independent blind reader and source fidelity audits"
+      ],
+      "evidence": [
+        "G10-P2 comparative design prose",
+        "R5o: two original KoLLA annotators provide alternative L2 sentence corrections, not independent blinded G10-P2 reader/task outcomes"
+      ],
+      "not_evidence": [
+        "completed independent reader ratings",
+        "expert corrections of feedback are not independent reader preferences on produced complete Korean prose"
+      ]
+    },
+    {
+      "id": "G6-CODE",
+      "status": "PARTIAL",
+      "pass_requires": [
+        "real-schema adapter executed",
+        "whole-text writer and scorer integration",
+        "regression suite"
+      ],
+      "evidence": [
+        "server-reported six synthetic adapter tests",
+        "local 13 CP5 synthetic verifier tests"
+      ],
+      "not_evidence": [
+        "full Korean writing system validated"
+      ]
+    }
+  ],
+  "dependencies": {
+    "quality_claim": [
+      "G4-EDITORIAL",
+      "G5-EVAL",
+      "G6-CODE"
+    ],
+    "cp5_specific_claim": [
+      "G1-CP5"
+    ],
+    "p36_native_claim": [
+      "G2-P36"
+    ],
+    "P62_source_disjoint_claim": [
+      "G3-P62"
+    ]
+  },
+  "decision_branches": [
+    "POSITIVE",
+    "MIXED",
+    "NULL",
+    "INVALID"
+  ],
+  "no_auto_promotion": true,
+  "latest_evidence_revision": "R5q_USER_APPLICATION_SUBMITTED_RIGHTS_AND_RAW_BYTES_HOLD"
+}

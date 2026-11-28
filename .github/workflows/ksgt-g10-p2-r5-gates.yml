@@ -1,0 +1,37 @@
+name: KSGT G10-P2 R5 Source Disjointness and Evidence-Authority Gates
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths:
+      - 'experiments/g10-p2/r5/**'
+      - '.github/workflows/ksgt-g10-p2-r5-gates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  source-parent-and-claim-boundaries:
+    if: github.ref == 'refs/heads/research/g10-p2-reader-state-coupled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 25
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Deny bot contribution in the latest twenty branch commits
+        shell: bash
+        run: |
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -iE 'github-actions\[bot\]|41898282\+github-actions\[bot\]'; then
+            echo 'BOT_CONTRIBUTION_ZERO violation'
+            exit 1
+          fi
+      - name: Execute source-work leakage and evidence-authority regression tests
+        run: node --test experiments/g10-p2/r5/*.test.cjs
+      - name: Verify G10-P2 previous mechanism invariants are preserved
+        run: node --test experiments/g10-p2/*.test.cjs

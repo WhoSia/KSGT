@@ -1,0 +1,25 @@
+{
+  "schema": "ksgt.g10p2.lira.v1",
+  "overall_stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "independent_reader_outcomes": 0,
+  "sources": {
+    "S1": "https://github.com/WhoSia/KSGT/blob/research/g10-p2-reader-state-coupled/experiments/g10-p2/RESEARCH_PROGRAM.md",
+    "S2": "https://kli.korean.go.kr/request/corpusRegist.do?lang=ko",
+    "S3": "https://kli.korean.go.kr/m/boards/noticeView.do?recordId=1733",
+    "S4": "https://drive.google.com/file/d/1dCUq2o8u6x1fzBg77DztfIWuH1dae8w2/view",
+    "S5": "https://github.com/WhoSia/KSGT/blob/research/g10-p2-reader-state-coupled/experiments/g10-p2/r5/34_R5O_REAL_KOLLA_M2_CORPUS_ADMISSION_AND_OVERLAP_FAILURE_20261123.md",
+    "S6": "https://drive.google.com/drive/folders/1A1226MucV9Vq_6pEOWrlkgagqtPYtvcq",
+    "S7": "https://drive.google.com/drive/folders/11gyHOKlViatdwRs2DjQs1matk5AxgvKQ",
+    "S8": "https://app.notion.com/p/41fef561cf928105a17bc0c33a9701bc",
+    "S9": "https://www.korean.go.kr/front/reportData/reportDataView.do?mn_id=207&pageIndex=2&report_seq=1184&searchOrder="
+  },
+  "decision_formula": "0.30*gate+0.30*quality+0.20*info+0.15*feasibility+0.05*(1-cost); five director-assessed 0-1 inputs, cost=larger more costly",
+  "decisions": [
+    {"id":"D1-NIKL24-ACCESS","scores":{"gate":0.98,"quality":0.96,"info":0.96,"feasibility":0.70,"cost":0.40},"status":"NEXT","can_execute_now":true,"source_ids":["S2","S3","S9"],"rationale":"Verify official schema/acquisition rights first; application may still require authorized user action."},
+    {"id":"D2-BLIND-EVAL-PREREG","scores":{"gate":0.95,"quality":0.95,"info":0.95,"feasibility":0.86,"cost":0.32},"status":"NEXT","can_execute_now":true,"source_ids":["S1","S5"],"rationale":"Freeze forms and source-work cluster unit before any holdout outputs or human ratings."},
+    {"id":"D3-SOURCE-WORK-BOUNDARY","scores":{"gate":0.95,"quality":0.90,"info":0.91,"feasibility":0.72,"cost":0.43},"status":"PREPARE","can_execute_now":true,"source_ids":["S1","S5"],"rationale":"Review suspected essay parent leakage, independently authenticate identifiers."},
+    {"id":"D4-NIKL-NATIVE-ADAPTER","scores":{"gate":0.72,"quality":0.70,"info":0.83,"feasibility":0.57,"cost":0.58},"status":"WAIT_FOR_SOURCE","can_execute_now":false,"source_ids":["S1","S8"],"rationale":"P36 real schema bridge unavailable; do not equate English peer-review adapter with NIKL."},
+    {"id":"D5-CP5-FULL-HASH","scores":{"gate":0.43,"quality":0.26,"info":0.63,"feasibility":0.70,"cost":0.53},"status":"PREPARE","can_execute_now":true,"source_ids":["S7","S8"],"rationale":"Useful custody/statistics but not native prose preference gold."},
+    {"id":"D6-NEW-READER-STATE-MODEL","scores":{"gate":0.35,"quality":0.44,"info":0.36,"feasibility":0.38,"cost":0.93},"status":"DEFER","can_execute_now":false,"source_ids":["S1","S5"],"rationale":"Training before full-prose matched cost and blind quality evidence violates promotion order."}
+  ]
+}

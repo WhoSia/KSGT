@@ -1,0 +1,48 @@
+name: KSGT G10-P2 R6i epistemic-state direct rival
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r6i-direct-rival.yml]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ksgt-g10-p2-r6i-9-20261127
+  cancel-in-progress: false
+jobs:
+  matched-writer:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 45
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Human contributor provenance and frozen plan
+        shell: bash
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -40 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          node --test experiments/g10-p2/r5/r6i_direct_rival.test.cjs experiments/g10-p2/r5/r6i_epistemic_realizer.test.cjs
+          node experiments/g10-p2/r5/r6i_direct_rival.cjs --preflight > "$RUNNER_TEMP/r6i-preflight.json"
+          node -e 'const p=require(process.argv[1]);if(p.works!==9||p.calls!==9||p.planSHA!=="eb00dab762081b57c73d8d740dff4c60a010f92a0ef42e5d6b062e01e2c9bde5")process.exit(1)' "$RUNNER_TEMP/r6i-preflight.json"
+      - name: Nine bounded synthetic-source provider requests
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r6i_direct_rival.cjs --execute "$RUNNER_TEMP/r6i-live"
+      - name: Verify complete outputs and source-bound receipts
+        run: node experiments/g10-p2/r5/r6i_direct_rival.cjs --verify "$RUNNER_TEMP/r6i-live"
+      - name: Preserve complete or partial receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r6i-direct-rival-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r6i-preflight.json
+            ${{ runner.temp }}/r6i-live/

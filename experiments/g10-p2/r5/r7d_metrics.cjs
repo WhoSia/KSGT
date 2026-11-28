@@ -1,0 +1,5 @@
+'use strict';
+const cuePatterns={GALLERY:/다시\s*(?:그\s*)?(?:창가\s*)?(?:의자에\s*)?앉|다시\s*자리/,LAB:/마침내|드디어/,ARCHIVE:/잊어버|잊었|잊고|잊은/,TRANSFER:/겨우|고작|불과\s*세|세\s*개(?:만|밖에)/};
+function metrics(c,text){const p=cuePatterns[c.work];if(!p)throw Error('BAD_FAMILY');return {paragraphs:text.trim().split(/\n\s*\n/u).filter(Boolean).length,nonspace:[...text.replace(/\s/gu,'')].length,cueProxy:p.test(text)};}
+function analyze(rows){return Object.fromEntries(['DIRECT','GLOBAL_AVOID','CONTEXTUAL'].map(arm=>{const a=rows.filter(r=>r.arm===arm);return [arm,{n:a.length,tokens:a.reduce((n,r)=>n+r.tokens,0),paragraph2:a.filter(r=>r.metrics.paragraphs===2).length,cueLicensed:a.filter(r=>r.scope==='LICENSED'&&r.metrics.cueProxy).length,cueUnlicensed:a.filter(r=>r.scope==='UNLICENSED'&&r.metrics.cueProxy).length}]}));}
+module.exports={metrics,analyze};

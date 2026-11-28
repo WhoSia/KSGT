@@ -1,0 +1,4 @@
+[
+  {"task_id":"SYN-TASK-01","work_id":"SYN-WORK-01","genre":"설명문","audience":"고등학생","source_fingerprint":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","lineage_audit_id":"AUDIT_SYNTHETIC_NOT_REAL","rights":"APPROVED","exposed":false,"parent_work_disjoint":true},
+  {"task_id":"SYN-TASK-02","work_id":"SYN-WORK-02","genre":"보고서","audience":"연구자","source_fingerprint":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","lineage_audit_id":"AUDIT_SYNTHETIC_NOT_REAL","rights":"APPROVED","exposed":false,"parent_work_disjoint":true}
+]

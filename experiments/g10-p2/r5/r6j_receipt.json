@@ -1,0 +1,889 @@
+{
+  "authority": "DEVELOPMENT_AUTHORED_LABELS_ONLY",
+  "rows": [
+    {
+      "scene": "corridor",
+      "ctx": {
+        "focus": "actor",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "복도는 고요했다. 가느다란 빛은 동쪽 의자 등받이에만 닿았다. 서쪽 의자에 앉아 있던 유나가 일어섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "복도는 고요했다. 서쪽 의자에 유나가 앉아 있었다. 가느다란 빛은 동쪽 의자 등받이에만 닿았다. 유나가 일어섰다.",
+        "variants": [
+          0,
+          0,
+          0
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 63
+    },
+    {
+      "scene": "corridor",
+      "ctx": {
+        "focus": "image",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "복도는 고요했다. 가느다란 빛은 동쪽 의자 등받이에만 닿았다. 서쪽 의자에 앉아 있던 유나가 일어섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "복도는 고요했다. 가느다란 빛은 동쪽 의자 등받이에만 닿았다. 서쪽 의자에 앉아 있던 유나가 일어섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 57
+    },
+    {
+      "scene": "corridor",
+      "ctx": {
+        "focus": "actor",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "복도는 고요했다. 가느다란 빛은 동쪽 의자 등받이에만 닿았다. 서쪽 의자에 앉아 있던 유나가 일어섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "복도는 고요했다. 서쪽 의자에 유나가 앉아 있었다. 빛은 실처럼 가늘게 동쪽 의자 등받이에만 닿았다. 유나가 일어섰다.",
+        "variants": [
+          0,
+          1,
+          0
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 66
+    },
+    {
+      "scene": "corridor",
+      "ctx": {
+        "focus": "image",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "복도는 고요했다. 가느다란 빛은 동쪽 의자 등받이에만 닿았다. 서쪽 의자에 앉아 있던 유나가 일어섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "복도는 고요했다. 빛은 실처럼 가늘게 동쪽 의자 등받이에만 닿았다. 서쪽 의자에 앉아 있던 유나가 일어섰다.",
+        "variants": [
+          -1,
+          1,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 60
+    },
+    {
+      "scene": "shelf",
+      "ctx": {
+        "focus": "actor",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 둥근 빛은 오른쪽 칸에만 비쳤다. 책장 왼쪽에 서 있던 현수가 책장을 닫았다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 현수는 책장 왼쪽에 서 있었다. 둥근 빛은 오른쪽 칸에만 비쳤다. 현수가 책장을 닫았다.",
+        "variants": [
+          0,
+          0,
+          0
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 67
+    },
+    {
+      "scene": "shelf",
+      "ctx": {
+        "focus": "image",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 둥근 빛은 오른쪽 칸에만 비쳤다. 책장 왼쪽에 서 있던 현수가 책장을 닫았다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 둥근 빛은 오른쪽 칸에만 비쳤다. 책장 왼쪽에 서 있던 현수가 책장을 닫았다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 61
+    },
+    {
+      "scene": "shelf",
+      "ctx": {
+        "focus": "actor",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 둥근 빛은 오른쪽 칸에만 비쳤다. 책장 왼쪽에 서 있던 현수가 책장을 닫았다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 현수는 책장 왼쪽에 서 있었다. 동전처럼 둥근 빛이 오른쪽 칸에만 비쳤다. 현수가 책장을 닫았다.",
+        "variants": [
+          0,
+          1,
+          0
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 72
+    },
+    {
+      "scene": "shelf",
+      "ctx": {
+        "focus": "image",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 둥근 빛은 오른쪽 칸에만 비쳤다. 책장 왼쪽에 서 있던 현수가 책장을 닫았다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "작업실에는 책장이 놓여 있었다. 동전처럼 둥근 빛이 오른쪽 칸에만 비쳤다. 책장 왼쪽에 서 있던 현수가 책장을 닫았다.",
+        "variants": [
+          -1,
+          1,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 66
+    },
+    {
+      "scene": "hall",
+      "ctx": {
+        "focus": "actor",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 길쭉한 빛은 두 번째 안내판에만 비쳤다. 첫 번째 안내판 옆에 서 있던 지민이 돌아섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 지민은 첫 번째 안내판 옆에 서 있었다. 길쭉한 빛은 두 번째 안내판에만 비쳤다. 지민은 돌아섰다.",
+        "variants": [
+          0,
+          0,
+          1
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 73
+    },
+    {
+      "scene": "hall",
+      "ctx": {
+        "focus": "image",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 길쭉한 빛은 두 번째 안내판에만 비쳤다. 첫 번째 안내판 옆에 서 있던 지민이 돌아섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 길쭉한 빛은 두 번째 안내판에만 비쳤다. 첫 번째 안내판 옆에 서 있던 지민이 돌아섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 67
+    },
+    {
+      "scene": "hall",
+      "ctx": {
+        "focus": "actor",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 길쭉한 빛은 두 번째 안내판에만 비쳤다. 첫 번째 안내판 옆에 서 있던 지민이 돌아섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 지민은 첫 번째 안내판 옆에 서 있었다. 길쭉한 빛이 리본처럼 두 번째 안내판에만 비쳤다. 지민은 돌아섰다.",
+        "variants": [
+          0,
+          1,
+          1
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 78
+    },
+    {
+      "scene": "hall",
+      "ctx": {
+        "focus": "image",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 길쭉한 빛은 두 번째 안내판에만 비쳤다. 첫 번째 안내판 옆에 서 있던 지민이 돌아섰다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "대합실에는 두 안내판이 있었다. 길쭉한 빛이 리본처럼 두 번째 안내판에만 비쳤다. 첫 번째 안내판 옆에 서 있던 지민이 돌아섰다.",
+        "variants": [
+          -1,
+          1,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 72
+    },
+    {
+      "scene": "room",
+      "ctx": {
+        "focus": "actor",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 얇은 빛은 왼쪽 창틀에만 닿았다. 오른쪽 창 앞에 서 있던 수민이 고개를 돌렸다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 수민은 오른쪽 창 앞에 서 있었다. 얇은 빛은 왼쪽 창틀에만 닿았다. 수민은 고개를 돌렸다.",
+        "variants": [
+          0,
+          0,
+          1
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 76
+    },
+    {
+      "scene": "room",
+      "ctx": {
+        "focus": "image",
+        "figure": false
+      },
+      "candidates": 9,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 얇은 빛은 왼쪽 창틀에만 닿았다. 오른쪽 창 앞에 서 있던 수민이 고개를 돌렸다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 얇은 빛은 왼쪽 창틀에만 닿았다. 오른쪽 창 앞에 서 있던 수민이 고개를 돌렸다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 70
+    },
+    {
+      "scene": "room",
+      "ctx": {
+        "focus": "actor",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 얇은 빛은 왼쪽 창틀에만 닿았다. 오른쪽 창 앞에 서 있던 수민이 고개를 돌렸다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "actor",
+          "image"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 수민은 오른쪽 창 앞에 서 있었다. 빛은 얇은 띠처럼 왼쪽 창틀에만 닿았다. 수민은 고개를 돌렸다.",
+        "variants": [
+          0,
+          1,
+          1
+        ],
+        "fused": false
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 80
+    },
+    {
+      "scene": "room",
+      "ctx": {
+        "focus": "image",
+        "figure": true
+      },
+      "candidates": 18,
+      "shortest": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": false,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 얇은 빛은 왼쪽 창틀에만 닿았다. 오른쪽 창 앞에 서 있던 수민이 고개를 돌렸다.",
+        "variants": [
+          -1,
+          0,
+          -1
+        ],
+        "fused": true
+      },
+      "chosen": {
+        "order": [
+          "image",
+          "actor"
+        ],
+        "figure": true,
+        "exact": true,
+        "text": "방에는 왼쪽과 오른쪽에 창이 하나씩 있었다. 빛은 얇은 띠처럼 왼쪽 창틀에만 닿았다. 오른쪽 창 앞에 서 있던 수민이 고개를 돌렸다.",
+        "variants": [
+          -1,
+          1,
+          -1
+        ],
+        "fused": true
+      },
+      "focusHit": true,
+      "figureHit": true,
+      "objective": 74
+    }
+  ],
+  "counts": {
+    "cases": 16,
+    "allCandidates": 76,
+    "shortestFocus": 8,
+    "adaptiveFocus": 16,
+    "shortestFigure": 8,
+    "adaptiveFigure": 16,
+    "shortestFused": 16,
+    "adaptiveFused": 8
+  },
+  "sensitivity": [
+    {
+      "focusWeight": 0,
+      "figureWeight": 0,
+      "focusHits": 8,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 0,
+      "figureWeight": 2,
+      "focusHits": 8,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 0,
+      "figureWeight": 5,
+      "focusHits": 8,
+      "figureHits": 12
+    },
+    {
+      "focusWeight": 0,
+      "figureWeight": 10,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 0,
+      "figureWeight": 20,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 0,
+      "figureWeight": 30,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 2,
+      "figureWeight": 0,
+      "focusHits": 8,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 2,
+      "figureWeight": 2,
+      "focusHits": 8,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 2,
+      "figureWeight": 5,
+      "focusHits": 8,
+      "figureHits": 12
+    },
+    {
+      "focusWeight": 2,
+      "figureWeight": 10,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 2,
+      "figureWeight": 20,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 2,
+      "figureWeight": 30,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 5,
+      "figureWeight": 0,
+      "focusHits": 8,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 5,
+      "figureWeight": 2,
+      "focusHits": 8,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 5,
+      "figureWeight": 5,
+      "focusHits": 8,
+      "figureHits": 12
+    },
+    {
+      "focusWeight": 5,
+      "figureWeight": 10,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 5,
+      "figureWeight": 20,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 5,
+      "figureWeight": 30,
+      "focusHits": 8,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 10,
+      "figureWeight": 0,
+      "focusHits": 16,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 10,
+      "figureWeight": 2,
+      "focusHits": 16,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 10,
+      "figureWeight": 5,
+      "focusHits": 16,
+      "figureHits": 12
+    },
+    {
+      "focusWeight": 10,
+      "figureWeight": 10,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 10,
+      "figureWeight": 20,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 10,
+      "figureWeight": 30,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 20,
+      "figureWeight": 0,
+      "focusHits": 16,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 20,
+      "figureWeight": 2,
+      "focusHits": 16,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 20,
+      "figureWeight": 5,
+      "focusHits": 16,
+      "figureHits": 12
+    },
+    {
+      "focusWeight": 20,
+      "figureWeight": 10,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 20,
+      "figureWeight": 20,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 20,
+      "figureWeight": 30,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 30,
+      "figureWeight": 0,
+      "focusHits": 16,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 30,
+      "figureWeight": 2,
+      "focusHits": 16,
+      "figureHits": 8
+    },
+    {
+      "focusWeight": 30,
+      "figureWeight": 5,
+      "focusHits": 16,
+      "figureHits": 12
+    },
+    {
+      "focusWeight": 30,
+      "figureWeight": 10,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 30,
+      "figureWeight": 20,
+      "focusHits": 16,
+      "figureHits": 16
+    },
+    {
+      "focusWeight": 30,
+      "figureWeight": 30,
+      "focusHits": 16,
+      "figureHits": 16
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+name: KSGT G10-P2 R6z functional realization rivals
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r6z-writer.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  paired:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify identity and source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r6z_functional_realization.cjs)" = c81dd9b975a959899561c93b12aa2858823f9407
+          test "$(git hash-object experiments/g10-p2/r5/r6z_functional_writer.cjs)" = 6625af798a8b8988b304095864e87fd109d81006
+          test "$(git hash-object experiments/g10-p2/r5/r6z_functional_prereg.md)" = 1f9ac47d8c4d39609f4716a569df8255191f7718
+          node experiments/g10-p2/r5/r6z_functional_writer.cjs --preflight > "$RUNNER_TEMP/r6z-preflight.json"
+      - name: Four direct rival calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r6z_functional_writer.cjs --execute "$RUNNER_TEMP/r6z-live"
+      - name: Verify receipts
+        run: node experiments/g10-p2/r5/r6z_functional_writer.cjs --verify "$RUNNER_TEMP/r6z-live"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r6z-functional-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r6z-live/
+            ${{ runner.temp }}/r6z-preflight.json

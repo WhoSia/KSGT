@@ -1,0 +1,20 @@
+test_archive (test_r6a_nikl.ActualRelease.test_archive) ... ok
+test_candidate (test_r6a_nikl.ActualRelease.test_candidate) ... ok
+test_duplicate_record (test_r6a_nikl.ActualRelease.test_duplicate_record) ... ok
+test_grouping (test_r6a_nikl.ActualRelease.test_grouping) ... ok
+test_header (test_r6a_nikl.ActualRelease.test_header) ... ok
+test_nulls (test_r6a_nikl.ActualRelease.test_nulls) ... ok
+test_paired (test_r6a_nikl.ActualRelease.test_paired) ... ok
+test_records (test_r6a_nikl.ActualRelease.test_records) ... ok
+test_strata (test_r6a_nikl.ActualRelease.test_strata) ... ok
+test_missing_witness (test_r6a_nikl.QuoteRules.test_missing_witness) ... ok
+test_optional (test_r6a_nikl.QuoteRules.test_optional) ... ok
+test_partial (test_r6a_nikl.QuoteRules.test_partial) ... ok
+test_positive (test_r6a_nikl.QuoteRules.test_positive) ... ok
+test_unchanged (test_r6a_nikl.QuoteRules.test_unchanged) ... ok
+test_wrong_suffix (test_r6a_nikl.QuoteRules.test_wrong_suffix) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.597s
+
+OK

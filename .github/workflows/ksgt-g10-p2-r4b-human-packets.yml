@@ -1,0 +1,61 @@
+name: KSGT G10-P2 R4b Independent Reader and Source-Audit Packets
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r4b-human-packets.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit-masked-four-source-work-packets:
+    if: github.ref == 'refs/heads/research/g10-p2-reader-state-coupled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test both method-masking and source-work identity
+        run: node --test experiments/g10-p2/*.test.cjs
+      - name: Cold read R4b1 posthoc analysis and all old real model responses
+        uses: actions/download-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b1-posthoc-whitespace-replay
+          repository: WhoSia/KSGT
+          run-id: 44895612941
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/r4b1-archive
+      - name: Build independent four-work Korean reader and source-auditor forms
+        run: |
+          node experiments/g10-p2/r4b_human_gate_packets_v01.cjs "$RUNNER_TEMP/r4b1-archive/r4b-old/r4b-original/r4a-original/r4a-live" "$RUNNER_TEMP/r4b1-archive/r4b-old/r4b-original/r4b-new" "$RUNNER_TEMP/r4b-human-forms" > "$RUNNER_TEMP/r4b-form-receipt.json"
+          node -e 'const r=require(process.argv[1]);if(r.sourceWorks!==4||r.uniqueTextCases!==6||r.independentReaderRatings!==0||r.independentAuditorRatings!==0||r.manifest.files.length!==8)process.exit(1);console.log("R4b-forms-prepared",JSON.stringify({uniqueWorks:r.sourceWorks,uniqueTexts:r.uniqueTextCases,AForms:4,BForms:4,readerResponses:r.independentReaderRatings}))' "$RUNNER_TEMP/r4b-form-receipt.json"
+      - name: Archive method- and source-masked A reader forms separately
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b-reader-stage-A-only
+          retention-days: 7
+          if-no-files-found: error
+          path: ${{ runner.temp }}/r4b-human-forms/A_reader_only/
+      - name: Archive B source-fidelity auditors separately
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b-source-auditor-stage-B-only
+          retention-days: 7
+          if-no-files-found: error
+          path: ${{ runner.temp }}/r4b-human-forms/B_source_auditor_only/
+      - name: Private mapping and provenance only, do not distribute
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b-private-method-mapping
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r4b-human-forms/P_private_investigator/
+            ${{ runner.temp }}/r4b-human-forms/public_manifest.json
+            ${{ runner.temp }}/r4b-form-receipt.json

@@ -1,0 +1,7 @@
+{
+  "schema": "ksgt.g10p2.r5u.synthetic-lock.v1",
+  "lock_digest": "ad36be75b9755c9868f10fa9d25a0dbca7d5b77f7ee85f6f293bcd8c58d6ac05",
+  "lock_status": "SYNTHETIC_DEMONSTRATION_ONLY",
+  "private_mapping_disclosed": false,
+  "real_study_unblinding_permitted": false
+}

@@ -1,0 +1,47 @@
+name: KSGT G10-P2 R4b1 Posthoc Edge-Whitespace Alignment Replay
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r4b1-alignment-readonly.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  reread-prior-bytes:
+    if: github.ref == 'refs/heads/research/g10-p2-reader-state-coupled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test code, strict case records and posthoc guards
+        run: node --test experiments/g10-p2/*.test.cjs
+      - name: Read verified old 20-call raw evidence, no provider request
+        uses: actions/download-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b-verified-read-only-recovery
+          repository: WhoSia/KSGT
+          run-id: 44895329911
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/r4b-old
+      - name: Re-evaluate previous unchanged model replies with a new explicit posthoc adapter
+        run: |
+          node experiments/g10-p2/r4b_whitespace_alignment_v01.cjs "$RUNNER_TEMP/r4b-old/r4b-original/r4a-original/r4a-live" "$RUNNER_TEMP/r4b-old/r4b-original/r4b-new" > "$RUNNER_TEMP/r4b1-replay.json"
+          node -e 'const s=require(process.argv[1]);const {rows,...totals}=s;console.log("posthoc-edge-adapter",JSON.stringify(totals));console.log("each",JSON.stringify(rows.map(r=>({id:r.id,status:r.adapter,changed:r.changed}))))' "$RUNNER_TEMP/r4b1-replay.json"
+      - name: Archive read-only posthoc analysis and source custody
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4b1-posthoc-whitespace-replay
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r4b-old/
+            ${{ runner.temp }}/r4b1-replay.json

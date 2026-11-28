@@ -1,0 +1,421 @@
+{
+  "authority": "MECHANICAL_FORMAT_AND_COST_ONLY",
+  "receipt": {
+    "complete": 16,
+    "tokens": 9118,
+    "independentReaders": 0
+  },
+  "arms": {
+    "direct": {
+      "calls": 8,
+      "input": 3765,
+      "completion": 982,
+      "tokens": 4747,
+      "medianRequestMs": 443,
+      "paragraphCountMatch": 8
+    },
+    "typed": {
+      "calls": 8,
+      "input": 3278,
+      "completion": 1093,
+      "tokens": 4371,
+      "medianRequestMs": 452.5,
+      "paragraphCountMatch": 8
+    }
+  },
+  "rows": [
+    {
+      "id": "message_base_direct",
+      "work": "message_base",
+      "arm": "direct",
+      "sourceSHA": "07abe91369416f5eeada98fbef8c8cd453497e4da2b8cbf62cfa9336aa69a0cc",
+      "promptSHA": "4ef908ad5bb18aa52478c05ed9bb4de49af2ac501aba544f9c7b4c5c1e1b0eac",
+      "textSHA": "7a3aebbd420455d6bd95fcbbf135bfae428bdf7a2a29f533306d6011b20eea88",
+      "text": "내일 모임은 오후 4시 20분에 2층 연습실에서 열게. 공유 폴더에 자료 올렸으니 첫 장 제목만 확인해 줘.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 0.709300675,
+        "prompt_tokens": 448,
+        "prompt_time": 0.143293497,
+        "completion_tokens": 83,
+        "completion_time": 0.174719285,
+        "total_tokens": 531,
+        "total_time": 0.318012782,
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        }
+      },
+      "latencyMs": 1355
+    },
+    {
+      "id": "message_base_typed",
+      "work": "message_base",
+      "arm": "typed",
+      "sourceSHA": "07abe91369416f5eeada98fbef8c8cd453497e4da2b8cbf62cfa9336aa69a0cc",
+      "promptSHA": "d3b8f181310fa8223549b6db9c5dc08d521aef81968b1ff32464af38a68fedc1",
+      "textSHA": "cbecfc59c95652f7b57c0fcde60caea269a8c6f6571ca0315c219aeeef1a37bc",
+      "text": "내일 오후 4시 20분에 2층 연습실에서 모임 열게. 공유 폴더에 자료 올렸으니 첫 장 제목만 확인해 줘, 그리고 시간 맞는지 알려줘.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 1.487795365,
+        "prompt_tokens": 396,
+        "prompt_time": 0.018598007,
+        "completion_tokens": 82,
+        "completion_time": 0.176197549,
+        "total_tokens": 478,
+        "total_time": 0.194795556,
+        "completion_tokens_details": {
+          "reasoning_tokens": 24
+        }
+      },
+      "latencyMs": 1742
+    },
+    {
+      "id": "message_negative_typed",
+      "work": "message_negative",
+      "arm": "typed",
+      "sourceSHA": "f006bb5cfa353fc4f9b88f876c4ff505a3c389a0988cd21b725d32974727dde2",
+      "promptSHA": "5ac854b7e743f982d7e5b1506d6232b145fb5cebace0d21026a24697e8087bef",
+      "textSHA": "2d5b437418eec1d7f79838133536a3a2143be1171f70605d70191ba942d0afc1",
+      "text": "내일 모임 오후 4시 20분에 2층 연습실에서 할 거니까 시간 확인하고, 공유 폴더에 올린 자료 첫 장 제목만 봐줘.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 0.119752855,
+        "prompt_tokens": 407,
+        "prompt_time": 0.0208277,
+        "completion_tokens": 108,
+        "completion_time": 0.224826942,
+        "total_tokens": 515,
+        "total_time": 0.245654642,
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        }
+      },
+      "latencyMs": 420
+    },
+    {
+      "id": "message_negative_direct",
+      "work": "message_negative",
+      "arm": "direct",
+      "sourceSHA": "f006bb5cfa353fc4f9b88f876c4ff505a3c389a0988cd21b725d32974727dde2",
+      "promptSHA": "fcf4ab2664684e3b6b7053e910dc7b80b290fe1c5690d1ee929575efdd31e4c9",
+      "textSHA": "a6416fbcfad5f726c5b70d5e3526d748c7328f90e21600cba84d3dc39c4064f0",
+      "text": "내일 모임은 오후 4시 20분에 2층 연습실에서 열고, 공유 폴더에 자료 올렸으니 첫 장 제목만 확인해 줘. 발표 순서는 아직 정해지지 않았어.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 0.005577074,
+        "prompt_tokens": 466,
+        "prompt_time": 0.030385195,
+        "completion_tokens": 90,
+        "completion_time": 0.195317528,
+        "total_tokens": 556,
+        "total_time": 0.225702723,
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        }
+      },
+      "latencyMs": 298
+    },
+    {
+      "id": "notice_base_direct",
+      "work": "notice_base",
+      "arm": "direct",
+      "sourceSHA": "688ce64d221c99e6875d21177e0bcab946906034533d7c734018c46be76fa5f7",
+      "promptSHA": "37fe3884fc6373ca1d9dacf6746252853cc8156070bdde55a7faee2916ce745d",
+      "textSHA": "3f3d3c1ddf3545c3d0b8c0aab709f274ad6b7d049986e91ca648424b03260d6c",
+      "text": "금요일 독서 모임은 오후 3시 30분에 1층 열람실에서 진행되며, 참가자는 읽을 책을 한 권씩 지참해 주시기 바랍니다.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 0.066669425,
+        "prompt_tokens": 442,
+        "prompt_time": 0.020676781,
+        "completion_tokens": 64,
+        "completion_time": 0.136364583,
+        "total_tokens": 506,
+        "total_time": 0.157041364,
+        "completion_tokens_details": {
+          "reasoning_tokens": 12
+        }
+      },
+      "latencyMs": 278
+    },
+    {
+      "id": "notice_base_typed",
+      "work": "notice_base",
+      "arm": "typed",
+      "sourceSHA": "688ce64d221c99e6875d21177e0bcab946906034533d7c734018c46be76fa5f7",
+      "promptSHA": "b16c95d760be5101f49229e31111de9787264b31596930ab08a1e67c53023939",
+      "textSHA": "a5e4928cae0b4fd86dae36e7f2cedcbd5305f07a8e1c2a364c95da1c159bdb25",
+      "text": "금요일 독서 모임은 오후 3시 30분에 1층 열람실에서 진행됩니다. 참가자는 읽을 책을 한 권씩 지참해 주시기 바랍니다.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 0.00499481,
+        "prompt_tokens": 390,
+        "prompt_time": 0.017809473,
+        "completion_tokens": 78,
+        "completion_time": 0.164426165,
+        "total_tokens": 468,
+        "total_time": 0.182235638,
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        }
+      },
+      "latencyMs": 244
+    },
+    {
+      "id": "notice_negative_typed",
+      "work": "notice_negative",
+      "arm": "typed",
+      "sourceSHA": "16f7e305080a9132de84ec7379f4bf7b5ee9e3a21e0b03a36cedfeddc5598de6",
+      "promptSHA": "b446b0e993cd0ca44851026da809726668f1bfe13167df8d94a86fa908b0f799",
+      "textSHA": "cf80cea2ed47a1fe9d68b353d7a3c7defb292d1cfd1f8f269734bd75db7b2335",
+      "text": "금요일 독서 모임은 오후 3시 30분에 1층 열람실에서 진행됩니다. 참가자는 읽을 책을 한 권씩 지참해 주시기 바랍니다. 좌석 예약은 별도로 받지 않으니, 자유롭게 참석해 주십시오.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 0.004851232,
+        "prompt_tokens": 400,
+        "prompt_time": 0.206740095,
+        "completion_tokens": 103,
+        "completion_time": 0.220979138,
+        "total_tokens": 503,
+        "total_time": 0.427719233,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 33
+        }
+      },
+      "latencyMs": 485
+    },
+    {
+      "id": "notice_negative_direct",
+      "work": "notice_negative",
+      "arm": "direct",
+      "sourceSHA": "16f7e305080a9132de84ec7379f4bf7b5ee9e3a21e0b03a36cedfeddc5598de6",
+      "promptSHA": "29946e7062130bf566275817bb8aa22bc7d8dc3a39b28f992e0f533160e01ba3",
+      "textSHA": "947a317c0d1f081093ef7f18d99826eb39e6bd35c4f73471af04efbec1653ee7",
+      "text": "금요일 오후 3시 30분에 1층 열람실에서 독서 모임이 진행됩니다. 참가자는 읽을 책을 한 권씩 지참해 주시고, 별도의 좌석 예약은 받지 않으니 자유롭게 오시면 됩니다.",
+      "paragraphs": 1,
+      "expectedParagraphs": 1,
+      "usage": {
+        "queue_time": 0.004877152,
+        "prompt_tokens": 460,
+        "prompt_time": 0.912878788,
+        "completion_tokens": 82,
+        "completion_time": 0.180972121,
+        "total_tokens": 542,
+        "total_time": 1.093850909,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 15
+        }
+      },
+      "latencyMs": 1152
+    },
+    {
+      "id": "lab_base_direct",
+      "work": "lab_base",
+      "arm": "direct",
+      "sourceSHA": "2f02bf9058345645e1c43e94c0aed69c1ca316f45db03e77e008032a30d1704d",
+      "promptSHA": "46212c49180341426aa8127e448ae6103ca5c7b0fede15c313f15973d1791661",
+      "textSHA": "6a09cd53c2cd03dc9a8927d59fa956a8bdbe7a363e08108b185a228932e4087b",
+      "text": "본 연구의 목적은 두 지점(A와 B)에서 하루 동안 측정한 물의 온도 변화를 비교하여 각 위치의 온도 변동 특성을 파악하는 것이었다. 관찰 결과, A 지점은 오전에 21℃에서 시작하여 오후에 23℃로 상승했으며, B 지점은 동일한 오전 21℃에서 시작했지만 오후에는 22℃로 상승하였다.\n\n하루 동안의 기록에 따르면 두 지점 모두 온도가 상승했으나 A 지점이 B 지점보다 1℃ 더 큰 상승폭을 보였으며, 이는 두 위치 간의 환경 차이가 온도 변화에 미치는 영향을 시사한다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.005160974,
+        "prompt_tokens": 462,
+        "prompt_time": 0.022371516,
+        "completion_tokens": 183,
+        "completion_time": 0.406681524,
+        "total_tokens": 645,
+        "total_time": 0.42905304,
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        }
+      },
+      "latencyMs": 487
+    },
+    {
+      "id": "lab_base_typed",
+      "work": "lab_base",
+      "arm": "typed",
+      "sourceSHA": "2f02bf9058345645e1c43e94c0aed69c1ca316f45db03e77e008032a30d1704d",
+      "promptSHA": "3887ebba86dbe35d0a26102275437e779b9c975c823af635878e21b3542bfd2d",
+      "textSHA": "3e32f6e2ab673e67f6b9691528b9d443fcd0a30788e20b85f25642230aa43e44",
+      "text": "본 실험의 목적은 두 지점(A와 B)에서 하루 동안 측정된 물 온도 변화를 비교하여 각 위치의 온도 상승 정도를 파악하는 것이었다. 관찰 결과, A 지점은 오전 21 °C에서 오후 23 °C로 2 °C 상승했으며, B 지점은 동일한 오전 21 °C에서 오후 22 °C로 1 °C 상승하였다.\n\n이러한 온도 변화 차이는 동일한 시간 구간 내에서 A 지점이 B 지점보다 더 큰 온도 상승을 보였음을 의미한다. 하루 동안의 측정 범위 내에서 해석하면, 두 위치 모두 온도가 상승했지만 A 지점이 상대적으로 더 높은 가열 효과를 나타냈다고 결론지을 수 있다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.875748654,
+        "prompt_tokens": 401,
+        "prompt_time": 0.018352229,
+        "completion_tokens": 207,
+        "completion_time": 0.433204882,
+        "total_tokens": 608,
+        "total_time": 0.451557111,
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        }
+      },
+      "latencyMs": 1383
+    },
+    {
+      "id": "lab_negative_typed",
+      "work": "lab_negative",
+      "arm": "typed",
+      "sourceSHA": "871fc3d4d14ec86f72b3157302ad04acc2d76975755582bafdb428fbc175e017",
+      "promptSHA": "548ecefd797edb0aa1bb26db88d2391e0a59e4970347fc8683f5fc4858b667a7",
+      "textSHA": "9062770e855ad6581a916cf09cf9f45c135c69c8405351f557c1f0a8e509be07",
+      "text": "본 실험의 목적은 두 지점(A와 B)에서 하루 동안 관찰된 물 온도 변화를 비교하여 각 위치의 온도 상승 정도를 파악하는 것이었다. 관측 결과, A 지점은 오전 21 °C에서 오후 23 °C로 2 °C 상승했으며, B 지점은 동일한 오전 21 °C에서 오후 22 °C로 1 °C 상승하였다.\n\n관찰된 온도 변화는 기록된 시간 구간 내에서만 해석할 수 있다. 따라서 A 지점이 B 지점보다 더 큰 온도 상승을 보였다는 사실은 두 위치의 환경 차이나 외부 요인에 의한 상대적 온도 변동을 시사하지만, 가열 장치의 작동 여부나 효율에 대한 판단은 본 데이터만으로는 불가능하다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.097965516,
+        "prompt_tokens": 414,
+        "prompt_time": 0.81297853,
+        "completion_tokens": 219,
+        "completion_time": 0.535723639,
+        "total_tokens": 633,
+        "total_time": 1.348702169,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        }
+      },
+      "latencyMs": 1504
+    },
+    {
+      "id": "lab_negative_direct",
+      "work": "lab_negative",
+      "arm": "direct",
+      "sourceSHA": "871fc3d4d14ec86f72b3157302ad04acc2d76975755582bafdb428fbc175e017",
+      "promptSHA": "597668296c230372830003b49f9068398c4221f48eae4a1ad835d7b384f5b989",
+      "textSHA": "3fc1137205ce3656c5e2ec0e28b584222f235c80a2bac9ee290caee40482880d",
+      "text": "본 실험의 목적은 두 위치(A와 B)에서 하루 동안 측정한 물의 온도 변화를 비교하여 시간대별 온도 차이를 파악하는 것이었다. 기록 결과에 따르면, 위치 A는 오전에 21℃, 오후에 23℃로 2℃ 상승했으며, 위치 B는 오전에 21℃, 오후에 22℃로 1℃ 상승하였다.\n\n이러한 온도 변화는 동일한 하루 동안 측정된 데이터이며, 가열 장치의 작동 여부나 효율에 대한 평가는 포함되지 않았다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.005132024,
+        "prompt_tokens": 483,
+        "prompt_time": 0.021842883,
+        "completion_tokens": 152,
+        "completion_time": 0.320694965,
+        "total_tokens": 635,
+        "total_time": 0.342537848,
+        "completion_tokens_details": {
+          "reasoning_tokens": 21
+        }
+      },
+      "latencyMs": 399
+    },
+    {
+      "id": "scene_base_direct",
+      "work": "scene_base",
+      "arm": "direct",
+      "sourceSHA": "65d336bd96c76b1524af96b89f18cb61fabe20c84a997f179b6565bf4ed02080",
+      "promptSHA": "f43472437888d0a6c9b8d86ccef0cfcedee3752a089baca37788e0f7b5757826",
+      "textSHA": "b5941c5444db6174b888c65f6de649185def735f7a02175a4af50b89269d6164",
+      "text": "서고 문은 무겁게 닫혀 있었고, 그 옆 벽에는 마치 종이 조각처럼 네모난 빛이 고요히 스며들어 있었다. 차가운 금속의 냉기와는 대조적으로, 빛은 정돈된 형태로 방 안을 가득 메우며 고요함을 강조했다.  \n\n유나는 그 빛을 스쳐 지나며 서서히 발걸음을 옮겨, 복도 끝에 놓인 계단 쪽으로 걸어갔다. 그녀의 움직임은 조용히 이어졌고, 문 앞에서 멈추던 순간은 사라졌다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.12148541,
+        "prompt_tokens": 490,
+        "prompt_time": 0.108046942,
+        "completion_tokens": 183,
+        "completion_time": 0.383535181,
+        "total_tokens": 673,
+        "total_time": 0.491582123,
+        "completion_tokens_details": {
+          "reasoning_tokens": 33
+        }
+      },
+      "latencyMs": 677
+    },
+    {
+      "id": "scene_base_typed",
+      "work": "scene_base",
+      "arm": "typed",
+      "sourceSHA": "65d336bd96c76b1524af96b89f18cb61fabe20c84a997f179b6565bf4ed02080",
+      "promptSHA": "9336b2fd79f2db75fa709872dc001e53862671fa71e9c2081cfb45725ec054da",
+      "textSHA": "ba157277b9b0782b58835b3a5a6d3a0de7e33d1b185ab933ef495b4a7f2c6d2b",
+      "text": "유나는 차가운 서고 안쪽에 놓인 문 앞에 서 있었다. 문 옆 벽에는 마치 종이 조각처럼 네모난 빛이 고요히 퍼져 있었다. 서고 안은 책장 사이로 좁게 이어진 복도와 그 끝에 보이는 계단이 어렴풋이 드러났다.  \n\n그 빛을 스쳐 지나며, 유나는 조용히 복도 끝 계단 쪽으로 걸음마를 옮겼다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.008664337,
+        "prompt_tokens": 427,
+        "prompt_time": 0.025900908,
+        "completion_tokens": 150,
+        "completion_time": 0.329337527,
+        "total_tokens": 577,
+        "total_time": 0.355238435,
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        }
+      },
+      "latencyMs": 414
+    },
+    {
+      "id": "scene_negative_typed",
+      "work": "scene_negative",
+      "arm": "typed",
+      "sourceSHA": "d918b5c6951607b21bbee0a3983ec39464016741e7035c465f26d9bb0d9f8151",
+      "promptSHA": "f032655d68f98e8774ccfa3c3a127fdea56478f285f49b40efc3ea3dc11e27aa",
+      "textSHA": "767bd340aae4819006ef2521198a757804b125563161851b129ccafd3944b420",
+      "text": "유나는 닫힌 서고 문 앞에 서 있었다. 문 옆 벽에는 네모난 빛이 닿아, 마치 작은 창틀이 투명한 유리판처럼 사각형 그림자를 드리웠다.  \n\n그 빛이 머무는 곳을 지나며, 유나는 복도 끝 계단 쪽으로 걸어갔다. 그녀는 문이 닫힌 까닭을 알지 못했다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.037479476,
+        "prompt_tokens": 443,
+        "prompt_time": 0.01907972,
+        "completion_tokens": 146,
+        "completion_time": 0.307020805,
+        "total_tokens": 589,
+        "total_time": 0.326100525,
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        }
+      },
+      "latencyMs": 415
+    },
+    {
+      "id": "scene_negative_direct",
+      "work": "scene_negative",
+      "arm": "direct",
+      "sourceSHA": "d918b5c6951607b21bbee0a3983ec39464016741e7035c465f26d9bb0d9f8151",
+      "promptSHA": "d1e0db06836590abfce135beb7f2d7a6c85007f13dff45bf3fe0a7d33c8c23e5",
+      "textSHA": "c6a7c43b4029c5db76a5e2ce467df42b7162432def711cde6a9507799aaadedf",
+      "text": "유나는 닫힌 서고 문 앞에 서 있었다. 문 옆 벽에는 마치 종이 조각처럼 네모난 빛이 고요히 머물고 있었다.  \n\n그 빛을 지나쳐, 유나는 복도 끝에 있는 계단 쪽으로 천천히 걸어갔다. 그녀는 문이 왜 닫혀 있는지 알지 못했다.",
+      "paragraphs": 2,
+      "expectedParagraphs": 2,
+      "usage": {
+        "queue_time": 0.005400236,
+        "prompt_tokens": 514,
+        "prompt_time": 0.024277519,
+        "completion_tokens": 145,
+        "completion_time": 0.304752085,
+        "total_tokens": 659,
+        "total_time": 0.329029604,
+        "completion_tokens_details": {
+          "reasoning_tokens": 53
+        }
+      },
+      "latencyMs": 385
+    }
+  ]
+}

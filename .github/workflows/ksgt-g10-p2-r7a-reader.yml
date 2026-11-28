@@ -1,0 +1,49 @@
+name: KSGT G10-P2 R7a pragmatic inference probe
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7a-reader.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  reader:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7a_pragmatic_cases.json)" = 3d0fc75e5bdc3df0e16e09cafe584666a854c90a
+          test "$(git hash-object experiments/g10-p2/r5/r7a_pragmatic_reader.cjs)" = 4ef392769e6d06fefbceb498d14b2b031ab5245a
+          test "$(git hash-object experiments/g10-p2/r5/r7a_pragmatic_prereg.md)" = 2967b0bcb8dd5cd3e00597ab164b63ed4d338442
+          node experiments/g10-p2/r5/r7a_pragmatic_reader.cjs --preflight > "$RUNNER_TEMP/r7a-preflight.json"
+      - name: Eighteen single reader calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7a_pragmatic_reader.cjs --execute "$RUNNER_TEMP/r7a-live"
+      - name: Verify and report parsed responses
+        run: node experiments/g10-p2/r5/r7a_pragmatic_reader.cjs --verify "$RUNNER_TEMP/r7a-live" > "$RUNNER_TEMP/r7a-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7a-pragmatic-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7a-live/
+            ${{ runner.temp }}/r7a-preflight.json
+            ${{ runner.temp }}/r7a-analysis.json

@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: paragraph count, arm costs and medians are not quality scores
+ok 1 - paragraph count, arm costs and medians are not quality scores
+  ---
+  duration_ms: 4.104016
+  type: 'test'
+  ...
+# Subtest: all briefs valid; paired additional negative content distinct from control
+ok 2 - all briefs valid; paired additional negative content distinct from control
+  ---
+  duration_ms: 2.625153
+  type: 'test'
+  ...
+# Subtest: both arms carry identical record contents and explicit role semantics
+ok 3 - both arms carry identical record contents and explicit role semantics
+  ---
+  duration_ms: 2.798378
+  type: 'test'
+  ...
+# Subtest: invalid or duplicated role rejected; no guessed payload
+ok 4 - invalid or duplicated role rejected; no guessed payload
+  ---
+  duration_ms: 0.990573
+  type: 'test'
+  ...
+# Subtest: matched source hash and one call per arm, shared system
+ok 5 - matched source hash and one call per arm, shared system
+  ---
+  duration_ms: 4.408727
+  type: 'test'
+  ...
+# Subtest: cold receipt verifies sixteen calls and rejects tampering
+ok 6 - cold receipt verifies sixteen calls and rejects tampering
+  ---
+  duration_ms: 16.16775
+  type: 'test'
+  ...
+# Subtest: provider failure halts and preserves partial receipt, no retry
+ok 7 - provider failure halts and preserves partial receipt, no retry
+  ---
+  duration_ms: 4.076062
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 113.152412

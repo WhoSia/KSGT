@@ -1,0 +1,37 @@
+{
+  "schema": "ksgt.g10p2.r5d.predeclared-coherent-regions.v1",
+  "authority": "ADAPTIVE_DEVELOPER_SUBSET_AFTER_R5C_NOT_FRESH_HOLDOUT",
+  "priorR5bRun": 44899223057,
+  "priorR5cRun": 44900323773,
+  "model": "openai/gpt-oss-120b",
+  "cases": [
+    {
+      "sourceWork": "R5A_SCENE_PAPER",
+      "from": "나는 조용히 걸어가며 남은 작품들을 마지막으로 훑어보았다.",
+      "through": "나는 발걸음을 멈추고, 그 종이를 바라보았다.",
+      "dependency": "걷기 서술을 제거하면 바로 뒤의 그때와 발걸음을 멈추었다는 사건 전제가 상실된다. 문턱/관찰/종이 미독·미접촉 조건을 보존해 자연스러운 일인칭 문장을 연결해야 한다.",
+      "edgeKind": "EVENT_PRECONDITION_AND_TEMPORAL_DEIXIS"
+    },
+    {
+      "sourceWork": "R5A_SCENE_GARDEN",
+      "from": "현우는 조용히 서서 창밖을 스쳐 지나가는 물방울 잔향을 들으며, 손을 살짝 들어 화분 위에 머무는 빗방울을 가볍게 닦아냈다.",
+      "through": "그 순간, 온실 안은 빗물 냄새와 신선한 흙냄새가 섞인 미묘한 향기로 가득 찼다.",
+      "dependency": "허가되지 않은 화분 닦기 행위에 연결된 그 순간의 표현이 남지 않게, 사건은 추가하지 않고 실제 온실과 수진의 침묵을 이어 주는 감각·문장 호흡만 구성한다.",
+      "edgeKind": "EVENT_BOUNDARY_DEICTIC_AND_IMAGERY"
+    },
+    {
+      "sourceWork": "R5A_SCI_CLOCK",
+      "from": "향후 실험에서는 온도와 교반 속도를 모두 일정하게 유지한 상태에서 두 조건을 비교함으로써, 촉매 효과와 물리적 교반 효과를 명확히 구분하고자 합니다.",
+      "through": "이러한 추가 실험을 통해 얻은 데이터가 있으면, 반응 속도 차이의 원인을 보다 정확히 규명할 수 있을 것입니다.",
+      "dependency": "측정하지 않은 온도와 교반 속도 차이로 인해 촉매 효과는 확정되지 않는다. 실험 계획과 마지막 결말을 같은 문맥에서 끝내되 과학적 확실성을 높이지 않고, 불필요한 다짐을 덜어 낸다.",
+      "edgeKind": "EPISTEMIC_SCOPE_AND_BOILERPLATE_ENDING"
+    },
+    {
+      "sourceWork": "R5A_NOTICE_BOOK",
+      "from": "이번 안내는 수요일에만 적용되며,",
+      "through": "감사합니다.",
+      "dependency": "수요일만 적용된다는 사실, 목요일 변동 없음, 반납함 이용은 미확인이라는 조건을 필요한 만큼 명료하게 표현하되, 다른 요일 전체의 상태나 추가 연락·시각·담당자를 지어내지 않는다.",
+      "edgeKind": "NOTICE_SCOPE_AND_MISSING_UNCERTAINTY"
+    }
+  ]
+}

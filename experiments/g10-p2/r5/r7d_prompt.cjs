@@ -1,0 +1,6 @@
+'use strict';
+const {cases,arms}=require('./r7d_cases.cjs');
+const system='한국어 작가이자 편집자입니다. 주어진 원천 사실과 인식 범위, 장르, 문단 구성, 종료 조건을 지키면서 자연스럽고 완성도 있는 글을 작성하세요. 어휘가 암시하는 사실도 원천 범위를 벗어나지 않게 하되, 근거가 있는 표현과 문체적 자유는 살리세요. 없는 사실이나 원인을 추가하지 말고, 작성 지시 자체를 원고에서 설명하지 마세요. 제목이나 부연 설명 없이 완성된 원고만 출력하세요.';
+function messages(c,arm){if(!arms.includes(arm))throw Error('BAD_ARM');const lines=['장르: '+c.genre,c.task,'원천 정보:',...c.facts,'종료: '+c.end,'표현상 유의: 사실과 인식 범위를 지키고, 단지 주어지지 않은 정보는 꼭 필요한 경우가 아니면 원고에서 언급하지 않는다.'];if(arm==='GLOBAL_AVOID')lines.push('추가 표현 규칙: 문맥과 관계없이 다음 표현 유형은 피하고 다른 표현으로 자연스럽게 쓴다: '+c.cue);if(arm==='CONTEXTUAL')lines.push('추가 표현 규칙: '+c.cue+' 같은 표현은 '+c.claim+'라는 전제·함축을 전달할 수 있다. 원천에서 그 의미가 허용되면 필요에 따라 사용하고, 허용되지 않으면 중립적인 표현을 선택한다. 해당 표현을 반드시 사용할 필요는 없다.');return [{role:'system',content:system},{role:'user',content:lines.join('\n')}];}
+function schedule(){return cases().flatMap((c,i)=>arms.slice(i%3).concat(arms.slice(0,i%3)).map(arm=>({id:c.id+'__'+arm,work:c.family,scope:c.scope,arm,source:c,messages:messages(c,arm)})));}
+module.exports={system,messages,schedule};

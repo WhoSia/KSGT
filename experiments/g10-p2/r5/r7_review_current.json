@@ -1,0 +1,258 @@
+{
+  "schema": "ksgt.r7.review.v2",
+  "phase": "POST_R7I_DISCOVERY",
+  "date": "2026-11-28",
+  "axes": [
+    "value",
+    "novelty",
+    "expected_information_gain",
+    "quality_relevance",
+    "cost_efficiency",
+    "feasibility"
+  ],
+  "scale": "Subjective ordinal 0–1, all higher preferred. 0 means absent/unavailable, .5 plausible but uncertain, 1 unusually high. Not probabilities, precision estimates, or measured quality. No weighted total.",
+  "evidence": [
+    {
+      "id": "R7e",
+      "run": 46122629391,
+      "calls": 16,
+      "tokens": 10806,
+      "local": {
+        "targetRemoval": 2,
+        "targetCases": 4,
+        "authorizedNoop": 4,
+        "authorizedCases": 4,
+        "tokens": 5480
+      },
+      "full": {
+        "targetRemoval": 4,
+        "targetCases": 4,
+        "authorizedNoop": 4,
+        "authorizedCases": 4,
+        "tokens": 5326
+      },
+      "authority": "NONINDEPENDENT_DEVELOPER_FOCAL_READING"
+    },
+    {
+      "id": "R7f",
+      "run": 46122900072,
+      "calls": 8,
+      "tokens": 5013,
+      "direct": {
+        "requiredAnswers": 20,
+        "totalQuestions": 20,
+        "input": 2051,
+        "completion": 631,
+        "total": 2682
+      },
+      "projected": {
+        "requiredAnswers": 20,
+        "totalQuestions": 20,
+        "input": 1702,
+        "completion": 629,
+        "total": 2331
+      },
+      "authority": "NONINDEPENDENT_DEVELOPER_ANSWERABILITY_READING",
+      "annotationCost": "UNMEASURED",
+      "leakageReduction": "NOT_OBSERVED",
+      "wholeTextAdvantage": "UNESTABLISHED"
+    },
+    {
+      "id": "R7h",
+      "run": 46127879614,
+      "calls": 12,
+      "tokens": 9552,
+      "separate_tokens": 5871,
+      "joint_tokens": 3681,
+      "continuations": 16,
+      "finite_partitions": 360,
+      "authority": "NONINDEPENDENT_DEVELOPER_FOCAL_READING",
+      "qualityAdvantage": "UNESTABLISHED",
+      "warning": "SHORTER_OUTPUT_AND_OMISSIONS_CONFOUND_COST"
+    },
+    {
+      "id": "R7i",
+      "run": 46140003400,
+      "calls": 1,
+      "tokens": 1519,
+      "finals": 0,
+      "authority": "TRUNCATED_RESPONSE"
+    },
+    {
+      "id": "R7i2",
+      "run": 46140099362,
+      "calls": 16,
+      "tokens": 14305,
+      "plan_tokens": 7513,
+      "draft_tokens": 6792,
+      "finals": 8,
+      "authority": "NONINDEPENDENT_DEVELOPER_FOCAL_READING",
+      "qualityAdvantage": "UNESTABLISHED"
+    }
+  ],
+  "gates": {
+    "stage": "P2_OPEN_P3_PROPOSAL",
+    "independentQuality": "UNESTABLISHED_CLAIM_SPECIFIC_NOT_MAINLINE_GATE",
+    "rights": "HOLD",
+    "humanReaderRatings": 0,
+    "freshRecruitmentAuthorized": false,
+    "elicitedPacketDefault": false
+  },
+  "candidates": [
+    {
+      "id": "source_projection_boundary",
+      "scores": [
+        0.94,
+        0.76,
+        0.89,
+        0.93,
+        0.9,
+        0.96
+      ],
+      "gate": "DEFER",
+      "decision": "OPTIONAL_NEXT",
+      "reason": "Prior cost signal retained; expressive mechanism has higher relevance to founding goal."
+    },
+    {
+      "id": "reader_outcome_packet",
+      "scores": [
+        0.98,
+        0.64,
+        0.87,
+        0.99,
+        0.94,
+        0.88
+      ],
+      "gate": "STOP",
+      "decision": "HISTORICAL_ONLY_NO_DISTRIBUTION",
+      "reason": "Observation-process validity and user reaffirmation; R7g packet is historical, not a research milestone."
+    },
+    {
+      "id": "independent_reader",
+      "scores": [
+        1,
+        0.55,
+        1,
+        1,
+        0.52,
+        0.25
+      ],
+      "gate": "DEFER",
+      "decision": "CLAIM_SPECIFIC_ONLY",
+      "reason": "New population claims remain unsupported; no fresh recruitment or wait gate by default."
+    },
+    {
+      "id": "expressive_generation",
+      "scores": [
+        0.99,
+        0.87,
+        0.91,
+        0.99,
+        0.75,
+        0.9
+      ],
+      "gate": "ACTIONABLE",
+      "decision": "RUN_THEORY_FIRST",
+      "reason": "R7i2 reveals plan/draft-first both propagate unsupported assertions; prioritize reversible relations and actual prose, not mandatory stages."
+    },
+    {
+      "id": "relation_repair",
+      "scores": [
+        0.83,
+        0.55,
+        0.5,
+        0.83,
+        0.56,
+        0.97
+      ],
+      "gate": "DEFER",
+      "decision": "OPTIONAL_ONLY",
+      "reason": "R7e no focal advantage; 2/4 versus 4/4; higher token cost."
+    },
+    {
+      "id": "global_discourse_planning",
+      "scores": [
+        0.9,
+        0.5,
+        0.55,
+        0.95,
+        0.6,
+        0.78
+      ],
+      "gate": "DEFER",
+      "decision": "AVOID_REPETITION",
+      "reason": "Prior R5g/R6s/R6t/R6u mixed."
+    },
+    {
+      "id": "global_lexical_avoid",
+      "scores": [
+        0.25,
+        0.15,
+        0.2,
+        0.25,
+        0.89,
+        0.99
+      ],
+      "gate": "STOP",
+      "decision": "STOP",
+      "reason": "R7d zero proxy hits does not imply meaning fidelity."
+    },
+    {
+      "id": "literature_custody",
+      "scores": [
+        0.87,
+        0.5,
+        0.85,
+        0.72,
+        0.85,
+        0.63
+      ],
+      "gate": "ACTIONABLE",
+      "decision": "PARALLEL",
+      "reason": "Central TXT rebased after concurrent edits, verified 31; newly held Piantadosi and Miall originals inspected; three missing added."
+    },
+    {
+      "id": "native_trace_reconstruction",
+      "scores": [
+        0.98,
+        0.83,
+        0.92,
+        0.98,
+        0.9,
+        0.78
+      ],
+      "gate": "ACTIONABLE",
+      "decision": "PARALLEL",
+      "reason": "Three actual pre-2022 Korean technical blog edits inspected; broaden genres and author-revision source evidence without elicited packets."
+    },
+    {
+      "id": "joint_branch_generation",
+      "scores": [
+        0.65,
+        0.55,
+        0.65,
+        0.57,
+        0.92,
+        0.96
+      ],
+      "gate": "DEFER",
+      "decision": "OPTIONAL_ONLY",
+      "reason": "37.30% token reduction on four paired synthetic works, partly shorter output; quality not equivalent and omissions persist."
+    },
+    {
+      "id": "mandatory_discovery_first",
+      "scores": [
+        0.61,
+        0.62,
+        0.63,
+        0.65,
+        0.54,
+        0.88
+      ],
+      "gate": "DEFER",
+      "decision": "OPTIONAL_ONLY",
+      "reason": "9.60% fewer tokens than two-call plan-first; mixed semantic fidelity, no single-call comparator."
+    }
+  ],
+  "decision": "Native revision traces and expressive/reversible discourse relation theory primary; no mandatory plan/draft-first or fresh human packet. Literature parallel. No P3 promotion."
+}

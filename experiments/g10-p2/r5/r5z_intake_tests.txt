@@ -1,0 +1,17 @@
+test_absolute_path (test_nikl24_intake.TestNikl24Intake.test_absolute_path) ... ok
+test_backslash_traversal (test_nikl24_intake.TestNikl24Intake.test_backslash_traversal) ... ok
+test_bad_format (test_nikl24_intake.TestNikl24Intake.test_bad_format) ... ok
+test_duplicate (test_nikl24_intake.TestNikl24Intake.test_duplicate) ... ok
+test_high_ratio (test_nikl24_intake.TestNikl24Intake.test_high_ratio) ... ok
+test_missing (test_nikl24_intake.TestNikl24Intake.test_missing) ... ok
+test_ok_metadata_only (test_nikl24_intake.TestNikl24Intake.test_ok_metadata_only) ... ok
+test_oversized_member (test_nikl24_intake.TestNikl24Intake.test_oversized_member) ... ok
+test_path_traversal (test_nikl24_intake.TestNikl24Intake.test_path_traversal) ... ok
+test_symlinked_archive (test_nikl24_intake.TestNikl24Intake.test_symlinked_archive) ... ok
+test_too_many_entries (test_nikl24_intake.TestNikl24Intake.test_too_many_entries) ... ok
+test_zip_crc_mismatch (test_nikl24_intake.TestNikl24Intake.test_zip_crc_mismatch) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.009s
+
+OK

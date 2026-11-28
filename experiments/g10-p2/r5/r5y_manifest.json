@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "name": "r5y_archive_audit.py",
+      "bytes": 9690,
+      "sha256": "1880309bc7eb3299e49c791f1fb0e20ff0bcbe38d268c6440a4b66cf103bac87"
+    },
+    {
+      "name": "r5y_census.py",
+      "bytes": 2534,
+      "sha256": "3553ad748bbe4c6f993d25b2f9e14ec48af8f261c78d0f75844d51eeb84266d2"
+    },
+    {
+      "name": "r5y_census_receipt.json",
+      "bytes": 1412,
+      "sha256": "dcd6556576feeb6f4ca580733395c1c73d93faa0e8fa7f1008f4cd98f0cbed1f"
+    },
+    {
+      "name": "r5y_decisions.json",
+      "bytes": 6137,
+      "sha256": "a157d6ced35a0d285865d83506373326cfb5c6576488a256665143d2de92506b"
+    },
+    {
+      "name": "r5y_lira_lines.md",
+      "bytes": 1952,
+      "sha256": "07d46c45fd201821ee8a07e43ac5a105bd3dc0772574f2cc9c4251792fdc1753"
+    },
+    {
+      "name": "r5y_prefix_guard.py",
+      "bytes": 808,
+      "sha256": "fd4bc6b5be1e883f1a2fbd4cd14e9e15d60388ad98a717ad74b87a10bdfc32e3"
+    },
+    {
+      "name": "r5y_receipt.json",
+      "bytes": 5751,
+      "sha256": "903c4ecbe8f6026d284f7f617bb51002f5dd841ba4b83da544a4f15d461f8594"
+    },
+    {
+      "name": "r5y_report.md",
+      "bytes": 5980,
+      "sha256": "7930f20a7a0dbb2f86097a02b107aae65321124aa0c91958df36e6ed0c0a2780"
+    },
+    {
+      "name": "r5y_tests.txt",
+      "bytes": 1187,
+      "sha256": "72f43b6cf662dcee3e356ef1aa0953a30bd024c8f5d69f61af6cbd27e4dde66e"
+    },
+    {
+      "name": "test_r5y_archive_audit.py",
+      "bytes": 3123,
+      "sha256": "3ed697c47b42d69bf595364bcb23822ba5e43657478306126e1177f8f1f979d8"
+    }
+  ],
+  "raw_text_included": false,
+  "new_model_calls": 0,
+  "independent_human_ratings": 0,
+  "test_status": "14/14 PASS"
+}

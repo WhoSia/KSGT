@@ -1,0 +1,332 @@
+{
+  "cases": {
+    "notice": {
+      "exact": {
+        "order": [
+          "closure",
+          "exception",
+          "resume",
+          "scope"
+        ],
+        "penalty": 0,
+        "text": "수요일 4교시에는 대출 창구를 운영하지 않는다. 다만 4교시에도 열람석은 이용할 수 있다. 5교시부터는 평소대로 운영한다. 이번 안내는 수요일에만 적용된다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "greedy": {
+        "order": [
+          "closure",
+          "exception",
+          "resume",
+          "scope"
+        ],
+        "penalty": 0,
+        "text": "수요일 4교시에는 대출 창구를 운영하지 않는다. 다만 4교시에도 열람석은 이용할 수 있다. 5교시부터는 평소대로 운영한다. 이번 안내는 수요일에만 적용된다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "preferences": [
+        {
+          "before": "closure",
+          "after": "exception",
+          "weight": 3
+        },
+        {
+          "before": "exception",
+          "after": "resume",
+          "weight": 2
+        },
+        {
+          "before": "resume",
+          "after": "scope",
+          "weight": 1
+        }
+      ]
+    },
+    "science": {
+      "exact": {
+        "order": [
+          "obs",
+          "limit",
+          "plan"
+        ],
+        "penalty": 0,
+        "text": "색이 변하기까지 조건 A에서는 42초, B에서는 35초가 걸렸다. 두 조건의 온도가 기록되지 않아 차이의 원인을 단정하기 어렵다. 다음 실험에서는 온도를 일정하게 유지할 예정이다.",
+        "missingEvidence": [
+          "temperature_measurement"
+        ],
+        "status": "REQUEST_EVIDENCE"
+      },
+      "greedy": {
+        "order": [
+          "obs",
+          "limit",
+          "plan"
+        ],
+        "penalty": 0,
+        "text": "색이 변하기까지 조건 A에서는 42초, B에서는 35초가 걸렸다. 두 조건의 온도가 기록되지 않아 차이의 원인을 단정하기 어렵다. 다음 실험에서는 온도를 일정하게 유지할 예정이다.",
+        "missingEvidence": [
+          "temperature_measurement"
+        ],
+        "status": "REQUEST_EVIDENCE"
+      },
+      "preferences": [
+        {
+          "before": "obs",
+          "after": "limit",
+          "weight": 3
+        },
+        {
+          "before": "limit",
+          "after": "plan",
+          "weight": 2
+        }
+      ]
+    },
+    "novice": {
+      "exact": {
+        "order": [
+          "intro",
+          "result"
+        ],
+        "penalty": 2,
+        "text": "압력 센서는 물체에 가해지는 압력을 감지한다. 이 장치는 압력 변화를 전기 신호로 바꾼다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "greedy": {
+        "order": [
+          "intro",
+          "result"
+        ],
+        "penalty": 2,
+        "text": "압력 센서는 물체에 가해지는 압력을 감지한다. 이 장치는 압력 변화를 전기 신호로 바꾼다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "preferences": [
+        {
+          "before": "result",
+          "after": "intro",
+          "weight": 2
+        }
+      ]
+    },
+    "expert": {
+      "exact": {
+        "order": [
+          "intro",
+          "result"
+        ],
+        "penalty": 2,
+        "text": "압력 센서는 물체에 가해지는 압력을 감지한다. 이 장치는 압력 변화를 전기 신호로 바꾼다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "greedy": {
+        "order": [
+          "intro",
+          "result"
+        ],
+        "penalty": 2,
+        "text": "압력 센서는 물체에 가해지는 압력을 감지한다. 이 장치는 압력 변화를 전기 신호로 바꾼다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "preferences": [
+        {
+          "before": "result",
+          "after": "intro",
+          "weight": 2
+        }
+      ]
+    },
+    "established_referent": {
+      "exact": {
+        "order": [
+          "result",
+          "intro"
+        ],
+        "penalty": 0,
+        "text": "이 장치는 압력 변화를 전기 신호로 바꾼다. 압력 센서는 물체에 가해지는 압력을 감지한다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "greedy": {
+        "order": [
+          "result",
+          "intro"
+        ],
+        "penalty": 0,
+        "text": "이 장치는 압력 변화를 전기 신호로 바꾼다. 압력 센서는 물체에 가해지는 압력을 감지한다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "preferences": [
+        {
+          "before": "result",
+          "after": "intro",
+          "weight": 2
+        }
+      ]
+    },
+    "evidence_not_knowledge": {
+      "exact": {
+        "order": [
+          "claim"
+        ],
+        "penalty": 0,
+        "text": "두 조건의 결과가 달랐다.",
+        "missingEvidence": [
+          "temperature_measurement"
+        ],
+        "status": "REQUEST_EVIDENCE"
+      },
+      "greedy": {
+        "order": [
+          "claim"
+        ],
+        "penalty": 0,
+        "text": "두 조건의 결과가 달랐다.",
+        "missingEvidence": [
+          "temperature_measurement"
+        ],
+        "status": "REQUEST_EVIDENCE"
+      },
+      "preferences": []
+    },
+    "evidence_supplied": {
+      "exact": {
+        "order": [
+          "claim"
+        ],
+        "penalty": 0,
+        "text": "두 조건의 결과가 달랐다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "greedy": {
+        "order": [
+          "claim"
+        ],
+        "penalty": 0,
+        "text": "두 조건의 결과가 달랐다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "preferences": []
+    },
+    "cycle": {
+      "exact": null,
+      "greedy": null,
+      "preferences": []
+    },
+    "literary": {
+      "exact": {
+        "order": [
+          "sound",
+          "wait",
+          "reveal"
+        ],
+        "penalty": 0,
+        "text": "문 너머에서 짧은 소리가 났다. 나는 문 앞에 멈춰 섰다. 소리의 정체는 아직 알 수 없었다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "greedy": {
+        "order": [
+          "sound",
+          "wait",
+          "reveal"
+        ],
+        "penalty": 0,
+        "text": "문 너머에서 짧은 소리가 났다. 나는 문 앞에 멈춰 섰다. 소리의 정체는 아직 알 수 없었다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "preferences": [
+        {
+          "before": "wait",
+          "after": "reveal",
+          "weight": 3
+        }
+      ]
+    },
+    "greedy_counterexample": {
+      "exact": {
+        "order": [
+          "b",
+          "c",
+          "a",
+          "d"
+        ],
+        "penalty": 16,
+        "text": "유량을 측정했다. 측정 시각을 기록했다. 강수량을 측정했다. 관측 자료를 정리했다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "greedy": {
+        "order": [
+          "c",
+          "a",
+          "b",
+          "d"
+        ],
+        "penalty": 23,
+        "text": "측정 시각을 기록했다. 강수량을 측정했다. 유량을 측정했다. 관측 자료를 정리했다.",
+        "missingEvidence": [],
+        "status": "REVIEW"
+      },
+      "preferences": [
+        {
+          "before": "a",
+          "after": "b",
+          "weight": 8
+        },
+        {
+          "before": "a",
+          "after": "d",
+          "weight": 8
+        },
+        {
+          "before": "b",
+          "after": "a",
+          "weight": 8
+        },
+        {
+          "before": "b",
+          "after": "c",
+          "weight": 7
+        },
+        {
+          "before": "b",
+          "after": "d",
+          "weight": 7
+        },
+        {
+          "before": "c",
+          "after": "a",
+          "weight": 3
+        },
+        {
+          "before": "c",
+          "after": "d",
+          "weight": 5
+        },
+        {
+          "before": "d",
+          "after": "a",
+          "weight": 2
+        },
+        {
+          "before": "d",
+          "after": "b",
+          "weight": 6
+        }
+      ]
+    }
+  },
+  "authored_cases": 10,
+  "additional_brute_force_cases": 200,
+  "semantic_labels": "investigator-authored, not automatic or independent quality ratings"
+}

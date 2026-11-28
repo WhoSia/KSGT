@@ -1,0 +1,2624 @@
+{
+  "schema": "ksgt.d19s.development.v1",
+  "status": "DESIGN_ONLY_NO_PROVIDER_RUN",
+  "families": 4,
+  "cells": 48,
+  "cases": [
+    {
+      "id": "SCI_PAPER__CORE__SHORT__STRICT",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "SCI_PAPER__CORE__SHORT__BOUNDED",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "원천 사실의 의미를 바꾸지 않는 용어 설명이나 결과와 해석의 차이를 풀어 쓸 수 있다. 기작·새 관측·추가 실험을 주장하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "SCI_PAPER__CORE__LONG__STRICT",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "SCI_PAPER__CORE__LONG__BOUNDED",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "원천 사실의 의미를 바꾸지 않는 용어 설명이나 결과와 해석의 차이를 풀어 쓸 수 있다. 기작·새 관측·추가 실험을 주장하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "SCI_PAPER__CORE__FLEX__STRICT",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "SCI_PAPER__CORE__FLEX__BOUNDED",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "원천 사실의 의미를 바꾸지 않는 용어 설명이나 결과와 해석의 차이를 풀어 쓸 수 있다. 기작·새 관측·추가 실험을 주장하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "SCI_PAPER__RICH__SHORT__STRICT",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "종이는 같은 묶음에서 골랐다."
+        },
+        {
+          "id": "O2",
+          "text": "두 판의 크기는 같았다."
+        },
+        {
+          "id": "O3",
+          "text": "물은 젖은 판에만 도포했다."
+        },
+        {
+          "id": "O4",
+          "text": "관찰 순서는 마른 판, 젖은 판 순이었다."
+        },
+        {
+          "id": "O5",
+          "text": "같은 사람이 두 조건을 관찰했다."
+        },
+        {
+          "id": "O6",
+          "text": "분리까지 걸린 정확한 시간은 기록하지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "SCI_PAPER__RICH__SHORT__BOUNDED",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "원천 사실의 의미를 바꾸지 않는 용어 설명이나 결과와 해석의 차이를 풀어 쓸 수 있다. 기작·새 관측·추가 실험을 주장하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "종이는 같은 묶음에서 골랐다."
+        },
+        {
+          "id": "O2",
+          "text": "두 판의 크기는 같았다."
+        },
+        {
+          "id": "O3",
+          "text": "물은 젖은 판에만 도포했다."
+        },
+        {
+          "id": "O4",
+          "text": "관찰 순서는 마른 판, 젖은 판 순이었다."
+        },
+        {
+          "id": "O5",
+          "text": "같은 사람이 두 조건을 관찰했다."
+        },
+        {
+          "id": "O6",
+          "text": "분리까지 걸린 정확한 시간은 기록하지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "SCI_PAPER__RICH__LONG__STRICT",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "종이는 같은 묶음에서 골랐다."
+        },
+        {
+          "id": "O2",
+          "text": "두 판의 크기는 같았다."
+        },
+        {
+          "id": "O3",
+          "text": "물은 젖은 판에만 도포했다."
+        },
+        {
+          "id": "O4",
+          "text": "관찰 순서는 마른 판, 젖은 판 순이었다."
+        },
+        {
+          "id": "O5",
+          "text": "같은 사람이 두 조건을 관찰했다."
+        },
+        {
+          "id": "O6",
+          "text": "분리까지 걸린 정확한 시간은 기록하지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "SCI_PAPER__RICH__LONG__BOUNDED",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "원천 사실의 의미를 바꾸지 않는 용어 설명이나 결과와 해석의 차이를 풀어 쓸 수 있다. 기작·새 관측·추가 실험을 주장하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "종이는 같은 묶음에서 골랐다."
+        },
+        {
+          "id": "O2",
+          "text": "두 판의 크기는 같았다."
+        },
+        {
+          "id": "O3",
+          "text": "물은 젖은 판에만 도포했다."
+        },
+        {
+          "id": "O4",
+          "text": "관찰 순서는 마른 판, 젖은 판 순이었다."
+        },
+        {
+          "id": "O5",
+          "text": "같은 사람이 두 조건을 관찰했다."
+        },
+        {
+          "id": "O6",
+          "text": "분리까지 걸린 정확한 시간은 기록하지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "SCI_PAPER__RICH__FLEX__STRICT",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "종이는 같은 묶음에서 골랐다."
+        },
+        {
+          "id": "O2",
+          "text": "두 판의 크기는 같았다."
+        },
+        {
+          "id": "O3",
+          "text": "물은 젖은 판에만 도포했다."
+        },
+        {
+          "id": "O4",
+          "text": "관찰 순서는 마른 판, 젖은 판 순이었다."
+        },
+        {
+          "id": "O5",
+          "text": "같은 사람이 두 조건을 관찰했다."
+        },
+        {
+          "id": "O6",
+          "text": "분리까지 걸린 정확한 시간은 기록하지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "SCI_PAPER__RICH__FLEX__BOUNDED",
+      "family": "SCI_PAPER",
+      "genre": "science",
+      "task": "두 문단의 과학 실험 결과 설명",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "원천 사실의 의미를 바꾸지 않는 용어 설명이나 결과와 해석의 차이를 풀어 쓸 수 있다. 기작·새 관측·추가 실험을 주장하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "동일 종류의 종이 두 장을 각각 마른 유리판과 물로 적신 유리판 위에 놓았다."
+        },
+        {
+          "id": "C2",
+          "text": "두 종이에 같은 추를 올렸다."
+        },
+        {
+          "id": "C3",
+          "text": "추를 제거한 뒤 마른 판의 종이는 즉시 분리되었다."
+        },
+        {
+          "id": "C4",
+          "text": "젖은 판의 종이는 즉시 분리되지 않았다."
+        },
+        {
+          "id": "C5",
+          "text": "각 조건에서 한 번만 관찰했다."
+        },
+        {
+          "id": "C6",
+          "text": "접착력의 크기와 원인은 측정하지 않았다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "종이는 같은 묶음에서 골랐다."
+        },
+        {
+          "id": "O2",
+          "text": "두 판의 크기는 같았다."
+        },
+        {
+          "id": "O3",
+          "text": "물은 젖은 판에만 도포했다."
+        },
+        {
+          "id": "O4",
+          "text": "관찰 순서는 마른 판, 젖은 판 순이었다."
+        },
+        {
+          "id": "O5",
+          "text": "같은 사람이 두 조건을 관찰했다."
+        },
+        {
+          "id": "O6",
+          "text": "분리까지 걸린 정확한 시간은 기록하지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_ROOM__CORE__SHORT__STRICT",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "NOTICE_ROOM__CORE__SHORT__BOUNDED",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 정해진 절차와 미정 사항을 읽기 편하게 설명하거나 묶을 수 있다. 새로운 의무·약속·신청 장소를 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "NOTICE_ROOM__CORE__LONG__STRICT",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "NOTICE_ROOM__CORE__LONG__BOUNDED",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 정해진 절차와 미정 사항을 읽기 편하게 설명하거나 묶을 수 있다. 새로운 의무·약속·신청 장소를 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "NOTICE_ROOM__CORE__FLEX__STRICT",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "NOTICE_ROOM__CORE__FLEX__BOUNDED",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 정해진 절차와 미정 사항을 읽기 편하게 설명하거나 묶을 수 있다. 새로운 의무·약속·신청 장소를 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "NOTICE_ROOM__RICH__SHORT__STRICT",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "회의실은 계단 옆에 있다."
+        },
+        {
+          "id": "O2",
+          "text": "회의 종료 예정 시각은 오후 5시이다."
+        },
+        {
+          "id": "O3",
+          "text": "회의 주제는 다음 달 독서 활동이다."
+        },
+        {
+          "id": "O4",
+          "text": "자료의 형식은 자유다."
+        },
+        {
+          "id": "O5",
+          "text": "참석 여부는 기존 동아리 게시판에 입력한다."
+        },
+        {
+          "id": "O6",
+          "text": "이번 회의에서는 지난달 활동을 평가하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_ROOM__RICH__SHORT__BOUNDED",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 정해진 절차와 미정 사항을 읽기 편하게 설명하거나 묶을 수 있다. 새로운 의무·약속·신청 장소를 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "회의실은 계단 옆에 있다."
+        },
+        {
+          "id": "O2",
+          "text": "회의 종료 예정 시각은 오후 5시이다."
+        },
+        {
+          "id": "O3",
+          "text": "회의 주제는 다음 달 독서 활동이다."
+        },
+        {
+          "id": "O4",
+          "text": "자료의 형식은 자유다."
+        },
+        {
+          "id": "O5",
+          "text": "참석 여부는 기존 동아리 게시판에 입력한다."
+        },
+        {
+          "id": "O6",
+          "text": "이번 회의에서는 지난달 활동을 평가하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_ROOM__RICH__LONG__STRICT",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "회의실은 계단 옆에 있다."
+        },
+        {
+          "id": "O2",
+          "text": "회의 종료 예정 시각은 오후 5시이다."
+        },
+        {
+          "id": "O3",
+          "text": "회의 주제는 다음 달 독서 활동이다."
+        },
+        {
+          "id": "O4",
+          "text": "자료의 형식은 자유다."
+        },
+        {
+          "id": "O5",
+          "text": "참석 여부는 기존 동아리 게시판에 입력한다."
+        },
+        {
+          "id": "O6",
+          "text": "이번 회의에서는 지난달 활동을 평가하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_ROOM__RICH__LONG__BOUNDED",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 정해진 절차와 미정 사항을 읽기 편하게 설명하거나 묶을 수 있다. 새로운 의무·약속·신청 장소를 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "회의실은 계단 옆에 있다."
+        },
+        {
+          "id": "O2",
+          "text": "회의 종료 예정 시각은 오후 5시이다."
+        },
+        {
+          "id": "O3",
+          "text": "회의 주제는 다음 달 독서 활동이다."
+        },
+        {
+          "id": "O4",
+          "text": "자료의 형식은 자유다."
+        },
+        {
+          "id": "O5",
+          "text": "참석 여부는 기존 동아리 게시판에 입력한다."
+        },
+        {
+          "id": "O6",
+          "text": "이번 회의에서는 지난달 활동을 평가하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_ROOM__RICH__FLEX__STRICT",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "회의실은 계단 옆에 있다."
+        },
+        {
+          "id": "O2",
+          "text": "회의 종료 예정 시각은 오후 5시이다."
+        },
+        {
+          "id": "O3",
+          "text": "회의 주제는 다음 달 독서 활동이다."
+        },
+        {
+          "id": "O4",
+          "text": "자료의 형식은 자유다."
+        },
+        {
+          "id": "O5",
+          "text": "참석 여부는 기존 동아리 게시판에 입력한다."
+        },
+        {
+          "id": "O6",
+          "text": "이번 회의에서는 지난달 활동을 평가하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "NOTICE_ROOM__RICH__FLEX__BOUNDED",
+      "family": "NOTICE_ROOM",
+      "genre": "notice",
+      "task": "두 문단의 학교 동아리 회의실 이용 공지",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 정해진 절차와 미정 사항을 읽기 편하게 설명하거나 묶을 수 있다. 새로운 의무·약속·신청 장소를 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "수요일 회의 장소는 도서관 2층이다."
+        },
+        {
+          "id": "C2",
+          "text": "시작 시각은 오후 4시 20분이다."
+        },
+        {
+          "id": "C3",
+          "text": "참석 여부는 화요일까지 제출한다."
+        },
+        {
+          "id": "C4",
+          "text": "자료는 각자 준비한다."
+        },
+        {
+          "id": "C5",
+          "text": "발표 순서는 아직 정하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "결석 사유 제출은 요구하지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "회의실은 계단 옆에 있다."
+        },
+        {
+          "id": "O2",
+          "text": "회의 종료 예정 시각은 오후 5시이다."
+        },
+        {
+          "id": "O3",
+          "text": "회의 주제는 다음 달 독서 활동이다."
+        },
+        {
+          "id": "O4",
+          "text": "자료의 형식은 자유다."
+        },
+        {
+          "id": "O5",
+          "text": "참석 여부는 기존 동아리 게시판에 입력한다."
+        },
+        {
+          "id": "O6",
+          "text": "이번 회의에서는 지난달 활동을 평가하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "FICTION_STAIR__CORE__SHORT__STRICT",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "FICTION_STAIR__CORE__SHORT__BOUNDED",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 존재하는 대상의 비결정적 질감과 사소한 몸짓을 상상하여 표현할 수 있다. 새 인물·중요 사건·동기·대사·봉투 내용·마지막 행동 이후의 일을 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "FICTION_STAIR__CORE__LONG__STRICT",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "FICTION_STAIR__CORE__LONG__BOUNDED",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 존재하는 대상의 비결정적 질감과 사소한 몸짓을 상상하여 표현할 수 있다. 새 인물·중요 사건·동기·대사·봉투 내용·마지막 행동 이후의 일을 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "FICTION_STAIR__CORE__FLEX__STRICT",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "FICTION_STAIR__CORE__FLEX__BOUNDED",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 존재하는 대상의 비결정적 질감과 사소한 몸짓을 상상하여 표현할 수 있다. 새 인물·중요 사건·동기·대사·봉투 내용·마지막 행동 이후의 일을 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "FICTION_STAIR__RICH__SHORT__STRICT",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "계단 옆 벽은 회색이었다."
+        },
+        {
+          "id": "O2",
+          "text": "봉투의 한쪽 모서리가 접혀 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "위층 문은 닫혀 있었다."
+        },
+        {
+          "id": "O4",
+          "text": "현수는 오른손을 난간 위에 올려 두었다."
+        },
+        {
+          "id": "O5",
+          "text": "계단 세 번째 칸에 작은 흠집이 있었다."
+        },
+        {
+          "id": "O6",
+          "text": "서윤의 외투 주머니에는 아무것도 넣지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "FICTION_STAIR__RICH__SHORT__BOUNDED",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 존재하는 대상의 비결정적 질감과 사소한 몸짓을 상상하여 표현할 수 있다. 새 인물·중요 사건·동기·대사·봉투 내용·마지막 행동 이후의 일을 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "계단 옆 벽은 회색이었다."
+        },
+        {
+          "id": "O2",
+          "text": "봉투의 한쪽 모서리가 접혀 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "위층 문은 닫혀 있었다."
+        },
+        {
+          "id": "O4",
+          "text": "현수는 오른손을 난간 위에 올려 두었다."
+        },
+        {
+          "id": "O5",
+          "text": "계단 세 번째 칸에 작은 흠집이 있었다."
+        },
+        {
+          "id": "O6",
+          "text": "서윤의 외투 주머니에는 아무것도 넣지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "FICTION_STAIR__RICH__LONG__STRICT",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "계단 옆 벽은 회색이었다."
+        },
+        {
+          "id": "O2",
+          "text": "봉투의 한쪽 모서리가 접혀 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "위층 문은 닫혀 있었다."
+        },
+        {
+          "id": "O4",
+          "text": "현수는 오른손을 난간 위에 올려 두었다."
+        },
+        {
+          "id": "O5",
+          "text": "계단 세 번째 칸에 작은 흠집이 있었다."
+        },
+        {
+          "id": "O6",
+          "text": "서윤의 외투 주머니에는 아무것도 넣지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "FICTION_STAIR__RICH__LONG__BOUNDED",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 존재하는 대상의 비결정적 질감과 사소한 몸짓을 상상하여 표현할 수 있다. 새 인물·중요 사건·동기·대사·봉투 내용·마지막 행동 이후의 일을 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "계단 옆 벽은 회색이었다."
+        },
+        {
+          "id": "O2",
+          "text": "봉투의 한쪽 모서리가 접혀 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "위층 문은 닫혀 있었다."
+        },
+        {
+          "id": "O4",
+          "text": "현수는 오른손을 난간 위에 올려 두었다."
+        },
+        {
+          "id": "O5",
+          "text": "계단 세 번째 칸에 작은 흠집이 있었다."
+        },
+        {
+          "id": "O6",
+          "text": "서윤의 외투 주머니에는 아무것도 넣지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "FICTION_STAIR__RICH__FLEX__STRICT",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "계단 옆 벽은 회색이었다."
+        },
+        {
+          "id": "O2",
+          "text": "봉투의 한쪽 모서리가 접혀 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "위층 문은 닫혀 있었다."
+        },
+        {
+          "id": "O4",
+          "text": "현수는 오른손을 난간 위에 올려 두었다."
+        },
+        {
+          "id": "O5",
+          "text": "계단 세 번째 칸에 작은 흠집이 있었다."
+        },
+        {
+          "id": "O6",
+          "text": "서윤의 외투 주머니에는 아무것도 넣지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "FICTION_STAIR__RICH__FLEX__BOUNDED",
+      "family": "FICTION_STAIR",
+      "genre": "fiction",
+      "task": "두 문단의 짧은 소설 장면",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "이미 존재하는 대상의 비결정적 질감과 사소한 몸짓을 상상하여 표현할 수 있다. 새 인물·중요 사건·동기·대사·봉투 내용·마지막 행동 이후의 일을 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "서윤은 계단 아래에 서 있었다."
+        },
+        {
+          "id": "C2",
+          "text": "서윤의 손에는 봉투 한 장이 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "난간 위에 먼지가 쌓여 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "현수는 계단 위에서 서윤을 바라보았다."
+        },
+        {
+          "id": "C5",
+          "text": "두 사람은 말을 하지 않았다."
+        },
+        {
+          "id": "C6",
+          "text": "서윤이 첫 계단을 밟는 순간 장면이 끝난다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "계단 옆 벽은 회색이었다."
+        },
+        {
+          "id": "O2",
+          "text": "봉투의 한쪽 모서리가 접혀 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "위층 문은 닫혀 있었다."
+        },
+        {
+          "id": "O4",
+          "text": "현수는 오른손을 난간 위에 올려 두었다."
+        },
+        {
+          "id": "O5",
+          "text": "계단 세 번째 칸에 작은 흠집이 있었다."
+        },
+        {
+          "id": "O6",
+          "text": "서윤의 외투 주머니에는 아무것도 넣지 않았다."
+        }
+      ]
+    },
+    {
+      "id": "ESSAY_MAP__CORE__SHORT__STRICT",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "ESSAY_MAP__CORE__SHORT__BOUNDED",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "기억과 기록의 차이를 화자의 질문이나 조건부 사유로 풀어 쓸 수 있다. 새 과거 경험, 확정된 감정·동기 또는 미래 행동은 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "ESSAY_MAP__CORE__LONG__STRICT",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "ESSAY_MAP__CORE__LONG__BOUNDED",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "기억과 기록의 차이를 화자의 질문이나 조건부 사유로 풀어 쓸 수 있다. 새 과거 경험, 확정된 감정·동기 또는 미래 행동은 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "ESSAY_MAP__CORE__FLEX__STRICT",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "ESSAY_MAP__CORE__FLEX__BOUNDED",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "CORE",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "기억과 기록의 차이를 화자의 질문이나 조건부 사유로 풀어 쓸 수 있다. 새 과거 경험, 확정된 감정·동기 또는 미래 행동은 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": []
+    },
+    {
+      "id": "ESSAY_MAP__RICH__SHORT__STRICT",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "지도는 세로로 두 번 접혀 있었다."
+        },
+        {
+          "id": "O2",
+          "text": "지도 모서리에 오래된 테이프가 붙어 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "날짜는 4월 12일이었다."
+        },
+        {
+          "id": "O4",
+          "text": "동그라미는 지도 오른쪽 아래에 있었다."
+        },
+        {
+          "id": "O5",
+          "text": "화자는 날짜를 따로 적어 두지 않았다."
+        },
+        {
+          "id": "O6",
+          "text": "서랍에는 다른 종이도 있었다."
+        }
+      ]
+    },
+    {
+      "id": "ESSAY_MAP__RICH__SHORT__BOUNDED",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "SHORT",
+      "target": [
+        180,
+        240
+      ],
+      "lengthInstruction": "공백 제외 180~240자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "기억과 기록의 차이를 화자의 질문이나 조건부 사유로 풀어 쓸 수 있다. 새 과거 경험, 확정된 감정·동기 또는 미래 행동은 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "지도는 세로로 두 번 접혀 있었다."
+        },
+        {
+          "id": "O2",
+          "text": "지도 모서리에 오래된 테이프가 붙어 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "날짜는 4월 12일이었다."
+        },
+        {
+          "id": "O4",
+          "text": "동그라미는 지도 오른쪽 아래에 있었다."
+        },
+        {
+          "id": "O5",
+          "text": "화자는 날짜를 따로 적어 두지 않았다."
+        },
+        {
+          "id": "O6",
+          "text": "서랍에는 다른 종이도 있었다."
+        }
+      ]
+    },
+    {
+      "id": "ESSAY_MAP__RICH__LONG__STRICT",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "지도는 세로로 두 번 접혀 있었다."
+        },
+        {
+          "id": "O2",
+          "text": "지도 모서리에 오래된 테이프가 붙어 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "날짜는 4월 12일이었다."
+        },
+        {
+          "id": "O4",
+          "text": "동그라미는 지도 오른쪽 아래에 있었다."
+        },
+        {
+          "id": "O5",
+          "text": "화자는 날짜를 따로 적어 두지 않았다."
+        },
+        {
+          "id": "O6",
+          "text": "서랍에는 다른 종이도 있었다."
+        }
+      ]
+    },
+    {
+      "id": "ESSAY_MAP__RICH__LONG__BOUNDED",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "LONG",
+      "target": [
+        480,
+        600
+      ],
+      "lengthInstruction": "공백 제외 480~600자 목표. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "기억과 기록의 차이를 화자의 질문이나 조건부 사유로 풀어 쓸 수 있다. 새 과거 경험, 확정된 감정·동기 또는 미래 행동은 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "지도는 세로로 두 번 접혀 있었다."
+        },
+        {
+          "id": "O2",
+          "text": "지도 모서리에 오래된 테이프가 붙어 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "날짜는 4월 12일이었다."
+        },
+        {
+          "id": "O4",
+          "text": "동그라미는 지도 오른쪽 아래에 있었다."
+        },
+        {
+          "id": "O5",
+          "text": "화자는 날짜를 따로 적어 두지 않았다."
+        },
+        {
+          "id": "O6",
+          "text": "서랍에는 다른 종이도 있었다."
+        }
+      ]
+    },
+    {
+      "id": "ESSAY_MAP__RICH__FLEX__STRICT",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "STRICT",
+      "licenseInstruction": "제시된 사실만 서술한다. 뜻을 보존하는 바꿔쓰기는 가능하나 새 관측·사건·해석·감정을 추가하지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "지도는 세로로 두 번 접혀 있었다."
+        },
+        {
+          "id": "O2",
+          "text": "지도 모서리에 오래된 테이프가 붙어 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "날짜는 4월 12일이었다."
+        },
+        {
+          "id": "O4",
+          "text": "동그라미는 지도 오른쪽 아래에 있었다."
+        },
+        {
+          "id": "O5",
+          "text": "화자는 날짜를 따로 적어 두지 않았다."
+        },
+        {
+          "id": "O6",
+          "text": "서랍에는 다른 종이도 있었다."
+        }
+      ]
+    },
+    {
+      "id": "ESSAY_MAP__RICH__FLEX__BOUNDED",
+      "family": "ESSAY_MAP",
+      "genre": "essay",
+      "task": "두 문단의 기록 중심 수필",
+      "paragraphs": 2,
+      "richness": "RICH",
+      "length": "FLEX",
+      "target": null,
+      "lengthInstruction": "필요한 만큼만 쓴다. 원천 충실성을 우선한다.",
+      "license": "BOUNDED",
+      "licenseInstruction": "기억과 기록의 차이를 화자의 질문이나 조건부 사유로 풀어 쓸 수 있다. 새 과거 경험, 확정된 감정·동기 또는 미래 행동은 만들지 않는다.",
+      "required": [
+        {
+          "id": "C1",
+          "text": "화자는 오래된 지도를 펼쳤다."
+        },
+        {
+          "id": "C2",
+          "text": "지도에는 연필로 작은 동그라미가 그려져 있었다."
+        },
+        {
+          "id": "C3",
+          "text": "동그라미 옆에 날짜가 있었다."
+        },
+        {
+          "id": "C4",
+          "text": "화자는 그날 그 장소에 갔는지 기억하지 못했다."
+        },
+        {
+          "id": "C5",
+          "text": "지도는 서랍에 다시 넣었다."
+        },
+        {
+          "id": "C6",
+          "text": "회상의 진위는 끝내 확정되지 않는다."
+        }
+      ],
+      "optional": [
+        {
+          "id": "O1",
+          "text": "지도는 세로로 두 번 접혀 있었다."
+        },
+        {
+          "id": "O2",
+          "text": "지도 모서리에 오래된 테이프가 붙어 있었다."
+        },
+        {
+          "id": "O3",
+          "text": "날짜는 4월 12일이었다."
+        },
+        {
+          "id": "O4",
+          "text": "동그라미는 지도 오른쪽 아래에 있었다."
+        },
+        {
+          "id": "O5",
+          "text": "화자는 날짜를 따로 적어 두지 않았다."
+        },
+        {
+          "id": "O6",
+          "text": "서랍에는 다른 종이도 있었다."
+        }
+      ]
+    }
+  ]
+}

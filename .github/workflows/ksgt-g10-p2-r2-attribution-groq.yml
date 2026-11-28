@@ -1,0 +1,51 @@
+name: KSGT G10-P2 R2 Attribution Extraction (Frozen Development Corpus)
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r2-attribution-groq.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ksgt-g10-p2-r2-attribution-once
+  cancel-in-progress: false
+
+jobs:
+  model-extractor:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify authored corpus and 80 matched extraction prompts
+        run: |
+          node --test experiments/g10-p2/*.test.cjs
+          node experiments/g10-p2/r2_attribution_extractor.cjs --offline
+          node experiments/g10-p2/r2_attribution_extractor.cjs --plan > "$RUNNER_TEMP/r2-frozen-plan.json"
+      - name: Run live 80-source-extraction model calls without repo credentials
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r2_attribution_extractor.cjs --execute "$RUNNER_TEMP/r2-provider"
+      - name: Validate all raw receipts and generate author-side diagnostic
+        run: |
+          node experiments/g10-p2/r2_attribution_extractor.cjs --score "$RUNNER_TEMP/r2-provider" > "$RUNNER_TEMP/r2-diagnostic.json"
+          node -e 'const r=require(process.argv[1]);for(const [arm,diag] of Object.entries(r.metrics)){const {byGold,...totals}=diag;console.log(arm,JSON.stringify(totals));console.log(arm+"-by-status",JSON.stringify(Object.fromEntries(Object.entries(byGold).map(([gold,rows])=>[gold,rows.map(x=>x.claim||"INVALID")]))))}' "$RUNNER_TEMP/r2-diagnostic.json"
+      - name: Archive every provider attempt, raw response and score
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r2-attribution-raw
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r2-frozen-plan.json
+            ${{ runner.temp }}/r2-provider/
+            ${{ runner.temp }}/r2-diagnostic.json

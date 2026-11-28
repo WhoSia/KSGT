@@ -1,0 +1,5 @@
+'use strict';
+// No weighting or summation. Subjective ordinal axes only; hard gates first.
+function frontier(review){const axes=review.axes;if(!Array.isArray(axes)||axes.length!==6||new Set(axes).size!==6||!Array.isArray(review.candidates))throw Error('BAD_REVIEW');const ids=new Set();for(const c of review.candidates){if(!c.id||ids.has(c.id)||!Array.isArray(c.scores)||c.scores.length!==axes.length||c.scores.some(v=>typeof v!=='number'||!Number.isFinite(v)||v<0||v>1)||!['ACTIONABLE','DEFER','STOP','EXTERNAL_HOLD','PARALLEL_HOLD'].includes(c.gate))throw Error('BAD_CANDIDATE');ids.add(c.id);}const a=review.candidates.filter(c=>c.gate==='ACTIONABLE');const dominates=(x,y)=>x.scores.every((v,i)=>v>=y.scores[i])&&x.scores.some((v,i)=>v>y.scores[i]);return {frontier:a.filter(y=>!a.some(x=>x!==y&&dominates(x,y))).map(c=>c.id),dominated:a.filter(y=>a.some(x=>x!==y&&dominates(x,y))).map(c=>c.id),held:review.candidates.filter(c=>c.gate!=='ACTIONABLE').map(c=>({id:c.id,gate:c.gate})),promotionAllowed:false};}
+module.exports={frontier};
+if(require.main===module)console.log(JSON.stringify(frontier(require('./r7_review_current.json')),null,2));

@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "pairs": 530,
+    "different_proposals": 273,
+    "distinct_changed_projection": 13,
+    "unchanged_projection": 151,
+    "equal_proposals": 257,
+    "exact_expert_projection": 103,
+    "exact_model_projection": 6
+  },
+  "interpretation": "Developer retrospective surface comparison; two given proposals, not a model-only correction method. Alignment ambiguity, missing shared errors, and semantic differences remain. No human gold."
+}

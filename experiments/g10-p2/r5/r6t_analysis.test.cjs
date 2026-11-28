@@ -1,0 +1,3 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),{paragraphs,median,summarize}=require('./r6t_analysis.cjs');
+test('paragraph count, arm costs and medians are not quality scores',()=>{assert.equal(paragraphs('가\n나\n\n다'),2);assert.equal(paragraphs('가\r\n \r\n나'),2);assert.equal(median([4,1,3,2]),2.5);const r=summarize([{arm:'direct',usage:{prompt_tokens:4,completion_tokens:2,total_tokens:6},latencyMs:10,paragraphs:2,expectedParagraphs:3},{arm:'coupled',usage:{prompt_tokens:5,completion_tokens:3,total_tokens:8},latencyMs:12,paragraphs:3,expectedParagraphs:3}]);assert.equal(r.direct.paragraphCountMatch,0);assert.equal(r.coupled.paragraphCountMatch,1);assert.equal(r.coupled.tokens,8);});

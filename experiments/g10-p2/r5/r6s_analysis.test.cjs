@@ -1,0 +1,3 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),{median,countParagraphs,summarize}=require('./r6s_analysis.cjs'),{works}=require('./r6s_works.cjs');
+test('count blank-line paragraphs; median and paired pipeline accounting',()=>{a.equal(countParagraphs('가\n나\n\n다\n \n라'),3);a.equal(median([1,3,2,4]),2.5);const rows=works.flatMap(w=>['direct','revise','plan','realize'].map(step=>({work:w.id,step,paragraphs:w.paragraphs,usage:{prompt_tokens:2,completion_tokens:3,total_tokens:5},latencyMs:10})));const s=summarize(rows);a.equal(s.one_call.tokens,20);a.equal(s.draft_revise.tokens,40);a.equal(s.plan_realize.medianPipelineRequestMs,20);a.equal(s.plan_realize.paragraphCountMatch,4)});

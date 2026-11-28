@@ -1,0 +1,61 @@
+name: KSGT G10-P2 R4a Two-Stage Korean Reader Packets
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r4a-reader-packets.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  create-masked-reader-packets:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test all masked reader/evidence packet contracts
+        run: node --test experiments/g10-p2/*.test.cjs
+      - name: Reopen actual sealed R4a run, never substitute mock outputs
+        uses: actions/download-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4a-full-prose-raw
+          repository: WhoSia/KSGT
+          run-id: 44883541327
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/r4a-original
+      - name: Produce four author/method-masked A forms and four source-auditor B forms
+        run: |
+          node experiments/g10-p2/r4a_reader_packet_v01.cjs --pack "$RUNNER_TEMP/r4a-original/r4a-live" "$RUNNER_TEMP/r4a-docs" > "$RUNNER_TEMP/r4a-packet-receipt.json"
+          node -e 'const m=require(process.argv[1]);if(m.docs.length!==8||m.independentReaderResponsesCollected!==0)process.exit(1);console.log("R4a prepared forms",JSON.stringify({files:m.docs.length,originalWorks:m.oldExperimentSourceWorkCount,readerRatings:m.independentReaderResponsesCollected}))' "$RUNNER_TEMP/r4a-packet-receipt.json"
+      - name: Archive A-stage reader-only forms (no source list or investigator key)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4a-reader-stage-A
+          retention-days: 7
+          if-no-files-found: error
+          path: ${{ runner.temp }}/r4a-docs/reader-stage-A/
+      - name: Archive B-stage source-auditor-only forms
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4a-source-auditor-stage-B
+          retention-days: 7
+          if-no-files-found: error
+          path: ${{ runner.temp }}/r4a-docs/auditor-stage-B/
+      - name: Archive investigator mapping separately (not for participants)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r4a-investigator-mapping-private
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/r4a-docs/investigator-private/
+            ${{ runner.temp }}/r4a-docs/manifest.json
+            ${{ runner.temp }}/r4a-packet-receipt.json

@@ -1,0 +1,42 @@
+{
+  "schema": "ksgt.g10p2.r5s.custody.v1",
+  "real_nikl_raw_included": false,
+  "test_secret_only": true,
+  "files": [
+    {
+      "name": "r5s_blind_commitment.py",
+      "bytes": 3635,
+      "sha256": "f15e594b4778383b73087a70725069ac5fccb3a36b5619e7ee56039062a2eb1a"
+    },
+    {
+      "name": "test_r5s_blind_commitment.py",
+      "bytes": 3185,
+      "sha256": "020b1a6c1f45dabf4bf8b9269f9126e0d6766481e78333449571538f6e519bf0"
+    },
+    {
+      "name": "38_R5S_BLIND_COMMITMENT_LEAKAGE_REPAIR_20261123.md",
+      "bytes": 4524,
+      "sha256": "c7b99cb56a36edb0342115b8fdb2f1794a51e99a1291803e780ee24fccf583e4"
+    },
+    {
+      "name": "R5S_LIRA_LINES.md",
+      "bytes": 2252,
+      "sha256": "4f64438edaf5b2c0110fa28685d5a02c7d7cf18b8343f9e945af9aa9ed0db6f6"
+    },
+    {
+      "name": "R5S_SYNTHETIC_REPAIRED_PUBLIC_PACKET.json",
+      "bytes": 1155,
+      "sha256": "cfb9c5e423da0e17e551f35c6e4255decfe5dcc17cc4b0f9c804a15ed3f70d61"
+    },
+    {
+      "name": "R5S_SECURITY_RECEIPT.json",
+      "bytes": 367,
+      "sha256": "398882a2c8535ec5877effd8c11e80bde4de67b6f8c2aa8d3477dc668f8e4a2e"
+    },
+    {
+      "name": "r5r_blind_packet_PATCHED.py",
+      "bytes": 6034,
+      "sha256": "953cf2169fd131976e90e841a41fb7d279ef23c8eb5440f76a41213d4468d6b2"
+    }
+  ]
+}

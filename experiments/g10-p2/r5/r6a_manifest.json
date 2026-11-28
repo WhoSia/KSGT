@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "name": "r6a_census_receipt.json",
+      "bytes": 5383,
+      "sha256": "34726ed40b04de2444749bef6ee6e38389b4675030a1d00a5ecfd6fa948f56b4"
+    },
+    {
+      "name": "r6a_decisions.json",
+      "bytes": 7336,
+      "sha256": "da0d00b447218d2b1ba0037a95e5b526a08aa4d456f10385f94e326d8ebd5416"
+    },
+    {
+      "name": "r6a_family_audit.py",
+      "bytes": 2378,
+      "sha256": "550d34c57c78bf8832f1a103a37429c752ddfa4f25b89e2fe2cdd80712b0ec0a"
+    },
+    {
+      "name": "r6a_family_receipt.json",
+      "bytes": 853,
+      "sha256": "3224590372bbc6b00169e6a5391de049426051f519b28f8a17e6fb1fdfd2dd46"
+    },
+    {
+      "name": "r6a_feedback_pairs.py",
+      "bytes": 3960,
+      "sha256": "a22a1315641c9f84b23470e091a03c17ff2e9238b7c6d93cb3ce32154dba4b5d"
+    },
+    {
+      "name": "r6a_feedback_receipt.json",
+      "bytes": 1372,
+      "sha256": "3ab3cbd3dc3713c9fdcd93ea729f2cd55c862041395ac337babaac47168a748e"
+    },
+    {
+      "name": "r6a_lira_lines.md",
+      "bytes": 1530,
+      "sha256": "24a43491855ceebaf213c41ef549b74b77fae143c26e53102a9e2f08d6395254"
+    },
+    {
+      "name": "r6a_nikl_census.py",
+      "bytes": 5326,
+      "sha256": "e66f9c6aeee19c57e01d2521bc829025437cb00c9973beb2c5b30c0ffe927f08"
+    },
+    {
+      "name": "r6a_report.md",
+      "bytes": 6101,
+      "sha256": "85cc2e6a6396f5f991b60caebcae5ce36ef45f92ec2096749c0ad87097e3d308"
+    },
+    {
+      "name": "r6a_tests.txt",
+      "bytes": 1074,
+      "sha256": "4e66118da320bcd435ebd06bfb28bd541deb37c2e2e9b61b2a197048b17b728f"
+    },
+    {
+      "name": "test_r6a_nikl.py",
+      "bytes": 2984,
+      "sha256": "ddf5a9127a49e0d8d7efde374fc7c7e88d5a07026fba50a44bedbc6a395d2d62"
+    }
+  ],
+  "source_text_included": false,
+  "archive_source_sha256": "92ca0e42198ff10d45b72771b39ce364343634691bc348cfcc0b47de60df3c54"
+}

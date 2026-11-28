@@ -1,0 +1,8 @@
+'use strict';
+const {test}=require('node:test'),a=require('node:assert/strict'),p=require('./r7f_projection.cjs');
+test('4 paired works, 8 unique calls, projected removes exactly 3 internal records',()=>{a.equal(p.schedule().length,8);a.equal(new Set(p.schedule().map(c=>c.id)).size,8);for(const w of p.works){const r=p.project(w);a.equal(r.length,7);a.equal(w.records.length,10);a.equal(r.filter(x=>x.role==='PAYLOAD').length,5);a.deepEqual(r,w.records.filter(x=>x.role!=='INTERNAL'));}});
+test('identical system and task; projected source is exact subset',()=>{for(const w of p.works){const d=p.messages(w,'DIRECT'),s=p.messages(w,'PROJECTED');a.deepEqual(d[0],s[0]);const dropped=w.records.filter(r=>r.role==='INTERNAL').map(r=>r.id+' [INTERNAL]');a.equal(d[1].content.split('\n').filter(l=>!dropped.some(x=>l.startsWith(x))).join('\n'),s[1].content);}});
+test('direct dependence fails closed',()=>{const w=structuredClone(p.works[0]);w.records[0].requires=['R7'];a.throws(()=>p.project(w),/DEPENDENT_INTERNAL_HOLD/);});
+test('transitive dependence fails closed',()=>{const w=structuredClone(p.works[0]);w.records[0].requires=['R2'];w.records[1].requires=['R7'];a.throws(()=>p.project(w),/DEPENDENT_INTERNAL_HOLD/);});
+test('bad reference or duplicate record refused',()=>{const w=structuredClone(p.works[0]);w.records[0].requires=['X'];a.throws(()=>p.project(w),/BAD_DEPENDENCY/);w.records[0].requires=[];w.records[0].id=w.records[1].id;a.throws(()=>p.project(w),/BAD_RECORD/);});
+test('manual mislabel negative control: payload disguised as internal can be omitted',()=>{const w=structuredClone(p.works[0]);w.records[0].role='INTERNAL';a.equal(p.project(w).some(r=>r.id==='R1'),false);});

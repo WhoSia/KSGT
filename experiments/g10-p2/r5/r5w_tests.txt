@@ -1,0 +1,15 @@
+test_actor_mismatch (test_r5w_replay.ReplayTests.test_actor_mismatch) ... ok
+test_costs (test_r5w_replay.ReplayTests.test_costs) ... ok
+test_duplicate_call (test_r5w_replay.ReplayTests.test_duplicate_call) ... ok
+test_frame_hash_mismatch (test_r5w_replay.ReplayTests.test_frame_hash_mismatch) ... ok
+test_frame_order (test_r5w_replay.ReplayTests.test_frame_order) ... ok
+test_parent_reuse_modified (test_r5w_replay.ReplayTests.test_parent_reuse_modified) ... ok
+test_provider_text_modified (test_r5w_replay.ReplayTests.test_provider_text_modified) ... ok
+test_real_archive_replay (test_r5w_replay.ReplayTests.test_real_archive_replay) ... ok
+test_trace_counts (test_r5w_replay.ReplayTests.test_trace_counts) ... ok
+test_wrong_parent_hash (test_r5w_replay.ReplayTests.test_wrong_parent_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.025s
+
+OK

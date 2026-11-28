@@ -1,0 +1,19 @@
+{
+  "schema": "ksgt.g10p2.r5q1.custody.v1",
+  "new_files": [
+    {
+      "name": "r5q_authority_boundary.py",
+      "sha256": "710862a6f68fc1400ae84f0039dd8c6839d3398c5b47f0230cd814dc5c0e825c",
+      "bytes": 982
+    },
+    {
+      "name": "test_r5q_authority_boundary.py",
+      "sha256": "fd14663f70346f827d51d728a7bca7638117ca64a850eda1345ccd6afa34237d",
+      "bytes": 1271
+    }
+  ],
+  "tests": "25/25 local synthetic+gate+authority PASS",
+  "original_zip_reused": true,
+  "user_requested_application_stage": "SUBMITTED_USER_ATTESTED",
+  "human_reader_gold": 0
+}

@@ -1,0 +1,61 @@
+name: KSGT G10-P2 R7c implicit evidence reader
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7c-reader.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  reader:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_key.json)" = e4a7cb84751c99789998220b9787ada54862e313
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_count.json)" = 56ed8d3f06c3ee01e2e25eff15c304f242cf53cf
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_color.json)" = 5839607ac81ab0746e2368589205c09e1e91c9c5
+          test "$(git hash-object experiments/g10-p2/r5/r7b_family_room.json)" = 49bb86540fefa3253072a7219584760f96633093
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_cases.cjs)" = d498ede5744d139a9cb35ddefa115b5fd1405f38
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_prompt.cjs)" = 21cdf498134806ac2ff620c317298edbbd7d2b92
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_parse.cjs)" = e80408e29ce90cf71e0c6b09def3e0eef95c45b6
+          test "$(git hash-object experiments/g10-p2/r5/r7c_implicit_cases.json)" = 17d0f0387bf972f3db8079712efb964ed2738a6f
+          test "$(git hash-object experiments/g10-p2/r5/r7c_prereg.md)" = bbb2afece6fa371669b846ea3bb3937c096fcde9
+          test "$(git hash-object experiments/g10-p2/r5/r7c_implicit_prompt.cjs)" = 3bcde56ccc520869ca823cca4d625f7488a43e15
+          test "$(git hash-object experiments/g10-p2/r5/r7c_implicit_reader.cjs)" = 73a285fb8bf8fbc4265a2f10ba6633730485584d
+          test "$(git hash-object experiments/g10-p2/r5/r7c_implicit_reader.test.cjs)" = 91d9f5fbb36b8c99d2c45f806778a2b7364a78e7
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_algebra.cjs)" = 603fd3c7dc4e1b19e56a8fc498d75a576dab82b0
+          test "$(git hash-object experiments/g10-p2/r5/r7b_scope_algebra.test.cjs)" = f7bd2a53ec0232e8aa7fd9325069345e2aef42ee
+          node --test experiments/g10-p2/r5/r7c_implicit_reader.test.cjs experiments/g10-p2/r5/r7b_scope_algebra.test.cjs
+          node experiments/g10-p2/r5/r7c_implicit_reader.cjs --preflight > "$RUNNER_TEMP/r7c-preflight.json"
+      - name: Sixteen paired calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7c_implicit_reader.cjs --execute "$RUNNER_TEMP/r7c-live"
+      - name: Verify and analyze
+        run: node experiments/g10-p2/r5/r7c_implicit_reader.cjs --verify "$RUNNER_TEMP/r7c-live" > "$RUNNER_TEMP/r7c-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7c-implicit-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7c-live/
+            ${{ runner.temp }}/r7c-preflight.json
+            ${{ runner.temp }}/r7c-analysis.json

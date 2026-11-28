@@ -1,0 +1,44 @@
+name: KSGT G10-P2 R6t coupled reader-obligation trial
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r6t-writer.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  matched-scenes:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify identity, tests and frozen plan
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          node --test experiments/g10-p2/r5/r6t*.test.cjs
+          node experiments/g10-p2/r5/r6t_writer.cjs --preflight > "$RUNNER_TEMP/r6t-preflight.json"
+          cmp "$RUNNER_TEMP/r6t-preflight.json" experiments/g10-p2/r5/r6t_preflight.json
+      - name: Twelve matched generation calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r6t_writer.cjs --execute "$RUNNER_TEMP/r6t-live"
+      - name: Verify completed receipts
+        run: node experiments/g10-p2/r5/r6t_writer.cjs --verify "$RUNNER_TEMP/r6t-live"
+      - name: Preserve full or partial receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r6t-writer-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r6t-live/
+            ${{ runner.temp }}/r6t-preflight.json

@@ -1,0 +1,50 @@
+{
+  "matched": {
+    "문단": {
+      "pairs": 89,
+      "content": {
+        "ADD_EVIDENCE_OR_DETAIL": 43,
+        "SPLIT": 8,
+        "DELETE": 1
+      },
+      "organization": {
+        "DELETE": 12,
+        "ORDER": 2,
+        "ADD_EVIDENCE_OR_DETAIL": 3,
+        "SPLIT": 3
+      },
+      "both": {
+        "ADD_EVIDENCE_OR_DETAIL": 1
+      },
+      "neither_marked": 35
+    },
+    "문서": {
+      "pairs": 100,
+      "content": {
+        "COUNTERARGUMENT": 53,
+        "ADD_EVIDENCE_OR_DETAIL": 40,
+        "DELETE": 2
+      },
+      "organization": {
+        "MERGE": 7,
+        "ADD_EVIDENCE_OR_DETAIL": 8,
+        "DELETE": 6,
+        "SPLIT": 25,
+        "ORDER": 1
+      },
+      "both": {
+        "ADD_EVIDENCE_OR_DETAIL": 5
+      },
+      "neither_marked": 17
+    }
+  },
+  "patterns": {
+    "ADD_EVIDENCE_OR_DETAIL": "(?:근거|설명|예시|배경 정보|데이터|내용)[^.!?\\n]{0,40}(?:추가해야|추가하면|추가할 필요|보충해야|보완해야|제시할 필요|마련하면|마련해야)",
+    "DELETE": "삭제(?:해야|하면|하는|하고|할 필요|하거나)",
+    "SPLIT": "(?:문단[^.!?\\n]{0,28}(?:나누어|나누고|나눌|구분해야)|문단을 정확히 나누어)",
+    "MERGE": "(?:통합|합쳐|합치는)(?:하|할|를|는|어|야|면|고|되|지|는 것)",
+    "ORDER": "(?:순서[^.!?\\n]{0,22}(?:검토해야|바꾸|조정|재구성)|(?:서론|본론|결론)의 내용으로 더 적절)",
+    "COUNTERARGUMENT": "(?:반대 의견|반대 측 의견|상대 입장|다른 입장|반박)[^.!?\\n]{0,50}(?:부족|추가|보완|고려하면|설명해야|논의해야|설명하거나)"
+  },
+  "meaning": "Exact lexical pattern presence only. Absence does not mean KEEP or no advice; co-occurrence does not prove action identity. Rules authored after viewing development examples."
+}

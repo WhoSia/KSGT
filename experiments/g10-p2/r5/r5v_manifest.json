@@ -1,0 +1,43 @@
+{
+  "schema": "ksgt.g10p2.r5v.custody.v1",
+  "files": [
+    {
+      "name": "R5V_LIRA_LINES.md",
+      "bytes": 1673,
+      "sha256": "7a81d12da275cac3f95086e7665b81581c745dcda0bc3501b22670353c2cbe40"
+    },
+    {
+      "name": "R5V_RESEARCH_REPORT.md",
+      "bytes": 4408,
+      "sha256": "14b7a93d7d61095da4db08d154c3b998df809a39b7b92ac008cb59b8bf8bc599"
+    },
+    {
+      "name": "r5v_decisions.json",
+      "bytes": 878,
+      "sha256": "429fe5908794f7d9d1d864fac6b9979fbd07c4e7b6cea7a765c9559bb8803432"
+    },
+    {
+      "name": "r5v_execution_receipt.json",
+      "bytes": 2379,
+      "sha256": "a496d085c0d40f35dfed1009c1588acd9be7adb5b517bce3e5364f971f1693a3"
+    },
+    {
+      "name": "r5v_lock_audit.py",
+      "bytes": 4821,
+      "sha256": "9b1d417ab5d6812d52e89caa2d7c3ca50ad17554194eafbf75681d327a8a5a19"
+    },
+    {
+      "name": "r5v_receipt.py",
+      "bytes": 1735,
+      "sha256": "fafd64943ab906828a7aced39aa10673c3392ff20a31dc16916a8ab158c387fd"
+    },
+    {
+      "name": "test_r5v_lock_audit.py",
+      "bytes": 4246,
+      "sha256": "ae4e97d1a403d7d10b6c665000254f107e03e311c73603c2f366343754553271"
+    }
+  ],
+  "human_ratings": 0,
+  "raw_nikl_archive_included": false,
+  "tests": "47/47 SYNTHETIC PASS"
+}

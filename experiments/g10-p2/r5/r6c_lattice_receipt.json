@@ -1,0 +1,63 @@
+{
+  "source_pairs": 530,
+  "proposal_pairs": 1060,
+  "synthetic_exhaustive_cases": 229,
+  "differential_all_equal": true,
+  "roles": {
+    "expert": {
+      "proposals": 530,
+      "ambiguous_optimal_paths": 110,
+      "no_forced_edits_when_changed": 89,
+      "forced_edit_edges": 614,
+      "possible_edit_edges": 2402,
+      "distance_total": 1145,
+      "sequence_matcher_proxy_total": 1158
+    },
+    "model": {
+      "proposals": 530,
+      "ambiguous_optimal_paths": 178,
+      "no_forced_edits_when_changed": 77,
+      "forced_edit_edges": 956,
+      "possible_edit_edges": 6066,
+      "distance_total": 2249,
+      "sequence_matcher_proxy_total": 2285
+    }
+  },
+  "projection": {
+    "different_pairs": 273,
+    "either_ambiguous": 175,
+    "forced_noninsert_projection_unchanged": 176,
+    "forced_projection_equals_old": 235,
+    "forced_projection_equals_expert": 81,
+    "forced_projection_equals_model": 20
+  },
+  "full_seconds": {
+    "go_band": 0.33383803099968645,
+    "go_full": 0.9701005899996744,
+    "python": 1.932370014999833
+  },
+  "benchmark_pairs": 118,
+  "timings": {
+    "go_band_seconds": [
+      0.03642278300048929,
+      0.042887641000561416,
+      0.03331624600014038
+    ],
+    "go_full_seconds": [
+      0.11903530700055853,
+      0.11471554499985359,
+      0.11197994099984498
+    ],
+    "python_reference_seconds": [
+      0.24358949300039967,
+      0.23720553400016797,
+      0.27712448200054496
+    ]
+  },
+  "median_seconds": {
+    "go_band_seconds": 0.03642278300048929,
+    "go_full_seconds": 0.11471554499985359,
+    "python_reference_seconds": 0.24358949300039967
+  },
+  "limits": "Exact minimum unit-cost codepoint paths, not linguistic edits; forced projection excludes inserts, oracle-assisted retrospective, not quality metric. Python reference is same algorithm not R6b speed baseline. No raw text or row IDs."
+}

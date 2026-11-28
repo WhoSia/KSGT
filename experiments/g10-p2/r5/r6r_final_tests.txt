@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: distinguishes valid KEEP, failed patch, and direct unchanged
+ok 1 - distinguishes valid KEEP, failed patch, and direct unchanged
+  ---
+  duration_ms: 138.961407
+  type: 'test'
+  ...
+# Subtest: exact nonoverlapping replacements; original gaps retained
+ok 2 - exact nonoverlapping replacements; original gaps retained
+  ---
+  duration_ms: 13.671458
+  type: 'test'
+  ...
+# Subtest: KEEP and deletion
+ok 3 - KEEP and deletion
+  ---
+  duration_ms: 0.359072
+  type: 'test'
+  ...
+# Subtest: reject absent, repeated, overlapping or no-op anchors
+ok 4 - reject absent, repeated, overlapping or no-op anchors
+  ---
+  duration_ms: 0.585268
+  type: 'test'
+  ...
+# Subtest: UTF-16 anchor coordinates, codepoint coverage
+ok 5 - UTF-16 anchor coordinates, codepoint coverage
+  ---
+  duration_ms: 0.1838
+  type: 'test'
+  ...
+# Subtest: matched facts and draft, alternating order, ten cells
+ok 6 - matched facts and draft, alternating order, ten cells
+  ---
+  duration_ms: 41.375318
+  type: 'test'
+  ...
+# Subtest: invalid patch rolls back, not silently passed
+ok 7 - invalid patch rolls back, not silently passed
+  ---
+  duration_ms: 1.040807
+  type: 'test'
+  ...
+# Subtest: provider completion and tamper checks, stop after failure
+ok 8 - provider completion and tamper checks, stop after failure
+  ---
+  duration_ms: 91.437404
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 377.883937

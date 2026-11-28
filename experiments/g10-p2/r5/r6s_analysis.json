@@ -1,0 +1,565 @@
+{
+  "authority": "FORMAT_AND_RECEIPT_ONLY",
+  "receipt": {
+    "complete": 16,
+    "tokens": 13222
+  },
+  "arms": {
+    "one_call": {
+      "calls": 4,
+      "input": 1849,
+      "completion": 1036,
+      "tokens": 2885,
+      "medianPipelineRequestMs": 719.5,
+      "paragraphCountMatch": 4,
+      "outputs": 4
+    },
+    "draft_revise": {
+      "calls": 8,
+      "input": 4720,
+      "completion": 1965,
+      "tokens": 6685,
+      "medianPipelineRequestMs": 1315,
+      "paragraphCountMatch": 4,
+      "outputs": 4
+    },
+    "plan_realize": {
+      "calls": 8,
+      "input": 4641,
+      "completion": 1896,
+      "tokens": 6537,
+      "medianPipelineRequestMs": 1749,
+      "paragraphCountMatch": 4,
+      "outputs": 4
+    }
+  },
+  "validPlans": 4,
+  "fallbacks": 0,
+  "rows": [
+    {
+      "id": "lab_direct",
+      "work": "lab",
+      "step": "direct",
+      "sourceSHA": "07d057661b48d3659682a70140f786dfc4160b9fee8a5392a0eb5af02892538b",
+      "output": "두 용기에 같은 양의 물을 넣고 온도 변화를 비교하기 위해 실험을 설계하였다. 실험은 동일한 시각에 시작했으며, 두 용기의 초기 수온은 모두 24도였다. A 용기에는 덮개를 씌우고, B 용기에는 덮개를 씌우지 않은 상태로 두었다.  \n\n30분이 경과한 후 A 용기의 온도는 22도로 2도 감소했으며, B 용기의 온도는 20도로 4도 감소하였다. 두 용기의 온도 변화량은 각각 2도와 4도로 차이를 보였다.  \n\n덮개가 온도 차이에 영향을 미쳤을 가능성을 제시할 수는 있지만, 실내 공기의 흐름을 측정하지 않았고 실험은 한 차례만 수행했기 때문에 덮개의 효과를 확정적으로 결론짓기는 어렵다. 따라서 관찰된 온도 차이는 덮개의 유무와 다른 통제되지 않은 요인들의 복합적인 결과일 가능성이 있다.",
+      "parentSHA": null,
+      "promptSHA": "1d4d192b6d4747e7e4788f82609e836dfe275ba83cc21aba6d32754cde83d3e8",
+      "planStatus": null,
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.074097911,
+        "prompt_tokens": 465,
+        "prompt_time": 0.02504398,
+        "completion_tokens": 263,
+        "completion_time": 0.554352688,
+        "total_tokens": 728,
+        "total_time": 0.579396668,
+        "completion_tokens_details": {
+          "reasoning_tokens": 23
+        }
+      },
+      "latencyMs": 810
+    },
+    {
+      "id": "lab_revise",
+      "work": "lab",
+      "step": "revise",
+      "sourceSHA": "07d057661b48d3659682a70140f786dfc4160b9fee8a5392a0eb5af02892538b",
+      "output": "두 용기에 같은 양의 물을 넣고, 초기 온도를 24도에서 시작하도록 설정하였다. 실험은 동일한 시각에 동시에 시작했으며, A 용기에는 덮개를 씌우고 B 용기에는 덮개를 씌우지 않은 상태로 두었다.  \n\n30분이 지난 뒤 A 용기의 온도는 22도로 2도 감소했고, B 용기의 온도는 20도로 4도 감소하였다. 따라서 두 용기의 온도 변화량은 각각 2도와 4도로 차이를 보였다.  \n\n덮개의 유무가 온도 차이에 기여했을 가능성을 제시할 수 있지만, 실내 공기의 흐름을 측정하지 않았고 실험을 한 차례만 수행했기 때문에 덮개의 효과를 확정적으로 결론짓기는 어렵다. 관찰된 온도 차이는 덮개의 존재와 함께 통제되지 않은 다른 요인들의 복합적인 결과일 가능성이 있다.",
+      "parentSHA": "3c2ee2168670e92e49028ff2725a764b167533ea9f7abc91b7b07958b622c1a2",
+      "promptSHA": "f431a71002b1e0e87fc4add004b970a2357df30d5bad17e0c2ef9732518e6067",
+      "planStatus": null,
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.022151478,
+        "prompt_tokens": 732,
+        "prompt_time": 0.045191625,
+        "completion_tokens": 237,
+        "completion_time": 0.508826962,
+        "total_tokens": 969,
+        "total_time": 0.554018587,
+        "completion_tokens_details": {
+          "reasoning_tokens": 13
+        }
+      },
+      "latencyMs": 615
+    },
+    {
+      "id": "lab_plan",
+      "work": "lab",
+      "step": "plan",
+      "sourceSHA": "07d057661b48d3659682a70140f786dfc4160b9fee8a5392a0eb5af02892538b",
+      "output": "{\n  \"paragraphs\": [\n    {\n      \"role\": \"상황\",\n      \"facts\": [1, 2, 3, 4, 5],\n      \"focus\": 1,\n      \"rhythm\": \"담백\"\n    },\n    {\n      \"role\": \"관찰\",\n      \"facts\": [6, 7],\n      \"focus\": 6,\n      \"rhythm\": \"담백\"\n    },\n    {\n      \"role\": \"한계\",\n      \"facts\": [8, 9, 10],\n      \"focus\": 10,\n      \"rhythm\": \"담백\"\n    }\n  ]\n}",
+      "parentSHA": null,
+      "promptSHA": "c56b21dbd5b385bdad36044f0fe6475d45a533f35a9910d84415dc1c91a194e8",
+      "planStatus": null,
+      "paragraphs": null,
+      "usage": {
+        "queue_time": 0.380962521,
+        "prompt_tokens": 577,
+        "prompt_time": 0.032340863,
+        "completion_tokens": 311,
+        "completion_time": 0.666718062,
+        "total_tokens": 888,
+        "total_time": 0.699058925,
+        "completion_tokens_details": {
+          "reasoning_tokens": 166
+        }
+      },
+      "latencyMs": 1114
+    },
+    {
+      "id": "lab_realize",
+      "work": "lab",
+      "step": "realize",
+      "sourceSHA": "07d057661b48d3659682a70140f786dfc4160b9fee8a5392a0eb5af02892538b",
+      "output": "두 용기에 같은 양의 물을 넣고, 같은 시각에 온도 측정을 시작하였다. A 용기에는 덮개를 씌우고, B 용기에는 덮개를 씌우지 않았다. 실험 시작 시 두 용기의 물 온도는 모두 24도였다.  \n\n30분이 지난 후 A 용기의 물 온도는 22도, B 용기의 물 온도는 20도로 측정되었다. 따라서 A는 2도, B는 4도씩 온도가 감소하였다.  \n\n이 실험은 한 차례만 수행했으며, 실내 공기의 흐름은 측정하지 않았다. 따라서 덮개의 유무가 온도 차이의 원인이라고 확정할 수는 없다.",
+      "parentSHA": "c14bf0ce258ce226e1fe0179fc5a802dbc4fb9e47e761d5d16e6eb1f639a810f",
+      "promptSHA": "d52de9c73e940d1e37c1aae455ef5c33c3e9e120cb833349524ea75606398fd3",
+      "planStatus": {
+        "kind": "VALID",
+        "plan": {
+          "paragraphs": [
+            {
+              "role": "상황",
+              "facts": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "focus": 1,
+              "rhythm": "담백"
+            },
+            {
+              "role": "관찰",
+              "facts": [
+                6,
+                7
+              ],
+              "focus": 6,
+              "rhythm": "담백"
+            },
+            {
+              "role": "한계",
+              "facts": [
+                8,
+                9,
+                10
+              ],
+              "focus": 10,
+              "rhythm": "담백"
+            }
+          ]
+        }
+      },
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.018246566,
+        "prompt_tokens": 596,
+        "prompt_time": 0.029230354,
+        "completion_tokens": 187,
+        "completion_time": 0.400466867,
+        "total_tokens": 783,
+        "total_time": 0.429697221,
+        "completion_tokens_details": {
+          "reasoning_tokens": 15
+        }
+      },
+      "latencyMs": 477
+    },
+    {
+      "id": "letter_plan",
+      "work": "letter",
+      "step": "plan",
+      "sourceSHA": "dd67458c7d9f19b743aacb636df8dfaf923657c68f4868ad9fefb7adc8306dac",
+      "output": "{\n  \"paragraphs\": [\n    {\n      \"role\": \"상황\",\n      \"facts\": [1, 2, 3],\n      \"focus\": 2,\n      \"rhythm\": \"담백\"\n    },\n    {\n      \"role\": \"요청\",\n      \"facts\": [4, 5, 6, 7, 8],\n      \"focus\": 7,\n      \"rhythm\": \"완급\"\n    }\n  ]\n}",
+      "parentSHA": null,
+      "promptSHA": "d42e253eeff19966e5e9db21202890de79d16997975beec98f2953ad738ba4a3",
+      "planStatus": null,
+      "paragraphs": null,
+      "usage": {
+        "queue_time": 0.022254648,
+        "prompt_tokens": 534,
+        "prompt_time": 0.027128561,
+        "completion_tokens": 262,
+        "completion_time": 0.556383038,
+        "total_tokens": 796,
+        "total_time": 0.583511599,
+        "completion_tokens_details": {
+          "reasoning_tokens": 155
+        }
+      },
+      "latencyMs": 638
+    },
+    {
+      "id": "letter_realize",
+      "work": "letter",
+      "step": "realize",
+      "sourceSHA": "dd67458c7d9f19b743aacb636df8dfaf923657c68f4868ad9fefb7adc8306dac",
+      "output": "아, 원래 토요일 오후 2시에 만나기로 했었지? 근데 시간이 바뀌어서 이제 오후 3시에 1층 로비에서 만나면 돼.  \n\n연습실은 아직 정해지지 않았고, 발표에 쓸 파일은 어제 공유 폴더에 올려놨아. 네가 그 파일 열어봤는지는 모르겠지만, 모임 전에 한 번 확인해 줬으면 해. 준비물은 그 파일 하나뿐이니까.",
+      "parentSHA": "8bf81fcf4b60bea9cea3a92b5ddd25cbac992d0b4b73b92a775943a5c109a87f",
+      "promptSHA": "af64d68afd9b079b568d580e0dcac30405e073555171976d8c8f4ccaa5616e14",
+      "planStatus": {
+        "kind": "VALID",
+        "plan": {
+          "paragraphs": [
+            {
+              "role": "상황",
+              "facts": [
+                1,
+                2,
+                3
+              ],
+              "focus": 2,
+              "rhythm": "담백"
+            },
+            {
+              "role": "요청",
+              "facts": [
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "focus": 7,
+              "rhythm": "완급"
+            }
+          ]
+        }
+      },
+      "paragraphs": 2,
+      "usage": {
+        "queue_time": 0.814311856,
+        "prompt_tokens": 526,
+        "prompt_time": 0.027050102,
+        "completion_tokens": 191,
+        "completion_time": 0.399799142,
+        "total_tokens": 717,
+        "total_time": 0.426849244,
+        "completion_tokens_details": {
+          "reasoning_tokens": 75
+        }
+      },
+      "latencyMs": 1269
+    },
+    {
+      "id": "letter_direct",
+      "work": "letter",
+      "step": "direct",
+      "sourceSHA": "dd67458c7d9f19b743aacb636df8dfaf923657c68f4868ad9fefb7adc8306dac",
+      "output": "아, 혹시 아직 모임 시간 헷갈렸다면 알려줄게. 원래는 토요일 오후 2시였는데, 지금은 오후 3시로 바뀌었어. 장소는 변함없이 1층 로비야. 연습실 쓰는 건 아직 확정 안 됐으니, 그 부분은 나중에 다시 얘기하자.\n\n그리고 발표에 필요한 파일은 어제 공유 폴더에 올려놨으니, 모임 전에 한 번 확인해 줬으면 해. 준비할 자료는 그 파일 하나뿐이니까, 꼭 열어보고 내용 체크해 줘. 고마워!",
+      "parentSHA": null,
+      "promptSHA": "3c8e5d589194e305e1fef237b98a020f76d68581cb579ab8cd5e3dfd50c12abe",
+      "planStatus": null,
+      "paragraphs": 2,
+      "usage": {
+        "queue_time": 0.115517917,
+        "prompt_tokens": 422,
+        "prompt_time": 0.020137869,
+        "completion_tokens": 196,
+        "completion_time": 0.411931568,
+        "total_tokens": 618,
+        "total_time": 0.432069437,
+        "completion_tokens_details": {
+          "reasoning_tokens": 48
+        }
+      },
+      "latencyMs": 578
+    },
+    {
+      "id": "letter_revise",
+      "work": "letter",
+      "step": "revise",
+      "sourceSHA": "dd67458c7d9f19b743aacb636df8dfaf923657c68f4868ad9fefb7adc8306dac",
+      "output": "아, 혹시 시간 헷갈렸을까 해서 알려줄게. 원래는 토요일 오후 2시였는데, 이제는 오후 3시야. 장소는 변함없이 1층 로비니까 그쪽으로 와.\n\n발표에 쓸 파일은 어제 공유 폴더에 올려놨으니, 모임 전에 한 번 확인해 줬으면 해. 준비할 자료는 그 파일 하나뿐이니까 내용만 체크해 주면 돼. 고마워.",
+      "parentSHA": "ded54aa22ffce4de117f85b670d7dbf840f185f086f7689e1efa5e3fe1b7fde1",
+      "promptSHA": "bc45f7e21d9dd2acc576ebf4ade49004b967a2abfc8ef1242326971d4ed13786",
+      "planStatus": null,
+      "paragraphs": 2,
+      "usage": {
+        "queue_time": 0.115833273,
+        "prompt_tokens": 597,
+        "prompt_time": 0.030196995,
+        "completion_tokens": 153,
+        "completion_time": 0.323827465,
+        "total_tokens": 750,
+        "total_time": 0.35402446,
+        "completion_tokens_details": {
+          "reasoning_tokens": 36
+        }
+      },
+      "latencyMs": 498
+    },
+    {
+      "id": "scene_direct",
+      "work": "scene",
+      "step": "direct",
+      "sourceSHA": "4a115f270f5fcf427978b1314c114566ff9791fe2270de4d7fe7811cd2a9f276",
+      "output": "지우는 빈 대합실 창가에 앉아 있었다. 빗방울이 유리창을 타고 흐르는 소리는 조용히 울려 퍼졌다. 가로등 하나가 어둠을 뚫고 비추는 빛이 창에 스며들어, 물방울 위에 작은 반짝임을 남겼다.  \n\n시계는 6시 10분을 가리키고 있었고, 그 순간 닫힌 출입문 너머에서 짧은 소리가 들렸다. 그 소리가 무엇인지 지우는 알 수 없었다. 다시 시계를 바라보니, 눈금은 이미 6시 11분을 가리키고 있었다.  \n\n시간이 흐르는 틈에 빗줄기는 여전히 유리창을 타고 내려오고, 가로등 빛은 물방울 사이를 스쳐 지나갔다. 지우는 그 빛을 따라 시선을 창으로 돌렸다.",
+      "parentSHA": null,
+      "promptSHA": "0e66b65e9e1227162e27003fcd704095d2ca6deaf9fcf958d2e7af108711cb36",
+      "planStatus": null,
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.053394633,
+        "prompt_tokens": 483,
+        "prompt_time": 0.022250186,
+        "completion_tokens": 255,
+        "completion_time": 0.540099786,
+        "total_tokens": 738,
+        "total_time": 0.562349972,
+        "completion_tokens_details": {
+          "reasoning_tokens": 38
+        }
+      },
+      "latencyMs": 648
+    },
+    {
+      "id": "scene_revise",
+      "work": "scene",
+      "step": "revise",
+      "sourceSHA": "4a115f270f5fcf427978b1314c114566ff9791fe2270de4d7fe7811cd2a9f276",
+      "output": "지우는 빈 대합실 창가에 앉아 있었다. 유리창에 맺힌 빗방울은 조용히 흘러내렸고, 가로등 하나의 빛이 그 위에 스며들어 작은 반짝임을 남겼다.  \n\n시계는 6시 10분을 가리키고 있었고, 닫힌 출입문 너머에서 짧은 소리가 들렸다. 그 소리가 무엇인지 지우는 알지 못했다. 시계를 다시 보니 눈금은 이미 6시 11분을 가리키고 있었다.  \n\n시간이 흐르는 틈에 빗줄기는 여전히 유리창을 타고 내려왔고, 가로등 빛은 물방울 사이를 스쳐 지나갔다. 지우는 그 빛을 따라 시선을 창으로 돌렸다.",
+      "parentSHA": "88728d9c73b6416519d49f7354436d0b69ff358ea1c67a75fd6463883722d84c",
+      "promptSHA": "e441b3bde95844db005dbbbb06dc0a9030ceb9afad22db044b901eab69436971",
+      "planStatus": null,
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.022063215,
+        "prompt_tokens": 727,
+        "prompt_time": 0.034818509,
+        "completion_tokens": 223,
+        "completion_time": 0.470000665,
+        "total_tokens": 950,
+        "total_time": 0.504819174,
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        }
+      },
+      "latencyMs": 557
+    },
+    {
+      "id": "scene_plan",
+      "work": "scene",
+      "step": "plan",
+      "sourceSHA": "4a115f270f5fcf427978b1314c114566ff9791fe2270de4d7fe7811cd2a9f276",
+      "output": "{\n  \"paragraphs\": [\n    {\n      \"role\": \"상황\",\n      \"facts\": [1, 2, 5],\n      \"focus\": 1,\n      \"rhythm\": \"담백\"\n    },\n    {\n      \"role\": \"관찰\",\n      \"facts\": [3, 4, 6, 7],\n      \"focus\": 3,\n      \"rhythm\": \"완급\"\n    },\n    {\n      \"role\": \"전개\",\n      \"facts\": [8, 9, 10],\n      \"focus\": 9,\n      \"rhythm\": \"유연\"\n    }\n  ]\n}",
+      "parentSHA": null,
+      "promptSHA": "4ce34eb321783e41d98873d9299f51ab5632d298304390c47275fb5c05843a76",
+      "planStatus": null,
+      "paragraphs": null,
+      "usage": {
+        "queue_time": 1.141410081,
+        "prompt_tokens": 595,
+        "prompt_time": 0.031892138,
+        "completion_tokens": 207,
+        "completion_time": 0.433052456,
+        "total_tokens": 802,
+        "total_time": 0.464944594,
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        }
+      },
+      "latencyMs": 1637
+    },
+    {
+      "id": "scene_realize",
+      "work": "scene",
+      "step": "realize",
+      "sourceSHA": "4a115f270f5fcf427978b1314c114566ff9791fe2270de4d7fe7811cd2a9f276",
+      "output": "지우는 빈 대합실 창가에 앉아 있었다. 유리창에는 빗방울이 맺혀 있었고, 대합실 입구의 시계는 6시 10분을 가리키고 있었다.  \n\n창 밖으로 보이는 가로등은 하나뿐이었다. 그 가로등의 빛은 창에 비쳐 물방울 위에 은은한 반사를 만들었다. 닫힌 출입문 너머에서 짧은 소리가 났지만, 지우는 그 소리가 무엇인지 알지 못했다.  \n\n지우는 시계를 다시 보았다. 시계는 이제 6시 11분을 가리키고 있었다. 마지막으로 그녀는 창으로 시선을 돌렸다.",
+      "parentSHA": "298f3f1bfc7e34436772e1a51b3e4dd4c13e2c3166eefefd2989b0de2d666e8e",
+      "promptSHA": "518dc238e3d5ec6f73c1481662eafd981b2ad03543362ab81c1cabd2f633fe76",
+      "planStatus": {
+        "kind": "VALID",
+        "plan": {
+          "paragraphs": [
+            {
+              "role": "상황",
+              "facts": [
+                1,
+                2,
+                5
+              ],
+              "focus": 1,
+              "rhythm": "담백"
+            },
+            {
+              "role": "관찰",
+              "facts": [
+                3,
+                4,
+                6,
+                7
+              ],
+              "focus": 3,
+              "rhythm": "완급"
+            },
+            {
+              "role": "전개",
+              "facts": [
+                8,
+                9,
+                10
+              ],
+              "focus": 9,
+              "rhythm": "유연"
+            }
+          ]
+        }
+      },
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.02969439,
+        "prompt_tokens": 614,
+        "prompt_time": 0.064973875,
+        "completion_tokens": 195,
+        "completion_time": 0.420703185,
+        "total_tokens": 809,
+        "total_time": 0.48567706,
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        }
+      },
+      "latencyMs": 543
+    },
+    {
+      "id": "essay_plan",
+      "work": "essay",
+      "step": "plan",
+      "sourceSHA": "4029b32b14880ac09ce049149171c930307794a242cdad40b1383df50c02664d",
+      "output": "{\n  \"paragraphs\": [\n    {\n      \"role\": \"상황\",\n      \"facts\": [1, 2, 3],\n      \"focus\": 1,\n      \"rhythm\": \"담백\"\n    },\n    {\n      \"role\": \"전개\",\n      \"facts\": [4, 5, 6],\n      \"focus\": 4,\n      \"rhythm\": \"완급\"\n    },\n    {\n      \"role\": \"마무리\",\n      \"facts\": [7, 8, 9],\n      \"focus\": 7,\n      \"rhythm\": \"유연\"\n    }\n  ]\n}",
+      "parentSHA": null,
+      "promptSHA": "bc3ecc0d96fa5a25a8ae20518ffc3d62fddbb755be6d8906b7c7de0028853607",
+      "planStatus": null,
+      "paragraphs": null,
+      "usage": {
+        "queue_time": 0.021524721,
+        "prompt_tokens": 591,
+        "prompt_time": 0.088869832,
+        "completion_tokens": 333,
+        "completion_time": 0.7110216,
+        "total_tokens": 924,
+        "total_time": 0.799891432,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 190
+        }
+      },
+      "latencyMs": 854
+    },
+    {
+      "id": "essay_realize",
+      "work": "essay",
+      "step": "realize",
+      "sourceSHA": "4029b32b14880ac09ce049149171c930307794a242cdad40b1383df50c02664d",
+      "output": "오래된 수첩을 꺼냈다. 그 안에는 지난 학기 동안 적어 놓은 할 일 목록이 빼곡히 들어 있었다. 몇몇 항목은 이미 체크해 두었고, 아직 남아 있는 일도 있었다.  \n\n목록 옆에 동그라미가 그려진 줄이 몇 개 있었다. 그 동그라미가 무슨 의미였는지는 지금도 기억이 나지 않는다. 당시엔 중요한 일이라 생각해 표시했지만, 지금은 그 의미를 추측하기조차 어렵다.  \n\n기록만으로는 그때의 우선순위를 완전히 복원할 수 없다는 생각이 든다. 그래도 그 몇 줄이 당시 내가 무엇을 하려 했는지를 어느 정도 알려 준다. 그래서 나는 그 수첩을 버리지 않고 다시 보관하기로 했다.",
+      "parentSHA": "69400f588f5fce03fc2494ba02b893e24705474c9d3e9fe67ec3075d63048c17",
+      "promptSHA": "fe6cea8389a1933b85d9d7d0861a8d9000921a30a289f57a1a25f4121894e2b3",
+      "planStatus": {
+        "kind": "VALID",
+        "plan": {
+          "paragraphs": [
+            {
+              "role": "상황",
+              "facts": [
+                1,
+                2,
+                3
+              ],
+              "focus": 1,
+              "rhythm": "담백"
+            },
+            {
+              "role": "전개",
+              "facts": [
+                4,
+                5,
+                6
+              ],
+              "focus": 4,
+              "rhythm": "완급"
+            },
+            {
+              "role": "마무리",
+              "facts": [
+                7,
+                8,
+                9
+              ],
+              "focus": 7,
+              "rhythm": "유연"
+            }
+          ]
+        }
+      },
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.01914984,
+        "prompt_tokens": 608,
+        "prompt_time": 0.028023475,
+        "completion_tokens": 210,
+        "completion_time": 0.447251388,
+        "total_tokens": 818,
+        "total_time": 0.475274863,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        }
+      },
+      "latencyMs": 523
+    },
+    {
+      "id": "essay_direct",
+      "work": "essay",
+      "step": "direct",
+      "sourceSHA": "4029b32b14880ac09ce049149171c930307794a242cdad40b1383df50c02664d",
+      "output": "오래된 수첩을 꺼냈다. 페이지를 넘기니 지난 학기의 할 일 목록이 빽빽이 적혀 있었다. 몇몇 항목은 이미 체크표시가 되어 있었고, 몇몇은 아직 빈 채로 남아 있었다. 옆에 동그라미가 그려진 몇 줄은 눈에 띄었지만, 그 의미는 지금도 떠오르지 않는다.  \n\n목록을 읽으며 나는 그때의 상황을 떠올렸다. 중요한 일이라 생각해 적어 놓은 것들이었지만, 지금은 그 의미가 흐려졌다. 동그라미가 표시된 항목은 아마도 우선순위가 높았던 것이었겠지만, 기록만으로는 정확히 어떤 기준이었는지 알 수 없었다. 끝낸 일과 남은 일 사이에 놓인 그 빈 공간은 당시의 고민과 선택을 조용히 드러낸다.  \n\n그럼에도 불구하고, 이 낡은 수첩은 당시 내가 무엇을 하려 했는지를 일부나마 보여준다. 완전한 복원은 불가능하지만, 적힌 글자와 남은 흔적은 그때의 흐름을 떠올리게 한다. 나는 수첩을 버리지 않고 다시 서랍에 넣었다. 그 안에 담긴 작은 기억들이 언제든 다시 꺼내볼 수 있게 남아 있다.",
+      "parentSHA": null,
+      "promptSHA": "ca603b554c7aa998d4ba233f8b21b198e8eb37446cc2afa792708344a50019ed",
+      "planStatus": null,
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.05340087,
+        "prompt_tokens": 479,
+        "prompt_time": 0.022808859,
+        "completion_tokens": 322,
+        "completion_time": 0.685743258,
+        "total_tokens": 801,
+        "total_time": 0.708552117,
+        "completion_tokens_details": {
+          "reasoning_tokens": 13
+        }
+      },
+      "latencyMs": 791
+    },
+    {
+      "id": "essay_revise",
+      "work": "essay",
+      "step": "revise",
+      "sourceSHA": "4029b32b14880ac09ce049149171c930307794a242cdad40b1383df50c02664d",
+      "output": "오래된 수첩을 꺼냈다. 페이지를 넘기니 지난 학기의 할 일 목록이 빽빽이 적혀 있었다. 몇몇 항목은 이미 체크표시가 되어 있었고, 몇몇은 아직 빈 채로 남아 있었다. 옆에 동그라미가 그려진 몇 줄이 눈에 띄었지만, 그 의미는 지금도 떠오르지 않는다.  \n\n목록을 읽으며 나는 그때의 상황을 떠올렸다. 중요해서 적어 놓은 일들이었지만, 지금은 그 의미가 흐려졌다. 동그라미가 표시된 항목은 아마도 우선순위가 높았던 것이었겠지만, 기록만으로는 정확히 어떤 기준이었는지 알 수 없었다. 끝낸 일과 남은 일 사이에 놓인 빈 공간은 당시의 고민과 선택을 조용히 드러낸다.  \n\n그럼에도 불구하고 이 낡은 수첩은 내가 무엇을 하려 했는지를 일부나마 보여준다. 완전한 복원은 불가능하지만, 적힌 글자와 남은 흔적은 그때의 흐름을 떠올리게 한다. 나는 수첩을 버리지 않고 다시 서랍에 넣었다. 그 안에 담긴 작은 기억들이 언제든 다시 꺼내볼 수 있게 남아 있다.",
+      "parentSHA": "6ba7a6c12dbd074606194090839c7aaa6a5fd7ac54b44ebd4b280c95651046a2",
+      "promptSHA": "ed83697f0f31de0b8de731b3a75383f7fb57597bcb5912edc9d96a1630a53831",
+      "planStatus": null,
+      "paragraphs": 3,
+      "usage": {
+        "queue_time": 0.053623832,
+        "prompt_tokens": 815,
+        "prompt_time": 0.039594724,
+        "completion_tokens": 316,
+        "completion_time": 0.664961504,
+        "total_tokens": 1131,
+        "total_time": 0.704556228,
+        "completion_tokens_details": {
+          "reasoning_tokens": 13
+        }
+      },
+      "latencyMs": 793
+    }
+  ]
+}

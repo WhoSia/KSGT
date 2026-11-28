@@ -1,0 +1,148 @@
+{
+  "schema": "R5t-compatible-cycle-judgments",
+  "utility_weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "evidence_axes": [
+    "source_directness",
+    "reproducibility",
+    "independence",
+    "completeness"
+  ],
+  "quality_promotion": false,
+  "scores_are_heuristic": true,
+  "decisions": [
+    {
+      "id": "R5w-A archived cost/lineage replay",
+      "utility": {
+        "bottleneck_relief": 0.95,
+        "causal_information": 0.92,
+        "language_quality_relevance": 0.85,
+        "execution_readiness": 0.99,
+        "reversibility": 0.98,
+        "risk_reduction": 0.93,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.45,
+        "completeness": 0.85
+      },
+      "P": 0.9362,
+      "E": 0.8175,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "R5w-B trace/aggregation audit",
+      "utility": {
+        "bottleneck_relief": 0.92,
+        "causal_information": 0.94,
+        "language_quality_relevance": 0.9,
+        "execution_readiness": 0.99,
+        "reversibility": 0.98,
+        "risk_reduction": 0.88,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.4,
+        "completeness": 0.83
+      },
+      "P": 0.9369,
+      "E": 0.8,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D8 R4a/R4b actual failure review",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.95,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.88,
+        "reversibility": 0.94,
+        "risk_reduction": 0.93,
+        "cost_efficiency": 0.91
+      },
+      "evidence": {
+        "source_directness": 0.86,
+        "reproducibility": 0.7,
+        "independence": 0.4,
+        "completeness": 0.6
+      },
+      "P": 0.9457,
+      "E": 0.64,
+      "gate": "READY"
+    },
+    {
+      "id": "D1 NIKL official access",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.91,
+        "language_quality_relevance": 0.94,
+        "execution_readiness": 0.4,
+        "reversibility": 0.9,
+        "risk_reduction": 0.88,
+        "cost_efficiency": 0.72
+      },
+      "evidence": {
+        "source_directness": 0.94,
+        "reproducibility": 0.3,
+        "independence": 0.49,
+        "completeness": 0.51
+      },
+      "P": 0.8369,
+      "E": 0.56,
+      "gate": "PREPARE_APPROVAL_PENDING"
+    },
+    {
+      "id": "D6 model training",
+      "utility": {
+        "bottleneck_relief": 0.27,
+        "causal_information": 0.4,
+        "language_quality_relevance": 0.45,
+        "execution_readiness": 0.22,
+        "reversibility": 0.35,
+        "risk_reduction": 0.34,
+        "cost_efficiency": 0.15
+      },
+      "evidence": {
+        "source_directness": 0.66,
+        "reproducibility": 0.37,
+        "independence": 0.38,
+        "completeness": 0.41
+      },
+      "P": 0.321,
+      "E": 0.455,
+      "gate": "BLOCKED"
+    }
+  ],
+  "line_sources": {
+    "U1": "current user portal report",
+    "A1": "r5w_receipt.json",
+    "A2": "r5w_trace_receipt.json",
+    "T1": "r5w_tests.txt"
+  },
+  "line_sha256": [
+    "e156d523d430b4d618a14b9cec8d07a9339695499f36161f8d0c31c0f2491c15",
+    "36cb6400342cfc4a026c4a5abea1496f5340a483cb945068fb63d73c62599dae",
+    "c4af5f62e76399aa48c6d261f228e132e9a6c23c1c5febc7ca077a4696b3d452",
+    "8a03d8ec95c45d368e61567625b29e86b58605af939c09ab55c28843fe1a110e",
+    "252360caa33b82180497474583eaba6f9b2aea8ae4ba748daa4d110224e7d631",
+    "c9e4f38aa5bd999efb9919902178f3f34e95df20e593a03fdc1adee48b1f114c",
+    "a0d5c4f9a6e71595a7e2c215beb02986caea8c7fa0b170c5ac7d3f5673859586",
+    "ac8f9a0561db70089882a9256e24e1c1de7900f854484927797d543edc703133",
+    "6f64f36f5ebb6e8000a9aa861393700b6afa0adf266fea49be1f258df45f65be",
+    "2f1c0a5efbe56d90b8c6ef57072c28a49972262c6a38639d0aa7b30760eea49d",
+    "ab70e7dfae4d515c89be80b010f5d8d9f02ba59c0af1c1576e0ec12f0e8e78c8",
+    "b1e70eb4318eb2d78b5eef393d84ac5f7a7e2e9d428322c7a87b697608814605",
+    "b7bb6c3973264ee77a75b7792f664288fc2129a316fc75f76a572094d5a477d6"
+  ]
+}

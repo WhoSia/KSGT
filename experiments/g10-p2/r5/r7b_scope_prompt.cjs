@@ -1,0 +1,6 @@
+'use strict';
+const {stimuli}=require('./r7b_scope_cases.cjs');
+const sys='한국어 글을 읽고 주어진 진술을 평가하세요. SUPPORTED는 글이 진술을 뒷받침할 때, CONTRADICTED는 글이 진술과 양립할 수 없을 때, UNSETTLED는 글만으로 참과 거짓을 확정할 수 없을 때 선택하세요. 근거 부재와 반박을 구별하세요. 글에서 가장 직접적인 근거가 되는 연속 구절 하나를 원문 그대로 복사하고, 짧게 이유를 설명하세요. 근거가 없다면 evidence는 빈 문자열입니다. 오직 JSON 객체 {"status":"...","evidence":"...","reason":"..."}만 출력하세요.';
+function messages(c,arm){if(!['DIRECT','RESOLVED'].includes(arm))throw Error('BAD_ARM');const lines=['글: '+c.text,'진술: '+c.target];if(arm==='RESOLVED')lines.push('판정할 진술의 구성: 주체='+c.parts[0]+' / 시간='+c.parts[1]+' / 상태 또는 양태='+c.parts[2]+' / 내용='+c.parts[3]);return [{role:'system',content:sys},{role:'user',content:lines.join('\n')}];}
+function schedule(){return stimuli().flatMap((c,i)=>(i%2?['RESOLVED','DIRECT']:['DIRECT','RESOLVED']).map(arm=>({id:c.work+'__'+c.gold+'__'+arm,work:c.work,arm,gold:c.gold,source:{text:c.text,target:c.target,parts:c.parts},messages:messages(c,arm)})));}
+module.exports={sys,messages,schedule};

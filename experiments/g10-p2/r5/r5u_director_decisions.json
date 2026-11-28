@@ -1,0 +1,17 @@
+{
+  "schema":"ksgt.g10p2.r5u.director.v1",
+  "stage":"G10-P2 OPEN / QUALITY_HOLD",
+  "provider_calls_historical":340,
+  "provider_calls_new":0,
+  "independent_human_reader_outcomes":0,
+  "actual_nikl_2024_raw_bytes_acquired":false,
+  "score_semantics":"Research-director heuristic indexes, NOT calibrated probabilities; R5t seven-axis ranking remains canonical",
+  "decisions":[
+    {"id":"D2-WORKLEVEL-ANALYSIS","utility_priority":0.95,"evidence_support":0.91,"execution_gate":"READY","disposition":"SYNTHETIC_IMPLEMENTED_NOT_REAL_EVALUATION"},
+    {"id":"D7-OUTCOME_LOCK-SECURITY","utility_priority":0.93,"evidence_support":0.92,"execution_gate":"READY","disposition":"SYNTHETIC_ONLY_NO_LIVE_UNBLIND"},
+    {"id":"D1-NIKL24-AUTHORIZED-INTAKE","utility_priority":0.93,"evidence_support":0.56,"execution_gate":"PREPARE","disposition":"USER_APPLIED_RAW_BYTES_RIGHTS_HOLD"},
+    {"id":"D3-WORK-LINEAGE","utility_priority":0.90,"evidence_support":0.70,"execution_gate":"PREPARE","disposition":"AUTHENTIC_PARENT_WORK_IDS_HOLD"},
+    {"id":"D6-MODEL-TRAINING","utility_priority":0.32,"evidence_support":0.46,"execution_gate":"BLOCKED","disposition":"INDEPENDENT_HUMAN_QUALITY_HOLD"}
+  ],
+  "no_auto_quality_promotion":true
+}

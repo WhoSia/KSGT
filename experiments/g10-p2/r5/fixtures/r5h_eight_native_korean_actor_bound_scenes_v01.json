@@ -1,0 +1,691 @@
+{
+  "schema": "ksgt.g10p2.r5h.eight-novel-source-bound-korean-scenes.v1",
+  "sourceAuthority": "RESEARCHER_WRITTEN_ROLE_FRAMES_AND_PREDICATE_ALTERNATIVES_NO_HUMAN_GOLD",
+  "creatorDate": "2026-11-21",
+  "model": "openai/gpt-oss-120b",
+  "sampledBeforeModelCalls": true,
+  "rights": "ORIGINAL_KSGT_AUTHOR_WRITTEN",
+  "assumptions": "Eight source-designed scenes, explicitly annotated actor identities, six clause templates per scene. Both alternatives per frame are research author judged synonymous, not independently evaluated. Scene frames define the only licensed actions and may have occasional grammatical or stylistic errors; compiler cannot certify external meaning.",
+  "works": [
+    {
+      "id": "R5H_RECORD_ROOM",
+      "genre": "scene",
+      "place": "늦은 저녁의 기록실",
+      "entities": [
+        {
+          "id": "A",
+          "name": "유나"
+        },
+        {
+          "id": "B",
+          "name": "서진"
+        }
+      ],
+      "task": "늦은 저녁 기록실에서 두 사람의 움직임과 침묵을 140~230자 정도의 자연스러운 한국어 소설 장면으로 묘사한다.",
+      "license": "유나는 접힌 지도를 펼치지 않는다. 서진은 서랍을 열지 않는다. 두 사람은 대화하지 않는다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "늦은 저녁의 기록실에는 책장 사이로 희미한 불빛이 남아 있다.",
+          "predicateChoices": [
+            "기록실에는 늦은 저녁의 희미한 불빛이 책장 사이로 남아 있었다.",
+            "늦은 저녁, 기록실 책장 사이에 희미한 불빛이 걸려 있었다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "유나는 접힌 지도를 손에 들고 있다.",
+          "predicateChoices": [
+            "접힌 지도를 손에 들고 있었다.",
+            "한 장의 접힌 지도를 손에 쥐고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "유나는 기록실 문 근처에 서 있다.",
+          "predicateChoices": [
+            "기록실 문 가까이에 서 있었다.",
+            "기록실 문에서 멀지 않은 곳에 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "서진은 닫힌 서랍을 바라보고 있다.",
+          "predicateChoices": [
+            "닫힌 서랍을 바라보고 있었다.",
+            "닫힌 서랍 쪽에 시선을 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "서진은 서랍의 손잡이에 손을 대지 않는다.",
+          "predicateChoices": [
+            "서랍 손잡이에는 손을 대지 않았다.",
+            "서랍 손잡이에 손을 얹지 않은 채 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "종이는 펼쳐지지 않고 두 사람 사이에 대화도 없다.",
+          "predicateChoices": [
+            "접힌 지도는 끝내 펼쳐지지 않았고, 두 사람은 말을 나누지 않았다.",
+            "지도는 접힌 채 남아 있었고, 두 사람 사이에는 아무 말도 오가지 않았다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    },
+    {
+      "id": "R5H_NIGHT_LIBRARY",
+      "genre": "scene",
+      "place": "비가 오는 밤의 도서관",
+      "entities": [
+        {
+          "id": "A",
+          "name": "하윤"
+        },
+        {
+          "id": "B",
+          "name": "민수"
+        }
+      ],
+      "task": "비 내리는 밤 도서관 창가에서 책갈피와 시선의 차이로 장면을 구성한다. 140~230자의 자연스러운 한국어 산문.",
+      "license": "책갈피를 책에 끼우지 않고, 민수는 창문을 열지 않으며, 두 사람은 말을 하지 않는다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "비가 오는 밤 도서관의 창문에 물방울이 맺힌다.",
+          "predicateChoices": [
+            "밤비가 도서관 창문에 가느다란 물방울을 남겼다.",
+            "도서관의 밤 창문에는 빗물이 맺혀 있었다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "하윤은 마른 나뭇잎 모양 책갈피를 손에 쥐고 있다.",
+          "predicateChoices": [
+            "마른 나뭇잎 모양의 책갈피를 손에 쥐고 있었다.",
+            "나뭇잎을 닮은 마른 책갈피를 손안에 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "하윤은 책이 놓인 탁자 앞에 앉아 있다.",
+          "predicateChoices": [
+            "책이 놓인 탁자 앞에 앉아 있었다.",
+            "탁자 위에 책을 둔 채 자리에 앉아 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "민수는 창가에 서 있다.",
+          "predicateChoices": [
+            "창가에 서 있었다.",
+            "비 내리는 창 앞에 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "민수는 창문에 흐르는 빗방울을 바라본다.",
+          "predicateChoices": [
+            "유리를 타고 흐르는 빗방울을 바라봤다.",
+            "창문에 길게 번지는 빗방울을 눈으로 좇았다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "책갈피는 책에 끼워지지 않고 둘 사이에는 대화가 없다.",
+          "predicateChoices": [
+            "책갈피는 책 안에 들어가지 않았고 두 사람은 말을 나누지 않았다.",
+            "그 책갈피는 여전히 책 밖에 있었으며 둘은 아무 말도 하지 않았다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    },
+    {
+      "id": "R5H_MUSEUM_GALLERY",
+      "genre": "scene",
+      "place": "조용한 미술관 전시실",
+      "entities": [
+        {
+          "id": "A",
+          "name": "다연"
+        },
+        {
+          "id": "B",
+          "name": "주혁"
+        }
+      ],
+      "task": "전시실의 빛과 전시 안내문, 작품을 바라보는 두 사람의 거리감을 자연스러운 소설 문단 140~230자로 쓴다.",
+      "license": "다연은 안내문을 펼치지 않으며, 주혁은 액자에 손을 대지 않는다. 전시실의 두 사람은 대화하지 않는다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "한산한 미술관 전시실에 천창의 빛이 들어온다.",
+          "predicateChoices": [
+            "한산한 전시실 바닥에 천창의 빛이 내려앉아 있었다.",
+            "미술관 전시실은 한산했고 천창에서 빛이 흘러들었다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "다연은 접힌 전시 안내문을 손에 들고 있다.",
+          "predicateChoices": [
+            "접힌 전시 안내문을 손에 들고 있었다.",
+            "접은 채의 전시 안내문을 손에 쥐고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "다연은 전시실 입구의 기둥 아래 서 있다.",
+          "predicateChoices": [
+            "입구 쪽 기둥 아래에 서 있었다.",
+            "전시실 입구의 기둥 밑에 그대로 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "주혁은 벽에 걸린 푸른 그림을 바라본다.",
+          "predicateChoices": [
+            "벽에 걸린 푸른 그림을 바라보고 있었다.",
+            "벽의 푸른 그림에 시선을 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "주혁은 그림의 액자에 가까이 가지 않는다.",
+          "predicateChoices": [
+            "그림의 액자에 다가서지 않았다.",
+            "액자에는 가까이 다가가지 않은 채 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "안내문은 펼쳐지지 않고 전시실에서 둘은 말을 나누지 않는다.",
+          "predicateChoices": [
+            "안내문은 끝내 펼쳐지지 않았고 둘은 아무 말도 하지 않았다.",
+            "접힌 안내문은 그대로였고 두 사람 사이에 대화는 없었다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    },
+    {
+      "id": "R5H_REHEARSAL_ROOM",
+      "genre": "scene",
+      "place": "악기 연습실",
+      "entities": [
+        {
+          "id": "A",
+          "name": "은서"
+        },
+        {
+          "id": "B",
+          "name": "도현"
+        }
+      ],
+      "task": "연습실에 놓인 악기와 아직 시작되지 않은 연주를 중심으로 140~230자의 여운 있는 한국어 장면을 쓴다.",
+      "license": "은서는 악보를 펼치지 않는다. 도현은 피아노 건반을 누르지 않는다. 연주는 시작되지 않고 둘은 대화하지 않는다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "연습실 벽에는 오후의 빛이 비스듬히 걸려 있다.",
+          "predicateChoices": [
+            "연습실 벽에 오후의 빛이 비스듬히 걸려 있었다.",
+            "늦은 오후의 빛이 연습실 벽을 비스듬히 비추고 있었다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "은서는 펼치지 않은 악보를 들고 있다.",
+          "predicateChoices": [
+            "접어 둔 악보를 손에 들고 있었다.",
+            "아직 펴지 않은 악보를 손안에 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "은서는 피아노 곁의 의자에 앉아 있다.",
+          "predicateChoices": [
+            "피아노 옆 의자에 앉아 있었다.",
+            "피아노 곁에 놓인 의자에 앉아 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "도현은 피아노 맞은편에 서 있다.",
+          "predicateChoices": [
+            "피아노 맞은편에 서 있었다.",
+            "피아노를 마주 보는 자리에 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "도현은 피아노 건반을 누르지 않은 채 바라보고 있다.",
+          "predicateChoices": [
+            "건반에 손을 대지 않고 바라만 봤다.",
+            "피아노 건반을 누르지 않은 채 그쪽을 바라보고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "악보와 연주는 시작되지 않고 둘은 아무 말도 하지 않는다.",
+          "predicateChoices": [
+            "악보는 펼쳐지지 않았고 연주도, 두 사람의 대화도 시작되지 않았다.",
+            "악보를 펼치는 일도 연주도 없었으며 둘 사이에 말은 오가지 않았다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    },
+    {
+      "id": "R5H_GREENHOUSE_WALK",
+      "genre": "scene",
+      "place": "온실 통로",
+      "entities": [
+        {
+          "id": "A",
+          "name": "민아"
+        },
+        {
+          "id": "B",
+          "name": "준서"
+        }
+      ],
+      "task": "온실의 흐린 유리와 닫힌 씨앗 봉투에 집중한 140~230자의 절제된 한국어 장면.",
+      "license": "민아는 씨앗 봉투를 열지 않는다. 준서는 유리창을 닦지 않는다. 누구도 말을 꺼내지 않는다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "온실의 좁은 통로에는 축축한 흙냄새가 감돌고 있다.",
+          "predicateChoices": [
+            "온실의 좁은 통로에 축축한 흙냄새가 감돌았다.",
+            "축축한 흙냄새가 온실의 좁은 통로를 채우고 있었다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "민아는 뜯지 않은 씨앗 봉투를 들고 있다.",
+          "predicateChoices": [
+            "뜯지 않은 씨앗 봉투를 손에 들고 있었다.",
+            "봉해진 씨앗 봉투를 손안에 쥐고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "민아는 화분 진열대 곁에 서 있다.",
+          "predicateChoices": [
+            "화분 진열대 곁에 서 있었다.",
+            "화분이 놓인 진열대 옆에 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "준서는 김이 낀 유리창을 바라보고 있다.",
+          "predicateChoices": [
+            "김이 낀 유리창을 바라보고 있었다.",
+            "흐리게 김이 서린 유리에 시선을 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "준서는 유리창에 손을 대지 않는다.",
+          "predicateChoices": [
+            "유리창에는 손을 대지 않았다.",
+            "유리에는 손을 얹지 않은 채 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "씨앗 봉투는 열린 적 없고 두 사람은 말하지 않는다.",
+          "predicateChoices": [
+            "씨앗 봉투는 끝내 열리지 않았으며 둘은 말을 나누지 않았다.",
+            "봉투는 닫힌 채였고 두 사람 사이에 말은 오가지 않았다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    },
+    {
+      "id": "R5H_SEASIDE_OBSERVATORY",
+      "genre": "scene",
+      "place": "바닷가 관측실",
+      "entities": [
+        {
+          "id": "A",
+          "name": "소희"
+        },
+        {
+          "id": "B",
+          "name": "유빈"
+        }
+      ],
+      "task": "바다가 보이는 관측실에서 사진과 수평선에 서로 다른 시선이 머무는 140~230자 한국어 소설 장면을 쓴다.",
+      "license": "소희는 사진을 건네지 않는다. 유빈은 망원경을 사용하지 않는다. 두 사람은 대화하지 않는다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "바닷가 관측실 창 너머로 흐린 수평선이 펼쳐져 있다.",
+          "predicateChoices": [
+            "관측실의 큰 창 너머에는 흐린 수평선이 펼쳐져 있었다.",
+            "흐릿한 수평선이 바닷가 관측실 창 밖에 길게 놓여 있었다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "소희는 작은 등대 사진을 들고 있다.",
+          "predicateChoices": [
+            "작은 등대 사진을 손에 들고 있었다.",
+            "작은 등대가 찍힌 사진 한 장을 손안에 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "소희는 창과 떨어진 벽 쪽에 서 있다.",
+          "predicateChoices": [
+            "창에서 떨어진 벽 쪽에 서 있었다.",
+            "큰 창과는 거리를 둔 벽가에 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "유빈은 창 앞에서 바다를 바라보고 있다.",
+          "predicateChoices": [
+            "창 앞에서 바다를 바라보고 있었다.",
+            "관측실 창가에서 바다에 시선을 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "유빈은 관측실의 망원경에 손을 대지 않는다.",
+          "predicateChoices": [
+            "망원경에는 손을 대지 않았다.",
+            "곁의 망원경을 사용하지 않은 채 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "사진은 전달되지 않고 두 사람은 대화하지 않는다.",
+          "predicateChoices": [
+            "사진은 누구에게도 건네지지 않았고 둘은 말을 나누지 않았다.",
+            "사진은 소희의 손을 떠나지 않았으며 두 사람 사이에 말은 없었다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    },
+    {
+      "id": "R5H_OLD_BOOKSHOP",
+      "genre": "scene",
+      "place": "오래된 서점",
+      "entities": [
+        {
+          "id": "A",
+          "name": "수연"
+        },
+        {
+          "id": "B",
+          "name": "지훈"
+        }
+      ],
+      "task": "헌책방의 마감 무렵, 뜯지 않은 편지와 멈춘 시계가 남기는 침묵을 140~230자 문단으로 쓴다.",
+      "license": "수연은 편지를 뜯지 않는다. 지훈은 시계에 손을 대지 않는다. 두 사람의 대화는 없다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "문을 닫을 무렵의 오래된 서점에는 종이 냄새가 남아 있다.",
+          "predicateChoices": [
+            "마감을 앞둔 오래된 서점에 종이 냄새가 남아 있었다.",
+            "오래된 서점에는 문을 닫을 무렵의 종이 냄새가 가라앉아 있었다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "수연은 봉투가 닫힌 편지를 손에 쥐고 있다.",
+          "predicateChoices": [
+            "봉투가 닫힌 편지를 손에 쥐고 있었다.",
+            "봉해진 편지 한 통을 손안에 들고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "수연은 서점 계산대 옆에 서 있다.",
+          "predicateChoices": [
+            "서점 계산대 옆에 서 있었다.",
+            "계산대에서 몇 걸음 떨어진 곳에 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "지훈은 벽에 걸린 멈춘 시계를 바라보고 있다.",
+          "predicateChoices": [
+            "벽에 걸린 멈춘 시계를 바라보고 있었다.",
+            "벽에 걸린 시계의 멈춘 바늘을 바라보고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "지훈은 시계에는 손을 대지 않는다.",
+          "predicateChoices": [
+            "그 시계에는 손을 대지 않았다.",
+            "시계에 손을 얹지 않고 그 자리에 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "편지는 열리지 않았고 두 사람 사이에 대화가 없다.",
+          "predicateChoices": [
+            "편지는 끝내 열리지 않았고 두 사람은 아무 말도 하지 않았다.",
+            "편지가 담긴 봉투는 닫힌 채였고 두 사람 사이에는 침묵만 있었다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    },
+    {
+      "id": "R5H_RESTORATION_ROOM",
+      "genre": "scene",
+      "place": "박물관 복원 작업실",
+      "entities": [
+        {
+          "id": "A",
+          "name": "서아"
+        },
+        {
+          "id": "B",
+          "name": "태경"
+        }
+      ],
+      "task": "복원 작업실의 손대지 않은 물건과 두 인물의 시선을 140~230자 소설 장면으로 쓴다.",
+      "license": "서아는 상자를 열지 않는다. 태경은 액자에 손을 대지 않는다. 두 사람은 말을 나누지 않는다.",
+      "frames": [
+        {
+          "id": "S1",
+          "subjectEntityID": null,
+          "sourceFact": "박물관 복원 작업실에는 작은 창으로 아침빛이 들어온다.",
+          "predicateChoices": [
+            "복원 작업실의 작은 창으로 아침빛이 들어왔다.",
+            "아침빛이 박물관 복원 작업실의 작은 창을 통과해 들어왔다."
+          ],
+          "kind": "setting",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S2",
+          "subjectEntityID": "A",
+          "sourceFact": "서아는 이름표가 붙은 닫힌 상자를 손에 들고 있다.",
+          "predicateChoices": [
+            "이름표가 붙은 닫힌 상자를 손에 들고 있었다.",
+            "이름표를 붙인 상자 하나를 열지 않은 채 들고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S3",
+          "subjectEntityID": "A",
+          "sourceFact": "서아는 작업대 앞에 서 있다.",
+          "predicateChoices": [
+            "작업대 앞에 서 있었다.",
+            "작업대 앞에서 자리를 지키고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S4",
+          "subjectEntityID": "B",
+          "sourceFact": "태경은 벽에 세워 둔 빈 액자를 바라보고 있다.",
+          "predicateChoices": [
+            "벽에 세운 빈 액자를 바라보고 있었다.",
+            "벽에 기대어 놓인 빈 액자에 시선을 두고 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S5",
+          "subjectEntityID": "B",
+          "sourceFact": "태경은 액자에 손을 대지 않는다.",
+          "predicateChoices": [
+            "액자에는 손을 대지 않았다.",
+            "그 액자를 만지지 않고 그대로 서 있었다."
+          ],
+          "kind": "character_event",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        },
+        {
+          "id": "S6",
+          "subjectEntityID": null,
+          "sourceFact": "상자는 열린 적 없고 두 사람은 대화하지 않는다.",
+          "predicateChoices": [
+            "상자는 열리지 않았고 둘은 끝내 말을 나누지 않았다.",
+            "이름표가 붙은 상자는 닫힌 채였으며 두 사람 사이에 말은 없었다."
+          ],
+          "kind": "closure",
+          "encodedBy": "RESEARCHER_AUTHORED_VALIDATED_NOT_MODEL_PARSED"
+        }
+      ]
+    }
+  ]
+}

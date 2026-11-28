@@ -1,0 +1,62 @@
+name: KSGT G10-P2 R7h interpretation partition and branch generation
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7h-branch.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  branch:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -30 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7h_counterexamples.json)" = f48b3ce4cb3ec9ad1a2607dbf2f404b70b785195
+          test "$(git hash-object experiments/g10-p2/r5/r7h_partition.cjs)" = 613fe7ccd064129d75bf9f9175b190d510670f42
+          test "$(git hash-object experiments/g10-p2/r5/r7h_partition.test.cjs)" = 4f3b331590f1258f37fc25f31fa15bbf8c91e095
+          test "$(git hash-object experiments/g10-p2/r5/r7h_coat.json)" = 8c86f0d6e4cb72ff71ca183cede7898f275bb7fc
+          test "$(git hash-object experiments/g10-p2/r5/r7h_waterline.json)" = 12ef7e0fc494c817be5df878ba5cb38398513172
+          test "$(git hash-object experiments/g10-p2/r5/r7h_bench.json)" = 63e8182d724be49b24de1d9434d24d0bf842a373
+          test "$(git hash-object experiments/g10-p2/r5/r7h_room.json)" = 0fd6c4fc22cee22f715687dfff6643b48ed8bc89
+          test "$(git hash-object experiments/g10-p2/r5/r7h_branch_prereg.md)" = 5af13c6c62c1a821726e00a8bb0c6807f2bd1b57
+          test "$(git hash-object experiments/g10-p2/r5/r7h_branch_works.cjs)" = cc4e488c7af693a37a23218cca2628f583e78cb1
+          test "$(git hash-object experiments/g10-p2/r5/r7h_branch_prompt.cjs)" = 4c9547e5f0efd4c864a11b5514e6f7fe610229b9
+          test "$(git hash-object experiments/g10-p2/r5/r7h_branch_metrics.cjs)" = 422943692c850db0caf0bc3682767f61e9d5103e
+          test "$(git hash-object experiments/g10-p2/r5/r7h_branch_runner.cjs)" = d1c274426e4b0bd3d5a7f346c0c0177f6da50b5a
+          test "$(git hash-object experiments/g10-p2/r5/r7h_branch_runner.test.cjs)" = a20f2e60c6c0b82de9f8d08fda2889777c1e442d
+          node --test experiments/g10-p2/r5/r7h_partition.test.cjs experiments/g10-p2/r5/r7h_branch_runner.test.cjs
+          node experiments/g10-p2/r5/r7h_partition.cjs > "$RUNNER_TEMP/r7h-partition.json"
+          node experiments/g10-p2/r5/r7h_branch_runner.cjs --preflight > "$RUNNER_TEMP/r7h-preflight.json"
+      - name: Twelve single generation calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7h_branch_runner.cjs --execute "$RUNNER_TEMP/r7h-live"
+      - name: Verify and analyze
+        run: node experiments/g10-p2/r5/r7h_branch_runner.cjs --verify "$RUNNER_TEMP/r7h-live" > "$RUNNER_TEMP/r7h-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7h-branch-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7h-live/
+            ${{ runner.temp }}/r7h-partition.json
+            ${{ runner.temp }}/r7h-preflight.json
+            ${{ runner.temp }}/r7h-analysis.json

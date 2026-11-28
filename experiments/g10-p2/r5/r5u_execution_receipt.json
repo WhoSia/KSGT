@@ -1,0 +1,169 @@
+{
+  "schema": "ksgt.g10p2.r5u.local-execution.v1",
+  "test_status": "28/28 synthetic contract tests PASS",
+  "lira_lines": 14,
+  "work_count": 4,
+  "rating_rows": 56,
+  "paired_contrasts": 9,
+  "synthetic_usefulness_delta_vs_direct": 1.0,
+  "signflip_reference_only": 0.125,
+  "genuine_human_ratings": 0,
+  "actual_nikl_raw_received": false,
+  "model_calls_new": 0,
+  "private_mapping_archived": false,
+  "quality_promotion": false,
+  "score_line_hashes": [
+    {
+      "line": 1,
+      "E": 0.99,
+      "P": 0.98,
+      "kind": "FACT",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "1e9ffbbcadbf8bcf7e4be88edfe6ba17aa02c4e195b6e83ce82405708bdad4ec"
+    },
+    {
+      "line": 2,
+      "E": 0.99,
+      "P": 0.99,
+      "kind": "FACT",
+      "sources": [
+        "R2"
+      ],
+      "sha256": "3a19a28244e663ac9ebd97581ee34c90a796391762b291440eed35d0db561a28"
+    },
+    {
+      "line": 3,
+      "E": 0.98,
+      "P": 0.98,
+      "kind": "HOLD",
+      "sources": [
+        "R2",
+        "R3"
+      ],
+      "sha256": "07804d97a81a83b9adddba805f196d9bdd27cf44def1a41ddd4cd1931e1afa8b"
+    },
+    {
+      "line": 4,
+      "E": 0.9,
+      "P": 0.97,
+      "kind": "INFER",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "13adb14d7874d0ca723db1ea70c72e5b3b4091135ec1d00c32b5fd34d7a861f5"
+    },
+    {
+      "line": 5,
+      "E": 0.95,
+      "P": 0.98,
+      "kind": "PLAN",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "b30032e546848033828b5f5947824cca00984e2a563c6bdac1f508008c9a9e01"
+    },
+    {
+      "line": 6,
+      "E": 0.94,
+      "P": 0.96,
+      "kind": "PLAN",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "325076efecbc8326ac0ae28d5d905b661517fc425ed97957e5ae4eee401017e4"
+    },
+    {
+      "line": 7,
+      "E": 0.95,
+      "P": 0.96,
+      "kind": "PLAN",
+      "sources": [
+        "R2",
+        "R3"
+      ],
+      "sha256": "a21840299d1c3914bcc376849d146e05c0c568370d8e05cee9f3af43b3313b66"
+    },
+    {
+      "line": 8,
+      "E": 0.89,
+      "P": 0.97,
+      "kind": "PLAN",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "074920007f54bdfbcd5cdb565a6337fea72431f864c243f32a7ba51793cf8547"
+    },
+    {
+      "line": 9,
+      "E": 0.9,
+      "P": 0.94,
+      "kind": "HOLD",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "7d87fedf3b14d94258bf851266537686e87f21af147ef1d0d3aa08171db5daf7"
+    },
+    {
+      "line": 10,
+      "E": 0.91,
+      "P": 0.94,
+      "kind": "PLAN",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "910499cba26115ad69fa2601a0845a802af19744441a81b69650901e4c48250b"
+    },
+    {
+      "line": 11,
+      "E": 0.94,
+      "P": 0.96,
+      "kind": "PLAN",
+      "sources": [
+        "R2",
+        "R3"
+      ],
+      "sha256": "04f77ffef0cae2a87b6c3c9a7f12185b9756be5ed2e339cd9d0bef45cd8fd870"
+    },
+    {
+      "line": 12,
+      "E": 0.97,
+      "P": 0.98,
+      "kind": "HOLD",
+      "sources": [
+        "R2",
+        "R4"
+      ],
+      "sha256": "87510fbe4f76787deb97c49ed61c1261cb01b13b545649d07877383a033c3381"
+    },
+    {
+      "line": 13,
+      "E": 0.98,
+      "P": 0.98,
+      "kind": "HOLD",
+      "sources": [
+        "R1",
+        "R2"
+      ],
+      "sha256": "bde8f7e00af2805728047dbda9416dc31eb39df88d96fa7568232673405b148b"
+    },
+    {
+      "line": 14,
+      "E": 0.82,
+      "P": 0.93,
+      "kind": "PLAN",
+      "sources": [
+        "R2"
+      ],
+      "sha256": "488add0706576705ad975000e2324418b0dcafa8c576414b73d568244198456d"
+    }
+  ]
+}

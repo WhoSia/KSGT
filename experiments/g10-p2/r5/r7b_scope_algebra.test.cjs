@@ -1,0 +1,14 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),{evaluate,key}=require('./r7b_scope_algebra.cjs');
+const q={axis:'KNOW',subject:'sujin',time:'yesterday',proposition:'locker_id'};
+test('current nonremembering never negates past knowledge',()=>{a.equal(evaluate([{...q,axis:'REMEMBER',time:'today',value:'FALSE'}],q).status,'UNSETTLED');});
+test('explicit past knowledge can coexist with present forgetting',()=>{a.equal(evaluate([{...q,axis:'REMEMBER',time:'today',value:'FALSE'},{...q,value:'TRUE'}],q).status,'SUPPORTED');});
+test('exact negative only contradicts same scoped proposition',()=>{a.equal(evaluate([{...q,value:'FALSE'}],q).status,'CONTRADICTED');a.equal(evaluate([{...q,subject:'minsu',value:'FALSE'}],q).status,'UNSETTLED');});
+test('unknown never becomes false or overrides knowledge',()=>{a.equal(evaluate([{...q,value:'UNKNOWN'}],q).status,'UNSETTLED');a.equal(evaluate([{...q,value:'UNKNOWN'},{...q,value:'TRUE'}],q).status,'SUPPORTED');});
+test('conflicting evidence yields hold independent of order',()=>{for(const v of [['TRUE','FALSE'],['FALSE','TRUE']])a.equal(evaluate(v.map(value=>({...q,value})),q).status,'CONFLICT_HOLD');});
+test('actual count and expected count separate',()=>{const e={axis:'EXPECT',subject:'worker',time:'before',proposition:'count>=4'};a.equal(evaluate([{axis:'WORLD',subject:'worker',time:'after',proposition:'count>=4',value:'FALSE'}],e).status,'UNSETTLED');});
+test('observation time not event time',()=>{const e={axis:'WORLD',subject:'solution',time:'5min',proposition:'color_changed'};a.equal(evaluate([{...e,axis:'OBSERVE',proposition:'color_blue',value:'TRUE'}],e).status,'UNSETTLED');});
+test('belief not world truth',()=>{const e={axis:'WORLD',subject:'door',time:'morning',proposition:'locked'};a.equal(evaluate([{...e,axis:'BELIEVE',subject:'minseo',value:'TRUE'}],e).status,'UNSETTLED');});
+test('structured key avoids delimiter alias',()=>{a.notEqual(key({...q,subject:'a|b',time:'c'}),key({...q,subject:'a',time:'b|c'}));});
+test('reject unrecognized axis or value even for unrelated record',()=>{a.throws(()=>key({...q,axis:'SOMETHING'}),/INVALID_KEY/);a.throws(()=>evaluate([{...q,subject:'x',value:'MAYBE'}],q),/INVALID_VALUE/);});
+test('counterexample: forged same-scope truth not detected by typed ledger',()=>{a.equal(evaluate([{...q,value:'TRUE'}],q).status,'SUPPORTED');});

@@ -1,0 +1,8 @@
+'use strict';
+// All uncertainty statements are explicitly licensed by synthetic sources.
+const families=[
+{id:'archive',genre:'도서관 업무 경과 보고',status:'not_recorded',scope:['a','b'],events:['a','b','c'],before:[['a','c'],['b','c']],context:'오전에는 A실과 B실을 점검했다.',a:'A실의 서가 번호를 확인한 일',b:'B실의 반납함 위치를 확인한 일',c:'점검표를 담당자에게 전달한 일',sentences:{a:'A실에서는 서가 번호를 확인했다.',b:'B실에서는 반납함 위치를 확인했다.',c:'두 점검을 마친 뒤 점검표를 담당자에게 전달했다.'},marker:{status:'not_recorded',scope:['a','b'],text:'두 점검의 선후관계는 기록에 없다.'}},
+{id:'exhibit',genre:'전시 준비 경과 보고',status:'not_recorded',scope:['a','b'],events:['a','b','c'],before:[['a','c'],['b','c']],context:'전시를 준비하며 안내문과 안내판을 손봤다.',a:'안내문을 인쇄한 일',b:'안내판을 옮긴 일',c:'작업 목록을 정리한 일',sentences:{a:'안내문을 인쇄했다.',b:'안내판을 옮겼다.',c:'두 작업을 마친 뒤 작업 목록을 정리했다.'},marker:{status:'not_recorded',scope:['a','b'],text:'인쇄와 이동 중 어느 작업이 먼저였는지는 기록에 없다.'}},
+{id:'rehearsal',genre:'제한적 시점의 소설',status:'not_remembered',scope:['a','b'],events:['a','b','c'],before:[['a','c'],['b','c']],context:'혜진은 연습실에서 두 사람의 모습을 보았다.',a:'지수가 악보를 펼친 일',b:'민호가 의자를 옮긴 일',c:'혜진이 연습실을 나간 일',sentences:{a:'지수는 악보를 펼쳤다.',b:'민호는 의자를 옮겼다.',c:'두 일이 있은 뒤 혜진은 연습실을 나갔다.'},marker:{status:'not_remembered',scope:['a','b'],text:'혜진은 악보를 펼친 일과 의자를 옮긴 일 중 어느 쪽이 먼저였는지 기억하지 못했다.'}},
+{id:'observation',genre:'관찰 기록 보고서',status:'not_recorded',scope:['a','b'],events:['a','b','c'],before:[['a','c'],['b','c']],context:'오전에 용기 A와 B의 관찰 기록을 작성했다.',a:'A의 수온을 기록한 일',b:'B의 수온을 기록한 일',c:'기록지를 보관한 일',sentences:{a:'A의 수온을 기록했다.',b:'B의 수온을 기록했다.',c:'두 수온을 기록한 뒤 기록지를 보관했다.'},marker:{status:'not_recorded',scope:['a','b'],text:'A와 B 중 어느 용기의 수온을 먼저 기록했는지는 기록에 없다.'}}
+];module.exports={families};

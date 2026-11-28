@@ -1,0 +1,96 @@
+{
+  "schema": "ksgt.g10p2.r5u.worklevel-synthetic.v1",
+  "status": "SYNTHETIC_DIAGNOSTICS_ONLY",
+  "input_rows_sha256": "8d7ed8280848e231e6097da830fefbd7050e8cf55d4d36e3a85d5c2d8afbd9ec",
+  "independent_human_outcomes": 0,
+  "provider_calls_new": 0,
+  "independence_claim": false,
+  "quality_promotion": false,
+  "confirmed_inference": false,
+  "work_count": 4,
+  "row_count": 56,
+  "contrasts": [
+    {
+      "contrast": "EXECUTABLE_STATE_minus_STRONG_DIRECT",
+      "metric": "usefulness",
+      "direction": "higher_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 1.0,
+      "signflip_reference_only": 0.125
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_STRONG_DIRECT",
+      "metric": "naturalness",
+      "direction": "higher_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 1.0,
+      "signflip_reference_only": 0.125
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_STRONG_DIRECT",
+      "metric": "source_error",
+      "direction": "lower_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 0.0,
+      "signflip_reference_only": 1.0
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_STATE_AS_TEXT",
+      "metric": "usefulness",
+      "direction": "higher_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 1.0,
+      "signflip_reference_only": 0.125
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_STATE_AS_TEXT",
+      "metric": "naturalness",
+      "direction": "higher_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 1.0,
+      "signflip_reference_only": 0.125
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_STATE_AS_TEXT",
+      "metric": "source_error",
+      "direction": "lower_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 0.0,
+      "signflip_reference_only": 1.0
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_EQUAL_COST_ITERATIVE",
+      "metric": "usefulness",
+      "direction": "higher_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 1.0,
+      "signflip_reference_only": 0.125
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_EQUAL_COST_ITERATIVE",
+      "metric": "naturalness",
+      "direction": "higher_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 1.0,
+      "signflip_reference_only": 0.125
+    },
+    {
+      "contrast": "EXECUTABLE_STATE_minus_EQUAL_COST_ITERATIVE",
+      "metric": "source_error",
+      "direction": "lower_is_better",
+      "works_paired": 4,
+      "works_missing": 0,
+      "mean_work_delta": 0.0,
+      "signflip_reference_only": 1.0
+    }
+  ],
+  "warning": "No blinded live study, no genuine Korean prose outcomes; exact sign flip requires justified exchangeability/randomization and must not be reported as confirmatory evidence."
+}

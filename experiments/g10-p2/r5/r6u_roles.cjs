@@ -1,0 +1,6 @@
+'use strict';
+const roles=['PAYLOAD','CONTEXT','CONTROL','LICENSE'];
+const meanings={PAYLOAD:'독자에게 전달해야 하는 내용',CONTEXT:'표현 선택에만 참고할 내부 문맥(직접 전달하지 않음)',CONTROL:'작성할 때만 지킬 제약(원고에서 해설하지 않음)',LICENSE:'표현의 허용 범위(원고에서 해설하지 않음)'};
+function validate(w){if(!w||!['id','genre','task'].every(k=>typeof w[k]==='string'&&w[k].trim())||!Number.isInteger(w.paragraphs)||w.paragraphs<1||!Array.isArray(w.records)||!w.records.length)throw Error('BRIEF');const texts=new Set();for(const r of w.records){if(!Array.isArray(r)||r.length!==2||!roles.includes(r[0])||typeof r[1]!=='string'||!r[1].trim()||texts.has(r[1]))throw Error('ROLE_RECORD');texts.add(r[1]);}if(!w.records.some(r=>r[0]==='PAYLOAD'))throw Error('EMPTY_PAYLOAD');return w;}
+function render(w,arm){validate(w);const header=[`장르: ${w.genre}`,`과제: ${w.task}`,`문단 수: ${w.paragraphs}`];const legend=roles.map(r=>`${r}: ${meanings[r]}`);let rows;if(arm==='direct')rows=w.records.map(([role,txt])=>`${meanings[role]}: ${txt}`);else if(arm==='typed')rows=roles.flatMap(role=>{const items=w.records.filter(r=>r[0]===role);return items.length?[`[${role}]`,...items.map(r=>r[1])]:[]});else throw Error('ARM');return [...header,...legend,...rows].join('\n');}
+module.exports={roles,meanings,validate,render};

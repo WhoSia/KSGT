@@ -1,0 +1,11 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),w=require('./r7d_reader.cjs'),p=require('./r7d_prompt.cjs'),q=require('./r7d_metrics.cjs'),{cases}=require('./r7d_cases.cjs'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+test('24 calls 8 scopes, three arms with identical source',()=>{const x=w.plan();a.equal(x.length,24);a.equal(new Set(x.map(c=>c.id)).size,24);for(let i=0;i<8;i++){const g=x.slice(i*3,i*3+3);a.equal(new Set(g.map(c=>c.sourceSHA)).size,1);a.equal(new Set(g.map(c=>c.arm)).size,3);}});
+test('same prompt prefix and same system for all three arms',()=>{for(const c of cases()){const d=p.messages(c,'DIRECT');for(const arm of ['GLOBAL_AVOID','CONTEXTUAL']){const r=p.messages(c,arm);a.deepEqual(r[0],d[0]);a.equal(r[1].content.split('\n').slice(0,-1).join('\n'),d[1].content);}}});
+test('all four families have matched source differing only final status',()=>{const x=cases();for(let i=0;i<8;i+=2){a.deepEqual(x[i].facts.slice(0,-1),x[i+1].facts.slice(0,-1));a.equal(x[i].cue,x[i+1].cue);a.equal(x[i].task,x[i+1].task);}});
+test('cue proxy is not assertion or source license',()=>{a.equal(q.metrics({work:'LAB'},'마침내 침전이 나타났다.\n\n끝.').cueProxy,true);a.equal(q.metrics({work:'LAB'},'침전이 나타났다.').cueProxy,false);a.equal(q.metrics({work:'LAB'},'마침내라는 표현은 부적절하다.').cueProxy,true);});
+const mock=async()=>({responseModel:w.MODEL,finishReason:'stop',text:'첫 문단.\n\n둘째 문단.',usage:{total_tokens:10},latencyMs:1});
+function temp(fn){return async()=>{const d=fs.mkdtempSync(path.join(os.tmpdir(),'r7d-'));try{await fn(path.join(d,'run'));}finally{fs.rmSync(d,{recursive:true,force:true});}};}
+test('all receipts roundtrip; changed text rejected',temp(async root=>{a.deepEqual(await w.run(root,mock),{attempted:24,complete:24,tokens:240});a.equal(w.verify(root).rows.length,24);const f=path.join(root,w.plan()[0].id+'.result.json'),r=JSON.parse(fs.readFileSync(f));r.text+='x';fs.writeFileSync(f,JSON.stringify(r));a.throws(()=>w.verify(root),/BAD_RECEIPT/);}));
+test('provider failure not retried',temp(async root=>{let n=0;await a.rejects(w.run(root,async()=>{n++;throw Object.assign(Error('x'),{status:429})}),/INCOMPLETE_PRESERVED/);a.equal(n,1);}));
+test('no overwrite',temp(async root=>{fs.mkdirSync(root);await a.rejects(w.run(root,mock),/EEXIST/);}));

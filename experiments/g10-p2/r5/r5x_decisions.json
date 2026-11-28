@@ -1,0 +1,115 @@
+{
+  "utility_weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "decisions": [
+    {
+      "id": "R5x historical R4 replay",
+      "utility": {
+        "bottleneck_relief": 0.95,
+        "causal_information": 0.95,
+        "language_quality_relevance": 0.92,
+        "execution_readiness": 0.99,
+        "reversibility": 0.98,
+        "risk_reduction": 0.95,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.4,
+        "completeness": 0.9
+      },
+      "P": 0.9558,
+      "E": 0.8175,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D8 prospective patch error audit",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.97,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.82,
+        "reversibility": 0.94,
+        "risk_reduction": 0.95,
+        "cost_efficiency": 0.9
+      },
+      "evidence": {
+        "source_directness": 0.86,
+        "reproducibility": 0.78,
+        "independence": 0.4,
+        "completeness": 0.65
+      },
+      "P": 0.9427,
+      "E": 0.6725,
+      "gate": "PREPARE_REAL_SOURCES"
+    },
+    {
+      "id": "D9 R5a/f cost and failure archive replay",
+      "utility": {
+        "bottleneck_relief": 0.92,
+        "causal_information": 0.94,
+        "language_quality_relevance": 0.91,
+        "execution_readiness": 0.99,
+        "reversibility": 0.98,
+        "risk_reduction": 0.89,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.9,
+        "reproducibility": 0.65,
+        "independence": 0.4,
+        "completeness": 0.62
+      },
+      "P": 0.9396,
+      "E": 0.6425,
+      "gate": "READY"
+    },
+    {
+      "id": "D1 NIKL approval",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.91,
+        "language_quality_relevance": 0.94,
+        "execution_readiness": 0.4,
+        "reversibility": 0.9,
+        "risk_reduction": 0.88,
+        "cost_efficiency": 0.72
+      },
+      "evidence": {
+        "source_directness": 0.94,
+        "reproducibility": 0.3,
+        "independence": 0.49,
+        "completeness": 0.51
+      },
+      "P": 0.8369,
+      "E": 0.56,
+      "gate": "PREPARE_APPROVAL_PENDING"
+    }
+  ],
+  "quality_promotion": false,
+  "score_kind": "heuristic",
+  "line_sources": {
+    "A1": "r5x_receipt.json",
+    "T1": "r5x_tests.txt"
+  },
+  "line_sha256": [
+    "435da922b041871ec341cc0039ac60fc8316157181a1b0c764cf920cd9f134a3",
+    "1f26340c63a3e4b820e2dedc3f5346b3f061b458048578bfc6252e62610ad9d4",
+    "fac7a585715d7ec94e8c79f5c73c2d4456af575f95f5e3acc6c9768410e0e9b4",
+    "98ae0248afe529446cfae27fd87305226e3eb7608ff90ad04b8da1e176982c30",
+    "0c3b4065844a1c21ee41f540067e6fb6c3a5ffb438c84d9c3c3793cb55d0f1ae",
+    "479327cd76fa531032d1c170e8291de010db03625e7cf44dc907e24dcc247236",
+    "ed99df331b2748796a2f828998717c650dab0ee0ca7ba430d54bb62ae425d5b9",
+    "5de7bdc1d748027fb7f49c6d157d35ffc38c1916f63198ea7720c2f84e8b695f",
+    "28cd7629f3ce360bb2f089a7872c6d381dd43467f980ab2c6191734dfd28864d",
+    "32d5bd30ef721dbd97055fa6e94249526c374144f847200cc5bea3c66a205ca3"
+  ]
+}

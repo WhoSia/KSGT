@@ -1,0 +1,49 @@
+{
+  "schema": "ksgt.g10p2.r5p.archive.v1",
+  "files": [
+    {
+      "name": "lira_audit.py",
+      "sha256": "7a24ef29e326f4a255b7319d34ab0dc3bf070418d172a1ae59ee3c8043c27f5d",
+      "bytes": 4500
+    },
+    {
+      "name": "lira_sensitivity.py",
+      "sha256": "48eeedf02d99942be58b086850e8414bcaf0d1a575f8f19fa38c6e9c2988a120",
+      "bytes": 1398
+    },
+    {
+      "name": "test_lira_audit.py",
+      "sha256": "1598567d52748b6552f8b4d619998212174662360be2bf0633c87052383e0b3c",
+      "bytes": 2445
+    },
+    {
+      "name": "LIRA_LINE_AUDIT.md",
+      "sha256": "d99ae15e573c5f87ef0afe8ac3cc58e1052c329f919d6d980d300f20ee55eadb",
+      "bytes": 4701
+    },
+    {
+      "name": "LIRA_DECISIONS.json",
+      "sha256": "9d315be18c58845ea1651e55d896e5f60937dec4fd5d29f78f50795de4cba094",
+      "bytes": 2916
+    },
+    {
+      "name": "LIRA_AUDIT_RECEIPT.json",
+      "sha256": "2523b2756b9f1378dde9ae00def1ab937f95e9e84ce5cfbae82926334a7ad21b",
+      "bytes": 6735
+    },
+    {
+      "name": "LIRA_SENSITIVITY.json",
+      "sha256": "9e77d97a0321235d191ff9cb9ec797300dd3c064baf7ae2d3c92dbba116494ce",
+      "bytes": 826
+    },
+    {
+      "name": "README.md",
+      "sha256": "905cad370717394d278687548b24891916fbf5c88412671c5a908184441acb64",
+      "bytes": 5002
+    }
+  ],
+  "test_status": "13/13 PASS on local synthetic/contract suite",
+  "human_reader_outcomes": 0,
+  "new_provider_calls": 0,
+  "corpus_raw_bytes_included": false
+}

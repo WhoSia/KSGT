@@ -1,0 +1,70 @@
+name: KSGT G10-P2 R5c Executable Korean Source-Witnessed Realization
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: ['.github/workflows/ksgt-g10-p2-r5c-source-witnessed-realizer.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: ksgt-g10-p2-r5c-16calls-20261121
+  cancel-in-progress: false
+
+jobs:
+  edit-real-strong-korean-drafts:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: --unhandled-rejections=strict
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 40
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Human-authored provenance only
+        shell: bash
+        run: |
+          test "$(git log -1 --format='%ae')" = '71053804+WhoSia@users.noreply.github.com'
+          if git log -30 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then
+            echo 'BOT_CONTRIBUTION_ZERO violation'; exit 1
+          fi
+      - name: Native regression tests and source-anchored output gate
+        run: |
+          node --test experiments/g10-p2/r5/*.test.cjs
+          node --test experiments/g10-p2/*.test.cjs
+      - name: Cold recover all eight frozen 120B original texts from R5b
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/r5b-original"
+          gh run download 44899223057 --repo "$GITHUB_REPOSITORY" --name ksgt-g10-p2-r5b-korean-realizer-20b120b-24realcalls --dir "$RUNNER_TEMP/r5b-original"
+          node experiments/g10-p2/r5/r5c_source_witnessed_realizer.cjs --preflight "$RUNNER_TEMP/r5b-original" > "$RUNNER_TEMP/r5c-preflight-plan.json"
+          node -e 'let j=require(process.argv[1]);if(j.plannedNewCalls!==16||j.oldDraftCount!==8||j.callMap.length!==16)process.exit(1);console.log("R5c-preflight",j.hash)' "$RUNNER_TEMP/r5c-preflight-plan.json"
+      - name: Actually edit and rewrite eight Korean documents using GPT-OSS 120B
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node experiments/g10-p2/r5/r5c_source_witnessed_realizer.cjs --execute "$RUNNER_TEMP/r5c-live" "$RUNNER_TEMP/r5b-original"
+      - name: Cold score whole-text outcomes and source-backed span application
+        run: |
+          node experiments/g10-p2/r5/r5c_source_witnessed_realizer.cjs --score "$RUNNER_TEMP/r5c-live" "$RUNNER_TEMP/r5b-original" > "$RUNNER_TEMP/r5c-recount.json"
+          node -e 'let j=require(process.argv[1]);if(j.newProviderCalls!==16||j.wholeDocuments!==24||j.independentSemanticGold!==0||j.qualitySuperiority!=="UNPROVEN")process.exit(1);console.log("R5c-real-results",JSON.stringify(j))' "$RUNNER_TEMP/r5c-recount.json"
+          test "$(grep -c '^### 원고 A' "$RUNNER_TEMP/r5c-live/plain-Korean-comparison.md")" -eq 8
+      - name: Archive raw provider responses, all complete Korean alternatives, and provenance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-g10-p2-r5c-16-real-120b-edits-and-rewrites
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r5c-preflight-plan.json
+            ${{ runner.temp }}/r5c-live/
+            ${{ runner.temp }}/r5c-recount.json

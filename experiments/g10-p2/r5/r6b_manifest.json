@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "name": "r6a_regression.txt",
+      "bytes": 1074,
+      "sha256": "8ca0bfb0f5cf3c46140186126f4df6597b2fa3eb76f0fefae33dc8a9dfee4dce"
+    },
+    {
+      "name": "r6b_alignment_receipt.json",
+      "bytes": 8290,
+      "sha256": "128245741b1b778e8f8a787da006f1fbdc7f2e4ebbcfa64df823aa5d1626505b"
+    },
+    {
+      "name": "r6b_decisions.json",
+      "bytes": 4763,
+      "sha256": "58e53b498452318be28eb6ef74657960fd0f1a1c416762362f1dd0a7018cac39"
+    },
+    {
+      "name": "r6b_discourse_actions.py",
+      "bytes": 2203,
+      "sha256": "505054b573d867e7279676d1d10fb0ab606086a84a922355ab7f0e22610f5893"
+    },
+    {
+      "name": "r6b_discourse_receipt.json",
+      "bytes": 1829,
+      "sha256": "68e45b784bfbb93afd5c9330798f2a267b58a35b0c3a386ad43bcaaf6840ccb1"
+    },
+    {
+      "name": "r6b_feedback_alignment.py",
+      "bytes": 4615,
+      "sha256": "e40763ba602cd8428ae1267bf77d8c001cd4b54b36b2ebf6fe72fe8f4772a194"
+    },
+    {
+      "name": "r6b_lira_lines.md",
+      "bytes": 1267,
+      "sha256": "b16c1cd6aa0d82b594e9947ec63cdf4a2f18323623345f28bcefb26f6f2762d1"
+    },
+    {
+      "name": "r6b_report.md",
+      "bytes": 6998,
+      "sha256": "9625bf8b86c77c436719b0bd816a7a221c5a80bd0d72089b7d5e022ff3e492d8"
+    },
+    {
+      "name": "r6b_shared_edits.py",
+      "bytes": 1537,
+      "sha256": "cbe106f4eb75cf2e7437aab54ec9bfad55683503cf5537f9c7d51c4dba9d9d71"
+    },
+    {
+      "name": "r6b_shared_receipt.json",
+      "bytes": 456,
+      "sha256": "7a4d88de55aa7c3b268a634a3ce51741cc827e30b1d2275f8ddf02da172c1fe9"
+    },
+    {
+      "name": "r6b_tests.txt",
+      "bytes": 1157,
+      "sha256": "23a75720cdebdfe5a4e1d172ca9ea5798dcbbd121bc62bf473d8b8ee708edd89"
+    },
+    {
+      "name": "test_r6b.py",
+      "bytes": 3044,
+      "sha256": "6465af72db07ed7b09d3cc1e96ab6f46dc44bc369f483ca87e022924dec847b7"
+    }
+  ],
+  "raw_source_included": false,
+  "source_archive_sha256": "92ca0e42198ff10d45b72771b39ce364343634691bc348cfcc0b47de60df3c54"
+}

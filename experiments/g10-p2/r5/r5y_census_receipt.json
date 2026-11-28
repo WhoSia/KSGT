@@ -1,0 +1,46 @@
+{
+  "census_archive_sha256": "e1e3f43d6329e3a77f71813ac1a25e6008ea5c93093b24597e0578915cff631c",
+  "actual": {
+    "pairedUtterances": 3470,
+    "identicalPairs": 22,
+    "atMostOneWhitespaceEditToken": 1780,
+    "atMostTwoWhitespaceEditTokens": 2913,
+    "atLeastFourWhitespaceEditTokens": 134,
+    "meanCharacterSimilarity": 0.88899,
+    "medianCharacterSimilarity": 0.90909,
+    "numericTokenSequenceMismatches": 0
+  },
+  "stored_matches": {
+    "pairedUtterances": true,
+    "identicalPairs": true,
+    "atMostOneWhitespaceEditToken": true,
+    "atMostTwoWhitespaceEditTokens": true,
+    "atLeastFourWhitespaceEditTokens": true,
+    "meanCharacterSimilarity": true,
+    "medianCharacterSimilarity": true,
+    "numericTokenSequenceMismatches": true
+  },
+  "prefix_candidate_counts": {
+    "KEEP": 14,
+    "REVIEW_CANDIDATE_ONLY": 2
+  },
+  "prefix_candidate_removed_chars": 158,
+  "prefix_changed_candidates": [
+    {
+      "work": "R5A_CHAT_SOURCE",
+      "arm": "observed",
+      "status": "REVIEW_CANDIDATE_ONLY",
+      "removed_chars": 79
+    },
+    {
+      "work": "R5A_CHAT_SOURCE",
+      "arm": "plan",
+      "status": "REVIEW_CANDIDATE_ONLY",
+      "removed_chars": 79
+    }
+  ],
+  "quality_promotion": false,
+  "new_provider_calls": 0,
+  "human_ratings": 0,
+  "attribution": "Smilegate AI / Seonghyun Kim (2022), SmileStyle; CC BY-NC 4.0; https://github.com/smilegate-ai/korean_smile_style_dataset"
+}

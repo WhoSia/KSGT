@@ -1,0 +1,6 @@
+'use strict';
+const {works,names,validate}=require('./r7h_branch_works.cjs');
+const system='한국어 글을 쓰는 사람입니다. 이미 작성된 도입부 뒤에 이어지는 완성된 글을 작성하세요. 원천에서 확정한 내용은 정확히 전달하고, 열어 둔 의미를 임의로 확정하지 마세요. 장르와 상황에 맞는 자연스러운 문장과 정보 배열을 사용하세요. 도입부를 되풀이하지 않고 후속 원고만 출력하세요. 여러 조건을 받은 경우 각각 독립된 세계의 원고입니다. 다른 조건의 정보나 결말을 섞지 마세요. JSON 객체의 각 값에는 완성 원고 문자열만 넣으세요. 제목·메타 설명·분석은 넣지 마세요.';
+function messages(w,keys){validate(w);if(!Array.isArray(keys)||!keys.length||keys.length>2||new Set(keys).size!==keys.length||keys.some(k=>!names.includes(k)))throw Error('BAD_BRANCHES');return [{role:'system',content:system},{role:'user',content:[w.genre,w.task,'도입부:',w.prefix,'공통 원천:',...w.common,'조건별 추가 원천:',...keys.map(k=>k+': '+w.branches[k]),'종료 지점: '+w.terminal,'반환할 JSON 키: '+keys.join(', ')].join('\n')}];}
+function schedule(){return works.flatMap((w,i)=>{const one=names.map(k=>({id:w.id+'__SEPARATE_'+k,work:w.id,arm:'SEPARATE',keys:[k],source:w,messages:messages(w,[k]),maxTokens:1800}));const joint={id:w.id+'__JOINT',work:w.id,arm:'JOINT',keys:names.slice(),source:w,messages:messages(w,names),maxTokens:3600};return i%2?[joint,...one.reverse()]:[...one,joint];});}
+module.exports={system,messages,schedule};

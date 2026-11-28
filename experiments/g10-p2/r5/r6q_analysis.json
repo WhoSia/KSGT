@@ -1,0 +1,596 @@
+{
+  "authority": "SINGLE_MODEL_READER_PROXY_NOT_HUMAN_EVALUATION",
+  "verified": {
+    "complete": 16,
+    "tokens": 8963,
+    "independentReaders": 0
+  },
+  "valid": 16,
+  "byPlacement": [
+    {
+      "placement": "before",
+      "count": 8,
+      "valid": 8,
+      "abExplicitUnknown": 6,
+      "abImpressionUnknown": 6,
+      "abImpressionFollowsMention": 2,
+      "acExplicitCorrect": 8,
+      "acImpressionCorrect": 8
+    },
+    {
+      "placement": "after",
+      "count": 8,
+      "valid": 8,
+      "abExplicitUnknown": 8,
+      "abImpressionUnknown": 7,
+      "abImpressionFollowsMention": 1,
+      "acExplicitCorrect": 8,
+      "acImpressionCorrect": 8
+    }
+  ],
+  "pairs": [
+    {
+      "family": "archive",
+      "order": "ab",
+      "before": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": 0
+    },
+    {
+      "family": "archive",
+      "order": "ba",
+      "before": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": 0
+    },
+    {
+      "family": "exhibit",
+      "order": "ba",
+      "before": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": 0
+    },
+    {
+      "family": "exhibit",
+      "order": "ab",
+      "before": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": 0
+    },
+    {
+      "family": "rehearsal",
+      "order": "ba",
+      "before": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": 0
+    },
+    {
+      "family": "rehearsal",
+      "order": "ab",
+      "before": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": 0
+    },
+    {
+      "family": "observation",
+      "order": "ab",
+      "before": {
+        "ab_explicit": "FIRST_BEFORE_SECOND",
+        "ab_impression": "FIRST_BEFORE_SECOND",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": -1
+    },
+    {
+      "family": "observation",
+      "order": "ba",
+      "before": {
+        "ab_explicit": "SECOND_BEFORE_FIRST",
+        "ab_impression": "SECOND_BEFORE_FIRST",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "after": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "SECOND_BEFORE_FIRST",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "delta": 0
+    }
+  ],
+  "paired": {
+    "gains": 0,
+    "losses": 1,
+    "ties": 7,
+    "malformed": 0
+  },
+  "inputTokens": 5056,
+  "outputTokens": 3907,
+  "medianLatencyMs": 737.5,
+  "rows": [
+    {
+      "id": "archive_ab_before",
+      "family": "archive",
+      "order": "ab",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.005082112,
+        "prompt_tokens": 319,
+        "prompt_time": 0.01474117,
+        "completion_tokens": 178,
+        "completion_time": 0.376226089,
+        "total_tokens": 497,
+        "total_time": 0.390967259,
+        "completion_tokens_details": {
+          "reasoning_tokens": 130
+        }
+      },
+      "latencyMs": 513
+    },
+    {
+      "id": "archive_ba_after",
+      "family": "archive",
+      "order": "ba",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.085033303,
+        "prompt_tokens": 319,
+        "prompt_time": 0.016035529,
+        "completion_tokens": 183,
+        "completion_time": 0.384136518,
+        "total_tokens": 502,
+        "total_time": 0.400172047,
+        "completion_tokens_details": {
+          "reasoning_tokens": 135
+        }
+      },
+      "latencyMs": 588
+    },
+    {
+      "id": "archive_ba_before",
+      "family": "archive",
+      "order": "ba",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.839165399,
+        "prompt_tokens": 319,
+        "prompt_time": 0.015039788,
+        "completion_tokens": 248,
+        "completion_time": 0.520610471,
+        "total_tokens": 567,
+        "total_time": 0.535650259,
+        "completion_tokens_details": {
+          "reasoning_tokens": 200
+        }
+      },
+      "latencyMs": 1419
+    },
+    {
+      "id": "archive_ab_after",
+      "family": "archive",
+      "order": "ab",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.103621733,
+        "prompt_tokens": 319,
+        "prompt_time": 0.048762599,
+        "completion_tokens": 198,
+        "completion_time": 0.414552468,
+        "total_tokens": 517,
+        "total_time": 0.463315067,
+        "completion_tokens_details": {
+          "reasoning_tokens": 150
+        }
+      },
+      "latencyMs": 609
+    },
+    {
+      "id": "exhibit_ba_after",
+      "family": "exhibit",
+      "order": "ba",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.085918521,
+        "prompt_tokens": 303,
+        "prompt_time": 0.015955267,
+        "completion_tokens": 206,
+        "completion_time": 0.435225127,
+        "total_tokens": 509,
+        "total_time": 0.451180394,
+        "completion_tokens_details": {
+          "reasoning_tokens": 158
+        }
+      },
+      "latencyMs": 635
+    },
+    {
+      "id": "exhibit_ba_before",
+      "family": "exhibit",
+      "order": "ba",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.153514091,
+        "prompt_tokens": 303,
+        "prompt_time": 0.013757966,
+        "completion_tokens": 348,
+        "completion_time": 0.743240607,
+        "total_tokens": 651,
+        "total_time": 0.756998573,
+        "completion_tokens_details": {
+          "reasoning_tokens": 300
+        }
+      },
+      "latencyMs": 951
+    },
+    {
+      "id": "exhibit_ab_after",
+      "family": "exhibit",
+      "order": "ab",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.095931845,
+        "prompt_tokens": 303,
+        "prompt_time": 0.080777841,
+        "completion_tokens": 159,
+        "completion_time": 0.332730632,
+        "total_tokens": 462,
+        "total_time": 0.413508473,
+        "completion_tokens_details": {
+          "reasoning_tokens": 111
+        }
+      },
+      "latencyMs": 550
+    },
+    {
+      "id": "exhibit_ab_before",
+      "family": "exhibit",
+      "order": "ab",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.332214331,
+        "prompt_tokens": 303,
+        "prompt_time": 0.01566298,
+        "completion_tokens": 198,
+        "completion_time": 0.41803881,
+        "total_tokens": 501,
+        "total_time": 0.43370179,
+        "completion_tokens_details": {
+          "reasoning_tokens": 150
+        }
+      },
+      "latencyMs": 808
+    },
+    {
+      "id": "rehearsal_ba_before",
+      "family": "rehearsal",
+      "order": "ba",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.005063128,
+        "prompt_tokens": 335,
+        "prompt_time": 0.016774056,
+        "completion_tokens": 226,
+        "completion_time": 0.481019132,
+        "total_tokens": 561,
+        "total_time": 0.497793188,
+        "completion_tokens_details": {
+          "reasoning_tokens": 178
+        }
+      },
+      "latencyMs": 546
+    },
+    {
+      "id": "rehearsal_ab_after",
+      "family": "rehearsal",
+      "order": "ab",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.043507166,
+        "prompt_tokens": 335,
+        "prompt_time": 0.021041722,
+        "completion_tokens": 260,
+        "completion_time": 0.553580596,
+        "total_tokens": 595,
+        "total_time": 0.574622318,
+        "completion_tokens_details": {
+          "reasoning_tokens": 212
+        }
+      },
+      "latencyMs": 667
+    },
+    {
+      "id": "rehearsal_ab_before",
+      "family": "rehearsal",
+      "order": "ab",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.043706255,
+        "prompt_tokens": 335,
+        "prompt_time": 0.022856824,
+        "completion_tokens": 353,
+        "completion_time": 0.755455372,
+        "total_tokens": 688,
+        "total_time": 0.778312196,
+        "completion_tokens_details": {
+          "reasoning_tokens": 305
+        }
+      },
+      "latencyMs": 867
+    },
+    {
+      "id": "rehearsal_ba_after",
+      "family": "rehearsal",
+      "order": "ba",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.085422724,
+        "prompt_tokens": 335,
+        "prompt_time": 0.018647482,
+        "completion_tokens": 380,
+        "completion_time": 0.807366543,
+        "total_tokens": 715,
+        "total_time": 0.826014025,
+        "completion_tokens_details": {
+          "reasoning_tokens": 332
+        }
+      },
+      "latencyMs": 954
+    },
+    {
+      "id": "observation_ab_after",
+      "family": "observation",
+      "order": "ab",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "UNDETERMINED",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"UNDETERMINED\",\"ab_impression\":\"UNDETERMINED\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.559407085,
+        "prompt_tokens": 307,
+        "prompt_time": 0.014987869,
+        "completion_tokens": 136,
+        "completion_time": 0.296098288,
+        "total_tokens": 443,
+        "total_time": 0.311086157,
+        "completion_tokens_details": {
+          "reasoning_tokens": 88
+        }
+      },
+      "latencyMs": 910
+    },
+    {
+      "id": "observation_ab_before",
+      "family": "observation",
+      "order": "ab",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "FIRST_BEFORE_SECOND",
+        "ab_impression": "FIRST_BEFORE_SECOND",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"FIRST_BEFORE_SECOND\",\"ab_impression\":\"FIRST_BEFORE_SECOND\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.087607196,
+        "prompt_tokens": 307,
+        "prompt_time": 0.019587733,
+        "completion_tokens": 197,
+        "completion_time": 0.417508487,
+        "total_tokens": 504,
+        "total_time": 0.43709622,
+        "completion_tokens_details": {
+          "reasoning_tokens": 151
+        }
+      },
+      "latencyMs": 572
+    },
+    {
+      "id": "observation_ba_after",
+      "family": "observation",
+      "order": "ba",
+      "placement": "after",
+      "parsed": {
+        "ab_explicit": "UNDETERMINED",
+        "ab_impression": "SECOND_BEFORE_FIRST",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\n  \"ab_explicit\": \"UNDETERMINED\",\n  \"ab_impression\": \"SECOND_BEFORE_FIRST\",\n  \"ac_explicit\": \"FIRST_BEFORE_SECOND\",\n  \"ac_impression\": \"FIRST_BEFORE_SECOND\"\n}",
+      "usage": {
+        "queue_time": 0.138943218,
+        "prompt_tokens": 307,
+        "prompt_time": 0.014576297,
+        "completion_tokens": 305,
+        "completion_time": 0.644205062,
+        "total_tokens": 612,
+        "total_time": 0.658781359,
+        "completion_tokens_details": {
+          "reasoning_tokens": 245
+        }
+      },
+      "latencyMs": 857
+    },
+    {
+      "id": "observation_ba_before",
+      "family": "observation",
+      "order": "ba",
+      "placement": "before",
+      "parsed": {
+        "ab_explicit": "SECOND_BEFORE_FIRST",
+        "ab_impression": "SECOND_BEFORE_FIRST",
+        "ac_explicit": "FIRST_BEFORE_SECOND",
+        "ac_impression": "FIRST_BEFORE_SECOND"
+      },
+      "raw": "{\"ab_explicit\":\"SECOND_BEFORE_FIRST\",\"ab_impression\":\"SECOND_BEFORE_FIRST\",\"ac_explicit\":\"FIRST_BEFORE_SECOND\",\"ac_impression\":\"FIRST_BEFORE_SECOND\"}",
+      "usage": {
+        "queue_time": 0.010458436,
+        "prompt_tokens": 307,
+        "prompt_time": 0.061808507,
+        "completion_tokens": 332,
+        "completion_time": 0.720408164,
+        "total_tokens": 639,
+        "total_time": 0.782216671,
+        "completion_tokens_details": {
+          "reasoning_tokens": 286
+        }
+      },
+      "latencyMs": 836
+    }
+  ]
+}

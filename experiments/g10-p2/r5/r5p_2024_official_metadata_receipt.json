@@ -1,0 +1,21 @@
+{
+  "schema": "ksgt.g10p2.r5p.corpus-authority-court.v1",
+  "as_of": "2026-11-23",
+  "stage": "G10-P2 OPEN / QUALITY_HOLD",
+  "target": "NIKL writing feedback instruction corpus 2024",
+  "corpus_raw_bytes_acquired": false,
+  "corpus_actual_schema_inspected": false,
+  "source_description": "official 2024 research report and NIKL catalogue",
+  "construction_count_from_report": 1500,
+  "described_units": {"content_paragraph":100,"content_document":100,"organization_paragraph":100,"organization_document":100,"expression_sentence":800,"expression_paragraph":300},
+  "core_authority_warning": "Expert-edited language-model feedback is not expert-edited source prose",
+  "human_native_original_rewrite_pairs_verified": 0,
+  "independent_reader_outcomes_verified": 0,
+  "existing_historical_model_calls": 340,
+  "new_model_calls": 0,
+  "synthetic_admission_unit_tests_passed": 15,
+  "corpus_redistribution_authority": "UNVERIFIED",
+  "copyrighted_korean_source_text_exported": false,
+  "editorial_gate": "HOLD",
+  "quality_gate": "HOLD"
+}

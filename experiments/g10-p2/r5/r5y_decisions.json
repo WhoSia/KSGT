@@ -1,0 +1,211 @@
+{
+  "utility_weights": {
+    "bottleneck_relief": 0.22,
+    "causal_information": 0.19,
+    "language_quality_relevance": 0.17,
+    "execution_readiness": 0.13,
+    "reversibility": 0.09,
+    "risk_reduction": 0.1,
+    "cost_efficiency": 0.1
+  },
+  "evidence_axes": [
+    "source_directness",
+    "reproducibility",
+    "independence",
+    "completeness"
+  ],
+  "decisions": [
+    {
+      "id": "R5y exact edit/dependency replay",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.97,
+        "language_quality_relevance": 0.98,
+        "execution_readiness": 0.99,
+        "reversibility": 0.98,
+        "risk_reduction": 0.94,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.4,
+        "completeness": 0.91
+      },
+      "P": 0.9754,
+      "E": 0.82,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "R5y realized-prefix and cost replay",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.95,
+        "language_quality_relevance": 0.97,
+        "execution_readiness": 0.99,
+        "reversibility": 0.98,
+        "risk_reduction": 0.94,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.4,
+        "completeness": 0.94
+      },
+      "P": 0.9655,
+      "E": 0.8275,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D10 dependency-aware edit closure candidates",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.96,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.92,
+        "reversibility": 0.98,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.95
+      },
+      "evidence": {
+        "source_directness": 0.92,
+        "reproducibility": 0.86,
+        "independence": 0.4,
+        "completeness": 0.73
+      },
+      "P": 0.9651,
+      "E": 0.7275,
+      "gate": "READY_DEVELOPMENT_ONLY"
+    },
+    {
+      "id": "D11 selective reader-state acquisition",
+      "utility": {
+        "bottleneck_relief": 0.95,
+        "causal_information": 0.96,
+        "language_quality_relevance": 0.97,
+        "execution_readiness": 0.9,
+        "reversibility": 0.96,
+        "risk_reduction": 0.93,
+        "cost_efficiency": 0.96
+      },
+      "evidence": {
+        "source_directness": 0.92,
+        "reproducibility": 0.86,
+        "independence": 0.4,
+        "completeness": 0.72
+      },
+      "P": 0.9487,
+      "E": 0.725,
+      "gate": "READY_DEVELOPMENT_ONLY"
+    },
+    {
+      "id": "R5y style retrieval corpus replay",
+      "utility": {
+        "bottleneck_relief": 0.92,
+        "causal_information": 0.9,
+        "language_quality_relevance": 0.92,
+        "execution_readiness": 0.99,
+        "reversibility": 0.98,
+        "risk_reduction": 0.92,
+        "cost_efficiency": 0.98
+      },
+      "evidence": {
+        "source_directness": 0.99,
+        "reproducibility": 0.98,
+        "independence": 0.5,
+        "completeness": 0.88
+      },
+      "P": 0.9367,
+      "E": 0.8375,
+      "gate": "DONE_DEVELOPMENT"
+    },
+    {
+      "id": "D2 independent reader/source evaluation",
+      "utility": {
+        "bottleneck_relief": 0.98,
+        "causal_information": 0.98,
+        "language_quality_relevance": 0.99,
+        "execution_readiness": 0.5,
+        "reversibility": 0.95,
+        "risk_reduction": 0.96,
+        "cost_efficiency": 0.78
+      },
+      "evidence": {
+        "source_directness": 0.95,
+        "reproducibility": 0.75,
+        "independence": 0.45,
+        "completeness": 0.65
+      },
+      "P": 0.8946,
+      "E": 0.7,
+      "gate": "PREPARE_REAL_EVIDENCE"
+    },
+    {
+      "id": "D1 NIKL official acquisition",
+      "utility": {
+        "bottleneck_relief": 0.96,
+        "causal_information": 0.91,
+        "language_quality_relevance": 0.94,
+        "execution_readiness": 0.4,
+        "reversibility": 0.9,
+        "risk_reduction": 0.88,
+        "cost_efficiency": 0.72
+      },
+      "evidence": {
+        "source_directness": 0.94,
+        "reproducibility": 0.3,
+        "independence": 0.49,
+        "completeness": 0.51
+      },
+      "P": 0.8369,
+      "E": 0.56,
+      "gate": "PREPARE_APPROVAL_PENDING"
+    },
+    {
+      "id": "D6 training",
+      "utility": {
+        "bottleneck_relief": 0.27,
+        "causal_information": 0.4,
+        "language_quality_relevance": 0.45,
+        "execution_readiness": 0.22,
+        "reversibility": 0.35,
+        "risk_reduction": 0.34,
+        "cost_efficiency": 0.15
+      },
+      "evidence": {
+        "source_directness": 0.66,
+        "reproducibility": 0.37,
+        "independence": 0.38,
+        "completeness": 0.41
+      },
+      "P": 0.321,
+      "E": 0.455,
+      "gate": "BLOCKED"
+    }
+  ],
+  "line_sources": {
+    "A1": "r5y_receipt.json",
+    "A2": "r5y_census_receipt.json",
+    "R1": "r5y_report.md researcher review",
+    "T1": "r5y_tests.txt"
+  },
+  "line_sha256": [
+    "8a6f19dcd79febb917235e64ea5880f68126cb11e75d74aa54485b450cc105bc",
+    "93c8928bef024102d92b9ab51178cd2e7819cec48133aec823e82b52a0c2c88f",
+    "1b14c3c39bb2d56f57be136ab2a0dff88325181a7fc9e42817ccf2542917ab7c",
+    "e6e5a7796de280587e73716aa1230484738d6b64a774ade027cfcb967bc0be59",
+    "7469f42c1057d37f42806f377ed462d7e93d7385faa6a7110530c77008b17d94",
+    "4866ed2a94afce50582b2a0959c2286b064cbaafe67b33055737213ff699ee23",
+    "37ddacb794d2cb3ad1c7fc97050cf39d2660ca37e5c3d829bc5d45c2b915ce49",
+    "8c57919517ff5f1a1f48fe698b0970b02206a2ad213542f5056ba69fd95eb247",
+    "60243c4dc09e0ff2a1f6e312bd5b7be9b1bb7233dd3d1be4999072b61c872ac4",
+    "213f7b3bb87fca0427d4f6ee6e6bb4459d0153aff21ae20407c0d392d4cdda5a",
+    "48e9a03070477992f3a3d9a96541c7c78b6edc8feac4b4b918842241a03de73d",
+    "7ebefdb7c01a32a72bcddb819ef25f68b1cd0fb3304cc6170a4ab7a7a79bba42",
+    "4bc0d971ac1a5c1fa2098f142aeb3c10fd7e6d1e7102c8f620a612d4982a9a40",
+    "69f8ab6c0ac49e3eb900ef00bc5672a26f6c63b1f5ba2fa4cb8b2d8d1452e207"
+  ],
+  "score_kind": "heuristic",
+  "quality_promotion": false
+}

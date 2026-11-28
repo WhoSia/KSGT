@@ -1,0 +1,32 @@
+{
+  "components": 1113,
+  "largest_component": 5,
+  "component_size_histogram": {
+    "1": 787,
+    "2": 276,
+    "3": 40,
+    "4": 9,
+    "5": 1
+  },
+  "naive_record_hash": {
+    "diagnostic_test_rows": 316,
+    "crossing_components": 124,
+    "rows_in_crossing_components": 283,
+    "crossing_keys_by_kind": {
+      "work_prefix": 123,
+      "author": 123,
+      "paragraph_id": 190,
+      "sentence_id": 872,
+      "target": 66
+    }
+  },
+  "component_hash": {
+    "diagnostic_test_rows": 319,
+    "crossing_components": 0,
+    "rows_in_crossing_components": 0,
+    "crossing_keys_by_kind": {}
+  },
+  "unseen_author_work_certified": false,
+  "holdout_frozen": false,
+  "warning": "Prefix is a conservative observed grouping key; near duplicates and original author identity unresolved. Whole dataset already processed for descriptive development."
+}

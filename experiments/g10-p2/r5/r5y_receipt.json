@@ -1,0 +1,220 @@
+{
+  "status": "EXPOSED_DEVELOPMENT_ONLY",
+  "archives": {
+    "A": {
+      "bytes": 83269,
+      "sha256": "8ca75a538ceb7d592f65f387d8e3cf46e70975870f4c23af261c38dc86476ab7",
+      "members": 89,
+      "response_records": 40
+    },
+    "F": {
+      "bytes": 510462,
+      "sha256": "e76598ad63f44839cacd2dc5c3848ad0f29d8c88a25c87754f5500fc4302f498",
+      "members": 40,
+      "response_records": 16
+    },
+    "C": {
+      "bytes": 46013,
+      "sha256": "fc5b87340ed6b3e4c399547812050b75637b1fd4fd83b54b1d9470cecfc8d733",
+      "members": 38,
+      "response_records": 16
+    },
+    "D": {
+      "bytes": 17820,
+      "sha256": "e8a8e19ed8cf21ffd02a2de97601b02c8014ed215eb9e61a4a3f22151f637f0d",
+      "members": 14,
+      "response_records": 4
+    }
+  },
+  "prefix": {
+    "works": 8,
+    "counts": {
+      "extract_STATED": 25,
+      "extract_NOT_STATED": 13,
+      "status_changed_slots": 22,
+      "works_status_changed": 8,
+      "observed_exact_prefix_repeat": 1,
+      "observed_full_chars": 2007,
+      "plan_exact_prefix_repeat": 1,
+      "plan_full_chars": 2163,
+      "extract_UNCERTAIN": 2
+    },
+    "allocated_cost": {
+      "direct": 4995,
+      "planOnly": 9306,
+      "observedState": 17501
+    },
+    "actual_cost_by_condition": {
+      "direct": 4995,
+      "prefix": 4024,
+      "extract": 7942,
+      "observed": 5535,
+      "plan": 5282
+    },
+    "works_detail": [
+      {
+        "work": "R5A_CHAT_ARCHIVE",
+        "status_changed_slots": 2,
+        "direct_tokens": 561,
+        "planned_tokens": 1147,
+        "observed_tokens": 2181,
+        "exact_repeat_both": false
+      },
+      {
+        "work": "R5A_CHAT_SOURCE",
+        "status_changed_slots": 2,
+        "direct_tokens": 515,
+        "planned_tokens": 1114,
+        "observed_tokens": 2308,
+        "exact_repeat_both": true
+      },
+      {
+        "work": "R5A_SCI_FILM",
+        "status_changed_slots": 3,
+        "direct_tokens": 664,
+        "planned_tokens": 1265,
+        "observed_tokens": 2504,
+        "exact_repeat_both": false
+      },
+      {
+        "work": "R5A_SCI_CLOCK",
+        "status_changed_slots": 3,
+        "direct_tokens": 571,
+        "planned_tokens": 1157,
+        "observed_tokens": 2014,
+        "exact_repeat_both": false
+      },
+      {
+        "work": "R5A_NOTICE_BOOK",
+        "status_changed_slots": 1,
+        "direct_tokens": 596,
+        "planned_tokens": 1093,
+        "observed_tokens": 2116,
+        "exact_repeat_both": false
+      },
+      {
+        "work": "R5A_NOTICE_SHOW",
+        "status_changed_slots": 2,
+        "direct_tokens": 667,
+        "planned_tokens": 1060,
+        "observed_tokens": 2152,
+        "exact_repeat_both": false
+      },
+      {
+        "work": "R5A_SCENE_GARDEN",
+        "status_changed_slots": 5,
+        "direct_tokens": 690,
+        "planned_tokens": 1293,
+        "observed_tokens": 2225,
+        "exact_repeat_both": false
+      },
+      {
+        "work": "R5A_SCENE_PAPER",
+        "status_changed_slots": 4,
+        "direct_tokens": 731,
+        "planned_tokens": 1177,
+        "observed_tokens": 2001,
+        "exact_repeat_both": false
+      }
+    ]
+  },
+  "retrieval": {
+    "blocks": 236,
+    "separators": 235,
+    "test_families": 8,
+    "demo_families": 13,
+    "declared_demo_families": 14,
+    "family_overlap": 0,
+    "counts": {
+      "DIRECT_tokens": 5712,
+      "DIRECT_exact_turn_matches": 4,
+      "RETRIEVED_tokens": 7699,
+      "RETRIEVED_exact_turn_matches": 5
+    },
+    "by_direction": {
+      "formal_DIRECT_matches": 2,
+      "formal_RETRIEVED_matches": 3,
+      "informal_DIRECT_matches": 2,
+      "informal_RETRIEVED_matches": 2
+    },
+    "work_match_comparison": {
+      "tie": 5,
+      "retrieved_gt": 2,
+      "direct_gt": 1
+    },
+    "rights": "Archived CC BY-NC 4.0 attribution; descriptive noncommercial analysis only",
+    "native_quality_gold": false
+  },
+  "edits": {
+    "counts": {
+      "strict_removed": 8,
+      "rewrite_removed": 6,
+      "seam_NO_OP": 3,
+      "seam_unchanged": 3,
+      "seam_original_target_remains": 3,
+      "seam_explicit_no_op": 2,
+      "seam_APPLIED": 1,
+      "seam_identical_replacement": 1
+    },
+    "cost": {
+      "patch": 8637,
+      "rewrite": 8800,
+      "seam": 4614
+    },
+    "works_detail": [
+      {
+        "work": "R5A_CHAT_ARCHIVE",
+        "kind": "UNLICENSED_RECIPIENT_INSTRUCTION",
+        "patch_changed_chars": 29,
+        "rewrite_changed_chars": 104
+      },
+      {
+        "work": "R5A_CHAT_SOURCE",
+        "kind": "MISSING_EPISTEMIC_SCOPE",
+        "patch_changed_chars": 31,
+        "rewrite_changed_chars": 43
+      },
+      {
+        "work": "R5A_SCI_FILM",
+        "kind": "BOILERPLATE_REDUNDANT_ENDING",
+        "patch_changed_chars": 30,
+        "rewrite_changed_chars": 4
+      },
+      {
+        "work": "R5A_SCI_CLOCK",
+        "kind": "BOILERPLATE_REDUNDANT_ENDING",
+        "patch_changed_chars": 24,
+        "rewrite_changed_chars": 118
+      },
+      {
+        "work": "R5A_NOTICE_BOOK",
+        "kind": "SCOPE_EXPANSION",
+        "patch_changed_chars": 15,
+        "rewrite_changed_chars": 9
+      },
+      {
+        "work": "R5A_NOTICE_SHOW",
+        "kind": "INVENTED_FUTURE_PROMISE",
+        "patch_changed_chars": 28,
+        "rewrite_changed_chars": 41
+      },
+      {
+        "work": "R5A_SCENE_GARDEN",
+        "kind": "UNLICENSED_EVENT_IN_FICTION",
+        "patch_changed_chars": 69,
+        "rewrite_changed_chars": 52
+      },
+      {
+        "work": "R5A_SCENE_PAPER",
+        "kind": "UNLICENSED_NARRATIVE_ACTION",
+        "patch_changed_chars": 32,
+        "rewrite_changed_chars": 192
+      }
+    ],
+    "seam_reused_works": 4,
+    "independent_semantic_gold": false
+  },
+  "new_provider_calls": 0,
+  "human_ratings": 0,
+  "quality_promotion": false
+}

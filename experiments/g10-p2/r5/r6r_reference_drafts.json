@@ -1,0 +1,11 @@
+{
+  "authority": "POST_HOC_ASSISTANT_AUTHORED_DEVELOPMENT_TARGETS_NOT_HUMAN_GOLD",
+  "note": "Written after observing both provider arms. These examples diagnose target writing decisions, not an independent preference or reference benchmark.",
+  "drafts": [
+    {"id":"report","text":"같은 날 오전과 오후에 A와 B의 수온을 기록했다. A는 20도에서 22도로 높아졌지만 B는 오후에 20도였고 오전 기록이 없어 변화량을 비교할 수 없다. A에 연결한 순환 장치의 작동 여부는 기록되지 않았으며, A의 수온이 높아진 원인은 확인하지 않았다.","decision":"Lead with observations; distinguish absent record from failed confirmation; no invented experimental purpose or recommendation."},
+    {"id":"explain","text":"꼭 그렇진 않아. 같은 물질이고 상태도 같다면 온도가 같아도 질량에 따라 내부에너지는 달라질 수 있어. 같은 기준에서 비교하면 같은 온도의 물 200 g은 100 g보다 내부에너지가 더 커.","decision":"Answer directly in the requested conversational register; keep the comparison conditions and no gratuitous praise."},
+    {"id":"notice","text":"이번 주 모임은 목요일 오후 4시에 열립니다. 장소는 기존 공지에 적힌 시청각실이 아니라 2층 세미나실입니다. 발표 순서는 아직 정해지지 않았습니다. 자료는 각자 준비해 주세요.","decision":"KEEP: legitimate correction contrast and polite request; no mandatory edit."},
+    {"id":"literary","text":"빈 복도의 창가에 서아가 있었다. 실처럼 가느다란 빛은 창틀에만 닿았고, 복도 끝의 문은 닫혀 있었다. 언제 닫혔는지는 몰랐다. 서아는 창밖을 보았다.","decision":"Use a source-licensed shape simile and varied sentence length; no invented action, emotion, or causal relation. The coordination still merits temporal/reader review."},
+    {"id":"essay","text":"도서관에서 책을 빌릴 때마다 대출 기록에 제목과 날짜를 남긴다. 전에 읽었던 책의 제목을 잊었을 때도 그 기록을 뒤져 다시 찾아낸 적이 있다.\n\n기록은 그렇게 기억의 빈자리를 메워 준다. 그렇다고 그 책을 읽을 때 느낀 감정까지 모두 돌아오는 것은 아니다.","decision":"Let the anecdote support the thought; retain two paragraphs and omit the unlicensed grand conclusion."}
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "ksgt.r7e.review.v1",
+  "phase": "POST_EXECUTION_R7F_SELECTION",
+  "evidence": {
+    "run": 46122629391,
+    "localTargetCorrections": "2/4 developer focal assessment",
+    "fullTargetCorrections": "4/4 developer focal assessment",
+    "authorizedNoops": "4/4 each",
+    "localTokens": 5480,
+    "fullTokens": 5326,
+    "independentHumanRatings": 0
+  },
+  "axes": [
+    "value",
+    "novelty",
+    "evidence_gain",
+    "quality_relevance",
+    "cost_efficiency",
+    "feasibility"
+  ],
+  "candidates": [
+    {
+      "id": "relation_repair",
+      "scores": [
+        0.83,
+        0.55,
+        0.5,
+        0.83,
+        0.56,
+        0.97
+      ],
+      "decision": "DEFER_AS_PRIMARY",
+      "reason": "R7e local opposite assertion/residual relation, no token savings, full is strong. Retain exact mutation tool as optional."
+    },
+    {
+      "id": "independent_reader",
+      "scores": [
+        1,
+        0.55,
+        1,
+        1,
+        0.52,
+        0.25
+      ],
+      "decision": "HOLD_EXTERNAL",
+      "reason": "Independent evaluation remains most important; cannot fabricate or imply new readers."
+    },
+    {
+      "id": "global_discourse_planning",
+      "scores": [
+        0.9,
+        0.5,
+        0.55,
+        0.95,
+        0.6,
+        0.78
+      ],
+      "decision": "DEFER_REPETITION",
+      "reason": "R5g lattice, R6s two-call planning, R6t locality, R6u typed role mixed; avoid redundant order/heading changes."
+    },
+    {
+      "id": "source_projection",
+      "scores": [
+        0.94,
+        0.8,
+        0.88,
+        0.93,
+        0.91,
+        0.96
+      ],
+      "decision": "RUN",
+      "reason": "Remove explicitly noncommunicable irrelevant internal records before one-call writing, retaining all public obligations and controls. Test usability/cost vs strong role-aware direct; not a mere layout change."
+    },
+    {
+      "id": "automatic_scope_parser",
+      "scores": [
+        0.7,
+        0.55,
+        0.42,
+        0.62,
+        0.55,
+        0.7
+      ],
+      "decision": "DEFER"
+    },
+    {
+      "id": "global_lexical_avoid",
+      "scores": [
+        0.25,
+        0.15,
+        0.2,
+        0.25,
+        0.89,
+        0.99
+      ],
+      "decision": "STOP"
+    },
+    {
+      "id": "literature_custody",
+      "scores": [
+        0.87,
+        0.5,
+        0.85,
+        0.72,
+        0.85,
+        0.63
+      ],
+      "decision": "PARALLEL_IF_SAFE"
+    }
+  ],
+  "decision": "R7f single-call source projection pilot, no general inference; no weighted total. Manual authorization labels are an oracle, compare upstream identical records not identical model input. If essential obligations lost, do not deploy. If cost improves and fidelity ties, keep optional candidate; independent quality HOLD regardless."
+}

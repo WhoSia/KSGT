@@ -1,0 +1,176 @@
+{
+  "archive": {
+    "schema": "ksgt.g10p2.r5q.intake-metadata.v1",
+    "archive_bytes": 2512615,
+    "archive_sha256": "92ca0e42198ff10d45b72771b39ce364343634691bc348cfcc0b47de60df3c54",
+    "archive_format": "zip",
+    "member_count": 3,
+    "uncompressed_bytes": 28920871,
+    "extension_histogram": {
+      ".json": 1,
+      ".pdf": 2
+    },
+    "crc_all_pass": true,
+    "raw_text_exported": false,
+    "original_modified": false,
+    "actual_editorial_pair_schema_verified": false,
+    "work_author_lineage_verified": false,
+    "redistribution_rights_verified": false,
+    "native_prose_quality_gold": false,
+    "stage": "METADATA_ONLY_PASS_SCHEMA_HOLD",
+    "member_sha256": {
+      "(ENG)NIKL_Instruction-based Generation Corpus for writing correction_2024_v1.1.pdf": "b2595b9395228138865a7ba5de36ee62ddb17deb564fa7a5afde4ea80d511413",
+      "(KOR)NIKL_Instruction-based Generation Corpus for writing correction_2024_v1.1.pdf": "e1747238432e7d7b2e0cf8e8a1cc1a99f1d43b507fe3c2e42dfd7a8d89be5c89",
+      "GWIG2402606300.json": "0dff2dc8de32f3a1f847571b87641bd598454e0187dee941001d172034af0770"
+    }
+  },
+  "census": {
+    "records": 1500,
+    "counts": {
+      "rows_multiple_work_prefixes": 0,
+      "paragraph_occurrences": 2064,
+      "paragraph_flag_O": 736,
+      "paragraph_null_form": 24,
+      "paragraph_changed_nonnull": 677,
+      "paragraph_flag_mismatch_including_null": 35,
+      "paragraph_whitespace_only": 88,
+      "sentence_occurrences": 6543,
+      "sentence_flag_O": 1009,
+      "sentence_null_form": 1,
+      "sentence_changed_nonnull": 1008,
+      "sentence_flag_mismatch_including_null": 0,
+      "sentence_whitespace_only": 180,
+      "missing_standard_header": 2,
+      "llm_answers": 4650
+    },
+    "groups": {
+      "내용/문단": {
+        "rows": 100,
+        "exact_target_form": 92,
+        "ambiguous_exact": 0,
+        "task1_question_exact": 100,
+        "task2_question_exact": 100,
+        "task3_question_exact": 100,
+        "expert_exact_last": 0,
+        "expert_contains_target": 0
+      },
+      "내용/문서": {
+        "rows": 100,
+        "all_nonnull_paragraph_forms_substring": 93,
+        "exact_join": 47,
+        "task1_question_exact": 100,
+        "task2_question_exact": 100,
+        "task3_question_exact": 100,
+        "expert_exact_last": 0,
+        "expert_contains_target": 0
+      },
+      "조직/문단": {
+        "rows": 100,
+        "exact_target_form": 90,
+        "ambiguous_exact": 0,
+        "task1_question_exact": 100,
+        "task2_question_exact": 100,
+        "task3_question_exact": 100,
+        "expert_exact_last": 0,
+        "expert_contains_target": 0
+      },
+      "조직/문서": {
+        "rows": 100,
+        "all_nonnull_paragraph_forms_substring": 93,
+        "exact_join": 47,
+        "task1_question_exact": 100,
+        "task2_question_exact": 100,
+        "task3_question_exact": 100,
+        "expert_exact_last": 0,
+        "expert_contains_target": 0
+      },
+      "표현/문단": {
+        "rows": 150,
+        "exact_target_form": 108,
+        "ambiguous_exact": 0,
+        "task1_question_exact": 150,
+        "task2_question_exact": 150,
+        "task3_question_exact": 150,
+        "task4_question_exact": 150,
+        "expert_exact_last": 0,
+        "expert_contains_target": 0
+      },
+      "표현/문장": {
+        "rows": 950,
+        "exact_target_form": 924,
+        "ambiguous_exact": 0,
+        "task1_question_exact": 950,
+        "task2_question_exact": 950,
+        "task3_question_exact": 950,
+        "expert_exact_last": 0,
+        "expert_contains_target": 895
+      }
+    },
+    "unique_recorded_source_ids": {
+      "paragraph": 1470,
+      "sentence": 4063
+    },
+    "conflicting_form_pairs_for_same_id": {
+      "paragraph": 92,
+      "sentence": 93
+    },
+    "author_ids": 1119,
+    "work_prefixes": 1122,
+    "authors_multiple_work_prefixes": 9,
+    "work_prefixes_multiple_authors": 5,
+    "exact_distinct_targets": 1309,
+    "repeated_target_groups": 191,
+    "cross_stratum_target_groups": 189,
+    "median_lengths_target_expert_last_llm": {
+      "표현/문장": [
+        65.5,
+        280.0,
+        249.0
+      ],
+      "표현/문단": [
+        238.5,
+        557.5,
+        343.5
+      ],
+      "내용/문단": [
+        263.0,
+        322.5,
+        484.5
+      ],
+      "내용/문서": [
+        1055.0,
+        444.0,
+        749.0
+      ],
+      "조직/문단": [
+        268.0,
+        120.0,
+        353.5
+      ],
+      "조직/문서": [
+        1055.0,
+        252.5,
+        731.5
+      ]
+    },
+    "norm_category_occurrences": {
+      "표현/부적절한 높임": 67,
+      "표현/부적절한 어순": 13,
+      "표현/부적절한 조사": 114,
+      "표현/부적절한 피동과 사동": 34,
+      "표현/부적절한 호응 및 시제": 178,
+      "표기/한글 맞춤법, 표준어 규정": 416,
+      "표기/띄어쓰기": 305,
+      "표기/문장 부호": 84,
+      "표기/외래어 표기법": 43,
+      "표현/어휘상의 오류": 6,
+      "표현/": 1,
+      "표기/외래어 외국어 오남용": 1,
+      "표기/부적절한 호응 및 시제": 1,
+      "표현/문법상의 오류": 5,
+      "표현/문장 부호": 2,
+      "None/None": 400
+    },
+    "authority": "expert_comment is revised feedback; form is reference input, not a standalone expert rewrite; no new human ratings"
+  }
+}

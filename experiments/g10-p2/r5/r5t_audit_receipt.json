@@ -1,0 +1,246 @@
+{
+  "court": {
+    "schema": "ksgt.g10p2.r5t.lira.multiaxis.v1",
+    "stage": "G10-P2 OPEN / QUALITY_HOLD",
+    "score_kind": "heuristic_not_probability",
+    "lines": 14,
+    "line_hashes": [
+      {
+        "id": "L001",
+        "E": 1.0,
+        "P": 0.97,
+        "kind": "FACT",
+        "sources": [
+          "R1",
+          "R2"
+        ],
+        "sha256": "bb781365c70c53d1c7347a6b2d14332d203c16fe4e54e4d5b8cd922d7ff528de"
+      },
+      {
+        "id": "L002",
+        "E": 0.99,
+        "P": 0.99,
+        "kind": "FACT",
+        "sources": [
+          "R3"
+        ],
+        "sha256": "b883b93d7275039f254064b8f06abcd5ad54d0be6878c4ed66bf38e9681a2b8a"
+      },
+      {
+        "id": "L003",
+        "E": 0.96,
+        "P": 0.98,
+        "kind": "HOLD",
+        "sources": [
+          "R2",
+          "R4"
+        ],
+        "sha256": "88c092d5d037f6bacf0ea20e865c0acbeb8fd9cf9b5bcac6d4a3b9403c945b24"
+      },
+      {
+        "id": "L004",
+        "E": 0.98,
+        "P": 0.99,
+        "kind": "HOLD",
+        "sources": [
+          "R1",
+          "R2"
+        ],
+        "sha256": "b29ab14bbdc7be53180a062a52dddf2c89de5ed00914e9f236b8befcf0525045"
+      },
+      {
+        "id": "L005",
+        "E": 0.84,
+        "P": 0.95,
+        "kind": "INFER",
+        "sources": [
+          "R5"
+        ],
+        "sha256": "2c1e22a141d0858a9bee4919a2db2231135b6d6db91bbf2047a851bbd8f2aacf"
+      },
+      {
+        "id": "L006",
+        "E": 0.79,
+        "P": 0.92,
+        "kind": "PLAN",
+        "sources": [
+          "R5"
+        ],
+        "sha256": "30511edc309f7506786e7ff1ea0eb5231a0d42ac624df7d92bcbd4257ab13add"
+      },
+      {
+        "id": "L007",
+        "E": 0.8,
+        "P": 0.93,
+        "kind": "PLAN",
+        "sources": [
+          "R1",
+          "R5"
+        ],
+        "sha256": "9881c1bd0e03eb2e15af773246a54eb7de8774d7036d0a2798a9c0e011ab29ba"
+      },
+      {
+        "id": "L008",
+        "E": 0.84,
+        "P": 0.96,
+        "kind": "PLAN",
+        "sources": [
+          "R1",
+          "R5"
+        ],
+        "sha256": "0447362b11ac169219ea5fd1629e58183bab4d062c1ba0443994f003ad37bf53"
+      },
+      {
+        "id": "L009",
+        "E": 0.88,
+        "P": 0.96,
+        "kind": "PLAN",
+        "sources": [
+          "R1",
+          "R2"
+        ],
+        "sha256": "7486c92ee9e88eb686ef451b54a5f66e294e3cac9d3d1a0ef33e12a60012d04c"
+      },
+      {
+        "id": "L010",
+        "E": 0.82,
+        "P": 0.97,
+        "kind": "PLAN",
+        "sources": [
+          "R1",
+          "R2"
+        ],
+        "sha256": "1308a8841fd21b9b1c0498d844dffa0789ac0f9a79208e2ef13d6ec497b30e0c"
+      },
+      {
+        "id": "L011",
+        "E": 0.91,
+        "P": 0.94,
+        "kind": "HOLD",
+        "sources": [
+          "R3"
+        ],
+        "sha256": "84d9cd695de0e45b97140fdf1405691e784fc0ad219ec65294e35a16709e3e7c"
+      },
+      {
+        "id": "L012",
+        "E": 0.8,
+        "P": 0.92,
+        "kind": "PLAN",
+        "sources": [
+          "R5"
+        ],
+        "sha256": "3f4cc213f75a8a8dc2dc3b3675ba6765f6c87007568eff7e13d57ef92c4f290f"
+      },
+      {
+        "id": "L013",
+        "E": 0.99,
+        "P": 0.98,
+        "kind": "HOLD",
+        "sources": [
+          "R1",
+          "R4"
+        ],
+        "sha256": "b6c1e9326e991a2564590fa793d43e6600e3f87572cb53aa98133ca7dae21fbd"
+      },
+      {
+        "id": "L014",
+        "E": 0.92,
+        "P": 0.93,
+        "kind": "PLAN",
+        "sources": [
+          "R1",
+          "R2"
+        ],
+        "sha256": "40acd4be6b07cdd8ab04d5357367ec8a05713e8bb30d4b4461f6caef5ee6f96a"
+      }
+    ],
+    "decisions": [
+      {
+        "id": "D2-BLIND-EVAL-PREREG",
+        "priority": 0.9445,
+        "evidence_support": 0.785,
+        "judgment_interval": [
+          0.8645,
+          0.9858
+        ],
+        "execution_gate": "READY",
+        "blockers": []
+      },
+      {
+        "id": "D7-BLIND-SECURITY",
+        "priority": 0.8815,
+        "evidence_support": 0.955,
+        "judgment_interval": [
+          0.8015,
+          0.949
+        ],
+        "execution_gate": "READY",
+        "blockers": []
+      },
+      {
+        "id": "D1-NIKL24-ACCESS",
+        "priority": 0.8798,
+        "evidence_support": 0.56,
+        "judgment_interval": [
+          0.7398,
+          0.9691
+        ],
+        "execution_gate": "PREPARE",
+        "blockers": [
+          "RAW_CORPUS_NOT_ACQUIRED",
+          "RIGHTS_NOT_VERIFIED"
+        ]
+      },
+      {
+        "id": "D3-WORK-LINEAGE",
+        "priority": 0.8612,
+        "evidence_support": 0.7,
+        "judgment_interval": [
+          0.7212,
+          0.9744
+        ],
+        "execution_gate": "PREPARE",
+        "blockers": [
+          "UNVERIFIED_PARENT_WORK_IDS"
+        ]
+      },
+      {
+        "id": "D5-CP5-FULL-HASH",
+        "priority": 0.5795,
+        "evidence_support": 0.6425,
+        "judgment_interval": [
+          0.4395,
+          0.7168
+        ],
+        "execution_gate": "PREPARE",
+        "blockers": [
+          "TEN_PARTS_NOT_HASHED"
+        ]
+      },
+      {
+        "id": "D6-TRAIN-NEW-MODEL",
+        "priority": 0.321,
+        "evidence_support": 0.455,
+        "judgment_interval": [
+          0.181,
+          0.461
+        ],
+        "execution_gate": "BLOCKED",
+        "blockers": [
+          "NO_HUMAN_EVAL",
+          "NO_QUALITY_EVIDENCE"
+        ]
+      }
+    ],
+    "top_executable": "D2-BLIND-EVAL-PREREG",
+    "quality_promotion": false
+  },
+  "sensitivity": {
+    "scenarios": 168,
+    "top": "D2-BLIND-EVAL-PREREG",
+    "top_changes": 0,
+    "examples": [],
+    "interpretation": "Local input-value perturbation; NOT confidence interval or empirical truth odds"
+  }
+}

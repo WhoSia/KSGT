@@ -1,0 +1,16 @@
+{
+  "schema":"ksgt.g10p2.r5r.preflight-config.v1",
+  "status":"UNFROZEN_PREFLIGHT",
+  "human_outcomes":0,
+  "new_model_calls":0,
+  "arms":["STRONG_DIRECT","RICH_PROMPT","STATE_AS_TEXT","EXECUTABLE_STATE","EQUAL_COST_ITERATIVE","NO_OP_KEEP","SHAM_STATE"],
+  "private_allocation_seed":"synthetic-demonstration-only-NOT-LIVE-KEY",
+  "model_identity":"SYNTHETIC-NOT-A-MODEL",
+  "source_boundary_audit_id":"AUDIT_SYNTHETIC_NOT_REAL",
+  "rubric_revision":"PROSPECTIVE_DRAFT_1",
+  "cost_contract_revision":"PROSPECTIVE_DRAFT_1",
+  "source_boundary_verified":true,
+  "license_reviewed":true,
+  "actual_human_quality_gold":false,
+  "synthetic_only":true
+}

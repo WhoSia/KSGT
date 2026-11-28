@@ -1,0 +1,42 @@
+{
+  "r6f_audit.py": {
+    "bytes": 3118,
+    "sha256": "054e9d3a46a36a120fd22040645ac3a61be695db70f8076a1dfddd55dd49dbfc"
+  },
+  "r6f_claims.py": {
+    "bytes": 1420,
+    "sha256": "c27b6e6a8bdef85ebd6e69a3e9a05acd3d700835c2446ce91b542c39e344f5e5"
+  },
+  "r6f_decisions.json": {
+    "bytes": 2546,
+    "sha256": "2430475db6983f145906f8180bececc21d4f0b5dc665d5915fa043b6735e1cef"
+  },
+  "r6f_receipt.json": {
+    "bytes": 4823,
+    "sha256": "1f6ecd5812dffeeda58fb6057d12c26122fdfa61d044d8b8cc933dce3f611414"
+  },
+  "r6f_report.md": {
+    "bytes": 3218,
+    "sha256": "c11d4e8d86eef0b76981664a1f1e9ede985ba52e55e8c05de2a75a6015319d3b"
+  },
+  "r6f_round1.txt": {
+    "bytes": 1199,
+    "sha256": "641f8cf9944fc13543dd1b076560531c7cb941571c1a832be107a035ba7e4bd5"
+  },
+  "r6f_targets.py": {
+    "bytes": 4336,
+    "sha256": "b70d1ce5f81c47f0aa8f74721f6b1dc828cb1d1b357fc46870d4f6c73f7a71f1"
+  },
+  "r6f_tests.txt": {
+    "bytes": 990,
+    "sha256": "bbc7e315b7ee09b3d097b5ead15e9b8a6094bae6fee9f52c76839bfa42bc02f8"
+  },
+  "test_r6f_claims.py": {
+    "bytes": 1557,
+    "sha256": "23159d5ff5ea0858f7be2578ead4c8f245110de6c9a94a1e53d01c8c1a7a7701"
+  },
+  "test_r6f_targets.py": {
+    "bytes": 3154,
+    "sha256": "0f5970ebaf6d11e8409010c8c979c9a8fd85902686475a916e99f6ff1c51baf4"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "files": [
+    {
+      "name": "r6d_cases.ts",
+      "bytes": 7832,
+      "sha256": "06da91628e8fccb2f2b4e9d0b4ae8f0187f5b234387031c8fc6c7d5fea7e4a24",
+      "git_blob": "56418ef58feb44a0275aef1f1fe1234215177504"
+    },
+    {
+      "name": "r6d_corpus_receipt.json",
+      "bytes": 583,
+      "sha256": "470cd105d0594ee7fa743aabf00d6794f4308c50732dca8f618a7acaa9612581",
+      "git_blob": "9ee08c5a51ab0d73a3b66fee78a1d7f96059e88b"
+    },
+    {
+      "name": "r6d_corpus_sample.py",
+      "bytes": 1900,
+      "sha256": "00db3d6fdbd82d676c85ad5c1958418f636eda180b544cc9e9a6a3778d77a079",
+      "git_blob": "0afa49f406c86df6fb45ed42e7854427c692742b"
+    },
+    {
+      "name": "r6d_decisions.json",
+      "bytes": 5471,
+      "sha256": "2073cd062e2679b5e95bf6611ca81c13783cf25a57fdba26b8ab76837096ceb0",
+      "git_blob": "c48092852859a20a4b1e25dc3b8fe67c35405b33"
+    },
+    {
+      "name": "r6d_lira_lines.md",
+      "bytes": 1071,
+      "sha256": "4f46dfb5472ca877a5c918d2feb0cf4a54aec080a15f54765275dd7272b3a8dc",
+      "git_blob": "547602e3343339a6e730ddc3808897a8d748e810"
+    },
+    {
+      "name": "r6d_realizer.ts",
+      "bytes": 3252,
+      "sha256": "e0b21b981b4639928655d2bb7fe7e072ada971f1b9ff0f54f2ccefe5d5833ca4",
+      "git_blob": "fad2f96b1a1b6385fef0d58c35128cbf7d11bc18"
+    },
+    {
+      "name": "r6d_receipt.json",
+      "bytes": 13430,
+      "sha256": "f3db27f3309fd22a3805fc2b0357145e873109aa6accd949bcfddcb35433a436",
+      "git_blob": "dc8372588eecd59daaac6d081ae206c941c66312"
+    },
+    {
+      "name": "r6d_regression.txt",
+      "bytes": 233,
+      "sha256": "17827b56dd2d6ed647b69b5bed2daf73fec9fc7c839cd4b1471d4684376986bf",
+      "git_blob": "df7c5e017cb8218180ef65d54e1779f59d624d71"
+    },
+    {
+      "name": "r6d_report.md",
+      "bytes": 6138,
+      "sha256": "519131dd67bd6cd1edfc555eb0435295a4eef22dd9f0fd0c4cc1d1ed05be1acd",
+      "git_blob": "8e0e6ee0807fe37ae7f3f95cc563a022034e76ca"
+    },
+    {
+      "name": "r6d_reproduce.sh",
+      "bytes": 280,
+      "sha256": "c8419045af1c0983c667afab8dc6e0651653c6c24c23d6d6b4ef74ce825505e8",
+      "git_blob": "976aa0dc85038df433eaac080cb79c693c051ca7"
+    },
+    {
+      "name": "r6d_round1.json",
+      "bytes": 8166,
+      "sha256": "4fe3846a0ad5b8281cba469c760fa167fd34e6b897bcc591eebdc98e279095eb",
+      "git_blob": "4e14b8028dfd5f3c99e49fae788e3cac2d8c8a01"
+    }
+  ],
+  "raw_nikl_text_included": false,
+  "source_archive_sha256": "92ca0e42198ff10d45b72771b39ce364343634691bc348cfcc0b47de60df3c54"
+}

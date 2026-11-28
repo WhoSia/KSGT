@@ -1,0 +1,26 @@
+test_cases (test_r6f_targets.Test.test_cases) ... 
+  test_cases (test_r6f_targets.Test.test_cases) (fb='설문에 관한 근거를 추가해야 합니다.') ... FAIL
+test_no_document_ordinal (test_r6f_targets.Test.test_no_document_ordinal) ... ok
+test_offsets (test_r6f_targets.Test.test_offsets) ... ok
+test_pair (test_r6f_targets.Test.test_pair) ... ok
+
+======================================================================
+FAIL: test_cases (test_r6f_targets.Test.test_cases) (fb='설문에 관한 근거를 추가해야 합니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/ksgt_r6f/test_r6f_targets.py", line 22, in test_cases
+    r=rank(HEADER+src,fb,'문단');self.assertEqual(r['candidates'],expected);self.assertEqual(r['status'],status);self.assertEqual(r['authority'],'CANDIDATE_ONLY')
+                                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != [0, 1]
+
+Second list contains 2 additional elements.
+First extra element 0:
+0
+
+- []
++ [0, 1]
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+FAILED (failures=1)

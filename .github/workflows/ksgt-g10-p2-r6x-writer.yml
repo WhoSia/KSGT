@@ -1,0 +1,49 @@
+name: KSGT G10-P2 R6x boundary scope paired trial
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r6x-writer.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  paired:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify identity and frozen source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r6x_scope_cases.json)" = fce98fc2f9dbe5a1d3a11d4b10295939911270d7
+          test "$(git hash-object experiments/g10-p2/r5/r6x_scope_writer.cjs)" = 018236e5ebf318ca65d138bd9a061a5e55a87f41
+          test "$(git hash-object experiments/g10-p2/r5/r6x_scope_writer.test.cjs)" = 7db4c3c9d98f8bff73e1d8f2d2eaed72f0b0bad3
+          node --test experiments/g10-p2/r5/r6x_scope_writer.test.cjs
+          node experiments/g10-p2/r5/r6x_scope_writer.cjs --preflight > "$RUNNER_TEMP/r6x-preflight.json"
+      - name: Sixteen paired single-call writing conditions
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r6x_scope_writer.cjs --execute "$RUNNER_TEMP/r6x-live"
+      - name: Verify completed receipts
+        run: node experiments/g10-p2/r5/r6x_scope_writer.cjs --verify "$RUNNER_TEMP/r6x-live"
+      - name: Preserve complete or partial receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r6x-scope-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r6x-live/
+            ${{ runner.temp }}/r6x-preflight.json

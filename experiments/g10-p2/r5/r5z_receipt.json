@@ -1,0 +1,99 @@
+{
+  "archive_sha256": "fc5b87340ed6b3e4c399547812050b75637b1fd4fd83b54b1d9470cecfc8d733",
+  "cases": [
+    {
+      "work": "R5A_SCI_CLOCK",
+      "nodes": 7,
+      "seeds": 2,
+      "closure_nodes": [
+        4,
+        5,
+        6
+      ],
+      "closure_size": 3,
+      "closure_chars_in_scope": 163,
+      "contiguous_chars_in_scope": 165,
+      "whole_chars_in_scope": 456,
+      "candidate_chars": 375,
+      "source_only_candidate_chars": 181,
+      "parent_sha256": "e6f8f59feae5a24fb8c6d53343023c74780c6cd638833c11441273755f8dccba",
+      "candidate_sha256": "ebe9fc2d1be0f7cdfc886a089bb77fe03c347f67064cecfefd2b5ef1338ad6cb",
+      "source_only_candidate_sha256": "e72fe29c54b0a90f7ed3b057f27c79efeb38915e79ffb60412e782891b157897",
+      "route": "REVIEW_LOCAL_AND_FULL",
+      "status": "REVIEW_ONLY_EXPOSED"
+    },
+    {
+      "work": "R5A_NOTICE_BOOK",
+      "nodes": 5,
+      "seeds": 2,
+      "closure_nodes": [
+        2,
+        3
+      ],
+      "closure_size": 2,
+      "closure_chars_in_scope": 106,
+      "contiguous_chars_in_scope": 107,
+      "whole_chars_in_scope": 240,
+      "candidate_chars": 224,
+      "source_only_candidate_chars": 146,
+      "parent_sha256": "e7c152fe51cb1e54805af8a765e8bfba674dd69fbb8a262eba51516249f653f7",
+      "candidate_sha256": "504413baf5d40051a8c866d61bed8b8ee73e015d634a3c3e573e9b82bce5d0c0",
+      "source_only_candidate_sha256": "86adc4eb26360a08440727316b5d31181efa5f280065719f6eb7d6527cb3c4f7",
+      "route": "REVIEW_LOCAL_AND_FULL",
+      "status": "REVIEW_ONLY_EXPOSED"
+    },
+    {
+      "work": "R5A_SCENE_GARDEN",
+      "nodes": 10,
+      "seeds": 4,
+      "closure_nodes": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "closure_size": 9,
+      "closure_chars_in_scope": 361,
+      "contiguous_chars_in_scope": 431,
+      "whole_chars_in_scope": 431,
+      "candidate_chars": 170,
+      "source_only_candidate_chars": 124,
+      "parent_sha256": "b883f03bb26807624c959a6e48c06a8eb18502ac14e65264ae270b468355b0c6",
+      "candidate_sha256": "ee8978fe08f6bd2f9873c1eaa89b4924d1834fd3409585e86d02857208f63e8c",
+      "source_only_candidate_sha256": "1f35e138dd0a7f45b74768bfc8f9569302ae236f405bd75b621476f83cc6ed57",
+      "route": "COMPARE_FULL_REWRITE",
+      "status": "REVIEW_ONLY_EXPOSED"
+    },
+    {
+      "work": "R5A_SCENE_PAPER",
+      "nodes": 8,
+      "seeds": 2,
+      "closure_nodes": [
+        3,
+        5,
+        6,
+        7
+      ],
+      "closure_size": 4,
+      "closure_chars_in_scope": 164,
+      "contiguous_chars_in_scope": 198,
+      "whole_chars_in_scope": 369,
+      "candidate_chars": 291,
+      "source_only_candidate_chars": 126,
+      "parent_sha256": "7743d8918cce7ca541a6bd3a5895414b1d3c81823f4c8d97ffd01da6b94e8389",
+      "candidate_sha256": "3fdeb22f995363c4a650a016bd5df6ff7d7180bbb9664f41223d1fc96f0336ea",
+      "source_only_candidate_sha256": "c66610995eb85efe80e257190748b60056fdd9d0e65c5bfabe89d7ee6717cf5a",
+      "route": "REVIEW_LOCAL_AND_FULL",
+      "status": "REVIEW_ONLY_EXPOSED"
+    }
+  ],
+  "new_provider_calls": 0,
+  "human_ratings": 0,
+  "quality_promotion": false,
+  "labels_and_text": "Investigator-authored exposed development; not automatic inference."
+}
