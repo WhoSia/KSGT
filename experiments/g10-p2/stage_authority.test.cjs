@@ -3,7 +3,7 @@ const {test}=require("node:test"),a=require("node:assert/strict"),s=require("../
 
 test("approved G10-P2 title and R5 prospective, R4b human gate remain open",()=>{
  a.equal(s.current_stage,"G10-P2");
- a.equal(s.status,"OPEN_R7D_DEVELOPMENT_COMPLETE_QUALITY_HOLD");
+ a.equal(s.status,"OPEN_R7F_DEVELOPMENT_COMPLETE_QUALITY_HOLD");
  a.equal(s.official_name,"KSGT Generation X G10-P2 — Reader-State-Coupled Korean Writing Architecture: Source-Grounded Discourse Dynamics, Adaptive Realization & Human-Validated Quality–Cost Trade-offs");
  a.equal(s.canonical_notion_id,"41fef561-cf92-8105-a17b-c0c33a9701bc");
 });
@@ -29,12 +29,12 @@ test("P2 cumulative model calls count R2/R2b/R4a/R4b/R5a/R5b once, never read-on
  a.equal(legacy,340);
  const r=c.r6_call_reconciliation;
  a.equal(r.base_r5i,legacy);
- a.equal(r.runs.length,20);
- a.equal(new Set(r.runs.map(x=>x.run)).size,20);
+ a.equal(r.runs.length,22);
+ a.equal(new Set(r.runs.map(x=>x.run)).size,22);
  a.equal(r.runs.find(x=>x.run===46000261677).id,"R6o");
  a.ok(r.runs.every(x=>Number.isSafeInteger(x.calls)&&x.calls>0));
  a.equal(r.incremental_calls,r.runs.reduce((n,x)=>n+x.calls,0));
- a.equal(r.incremental_calls,290);
+ a.equal(r.incremental_calls,314);
  a.equal(c.real_provider_model_calls,legacy+r.incremental_calls);
  a.equal(s.latest_experiment.newModelCalls,20);
  a.equal(s.latest_experiment.posthocReplayNewModelCalls,0);
@@ -80,12 +80,18 @@ test("P3 proposal and inherited holds do not change stage authority",()=>{
  a.equal(s.historical_r6z_development.r6z_calls,4);
  a.equal(s.historical_r7a_development.r7a_calls,18);
  a.equal(s.historical_r7bc_development.r7b_calls,24);
- a.equal(s.latest_r6_development.r7d_calls,24);
+ a.equal(s.historical_r7d_development.r7d_calls,24);
+ a.equal(s.latest_r6_development.r7e_calls,16);
+ a.equal(s.latest_r6_development.r7f_calls,8);
  a.equal(s.historical_r7bc_development.r7c_calls,16);
  a.equal(s.historical_r6z_development.r6z_run,46028384605);
  a.equal(s.historical_r7a_development.r7a_run,46029606917);
  a.equal(s.historical_r7bc_development.r7b_run,46030432309);
- a.equal(s.latest_r6_development.r7d_run,46032006425);
+ a.equal(s.historical_r7d_development.r7d_run,46032006425);
+ a.equal(s.latest_r6_development.r7e_run,46122629391);
+ a.equal(s.latest_r6_development.r7f_run,46122900072);
  a.equal(s.historical_r7bc_development.r7c_run,46030763844);
  a.equal(s.latest_r6_development.quality_advantage,"UNESTABLISHED");
 });
+
+ test("gated review keeps all six dimensions and excludes blocked paths from Pareto frontier",()=>{const {frontier}=require("./r5/r7_review_policy.cjs"),r=require("./r5/r7_review_current.json"),v=frontier(r);a.deepEqual(v.frontier,["source_projection_boundary","reader_outcome_packet","expressive_generation"]);a.equal(v.promotionAllowed,false);a.ok(v.held.some(x=>x.id==="independent_reader"&&x.gate==="EXTERNAL_HOLD"));const x=structuredClone(r);x.candidates.push({id:"inferior",scores:[0,0,0,0,0,0],gate:"ACTIONABLE"});a.ok(frontier(x).dominated.includes("inferior"));x.candidates[0].scores[0]=1.1;a.throws(()=>frontier(x),/BAD_CANDIDATE/);});
