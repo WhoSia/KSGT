@@ -1,0 +1,56 @@
+name: KSGT G10-P2 R7f selective source projection
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7f-projection.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  writer:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7e_decision_post.json)" = 6a8d5e23abe82b247d8a1e7e57b526f66b6206a1
+          test "$(git hash-object experiments/g10-p2/r5/r7f_room_notice.json)" = 7432ffbdae2a9b5b8f389ccdb6b762e25d1eee46
+          test "$(git hash-object experiments/g10-p2/r5/r7f_book_return.json)" = 4d6e94e43fe3cc938d712a36480e3414e0eda699
+          test "$(git hash-object experiments/g10-p2/r5/r7f_data_note.json)" = e61251f1cfc762776c8a6e4e16c70a8debcdcb9f
+          test "$(git hash-object experiments/g10-p2/r5/r7f_meeting_change.json)" = 8d25321a0576d42e7b2169b6b4d7c55c2bbc9ed5
+          test "$(git hash-object experiments/g10-p2/r5/r7f_prereg.md)" = 352a8dd2273dec2c02ee749817ec29c0896ab8a2
+          test "$(git hash-object experiments/g10-p2/r5/r7f_projection.cjs)" = b75a56f588aee8279e644e3b830e061a67e4d381
+          test "$(git hash-object experiments/g10-p2/r5/r7f_projection.test.cjs)" = c3e59c828df5851ae7556a83dffa7839cf54e1ab
+          test "$(git hash-object experiments/g10-p2/r5/r7f_runner.cjs)" = ca84eb9f189aa09f49ed006560ea4e147c86961d
+          node --test experiments/g10-p2/r5/r7f_projection.test.cjs
+          node experiments/g10-p2/r5/r7f_runner.cjs --preflight > "$RUNNER_TEMP/r7f-preflight.json"
+      - name: Eight single generation calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7f_runner.cjs --execute "$RUNNER_TEMP/r7f-live"
+      - name: Verify and analyze
+        run: node experiments/g10-p2/r5/r7f_runner.cjs --verify "$RUNNER_TEMP/r7f-live" > "$RUNNER_TEMP/r7f-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7f-projection-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7f-live/
+            ${{ runner.temp }}/r7f-preflight.json
+            ${{ runner.temp }}/r7f-analysis.json
