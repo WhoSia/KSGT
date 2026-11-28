@@ -1,6 +1,6 @@
 {
   "schema": "ksgt.r7.review.v2",
-  "phase": "POST_R7H_EXPRESSION_AND_COST",
+  "phase": "POST_R7I_DISCOVERY",
   "date": "2026-11-28",
   "axes": [
     "value",
@@ -69,6 +69,25 @@
       "authority": "NONINDEPENDENT_DEVELOPER_FOCAL_READING",
       "qualityAdvantage": "UNESTABLISHED",
       "warning": "SHORTER_OUTPUT_AND_OMISSIONS_CONFOUND_COST"
+    },
+    {
+      "id": "R7i",
+      "run": 46140003400,
+      "calls": 1,
+      "tokens": 1519,
+      "finals": 0,
+      "authority": "TRUNCATED_RESPONSE"
+    },
+    {
+      "id": "R7i2",
+      "run": 46140099362,
+      "calls": 16,
+      "tokens": 14305,
+      "plan_tokens": 7513,
+      "draft_tokens": 6792,
+      "finals": 8,
+      "authority": "NONINDEPENDENT_DEVELOPER_FOCAL_READING",
+      "qualityAdvantage": "UNESTABLISHED"
     }
   ],
   "gates": {
@@ -134,7 +153,7 @@
       ],
       "gate": "ACTIONABLE",
       "decision": "RUN_THEORY_FIRST",
-      "reason": "R7h separates obligation risk and expressive ambiguity mathematically; actual prose still omits required detail and recites possible motives. Derive mechanisms from native traces rather than repeating synthetic prompt layouts."
+      "reason": "R7i2 reveals plan/draft-first both propagate unsupported assertions; prioritize reversible relations and actual prose, not mandatory stages."
     },
     {
       "id": "relation_repair",
@@ -190,7 +209,7 @@
       ],
       "gate": "ACTIONABLE",
       "decision": "PARALLEL",
-      "reason": "R7h central TXT verified 39 at readback; two Korean papers read, two public papers inspected with PDF byte acquisition blocked; continue in parallel."
+      "reason": "Central TXT rebased after concurrent edits, verified 31; newly held Piantadosi and Miall originals inspected; three missing added."
     },
     {
       "id": "native_trace_reconstruction",
@@ -204,7 +223,7 @@
       ],
       "gate": "ACTIONABLE",
       "decision": "PARALLEL",
-      "reason": "Existing authentic writing/revision context and evidence scope, not elicited ratings."
+      "reason": "Three actual pre-2022 Korean technical blog edits inspected; broaden genres and author-revision source evidence without elicited packets."
     },
     {
       "id": "joint_branch_generation",
@@ -219,7 +238,21 @@
       "gate": "DEFER",
       "decision": "OPTIONAL_ONLY",
       "reason": "37.30% token reduction on four paired synthetic works, partly shorter output; quality not equivalent and omissions persist."
+    },
+    {
+      "id": "mandatory_discovery_first",
+      "scores": [
+        0.61,
+        0.62,
+        0.63,
+        0.65,
+        0.54,
+        0.88
+      ],
+      "gate": "DEFER",
+      "decision": "OPTIONAL_ONLY",
+      "reason": "9.60% fewer tokens than two-call plan-first; mixed semantic fidelity, no single-call comparator."
     }
   ],
-  "decision": "Expressive generation and native trace reconstruction remain primary; joint branching optional only. Literature parallel; no artificial human reader packet, no automatic promotion."
+  "decision": "Native revision traces and expressive/reversible discourse relation theory primary; no mandatory plan/draft-first or fresh human packet. Literature parallel. No P3 promotion."
 }
