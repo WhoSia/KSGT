@@ -1,0 +1,58 @@
+name: KSGT G10-P2 R7e relation conditioned repair
+on:
+  push:
+    branches: [research/g10-p2-reader-state-coupled]
+    paths: [.github/workflows/ksgt-g10-p2-r7e-repair.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  repair:
+    if: github.actor == 'WhoSia' && github.ref == 'refs/heads/research/g10-p2-reader-state-coupled' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 30
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify author and frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .author.login)" = WhoSia
+          test "$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA" --jq .committer.login)" = WhoSia
+          if git log -20 --format='%an|%ae|%cn|%ce' | grep -i 'github-actions\[bot\]'; then exit 1; fi
+          test "$(git hash-object experiments/g10-p2/r5/r7e_decision_pre.json)" = bdc6f4efa07a3a94f6a27a33492c57bcc1374794
+          test "$(git hash-object experiments/g10-p2/r5/r7e_map.json)" = 2e835a90cc167a39e2080515367f558b16129f30
+          test "$(git hash-object experiments/g10-p2/r5/r7e_bubble.json)" = 9d388e2e487edbb202a0ab45aa9382e4df27c69b
+          test "$(git hash-object experiments/g10-p2/r5/r7e_box.json)" = ebe614524bd694f0a4e3665487557142cc1f94f9
+          test "$(git hash-object experiments/g10-p2/r5/r7e_window.json)" = 238e33a145759184686f9157e70977df6942160e
+          test "$(git hash-object experiments/g10-p2/r5/r7e_prereg.md)" = a5c92384b9f6782cef0ac02ed49a5da998210639
+          test "$(git hash-object experiments/g10-p2/r5/r7e_cases.cjs)" = 5ccbd46e375f78e006da94af966c33032e5b14d7
+          test "$(git hash-object experiments/g10-p2/r5/r7e_prompt.cjs)" = 5d1aac0affde32c5faf8013be52ce4bb0ad68009
+          test "$(git hash-object experiments/g10-p2/r5/r7e_apply.cjs)" = 3b1fc8e7835cc7eabab9f9940306ea7a941403eb
+          test "$(git hash-object experiments/g10-p2/r5/r7e_runner.cjs)" = b34f6e1a8ae47bef53fd6f80088201d51d802137
+          test "$(git hash-object experiments/g10-p2/r5/r7e_runner.test.cjs)" = 3ab38887ace9d6c8dae9f153a54193741f419463
+          node --test experiments/g10-p2/r5/r7e_runner.test.cjs
+          node experiments/g10-p2/r5/r7e_runner.cjs --preflight > "$RUNNER_TEMP/r7e-preflight.json"
+      - name: Sixteen single revision calls
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node experiments/g10-p2/r5/r7e_runner.cjs --execute "$RUNNER_TEMP/r7e-live"
+      - name: Verify and analyze
+        run: node experiments/g10-p2/r5/r7e_runner.cjs --verify "$RUNNER_TEMP/r7e-live" > "$RUNNER_TEMP/r7e-analysis.json"
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ksgt-r7e-repair-receipts
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/r7e-live/
+            ${{ runner.temp }}/r7e-preflight.json
+            ${{ runner.temp }}/r7e-analysis.json
